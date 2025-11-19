@@ -4,15 +4,22 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useState } from 'react';
 
 const Portfolio = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const isGerman = language === 'de';
   const [filter, setFilter] = useState('all');
 
-  const categories = [
+  const categories = isGerman ? [
     { id: 'all', name: 'Alle' },
     { id: 'lashes', name: 'Wimpern' },
     { id: 'pmu', name: 'PMU' },
     { id: 'brows', name: 'Augenbrauen' },
     { id: 'laser', name: 'Laser' },
+  ] : [
+    { id: 'all', name: 'Все' },
+    { id: 'lashes', name: 'Ресницы' },
+    { id: 'pmu', name: 'ПМ' },
+    { id: 'brows', name: 'Брови' },
+    { id: 'laser', name: 'Лазер' },
   ];
 
   // Placeholder gallery items
@@ -38,7 +45,9 @@ const Portfolio = () => {
             {t('nav.portfolio')}
           </h1>
           <p className="text-lg text-brand-coffee/80 max-w-2xl mx-auto leading-relaxed">
-            Entdecken Sie unsere Arbeiten und lassen Sie sich von den Ergebnissen inspirieren.
+            {isGerman
+              ? 'Entdecken Sie unsere Arbeiten und lassen Sie sich von den Ergebnissen inspirieren.'
+              : 'Посмотрите наши работы и вдохновитесь результатами.'}
           </p>
         </div>
 
@@ -89,10 +98,12 @@ const Portfolio = () => {
         {/* Instagram CTA */}
         <div className="glass rounded-2xl p-8 md:p-12 max-w-2xl mx-auto mt-16 text-center">
           <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-            Folgen Sie uns auf Instagram
+            {isGerman ? 'Folgen Sie uns auf Instagram' : 'Подписывайтесь на нас в Instagram'}
           </h2>
           <p className="text-brand-coffee/70 mb-6 leading-relaxed">
-            Für täglich neue Inspirationen und Vorher-Nachher-Bilder folgen Sie uns auf Instagram.
+            {isGerman
+              ? 'Für täglich neue Inspirationen und Vorher-Nachher-Bilder folgen Sie uns auf Instagram.'
+              : 'Следите за новыми работами и фото до/после в нашем Instagram.'}
           </p>
           <a
             href="https://instagram.com"

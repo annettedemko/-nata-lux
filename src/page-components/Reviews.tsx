@@ -4,9 +4,10 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Star, Quote } from 'lucide-react';
 
 const Reviews = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const isGerman = language === 'de';
 
-  const reviews = [
+  const reviews = isGerman ? [
     {
       name: 'Anna M.',
       rating: 5,
@@ -70,6 +71,70 @@ const Reviews = () => {
       text: 'Ich kann NATA LUX nur wärmstens empfehlen! Besonders die PMU-Entfernung war ein Erfolg. Professionell, sauber und mit tollem Ergebnis. Das Team nimmt sich wirklich Zeit für jeden Kunden.',
       service: 'PMU Entfernung',
     },
+  ] : [
+    {
+      name: 'Анна М.',
+      rating: 5,
+      date: '2 недели назад',
+      text: 'Я в полном восторге от новых ресниц! Команда супер профессиональная, а атмосфера в салоне очень приятная. Процедура была безболезненной, а результат превзошёл все мои ожидания. Естественно, объёмно и просто идеально!',
+      service: 'Наращивание ресниц',
+    },
+    {
+      name: 'Мария Ш.',
+      rating: 5,
+      date: '3 недели назад',
+      text: 'Лучшая процедура ПМ, которую я когда-либо делала! Консультация была подробной, и я чувствовала себя в надёжных руках. Мои брови теперь выглядят идеально каждый день, без траты времени на макияж. Абсолютно рекомендую!',
+      service: 'Перманентный макияж',
+    },
+    {
+      name: 'Юлия К.',
+      rating: 5,
+      date: '1 месяц назад',
+      text: 'После всего 3 сеансов я уже вижу значительные результаты лазерной эпиляции. Процедура была намного комфортнее, чем я ожидала. Персонал очень дружелюбный и компетентный. Соотношение цены и качества отличное!',
+      service: 'Лазерная эпиляция',
+    },
+    {
+      name: 'София В.',
+      rating: 5,
+      date: '1 месяц назад',
+      text: 'Ламинирование бровей держится уже больше 5 недель и выглядит всё ещё отлично! Наконец-то у меня ухоженные, ровные брови, о которых я всегда мечтала. Салон современный и очень чистый.',
+      service: 'Ламинирование',
+    },
+    {
+      name: 'Елена П.',
+      rating: 5,
+      date: '2 месяца назад',
+      text: 'Прошла курс Anti-Aging и более чем довольна. Моя кожа стала более упругой и свежей. Процедуры были расслабляющими, а результаты говорят сами за себя. С удовольствием приду снова!',
+      service: 'Anti-Aging',
+    },
+    {
+      name: 'Наталья Х.',
+      rating: 5,
+      date: '2 месяца назад',
+      text: 'Отличный опыт! Я прошла здесь курс наращивания ресниц и могу только рекомендовать. Тренер была очень терпеливой и всё отлично объяснила. Теперь я сама работаю лэш-мастером!',
+      service: 'Обучение',
+    },
+    {
+      name: 'Лиза М.',
+      rating: 5,
+      date: '3 месяца назад',
+      text: 'Гигиена и профессионализм на высшем уровне. Здесь я всегда чувствую себя в надёжных руках. Цены справедливые, а качество работы отличное. Мой постоянный салон!',
+      service: 'Разные процедуры',
+    },
+    {
+      name: 'Кристина Б.',
+      rating: 5,
+      date: '3 месяца назад',
+      text: 'Уход за лицом был фантастическим! Моя кожа такая мягкая и свежая. Продукты, которые использовались, высокого качества, и разница заметна сразу.',
+      service: 'Уход за лицом',
+    },
+    {
+      name: 'Ольга К.',
+      rating: 5,
+      date: '4 месяца назад',
+      text: 'Могу только горячо рекомендовать NATA LUX! Особенно удаление ПМ прошло успешно. Профессионально, чисто и с отличным результатом. Команда действительно уделяет время каждому клиенту.',
+      service: 'Удаление ПМ',
+    },
   ];
 
   const averageRating = reviews.reduce((acc, review) => acc + review.rating, 0) / reviews.length;
@@ -95,7 +160,9 @@ const Reviews = () => {
               {averageRating.toFixed(1)}
             </div>
             <p className="text-brand-coffee/70">
-              Basierend auf {totalReviews} Bewertungen
+              {isGerman
+                ? `Basierend auf ${totalReviews} Bewertungen`
+                : `На основе ${totalReviews} отзывов`}
             </p>
           </div>
         </div>
@@ -138,10 +205,12 @@ const Reviews = () => {
         {/* CTA */}
         <div className="glass rounded-2xl p-8 md:p-12 max-w-2xl mx-auto mt-16 text-center">
           <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-            Teilen Sie Ihre Erfahrung
+            {isGerman ? 'Teilen Sie Ihre Erfahrung' : 'Поделитесь своим опытом'}
           </h2>
           <p className="text-brand-coffee/70 mb-6 leading-relaxed">
-            Waren Sie zufrieden mit unserer Behandlung? Wir freuen uns über Ihr Feedback!
+            {isGerman
+              ? 'Waren Sie zufrieden mit unserer Behandlung? Wir freuen uns über Ihr Feedback!'
+              : 'Остались довольны нашей процедурой? Мы будем рады вашему отзыву!'}
           </p>
           <a
             href="https://g.page/r/..."
@@ -149,7 +218,7 @@ const Reviews = () => {
             rel="noopener noreferrer"
             className="inline-block px-8 py-3 bg-brand-gold hover:bg-brand-gold/90 text-white font-medium rounded-xl transition-all shadow-medium hover:shadow-glow"
           >
-            Bewertung auf Google schreiben
+            {isGerman ? 'Bewertung auf Google schreiben' : 'Написать отзыв на Google'}
           </a>
         </div>
       </div>

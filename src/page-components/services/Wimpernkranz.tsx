@@ -2,20 +2,30 @@
 
 import { ServicePageLayout } from '@/components/ServicePageLayout';
 import { Eye } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Wimpernkranz = () => {
+  const { language } = useLanguage();
+  const isGerman = language === 'de';
+
   return (
     <ServicePageLayout
       icon={Eye}
-      title="Wimpernkranz (Eyeliner PMU)"
-      subtitle="Permanent Make-up Wimpernkranzverdichtung – klassisch oder intensiv"
-      aboutTitle="Was ist ein Wimpernkranz?"
-      aboutDescription={[
+      title={isGerman ? "Wimpernkranz (Eyeliner PMU)" : "Межресничка (Eyeliner PMU)"}
+      subtitle={isGerman
+        ? "Permanent Make-up Wimpernkranzverdichtung – klassisch oder intensiv"
+        : "Перманентный макияж межресничного пространства – классический или интенсивный"}
+      aboutTitle={isGerman ? "Was ist ein Wimpernkranz?" : "Что такое межресничка?"}
+      aboutDescription={isGerman ? [
         'Der Wimpernkranz (auch Lid-Strich oder Eyeliner PMU genannt) ist eine Permanent Make-up Behandlung, bei der Pigmente direkt am Wimpernkranz eingearbeitet werden.',
         'Das Ergebnis ist eine optisch dichtere Wimpernlinie, die Ihre Augen ausdrucksstärker wirken lässt – ganz ohne tägliches Eyeliner auftragen.',
         'Sie haben die Wahl zwischen einem dezenten Wimpernkranz (nur zwischen den Wimpern) oder einem intensiveren Lid-Strich mit sichtbarer Linie. Perfekt für alle, die sich ein dauerhaft definiertes Auge wünschen.'
+      ] : [
+        'Межресничка (также называемая татуаж века или Eyeliner PMU) – это процедура перманентного макияжа, при которой пигменты вводятся непосредственно в межресничное пространство.',
+        'Результат – визуально более густая линия ресниц, которая делает ваши глаза более выразительными – без ежедневного нанесения подводки.',
+        'Вы можете выбрать между деликатной межресничкой (только между ресницами) или более интенсивной стрелкой с видимой линией. Идеально для тех, кто хочет постоянно выразительный взгляд.'
       ]}
-      benefits={[
+      benefits={isGerman ? [
         'Optisch dichtere, vollere Wimpern',
         'Ausdrucksstarke Augen ohne Make-up',
         'Kein tägliches Eyeliner ziehen mehr',
@@ -24,8 +34,17 @@ const Wimpernkranz = () => {
         'Perfekt symmetrische Linie',
         'Langlebig: 2-4 Jahre haltbar',
         'Individuell anpassbar (dezent bis intensiv)'
+      ] : [
+        'Визуально более густые, объёмные ресницы',
+        'Выразительные глаза без макияжа',
+        'Больше не нужно рисовать подводку каждый день',
+        'Водостойкий и стойкий к смазыванию',
+        'Экономит время на макияж',
+        'Идеально симметричная линия',
+        'Долговечность: 2-4 года',
+        'Индивидуальная настройка (от деликатной до интенсивной)'
       ]}
-      steps={[
+      steps={isGerman ? [
         {
           title: 'Beratung & Vorzeichnung',
           description: 'Wir besprechen Ihre Wünsche: dezenter Wimpernkranz oder sichtbarer Lid-Strich.'
@@ -42,23 +61,53 @@ const Wimpernkranz = () => {
           title: 'Nachbehandlung',
           description: 'Nach 4-6 Wochen erfolgt die Nachbehandlung für optimale Deckkraft.'
         }
+      ] : [
+        {
+          title: 'Консультация и эскиз',
+          description: 'Обсуждаем ваши пожелания: деликатная межресничка или видимая стрелка.'
+        },
+        {
+          title: 'Выбор цвета',
+          description: 'Подбор подходящего цвета (обычно чёрный или тёмно-коричневый).'
+        },
+        {
+          title: 'Пигментация',
+          description: 'Точное введение пигментов в межресничное пространство или в виде стрелки.'
+        },
+        {
+          title: 'Коррекция',
+          description: 'Через 4-6 недель проводится коррекция для оптимальной насыщенности.'
+        }
       ]}
-      priceTable={[
+      priceTable={isGerman ? [
         { service: 'Wimpernkranz dezent (nur zwischen Wimpern)', duration: '2 Std.', price: '280€' },
         { service: 'Lid-Strich dünn', duration: '2,5 Std.', price: '320€' },
         { service: 'Lid-Strich mit Flügel (Eyeliner)', duration: '3 Std.', price: '380€' },
         { service: 'Nachbehandlung (4-6 Wochen)', duration: '1,5 Std.', price: 'Inklusive' },
         { service: 'Auffrischung (nach 2-3 Jahren)', duration: '2 Std.', price: '180€' }
+      ] : [
+        { service: 'Межресничка деликатная (только между ресницами)', duration: '2 ч.', price: '280€' },
+        { service: 'Тонкая стрелка', duration: '2,5 ч.', price: '320€' },
+        { service: 'Стрелка с крылом (Eyeliner)', duration: '3 ч.', price: '380€' },
+        { service: 'Коррекция (4-6 недель)', duration: '1,5 ч.', price: 'Включено' },
+        { service: 'Обновление (через 2-3 года)', duration: '2 ч.', price: '180€' }
       ]}
-      contraindications={[
+      contraindications={isGerman ? [
         'Schwangerschaft und Stillzeit',
         'Aktive Augeninfektionen',
         'Sehr empfindliche oder trockene Augen',
         'Einnahme von Blutverdünnern',
         'Chemotherapie oder Bestrahlung',
         'Neigung zu Keloiden'
+      ] : [
+        'Беременность и период лактации',
+        'Активные инфекции глаз',
+        'Очень чувствительные или сухие глаза',
+        'Приём препаратов, разжижающих кровь',
+        'Химиотерапия или облучение',
+        'Склонность к келоидным рубцам'
       ]}
-      faq={[
+      faq={isGerman ? [
         {
           q: 'Wie lange hält der Wimpernkranz?',
           a: '2-4 Jahre, abhängig von Hauttyp und Lebensstil. Eine Auffrischung ist nach 2-3 Jahren empfohlen.'
@@ -75,9 +124,28 @@ const Wimpernkranz = () => {
           q: 'Kann ich mit Kontaktlinsen zur Behandlung kommen?',
           a: 'Nein, bitte kommen Sie ohne Kontaktlinsen. Bringen Sie ggf. Ihre Brille mit.'
         }
+      ] : [
+        {
+          q: 'Как долго держится межресничка?',
+          a: '2-4 года, в зависимости от типа кожи и образа жизни. Обновление рекомендуется через 2-3 года.'
+        },
+        {
+          q: 'Больно ли делать процедуру?',
+          a: 'С анестезирующим кремом процедура хорошо переносится. Глаза могут немного слезиться, что совершенно нормально.'
+        },
+        {
+          q: 'В чём разница между межресничкой и стрелкой?',
+          a: 'Межресничка деликатная и видна только между ресницами. Стрелка – это видимая линия как подводка.'
+        },
+        {
+          q: 'Можно ли прийти на процедуру в контактных линзах?',
+          a: 'Нет, пожалуйста, приходите без контактных линз. При необходимости возьмите с собой очки.'
+        }
       ]}
-      ctaTitle="Bereit für ausdrucksstarke Augen?"
-      ctaDescription="Buchen Sie jetzt Ihren Wimpernkranz Termin oder lassen Sie sich kostenlos beraten."
+      ctaTitle={isGerman ? "Bereit für ausdrucksstarke Augen?" : "Готовы к выразительному взгляду?"}
+      ctaDescription={isGerman
+        ? "Buchen Sie jetzt Ihren Wimpernkranz Termin oder lassen Sie sich kostenlos beraten."
+        : "Запишитесь на процедуру межреснички или получите бесплатную консультацию."}
     />
   );
 };

@@ -9,7 +9,8 @@ import { MapPin, Phone, Mail, Clock, Car, Train, Instagram } from 'lucide-react'
 import { useState } from 'react';
 
 const Contact = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const isGerman = language === 'de';
   const [agreed, setAgreed] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -41,8 +42,9 @@ const Contact = () => {
             {t('contact.title')}
           </h1>
           <p className="text-lg text-brand-coffee/80 max-w-2xl mx-auto leading-relaxed">
-            Haben Sie Fragen oder möchten einen Termin vereinbaren? 
-            Kontaktieren Sie uns – wir freuen uns auf Sie!
+            {isGerman
+              ? 'Haben Sie Fragen oder möchten einen Termin vereinbaren? Kontaktieren Sie uns – wir freuen uns auf Sie!'
+              : 'Есть вопросы или хотите записаться? Свяжитесь с нами – мы будем рады вам помочь!'}
           </p>
         </div>
 
@@ -51,7 +53,7 @@ const Contact = () => {
           <div className="space-y-8 animate-slide-up">
             <div className="glass rounded-2xl p-8">
               <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-6">
-                Kontaktinformationen
+                {isGerman ? 'Kontaktinformationen' : 'Контактная информация'}
               </h2>
               
               <div className="space-y-6">
@@ -60,7 +62,7 @@ const Contact = () => {
                     <MapPin className="w-6 h-6 text-brand-gold" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-brand-espresso mb-1">Adresse</h3>
+                    <h3 className="font-semibold text-brand-espresso mb-1">{isGerman ? 'Adresse' : 'Адрес'}</h3>
                     <a
                       href="https://maps.google.com/?q=Elsässer+Straße+33+81667+München"
                       target="_blank"
@@ -79,7 +81,7 @@ const Contact = () => {
                     <Phone className="w-6 h-6 text-brand-gold" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-brand-espresso mb-1">Telefon / WhatsApp / Telegram</h3>
+                    <h3 className="font-semibold text-brand-espresso mb-1">{isGerman ? 'Telefon / WhatsApp / Telegram' : 'Телефон / WhatsApp / Telegram'}</h3>
                     <a href="tel:+4917677267269" className="text-brand-coffee/70 hover:text-brand-gold transition-colors block mb-2">
                       +49 176 77267269
                     </a>
@@ -155,8 +157,8 @@ const Contact = () => {
                       <Car className="w-6 h-6 text-brand-gold" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-brand-espresso mb-2">Anfahrt & Parken</h3>
-                      <p className="text-sm text-brand-coffee/70 mb-2">Zu Fuß: 5–7 Min. vom Ostbahnhof/Orleansplatz</p>
+                      <h3 className="font-semibold text-brand-espresso mb-2">{isGerman ? 'Anfahrt & Parken' : 'Как добраться и парковка'}</h3>
+                      <p className="text-sm text-brand-coffee/70 mb-2">{isGerman ? 'Zu Fuß: 5–7 Min. vom Ostbahnhof/Orleansplatz' : 'Пешком: 5–7 мин. от Ostbahnhof/Orleansplatz'}</p>
                       <ul className="text-sm text-brand-coffee/70 space-y-1">
                         <li>
                           • <a
@@ -187,7 +189,7 @@ const Contact = () => {
                       <Train className="w-6 h-6 text-brand-gold" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-brand-espresso mb-2">ÖPNV</h3>
+                      <h3 className="font-semibold text-brand-espresso mb-2">{isGerman ? 'ÖPNV' : 'Общественный транспорт'}</h3>
                       <ul className="text-sm text-brand-coffee/70 space-y-1">
                         <li>• S-Bahn München Ost (5–7 Min. Fußweg)</li>
                         <li>• U5 Ostbahnhof (5–7 Min. Fußweg)</li>
@@ -221,7 +223,7 @@ const Contact = () => {
                         81667 München-Haidhausen
                       </p>
                       <p className="text-brand-gold text-sm font-semibold flex items-center gap-2">
-                        Route in Google Maps öffnen →
+                        {isGerman ? 'Route in Google Maps öffnen →' : 'Открыть маршрут в Google Maps →'}
                       </p>
                     </div>
                   </div>
@@ -244,7 +246,7 @@ const Contact = () => {
                   <div>
                     <div className="flex items-center gap-2 mb-2">
                       <Car className="w-4 h-4 text-brand-gold" />
-                      <span className="font-semibold text-brand-espresso">Parkplätze:</span>
+                      <span className="font-semibold text-brand-espresso">{isGerman ? 'Parkplätze:' : 'Парковки:'}</span>
                     </div>
                     <ul className="text-brand-coffee/70 space-y-1 ml-6">
                       <li>• <a href="https://maps.app.goo.gl/aamBNHd7cQLSozwt7" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors underline">Parkhaus Ostbahnhof</a> (6 Min.)</li>
@@ -269,7 +271,7 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="glass rounded-2xl p-8 animate-slide-up" style={{ animationDelay: '100ms' }}>
             <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-6">
-              Nachricht senden
+              {isGerman ? 'Nachricht senden' : 'Отправить сообщение'}
             </h2>
             
             <form onSubmit={handleSubmit} className="space-y-6">
