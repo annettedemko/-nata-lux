@@ -11,52 +11,46 @@ import {
 } from 'lucide-react';
 
 const Training = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const isGerman = language === 'de';
 
   const courses = [
     {
       title: t('training.lashes'),
       description: t('training.lashes.desc'),
       icon: GraduationCap,
-      includes: [
-        'Theorie und Praxis',
-        'Zertifikat',
-      ],
+      includes: isGerman
+        ? ['Theorie und Praxis', 'Zertifikat']
+        : ['Теория и практика', 'Сертификат'],
       showPricing: false,
     },
     {
       title: t('training.pmu'),
       description: t('training.pmu.desc'),
       icon: Award,
-      includes: [
-        'Theorie und Praxis',
-        'Zertifikat',
-      ],
+      includes: isGerman
+        ? ['Theorie und Praxis', 'Zertifikat']
+        : ['Теория и практика', 'Сертификат'],
       showPricing: false,
     },
     {
       title: t('training.advanced'),
       description: t('training.advanced.desc'),
       icon: FileText,
-      includes: [
-        'Theorie und Praxis',
-        'Zertifikat',
-      ],
+      includes: isGerman
+        ? ['Theorie und Praxis', 'Zertifikat']
+        : ['Теория и практика', 'Сертификат'],
       showPricing: false,
     },
     {
       title: t('training.consulting'),
       description: t('training.consulting.desc'),
       icon: Users,
-      duration: '1-2 Stunden',
-      price: 'ab 150€',
-      includes: [
-        'Rechtliche Grundlagen',
-        'Geschäftsformen',
-        'Preisgestaltung',
-        'Marketing-Tipps',
-        'Checklisten',
-      ],
+      duration: isGerman ? '1-2 Stunden' : '1-2 часа',
+      price: isGerman ? 'ab 150€' : 'от 150€',
+      includes: isGerman
+        ? ['Rechtliche Grundlagen', 'Geschäftsformen', 'Preisgestaltung', 'Marketing-Tipps', 'Checklisten']
+        : ['Правовые основы', 'Формы бизнеса', 'Ценообразование', 'Маркетинг-советы', 'Чеклисты'],
       showPricing: true,
     },
   ];
@@ -88,8 +82,9 @@ const Training = () => {
             {t('training.subtitle')}
           </p>
           <p className="text-lg text-brand-coffee/80 leading-relaxed">
-            Wir bieten professionelle Schulungen für angehende Beauty-Profis. 
-            Individuell oder in Mini-Gruppen, mit Zertifikat und lebenslanger Unterstützung.
+            {isGerman
+              ? 'Wir bieten professionelle Schulungen für angehende Beauty-Profis. Individuell oder in Mini-Gruppen, mit Zertifikat und lebenslanger Unterstützung.'
+              : 'Мы предлагаем профессиональное обучение для начинающих бьюти-мастеров. Индивидуально или в мини-группах, с сертификатом и пожизненной поддержкой.'}
           </p>
         </div>
 
@@ -118,11 +113,11 @@ const Training = () => {
               {course.showPricing && (
                 <div className="flex items-center justify-between mb-6 pb-6 border-b border-brand-gold/10">
                   <div>
-                    <p className="text-sm text-brand-coffee/60 mb-1">Dauer</p>
+                    <p className="text-sm text-brand-coffee/60 mb-1">{isGerman ? 'Dauer' : 'Длительность'}</p>
                     <p className="text-brand-espresso font-semibold">{course.duration}</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-sm text-brand-coffee/60 mb-1">Preis</p>
+                    <p className="text-sm text-brand-coffee/60 mb-1">{isGerman ? 'Preis' : 'Цена'}</p>
                     <p className="text-2xl font-heading font-semibold text-brand-gold">{course.price}</p>
                   </div>
                 </div>
@@ -149,7 +144,7 @@ const Training = () => {
         {/* Why Choose Us */}
         <div className="glass rounded-3xl p-8 md:p-12 max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-heading font-semibold text-brand-espresso mb-6">
-            Warum bei uns lernen?
+            {isGerman ? 'Warum bei uns lernen?' : 'Почему учиться у нас?'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
@@ -157,10 +152,10 @@ const Training = () => {
                 <Award className="w-6 h-6 text-brand-gold" />
               </div>
               <h3 className="text-lg font-semibold text-brand-espresso mb-2">
-                Zertifiziert
+                {isGerman ? 'Zertifiziert' : 'Сертификат'}
               </h3>
               <p className="text-brand-coffee/70 text-sm">
-                Offizielles Zertifikat nach Abschluss
+                {isGerman ? 'Offizielles Zertifikat nach Abschluss' : 'Официальный сертификат по окончании'}
               </p>
             </div>
             <div>
@@ -168,10 +163,10 @@ const Training = () => {
                 <Users className="w-6 h-6 text-brand-gold" />
               </div>
               <h3 className="text-lg font-semibold text-brand-espresso mb-2">
-                Kleine Gruppen
+                {isGerman ? 'Kleine Gruppen' : 'Малые группы'}
               </h3>
               <p className="text-brand-coffee/70 text-sm">
-                Individuelle Betreuung garantiert
+                {isGerman ? 'Individuelle Betreuung garantiert' : 'Гарантированное индивидуальное внимание'}
               </p>
             </div>
             <div>
@@ -179,10 +174,10 @@ const Training = () => {
                 <GraduationCap className="w-6 h-6 text-brand-gold" />
               </div>
               <h3 className="text-lg font-semibold text-brand-espresso mb-2">
-                Support
+                {isGerman ? 'Support' : 'Поддержка'}
               </h3>
               <p className="text-brand-coffee/70 text-sm">
-                Lebenslange Unterstützung nach dem Kurs
+                {isGerman ? 'Lebenslange Unterstützung nach dem Kurs' : 'Пожизненная поддержка после курса'}
               </p>
             </div>
           </div>
