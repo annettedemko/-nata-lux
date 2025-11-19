@@ -133,15 +133,6 @@ const Services = () => {
         />
       </div>
 
-      {/* Мобильная адаптация фона */}
-      <style jsx>{`
-        @media (max-width: 768px) {
-          .fixed.inset-0 > div {
-            background-size: cover !important;
-            background-position: center center !important;
-          }
-        }
-      `}</style>
 
       {/* КОНТЕНТ В СТИЛЕ VOGUE */}
       <div className="relative z-10 min-h-screen">

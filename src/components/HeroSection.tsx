@@ -17,7 +17,7 @@ export const HeroSection = () => {
 
       {/* Content - смещён вправо на 15% на десктопе, центрирован на мобильных */}
       <div className="container mx-auto px-4 md:px-6 relative z-20 py-12 md:py-16 lg:py-20">
-        <div className="max-w-3xl text-center md:text-right" style={{ marginLeft: 'auto', marginRight: language === 'ru' ? 'auto' : '0', transform: window.innerWidth >= 768 ? 'translateX(-15%)' : 'none' }}>
+        <div className="max-w-3xl text-center md:text-right md:-translate-x-[15%]" style={{ marginLeft: 'auto', marginRight: language === 'ru' ? 'auto' : '0' }}>
           {/* Logo - эффект возрождения с золотой пылью */}
           <motion.div
             className="mb-12 mt-16 flex justify-center md:justify-end relative"

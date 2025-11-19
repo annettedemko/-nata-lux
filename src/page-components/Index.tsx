@@ -242,15 +242,6 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-white/10 to-white/20 pointer-events-none" />
       </div>
 
-      {/* Мобильная версия фона для лучшей адаптации */}
-      <style jsx>{`
-        @media (max-width: 768px) {
-          .fixed.inset-0.z-0 {
-            background-size: cover !important;
-            background-position: center center !important;
-          }
-        }
-      `}</style>
 
       {/* Hero Section with Parallax */}
       <HeroSection />
@@ -628,20 +619,12 @@ const Index = () => {
             className="max-w-6xl mx-auto"
           >
             <div
-              className="relative rounded-2xl md:rounded-3xl overflow-hidden"
+              className="relative rounded-2xl md:rounded-3xl overflow-hidden h-[300px] md:h-[500px]"
               style={{
-                height: '300px',
                 boxShadow: '0 20px 60px rgba(197,151,80,0.2), 0 8px 24px rgba(0,0,0,0.1)',
                 border: '2px solid rgba(197,151,80,0.2)',
               }}
             >
-              <style jsx>{`
-                @media (min-width: 768px) {
-                  .relative.rounded-2xl {
-                    height: 500px !important;
-                  }
-                }
-              `}</style>
               {/* Clickable overlay with address */}
               <a
                 href="https://www.google.com/maps/dir/?api=1&destination=Elsässer+Straße+33+81667+München"

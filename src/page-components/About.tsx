@@ -24,15 +24,6 @@ const About = () => {
         />
       </div>
 
-      {/* Мобильная адаптация фона */}
-      <style jsx>{`
-        @media (max-width: 768px) {
-          .fixed.inset-0 > div {
-            background-size: cover !important;
-            background-position: center center !important;
-          }
-        }
-      `}</style>
 
       {/* Content */}
       <div className="relative z-10">
