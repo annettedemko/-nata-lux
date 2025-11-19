@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Manrope:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Munich Beauty Design System - Warm Beige/Latte Palette */
+
+@layer base {
+  :root {
+    /* Brand Colors - Warm Beige/Latte Palette (HSL only) */
+    --brand-latte: 30 35% 90%;        /* #EFE7DD */
+    --brand-cream: 40 50% 95%;        /* #F6F1EA */
+    --brand-sand: 30 30% 84%;         /* #E5D6C7 */
+    --brand-taupe: 30 15% 72%;        /* #C9B6A8 */
+    --brand-coffee: 25 27% 19%;       /* #3A2C22 */
+    --brand-espresso: 25 22% 14%;     /* #2B1F18 */
+    --brand-gold: 38 37% 60%;         /* #C9A56A */
+    --brand-gold-light: 40 48% 78%;   /* #E7CFA3 */
+    
+    /* Semantic Colors */
+    --background: 40 50% 95%;         /* cream */
+    --foreground: 25 27% 19%;         /* coffee */
+    
+    --card: 30 35% 92%;
+    --card-foreground: 25 27% 19%;
+    
+    --popover: 40 50% 96%;
+    --popover-foreground: 25 27% 19%;
+    
+    --primary: 38 37% 60%;            /* gold */
+    --primary-foreground: 40 50% 98%;
+    
+    --secondary: 30 30% 84%;          /* sand */
+    --secondary-foreground: 25 22% 14%;
+    
+    --muted: 30 25% 88%;
+    --muted-foreground: 25 20% 45%;
+    
+    --accent: 38 37% 60%;             /* gold */
+    --accent-foreground: 25 22% 14%;
+    
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 40 50% 98%;
+    
+    --border: 30 20% 85%;
+    --input: 30 20% 85%;
+    --ring: 38 37% 60%;
+    
+    --radius: 1rem;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-latte)), hsl(var(--brand-cream)));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--brand-gold)), hsl(var(--brand-gold-light)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--brand-cream)), hsl(var(--brand-latte)));
+    
+    /* Shadows */
+    --shadow-soft: 0 10px 30px rgba(58, 44, 34, 0.07);
+    --shadow-medium: 0 20px 40px rgba(58, 44, 34, 0.10);
+    --shadow-glow: 0 0 40px rgba(201, 165, 106, 0.15);
+    
+    /* Transitions */
+    --transition-base: all 0.2s ease-out;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    cursor: none !important;
+  }
+
+  html {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    cursor: none !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Hide default cursor on interactive elements */
+  a, button, input, textarea, select, div, section, main, header, footer, nav {
+    cursor: none !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-brand-espresso tracking-wide;
+  }
+
+  /* Глобальный letter-spacing для font-heading */
+  .font-heading {
+    letter-spacing: 0.02em;
+  }
+}
+
+@layer components {
+  /* Enhanced Glass morphism effect - Framer inspired */
+  .glass {
+    @apply bg-white/40 backdrop-blur-xl border border-white/30;
+    box-shadow:
+      0 8px 32px 0 rgba(58, 44, 34, 0.08),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
+  }
+
+  .glass-strong {
+    @apply bg-white/60 backdrop-blur-2xl border border-white/40;
+    box-shadow:
+      0 20px 60px 0 rgba(58, 44, 34, 0.12),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.4);
+  }
+
+  /* Hero gradient background */
+  .bg-hero-gradient {
+    background: linear-gradient(135deg,
+      hsl(var(--brand-latte)) 0%,
+      hsl(var(--brand-cream)) 50%,
+      hsl(var(--brand-latte)) 100%);
+  }
+
+  .bg-gold-gradient {
+    background: linear-gradient(135deg,
+      hsl(var(--brand-gold)) 0%,
+      hsl(var(--brand-gold-light)) 100%);
+  }
+
+  .bg-mesh-gradient {
+    background:
+      radial-gradient(at 40% 20%, hsla(40, 50%, 95%, 1) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, hsla(38, 37%, 60%, 0.15) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, hsla(30, 35%, 90%, 1) 0px, transparent 50%),
+      radial-gradient(at 80% 50%, hsla(40, 48%, 78%, 0.2) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsla(30, 30%, 84%, 1) 0px, transparent 50%),
+      radial-gradient(at 80% 100%, hsla(38, 37%, 60%, 0.1) 0px, transparent 50%),
+      hsla(40, 50%, 95%, 1);
+  }
+
+  /* Smooth animations */
+  .animate-fade-in {
+    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* Hover effects - оптимизированные для производительности */
+  .hover-lift {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+  }
+
+  .hover-glow {
+    transition: box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .hover-glow:hover {
+    box-shadow:
+      0 0 0 1px rgba(201, 165, 106, 0.2),
+      0 0 30px rgba(201, 165, 106, 0.2),
+      0 15px 30px rgba(58, 44, 34, 0.1);
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(135deg,
+      hsl(var(--brand-gold)),
+      hsl(var(--brand-gold-light)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer utilities {
+  .text-brand-coffee {
+    color: hsl(var(--brand-coffee));
+  }
+  
+  .text-brand-espresso {
+    color: hsl(var(--brand-espresso));
+  }
+  
+  .text-brand-gold {
+    color: hsl(var(--brand-gold));
+  }
+  
+  .bg-brand-latte {
+    background-color: hsl(var(--brand-latte));
+  }
+  
+  .bg-brand-cream {
+    background-color: hsl(var(--brand-cream));
+  }
+  
+  .bg-brand-sand {
+    background-color: hsl(var(--brand-sand));
+  }
+  
+  .bg-brand-taupe {
+    background-color: hsl(var(--brand-taupe));
+  }
+  
+  .border-brand-gold {
+    border-color: hsl(var(--brand-gold));
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Удалены неиспользуемые анимации для производительности */

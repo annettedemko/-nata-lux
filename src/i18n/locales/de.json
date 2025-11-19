@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Dienstleistungen",
+    "training": "Schulung",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "booking": "Termin buchen"
+  },
+  "hero": {
+    "title": "Ihre Beauty-Expertin",
+    "subtitle": "Professionelle Beauty-Dienstleistungen & Schulungen in München",
+    "cta": "Jetzt buchen",
+    "learnMore": "Mehr erfahren"
+  },
+  "services": {
+    "title": "Meine Leistungen",
+    "subtitle": "Exklusive Beauty-Behandlungen mit höchsten Qualitätsstandards",
+    "viewAll": "Alle Dienstleistungen",
+    "bookNow": "Jetzt buchen"
+  },
+  "training": {
+    "title": "Schulungen",
+    "subtitle": "Professionelle Ausbildung für angehende Beauty-Experten",
+    "viewCourses": "Kurse ansehen",
+    "enrollment": "Jetzt anmelden"
+  },
+  "about": {
+    "title": "Über Nata Lux",
+    "subtitle": "Ihre Expertin für Beauty & Training",
+    "experience": "Jahre Erfahrung",
+    "clients": "Zufriedene Kunden",
+    "courses": "Absolvierte Kurse"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Vereinbaren Sie Ihren Termin",
+    "name": "Name",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "message": "Nachricht",
+    "send": "Senden",
+    "address": "Adresse",
+    "workingHours": "Öffnungszeiten"
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten",
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "imprint": "Impressum"
+  }
+}
