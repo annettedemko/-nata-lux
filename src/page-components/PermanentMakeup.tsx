@@ -9,7 +9,8 @@ import { Button } from '@/components/ui/button';
 ;
 
 const PermanentMakeup = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const isGerman = language === 'de';
 
   const subcategories = [
     {
@@ -99,7 +100,7 @@ const PermanentMakeup = () => {
             className="text-center mb-12"
           >
             <h2 className="text-xl md:text-2xl lg:text-3xl lg:text-4xl font-heading font-semibold text-brand-espresso mb-4">
-              Наши услуги
+              {isGerman ? 'Unsere Leistungen' : 'Наши услуги'}
             </h2>
           </motion.div>
 
@@ -130,24 +131,28 @@ const PermanentMakeup = () => {
             className="glass rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12"
           >
             <h3 className="text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6">
-              Что такое перманентный макияж?
+              {isGerman ? 'Was ist Permanent Make-up?' : 'Что такое перманентный макияж?'}
             </h3>
             <div className="space-y-3 md:space-y-4 text-sm md:text-base text-brand-coffee/80 leading-relaxed">
               <p>
-                Перманентный макияж — это введение натуральных пигментов в верхние слои кожи.
-                Результат держится 1-3 года в зависимости от типа кожи и ухода.
+                {isGerman
+                  ? 'Permanent Make-up ist das Einbringen von natürlichen Pigmenten in die oberen Hautschichten. Das Ergebnis hält 1-3 Jahre, je nach Hauttyp und Pflege.'
+                  : 'Перманентный макияж — это введение натуральных пигментов в верхние слои кожи. Результат держится 1-3 года в зависимости от типа кожи и ухода.'}
               </p>
               <p>
-                Мы используем немецкие и швейцарские пигменты, которые не меняют цвет и постепенно
-                выводятся естественным путем.
+                {isGerman
+                  ? 'Wir verwenden deutsche und Schweizer Pigmente, die ihre Farbe nicht verändern und auf natürliche Weise abgebaut werden.'
+                  : 'Мы используем немецкие и швейцарские пигменты, которые не меняют цвет и постепенно выводятся естественным путем.'}
               </p>
               <p>
-                Процедура проходит с применением местной анестезии. Время заживления — 7-10 дней.
-                Через 4-6 недель проводится бесплатная коррекция.
+                {isGerman
+                  ? 'Die Behandlung wird unter örtlicher Betäubung durchgeführt. Die Heilungszeit beträgt 7-10 Tage. Nach 4-6 Wochen erfolgt eine kostenlose Nachbesserung.'
+                  : 'Процедура проходит с применением местной анестезии. Время заживления — 7-10 дней. Через 4-6 недель проводится бесплатная коррекция.'}
               </p>
               <p className="font-semibold text-brand-espresso">
-                Обязательная консультация перед процедурой! Мы оцениваем тип кожи, обсуждаем форму,
-                цвет и технику нанесения.
+                {isGerman
+                  ? 'Beratung vor der Behandlung ist Pflicht! Wir bewerten Ihren Hauttyp und besprechen Form, Farbe und Technik.'
+                  : 'Обязательная консультация перед процедурой! Мы оцениваем тип кожи, обсуждаем форму, цвет и технику нанесения.'}
               </p>
             </div>
           </motion.div>
@@ -164,10 +169,12 @@ const PermanentMakeup = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-xl md:text-2xl lg:text-3xl lg:text-4xl font-heading font-semibold text-white mb-4 md:mb-6">
-              Запишитесь на консультацию
+              {isGerman ? 'Beratungstermin vereinbaren' : 'Запишитесь на консультацию'}
             </h2>
             <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-              Мастер покажет портфолио работ, подберет форму и оттенок. Консультация бесплатная!
+              {isGerman
+                ? 'Die Meisterin zeigt ihr Portfolio, wählt Form und Farbton aus. Die Beratung ist kostenlos!'
+                : 'Мастер покажет портфолио работ, подберет форму и оттенок. Консультация бесплатная!'}
             </p>
             <Link to="/contact">
               <Button

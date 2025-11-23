@@ -46,12 +46,10 @@ const Training = () => {
       title: t('training.consulting'),
       description: t('training.consulting.desc'),
       icon: Users,
-      duration: isGerman ? '1-2 Stunden' : '1-2 часа',
-      price: isGerman ? 'ab 150€' : 'от 150€',
       includes: isGerman
         ? ['Rechtliche Grundlagen', 'Geschäftsformen', 'Preisgestaltung', 'Marketing-Tipps', 'Checklisten']
         : ['Правовые основы', 'Формы бизнеса', 'Ценообразование', 'Маркетинг-советы', 'Чеклисты'],
-      showPricing: true,
+      showPricing: false,
     },
   ];
 
@@ -62,7 +60,7 @@ const Training = () => {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url(/26.png)',
+            backgroundImage: 'url(/45.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',

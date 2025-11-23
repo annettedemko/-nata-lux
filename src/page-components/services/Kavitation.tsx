@@ -85,48 +85,7 @@ const Kavitation = () => {
             : 'Вы получаете детальные рекомендации для периода после процедуры, чтобы оптимально поддержать липолиз: пить много воды (мин. 2–3 литра в день), здоровое питание с низким содержанием жиров (овощи, фрукты, нежирный белок), умеренное движение (30 мин. прогулки, лёгкое кардио, йога), избегать алкоголя 48 часов (алкоголь замедляет липолиз через печень). Для оптимального и долговременного результата мы рекомендуем курс из 8–12 процедур, в идеале 1× в неделю (мин. 5–7 дней перерыв между сеансами). Результаты кумулятивные — чем больше процедур, тем больше уменьшение жира. После завершения курса рекомендуем поддерживающие сеансы каждые 2–3 месяца для долгосрочного сохранения результата.'
         }
       ]}
-      priceTable={[
-        {
-          service: isGerman ? 'Kavitation eine Zone (Bauch, Gesäß, Oberschenkel)' : 'Кавитация одна зона (живот, ягодицы, бедро)',
-          duration: '40 Min.',
-          price: '60€'
-        },
-        {
-          service: isGerman ? 'Kavitation zwei Zonen' : 'Кавитация две зоны',
-          duration: '60 Min.',
-          price: '95€'
-        },
-        {
-          service: isGerman ? 'Kavitation kleine Zone (Arme, Knie)' : 'Кавитация малая зона (руки, колени)',
-          duration: '30 Min.',
-          price: '45€'
-        },
-        {
-          service: isGerman ? 'Kavitation + Lymphdrainage-Massage' : 'Кавитация + лимфодренажный массаж',
-          duration: '75 Min.',
-          price: '120€'
-        },
-        {
-          service: isGerman ? 'Kavitation + RF-Lifting Körper' : 'Кавитация + RF-лифтинг тела',
-          duration: '90 Min.',
-          price: '150€'
-        },
-        {
-          service: isGerman ? '5er-Kur Kavitation (eine Zone)' : 'Курс 5 процедур кавитация (одна зона)',
-          duration: '5x 40 Min.',
-          price: '270€'
-        },
-        {
-          service: isGerman ? '8er-Kur Kavitation (eine Zone)' : 'Курс 8 процедур кавитация (одна зона)',
-          duration: '8x 40 Min.',
-          price: '420€'
-        },
-        {
-          service: isGerman ? '10er-Kur Kavitation (eine Zone)' : 'Курс 10 процедур кавитация (одна зона)',
-          duration: '10x 40 Min.',
-          price: '500€'
-        }
-      ]}
+      priceSection="body-treatments"
       contraindications={[
         isGerman ? 'Schwangerschaft und Stillzeit' : 'Беременность и кормление грудью',
         isGerman ? 'Herzschrittmacher oder implantierte elektronische Geräte' : 'Кардиостимулятор или имплантированные электронные устройства',

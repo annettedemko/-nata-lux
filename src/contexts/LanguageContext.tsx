@@ -68,7 +68,7 @@ const translations = {
     'training.advanced.desc': 'Fortgeschrittene Techniken und neue Trends.',
     'training.consulting': 'Business Consulting',
     'training.consulting.desc': 'Salon-Eröffnung und Geschäftsführung in Deutschland.',
-    'training.cta': 'Programm herunterladen',
+    'training.cta': 'Mehr erfahren',
 
     // Reviews
     'reviews.title': 'Was unsere Kunden sagen',
@@ -203,7 +203,7 @@ const translations = {
     'nav.contact': 'Контакты',
 
     // Hero
-    'hero.title': 'Мюнхенский салон эстетики',
+    'hero.title': 'Салон эстетики в Мюнхене',
     'hero.subtitle': 'Ресницы, перманент, лазер, anti-aging',
     'hero.description': 'Натуральный эффект без боли и простоев. Консультация перед процедурой — бесплатно.',
     'hero.cta.book': 'Записаться',
@@ -241,11 +241,11 @@ const translations = {
     'training.lashes.desc': 'Полное обучение с нуля. Сертификат включён.',
     'training.pmu': 'Курс удаления ПМ',
     'training.pmu.desc': 'Безопасные техники удаления. Практика.',
-    'training.nisv': 'Консультация NiSV',
-    'training.nisv.desc': 'Помощь в получении сертификата для лазера.',
+    'training.advanced': 'Повышение квалификации',
+    'training.advanced.desc': 'Продвинутые техники и новые тренды.',
     'training.consulting': 'Бизнес-консалтинг',
     'training.consulting.desc': 'Открытие и ведение салона в Германии.',
-    'training.cta': 'Получить программу',
+    'training.cta': 'Узнать больше',
 
     // Reviews
     'reviews.title': 'Что говорят наши клиенты',

@@ -16,7 +16,8 @@ import {
 } from 'lucide-react';
 
 const Services = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const isGerman = language === 'de';
 
   // Категория 1: Ресницы и Брови
   const lashesBrowsServices = [
@@ -147,7 +148,7 @@ const Services = () => {
                 letterSpacing: '-0.02em'
               }}
             >
-              SERVICES
+              {isGerman ? 'LEISTUNGEN' : 'УСЛУГИ'}
             </h1>
             <div className="w-12 md:w-16 h-0.5 bg-brand-gold mx-auto opacity-60"></div>
           </div>
@@ -155,7 +156,7 @@ const Services = () => {
           {/* КАТЕГОРИИ В СТИЛЕ EDITORIAL */}
 
           {/* Категория 1 */}
-          <div className="mb-16 md:mb-24 lg:mb-32">
+          <div id="lashes-brows" className="mb-16 md:mb-24 lg:mb-32 scroll-mt-24">
             {/* Заголовок категории слева */}
             <div className="flex items-end mb-8 md:mb-8 md:mb-12 border-b border-brand-espresso/10 pb-4 md:pb-4 md:pb-6">
               <div className="flex items-center gap-2 md:gap-2 md:gap-4">
@@ -181,7 +182,7 @@ const Services = () => {
           </div>
 
           {/* Категория 2 */}
-          <div className="mb-16 md:mb-24 lg:mb-32">
+          <div id="pmu" className="mb-16 md:mb-24 lg:mb-32 scroll-mt-24">
             <div className="flex items-end mb-8 md:mb-12 border-b border-brand-espresso/10 pb-4 md:pb-6">
               <div className="flex items-center gap-2 md:gap-4">
                 <div
@@ -206,7 +207,7 @@ const Services = () => {
           </div>
 
           {/* Категория 3 */}
-          <div className="mb-16 md:mb-24 lg:mb-32">
+          <div id="laser" className="mb-16 md:mb-24 lg:mb-32 scroll-mt-24">
             <div className="flex items-end mb-8 md:mb-12 border-b border-brand-espresso/10 pb-4 md:pb-6">
               <div className="flex items-center gap-2 md:gap-4">
                 <div
@@ -231,7 +232,7 @@ const Services = () => {
           </div>
 
           {/* Категория 4 */}
-          <div className="mb-24">
+          <div id="anti-aging" className="mb-24 scroll-mt-24">
             <div className="flex items-end mb-8 md:mb-12 border-b border-brand-espresso/10 pb-4 md:pb-6">
               <div className="flex items-center gap-2 md:gap-4">
                 <div

@@ -1,0 +1,158 @@
+'use client'
+
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
+
+interface PremiumGalleryProps {
+  images: string[];
+  title?: string;
+}
+
+export const PremiumGallery = ({ images, title }: PremiumGalleryProps) => {
+  const { language } = useLanguage();
+  const isGerman = language === 'de';
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+
+  const openLightbox = (index: number) => setSelectedImage(index);
+  const closeLightbox = () => setSelectedImage(null);
+  const nextImage = () => setSelectedImage((prev) => prev !== null ? (prev + 1) % images.length : null);
+  const prevImage = () => setSelectedImage((prev) => prev !== null ? (prev - 1 + images.length) % images.length : null);
+
+  return (
+    <>
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        className="relative mb-16"
+      >
+        {/* Section Header */}
+        <div className="text-center mb-10">
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ width: '80px' }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="h-[2px] bg-gradient-to-r from-transparent via-brand-gold to-transparent mx-auto mb-6"
+          />
+          <h2 className="text-3xl md:text-4xl font-heading font-semibold text-brand-espresso mb-2">
+            {title || (isGerman ? 'Unsere Arbeiten' : 'Наши работы')}
+          </h2>
+          <p className="text-brand-coffee/60 text-sm tracking-widest uppercase">
+            {isGerman ? 'Galerie' : 'Галерея'}
+          </p>
+        </div>
+
+        {/* Premium Gallery Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+          {images.map((src, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
+              whileHover={{ scale: 1.02 }}
+              onClick={() => openLightbox(index)}
+              className="group relative aspect-square cursor-pointer overflow-hidden rounded-2xl"
+            >
+              {/* Image */}
+              <Image
+                src={src}
+                alt={`${isGerman ? 'Arbeit' : 'Работа'} ${index + 1}`}
+                fill
+                className="object-cover transition-all duration-700 ease-out group-hover:scale-110"
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
+
+              {/* Luxury Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+
+              {/* Golden Border Effect */}
+              <div className="absolute inset-0 rounded-2xl border-2 border-brand-gold/0 group-hover:border-brand-gold/40 transition-all duration-500" />
+
+              {/* Shine Effect */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+              </div>
+
+              {/* View indicator */}
+              <div className="absolute bottom-3 left-3 right-3 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
+                <span className="text-white text-xs font-medium tracking-wider uppercase bg-black/30 backdrop-blur-sm px-3 py-1.5 rounded-full">
+                  {isGerman ? 'Ansehen' : 'Смотреть'}
+                </span>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Decorative Elements */}
+        <div className="absolute -top-10 -right-10 w-40 h-40 bg-brand-gold/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-brand-gold/5 rounded-full blur-3xl pointer-events-none" />
+      </motion.section>
+
+      {/* Premium Lightbox */}
+      {selectedImage !== null && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex items-center justify-center"
+          onClick={closeLightbox}
+        >
+          {/* Close Button */}
+          <button
+            onClick={closeLightbox}
+            className="absolute top-6 right-6 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-300 group"
+          >
+            <X className="w-6 h-6 text-white group-hover:rotate-90 transition-transform duration-300" />
+          </button>
+
+          {/* Navigation - Previous */}
+          <button
+            onClick={(e) => { e.stopPropagation(); prevImage(); }}
+            className="absolute left-4 md:left-8 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-300"
+          >
+            <ChevronLeft className="w-6 h-6 text-white" />
+          </button>
+
+          {/* Navigation - Next */}
+          <button
+            onClick={(e) => { e.stopPropagation(); nextImage(); }}
+            className="absolute right-4 md:right-8 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-300"
+          >
+            <ChevronRight className="w-6 h-6 text-white" />
+          </button>
+
+          {/* Main Image */}
+          <motion.div
+            key={selectedImage}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3 }}
+            className="relative w-[90vw] h-[80vh] md:w-[80vw] md:h-[85vh]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={images[selectedImage]}
+              alt={`${isGerman ? 'Arbeit' : 'Работа'} ${selectedImage + 1}`}
+              fill
+              className="object-contain"
+              sizes="90vw"
+              priority
+            />
+          </motion.div>
+
+          {/* Image Counter */}
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/60 text-sm font-medium tracking-wider">
+            {selectedImage + 1} / {images.length}
+          </div>
+        </motion.div>
+      )}
+    </>
+  );
+};

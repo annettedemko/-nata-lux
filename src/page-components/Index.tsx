@@ -43,14 +43,14 @@ const Index = () => {
       title: t('categories.lashesbrows'),
       description: t('categories.lashesbrows.desc'),
       icon: Sparkles,
-      href: '/lashes-brows',
+      href: '/services#lashes-brows',
       image: '/30.png',
     },
     {
       title: t('categories.pmu'),
       description: t('categories.pmu.desc'),
       icon: Palette,
-      href: '/permanent-makeup',
+      href: '/services#pmu',
       image: '/35.png',
     },
     {
@@ -64,7 +64,7 @@ const Index = () => {
       title: t('categories.antiaging'),
       description: t('categories.antiaging.desc'),
       icon: Star,
-      href: '/anti-aging',
+      href: '/services#anti-aging',
       image: '/32.png',
     },
     {
@@ -99,7 +99,7 @@ const Index = () => {
         ? 'Dauerhafte Haarentfernung mit modernster Diodenlaser-Technologie'
         : 'Перманентное удаление волос с помощью современной диодной лазерной технологии',
       icon: Zap,
-      href: '/services/dioden-laser',
+      href: '/laser',
       image: '/41.jpg',
     },
     {
@@ -117,7 +117,7 @@ const Index = () => {
         ? 'Innovative Hautbehandlung für Kollagenbildung und Hautregeneration'
         : 'Инновационная процедура для выработки коллагена и регенерации кожи',
       icon: Star,
-      href: '/services/apparative-anti-aging',
+      href: '/services/microneedling',
       image: '/44.png',
     },
   ];
@@ -309,7 +309,9 @@ const Index = () => {
               {t('categories.title')}
             </h2>
             <p className="text-base md:text-lg text-brand-coffee/70 max-w-2xl mx-auto leading-relaxed px-4">
-              Откройте для себя наш полный спектр услуг — от ресниц и перманента до anti-aging и лазера
+              {language === 'de'
+                ? 'Entdecken Sie unser komplettes Serviceangebot — von Wimpern und Permanent Make-up bis Anti-Aging und Laser Behandlungen'
+                : 'Откройте для себя наш полный спектр услуг — от ресниц и перманента до anti-aging и лазера'}
             </p>
           </motion.div>
 
@@ -398,7 +400,7 @@ const Index = () => {
                     e.currentTarget.style.boxShadow = '0 8px 24px rgba(197,151,80,0.15), 0 2px 8px rgba(0,0,0,0.05)';
                   }}
                 >
-                  Alle Dienstleistungen ansehen
+                  {language === 'de' ? 'Alle Dienstleistungen ansehen' : 'Смотреть все услуги'}
                 </Button>
               </motion.div>
             </Link>
@@ -497,7 +499,7 @@ const Index = () => {
                       ))}
                     </div>
                   </div>
-                  <span className="text-xs text-brand-coffee/60 font-medium">Google Bewertungen</span>
+                  <span className="text-xs text-brand-coffee/60 font-medium">{language === 'de' ? 'Google Bewertungen' : 'Отзывы Google'}</span>
                 </div>
               </div>
             </motion.div>
@@ -651,7 +653,7 @@ const Index = () => {
                           81667 München-Haidhausen
                         </p>
                         <p className="text-brand-gold text-sm font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
-                          <span>Route in Google Maps öffnen</span>
+                          <span>{language === 'de' ? 'Route in Google Maps öffnen' : 'Открыть маршрут в Google Maps'}</span>
                           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                           </svg>
@@ -737,7 +739,7 @@ const Index = () => {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                         </svg>
                       </div>
-                      <h3 className="font-semibold text-brand-espresso text-lg">ÖPNV</h3>
+                      <h3 className="font-semibold text-brand-espresso text-lg">{language === 'de' ? 'ÖPNV' : 'Общ. транспорт'}</h3>
                     </div>
                     <ul className="text-sm text-brand-coffee/70 space-y-2">
                       <li className="flex items-start gap-2">

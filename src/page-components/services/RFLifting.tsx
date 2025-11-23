@@ -279,53 +279,7 @@ const RFLifting = () => {
       ]}
       // Add custom section for Face vs Body RF
       additionalSections={<RFApplications />}
-      priceTable={[
-        {
-          service: isGerman ? 'RF-Lifting Gesicht' : 'RF-лифтинг лица',
-          duration: '45 Min.',
-          price: '95€'
-        },
-        {
-          service: isGerman ? 'RF-Lifting Gesicht + Hals' : 'RF-лифтинг лица + шеи',
-          duration: '60 Min.',
-          price: '120€'
-        },
-        {
-          service: isGerman ? 'RF-Lifting Gesicht + Hals + Dekolleté' : 'RF-лифтинг лица + шеи + декольте',
-          duration: '75 Min.',
-          price: '150€'
-        },
-        {
-          service: isGerman ? 'RF-Lifting Körperzone (klein: Arme, Knie)' : 'RF-лифтинг зона тела (малая: руки, колени)',
-          duration: '30 Min.',
-          price: '70€'
-        },
-        {
-          service: isGerman ? 'RF-Lifting Körperzone (groß: Bauch, Oberschenkel, Gesäß)' : 'RF-лифтинг зона тела (большая: живот, бёдра, ягодицы)',
-          duration: '60 Min.',
-          price: '110€'
-        },
-        {
-          service: isGerman ? '3er-Kur RF-Lifting Gesicht' : 'Курс 3 процедуры RF-лифтинг лица',
-          duration: '3x 45 Min.',
-          price: '255€'
-        },
-        {
-          service: isGerman ? '5er-Kur RF-Lifting Gesicht' : 'Курс 5 процедур RF-лифтинг лица',
-          duration: '5x 45 Min.',
-          price: '400€'
-        },
-        {
-          service: isGerman ? '10er-Kur RF-Lifting Gesicht' : 'Курс 10 процедур RF-лифтинг лица',
-          duration: '10x 45 Min.',
-          price: '750€'
-        },
-        {
-          service: isGerman ? '8er-Kur RF-Lifting Körper (große Zone)' : 'Курс 8 процедур RF-лифтинг тела (большая зона)',
-          duration: '8x 60 Min.',
-          price: '790€'
-        }
-      ]}
+      priceSection="apparative-antiaging"
       contraindications={[
         isGerman ? 'Schwangerschaft und Stillzeit' : 'Беременность и кормление грудью',
         isGerman ? 'Herzschrittmacher oder implantierte elektronische Geräte (ICD, Insulinpumpe)' : 'Кардиостимулятор или имплантированные электронные устройства (ИКД, инсулиновая помпа)',

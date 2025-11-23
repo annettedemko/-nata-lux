@@ -9,7 +9,8 @@ import { Button } from '@/components/ui/button';
 ;
 
 const LashesBrows = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const isGerman = language === 'de';
 
   const subcategories = [
     {
@@ -99,7 +100,7 @@ const LashesBrows = () => {
             className="text-center mb-8 md:mb-12"
           >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-semibold text-brand-espresso mb-3 md:mb-4 px-4">
-              Наши услуги
+              {isGerman ? 'Unsere Leistungen' : 'Наши услуги'}
             </h2>
           </motion.div>
 
@@ -130,19 +131,23 @@ const LashesBrows = () => {
             className="glass rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12"
           >
             <h3 className="text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6">
-              Почему выбирают нас?
+              {isGerman ? 'Warum uns wählen?' : 'Почему выбирают нас?'}
             </h3>
             <div className="space-y-3 md:space-y-4 text-sm md:text-base text-brand-coffee/80 leading-relaxed">
               <p>
-                Наши мастера имеют сертификаты и многолетний опыт работы с ресницами и бровями.
-                Мы используем только премиум-материалы из Германии и Кореи.
+                {isGerman
+                  ? 'Unsere Stylisten sind zertifiziert und haben langjährige Erfahrung mit Wimpern und Augenbrauen. Wir verwenden nur Premium-Materialien aus Deutschland und Korea.'
+                  : 'Наши мастера имеют сертификаты и многолетний опыт работы с ресницами и бровями. Мы используем только премиум-материалы из Германии и Кореи.'}
               </p>
               <p>
-                Каждая процедура начинается с бесплатной консультации, где мастер подберет
-                оптимальную форму, изгиб и длину с учетом ваших особенностей.
+                {isGerman
+                  ? 'Jede Behandlung beginnt mit einer kostenlosen Beratung, bei der der Stylist die optimale Form, Biegung und Länge für Sie auswählt.'
+                  : 'Каждая процедура начинается с бесплатной консультации, где мастер подберет оптимальную форму, изгиб и длину с учетом ваших особенностей.'}
               </p>
               <p>
-                Гарантируем стерильность всех инструментов и соблюдение высоких стандартов гигиены.
+                {isGerman
+                  ? 'Wir garantieren die Sterilität aller Instrumente und die Einhaltung höchster Hygienestandards.'
+                  : 'Гарантируем стерильность всех инструментов и соблюдение высоких стандартов гигиены.'}
               </p>
             </div>
           </motion.div>
@@ -159,10 +164,12 @@ const LashesBrows = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-semibold text-white mb-4 md:mb-6 px-4">
-              Готовы к преображению?
+              {isGerman ? 'Bereit für Ihre Verwandlung?' : 'Готовы к преображению?'}
             </h2>
             <p className="text-white/90 text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto px-4">
-              Запишитесь на бесплатную консультацию и получите индивидуальную рекомендацию от наших мастеров
+              {isGerman
+                ? 'Buchen Sie eine kostenlose Beratung und erhalten Sie eine individuelle Empfehlung von unseren Stylisten'
+                : 'Запишитесь на бесплатную консультацию и получите индивидуальную рекомендацию от наших мастеров'}
             </p>
             <Link to="/contact">
               <Button

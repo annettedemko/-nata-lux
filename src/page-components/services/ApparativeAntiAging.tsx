@@ -5,30 +5,39 @@ import { ServiceCard } from '@/components/ServiceCard';
 import { Star, Zap, Sun, Activity } from 'lucide-react';
 
 const ApparativeAntiAging = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const isGerman = language === 'de';
 
   const treatments = [
     {
       title: 'RF-Lifting',
-      description: 'Radiofrequenz für Straffung und Kollagenbildung',
+      description: isGerman
+        ? 'Radiofrequenz für Straffung und Kollagenbildung'
+        : 'Радиочастоты для подтяжки и выработки коллагена',
       icon: Zap,
       href: '/services/apparative-anti-aging/rf-lifting',
     },
     {
-      title: 'Lichttherapie',
-      description: 'LED und IPL für Anti-Aging und Hautregeneration',
+      title: isGerman ? 'Lichttherapie' : 'Световая терапия',
+      description: isGerman
+        ? 'LED und IPL für Anti-Aging und Hautregeneration'
+        : 'LED и IPL для омоложения и регенерации кожи',
       icon: Sun,
       href: '/services/apparative-anti-aging/lichttherapie',
     },
     {
-      title: 'Biostrom',
-      description: 'Mikrostrom für Muskelstimulation und Lifting',
+      title: isGerman ? 'Biostrom' : 'Биотоки',
+      description: isGerman
+        ? 'Mikrostrom für Muskelstimulation und Lifting'
+        : 'Микротоки для стимуляции мышц и лифтинга',
       icon: Activity,
       href: '/services/apparative-anti-aging/biostrom',
     },
     {
-      title: 'Ultraschall',
-      description: 'Tiefenwirksame Hautpflege und Straffung',
+      title: isGerman ? 'Ultraschall' : 'Ультразвук',
+      description: isGerman
+        ? 'Tiefenwirksame Hautpflege und Straffung'
+        : 'Глубокий уход за кожей и подтяжка',
       icon: Star,
       href: '/services/apparative-anti-aging/ultraschall',
     },
@@ -43,14 +52,15 @@ const ApparativeAntiAging = () => {
             <Star className="w-10 h-10 text-brand-gold" />
           </div>
           <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-6">
-            Apparative Anti-Aging
+            {isGerman ? 'Apparative Anti-Aging' : 'Аппаратный Anti-Aging'}
           </h1>
           <p className="text-xl text-brand-gold font-heading mb-4">
-            RF-Lifting, Lichttherapie, Biostrom, Ultraschall
+            {isGerman ? 'RF-Lifting, Lichttherapie, Biostrom, Ultraschall' : 'RF-лифтинг, Световая терапия, Биотоки, Ультразвук'}
           </p>
           <p className="text-lg text-brand-coffee/80 max-w-2xl mx-auto leading-relaxed">
-            Moderne Geräte-Behandlungen für natürliche Verjüngung ohne Injektionen.
-            Wählen Sie die passende Behandlung für Ihre individuellen Bedürfnisse.
+            {isGerman
+              ? 'Moderne Geräte-Behandlungen für natürliche Verjüngung ohne Injektionen. Wählen Sie die passende Behandlung für Ihre individuellen Bedürfnisse.'
+              : 'Современные аппаратные процедуры для естественного омоложения без инъекций. Выберите подходящую процедуру для ваших индивидуальных потребностей.'}
           </p>
         </div>
 
@@ -66,25 +76,29 @@ const ApparativeAntiAging = () => {
         {/* About Section */}
         <section className="glass rounded-2xl p-8 mb-12">
           <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-            Was ist apparative Anti-Aging?
+            {isGerman ? 'Was ist apparative Anti-Aging?' : 'Что такое аппаратный Anti-Aging?'}
           </h2>
           <p className="text-brand-coffee/80 leading-relaxed mb-4">
-            Apparative Anti-Aging-Behandlungen nutzen modernste Technologien, um die Haut auf natürliche Weise zu verjüngen,
-            zu straffen und zu regenerieren – ganz ohne Nadeln oder Skalpell.
+            {isGerman
+              ? 'Apparative Anti-Aging-Behandlungen nutzen modernste Technologien, um die Haut auf natürliche Weise zu verjüngen, zu straffen und zu regenerieren – ganz ohne Nadeln oder Skalpell.'
+              : 'Аппаратные anti-age процедуры используют современные технологии для естественного омоложения, подтяжки и регенерации кожи — без игл и скальпеля.'}
           </p>
           <p className="text-brand-coffee/80 leading-relaxed">
-            Jede Technologie hat ihre spezifischen Vorteile. Wählen Sie die Behandlung, die am besten zu Ihren Bedürfnissen passt,
-            oder kombinieren Sie mehrere Methoden für optimale Ergebnisse.
+            {isGerman
+              ? 'Jede Technologie hat ihre spezifischen Vorteile. Wählen Sie die Behandlung, die am besten zu Ihren Bedürfnissen passt, oder kombinieren Sie mehrere Methoden für optimale Ergebnisse.'
+              : 'Каждая технология имеет свои преимущества. Выберите процедуру, которая лучше всего подходит вашим потребностям, или комбинируйте несколько методов для оптимальных результатов.'}
           </p>
         </section>
 
         {/* CTA */}
         <div className="bg-gold-gradient rounded-2xl p-8 text-center">
           <h2 className="text-2xl font-heading font-semibold text-white mb-4">
-            Welche Behandlung passt zu Ihnen?
+            {isGerman ? 'Welche Behandlung passt zu Ihnen?' : 'Какая процедура подходит вам?'}
           </h2>
           <p className="text-white/90 mb-6">
-            Buchen Sie eine kostenlose Beratung und wir finden gemeinsam die optimale Behandlung für Ihre Haut.
+            {isGerman
+              ? 'Buchen Sie eine kostenlose Beratung und wir finden gemeinsam die optimale Behandlung für Ihre Haut.'
+              : 'Запишитесь на бесплатную консультацию, и мы вместе подберём оптимальную процедуру для вашей кожи.'}
           </p>
         </div>
       </div>

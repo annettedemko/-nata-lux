@@ -162,7 +162,7 @@ const Ultraschall = () => {
       // Add custom section for procedures
       additionalSections={<UltraschallProcedures />}
       // No price table - redirect to individual services
-      priceTable={[]}
+      priceSection="apparative-antiaging"
       contraindications={[
         isGerman ? 'Schwangerschaft' : 'Беременность',
         isGerman ? 'Herzschrittmacher oder Metallimplantate im Behandlungsbereich' : 'Кардиостимулятор или металлические имплантаты в зоне воздействия',

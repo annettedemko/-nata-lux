@@ -117,13 +117,7 @@ const Phonophorese = () => {
           description: 'Вы получите индивидуальные рекомендации по домашнему уходу и план последующих процедур. Для долговременных результатов мы рекомендуем курс из 8-10 процедур, а затем регулярные поддерживающие сеансы.'
         }
       ]}
-      priceTable={[
-        { service: 'Phonophorese Gesicht', duration: '60 Min.', price: '85€' },
-        { service: 'Phonophorese Gesicht + Hals + Dekolleté', duration: '75 Min.', price: '105€' },
-        { service: 'Phonophorese mit Exosomen', duration: '75 Min.', price: '150€' },
-        { service: '3er-Karte Phonophorese', duration: '3x 60 Min.', price: '230€' },
-        { service: '5er-Karte Phonophorese', duration: '5x 60 Min.', price: '360€' }
-      ]}
+      priceSection="facial-care"
       contraindications={isGerman ? [
         'Schwangerschaft',
         'Herzschrittmacher oder Metallimplantate im Gesicht',

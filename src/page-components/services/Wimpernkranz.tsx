@@ -3,10 +3,17 @@
 import { ServicePageLayout } from '@/components/ServicePageLayout';
 import { Eye } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { PremiumGallery } from '@/components/PremiumGallery';
 
 const Wimpernkranz = () => {
   const { language } = useLanguage();
   const isGerman = language === 'de';
+
+  const galleryImages = ['/56.jpg', '/68.jpg', '/69.jpg', '/114.jpg'];
+
+  const photoGallery = (
+    <PremiumGallery images={galleryImages} />
+  );
 
   return (
     <ServicePageLayout
@@ -79,19 +86,8 @@ const Wimpernkranz = () => {
           description: 'Через 4-6 недель проводится коррекция для оптимальной насыщенности.'
         }
       ]}
-      priceTable={isGerman ? [
-        { service: 'Wimpernkranz dezent (nur zwischen Wimpern)', duration: '2 Std.', price: '280€' },
-        { service: 'Lid-Strich dünn', duration: '2,5 Std.', price: '320€' },
-        { service: 'Lid-Strich mit Flügel (Eyeliner)', duration: '3 Std.', price: '380€' },
-        { service: 'Nachbehandlung (4-6 Wochen)', duration: '1,5 Std.', price: 'Inklusive' },
-        { service: 'Auffrischung (nach 2-3 Jahren)', duration: '2 Std.', price: '180€' }
-      ] : [
-        { service: 'Межресничка деликатная (только между ресницами)', duration: '2 ч.', price: '280€' },
-        { service: 'Тонкая стрелка', duration: '2,5 ч.', price: '320€' },
-        { service: 'Стрелка с крылом (Eyeliner)', duration: '3 ч.', price: '380€' },
-        { service: 'Коррекция (4-6 недель)', duration: '1,5 ч.', price: 'Включено' },
-        { service: 'Обновление (через 2-3 года)', duration: '2 ч.', price: '180€' }
-      ]}
+      additionalSections={photoGallery}
+      priceSection="pmu"
       contraindications={isGerman ? [
         'Schwangerschaft und Stillzeit',
         'Aktive Augeninfektionen',

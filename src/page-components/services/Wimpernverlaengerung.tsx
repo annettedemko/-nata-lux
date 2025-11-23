@@ -45,7 +45,7 @@ const Wimpernverlaengerung = () => {
             <div className="w-32 h-0.5 bg-brand-gold mx-auto mb-8"></div>
             <p className="text-xl text-brand-espresso/70 leading-relaxed max-w-3xl mx-auto">
               {isGerman
-                ? 'Красивый, выразительный взгляд без вреда натуральным ресницам'
+                ? 'Schöner, ausdrucksstarker Blick ohne Schaden für Ihre natürlichen Wimpern'
                 : 'Красивый, выразительный взгляд без вреда натуральным ресницам'}
             </p>
           </motion.div>
@@ -662,6 +662,34 @@ const Wimpernverlaengerung = () => {
                 <Button className="bg-brand-gold hover:bg-brand-gold/90 text-white font-medium rounded-xl px-8 py-6 text-lg">
                   {isGerman ? 'Jetzt Termin vereinbaren' : 'Записаться на процедуру'}
                 </Button>
+              </div>
+            </div>
+          </motion.section>
+
+          {/* Gallery */}
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-20"
+          >
+            <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-10 md:p-12">
+              <h2 className="text-3xl font-heading font-bold text-brand-espresso mb-8 text-center">
+                {isGerman ? 'Unsere Arbeiten' : 'Наши работы'}
+              </h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {['/43.png', '/59.jpg', '/61.jpg', '/63.jpg', '/64.jpg', '/72.jpg', '/113.jpg', '/116.jpg'].map((src, index) => (
+                  <div key={index} className="relative aspect-square rounded-xl overflow-hidden">
+                    <Image
+                      src={src}
+                      alt={`${isGerman ? 'Wimpernverlängerung' : 'Наращивание ресниц'} ${index + 1}`}
+                      fill
+                      className="object-cover hover:scale-105 transition-transform duration-300"
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </motion.section>

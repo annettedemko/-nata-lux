@@ -4,6 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { CheckCircle2, Clock, Droplet, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const Gesichtsreinigung = () => {
   const { language } = useLanguage();
@@ -352,6 +353,34 @@ const Gesichtsreinigung = () => {
               <Button className="bg-brand-gold hover:bg-brand-gold/90 text-white font-medium rounded-xl px-8 py-6 text-lg">
                 {isGerman ? 'Jetzt Termin vereinbaren' : 'Записаться на процедуру'}
               </Button>
+            </div>
+          </motion.section>
+
+          {/* Gallery */}
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-20"
+          >
+            <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-10 md:p-12">
+              <h2 className="text-3xl font-heading font-bold text-brand-espresso mb-8 text-center">
+                {isGerman ? 'Unsere Arbeiten' : 'Наши работы'}
+              </h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {['/51.jpg', '/101.jpg', '/100.jpg', '/99.jpg'].map((src, index) => (
+                  <div key={index} className="relative aspect-square rounded-xl overflow-hidden">
+                    <Image
+                      src={src}
+                      alt={`${isGerman ? 'Gesichtsreinigung' : 'Чистка лица'} ${index + 1}`}
+                      fill
+                      className="object-cover hover:scale-105 transition-transform duration-300"
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </motion.section>
 

@@ -3,6 +3,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion } from 'framer-motion';
 import { Sparkles, Heart, Zap, Star, Info, Activity, Dumbbell, Droplets, Wind, AlertCircle, Scissors } from 'lucide-react';
+import Image from 'next/image';
 
 const Prices = () => {
   const { language } = useLanguage();
@@ -228,15 +229,15 @@ const Prices = () => {
         },
       ]
     },
-    // 6. Gesichtspflege (Kosmetologie)
+    // 6. Gesichtspflege
     {
       id: 'facial-care',
       icon: Droplets,
-      title: isGerman ? 'Gesichtspflege (Kosmetologie)' : 'Уход за лицом (Косметология)',
+      title: isGerman ? 'Gesichtspflege' : 'Уход за лицом',
       consultation: isGerman ? '🕊 Konsultation vor der Behandlung — kostenlos.' : '🕊 Консультация перед процедурой — бесплатная.',
       sections: [
         {
-          name: isGerman ? 'Gesichtsreinigung' : 'Чистка лица (Gesichtsreinigung)',
+          name: isGerman ? 'Gesichtsreinigung' : 'Чистка лица',
           description: isGerman
             ? 'Kombinierte Ultraschallreinigung — 90 Min (Reinigung, Tonisierung, Peeling, Maske zum Öffnen der Poren, Geräte- + mechanische Reinigung, Masken zum Schließen der Poren, Creme + SPF, Darsonval / Phonophorese falls notwendig). Arbeit mit TM Renew, Derma Series u.a.'
             : 'Комбинированная ультразвуковая — 90 мин (очистка, тонизация, пилинг, маска открывающая поры, аппаратная + механическая, маски для закрытия пор, крем + SPF, дарсонваль / фонофорез если мастер считает необходимым). Работаю на косметике ТМ Renew, Derma Series и др.',
@@ -275,10 +276,9 @@ const Prices = () => {
       sections: [
         {
           name: isGerman ? 'Darsonval-Behandlung' : 'Процедура дарсонваль',
-          description: isGerman
-            ? 'Auf Anfrage'
-            : 'По запросу',
-          items: []
+          items: [
+            { name: isGerman ? 'Behandlung' : 'Процедура', price: isGerman ? 'auf Anfrage' : 'по запросу' },
+          ]
         },
       ]
     },
@@ -306,14 +306,14 @@ const Prices = () => {
     <div className="relative min-h-screen">
       {/* Background Image */}
       <div className="fixed inset-0 z-0">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: 'url(/17.png)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center center',
-            backgroundRepeat: 'no-repeat',
-          }}
+        <Image
+          src="/17.png"
+          alt="Background"
+          fill
+          priority
+          quality={75}
+          sizes="100vw"
+          className="object-cover object-center"
         />
       </div>
 
@@ -335,7 +335,7 @@ const Prices = () => {
                 letterSpacing: '-0.02em',
               }}
             >
-              PRICES
+              {isGerman ? 'PREISE' : 'ЦЕНЫ'}
             </h1>
             <div className="w-32 h-0.5 bg-brand-gold mx-auto opacity-80 mb-6"></div>
             <p className="text-lg text-brand-espresso/60 font-light italic">
@@ -351,16 +351,16 @@ const Prices = () => {
             return (
               <motion.div
                 key={category.id}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.6, delay: categoryIndex * 0.05, ease: [0.16, 1, 0.3, 1] }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               >
                 {/* Bold Card with Strong Separation */}
                 <div
-                  className="bg-white/90 backdrop-blur-xl rounded-3xl overflow-hidden"
+                  className="bg-white/95 rounded-3xl overflow-hidden"
                   style={{
-                    boxShadow: '0 20px 60px rgba(58, 44, 34, 0.12), 0 0 0 1px rgba(201, 165, 106, 0.1)',
+                    boxShadow: '0 10px 40px rgba(58, 44, 34, 0.1)',
                   }}
                 >
                   {/* Bold Header with Gradient */}
@@ -405,7 +405,7 @@ const Prices = () => {
                                 <span className="text-brand-espresso/85 text-base leading-relaxed flex-grow">
                                   {item.name}
                                 </span>
-                                <span className="text-brand-gold font-heading font-semibold text-xl whitespace-nowrap">
+                                <span className="text-brand-gold font-heading font-semibold text-xl whitespace-nowrap text-right flex-shrink-0">
                                   {item.price}
                                 </span>
                               </div>
@@ -444,7 +444,7 @@ const Prices = () => {
                                   {item.name}
                                 </span>
                                 {item.price && (
-                                  <span className="text-brand-gold font-heading font-semibold text-xl whitespace-nowrap">
+                                  <span className="text-brand-gold font-heading font-semibold text-xl whitespace-nowrap text-right flex-shrink-0">
                                     {item.price}
                                   </span>
                                 )}
@@ -461,8 +461,8 @@ const Prices = () => {
                             <div className="space-y-3">
                               {section.additional.map((item, idx) => (
                                 <div key={idx} className="flex items-start justify-between gap-6 py-2">
-                                  <span className="text-brand-espresso/80 text-base">{item.name}</span>
-                                  <span className="text-brand-gold font-heading font-semibold text-lg">{item.price}</span>
+                                  <span className="text-brand-espresso/80 text-base flex-grow">{item.name}</span>
+                                  <span className="text-brand-gold font-heading font-semibold text-lg whitespace-nowrap text-right flex-shrink-0">{item.price}</span>
                                 </div>
                               ))}
                             </div>

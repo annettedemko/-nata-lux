@@ -9,7 +9,8 @@ import { Button } from '@/components/ui/button';
 ;
 
 const AntiAging = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const isGerman = language === 'de';
 
   const subcategories = [
     {
@@ -120,10 +121,12 @@ const AntiAging = () => {
             className="text-center mb-12"
           >
             <h2 className="text-xl md:text-2xl lg:text-3xl lg:text-4xl font-heading font-semibold text-brand-espresso mb-4">
-              Наши процедуры
+              {isGerman ? 'Unsere Behandlungen' : 'Наши процедуры'}
             </h2>
             <p className="text-brand-coffee/70 max-w-2xl mx-auto">
-              Современные аппаратные методики для лица и тела без операций и инъекций
+              {isGerman
+                ? 'Moderne apparative Methoden für Gesicht und Körper ohne OP und Injektionen'
+                : 'Современные аппаратные методики для лица и тела без операций и инъекций'}
             </p>
           </motion.div>
 
@@ -156,32 +159,32 @@ const AntiAging = () => {
               className="glass rounded-3xl p-8"
             >
               <h3 className="text-2xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6">
-                Для лица, шеи, декольте
+                {isGerman ? 'Für Gesicht, Hals, Dekolleté' : 'Для лица, шеи, декольте'}
               </h3>
               <ul className="space-y-3 text-brand-coffee/80">
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>RF-лифтинг — подтяжка без операции</span>
+                  <span>{isGerman ? 'RF-Lifting — Straffung ohne OP' : 'RF-лифтинг — подтяжка без операции'}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>Световая терапия — омоложение и тонус</span>
+                  <span>{isGerman ? 'Lichttherapie — Verjüngung und Tonus' : 'Световая терапия — омоложение и тонус'}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>Биотоки — лимфодренаж и укрепление мышц</span>
+                  <span>{isGerman ? 'Biostrom — Lymphdrainage und Muskelstraffung' : 'Биотоки — лимфодренаж и укрепление мышц'}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>Ультразвук + фонофорез — глубокое питание</span>
+                  <span>{isGerman ? 'Ultraschall + Phonophorese — Tiefenpflege' : 'Ультразвук + фонофорез — глубокое питание'}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>Комплексная чистка 90 мин</span>
+                  <span>{isGerman ? 'Komplexe Reinigung 90 Min.' : 'Комплексная чистка 90 мин'}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>Микронидлинг — регенерация кожи</span>
+                  <span>{isGerman ? 'Microneedling — Hautregeneration' : 'Микронидлинг — регенерация кожи'}</span>
                 </li>
               </ul>
             </motion.div>
@@ -195,37 +198,37 @@ const AntiAging = () => {
               className="glass rounded-3xl p-8"
             >
               <h3 className="text-2xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6">
-                Для тела
+                {isGerman ? 'Für den Körper' : 'Для тела'}
               </h3>
               <ul className="space-y-3 text-brand-coffee/80">
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>RF-вакуумный лифтинг — антицеллюлит</span>
+                  <span>{isGerman ? 'RF-Vakuum-Lifting — Anti-Cellulite' : 'RF-вакуумный лифтинг — антицеллюлит'}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>Кавитация — уменьшение объемов</span>
+                  <span>{isGerman ? 'Kavitation — Volumenreduktion' : 'Кавитация — уменьшение объемов'}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>Зоны: живот, ягодицы, бёдра, руки</span>
+                  <span>{isGerman ? 'Zonen: Bauch, Gesäß, Oberschenkel, Arme' : 'Зоны: живот, ягодицы, бёдра, руки'}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>Курсы: 5 или 10 процедур со скидкой</span>
+                  <span>{isGerman ? 'Kurse: 5 oder 10 Behandlungen mit Rabatt' : 'Курсы: 5 или 10 процедур со скидкой'}</span>
                 </li>
               </ul>
 
               <div className="mt-6 pt-6 border-t border-brand-gold/20">
-                <h4 className="font-semibold text-brand-espresso mb-3">Дополнительно</h4>
+                <h4 className="font-semibold text-brand-espresso mb-3">{isGerman ? 'Zusätzlich' : 'Дополнительно'}</h4>
                 <ul className="space-y-2 text-brand-coffee/80">
                   <li className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                    <span>Дарсонваль для волос</span>
+                    <span>{isGerman ? 'Darsonval für Haare' : 'Дарсонваль для волос'}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                    <span>Удаление папиллом (с дерматологом)</span>
+                    <span>{isGerman ? 'Entfernung von Papillomen (mit Dermatologe)' : 'Удаление папиллом (с дерматологом)'}</span>
                   </li>
                 </ul>
               </div>
@@ -241,20 +244,23 @@ const AntiAging = () => {
             className="glass rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 mt-8 max-w-4xl mx-auto"
           >
             <h3 className="text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-6 text-center">
-              Результаты
+              {isGerman ? 'Ergebnisse' : 'Результаты'}
             </h3>
             <div className="space-y-3 md:space-y-4 text-sm md:text-base text-brand-coffee/80 leading-relaxed">
               <p>
-                Видимый эффект заметен уже после первой процедуры, но для стабильного результата
-                рекомендуется курс из 5-10 сеансов.
+                {isGerman
+                  ? 'Sichtbare Ergebnisse bereits nach der ersten Behandlung, für stabile Resultate empfehlen wir einen Kurs von 5-10 Sitzungen.'
+                  : 'Видимый эффект заметен уже после первой процедуры, но для стабильного результата рекомендуется курс из 5-10 сеансов.'}
               </p>
               <p>
-                Все процедуры безболезненны и не требуют восстановительного периода.
-                Вы можете сразу вернуться к обычной жизни.
+                {isGerman
+                  ? 'Alle Behandlungen sind schmerzfrei und erfordern keine Erholungszeit. Sie können sofort in Ihren Alltag zurückkehren.'
+                  : 'Все процедуры безболезненны и не требуют восстановительного периода. Вы можете сразу вернуться к обычной жизни.'}
               </p>
               <p className="font-semibold text-brand-espresso">
-                Перед началом курса проводится бесплатная диагностика кожи и подбор оптимальной
-                программы процедур.
+                {isGerman
+                  ? 'Vor Kursbeginn führen wir eine kostenlose Hautdiagnose durch und erstellen ein optimales Behandlungsprogramm.'
+                  : 'Перед началом курса проводится бесплатная диагностика кожи и подбор оптимальной программы процедур.'}
               </p>
             </div>
           </motion.div>
@@ -271,10 +277,12 @@ const AntiAging = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-xl md:text-2xl lg:text-3xl lg:text-4xl font-heading font-semibold text-white mb-4 md:mb-6">
-              Начните путь к молодости
+              {isGerman ? 'Beginnen Sie Ihren Weg zur Jugend' : 'Начните путь к молодости'}
             </h2>
             <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-              Запишитесь на диагностику и получите индивидуальную программу anti-age процедур
+              {isGerman
+                ? 'Vereinbaren Sie einen Beratungstermin und erhalten Sie ein individuelles Anti-Aging-Programm'
+                : 'Запишитесь на диагностику и получите индивидуальную программу anti-age процедур'}
             </p>
             <Link to="/contact">
               <Button
