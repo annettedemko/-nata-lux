@@ -10,6 +10,7 @@ import { Footer } from "@/components/Footer"
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp"
 import { PageParallaxBackground } from "@/components/PageParallaxBackground"
 import { GoldenCursor } from "@/components/GoldenCursor"
+import { PageTransition } from "@/components/PageTransition"
 import { Providers } from './providers'
 
 export function ClientLayout({ children }: { children: ReactNode }) {
@@ -19,16 +20,18 @@ export function ClientLayout({ children }: { children: ReactNode }) {
         <Toaster />
         <Sonner />
         <LanguageProvider>
-          <PageParallaxBackground>
-            <div className="flex flex-col min-h-screen m-0 p-0">
-              <Header />
-              <main className="flex-grow m-0 p-0">
-                {children}
-              </main>
-              <Footer />
-              <FloatingWhatsApp />
-            </div>
-          </PageParallaxBackground>
+          <PageTransition>
+            <PageParallaxBackground>
+              <div className="flex flex-col min-h-screen m-0 p-0">
+                <Header />
+                <main className="flex-grow m-0 p-0">
+                  {children}
+                </main>
+                <Footer />
+                <FloatingWhatsApp />
+              </div>
+            </PageParallaxBackground>
+          </PageTransition>
           <GoldenCursor />
         </LanguageProvider>
       </TooltipProvider>

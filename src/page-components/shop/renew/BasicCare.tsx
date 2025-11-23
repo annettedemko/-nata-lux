@@ -2,6 +2,7 @@
 
 import { Link } from '@/components/LinkAdapter'
 import { useLanguage } from '@/contexts/LanguageContext';
+import { ProductCard } from '@/components/ProductCard';
 import Image from 'next/image';
 
 const BasicCare = () => {
@@ -92,41 +93,27 @@ const BasicCare = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product, index) => (
-              <div
+              <ProductCard
                 key={product.id}
-                className="glass rounded-2xl overflow-hidden hover:shadow-luxury transition-all duration-300 animate-slide-up"
-                style={{ animationDelay: `${index * 100}ms` }}
+                image={product.image}
+                hoverImage={product.hoverImage}
+                name={product.name}
+                delay={index * 100}
               >
-                <div className="aspect-square overflow-hidden relative group">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className={`w-full h-full object-cover transition-opacity duration-300 ${product.hoverImage ? 'group-hover:opacity-0' : ''}`}
-                  />
-                  {product.hoverImage && (
-                    <img
-                      src={product.hoverImage}
-                      alt={product.name}
-                      className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    />
-                  )}
+                <h3 className="text-xl font-heading font-semibold text-brand-espresso mb-2">
+                  {product.name}
+                </h3>
+                <p className="text-brand-coffee/70 mb-4 text-sm leading-relaxed">
+                  {product.description}
+                </p>
+                <div className="space-y-1">
+                  {product.variants.map((variant) => (
+                    <p key={variant.article} className="text-sm text-brand-coffee/60">
+                      Art. {variant.article} • {variant.volume}
+                    </p>
+                  ))}
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-heading font-semibold text-brand-espresso mb-2">
-                    {product.name}
-                  </h3>
-                  <p className="text-brand-coffee/70 mb-4 text-sm leading-relaxed">
-                    {product.description}
-                  </p>
-                  <div className="space-y-1">
-                    {product.variants.map((variant) => (
-                      <p key={variant.article} className="text-sm text-brand-coffee/60">
-                        Art. {variant.article} • {variant.volume}
-                      </p>
-                    ))}
-                  </div>
-                </div>
-              </div>
+              </ProductCard>
             ))}
           </div>
         </div>
