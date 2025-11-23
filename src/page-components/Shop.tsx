@@ -16,29 +16,69 @@ const Shop = () => {
       description: isGerman
         ? "Produkte gegen Pigmentflecken und für einen ebenmäßigen Teint"
         : "Средства против пигментных пятен и для ровного тона кожи",
-      image: "/placeholder.svg",
+      image: "/Renew/R1.1.jpeg",
       link: "/shop/renew/whitening",
       lines: ["Whitening"]
     },
     {
-      id: "anti-aging",
-      name: isGerman ? "Anti-Aging Pflege" : "Антивозрастной уход",
+      id: "golden-age",
+      name: "Golden Age",
       description: isGerman
-        ? "Komplexe Verjüngung und Faltenkorrektur"
-        : "Комплексное омоложение и коррекция морщин",
-      image: "/placeholder.svg",
-      link: "/shop/renew/anti-aging",
-      lines: ["Golden Age", "Anti Age", "Retinol", "Biorepair Pro"]
+        ? "Premium Anti-Aging mit Gold und Peptiden"
+        : "Премиум антивозрастной уход с золотом и пептидами",
+      image: "/Renew/R2.1.jpg",
+      link: "/shop/renew/golden-age",
+      lines: ["Golden Age"]
     },
     {
-      id: "problem-skin",
-      name: isGerman ? "Problemhaut & Akne" : "Проблемная кожа и акне",
+      id: "anti-age",
+      name: "Anti Age",
       description: isGerman
-        ? "Behandlung von Akne, Entzündungen und fettiger Haut"
-        : "Лечение акне, воспалений и жирной кожи",
-      image: "/placeholder.svg",
-      link: "/shop/renew/problem-skin",
-      lines: ["Dermo Control", "Propioguard"]
+        ? "Verjüngung und Faltenkorrektur"
+        : "Омоложение и коррекция морщин",
+      image: "/Renew/R2.jpeg",
+      link: "/shop/renew/anti-age",
+      lines: ["Anti Age"]
+    },
+    {
+      id: "retinol",
+      name: "Retinol",
+      description: isGerman
+        ? "Intensive Zellerneuerung"
+        : "Интенсивное обновление клеток",
+      image: "/Renew/R17.jpg",
+      link: "/shop/renew/retinol",
+      lines: ["Retinol"]
+    },
+    {
+      id: "biorepair-pro",
+      name: "Biorepair Pro",
+      description: isGerman
+        ? "Professionelle Meso-Konzentrate"
+        : "Профессиональные мезо-концентраты",
+      image: "/Renew/R16.1.jpg",
+      link: "/shop/renew/biorepair-pro",
+      lines: ["Biorepair Pro"]
+    },
+    {
+      id: "dermo-control",
+      name: "Dermo Control",
+      description: isGerman
+        ? "Regulierung der Talgproduktion und Mattierung für fettige Haut"
+        : "Регуляция себума и матирование для жирной кожи",
+      image: "/Renew/R3.jpeg",
+      link: "/shop/renew/dermo-control",
+      lines: ["Dermo Control"]
+    },
+    {
+      id: "propioguard",
+      name: "Propioguard",
+      description: isGerman
+        ? "Aktive Bekämpfung von Akne und Entzündungen"
+        : "Активная борьба с акне и воспалениями",
+      image: "/Renew/R4.jpeg",
+      link: "/shop/renew/propioguard",
+      lines: ["Propioguard"]
     },
     {
       id: "peelings",
@@ -46,7 +86,7 @@ const Shop = () => {
       description: isGerman
         ? "Professionelle Peelings für Hauterneuerung"
         : "Профессиональные пилинги для обновления кожи",
-      image: "/placeholder.svg",
+      image: "/Renew/R14.jpg",
       link: "/shop/renew/peelings",
       lines: ["Peelings"]
     },
@@ -56,7 +96,7 @@ const Shop = () => {
       description: isGerman
         ? "Intensive Masken für tiefe Pflege"
         : "Интенсивные маски для глубокого ухода",
-      image: "/placeholder.svg",
+      image: "/Renew/R6.jpeg",
       link: "/shop/renew/masks",
       lines: ["Masks"]
     },
@@ -66,7 +106,7 @@ const Shop = () => {
       description: isGerman
         ? "Gele und Cremes für die tägliche Pflege"
         : "Гели и кремы для ежедневного ухода",
-      image: "/placeholder.svg",
+      image: "/Renew/R13.jpeg",
       link: "/shop/renew/basic-care",
       lines: ["Gels & Creams"]
     },
@@ -76,7 +116,7 @@ const Shop = () => {
       description: isGerman
         ? "Schutz vor UV-Strahlung und Photoaging"
         : "Защита от УФ-излучения и фотостарения",
-      image: "/placeholder.svg",
+      image: "/Renew/R9.webp",
       link: "/shop/renew/sun-protection",
       lines: ["Sunscreen"]
     },
@@ -86,19 +126,29 @@ const Shop = () => {
       description: isGerman
         ? "Beruhigende Pflege für empfindliche Haut und Rötungen"
         : "Успокаивающий уход для чувствительной кожи и покраснений",
-      image: "/placeholder.svg",
+      image: "/Renew/R10.jpg",
       link: "/shop/renew/sensitive-skin",
       lines: ["Redness"]
     },
     {
-      id: "hydration",
-      name: isGerman ? "Feuchtigkeit & Ausstrahlung" : "Увлажнение и сияние",
+      id: "aqualia",
+      name: "Aqualia",
       description: isGerman
-        ? "Intensive Feuchtigkeit und Vitamin C für strahlende Haut"
-        : "Интенсивное увлажнение и витамин С для сияющей кожи",
-      image: "/placeholder.svg",
-      link: "/shop/renew/hydration",
-      lines: ["Aqualia", "Vitamin C"]
+        ? "Intensive Feuchtigkeit für jeden Hauttyp"
+        : "Интенсивное увлажнение для любого типа кожи",
+      image: "/Renew/R7.webp",
+      link: "/shop/renew/aqualia",
+      lines: ["Aqualia"]
+    },
+    {
+      id: "vitamin-c",
+      name: "Vitamin C",
+      description: isGerman
+        ? "Antioxidativer Schutz und strahlende Haut"
+        : "Антиоксидантная защита и сияние кожи",
+      image: "/Renew/R8.1.jpg",
+      link: "/shop/renew/vitamin-c",
+      lines: ["Vitamin C"]
     },
     {
       id: "professional",
@@ -106,7 +156,7 @@ const Shop = () => {
       description: isGerman
         ? "Spezielle Produkte für professionelle Anwendungen"
         : "Специальные средства для профессиональных процедур",
-      image: "/placeholder.svg",
+      image: "/Renew/R11.webp",
       link: "/shop/renew/professional",
       lines: ["Dermakey"]
     }
@@ -161,11 +211,11 @@ const Shop = () => {
               className="group glass rounded-2xl overflow-hidden hover:shadow-luxury transition-all duration-300 animate-slide-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="aspect-square overflow-hidden">
+              <div className="aspect-square overflow-hidden bg-white">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className={`w-full h-full group-hover:scale-105 transition-transform duration-500 ${product.fitContain ? 'object-contain' : 'object-cover'}`}
                 />
               </div>
               <div className="p-6">

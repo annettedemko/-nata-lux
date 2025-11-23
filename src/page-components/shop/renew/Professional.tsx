@@ -17,7 +17,8 @@ const Professional = () => {
         : "Освежающий увлажняющий лосьон",
       image: "/Renew/76.png",
       hoverImage: "/Renew/76.1.png",
-      variants: [{ article: "2501200", volume: "200ml" }]
+      variants: [{ article: "2501200", volume: "200ml" }],
+      fitContain: true
     },
     {
       id: "dermakey-cleanser",
@@ -45,7 +46,8 @@ const Professional = () => {
         ? "Lokale Behandlung für punktuelle Anwendung"
         : "Локальное средство для точечного применения",
       image: "/Renew/79.jpeg",
-      variants: [{ article: "2504030", volume: "30ml" }]
+      variants: [{ article: "2504030", volume: "30ml" }],
+      fitContain: true
     },
     {
       id: "skin-recover-cream",
@@ -55,7 +57,8 @@ const Professional = () => {
         : "Восстанавливающий крем для поврежденной кожи",
       image: "/Renew/80.png",
       hoverImage: "/Renew/80.1.png",
-      variants: [{ article: "2505050", volume: "50ml" }]
+      variants: [{ article: "2505050", volume: "50ml" }],
+      fitContain: true
     },
     {
       id: "smart-matt-fluid",
@@ -74,7 +77,8 @@ const Professional = () => {
         : "Успокаивающий гель с алоэ вера для раздраженной кожи",
       image: "/Renew/82.webp",
       hoverImage: "/Renew/82.1.png",
-      variants: [{ article: "2507070", volume: "70ml" }]
+      variants: [{ article: "2507070", volume: "70ml" }],
+      fitContain: true
     },
     {
       id: "dew-drops-ha",
@@ -82,7 +86,7 @@ const Professional = () => {
       description: isGerman
         ? "Hyaluronsäure-Serum für intensive Feuchtigkeit"
         : "Сыворотка с гиалуроновой кислотой для интенсивного увлажнения",
-      image: "/Renew/83.jpeg",
+      image: "/Renew/83.webp",
       hoverImage: "/Renew/83.1.jpeg",
       variants: [{ article: "2508030", volume: "30ml" }]
     }
@@ -125,17 +129,17 @@ const Professional = () => {
                 className="glass rounded-2xl overflow-hidden hover:shadow-luxury transition-all duration-300 animate-slide-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="aspect-square overflow-hidden relative group">
+                <div className="aspect-square overflow-hidden relative group bg-white">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className={`w-full h-full object-cover transition-opacity duration-300 ${product.hoverImage ? 'group-hover:opacity-0' : ''}`}
+                    className={`w-full h-full transition-opacity duration-300 ${product.fitContain ? 'object-contain' : 'object-cover'} ${product.hoverImage ? 'group-hover:opacity-0' : ''}`}
                   />
                   {product.hoverImage && (
                     <img
                       src={product.hoverImage}
                       alt={product.name}
-                      className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      className={`absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${product.fitContain ? 'object-contain' : 'object-cover'}`}
                     />
                   )}
                 </div>

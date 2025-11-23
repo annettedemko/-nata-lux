@@ -25,7 +25,7 @@ const SensitiveSkin = () => {
       description: isGerman
         ? "Extra sanftes Peeling speziell für empfindliche Haut mit Rötungen. Mit beruhigenden Wirkstoffen wie Bisabolol und Allantoin. Erneuert die Haut ohne Irritation."
         : "Экстра мягкий пилинг специально для чувствительной кожи с покраснениями. С успокаивающими компонентами: бисабололом и аллантоином. Обновляет кожу без раздражения.",
-      image: "/Renew/58.jpeg",
+      image: "/Renew/58.jpg",
       variants: [{ article: "2202070", volume: "70ml" }]
     },
     {
@@ -34,8 +34,9 @@ const SensitiveSkin = () => {
       description: isGerman
         ? "Beruhigender Balsam mit Centella Asiatica für gerötete und irritierte Haut. Lindert Irritationen, stärkt die Hautbarriere und reduziert Empfindlichkeit langfristig."
         : "Успокаивающий бальзам с центеллой азиатской для покрасневшей и раздраженной кожи. Снимает раздражение, укрепляет кожный барьер и долгосрочно уменьшает чувствительность.",
-      image: "/Renew/59.png",
-      hoverImage: "/Renew/59.1.png",
+      image: "/Renew/59.jpg",
+      hoverImage: "/Renew/59.png",
+      hoverFitContain: true,
       variants: [{ article: "2203050", volume: "50ml" }]
     },
     {
@@ -87,17 +88,17 @@ const SensitiveSkin = () => {
                 className="glass rounded-2xl overflow-hidden hover:shadow-luxury transition-all duration-300 animate-slide-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="aspect-square overflow-hidden relative group">
+                <div className="aspect-square overflow-hidden relative group bg-white">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className={`w-full h-full object-cover transition-opacity duration-300 ${product.hoverImage ? 'group-hover:opacity-0' : ''}`}
+                    className={`w-full h-full transition-opacity duration-300 ${product.fitContain ? 'object-contain' : 'object-cover'} ${product.hoverImage ? 'group-hover:opacity-0' : ''}`}
                   />
                   {product.hoverImage && (
                     <img
                       src={product.hoverImage}
                       alt={product.name}
-                      className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      className={`absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${product.hoverFitContain ? 'object-contain' : 'object-cover'}`}
                     />
                   )}
                 </div>
