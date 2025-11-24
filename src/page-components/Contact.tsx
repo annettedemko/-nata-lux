@@ -349,9 +349,9 @@ const Contact = () => {
               <Image
                 src="/123.PNG"
                 alt="NataLux Studio"
-                width={400}
-                height={300}
-                className="w-full h-48 object-cover rounded-xl"
+                width={800}
+                height={600}
+                className="w-full h-auto object-cover rounded-xl max-h-[280px]"
               />
             </div>
           </div>
