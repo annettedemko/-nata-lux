@@ -351,7 +351,7 @@ const Contact = () => {
                 alt="NataLux Studio"
                 width={800}
                 height={600}
-                className="w-full h-auto object-cover rounded-xl max-h-[280px]"
+                className="w-full h-auto object-cover rounded-xl"
               />
             </div>
           </div>
