@@ -216,8 +216,8 @@ export const PremiumGallery = ({ images, title }: PremiumGalleryProps) => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3 }}
-            className="relative w-[90vw] h-[80vh] md:w-[80vw] md:h-[85vh]"
-            onClick={(e) => e.stopPropagation()}
+            className="relative w-[90vw] h-[80vh] md:w-[80vw] md:h-[85vh] cursor-pointer"
+            onClick={closeLightbox}
           >
             {isVideo(images[selectedImage]) ? (
               <video
