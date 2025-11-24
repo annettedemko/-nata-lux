@@ -9,7 +9,7 @@ const PowderBrows = () => {
   const { language } = useLanguage();
   const isGerman = language === 'de';
 
-  const galleryImages = ['/65.jpg', '/43.png'];
+  const galleryImages = ['/147.jpeg', '/149.jpeg', '/65.jpg', '/43.png', '/137.jpeg', '/141.jpeg', '/148.jpeg', '/151.jpeg', '/152.jpeg', '/153.jpeg'];
 
   const photoGallery = (
     <PremiumGallery images={galleryImages} />

@@ -16,6 +16,7 @@ const ApparativeAntiAging = () => {
         : 'Радиочастоты для подтяжки и выработки коллагена',
       icon: Zap,
       href: '/services/apparative-anti-aging/rf-lifting',
+      image: '/162.jpeg',
     },
     {
       title: isGerman ? 'Lichttherapie' : 'Световая терапия',
@@ -24,6 +25,7 @@ const ApparativeAntiAging = () => {
         : 'LED и IPL для омоложения и регенерации кожи',
       icon: Sun,
       href: '/services/apparative-anti-aging/lichttherapie',
+      image: '/124.jpeg',
     },
     {
       title: isGerman ? 'Biostrom' : 'Биотоки',
@@ -32,6 +34,7 @@ const ApparativeAntiAging = () => {
         : 'Микротоки для стимуляции мышц и лифтинга',
       icon: Activity,
       href: '/services/apparative-anti-aging/biostrom',
+      image: '/125.webp',
     },
     {
       title: isGerman ? 'Ultraschall' : 'Ультразвук',
@@ -40,12 +43,28 @@ const ApparativeAntiAging = () => {
         : 'Глубокий уход за кожей и подтяжка',
       icon: Star,
       href: '/services/apparative-anti-aging/ultraschall',
+      image: '/126.jpeg',
     },
   ];
 
   return (
-    <div className="min-h-screen py-20">
-      <div className="container mx-auto px-4">
+    <div className="relative min-h-screen">
+      {/* Background */}
+      <div className="fixed inset-0 z-0">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: 'url(/45.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 py-20">
+        <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-brand-gold/10 mb-6">
@@ -54,7 +73,7 @@ const ApparativeAntiAging = () => {
           <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-6">
             {isGerman ? 'Apparative Anti-Aging' : 'Аппаратный Anti-Aging'}
           </h1>
-          <p className="text-xl text-brand-gold font-heading mb-4">
+          <p className="text-xl text-brand-espresso/80 font-heading mb-4">
             {isGerman ? 'RF-Lifting, Lichttherapie, Biostrom, Ultraschall' : 'RF-лифтинг, Световая терапия, Биотоки, Ультразвук'}
           </p>
           <p className="text-lg text-brand-coffee/80 max-w-2xl mx-auto leading-relaxed">
@@ -100,6 +119,7 @@ const ApparativeAntiAging = () => {
               ? 'Buchen Sie eine kostenlose Beratung und wir finden gemeinsam die optimale Behandlung für Ihre Haut.'
               : 'Запишитесь на бесплатную консультацию, и мы вместе подберём оптимальную процедуру для вашей кожи.'}
           </p>
+        </div>
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -17,9 +17,60 @@ export const PremiumGallery = ({ images, title }: PremiumGalleryProps) => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   const openLightbox = (index: number) => setSelectedImage(index);
-  const closeLightbox = () => setSelectedImage(null);
-  const nextImage = () => setSelectedImage((prev) => prev !== null ? (prev + 1) % images.length : null);
-  const prevImage = () => setSelectedImage((prev) => prev !== null ? (prev - 1 + images.length) % images.length : null);
+  const closeLightbox = useCallback(() => setSelectedImage(null), []);
+  const nextImage = useCallback(() => setSelectedImage((prev) => prev !== null ? (prev + 1) % images.length : null), [images.length]);
+  const prevImage = useCallback(() => setSelectedImage((prev) => prev !== null ? (prev - 1 + images.length) % images.length : null), [images.length]);
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (selectedImage === null) return;
+
+      switch (e.key) {
+        case 'ArrowLeft':
+          prevImage();
+          break;
+        case 'ArrowRight':
+          nextImage();
+          break;
+        case 'Escape':
+          closeLightbox();
+          break;
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selectedImage, nextImage, prevImage, closeLightbox]);
+
+  // Touch/Swipe handling
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      nextImage();
+    } else if (isRightSwipe) {
+      prevImage();
+    }
+  };
 
   return (
     <>
@@ -103,6 +154,9 @@ export const PremiumGallery = ({ images, title }: PremiumGalleryProps) => {
           exit={{ opacity: 0 }}
           className="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex items-center justify-center"
           onClick={closeLightbox}
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
         >
           {/* Close Button */}
           <button

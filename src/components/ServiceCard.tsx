@@ -11,9 +11,11 @@ interface ServiceCardProps {
   icon: LucideIcon;
   href: string;
   image?: string;
+  imageScale?: number;
+  imagePosition?: string;
 }
 
-export const ServiceCard = ({ title, description, icon: Icon, href, image }: ServiceCardProps) => {
+export const ServiceCard = ({ title, description, icon: Icon, href, image, imageScale, imagePosition }: ServiceCardProps) => {
   return (
     <Link to={href} className="group">
       <div className="glass rounded-2xl overflow-hidden hover-lift h-full">
@@ -22,7 +24,11 @@ export const ServiceCard = ({ title, description, icon: Icon, href, image }: Ser
             <img
               src={image}
               alt={title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              className={`w-full h-full object-cover transition-transform duration-500 ${!imageScale ? 'group-hover:scale-105' : ''}`}
+              style={{
+                transform: imageScale ? `scale(${imageScale})` : undefined,
+                objectPosition: imagePosition || 'center',
+              }}
               loading="lazy"
             />
           </div>

@@ -28,6 +28,7 @@ const Koerperbehandlungen = () => {
         : 'Радиочастоты с вакуумом для подтяжки и уменьшения целлюлита',
       icon: Star,
       href: '/services/koerperbehandlungen/rf-vakuum',
+      image: '/83.jpg',
     },
     {
       title: isGerman ? 'Kavitation' : 'Кавитация',
@@ -36,12 +37,28 @@ const Koerperbehandlungen = () => {
         : 'Ультразвуковая кавитация для уменьшения жировых отложений на животе, ягодицах и бёдрах',
       icon: Zap,
       href: '/services/koerperbehandlungen/kavitation',
+      image: '/127.jpeg',
     },
   ];
 
   return (
-    <div className="min-h-screen py-20">
-      <div className="container mx-auto px-4">
+    <div className="relative min-h-screen">
+      {/* Background */}
+      <div className="fixed inset-0 z-0">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: 'url(/45.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 py-20">
+        <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-brand-gold/10 mb-6">
@@ -183,6 +200,7 @@ const Koerperbehandlungen = () => {
               ? 'Buchen Sie eine kostenlose Beratung und starten Sie Ihre individuelle Body-Contouring-Reise.'
               : 'Запишитесь на бесплатную консультацию и начните свой индивидуальный путь к идеальному телу.'}
           </p>
+        </div>
         </div>
       </div>
     </div>

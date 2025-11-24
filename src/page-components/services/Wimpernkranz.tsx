@@ -9,7 +9,7 @@ const Wimpernkranz = () => {
   const { language } = useLanguage();
   const isGerman = language === 'de';
 
-  const galleryImages = ['/56.jpg', '/68.jpg', '/69.jpg', '/114.jpg'];
+  const galleryImages = ['/56.jpg', '/68.jpg', '/69.jpg', '/114.jpg', '/150.jpeg', '/143.jpeg'];
 
   const photoGallery = (
     <PremiumGallery images={galleryImages} />

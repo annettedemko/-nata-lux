@@ -26,12 +26,15 @@ const Services = () => {
       description: t('lashesbrows.extensions.desc'),
       icon: Sparkles,
       href: '/services/wimpernverlaengerung',
+      image: '/43.png',
+      imagePosition: 'center 60%',
     },
     {
       title: t('lashesbrows.lashlifting') + ' + ' + t('lashesbrows.browlifting'),
       description: t('lashesbrows.lashlifting.desc') + ' & ' + t('lashesbrows.browlifting.desc'),
       icon: Layers,
       href: '/services/wimpern-augenbrauen-laminierung',
+      image: '/131.jpeg',
     },
   ];
 
@@ -42,24 +45,31 @@ const Services = () => {
       description: t('pmu.brows.desc'),
       icon: Palette,
       href: '/services/powder-brows',
+      image: '/65.jpg',
+      imageScale: 1.7,
+      imagePosition: 'center 20%',
     },
     {
       title: t('pmu.lips'),
       description: t('pmu.lips.desc'),
       icon: Heart,
       href: '/services/aquarell-lips',
+      image: '/96.jpg',
     },
     {
       title: t('pmu.eyeliner'),
       description: t('pmu.eyeliner.desc'),
       icon: Eye,
       href: '/services/wimpernkranz',
+      image: '/114.jpg',
     },
     {
       title: t('pmu.removal'),
       description: t('pmu.removal.desc'),
       icon: Shield,
       href: '/services/pmu-remover',
+      image: '/103.jpg',
+      imagePosition: 'center 80%',
     },
   ];
 
@@ -70,6 +80,7 @@ const Services = () => {
       description: t('laser.triwave.desc'),
       icon: Zap,
       href: '/laser',
+      image: '/41.jpg',
     },
   ];
 
@@ -80,42 +91,50 @@ const Services = () => {
       description: t('antiaging.devices.desc'),
       icon: Star,
       href: '/services/apparative-anti-aging',
+      image: '/125.webp',
     },
     {
       title: t('antiaging.body'),
       description: t('antiaging.body.desc'),
       icon: Star,
       href: '/services/koerperbehandlungen',
+      image: '/83.jpg',
     },
     {
       title: t('antiaging.facial'),
       description: t('antiaging.facial.desc'),
       icon: Droplet,
       href: '/services/gesichtsreinigung',
+      image: '/71.jpg',
+      imagePosition: 'center 60%',
     },
     {
       title: t('antiaging.phonophoresis'),
       description: t('antiaging.phonophoresis.desc'),
       icon: Droplet,
       href: '/services/phonophorese',
+      image: '/128.jpeg',
     },
     {
       title: t('antiaging.microneedling'),
       description: t('antiaging.microneedling.desc'),
       icon: Scissors,
       href: '/services/microneedling',
+      image: '/44.png',
     },
     {
       title: t('antiaging.darsonval'),
       description: t('antiaging.darsonval.desc'),
       icon: Zap,
       href: '/services/darsonval-haare',
+      image: '/129.webp',
     },
     {
       title: t('antiaging.removal'),
       description: t('antiaging.removal.desc'),
       icon: Shield,
       href: '/services/hautveraenderungen-entfernen',
+      image: '/130.jpeg',
     },
   ];
 

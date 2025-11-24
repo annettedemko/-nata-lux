@@ -636,7 +636,7 @@ const Laser = () => {
                 asChild
               >
                 <a href="https://wa.me/4917677267269" target="_blank" rel="noopener noreferrer">
-                  WhatsApp
+                  {isGerman ? 'Termin buchen' : 'Записаться'}
                 </a>
               </Button>
               <Button
@@ -645,10 +645,19 @@ const Laser = () => {
                 className="border-2 border-white text-white hover:bg-white/10 font-medium rounded-2xl text-lg px-10 py-7"
                 asChild
               >
-                <a href="tel:+4917677267269">
-                  {isGerman ? 'Anrufen' : 'Позвонить'}
+                <a href="https://wa.me/4917677267269" target="_blank" rel="noopener noreferrer">
+                  {isGerman ? 'Beratung anfragen' : 'Запросить консультацию'}
                 </a>
               </Button>
+              <Link to="/contact">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-white text-white hover:bg-white/10 font-medium rounded-2xl text-lg px-10 py-7"
+                >
+                  {isGerman ? 'Kontakt' : 'Контакты'}
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>

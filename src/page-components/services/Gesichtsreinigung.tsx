@@ -17,7 +17,7 @@ const Gesichtsreinigung = () => {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url(/26.png)',
+            backgroundImage: 'url(/45.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',
@@ -369,7 +369,7 @@ const Gesichtsreinigung = () => {
                 {isGerman ? 'Unsere Arbeiten' : 'Наши работы'}
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {['/51.jpg', '/101.jpg', '/100.jpg', '/99.jpg'].map((src, index) => (
+                {['/51.jpg', '/101.jpg', '/100.jpg', '/99.jpg', '/142.jpeg'].map((src, index) => (
                   <div key={index} className="relative aspect-square rounded-xl overflow-hidden">
                     <Image
                       src={src}

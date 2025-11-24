@@ -72,7 +72,22 @@ export const ServicePageLayout = ({
   const isGerman = language === 'de';
 
   return (
-    <div className="min-h-screen bg-brand-cream relative overflow-hidden">
+    <div className="relative min-h-screen">
+      {/* Background */}
+      <div className="fixed inset-0 z-0">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: 'url(/45.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 min-h-screen">
       {/* Background Decorations */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-gold/3 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3 pointer-events-none" />
@@ -112,7 +127,7 @@ export const ServicePageLayout = ({
               className="h-1 bg-gradient-to-r from-transparent via-brand-gold to-transparent mx-auto mb-6"
             />
 
-            <p className="text-xl md:text-2xl text-brand-gold/90 font-heading mb-2">
+            <p className="text-xl md:text-2xl text-brand-espresso/70 font-heading mb-2">
               {subtitle}
             </p>
 
@@ -309,7 +324,7 @@ export const ServicePageLayout = ({
                   className="glass rounded-2xl p-6 md:p-8 border border-brand-gold/10 hover:border-brand-gold/30 transition-colors duration-300"
                 >
                   <h3 className="font-semibold text-brand-espresso mb-3 text-lg">{item.q}</h3>
-                  <p className="text-brand-coffee/70 leading-relaxed">{item.a}</p>
+                  <p className="text-brand-coffee/70 leading-relaxed whitespace-pre-line">{item.a}</p>
                 </motion.div>
               ))}
             </div>
@@ -363,6 +378,7 @@ export const ServicePageLayout = ({
             </div>
           </div>
         </motion.div>
+      </div>
       </div>
     </div>
   );

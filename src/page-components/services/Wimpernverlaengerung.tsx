@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { CheckCircle2, Clock, Eye, Sparkles, Heart } from 'lucide-react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { Link } from '@/components/LinkAdapter';
 
 const Wimpernverlaengerung = () => {
   const { language } = useLanguage();
@@ -17,7 +18,7 @@ const Wimpernverlaengerung = () => {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url(/28.png)',
+            backgroundImage: 'url(/45.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',
@@ -91,11 +92,7 @@ const Wimpernverlaengerung = () => {
                   </>
                 )}
               </div>
-              <div className="mt-6 p-4 bg-brand-gold/10 rounded-xl">
-                <p className="text-sm text-brand-espresso/70">
-                  <strong>SEO:</strong> Wimpernverlängerung München, Lash Extensions München, Lash Stylist München
-                </p>
-              </div>
+{/* SEO keywords hidden */}
             </div>
           </motion.section>
 
@@ -382,7 +379,7 @@ const Wimpernverlaengerung = () => {
                     <p>
                       Ich verwende ausschließlich <strong>hochwertige, hypoallergene Materialien</strong>, die sanft zu Ihren natürlichen Wimpern sind und langanhaltende, natürliche Ergebnisse garantieren.
                     </p>
-                    <p className="font-semibold text-brand-gold text-xl italic">
+                    <p className="font-semibold text-brand-espresso text-xl italic">
                       Mein Ziel ist nicht nur schöne Wimpern – sondern Ihr Wohlbefinden, Ihre Gesundheit und ein Ergebnis, das Sie jeden Tag lieben werden.
                     </p>
                   </>
@@ -397,7 +394,7 @@ const Wimpernverlaengerung = () => {
                     <p>
                       Я использую исключительно <strong>высококачественные, гипоаллергенные материалы</strong>, которые бережно относятся к вашим натуральным ресницам и гарантируют долговечные, естественные результаты.
                     </p>
-                    <p className="font-semibold text-brand-gold text-xl italic">
+                    <p className="font-semibold text-brand-espresso text-xl italic">
                       Моя цель — не просто красивые ресницы, а ваше благополучие, здоровье и результат, который вы будете любить каждый день.
                     </p>
                   </>
@@ -659,9 +656,18 @@ const Wimpernverlaengerung = () => {
                     ? 'Bereit für Ihren Traumblick?'
                     : 'Готовы к взгляду мечты?'}
                 </p>
-                <Button className="bg-brand-gold hover:bg-brand-gold/90 text-white font-medium rounded-xl px-8 py-6 text-lg">
-                  {isGerman ? 'Jetzt Termin vereinbaren' : 'Записаться на процедуру'}
-                </Button>
+                <div className="flex flex-wrap gap-4 justify-center">
+                  <Link to="/prices#lashes-brows">
+                    <Button className="bg-brand-gold hover:bg-brand-gold/90 text-white font-medium rounded-xl px-8 py-6 text-lg">
+                      {isGerman ? 'Preise ansehen' : 'Посмотреть цены'}
+                    </Button>
+                  </Link>
+                  <Link to="/contact">
+                    <Button variant="outline" className="border-2 border-brand-gold text-brand-espresso hover:bg-brand-gold/10 font-medium rounded-xl px-8 py-6 text-lg">
+                      {isGerman ? 'Kontakt' : 'Контакты'}
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
           </motion.section>
@@ -679,7 +685,7 @@ const Wimpernverlaengerung = () => {
                 {isGerman ? 'Unsere Arbeiten' : 'Наши работы'}
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {['/43.png', '/59.jpg', '/61.jpg', '/63.jpg', '/64.jpg', '/72.jpg', '/113.jpg', '/116.jpg'].map((src, index) => (
+                {['/43.png', '/59.jpg', '/61.jpg', '/63.jpg', '/64.jpg', '/72.jpg', '/113.jpg', '/116.jpg', '/139.jpeg', '/140.jpeg', '/144.jpeg', '/145.jpeg', '/146.jpeg'].map((src, index) => (
                   <div key={index} className="relative aspect-square rounded-xl overflow-hidden">
                     <Image
                       src={src}
