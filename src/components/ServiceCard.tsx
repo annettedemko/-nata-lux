@@ -1,9 +1,7 @@
 'use client'
 
-;
 import { Link } from '@/components/LinkAdapter'
 import { ArrowRight, LucideIcon } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 
 interface ServiceCardProps {
   title: string;
@@ -43,13 +41,10 @@ export const ServiceCard = ({ title, description, icon: Icon, href, image, image
           <p className="text-brand-coffee/70 mb-4 leading-relaxed">
             {description}
           </p>
-          <Button
-            variant="ghost"
-            className="text-brand-gold hover:text-brand-gold/80 p-0 h-auto group/btn"
-          >
+          <div className="flex items-center text-brand-gold hover:text-brand-gold/80 font-medium">
             <span>Mehr erfahren</span>
-            <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-          </Button>
+            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+          </div>
         </div>
       </div>
     </Link>
