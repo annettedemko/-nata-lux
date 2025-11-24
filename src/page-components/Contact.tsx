@@ -119,17 +119,6 @@ const Contact = () => {
                   </div>
                 </div>
 
-                {/* Studio Photo */}
-                <div className="rounded-xl overflow-hidden">
-                  <Image
-                    src="/123.PNG"
-                    alt="NataLux Studio"
-                    width={800}
-                    height={600}
-                    className="w-full h-auto object-cover rounded-xl"
-                  />
-                </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 rounded-xl bg-brand-gold/10 flex items-center justify-center flex-shrink-0">
                     <Clock className="w-6 h-6 text-brand-gold" />
@@ -354,6 +343,17 @@ const Contact = () => {
                 {t('contact.submit')}
               </Button>
             </form>
+
+            {/* Studio Photo */}
+            <div className="mt-6 rounded-xl overflow-hidden">
+              <Image
+                src="/123.PNG"
+                alt="NataLux Studio"
+                width={800}
+                height={600}
+                className="w-full h-auto object-cover rounded-xl"
+              />
+            </div>
           </div>
         </div>
         </div>
