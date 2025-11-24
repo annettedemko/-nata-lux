@@ -10,6 +10,7 @@ const AquarellLips = () => {
   const isGerman = language === 'de';
 
   const galleryImages = [
+    '/1.webm',
     '/52.jpg',
     '/53.jpg',
     '/54.jpg',

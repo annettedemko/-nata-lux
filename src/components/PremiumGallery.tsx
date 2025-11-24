@@ -6,10 +6,26 @@ import { useState, useEffect, useCallback } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
+interface MediaItem {
+  src: string;
+  type: 'image' | 'video';
+}
+
 interface PremiumGalleryProps {
-  images: string[];
+  images: (string | MediaItem)[];
   title?: string;
 }
+
+const isVideo = (item: string | MediaItem): boolean => {
+  if (typeof item === 'string') {
+    return item.endsWith('.webm') || item.endsWith('.mp4') || item.endsWith('.mov');
+  }
+  return item.type === 'video';
+};
+
+const getSrc = (item: string | MediaItem): string => {
+  return typeof item === 'string' ? item : item.src;
+};
 
 export const PremiumGallery = ({ images, title }: PremiumGalleryProps) => {
   const { language } = useLanguage();
@@ -100,7 +116,7 @@ export const PremiumGallery = ({ images, title }: PremiumGalleryProps) => {
 
         {/* Premium Gallery Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-          {images.map((src, index) => (
+          {images.map((item, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, scale: 0.9 }}
@@ -111,14 +127,26 @@ export const PremiumGallery = ({ images, title }: PremiumGalleryProps) => {
               onClick={() => openLightbox(index)}
               className="group relative aspect-square cursor-pointer overflow-hidden rounded-2xl"
             >
-              {/* Image */}
-              <Image
-                src={src}
-                alt={`${isGerman ? 'Arbeit' : 'Работа'} ${index + 1}`}
-                fill
-                className="object-cover transition-all duration-700 ease-out group-hover:scale-110"
-                sizes="(max-width: 768px) 50vw, 25vw"
-              />
+              {/* Image or Video */}
+              {isVideo(item) ? (
+                <video
+                  src={getSrc(item)}
+                  className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-110"
+                  muted
+                  loop
+                  playsInline
+                  onMouseEnter={(e) => e.currentTarget.play()}
+                  onMouseLeave={(e) => { e.currentTarget.pause(); e.currentTarget.currentTime = 0; }}
+                />
+              ) : (
+                <Image
+                  src={getSrc(item)}
+                  alt={`${isGerman ? 'Arbeit' : 'Работа'} ${index + 1}`}
+                  fill
+                  className="object-cover transition-all duration-700 ease-out group-hover:scale-110"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
+              )}
 
               {/* Luxury Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
@@ -182,7 +210,7 @@ export const PremiumGallery = ({ images, title }: PremiumGalleryProps) => {
             <ChevronRight className="w-6 h-6 text-white" />
           </button>
 
-          {/* Main Image */}
+          {/* Main Image or Video */}
           <motion.div
             key={selectedImage}
             initial={{ opacity: 0, scale: 0.9 }}
@@ -191,14 +219,26 @@ export const PremiumGallery = ({ images, title }: PremiumGalleryProps) => {
             className="relative w-[90vw] h-[80vh] md:w-[80vw] md:h-[85vh]"
             onClick={(e) => e.stopPropagation()}
           >
-            <Image
-              src={images[selectedImage]}
-              alt={`${isGerman ? 'Arbeit' : 'Работа'} ${selectedImage + 1}`}
-              fill
-              className="object-contain"
-              sizes="90vw"
-              priority
-            />
+            {isVideo(images[selectedImage]) ? (
+              <video
+                src={getSrc(images[selectedImage])}
+                className="w-full h-full object-contain"
+                controls
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
+            ) : (
+              <Image
+                src={getSrc(images[selectedImage])}
+                alt={`${isGerman ? 'Arbeit' : 'Работа'} ${selectedImage + 1}`}
+                fill
+                className="object-contain"
+                sizes="90vw"
+                priority
+              />
+            )}
           </motion.div>
 
           {/* Image Counter */}
