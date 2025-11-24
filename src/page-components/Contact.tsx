@@ -242,8 +242,8 @@ const Contact = () => {
               </div>
 
               {/* Quick Transport Info under Map */}
-              <div className="glass rounded-2xl p-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div className="glass rounded-2xl p-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
                   <div>
                     <div className="flex items-center gap-2 mb-2">
                       <Car className="w-4 h-4 text-brand-gold" />
