@@ -147,65 +147,45 @@ const RFLifting = () => {
       aboutTitle={isGerman ? "Was ist RF-Lifting (Radiofrequenz-Lifting)?" : "Что такое RF-лифтинг"}
       aboutDescription={[
         isGerman
-          ? 'RF-Lifting Gesicht (Radiofrequency-Lifting, Face RF) ist eine hocheffektive, nicht-invasive apparative Methode zur tiefen Stimulation der Gesichtshaut mit Hilfe von hochfrequenten Radiowellen. In unserem Kosmetikstudio in München-Haidhausen setzen wir professionelle RF-Geräte der neuesten Generation ein, die eine sichere, kontrollierte Erwärmung der Dermis ermöglichen — ohne Beschädigung der Hautoberfläche und ohne Ausfallzeiten.'
-          : 'RF-лифтинг лица (Radiofrequency-Lifting, Face RF) — это высокоэффективный неинвазивный аппаратный метод глубокой стимуляции кожи лица с помощью высокочастотных радиоволн. В нашем косметологическом салоне в Мюнхене-Хайдхаузен мы применяем профессиональное RF-оборудование нового поколения, которое обеспечивает безопасный контролируемый прогрев дермы — без повреждения поверхности кожи и без периода реабилитации.',
+          ? 'RF-Lifting Gesicht ist eine nicht-invasive Anti-Aging-Behandlung mit Radiofrequenz-Technologie. Die Radiowellen erwärmen die tieferen Hautschichten kontrolliert auf 40–45°C, wodurch Kollagen- und Elastinfasern sofort gestrafft werden und die Neubildung angeregt wird.'
+          : 'RF-лифтинг лица — это неинвазивная anti-age процедура с использованием радиочастотной технологии. Радиоволны контролируемо прогревают глубокие слои кожи до 40–45°C, что мгновенно подтягивает коллагеновые и эластиновые волокна и стимулирует их обновление.',
 
         isGerman
-          ? 'Wie funktioniert die Radiofrequenz-Energie? Die hochfrequenten Radiowellen dringen tief in die Dermis ein und erzeugen dort eine sanfte, aber intensive Erwärmung des Gewebes (ca. 40–45°C). Diese kontrollierte Erhitzung löst eine Reihe biologischer Prozesse aus: Die Kollagen- und Elastinfasern in der Haut ziehen sich zusammen (Sofort-Effekt: Straffung), die Mikrozirkulation verbessert sich erheblich, und Fibroblasten werden stimuliert, neues Kollagen und Elastin zu produzieren.'
-          : 'Как работает радиочастотная энергия? Высокочастотные радиоволны проникают глубоко в дерму и создают там мягкий, но интенсивный прогрев тканей (около 40–45°C). Этот контролируемый нагрев запускает ряд биологических процессов: волокна коллагена и эластина сжимаются (моментальный эффект: подтяжка), микроциркуляция значительно улучшается, и фибробласты стимулируются производить новый коллаген и эластин.',
-
-        isGerman
-          ? 'Im Gegensatz zu Injektionsmethoden (Botox, Filler) oder chirurgischen Eingriffen arbeitet RF-Lifting von innen: Es stellt die Dichte, Elastizität und Struktur der Gesichtshaut wieder her, ohne die Oberfläche zu beschädigen, ohne Nadeln und ohne Ausfallzeiten. Die Behandlung ist völlig schmerzfrei und ideal für Gesicht, Hals und Dekolleté.'
-          : 'В отличие от инъекционных методов (ботокс, филлеры) или хирургических вмешательств, RF-лифтинг работает изнутри: восстанавливает плотность, упругость и структуру кожи лица без повреждения поверхности, без игл и без периода реабилитации. Процедура абсолютно безболезненна и идеальна для лица, шеи и декольте.',
-
-        isGerman
-          ? 'RF-Lifting Gesicht ist besonders effektiv bei: Straffung des Gesichtsovals, Reduzierung des Doppelkinns, Glättung von Falten und feinen Linien, Verbesserung der Hauttextur und -dichte, Behandlung erschlaffter Wangen und müder Haut. In München ist Face RF besonders beliebt bei Menschen, die einen natürlichen Lifting-Effekt ohne Risiken und ohne „künstliches" Aussehen wünschen.'
-          : 'RF-лифтинг лица особенно эффективен при: подтяжке овала лица, уменьшении второго подбородка, разглаживании морщин и мелких линий, улучшении текстуры и плотности кожи, лечении обвисших щёк и усталой кожи. В Мюнхене Face RF особенно популярен среди людей, которые хотят получить натуральный лифтинг-эффект без рисков и без «искусственного» вида.'
+          ? 'Anders als Botox oder Filler arbeitet RF-Lifting von innen — ohne Nadeln, ohne Ausfallzeiten, völlig schmerzfrei. Ideal für Gesicht, Hals und Dekolleté.'
+          : 'В отличие от ботокса или филлеров, RF-лифтинг работает изнутри — без игл, без реабилитации, абсолютно безболезненно. Идеально для лица, шеи и декольте.'
       ]}
       benefits={[
-        isGerman ? 'Sofortige Hautstraffung bereits nach der ersten Behandlung' : 'Моментальная подтяжка кожи уже после первой процедуры',
-        isGerman ? 'Langfristige Hautverjüngung durch Kollagen-Stimulation' : 'Долгосрочное омоложение за счёт стимуляции коллагена',
-        isGerman ? 'Natürlicher Lifting-Effekt ohne Injektionen und Operation' : 'Натуральный лифтинг-эффект без инъекций и операции',
-        isGerman ? 'Straffung des Gesichtsovals und Reduzierung des Doppelkinns' : 'Подтяжка овала лица и уменьшение второго подбородка',
-        isGerman ? 'Glättung von Falten und feinen Linien' : 'Разглаживание морщин и мелких линий',
-        isGerman ? 'Verbesserung der Hauttextur, Dichte und Elastizität' : 'Улучшение текстуры, плотности и эластичности кожи',
-        isGerman ? 'Behandlung erschlaffter Wangen, Hals und Dekolleté' : 'Лечение дряблости щёк, шеи и декольте',
-        isGerman ? 'Verbesserung der Mikrozirkulation im Gesicht' : 'Улучшение микроциркуляции в лице',
-        isGerman ? 'Völlig schmerzfrei — nur angenehme Wärme' : 'Абсолютно безболезненно — только приятное тепло',
-        isGerman ? 'Keine Ausfallzeiten — sofort zurück zum Alltag' : 'Без периода реабилитации — сразу возврат к жизни',
-        isGerman ? 'Kombinierbar mit Mikrostrom und Phonophorese' : 'Можно комбинировать с микротоками и фонофорезом',
-        isGerman ? 'Geeignet für alle Hauttypen (ab 25 Jahren)' : 'Подходит для всех типов кожи (от 25 лет)'
+        isGerman ? 'Sofortige Straffung nach der ersten Behandlung' : 'Моментальная подтяжка после первой процедуры',
+        isGerman ? 'Kollagen-Neubildung für langfristige Verjüngung' : 'Стимуляция коллагена для долгосрочного омоложения',
+        isGerman ? 'Ohne Injektionen, ohne OP, ohne Ausfallzeiten' : 'Без инъекций, без операции, без реабилитации',
+        isGerman ? 'Straffung Gesichtsoval, Doppelkinn, Falten' : 'Подтяжка овала, второго подбородка, морщин',
+        isGerman ? 'Schmerzfrei — nur angenehme Wärme' : 'Безболезненно — только приятное тепло',
+        isGerman ? 'Für alle Hauttypen ab 25 Jahren' : 'Для всех типов кожи от 25 лет'
       ]}
       steps={[
         {
-          title: isGerman ? '1. Kostenlose Beratung und Hautanalyse' : '1. Бесплатная консультация и анализ кожи',
+          title: isGerman ? '1. Beratung' : '1. Консультация',
           description: isGerman
-            ? 'Zu Beginn analysieren wir Ihren Hauttyp und Ihre Behandlungsziele. Wir besprechen, welche Gesichtszonen behandelt werden sollen (Gesicht, Hals, Dekolleté). Alle Fragen zu Ablauf, Wirkung und empfohlener Anzahl der Sitzungen werden geklärt.'
-            : 'В начале мы анализируем ваш тип кожи и цели. Обсуждаем, какие зоны лица будут обработаны (лицо, шея, декольте). Отвечаем на все вопросы о процедуре, эффекте и рекомендуемом количестве сеансов.'
+            ? 'Analyse Ihres Hauttyps und Behandlungsziele. Klärung aller Fragen.'
+            : 'Анализ типа кожи и целей. Ответы на все вопросы.'
         },
         {
-          title: isGerman ? '2. Vorbereitung der Haut' : '2. Подготовка кожи',
+          title: isGerman ? '2. Vorbereitung' : '2. Подготовка',
           description: isGerman
-            ? 'Das Gesicht wird gründlich von Make-up und Unreinheiten gereinigt. Anschließend wird ein leitfähiges Kontaktgel aufgetragen, das die RF-Wellen optimal überträgt und ein angenehmes Gleiten des Applikators ermöglicht.'
-            : 'Лицо тщательно очищается от макияжа и загрязнений. Затем наносится проводящий контактный гель, который оптимизирует передачу RF-волн и обеспечивает комфортное скольжение аппликатора.'
+            ? 'Reinigung und Auftragen des Kontaktgels.'
+            : 'Очищение и нанесение контактного геля.'
         },
         {
-          title: isGerman ? '3. RF-Lifting Behandlung (45-75 Min.)' : '3. RF-лифтинг процедура (45-75 мин.)',
+          title: isGerman ? '3. Behandlung (45-75 Min.)' : '3. Процедура (45-75 мин.)',
           description: isGerman
-            ? 'Mit dem RF-Applikator werden sanfte Bewegungen über das Gesicht ausgeführt. Sie spüren eine angenehme Wärme — kein Brennen, keine Schmerzen. Die Behandlungsdauer: Gesicht 45 Min., Gesicht + Hals 60 Min., Gesicht + Hals + Dekolleté 75 Min.'
-            : 'RF-аппликатором выполняются мягкие движения по лицу. Вы чувствуете приятное тепло — без жжения, без боли. Продолжительность: лицо 45 мин., лицо + шея 60 мин., лицо + шея + декольте 75 мин.'
+            ? 'Sanfte RF-Behandlung mit angenehmer Wärme. Gesicht 45 Min., +Hals 60 Min., +Dekolleté 75 Min.'
+            : 'Мягкая RF-обработка с приятным теплом. Лицо 45 мин., +шея 60 мин., +декольте 75 мин.'
         },
         {
-          title: isGerman ? '4. Abschlusspflege' : '4. Завершающий уход',
+          title: isGerman ? '4. Empfehlung' : '4. Рекомендации',
           description: isGerman
-            ? 'Nach der Behandlung tragen wir eine beruhigende Maske oder ein Serum auf. Optional kann RF-Lifting mit Mikrostromtherapie oder Phonophorese kombiniert werden für maximalen Anti-Aging-Effekt.'
-            : 'После процедуры наносим успокаивающую маску или сыворотку. Опционально RF-лифтинг можно комбинировать с микротоками или фонофорезом для максимального омолаживающего эффекта.'
-        },
-        {
-          title: isGerman ? '5. Behandlungsplan' : '5. План процедур',
-          description: isGerman
-            ? 'Für optimale Ergebnisse empfehlen wir 8–12 Behandlungen, 1–2× pro Woche. Der Lifting-Effekt ist sofort sichtbar, der volle Anti-Aging-Effekt entwickelt sich über 4–8 Wochen. Erhaltungsbehandlungen 1× pro Monat empfohlen.'
-            : 'Для оптимального результата рекомендуем 8–12 процедур, 1–2× в неделю. Лифтинг-эффект виден сразу, полный омолаживающий эффект развивается в течение 4–8 недель. Рекомендуем поддерживающие сеансы 1× в месяц.'
+            ? '8–12 Behandlungen, 1–2× pro Woche. Erhaltung: 1× pro Monat.'
+            : '8–12 процедур, 1–2× в неделю. Поддержание: 1× в месяц.'
         }
       ]}
       // Add custom section for Face vs Body RF
@@ -225,40 +205,28 @@ const RFLifting = () => {
       ]}
       faq={[
         {
-          q: isGerman ? 'Wie viele RF-Lifting Behandlungen brauche ich für sichtbare Ergebnisse?' : 'Сколько процедур RF-лифтинга нужно для видимого результата?',
+          q: isGerman ? 'Wie viele Behandlungen brauche ich?' : 'Сколько процедур нужно?',
           a: isGerman
-            ? 'Für optimale und langanhaltende Ergebnisse empfehlen wir eine Kur von 8–12 Behandlungen, idealerweise 1–2× pro Woche. Der Sofort-Effekt (Straffung durch Kollagen-Kontraktion) ist bereits nach der ersten Behandlung sichtbar — die Haut wirkt straffer, glatter und dichter. Der langfristige Anti-Aging-Effekt (neue Kollagen- und Elastinbildung) entwickelt sich über 4–8 Wochen nach jeder Sitzung und erreicht sein Maximum 2–3 Monate nach Abschluss der Kur. Die Ergebnisse sind kumulativ — je mehr Behandlungen, desto stärker und langanhaltender der Effekt. Für dauerhafte Ergebnisse empfehlen wir anschließend Erhaltungsbehandlungen 1× pro Monat oder alle 1–2 Monate.'
-            : 'Для оптимального и долговременного результата мы рекомендуем курс из 8–12 процедур, в идеале 1–2× в неделю. Моментальный эффект (подтяжка за счёт сокращения коллагена) виден уже после первой процедуры — кожа выглядит более упругой, гладкой и плотной. Долгосрочный омолаживающий эффект (новый коллагеногенез и эластиногенез) развивается в течение 4–8 недель после каждого сеанса и достигает максимума через 2–3 месяца после завершения курса. Результаты кумулятивные — чем больше процедур, тем сильнее и продолжительнее эффект. Для постоянного результата рекомендуем затем поддерживающие сеансы 1× в месяц или каждые 1–2 месяца.'
+            ? '8–12 Behandlungen, 1–2× pro Woche. Erste Straffung sofort sichtbar, voller Effekt nach 2–3 Monaten. Ergebnis hält 6–12 Monate. Erhaltung: 1× monatlich.'
+            : '8–12 процедур, 1–2× в неделю. Первая подтяжка видна сразу, полный эффект через 2–3 месяца. Результат держится 6–12 месяцев. Поддержание: 1× в месяц.'
         },
         {
-          q: isGerman ? 'Ist RF-Lifting schmerzhaft?' : 'RF-лифтинг болезненный?',
+          q: isGerman ? 'Ist RF-Lifting schmerzhaft?' : 'Это болезненно?',
           a: isGerman
-            ? 'Nein, RF-Lifting ist völlig schmerzfrei und wird von den meisten Kunden als sehr angenehm und entspannend empfunden. Sie spüren lediglich eine tiefenwirksame, angenehme Wärme auf der Haut (ähnlich wie bei einer Warmstein-Massage) — kein Brennen, kein Stechen, keine Schmerzen. Die Temperatur wird kontinuierlich überwacht und reguliert, um maximalen Komfort und Sicherheit zu gewährleisten. Viele Kunden entspannen sich so sehr während der Behandlung, dass sie sogar einschlafen. Falls die Wärme an einer Stelle zu intensiv wird, können wir die Intensität sofort anpassen. Im Vergleich zu invasiven Methoden (Injektionen, Laser) ist RF-Lifting deutlich angenehmer und stressfreier.'
-            : 'Нет, RF-лифтинг абсолютно безболезненный и большинством клиентов воспринимается как очень приятная и расслабляющая процедура. Вы чувствуете лишь глубокое приятное тепло на коже (похоже на массаж горячими камнями) — без жжения, без покалывания, без боли. Температура постоянно контролируется и регулируется для максимального комфорта и безопасности. Многие клиенты так расслабляются во время процедуры, что даже засыпают. Если тепло в какой-то точке становится слишком интенсивным, мы можем сразу отрегулировать интенсивность. По сравнению с инвазивными методами (инъекции, лазер) RF-лифтинг значительно приятнее и менее стрессовый.'
+            ? 'Nein, völlig schmerzfrei. Sie spüren nur angenehme Wärme — viele Kunden entspannen sich so sehr, dass sie einschlafen.'
+            : 'Нет, абсолютно безболезненно. Вы чувствуете только приятное тепло — многие клиенты расслабляются так, что засыпают.'
         },
         {
-          q: isGerman ? 'Wann sehe ich die ersten Ergebnisse des RF-Liftings?' : 'Когда я увижу первые результаты RF-лифтинга?',
+          q: isGerman ? 'Gibt es Ausfallzeiten?' : 'Нужна реабилитация?',
           a: isGerman
-            ? 'Erste Ergebnisse sind bereits direkt nach der ersten Behandlung sichtbar: Die Haut wirkt sofort straffer, glatter, dichter und praller — dies ist der Sofort-Effekt durch die Kontraktion der Kollagen- und Elastinfasern. Dieser Effekt hält 3–7 Tage an. Der langfristige, nachhaltige Anti-Aging-Effekt entwickelt sich über die folgenden 4–8 Wochen: In dieser Zeit produzieren die Fibroblasten neues Kollagen und Elastin, wodurch die Haut kontinuierlich straffer, elastischer und jugendlicher wird. Der volle Effekt (maximale Kollagenbildung) zeigt sich 2–3 Monate nach Abschluss der Kur und hält 6–12 Monate oder länger an (abhängig von Alter, Hauttyp, Lebensstil). Bei regelmäßigen Erhaltungsbehandlungen können die Ergebnisse dauerhaft sein.'
-            : 'Первые результаты видны уже сразу после первой процедуры: кожа выглядит более упругой, гладкой, плотной и наполненной — это моментальный эффект за счёт сокращения волокон коллагена и эластина. Этот эффект держится 3–7 дней. Долгосрочный, устойчивый омолаживающий эффект развивается в течение следующих 4–8 недель: в это время фибробласты производят новый коллаген и эластин, благодаря чему кожа непрерывно становится более упругой, эластичной и молодой. Полный эффект (максимальный коллагеногенез) проявляется через 2–3 месяца после завершения курса и держится 6–12 месяцев или дольше (в зависимости от возраста, типа кожи, образа жизни). При регулярных поддерживающих сеансах результаты могут быть постоянными.'
+            ? 'Keine! Sofort zurück zum Alltag. Leichte Rötung verschwindet in 1–3 Stunden.'
+            : 'Нет! Сразу возврат к жизни. Лёгкое покраснение проходит за 1–3 часа.'
         },
         {
-          q: isGerman ? 'Kann ich RF-Lifting mit anderen Behandlungen kombinieren?' : 'Можно ли комбинировать RF-лифтинг с другими процедурами?',
+          q: isGerman ? 'Für wen ist RF-Lifting geeignet?' : 'Для кого подходит?',
           a: isGerman
-            ? 'Ja, RF-Lifting lässt sich hervorragend mit anderen Behandlungen kombinieren und verstärkt deren Wirkung erheblich! Besonders empfehlenswerte Kombinationen:\n\n• RF + Mikrostromtherapie = maximaler Lifting-Effekt, Straffung und Muskeltonus für Gesicht\n• RF + Phonophorese = tiefe Wirkstoffeinschleusung + Straffung für intensive Anti-Aging-Wirkung\n• RF + Vakuum-Therapie (für Körper) = verstärkte Lymphdrainage, Anti-Cellulite-Wirkung und Körperformung\n• RF + LED-Lichttherapie = Beruhigung, Kollagenstimulation und Regeneration nach RF-Behandlung\n• Kryotherapie nach RF = Reduzierung von Schwellungen, Verstärkung des Tonus und Verbesserung der Mikrozirkulation\n\nDie Kombinationen können individuell auf Ihre Hautbedürfnisse und Ziele abgestimmt werden. Wir beraten Sie gerne in unserem Studio in München-Haidhausen zu den besten Synergien.'
-            : 'Да, RF-лифтинг можно отлично комбинировать с другими процедурами, что значительно усиливает их эффект! Особенно рекомендуемые комбинации:\n\n• RF + микротоки = максимальный лифтинг-эффект, подтяжка и мышечный тонус для лица\n• RF + фонофорез = глубокое введение активных веществ + подтяжка для интенсивного омоложения\n• RF + вакуумная терапия (для тела) = усиленный лимфодренаж, антицеллюлитный эффект и коррекция фигуры\n• RF + светотерапия = успокоение, стимуляция коллагена и регенерация после RF\n• Криотерапия после RF = снижение отёков, усиление тонуса и улучшение микроциркуляции\n\nКомбинации могут быть индивидуально адаптированы к вашим потребностям и целям. Мы с радостью проконсультируем вас в нашей студии в Мюнхене-Хайдхаузен по лучшим синергиям.'
-        },
-        {
-          q: isGerman ? 'Gibt es Ausfallzeiten nach RF-Lifting?' : 'Есть ли период реабилитации после RF-лифтинга?',
-          a: isGerman
-            ? 'Nein, es gibt absolut keine Ausfallzeiten nach RF-Lifting Gesicht! Anders als bei invasiven Verfahren (Operation, aggressive Laser, tiefe Peelings) können Sie sofort nach der Behandlung Ihrem normalen Alltag nachgehen, Make-up auftragen, arbeiten gehen oder Sport treiben. Die Haut kann unmittelbar nach der Behandlung leicht gerötet sein und sich warm anfühlen, was aber innerhalb von 1–3 Stunden vollständig abklingt. Sehr selten kann eine leichte Schwellung auftreten, die aber innerhalb von 24 Stunden verschwindet. Es gibt keine Krusten, keine Schorfbildung, keine Blutergüsse. Das macht RF-Lifting ideal für Menschen mit vollem Terminkalender und alle, die eine effektive Anti-Aging-Behandlung ohne Einschränkungen suchen. Tipp: Nach der Behandlung ausreichend Wasser trinken und Sonnenschutz (SPF) verwenden.'
-            : 'Нет, абсолютно никакого периода реабилитации после RF-лифтинга лица! В отличие от инвазивных процедур (операция, агрессивные лазеры, глубокие пилинги), вы можете сразу после процедуры вернуться к обычной жизни, наносить макияж, идти на работу или заниматься спортом. Кожа сразу после процедуры может быть слегка покрасневшей и тёплой на ощупь, но это полностью проходит в течение 1–3 часов. Очень редко может возникнуть лёгкая отёчность, которая исчезает в течение 24 часов. Нет корочек, шелушения, синяков. Это делает RF-лифтинг идеальным для людей с плотным графиком и всех, кто ищет эффективную омолаживающую процедуру без ограничений. Совет: после процедуры пить достаточно воды и использовать солнцезащиту (SPF).'
-        },
-        {
-          q: isGerman ? 'Für wen ist RF-Lifting Gesicht geeignet?' : 'Для кого подходит RF-лифтинг лица?',
-          a: isGerman
-            ? 'RF-Lifting Gesicht ist für fast alle Hauttypen und Altersgruppen geeignet:\n\n• Ab 25–30 Jahren für präventives Anti-Aging und Erhalt der Hautqualität\n• Ab 35–50 Jahren für aktives Anti-Aging, Straffung, Reduzierung von Falten und Erschlaffung\n• Ab 50+ Jahren für intensive Hautverjüngung und Lifting\n• Für Frauen und Männer gleichermaßen\n• Für alle Hauttypen (auch dunkle Haut, im Gegensatz zu IPL/Laser)\n• Bei Doppelkinn, "schlaffen Wangen", müder Haut, Verlust des Gesichtsovals\n• Bei feinen Linien, Falten und erschlaffter Haut im Gesicht, Hals und Dekolleté\n\nNicht geeignet ist RF-Lifting bei Schwangerschaft, Herzschrittmachern, Metallimplantaten im Behandlungsbereich, Krebs, Epilepsie und einigen anderen medizinischen Zuständen (siehe Kontraindikationen). Wir besprechen alle Kontraindikationen in der kostenlosen Beratung in unserem Kosmetikstudio in München.'
-            : 'RF-лифтинг лица подходит практически для всех типов кожи и возрастов:\n\n• С 25–30 лет для профилактического anti-aging и сохранения качества кожи\n• С 35–50 лет для активного омоложения, подтяжки, уменьшения морщин и дряблости\n• С 50+ лет для интенсивного омоложения и лифтинга\n• Для женщин и мужчин одинаково\n• Для всех типов кожи (включая тёмную кожу, в отличие от IPL/лазера)\n• При втором подбородке, "обвисших щеках", усталой коже, потере овала лица\n• При мелких линиях, морщинах и дряблости кожи лица, шеи и декольте\n\nНе подходит RF-лифтинг при беременности, кардиостимуляторе, металлических имплантатах в зоне обработки, онкологии, эпилепсии и некоторых других медицинских состояниях (см. противопоказания). Мы обсуждаем все противопоказания на бесплатной консультации в нашей косметологической студии в Мюнхене.'
+            ? 'Für alle Hauttypen ab 25 Jahren. Ideal bei Doppelkinn, erschlafften Wangen, Falten, müder Haut. Für Frauen und Männer.'
+            : 'Для всех типов кожи от 25 лет. Идеально при втором подбородке, обвисших щеках, морщинах, усталой коже. Для женщин и мужчин.'
         },
       ]}
       ctaTitle={isGerman ? "Bereit für natürliches Gesichts-Lifting in München?" : "Готовы к натуральному лифтингу лица в Мюнхене?"}
