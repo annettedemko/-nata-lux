@@ -7,6 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { MapPin, Phone, Mail, Clock, Car, Train, Instagram } from 'lucide-react';
 import { useState } from 'react';
+import Image from 'next/image';
 
 const Contact = () => {
   const { t, language } = useLanguage();
@@ -199,6 +200,17 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
+            </div>
+
+            {/* Studio Photo */}
+            <div className="glass rounded-2xl overflow-hidden">
+              <Image
+                src="/123.PNG"
+                alt="NataLux Studio"
+                width={800}
+                height={600}
+                className="w-full h-auto object-cover"
+              />
             </div>
 
             {/* Map - Clickable with Full Address & Transport Info */}
