@@ -15,8 +15,8 @@ interface ServiceCardProps {
 
 export const ServiceCard = ({ title, description, icon: Icon, href, image, imageScale, imagePosition }: ServiceCardProps) => {
   return (
-    <Link to={href} className="group">
-      <div className="glass rounded-2xl overflow-hidden hover-lift h-full">
+    <Link to={href} className="group block cursor-pointer">
+      <div className="glass rounded-2xl overflow-hidden hover-lift h-full pointer-events-none">
         {image && (
           <div className="h-48 overflow-hidden">
             <img
