@@ -211,7 +211,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="absolute inset-0 z-10 cursor-pointer"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end justify-center pb-6 opacity-100 group-hover:opacity-95 transition-opacity">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent flex items-end justify-center pb-6 opacity-100 group-hover:opacity-95 transition-opacity">
                     <div className="bg-white/98 backdrop-blur-md px-6 py-4 rounded-xl shadow-2xl border-2 border-brand-gold/30">
                       <p className="text-brand-espresso font-bold text-xl flex items-center gap-3 mb-2">
                         <MapPin className="w-6 h-6 text-brand-gold" />
@@ -349,9 +349,9 @@ const Contact = () => {
               <Image
                 src="/123.PNG"
                 alt="NataLux Studio"
-                width={800}
-                height={600}
-                className="w-full h-auto object-cover rounded-xl"
+                width={400}
+                height={300}
+                className="w-full h-48 object-cover rounded-xl"
               />
             </div>
           </div>
