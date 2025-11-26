@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import { LogoRebirth } from '@/components/LogoRebirth';
 import { SparkleContainer } from '@/components/Sparkle';
+import { BackgroundVideo } from '@/components/BackgroundVideo';
 
 export const HeroSection = () => {
   const { t, language } = useLanguage();
@@ -14,6 +15,8 @@ export const HeroSection = () => {
     <section
       className="relative min-h-screen flex items-center justify-center overflow-hidden z-10"
     >
+      {/* Background Video */}
+      <BackgroundVideo />
 
       {/* Content - смещён вправо на 15% на десктопе, центрирован на мобильных */}
       <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 relative z-20 py-8 sm:py-12 md:py-16 lg:py-20">
