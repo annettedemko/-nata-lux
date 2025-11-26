@@ -17,7 +17,7 @@ const Aqualia = () => {
         ? "Reinigungsschaum für jeden Hauttyp mit tiefenwirksamer Feuchtigkeitspflege. Enthält PHA-Säure Gluconolacton für sanfte Hauterneuerung ohne Reizung mit sofortigem Lifting-Effekt nach der Reinigung"
         : "Пенка для очищения кожи любого типа с эффектом глубокого увлажнения. Содержит РНА-кислоту глюконолактон, которая бережно восстанавливает кожу без раздражения, оказывая эффект лифтинга сразу после умывания",
       image: "/Renew/61.jpeg",
-      variants: [{ article: "2301200", volume: "200ml" }]
+      variants: [{ volume: "220ml" }]
     },
     {
       id: "eye-lip-makeup-remover",
@@ -27,7 +27,7 @@ const Aqualia = () => {
         : "Специально разработанное средство для снятия макияжа и очищения кожи. Не раздражает чувствительную кожу вокруг глаз и эффективно удаляет косметику, а также загрязнения с поверхности кожи",
       image: "/Renew/62.jpeg",
       hoverImage: "/Renew/62.1.jpeg",
-      variants: [{ article: "2302200", volume: "200ml" }]
+      variants: [{ volume: "250ml" }, { volume: "500ml" }]
     },
     {
       id: "pha-refining-tonic",
@@ -37,7 +37,7 @@ const Aqualia = () => {
         : "Увлажняющий тоник с выраженным антиоксидантным действием для кожи любого типа. Содержит 5% РНА-глюконовой кислоты для обновления кожи, придавая ей сияние и здоровый вид",
       image: "/Renew/63.jpeg",
       hoverImage: "/Renew/63.1.jpeg",
-      variants: [{ article: "2303200", volume: "200ml" }]
+      variants: [{ volume: "250ml" }, { volume: "500ml" }]
     },
     {
       id: "soft-peeling-gel",
@@ -46,7 +46,7 @@ const Aqualia = () => {
         ? "Abrollendes Gel zur sanften Reinigung jeden Hauttyps. Einzigartige Synergie von Hyaluronsäure mit Pflanzenextrakten sättigt die Haut mit Mikroelementen und Vitaminen"
         : "Скатывающийся гель для мягкого очищения кожи любого типа. Уникальная синергия гиалуроновой кислоты с растительными экстрактами насыщает кожу микроэлементами и витаминами",
       image: "/Renew/64.jpeg",
-      variants: [{ article: "2304070", volume: "70ml" }]
+      variants: [{ volume: "150ml" }]
     },
     {
       id: "skin-repair-moisturizing-mask",
@@ -56,7 +56,7 @@ const Aqualia = () => {
         : "Приятная гелевая маска с активными компонентами, нормализующими физиологические процессы в эпидермисе, поддерживающими водный баланс и способствующими омоложению кожи",
       image: "/Renew/65.jpeg",
       hoverImage: "/Renew/65.1.jpeg",
-      variants: [{ article: "2305070", volume: "70ml" }]
+      variants: [{ volume: "70ml" }, { volume: "250ml" }]
     },
     {
       id: "hydro-comfort-glow",
@@ -66,7 +66,7 @@ const Aqualia = () => {
         : "Увлажняющий крем мгновенно придает коже сияние и здоровый вид. Поддерживает баланс увлажненности, восстанавливает барьерные свойства эпидермиса, улучшает кровообращение. SPF 25",
       image: "/Renew/66.png",
       hoverImage: "/Renew/66.1.jpeg",
-      variants: [{ article: "2306050", volume: "50ml" }],
+      variants: [{ volume: "50ml" }, { volume: "250ml" }],
       fitContain: true
     },
     {
@@ -77,7 +77,7 @@ const Aqualia = () => {
         : "Гель легкой текстуры и мощного действия разглаживает и осветляет кожу вокруг глаз. Специальный комплекс пептидов BIO-Placenta регулирует рост и деление клеток эпидермиса",
       image: "/Renew/67.jpeg",
       hoverImage: "/Renew/67.1.jpeg",
-      variants: [{ article: "2307030", volume: "30ml" }]
+      variants: [{ volume: "30ml" }, { volume: "100ml" }]
     },
     {
       id: "antistress-nourishing-cream",
@@ -87,7 +87,7 @@ const Aqualia = () => {
         : "Нежный крем с питательными свойствами формирует защитную систему для сопротивления внешней агрессии. Масло бабассу смягчает раздраженную и чувствительную кожу, AQUAXYL увлажняет",
       image: "/Renew/68.jpeg",
       hoverImage: "/Renew/68.1.jpeg",
-      variants: [{ article: "2308050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }, { volume: "250ml" }]
     }
   ];
 
@@ -138,9 +138,9 @@ const Aqualia = () => {
                   {product.description}
                 </p>
                 <div className="space-y-1">
-                  {product.variants.map((variant) => (
-                    <p key={variant.article} className="text-sm text-brand-coffee/60">
-                      Art. {variant.article} • {variant.volume}
+                  {product.variants.map((variant, idx) => (
+                    <p key={idx} className="text-sm text-brand-coffee/60">
+                      {variant.volume}
                     </p>
                   ))}
                 </div>

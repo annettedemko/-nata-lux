@@ -1,11 +1,44 @@
 'use client'
 
 import { ServicePageLayout } from '@/components/ServicePageLayout';
-import { Droplet } from 'lucide-react';
+import { Droplet, Activity, Sun, Zap } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { ServiceCard } from '@/components/ServiceCard';
 
 const Phonophorese = () => {
   const { isGerman } = useLanguage();
+
+  // Custom section for recommended combinations
+  const RecommendedServices = () => (
+    <div className="mt-12">
+      <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-6 text-center">
+        {isGerman ? 'Empfohlene Kombinationen' : 'Рекомендуемые комбинации'}
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <ServiceCard
+          title={isGerman ? 'Biostrom' : 'Биотоки'}
+          description={isGerman ? 'Mikrostrom für zusätzlichen Lifting-Effekt' : 'Микротоки для дополнительного лифтинг-эффекта'}
+          icon={Activity}
+          href="/services/apparative-anti-aging/biostrom"
+          image="/125.webp"
+        />
+        <ServiceCard
+          title={isGerman ? 'Lichttherapie' : 'Светотерапия'}
+          description={isGerman ? 'LED-Licht für Beruhigung und Kollagenstimulation' : 'LED-свет для успокоения и стимуляции коллагена'}
+          icon={Sun}
+          href="/services/apparative-anti-aging/lichttherapie"
+          image="/124.jpeg"
+        />
+        <ServiceCard
+          title="RF-Lifting"
+          description={isGerman ? 'Radiofrequenz für Straffung' : 'Радиочастоты для подтяжки'}
+          icon={Zap}
+          href="/services/apparative-anti-aging/rf-lifting"
+          image="/162.jpeg"
+        />
+      </div>
+    </div>
+  );
 
   return (
     <ServicePageLayout
@@ -208,6 +241,7 @@ const Phonophorese = () => {
           a: 'При обычной ультразвуковой чистке лица (сонофорезе) ультразвук используется в основном для глубокой очистки, пилинга и массажа. При фонофорезе же основное внимание уделяется глубокому проникновению высококачественных активных веществ (гиалурон, коллаген, витамины, экзосомы и т.д.). Ультразвук открывает клеточные мембраны и транспортирует активные вещества в 10× глубже в кожу. Таким образом, фонофорез значительно эффективнее для anti-age, интенсивного увлажнения и регенерации.'
         }
       ]}
+      additionalSections={<RecommendedServices />}
       ctaTitle={isGerman ? "Bereit für tiefenwirksame Hautpflege in München?" : "Готовы к глубокому уходу за кожей в Мюнхене?"}
       ctaDescription={isGerman
         ? "Buchen Sie jetzt Ihre Ultraschall-Phonophorese in unserem Studio in München-Haidhausen und erleben Sie den Unterschied: intensiv durchfeuchtete, strahlende und verjüngte Haut – ohne Nadeln, ohne Schmerzen, mit sofort sichtbaren Ergebnissen. Kostenlose Beratung inklusive!"

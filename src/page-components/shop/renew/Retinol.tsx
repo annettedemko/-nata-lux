@@ -18,7 +18,7 @@ const Retinol = () => {
         : "Высокодозированная сыворотка с ретинолом. Ускоряет обновление клеток, разглаживает морщины и сужает поры. Наносить вечером на очищенную кожу.",
       image: "/Renew/15.jpeg",
       hoverImage: "/Renew/15.1.jpeg",
-      variants: [{ article: "1401030", volume: "30ml" }]
+      variants: [{ volume: "30ml" }, { volume: "50ml" }]
     },
     {
       id: "rejuvenating-cream-retinol",
@@ -28,7 +28,7 @@ const Retinol = () => {
         : "Ночной крем с ретинолом. Осветляет пигментные пятна, улучшает текстуру кожи и уменьшает мелкие морщинки. С витамином Е для дополнительного ухода.",
       image: "/Renew/16.jpeg",
       hoverImage: "/Renew/16.1.jpeg",
-      variants: [{ article: "1402050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }]
     }
   ];
 
@@ -78,9 +78,9 @@ const Retinol = () => {
                   {product.description}
                 </p>
                 <div className="space-y-1">
-                  {product.variants.map((variant) => (
-                    <p key={variant.article} className="text-sm text-brand-coffee/60">
-                      Art. {variant.article} • {variant.volume}
+                  {product.variants.map((variant, idx) => (
+                    <p key={idx} className="text-sm text-brand-coffee/60">
+                      {variant.volume}
                     </p>
                   ))}
                 </div>

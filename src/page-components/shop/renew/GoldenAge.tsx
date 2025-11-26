@@ -17,7 +17,7 @@ const GoldenAge = () => {
         ? "Reichhaltiges Massageserum mit Vitaminen A, C, E. Nährt die Haut während der Massage und fördert die Durchblutung. Ideal für Anti-Aging Gesichtsmassagen."
         : "Богатая массажная сыворотка с витаминами A, C, E. Питает кожу во время массажа и улучшает кровообращение. Идеально для антивозрастного массажа лица.",
       image: "/Renew/5.jpeg",
-      variants: [{ article: "1301250", volume: "250ml" }]
+      variants: [{ volume: "100ml" }]
     },
     {
       id: "multivitamin-serum",
@@ -26,7 +26,7 @@ const GoldenAge = () => {
         ? "Konzentriertes Anti-Aging Serum mit Multivitaminkomplex. Strafft die Haut, reduziert Falten und verbessert die Hautelastizität. Für reife Haut 50+."
         : "Концентрированная антивозрастная сыворотка с мультивитаминным комплексом. Подтягивает кожу, уменьшает морщины и улучшает эластичность. Для зрелой кожи 50+.",
       image: "/Renew/6.png",
-      variants: [{ article: "1302030", volume: "30ml" }]
+      variants: [{ volume: "30ml" }]
     },
     {
       id: "eye-contour-cream-golden",
@@ -36,7 +36,10 @@ const GoldenAge = () => {
         : "Специальный уход за глазами с пептидами и гиалуроновой кислотой. Уменьшает отечность, темные круги и гусиные лапки. Подтягивает нежную кожу вокруг глаз.",
       image: "/Renew/7.png",
       hoverImage: "/Renew/7.1.jpeg",
-      variants: [{ article: "1303030", volume: "30ml" }]
+      variants: [
+        { volume: "30ml" },
+        { volume: "250ml" }
+      ]
     },
     {
       id: "night-active-cream",
@@ -46,7 +49,10 @@ const GoldenAge = () => {
         : "Интенсивный ночной крем с ретинолом и коллагеном. Восстанавливает кожу во время сна, разглаживает морщины и улучшает текстуру кожи.",
       image: "/Renew/8.png",
       hoverImage: "/Renew/8.1.jpeg",
-      variants: [{ article: "1304050", volume: "50ml" }]
+      variants: [
+        { volume: "50ml" },
+        { volume: "250ml" }
+      ]
     },
     {
       id: "lifting-moisturizing-cream",
@@ -56,7 +62,10 @@ const GoldenAge = () => {
         : "Дневной крем с мгновенным лифтинг-эффектом. Увлажняет, подтягивает контуры лица и защищает от воздействия окружающей среды.",
       image: "/Renew/9.png",
       hoverImage: "/Renew/9.1.jpeg",
-      variants: [{ article: "1305050", volume: "50ml" }]
+      variants: [
+        { volume: "50ml" },
+        { volume: "250ml" }
+      ]
     }
   ];
 
@@ -106,9 +115,9 @@ const GoldenAge = () => {
                   {product.description}
                 </p>
                 <div className="space-y-1">
-                  {product.variants.map((variant) => (
-                    <p key={variant.article} className="text-sm text-brand-coffee/60">
-                      Art. {variant.article} • {variant.volume}
+                  {product.variants.map((variant, idx) => (
+                    <p key={idx} className="text-sm text-brand-coffee/60">
+                      {variant.volume}
                     </p>
                   ))}
                 </div>

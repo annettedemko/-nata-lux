@@ -18,7 +18,7 @@ export const ServiceCard = ({ title, description, icon: Icon, href, image, image
     <Link to={href} className="group block cursor-pointer">
       <div className="glass rounded-2xl overflow-hidden hover-lift h-full pointer-events-none">
         {image && (
-          <div className="h-48 overflow-hidden">
+          <div className="h-40 md:h-48 overflow-hidden">
             <img
               src={image}
               alt={title}

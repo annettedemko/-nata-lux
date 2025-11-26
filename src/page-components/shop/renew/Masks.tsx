@@ -18,7 +18,7 @@ const Masks = () => {
         : "Успокаивающая маска с пассифлорой и алоэ вера. Идеально для чувствительной и раздраженной кожи. Снимает покраснения, увлажняет и мгновенно успокаивает стрессовую кожу.",
       image: "/Renew/47.png",
       hoverImage: "/Renew/47.1.jpeg",
-      variants: [{ article: "1901250", volume: "250ml" }, { article: "1901070", volume: "70ml" }]
+      variants: [{ volume: "250ml" }, { volume: "70ml" }]
     },
     {
       id: "purifying-mask",
@@ -28,7 +28,7 @@ const Masks = () => {
         : "Глубоко очищающая маска с каолином и зеленым чаем. Детоксифицирует кожу, абсорбирует избыток кожного сала и сужает поры. Для чистого матового цвета лица.",
       image: "/Renew/48.png",
       hoverImage: "/Renew/48.1.jpeg",
-      variants: [{ article: "1902250", volume: "250ml" }, { article: "1902070", volume: "70ml" }]
+      variants: [{ volume: "250ml" }, { volume: "70ml" }]
     }
   ];
 
@@ -78,9 +78,9 @@ const Masks = () => {
                   {product.description}
                 </p>
                 <div className="space-y-1">
-                  {product.variants.map((variant) => (
-                    <p key={variant.article} className="text-sm text-brand-coffee/60">
-                      Art. {variant.article} • {variant.volume}
+                  {product.variants.map((variant, idx) => (
+                    <p key={idx} className="text-sm text-brand-coffee/60">
+                      {variant.volume}
                     </p>
                   ))}
                 </div>

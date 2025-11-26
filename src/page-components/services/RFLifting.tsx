@@ -178,8 +178,8 @@ const RFLifting = () => {
         {
           title: isGerman ? '3. Behandlung (45-75 Min.)' : '3. Процедура (45-75 мин.)',
           description: isGerman
-            ? 'Sanfte RF-Behandlung mit angenehmer Wärme. Gesicht 45 Min., +Hals 60 Min., +Dekolleté 75 Min.'
-            : 'Мягкая RF-обработка с приятным теплом. Лицо 45 мин., +шея 60 мин., +декольте 75 мин.'
+            ? 'Sanfte RF-Behandlung mit angenehmer Wärme. Die Gesamtbehandlungsdauer beträgt ca. 60 Min.: Gesicht 30 Min., Hals 15 Min., Dekolleté 15 Min.'
+            : 'Мягкая RF-обработка с приятным теплом. Общая продолжительность процедуры около 60 мин.: лицо 30 мин., шея 15 мин., декольте 15 мин.'
         },
         {
           title: isGerman ? '4. Empfehlung' : '4. Рекомендации',

@@ -1,11 +1,44 @@
 'use client'
 
 import { ServicePageLayout } from '@/components/ServicePageLayout';
-import { Waves } from 'lucide-react';
+import { Waves, Star, Zap, Droplet } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { ServiceCard } from '@/components/ServiceCard';
 
 const Kavitation = () => {
   const { isGerman } = useLanguage();
+
+  // Recommended body contouring services
+  const RecommendedServices = () => (
+    <div className="mt-12">
+      <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-6 text-center">
+        {isGerman ? 'Empfohlene Kombinationen' : 'Рекомендуемые комбинации'}
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <ServiceCard
+          title="RF-Vakuum"
+          description={isGerman ? 'Radiofrequenz mit Vakuum für Cellulite-Reduktion' : 'Радиочастоты с вакуумом для уменьшения целлюлита'}
+          icon={Star}
+          href="/services/koerperbehandlungen/rf-vakuum"
+          image="/83.jpg"
+        />
+        <ServiceCard
+          title="RF-Lifting"
+          description={isGerman ? 'Radiofrequenz für Hautstraffung' : 'Радиочастоты для подтяжки кожи'}
+          icon={Zap}
+          href="/services/apparative-anti-aging/rf-lifting"
+          image="/162.jpeg"
+        />
+        <ServiceCard
+          title={isGerman ? 'Ultraschall' : 'Ультразвук'}
+          description={isGerman ? 'Tiefenwirksame Hautpflege' : 'Глубокий уход за кожей'}
+          icon={Droplet}
+          href="/services/apparative-anti-aging/ultraschall"
+          image="/126.jpeg"
+        />
+      </div>
+    </div>
+  );
 
   return (
     <ServicePageLayout
@@ -85,6 +118,7 @@ const Kavitation = () => {
             : 'Вы получаете детальные рекомендации для периода после процедуры, чтобы оптимально поддержать липолиз: пить много воды (мин. 2–3 литра в день), здоровое питание с низким содержанием жиров (овощи, фрукты, нежирный белок), умеренное движение (30 мин. прогулки, лёгкое кардио, йога), избегать алкоголя 48 часов (алкоголь замедляет липолиз через печень). Для оптимального и долговременного результата мы рекомендуем курс из 8–12 процедур, в идеале 1× в неделю (мин. 5–7 дней перерыв между сеансами). Результаты кумулятивные — чем больше процедур, тем больше уменьшение жира. После завершения курса рекомендуем поддерживающие сеансы каждые 2–3 месяца для долгосрочного сохранения результата.'
         }
       ]}
+      additionalSections={<RecommendedServices />}
       priceSection="body-treatments"
       contraindications={[
         isGerman ? 'Schwangerschaft und Stillzeit' : 'Беременность и кормление грудью',

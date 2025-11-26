@@ -19,7 +19,7 @@ const ProblemSkin = () => {
         : "Очищающий гель с салициловой кислотой и маслом чайного дерева. Удаляет избыток кожного сала не пересушивая, очищает поры и предотвращает высыпания.",
       image: "/Renew/23.png",
       hoverImage: "/Renew/23.1.jpeg",
-      variants: [{ article: "1601250", volume: "250ml" }]
+      variants: [{ volume: "250ml" }]
     },
     {
       id: "hydration-gel",
@@ -29,7 +29,7 @@ const ProblemSkin = () => {
         ? "Leichtes Feuchtigkeitsgel ohne Öl. Mattiert die Haut und spendet Feuchtigkeit ohne zu fetten. Ideal für fettige und Mischhaut."
         : "Легкий увлажняющий гель без масла. Матирует кожу и увлажняет без жирности. Идеально для жирной и комбинированной кожи.",
       image: "/Renew/24.jpeg",
-      variants: [{ article: "1602050", volume: "250ml" }]
+      variants: [{ volume: "250ml" }]
     },
     {
       id: "dermo-control-mask",
@@ -40,7 +40,7 @@ const ProblemSkin = () => {
         : "Очищающая маска с каолином и цинком. Абсорбирует избыток кожного сала, сужает поры и успокаивает воспаленную кожу.",
       image: "/Renew/25.png",
       hoverImage: "/Renew/25.1.jpeg",
-      variants: [{ article: "1603070", volume: "70ml" }]
+      variants: [{ volume: "70ml" }]
     },
     {
       id: "dermo-control-lotion",
@@ -51,7 +51,7 @@ const ProblemSkin = () => {
         : "Балансирующий лосьон с BHA. Очищает кожу, регулирует выработку себума и предотвращает высыпания. Применять ежедневно после очищения.",
       image: "/Renew/26.png",
       hoverImage: "/Renew/26.1.jpeg",
-      variants: [{ article: "1604250", volume: "250ml" }]
+      variants: [{ volume: "250ml" }]
     },
     {
       id: "balance-recovery-peeling",
@@ -61,7 +61,7 @@ const ProblemSkin = () => {
         ? "Sanftes Enzympeeling zur Wiederherstellung des Hautgleichgewichts. Entfernt Verhornungen und reguliert die Talgproduktion ohne zu reizen."
         : "Мягкий энзимный пилинг для восстановления баланса кожи. Удаляет ороговевшие клетки и регулирует выработку себума без раздражения.",
       image: "/Renew/27.jpeg",
-      variants: [{ article: "1605070", volume: "70ml" }]
+      variants: [{ volume: "70ml" }]
     },
     {
       id: "moisturizing-cream-spf15",
@@ -72,7 +72,7 @@ const ProblemSkin = () => {
         : "Легкий дневной крем с защитой от солнца для жирной кожи. Матирует, защищает от УФ-излучения и увлажняет без жирного блеска.",
       image: "/Renew/28.png",
       hoverImage: "/Renew/28.1.jpeg",
-      variants: [{ article: "1606050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }]
     },
     {
       id: "moisturizing-cream-oil-free",
@@ -83,7 +83,7 @@ const ProblemSkin = () => {
         : "Безмасляный увлажняющий крем для жирной кожи. Увлажняет без жирности и оставляет матовый финиш.",
       image: "/Renew/29.png",
       hoverImage: "/Renew/29.1.jpeg",
-      variants: [{ article: "1607050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }]
     },
     {
       id: "phyto-complex",
@@ -93,7 +93,7 @@ const ProblemSkin = () => {
         ? "Pflanzliches Konzentrat mit Teebaumöl und Salbei. Beruhigt Entzündungen, klärt Unreinheiten und reguliert die Talgproduktion."
         : "Растительный концентрат с маслом чайного дерева и шалфеем. Успокаивает воспаления, очищает несовершенства и регулирует выработку себума.",
       image: "/Renew/30.jpeg",
-      variants: [{ article: "1608030", volume: "30ml" }]
+      variants: [{ volume: "30ml" }]
     },
     {
       id: "drying-treatment",
@@ -103,7 +103,7 @@ const ProblemSkin = () => {
         ? "Lokale SOS-Behandlung zum Austrocknen von Unreinheiten. Punktgenau auf Pickel auftragen für schnelle Reduzierung von Rötungen und Schwellungen."
         : "Локальное SOS-средство для подсушивания воспалений. Точечно наносить на прыщи для быстрого уменьшения покраснений и отечности.",
       image: "/Renew/31.jpeg",
-      variants: [{ article: "1609030", volume: "30ml" }]
+      variants: [{ volume: "30ml" }]
     },
     // Propioguard Line
     {
@@ -114,7 +114,7 @@ const ProblemSkin = () => {
         ? "Tiefenreinigender Schaum mit Propolis und Zink. Bekämpft Akne-Bakterien, beruhigt die Haut und verhindert neue Entzündungen."
         : "Глубоко очищающая пена с прополисом и цинком. Борется с бактериями акне, успокаивает кожу и предотвращает новые воспаления.",
       image: "/Renew/32.png",
-      variants: [{ article: "1701200", volume: "200ml" }]
+      variants: [{ volume: "200ml" }]
     },
     {
       id: "make-up-treatment-cream",
@@ -124,7 +124,7 @@ const ProblemSkin = () => {
         ? "Getönte Behandlungscreme mit antibakterieller Wirkung. Kaschiert Unreinheiten, pflegt und behandelt problematische Haut gleichzeitig."
         : "Тонирующий лечебный крем с антибактериальным действием. Маскирует несовершенства, ухаживает и лечит проблемную кожу одновременно.",
       image: "/Renew/33.png",
-      variants: [{ article: "1702050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }]
     },
     {
       id: "complex-peel-solution",
@@ -134,7 +134,7 @@ const ProblemSkin = () => {
         ? "Komplexes Peeling mit Mandel- und Salicylsäure. Öffnet verstopfte Poren, bekämpft Akne und verhindert neue Unreinheiten."
         : "Комплексный пилинг с миндальной и салициловой кислотами. Открывает закупоренные поры, борется с акне и предотвращает новые высыпания.",
       image: "/Renew/34.png",
-      variants: [{ article: "1703070", volume: "70ml" }]
+      variants: [{ volume: "70ml" }]
     },
     {
       id: "sunscreen-triple-active",
@@ -145,7 +145,7 @@ const ProblemSkin = () => {
         : "Тройной активный дневной крем с SPF. Защищает от УФ-излучения, матирует жирную кожу и лечит акне одновременно.",
       image: "/Renew/35.png",
       hoverImage: "/Renew/35.1.jpeg",
-      variants: [{ article: "1704050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }]
     },
     {
       id: "charcoal-soothing-mask",
@@ -156,7 +156,7 @@ const ProblemSkin = () => {
         : "Глубоко очищающая маска с активированным углем. Детоксифицирует кожу, абсорбирует загрязнения и успокаивает воспаления.",
       image: "/Renew/36.png",
       hoverImage: "/Renew/36.1.jpeg",
-      variants: [{ article: "1705070", volume: "70ml" }]
+      variants: [{ volume: "70ml" }]
     },
     {
       id: "multifunctional-accelerative-cream",
@@ -167,7 +167,7 @@ const ProblemSkin = () => {
         : "Мультифункциональный крем для ускорения регенерации кожи. Предотвращает образование рубцов и ускоряет заживление акне.",
       image: "/Renew/37.png",
       hoverImage: "/Renew/37.1.jpeg",
-      variants: [{ article: "1706050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }]
     }
   ];
 
@@ -233,9 +233,9 @@ const ProblemSkin = () => {
                     {product.description}
                   </p>
                   <div className="space-y-1">
-                    {product.variants.map((variant) => (
-                      <p key={variant.article} className="text-sm text-brand-coffee/60">
-                        Art. {variant.article} • {variant.volume}
+                    {product.variants.map((variant, idx) => (
+                      <p key={idx} className="text-sm text-brand-coffee/60">
+                        {variant.volume}
                       </p>
                     ))}
                   </div>

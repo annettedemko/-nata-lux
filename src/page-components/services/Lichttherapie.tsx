@@ -1,12 +1,45 @@
 'use client'
 
 import { ServicePageLayout } from '@/components/ServicePageLayout';
-import { Sun } from 'lucide-react';
+import { Sun, Zap, Droplet, Activity } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { ServiceCard } from '@/components/ServiceCard';
 
 const Lichttherapie = () => {
   const { language } = useLanguage();
   const isGerman = language === 'de';
+
+  // Custom section for recommended combinations
+  const RecommendedServices = () => (
+    <div className="mt-12">
+      <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-6 text-center">
+        {isGerman ? 'Empfohlene Kombinationen' : 'Рекомендуемые комбинации'}
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <ServiceCard
+          title={isGerman ? 'Biostrom' : 'Биотоки'}
+          description={isGerman ? 'Mikrostrom für zusätzlichen Lifting-Effekt' : 'Микротоки для дополнительного лифтинг-эффекта'}
+          icon={Activity}
+          href="/services/apparative-anti-aging/biostrom"
+          image="/125.webp"
+        />
+        <ServiceCard
+          title={isGerman ? 'Phonophorese' : 'Фонофорез'}
+          description={isGerman ? 'Ultraschall für tiefe Wirkstoffeinschleusung' : 'Ультразвук для глубокого введения активных веществ'}
+          icon={Droplet}
+          href="/services/phonophorese"
+          image="/128.jpeg"
+        />
+        <ServiceCard
+          title="RF-Lifting"
+          description={isGerman ? 'Radiofrequenz für intensive Straffung' : 'Радиочастоты для интенсивной подтяжки'}
+          icon={Zap}
+          href="/services/apparative-anti-aging/rf-lifting"
+          image="/162.jpeg"
+        />
+      </div>
+    </div>
+  );
 
   return (
     <ServicePageLayout
@@ -18,13 +51,21 @@ const Lichttherapie = () => {
       aboutTitle={isGerman ? "Was ist LED-Lichttherapie (Photonentherapie)?" : "Что такое LED-светотерапия (фототерапия)?"}
       aboutDescription={isGerman ? [
         'Die LED-Lichttherapie, auch Photonentherapie oder Photobiomodulation genannt, ist eine innovative nicht-invasive Methode der modernen ästhetischen Kosmetik, bei der Licht unterschiedlicher Wellenlängen gezielt eingesetzt wird, um verschiedene Hautprobleme zu behandeln und die natürliche Regeneration der Haut zu fördern. In unserem Kosmetikstudio in München-Haidhausen arbeiten wir mit professionellen LED-Systemen medizinischer Qualität, die eine präzise Dosierung der Lichtenergie ermöglichen.',
-        'Die Behandlung basiert auf wissenschaftlich fundierter Photomedizin: Jede Lichtfarbe (Wellenlänge) dringt unterschiedlich tief in die Haut ein und aktiviert spezifische Hautprozesse: 🔴 Rotes Licht (620-750 nm) stimuliert die Kollagen- und Elastinproduktion, verbessert die Durchblutung und wirkt straffend – ideal für Anti-Aging, Faltenreduktion und Hautstraffung. 🔵 Blaues Licht (405-470 nm) wirkt antibakteriell gegen Akne-Bakterien (Propionibacterium acnes), reduziert Entzündungen und Unreinheiten – perfekt für Akne, Pickel und unreine Haut. 🟢 Grünes Licht (495-570 nm) gleicht Hautverfärbungen aus, reduziert Pigmentflecken und Hyperpigmentierung und verbessert den Teint. 🟡 Gelbes Licht (570-620 nm) wirkt entzündungshemmend, beruhigend und regenerierend – ideal für empfindliche, gereizte oder zu Rosacea neigende Haut.',
+        'Die Behandlung basiert auf wissenschaftlich fundierter Photomedizin. Jede Lichtfarbe dringt unterschiedlich tief in die Haut ein und hat spezifische Wirkungen:',
+        '🔴 Rotes Licht (620-750 nm) — stimuliert die Produktion von Kollagen und Elastin, verbessert die Durchblutung und fördert die Zellregeneration. Ideal für Anti-Aging, Faltenreduktion und Hautstraffung.',
+        '🔵 Blaues Licht (405-470 nm) — wirkt antibakteriell gegen Akne-verursachende Bakterien und reduziert Entzündungen. Perfekt für unreine Haut, Akne und zur Vorbeugung von Pickeln.',
+        '🟢 Grünes Licht (495-570 nm) — gleicht Hautverfärbungen aus, reduziert Pigmentflecken und Altersflecken und verbessert den gesamten Teint für ein ebenmäßigeres Hautbild.',
+        '🟡 Gelbes Licht (570-620 nm) — wirkt beruhigend, entzündungshemmend und regenerierend. Ideal für empfindliche Haut, Rosacea und zur Beruhigung gereizter Haut.',
         'Die LED-Lichttherapie ist völlig schmerzfrei, entspannend und sicher – sie erzeugt keine UV-Strahlung, keine Hitze und keine Hautschäden. Anders als bei IPL (Intense Pulsed Light) oder Laser-Behandlungen gibt es keine Ausfallzeiten, keine Rötungen und kein Risiko für Verbrennungen oder Pigmentveränderungen. Die Behandlung ist für alle Hauttypen (auch dunkle Haut) und alle Altersgruppen geeignet.',
         'Viele unserer Kunden aus München und Umgebung schätzen die LED-Lichttherapie als sanfte, natürliche und wissenschaftlich bewiesene Methode für strahlende, gesunde Haut – ob bei Akne, ersten Alterungserscheinungen, Pigmentierung, Rosacea oder einfach zur Erhaltung eines frischen, ebenmäßigen Teints.',
         'Ob als eigenständige Behandlung oder in Kombination mit Mikrostromtherapie, Phonophorese, RF-Lifting oder Gesichtsreinigung – die LED-Lichttherapie in München ist eine der vielseitigsten und wirksamsten Methoden für Hautverjüngung, Hautgesundheit und natürliche Schönheit ohne Risiken und Nebenwirkungen.'
       ] : [
         'LED-светотерапия, также называемая фототерапией или фотобиомодуляцией — это инновационный неинвазивный метод современной эстетической косметологии, при котором свет разных длин волн используется для лечения различных проблем кожи и стимуляции её естественной регенерации. В нашей косметологической студии в Мюнхене-Хайдхаузен мы работаем с профессиональными LED-системами медицинского качества.',
-        'Процедура основана на научно обоснованной фотомедицине: каждый цвет света проникает на разную глубину и активирует специфические процессы: 🔴 Красный свет (620-750 нм) стимулирует выработку коллагена и эластина, улучшает кровообращение — идеален для anti-age и подтяжки. 🔵 Синий свет (405-470 нм) действует антибактериально против акне-бактерий — идеален для проблемной кожи. 🟢 Зелёный свет (495-570 нм) выравнивает пигментацию и улучшает цвет лица. 🟡 Жёлтый свет (570-620 нм) успокаивает и восстанавливает — идеален для чувствительной кожи и розацеа.',
+        'Процедура основана на научно обоснованной фотомедицине. Каждый цвет света проникает на разную глубину и имеет специфическое действие:',
+        '🔴 Красный свет (620-750 нм) — стимулирует выработку коллагена и эластина, улучшает кровообращение и способствует регенерации клеток. Идеален для anti-age, уменьшения морщин и подтяжки кожи.',
+        '🔵 Синий свет (405-470 нм) — оказывает антибактериальное действие против бактерий, вызывающих акне, и уменьшает воспаления. Идеален для проблемной кожи, акне и профилактики высыпаний.',
+        '🟢 Зелёный свет (495-570 нм) — выравнивает пигментацию, уменьшает пигментные и возрастные пятна и улучшает общий цвет лица для более ровного тона кожи.',
+        '🟡 Жёлтый свет (570-620 нм) — успокаивает, снимает воспаления и восстанавливает кожу. Идеален для чувствительной кожи, розацеа и успокоения раздражённой кожи.',
         'LED-светотерапия полностью безболезненна, расслабляет и безопасна — без УФ-излучения, без нагрева и без повреждения кожи. В отличие от IPL или лазера, нет периода восстановления, покраснений и риска ожогов. Подходит для всех типов кожи и возрастов.',
         'Многие наши клиенты из Мюнхена ценят LED-светотерапию как мягкий, естественный и научно доказанный метод для сияющей, здоровой кожи — при акне, признаках старения, пигментации или розацеа.',
         'Как самостоятельная процедура или в комбинации с микротоками, фонофорезом, RF-лифтингом — LED-светотерапия в Мюнхене является одним из самых универсальных методов омоложения кожи без рисков и побочных эффектов.'
@@ -202,6 +243,7 @@ const Lichttherapie = () => {
           a: 'Да, для всех типов и оттенков кожи (включая тёмную), в отличие от IPL/лазера. Также идеальна для чувствительной кожи и розацеа.'
         }
       ]}
+      additionalSections={<RecommendedServices />}
       ctaTitle={isGerman ? "Bereit für strahlende, gesunde Haut in München?" : "Готовы к сияющей, здоровой коже в Мюнхене?"}
       ctaDescription={isGerman
         ? "Buchen Sie jetzt Ihre LED-Lichttherapie in unserem Studio in München-Haidhausen und erleben Sie die heilende Kraft des Lichts – wissenschaftlich bewährt, schmerzfrei und für alle Hauttypen geeignet. Kostenlose Beratung inklusive!"

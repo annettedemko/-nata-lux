@@ -47,7 +47,7 @@ export const GlassServiceCard = ({ title, description, icon: Icon, delay = 0, im
     <GlassCard delay={delay} className="overflow-hidden group">
       {/* Image */}
       {image && (
-        <div className="relative h-48 overflow-hidden">
+        <div className="relative h-40 md:h-48 overflow-hidden">
           <motion.img
             src={image}
             alt={title}
@@ -60,7 +60,7 @@ export const GlassServiceCard = ({ title, description, icon: Icon, delay = 0, im
         </div>
       )}
 
-      <div className="p-8">
+      <div className="p-4 sm:p-6 md:p-8">
         {/* Icon if no image */}
         {!image && (
           <motion.div

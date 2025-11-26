@@ -48,7 +48,7 @@ export const CategoryCard = ({
         >
           {/* Image Section */}
           {image ? (
-            <div className="relative h-56 md:h-64 lg:h-72 overflow-hidden">
+            <div className="relative h-48 md:h-56 lg:h-64 xl:h-72 overflow-hidden">
               {/* Main image */}
               <img
                 src={image}

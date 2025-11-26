@@ -17,7 +17,7 @@ const VitaminC = () => {
         ? "Zarter Schaum ideal zur Reinigung jeden Hauttyps. Reinigt sanft und effektiv, entfernt Make-up ohne die Haut auszutrocknen oder zu reizen. Enthält 3-O-Ethyl-Ascorbinsäure"
         : "Деликатная пенка идеально подходит для умывания кожи любого типа. Мягко и эффективно очищает, снимает макияж, не пересушивая и не раздражая кожу. Содержит 3-О-Ethyl аскорбиновую кислоту",
       image: "/Renew/69.jpeg",
-      variants: [{ article: "2401200", volume: "200ml" }]
+      variants: [{ volume: "220ml" }]
     },
     {
       id: "vitamin-c-peel-lotion",
@@ -27,7 +27,7 @@ const VitaminC = () => {
         : "Лосьон с рН 3,5 и содержанием АНА кислот 4%, салициловой кислоты 2% для эффективного очищения кожи лица и подготовки её к нанесению других препаратов. Мягко отшелушивает мертвые клетки",
       image: "/Renew/70.jpeg",
       hoverImage: "/Renew/70.1.jpeg",
-      variants: [{ article: "2402200", volume: "200ml" }]
+      variants: [{ volume: "250ml" }, { volume: "500ml" }]
     },
     {
       id: "age-reverse-mask",
@@ -37,7 +37,7 @@ const VitaminC = () => {
         : "Маска приятной кремообразной текстуры с высокой концентрацией витамина С в стабильной форме в сочетании с кремнием для нормального синтеза коллагена и защиты от вредного воздействия",
       image: "/Renew/71.webp",
       hoverImage: "/Renew/71.1.jpeg",
-      variants: [{ article: "2403070", volume: "70ml" }]
+      variants: [{ volume: "70ml" }, { volume: "250ml" }]
     },
     {
       id: "age-reverse-serum",
@@ -47,7 +47,7 @@ const VitaminC = () => {
         : "Богатый комплекс натуральных экстрактов и масел, содержащих чистый витамин С. Защищает кожу от вредного воздействия окружающей среды, нейтрализует свободные радикалы, способствует выработке коллагена",
       image: "/Renew/72.jpeg",
       hoverImage: "/Renew/72.1.jpeg",
-      variants: [{ article: "2404030", volume: "30ml" }]
+      variants: [{ volume: "30ml" }, { volume: "100ml" }]
     },
     {
       id: "age-reverse-cream",
@@ -57,7 +57,7 @@ const VitaminC = () => {
         : "Питательный крем с витамином С содержит уникальную композицию активных ингредиентов, способных быстро восстанавливать кожу и питать её без комедогенного воздействия. Обновляет кожу, выравнивает тон и рельеф",
       image: "/Renew/73.jpeg",
       hoverImage: "/Renew/73.1.jpeg",
-      variants: [{ article: "2405050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }, { volume: "250ml" }]
     },
     {
       id: "shining-eyes",
@@ -68,7 +68,7 @@ const VitaminC = () => {
       image: "/Renew/74.jpeg",
       hoverImage: "/Renew/74.1.jpeg",
       hoverImagePosition: "center 25%",
-      variants: [{ article: "2406030", volume: "30ml" }]
+      variants: [{ volume: "30ml" }, { volume: "150ml" }]
     },
     {
       id: "moisturizing-cream-spf25",
@@ -78,7 +78,7 @@ const VitaminC = () => {
         : "Нежный увлажняющий крем с приятным цитрусовым ароматом быстро впитывается, не оставляя ощущения жирности. Высокая концентрация витамина С в стабильной жирорастворимой форме как мощный антиоксидант. SPF-25",
       image: "/Renew/75.png",
       hoverImage: "/Renew/75.1.jpeg",
-      variants: [{ article: "2407050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }, { volume: "250ml" }]
     }
   ];
 
@@ -128,9 +128,9 @@ const VitaminC = () => {
                   {product.description}
                 </p>
                 <div className="space-y-1">
-                  {product.variants.map((variant) => (
-                    <p key={variant.article} className="text-sm text-brand-coffee/60">
-                      Art. {variant.article} • {variant.volume}
+                  {product.variants.map((variant, idx) => (
+                    <p key={idx} className="text-sm text-brand-coffee/60">
+                      {variant.volume}
                     </p>
                   ))}
                 </div>

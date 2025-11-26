@@ -18,7 +18,7 @@ const Peelings = () => {
         : "Кремовый гоммаж-пилинг для мягкого обновления кожи. Механический пилинг с мелкими частицами, удаляет омертвевшие клетки и разглаживает кожу. Подходит для всех типов кожи.",
       image: "/Renew/38.jpeg",
       hoverImage: "/Renew/38.1.jpeg",
-      variants: [{ article: "1801070", volume: "70ml" }, { article: "1801250", volume: "250ml" }]
+      variants: [{ volume: "70ml" }, { volume: "250ml" }]
     },
     {
       id: "azelaic-acid-peeling",
@@ -27,7 +27,7 @@ const Peelings = () => {
         ? "Peeling mit 15% Azelainsäure. Wirksam gegen Pigmentierung, Akne und Rosazea. Antibakteriell und entzündungshemmend, verfeinert die Hautstruktur."
         : "Пилинг с 15% азелаиновой кислотой. Эффективен против пигментации, акне и розацеа. Антибактериальный и противовоспалительный, улучшает текстуру кожи.",
       image: "/Renew/39.jpeg",
-      variants: [{ article: "1802070", volume: "70ml" }]
+      variants: [{ volume: "150ml" }]
     },
     {
       id: "aha-bha-peeling",
@@ -36,7 +36,7 @@ const Peelings = () => {
         ? "Kombiniertes Säurepeeling mit Glykolsäure und Salicylsäure. Tiefe Hauterneuerung, Porenreinigung und Verfeinerung der Hautstruktur in einem Produkt."
         : "Комбинированный кислотный пилинг с гликолевой и салициловой кислотами. Глубокое обновление кожи, очищение пор и улучшение текстуры в одном продукте.",
       image: "/Renew/40.jpeg",
-      variants: [{ article: "1803070", volume: "70ml" }]
+      variants: [{ volume: "250ml" }]
     },
     {
       id: "aha-peeling",
@@ -46,7 +46,10 @@ const Peelings = () => {
         : "Фруктовый кислотный пилинг с гликолевой кислотой. Разглаживает кожу, улучшает текстуру и придает сияние. Идеально при тусклом цвете лица и мелких морщинках.",
       image: "/Renew/41.jpeg",
       hoverImage: "/Renew/41.1.jpeg",
-      variants: [{ article: "1804070", volume: "70ml" }]
+      variants: [
+        { volume: "70ml" },
+        { volume: "250ml" }
+      ]
     },
     {
       id: "aha-refreshing-exfoliator",
@@ -56,7 +59,10 @@ const Peelings = () => {
         : "Освежающий AHA-эксфолиант для ежедневного применения. Мягкая концентрация для постоянного обновления кожи без раздражения.",
       image: "/Renew/42.jpeg",
       hoverImage: "/Renew/42.1.jpeg",
-      variants: [{ article: "1805100", volume: "100ml" }]
+      variants: [
+        { volume: "70ml" },
+        { volume: "250ml" }
+      ]
     },
     {
       id: "intensive-repair-peel",
@@ -65,7 +71,7 @@ const Peelings = () => {
         ? "Intensives Reparatur-Peeling für beschädigte und sonnengeschädigte Haut. Regeneriert, glättet Narben und verbessert den Gesamtteint."
         : "Интенсивный восстанавливающий пилинг для поврежденной и фотоповрежденной кожи. Регенерирует, разглаживает рубцы и улучшает общий тон.",
       image: "/Renew/43.jpeg",
-      variants: [{ article: "1806070", volume: "70ml" }]
+      variants: [{ volume: "30ml" }]
     },
     {
       id: "enzyme-exfoliator",
@@ -75,7 +81,10 @@ const Peelings = () => {
         : "Мягкий энзимный пилинг с папаином и бромелаином. Идеален для чувствительной кожи, растворяет омертвевшие клетки без механического трения или кислот.",
       image: "/Renew/44.jpeg",
       hoverImage: "/Renew/44.1.jpeg",
-      variants: [{ article: "1807070", volume: "70ml" }]
+      variants: [
+        { volume: "70ml" },
+        { volume: "250ml" }
+      ]
     },
     {
       id: "pro-glow-foaming-peeling",
@@ -84,7 +93,7 @@ const Peelings = () => {
         ? "Schäumendes Peeling für professionellen Glow. Sofortige Ausstrahlung durch Kombination von Säuren und Sauerstoff-Technologie."
         : "Пенящийся пилинг для профессионального сияния. Мгновенный эффект благодаря комбинации кислот и кислородной технологии.",
       image: "/Renew/45.png",
-      variants: [{ article: "1808100", volume: "100ml" }]
+      variants: [{ volume: "150ml" }]
     },
     {
       id: "bioenzyme-therapy",
@@ -93,7 +102,7 @@ const Peelings = () => {
         ? "Bioenzym-Therapie mit Probiotika. Stärkt die Hautbarriere, erneuert sanft und fördert ein gesundes Hautmikrobiom."
         : "Биоэнзимная терапия с пробиотиками. Укрепляет кожный барьер, мягко обновляет и способствует здоровому микробиому кожи.",
       image: "/Renew/46.png",
-      variants: [{ article: "1809070", volume: "70ml" }]
+      variants: [{ volume: "70ml" }]
     },
     {
       id: "redness-gentle-peel",
@@ -101,8 +110,8 @@ const Peelings = () => {
       description: isGerman
         ? "Sanftes Peeling speziell für empfindliche Haut mit Rötungen und Couperose. Enthält beruhigende Wirkstoffe und milde Fruchtsäuren für schonende Hauterneuerung."
         : "Мягкий пилинг специально для чувствительной кожи с покраснениями и куперозом. Содержит успокаивающие компоненты и мягкие фруктовые кислоты для бережного обновления кожи.",
-      image: "/Renew/58.jpeg",
-      variants: [{ article: "2202070", volume: "70ml" }]
+      image: "/Renew/58.jpg",
+      variants: [{ volume: "50ml" }]
     }
   ];
 
@@ -152,9 +161,9 @@ const Peelings = () => {
                   {product.description}
                 </p>
                 <div className="space-y-1">
-                  {product.variants.map((variant) => (
-                    <p key={variant.article} className="text-sm text-brand-coffee/60">
-                      Art. {variant.article} • {variant.volume}
+                  {product.variants.map((variant, idx) => (
+                    <p key={idx} className="text-sm text-brand-coffee/60">
+                      {variant.volume}
                     </p>
                   ))}
                 </div>

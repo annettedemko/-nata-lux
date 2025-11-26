@@ -1,12 +1,45 @@
 'use client'
 
 import { ServicePageLayout } from '@/components/ServicePageLayout';
-import { Activity } from 'lucide-react';
+import { Activity, Droplet, Sun, Zap } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { ServiceCard } from '@/components/ServiceCard';
 
 const Biostrom = () => {
   const { language } = useLanguage();
   const isGerman = language === 'de';
+
+  // Custom section for recommended combinations
+  const RecommendedServices = () => (
+    <div className="mt-12">
+      <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-6 text-center">
+        {isGerman ? 'Empfohlene Kombinationen' : 'Рекомендуемые комбинации'}
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <ServiceCard
+          title={isGerman ? 'Phonophorese' : 'Фонофорез'}
+          description={isGerman ? 'Ultraschall für Wirkstoffeinschleusung' : 'Ультразвук для введения активных веществ'}
+          icon={Droplet}
+          href="/services/phonophorese"
+          image="/128.jpeg"
+        />
+        <ServiceCard
+          title={isGerman ? 'Lichttherapie' : 'Светотерапия'}
+          description={isGerman ? 'LED-Licht für Beruhigung und Kollagenstimulation' : 'LED-свет для успокоения и стимуляции коллагена'}
+          icon={Sun}
+          href="/services/apparative-anti-aging/lichttherapie"
+          image="/124.jpeg"
+        />
+        <ServiceCard
+          title="RF-Lifting"
+          description={isGerman ? 'Radiofrequenz für intensive Straffung' : 'Радиочастоты для интенсивной подтяжки'}
+          icon={Zap}
+          href="/services/apparative-anti-aging/rf-lifting"
+          image="/162.jpeg"
+        />
+      </div>
+    </div>
+  );
 
   return (
     <ServicePageLayout
@@ -150,6 +183,7 @@ const Biostrom = () => {
           a: 'Нет, механизм действия совершенно разный. Микротоки тренируют лицевые мышцы естественным образом и стимулируют коллаген – без инъекций.'
         }
       ]}
+      additionalSections={<RecommendedServices />}
       ctaTitle={isGerman ? "Bereit für natürliches Face-Lifting in München?" : "Готовы к естественному лифтингу лица в Мюнхене?"}
       ctaDescription={isGerman
         ? "Buchen Sie jetzt Ihre Mikrostromtherapie in unserem Studio in München-Haidhausen und erleben Sie den Lifting-Effekt ohne Nadeln, ohne Schmerzen und ohne Ausfallzeiten. Kostenlose Beratung inklusive!"

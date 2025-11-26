@@ -11,10 +11,10 @@ export const Footer = () => {
   return (
     <footer className="bg-brand-latte/90 backdrop-blur-md border-t border-brand-gold/10 relative z-10">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
+            <h3 className="text-xl md:text-2xl font-heading font-semibold text-brand-espresso mb-4">
               NATA LUX
             </h3>
             <p className="text-brand-coffee/70 mb-4">

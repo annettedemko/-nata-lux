@@ -115,7 +115,7 @@ export const PremiumGallery = ({ images, title }: PremiumGalleryProps) => {
         </div>
 
         {/* Premium Gallery Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4">
           {images.map((item, index) => (
             <motion.div
               key={index}
@@ -216,7 +216,7 @@ export const PremiumGallery = ({ images, title }: PremiumGalleryProps) => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3 }}
-            className="relative w-[90vw] h-[80vh] md:w-[80vw] md:h-[85vh] cursor-pointer"
+            className="relative w-[95vw] h-[75vh] landscape:h-[85vh] md:w-[80vw] md:h-[85vh] cursor-pointer"
             onClick={closeLightbox}
           >
             {isVideo(images[selectedImage]) ? (

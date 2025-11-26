@@ -17,7 +17,7 @@ const Propioguard = () => {
         ? "Tiefenreinigender Schaum mit Propolis und Zink. Bekämpft Akne-Bakterien, beruhigt die Haut und verhindert neue Entzündungen."
         : "Глубоко очищающая пена с прополисом и цинком. Борется с бактериями акне, успокаивает кожу и предотвращает новые воспаления.",
       image: "/Renew/32.png",
-      variants: [{ article: "1701200", volume: "200ml" }]
+      variants: [{ volume: "250ml" }]
     },
     {
       id: "make-up-treatment-cream",
@@ -26,7 +26,7 @@ const Propioguard = () => {
         ? "Getönte Behandlungscreme mit antibakterieller Wirkung. Kaschiert Unreinheiten, pflegt und behandelt problematische Haut gleichzeitig."
         : "Тонирующий лечебный крем с антибактериальным действием. Маскирует несовершенства, ухаживает и лечит проблемную кожу одновременно.",
       image: "/Renew/33.png",
-      variants: [{ article: "1702050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }]
     },
     {
       id: "complex-peel-solution",
@@ -35,7 +35,7 @@ const Propioguard = () => {
         ? "Komplexes Peeling mit Mandel- und Salicylsäure. Öffnet verstopfte Poren, bekämpft Akne und verhindert neue Unreinheiten."
         : "Комплексный пилинг с миндальной и салициловой кислотами. Открывает закупоренные поры, борется с акне и предотвращает новые высыпания.",
       image: "/Renew/34.png",
-      variants: [{ article: "1703070", volume: "70ml" }]
+      variants: [{ volume: "250ml" }]
     },
     {
       id: "sunscreen-triple-active",
@@ -45,7 +45,7 @@ const Propioguard = () => {
         : "Тройной активный дневной крем с SPF. Защищает от УФ-излучения, матирует жирную кожу и лечит акне одновременно.",
       image: "/Renew/35.png",
       hoverImage: "/Renew/35.1.jpeg",
-      variants: [{ article: "1704050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }]
     },
     {
       id: "charcoal-soothing-mask",
@@ -55,7 +55,7 @@ const Propioguard = () => {
         : "Глубоко очищающая маска с активированным углем. Детоксифицирует кожу, абсорбирует загрязнения и успокаивает воспаления.",
       image: "/Renew/36.png",
       hoverImage: "/Renew/36.1.jpeg",
-      variants: [{ article: "1705070", volume: "70ml" }]
+      variants: [{ volume: "70ml" }]
     },
     {
       id: "multifunctional-accelerative-cream",
@@ -65,7 +65,10 @@ const Propioguard = () => {
         : "Мультифункциональный крем для ускорения регенерации кожи. Предотвращает образование рубцов и ускоряет заживление акне.",
       image: "/Renew/37.png",
       hoverImage: "/Renew/37.1.jpeg",
-      variants: [{ article: "1706050", volume: "50ml" }]
+      variants: [
+        { volume: "50ml" },
+        { volume: "250ml" }
+      ]
     }
   ];
 
@@ -115,9 +118,9 @@ const Propioguard = () => {
                   {product.description}
                 </p>
                 <div className="space-y-1">
-                  {product.variants.map((variant) => (
-                    <p key={variant.article} className="text-sm text-brand-coffee/60">
-                      Art. {variant.article} • {variant.volume}
+                  {product.variants.map((variant, idx) => (
+                    <p key={idx} className="text-sm text-brand-coffee/60">
+                      {variant.volume}
                     </p>
                   ))}
                 </div>

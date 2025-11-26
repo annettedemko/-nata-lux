@@ -39,7 +39,7 @@ const Contact = () => {
         <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-6">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold text-brand-espresso mb-6">
             {t('contact.title')}
           </h1>
           <p className="text-lg text-brand-coffee/80 max-w-2xl mx-auto leading-relaxed">
@@ -49,7 +49,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 max-w-6xl mx-auto">
           {/* Contact Info */}
           <div className="space-y-8 animate-slide-up">
             <div className="glass rounded-2xl p-8">
@@ -204,7 +204,7 @@ const Contact = () => {
 
             {/* Map - Clickable with Full Address & Transport Info */}
             <div className="space-y-4">
-              <div className="glass rounded-2xl overflow-hidden h-80 relative group">
+              <div className="glass rounded-2xl overflow-hidden h-64 md:h-80 relative group">
                 <a
                   href="https://www.google.com/maps/dir/?api=1&destination=Elsässer+Straße+33+81667+München"
                   target="_blank"

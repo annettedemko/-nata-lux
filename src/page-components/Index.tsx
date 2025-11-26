@@ -257,7 +257,7 @@ const Index = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="max-w-3xl mx-auto relative z-10"
           >
-            <div className="glass-strong rounded-2xl md:rounded-3xl p-6 md:p-12 text-center hover-glow">
+            <div className="glass-strong rounded-2xl md:rounded-3xl p-4 md:p-8 lg:p-12 text-center hover-glow">
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
@@ -305,7 +305,7 @@ const Index = () => {
                 <Sparkles className="w-6 h-6 md:w-8 md:h-8 text-brand-gold" />
               </div>
             </motion.div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold text-brand-espresso mb-3 md:mb-4 px-4">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-semibold text-brand-espresso mb-3 md:mb-4 px-4">
               {t('categories.title')}
             </h2>
             <p className="text-base md:text-lg text-brand-coffee/70 max-w-2xl mx-auto leading-relaxed px-4">
@@ -350,7 +350,7 @@ const Index = () => {
                 <Star className="w-6 h-6 md:w-8 md:h-8 text-brand-gold" />
               </div>
             </motion.div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold text-brand-espresso mb-3 md:mb-4 px-4">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-semibold text-brand-espresso mb-3 md:mb-4 px-4">
               {t('services.title')}
             </h2>
           </motion.div>
@@ -429,7 +429,7 @@ const Index = () => {
                 <Award className="w-6 h-6 md:w-8 md:h-8 text-brand-gold" />
               </div>
             </motion.div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold text-brand-espresso mb-3 md:mb-4 px-4">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-semibold text-brand-espresso mb-3 md:mb-4 px-4">
               {t('about.title')}
             </h2>
           </motion.div>
@@ -469,7 +469,7 @@ const Index = () => {
                 <Heart className="w-6 h-6 md:w-8 md:h-8 text-brand-gold" />
               </div>
             </motion.div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold text-brand-espresso mb-3 md:mb-4 px-4">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-semibold text-brand-espresso mb-3 md:mb-4 px-4">
               {t('reviews.title')}
             </h2>
 
@@ -621,7 +621,7 @@ const Index = () => {
             className="max-w-6xl mx-auto"
           >
             <div
-              className="relative rounded-2xl md:rounded-3xl overflow-hidden h-[300px] md:h-[500px]"
+              className="relative rounded-2xl md:rounded-3xl overflow-hidden h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
               style={{
                 boxShadow: '0 20px 60px rgba(197,151,80,0.2), 0 8px 24px rgba(0,0,0,0.1)',
                 border: '2px solid rgba(197,151,80,0.2)',

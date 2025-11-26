@@ -31,18 +31,18 @@ export const Header = () => {
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       className="sticky top-0 z-50 glass border-b border-brand-gold/10 m-0"
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <motion.img
               src="/112.png"
               alt="Nata Lux"
-              className="w-12 h-12 object-contain"
+              className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
               whileHover={{ rotate: 5, scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             />
-            <div className="text-2xl font-heading font-semibold text-brand-espresso">
+            <div className="text-xl sm:text-2xl font-heading font-semibold text-brand-espresso">
               NATA LUX
             </div>
           </Link>

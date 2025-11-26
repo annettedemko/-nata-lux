@@ -19,8 +19,8 @@ const Whitening = () => {
       image: "/Renew/1.png",
       hoverImage: "/Renew/1.1.jpeg",
       variants: [
-        { article: "1202200", volume: "200ml" },
-        { article: "1202500", volume: "500ml" }
+        { volume: "250ml" },
+        { volume: "500ml" }
       ]
     },
     {
@@ -32,8 +32,8 @@ const Whitening = () => {
       image: "/Renew/2.png",
       hoverImage: "/Renew/2.1.jpeg",
       variants: [
-        { article: "1203250", volume: "250ml" },
-        { article: "1203070", volume: "70ml" }
+        { volume: "70ml" },
+        { volume: "250ml" }
       ]
     },
     {
@@ -44,7 +44,7 @@ const Whitening = () => {
         : "Высококонцентрированная сыворотка с койевой кислотой и ниацинамидом. Подавляет выработку меланина и осветляет существующие пигментные пятна. Видимые результаты через 4-6 недель.",
       image: "/Renew/3.png",
       variants: [
-        { article: "1204030", volume: "30ml" }
+        { volume: "30ml" }
       ]
     },
     {
@@ -55,7 +55,7 @@ const Whitening = () => {
         : "Ежедневный крем с осветляющими компонентами. Защищает от новой пигментации и интенсивно ухаживает за кожей. С витамином С, арбутином и экстрактом корня солодки.",
       image: "/Renew/4.png",
       variants: [
-        { article: "1206050", volume: "50ml" }
+        { volume: "50ml" }
       ]
     }
   ];
@@ -106,9 +106,9 @@ const Whitening = () => {
                   {product.description}
                 </p>
                 <div className="space-y-1">
-                  {product.variants.map((variant) => (
-                    <p key={variant.article} className="text-sm text-brand-coffee/60">
-                      Art. {variant.article} • {variant.volume}
+                  {product.variants.map((variant, idx) => (
+                    <p key={idx} className="text-sm text-brand-coffee/60">
+                      {variant.volume}
                     </p>
                   ))}
                 </div>

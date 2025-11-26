@@ -329,7 +329,7 @@ const Prices = () => {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           >
             <h1
-              className="text-8xl md:text-9xl font-heading font-bold tracking-tight leading-none mb-6"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold tracking-tight leading-none mb-6"
               style={{
                 color: 'hsl(25, 27%, 19%)',
                 letterSpacing: '-0.02em',
@@ -365,7 +365,7 @@ const Prices = () => {
                 >
                   {/* Bold Header with Gradient */}
                   <div
-                    className="px-10 md:px-14 py-8"
+                    className="px-4 sm:px-6 md:px-10 lg:px-14 py-6 md:py-8"
                     style={{
                       background: 'linear-gradient(135deg, rgba(201, 165, 106, 0.15) 0%, rgba(231, 207, 163, 0.08) 100%)',
                       borderBottom: '2px solid rgba(201, 165, 106, 0.2)'
@@ -375,7 +375,7 @@ const Prices = () => {
                       <div className="p-3 bg-brand-gold/20 rounded-xl">
                         <Icon className="w-7 h-7 text-brand-gold" strokeWidth={2} />
                       </div>
-                      <h2 className="text-4xl md:text-5xl font-heading font-bold text-brand-espresso tracking-tight">
+                      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-brand-espresso tracking-tight">
                         {category.title}
                       </h2>
                     </div>
@@ -390,7 +390,7 @@ const Prices = () => {
                 {/* Dual Column Layout */}
                 {category.isDualColumn ? (
                   <div className="px-10 md:px-14 py-12">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
                       {category.columns.map((column, colIndex) => (
                         <div key={colIndex}>
                           <h3 className="text-2xl font-heading font-semibold text-brand-espresso mb-6 pb-4 border-b-2 border-brand-gold/30">

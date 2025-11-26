@@ -18,7 +18,10 @@ const DermoControl = () => {
         : "Очищающий гель с салициловой кислотой и маслом чайного дерева. Удаляет избыток кожного сала не пересушивая, очищает поры и предотвращает высыпания.",
       image: "/Renew/23.png",
       hoverImage: "/Renew/23.1.jpeg",
-      variants: [{ article: "1601250", volume: "250ml" }]
+      variants: [
+        { volume: "250ml" },
+        { volume: "500ml" }
+      ]
     },
     {
       id: "hydration-gel",
@@ -27,7 +30,7 @@ const DermoControl = () => {
         ? "Leichtes Feuchtigkeitsgel ohne Öl. Mattiert die Haut und spendet Feuchtigkeit ohne zu fetten. Ideal für fettige und Mischhaut."
         : "Легкий увлажняющий гель без масла. Матирует кожу и увлажняет без жирности. Идеально для жирной и комбинированной кожи.",
       image: "/Renew/24.jpeg",
-      variants: [{ article: "1602050", volume: "250ml" }]
+      variants: [{ volume: "250ml" }]
     },
     {
       id: "dermo-control-mask",
@@ -37,7 +40,10 @@ const DermoControl = () => {
         : "Очищающая маска с каолином и цинком. Абсорбирует избыток кожного сала, сужает поры и успокаивает воспаленную кожу.",
       image: "/Renew/25.png",
       hoverImage: "/Renew/25.1.jpeg",
-      variants: [{ article: "1603070", volume: "70ml" }]
+      variants: [
+        { volume: "70ml" },
+        { volume: "250ml" }
+      ]
     },
     {
       id: "dermo-control-lotion",
@@ -47,7 +53,10 @@ const DermoControl = () => {
         : "Балансирующий лосьон с BHA. Очищает кожу, регулирует выработку себума и предотвращает высыпания. Применять ежедневно после очищения.",
       image: "/Renew/26.png",
       hoverImage: "/Renew/26.1.jpeg",
-      variants: [{ article: "1604250", volume: "250ml" }]
+      variants: [
+        { volume: "250ml" },
+        { volume: "500ml" }
+      ]
     },
     {
       id: "balance-recovery-peeling",
@@ -56,7 +65,7 @@ const DermoControl = () => {
         ? "Sanftes Enzympeeling zur Wiederherstellung des Hautgleichgewichts. Entfernt Verhornungen und reguliert die Talgproduktion ohne zu reizen."
         : "Мягкий энзимный пилинг для восстановления баланса кожи. Удаляет ороговевшие клетки и регулирует выработку себума без раздражения.",
       image: "/Renew/27.jpeg",
-      variants: [{ article: "1605070", volume: "70ml" }]
+      variants: [{ volume: "70ml" }]
     },
     {
       id: "moisturizing-cream-spf15",
@@ -66,7 +75,10 @@ const DermoControl = () => {
         : "Легкий дневной крем с защитой от солнца для жирной кожи. Матирует, защищает от УФ-излучения и увлажняет без жирного блеска.",
       image: "/Renew/28.png",
       hoverImage: "/Renew/28.1.jpeg",
-      variants: [{ article: "1606050", volume: "50ml" }]
+      variants: [
+        { volume: "70ml" },
+        { volume: "250ml" }
+      ]
     },
     {
       id: "moisturizing-cream-oil-free",
@@ -76,7 +88,10 @@ const DermoControl = () => {
         : "Безмасляный увлажняющий крем для жирной кожи. Увлажняет без жирности и оставляет матовый финиш.",
       image: "/Renew/29.png",
       hoverImage: "/Renew/29.1.jpeg",
-      variants: [{ article: "1607050", volume: "50ml" }]
+      variants: [
+        { volume: "70ml" },
+        { volume: "250ml" }
+      ]
     },
     {
       id: "phyto-complex",
@@ -85,7 +100,7 @@ const DermoControl = () => {
         ? "Pflanzliches Konzentrat mit Teebaumöl und Salbei. Beruhigt Entzündungen, klärt Unreinheiten und reguliert die Talgproduktion."
         : "Растительный концентрат с маслом чайного дерева и шалфеем. Успокаивает воспаления, очищает несовершенства и регулирует выработку себума.",
       image: "/Renew/30.jpeg",
-      variants: [{ article: "1608030", volume: "30ml" }]
+      variants: [{ volume: "30ml" }]
     },
     {
       id: "drying-treatment",
@@ -94,7 +109,7 @@ const DermoControl = () => {
         ? "Lokale SOS-Behandlung zum Austrocknen von Unreinheiten. Punktgenau auf Pickel auftragen für schnelle Reduzierung von Rötungen und Schwellungen."
         : "Локальное SOS-средство для подсушивания воспалений. Точечно наносить на прыщи для быстрого уменьшения покраснений и отечности.",
       image: "/Renew/31.jpeg",
-      variants: [{ article: "1609030", volume: "30ml" }]
+      variants: [{ volume: "30ml" }]
     }
   ];
 
@@ -144,9 +159,9 @@ const DermoControl = () => {
                   {product.description}
                 </p>
                 <div className="space-y-1">
-                  {product.variants.map((variant) => (
-                    <p key={variant.article} className="text-sm text-brand-coffee/60">
-                      Art. {variant.article} • {variant.volume}
+                  {product.variants.map((variant, idx) => (
+                    <p key={idx} className="text-sm text-brand-coffee/60">
+                      {variant.volume}
                     </p>
                   ))}
                 </div>

@@ -1,9 +1,10 @@
 'use client'
 
 import { ServicePageLayout } from '@/components/ServicePageLayout';
-import { Shield } from 'lucide-react';
+import { Shield, Droplet, Sun, Zap } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Image from 'next/image';
+import { ServiceCard } from '@/components/ServiceCard';
 
 const HautveraenderungenEntfernen = () => {
   const { language } = useLanguage();
@@ -41,6 +42,38 @@ const HautveraenderungenEntfernen = () => {
         </div>
       </div>
     </section>
+  );
+
+  // Recommended facial care services
+  const RecommendedServices = () => (
+    <div className="mt-12">
+      <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-6 text-center">
+        {isGerman ? 'Hautpflege nach der Behandlung' : 'Уход за кожей после процедуры'}
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <ServiceCard
+          title={isGerman ? 'Gesichtsreinigung' : 'Чистка лица'}
+          description={isGerman ? 'Tiefenreinigung für reine Haut' : 'Глубокое очищение для чистой кожи'}
+          icon={Droplet}
+          href="/services/gesichtsreinigung"
+          image="/51.jpg"
+        />
+        <ServiceCard
+          title={isGerman ? 'Lichttherapie' : 'Светотерапия'}
+          description={isGerman ? 'LED-Licht für Regeneration' : 'LED-свет для регенерации'}
+          icon={Sun}
+          href="/services/apparative-anti-aging/lichttherapie"
+          image="/124.jpeg"
+        />
+        <ServiceCard
+          title={isGerman ? 'Phonophorese' : 'Фонофорез'}
+          description={isGerman ? 'Tiefenwirksame Hautpflege' : 'Глубокий уход за кожей'}
+          icon={Zap}
+          href="/services/phonophorese"
+          image="/128.jpeg"
+        />
+      </div>
+    </div>
   );
 
   return (
@@ -114,7 +147,12 @@ const HautveraenderungenEntfernen = () => {
           description: 'Инструкции по уходу и при необходимости контрольный визит.'
         }
       ]}
-      additionalSections={beforeAfterSection}
+      additionalSections={
+        <>
+          {beforeAfterSection}
+          <RecommendedServices />
+        </>
+      }
       priceSection="skin-changes"
       contraindications={isGerman ? [
         'Schwangerschaft (nur nach Rücksprache)',

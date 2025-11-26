@@ -17,7 +17,7 @@ const SunProtection = () => {
         ? "Getönter Sonnenschutz mit SPF 30. Vereinheitlicht den Teint, schützt vor UVA/UVB-Strahlung und verleiht einen natürlichen, gepflegten Look. Ideal als Make-up-Basis."
         : "Тонированный солнцезащитный крем с SPF 30. Выравнивает тон кожи, защищает от UVA/UVB-излучения и придает естественный ухоженный вид. Идеально как основа под макияж.",
       image: "/Renew/54.jpeg",
-      variants: [{ article: "2101080", volume: "80ml" }]
+      variants: [{ volume: "80ml" }]
     },
     {
       id: "sunscreen-spf50",
@@ -26,7 +26,7 @@ const SunProtection = () => {
         ? "Maximaler Sonnenschutz mit SPF 50 für empfindliche Haut und intensive Sonneneinstrahlung. Leichte Textur, wasserfest und nicht komedogen. Schützt vor Photoaging."
         : "Максимальная защита от солнца с SPF 50 для чувствительной кожи и интенсивного солнечного излучения. Легкая текстура, водостойкий и некомедогенный. Защищает от фотостарения.",
       image: "/Renew/55.jpeg",
-      variants: [{ article: "2102080", volume: "80ml" }]
+      variants: [{ volume: "80ml" }]
     },
     {
       id: "sunscreen-spf30",
@@ -35,7 +35,7 @@ const SunProtection = () => {
         ? "Leichter täglicher Sonnenschutz mit SPF 30. Zieht schnell ein, hinterlässt keinen weißen Film und eignet sich für alle Hauttypen. Täglicher Schutz vor UV-Strahlung."
         : "Легкий ежедневный солнцезащитный крем с SPF 30. Быстро впитывается, не оставляет белых следов и подходит для всех типов кожи. Ежедневная защита от УФ-излучения.",
       image: "/Renew/56.jpeg",
-      variants: [{ article: "2103080", volume: "80ml" }]
+      variants: [{ volume: "80ml" }]
     }
   ];
 
@@ -85,9 +85,9 @@ const SunProtection = () => {
                   {product.description}
                 </p>
                 <div className="space-y-1">
-                  {product.variants.map((variant) => (
-                    <p key={variant.article} className="text-sm text-brand-coffee/60">
-                      Art. {variant.article} • {variant.volume}
+                  {product.variants.map((variant, idx) => (
+                    <p key={idx} className="text-sm text-brand-coffee/60">
+                      {variant.volume}
                     </p>
                   ))}
                 </div>

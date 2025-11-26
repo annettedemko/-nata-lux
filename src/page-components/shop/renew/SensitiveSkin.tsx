@@ -18,7 +18,7 @@ const SensitiveSkin = () => {
         : "Концентрат с витамином К и арникой. Укрепляет стенки капилляров, уменьшает покраснения и купероз. Заметно улучшает вид расширенных сосудов.",
       image: "/Renew/57.png",
       hoverImage: "/Renew/57.1.jpeg",
-      variants: [{ article: "2201030", volume: "30ml" }]
+      variants: [{ volume: "30ml" }]
     },
     {
       id: "redness-gentle-peel",
@@ -27,7 +27,7 @@ const SensitiveSkin = () => {
         ? "Extra sanftes Peeling speziell für empfindliche Haut mit Rötungen. Mit beruhigenden Wirkstoffen wie Bisabolol und Allantoin. Erneuert die Haut ohne Irritation."
         : "Экстра мягкий пилинг специально для чувствительной кожи с покраснениями. С успокаивающими компонентами: бисабололом и аллантоином. Обновляет кожу без раздражения.",
       image: "/Renew/58.jpg",
-      variants: [{ article: "2202070", volume: "70ml" }]
+      variants: [{ volume: "50ml" }]
     },
     {
       id: "redness-balm",
@@ -38,7 +38,7 @@ const SensitiveSkin = () => {
       image: "/Renew/59.jpg",
       hoverImage: "/Renew/59.png",
       hoverFitContain: true,
-      variants: [{ article: "2203050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }]
     },
     {
       id: "redness-mask",
@@ -48,7 +48,7 @@ const SensitiveSkin = () => {
         : "Охлаждающая маска с алоэ и ромашкой. Мгновенное успокоение при покраснениях, раздражениях и солнечных ожогах. Увлажняет и снимает чувство стянутости.",
       image: "/Renew/60.png",
       hoverImage: "/Renew/60.1.jpeg",
-      variants: [{ article: "2204070", volume: "70ml" }]
+      variants: [{ volume: "70ml" }, { volume: "250ml" }]
     }
   ];
 
@@ -100,9 +100,9 @@ const SensitiveSkin = () => {
                   {product.description}
                 </p>
                 <div className="space-y-1">
-                  {product.variants.map((variant) => (
-                    <p key={variant.article} className="text-sm text-brand-coffee/60">
-                      Art. {variant.article} • {variant.volume}
+                  {product.variants.map((variant, idx) => (
+                    <p key={idx} className="text-sm text-brand-coffee/60">
+                      {variant.volume}
                     </p>
                   ))}
                 </div>

@@ -18,7 +18,7 @@ const AntiAging = () => {
         ? "Reichhaltiges Massageserum mit Vitaminen A, C, E. Nährt die Haut während der Massage und fördert die Durchblutung. Ideal für Anti-Aging Gesichtsmassagen."
         : "Богатая массажная сыворотка с витаминами A, C, E. Питает кожу во время массажа и улучшает кровообращение. Идеально для антивозрастного массажа лица.",
       image: "/Renew/5.jpeg",
-      variants: [{ article: "1301250", volume: "250ml" }]
+      variants: [{ volume: "250ml" }]
     },
     {
       id: "multivitamin-serum",
@@ -28,7 +28,7 @@ const AntiAging = () => {
         ? "Konzentriertes Anti-Aging Serum mit Multivitaminkomplex. Strafft die Haut, reduziert Falten und verbessert die Hautelastizität. Für reife Haut 50+."
         : "Концентрированная антивозрастная сыворотка с мультивитаминным комплексом. Подтягивает кожу, уменьшает морщины и улучшает эластичность. Для зрелой кожи 50+.",
       image: "/Renew/6.png",
-      variants: [{ article: "1302030", volume: "30ml" }]
+      variants: [{ volume: "30ml" }]
     },
     {
       id: "eye-contour-cream-golden",
@@ -39,7 +39,7 @@ const AntiAging = () => {
         : "Специальный уход за глазами с пептидами и гиалуроновой кислотой. Уменьшает отечность, темные круги и гусиные лапки. Подтягивает нежную кожу вокруг глаз.",
       image: "/Renew/7.png",
       hoverImage: "/Renew/7.1.jpeg",
-      variants: [{ article: "1303030", volume: "30ml" }]
+      variants: [{ volume: "30ml" }]
     },
     {
       id: "night-active-cream",
@@ -50,7 +50,7 @@ const AntiAging = () => {
         : "Интенсивный ночной крем с ретинолом и коллагеном. Восстанавливает кожу во время сна, разглаживает морщины и улучшает текстуру кожи.",
       image: "/Renew/8.png",
       hoverImage: "/Renew/8.1.jpeg",
-      variants: [{ article: "1304050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }]
     },
     {
       id: "lifting-moisturizing-cream",
@@ -61,7 +61,7 @@ const AntiAging = () => {
         : "Дневной крем с мгновенным лифтинг-эффектом. Увлажняет, подтягивает контуры лица и защищает от воздействия окружающей среды.",
       image: "/Renew/9.png",
       hoverImage: "/Renew/9.1.jpeg",
-      variants: [{ article: "1305050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }]
     },
     // Anti Age Line
     {
@@ -73,7 +73,7 @@ const AntiAging = () => {
         : "Укрепляющая маска с коллагеном и эластином. Мгновенный лифтинг-эффект и интенсивное увлажнение. Идеально перед особыми мероприятиями.",
       image: "/Renew/10.png",
       hoverImage: "/Renew/10.1.jpeg",
-      variants: [{ article: "1101250", volume: "250ml" }, { article: "1101070", volume: "70ml" }]
+      variants: [{ volume: "250ml" }, { volume: "70ml" }]
     },
     {
       id: "intense-skin-revitalizer",
@@ -83,7 +83,7 @@ const AntiAging = () => {
         ? "Intensivserum mit Stammzellen-Extrakt. Stimuliert die Zellerneuerung und verjüngt die Haut von innen. Sichtbare Ergebnisse nach 2 Wochen."
         : "Интенсивная сыворотка с экстрактом стволовых клеток. Стимулирует обновление клеток и омолаживает кожу изнутри. Видимые результаты через 2 недели.",
       image: "/Renew/11.png",
-      variants: [{ article: "1102030", volume: "30ml" }]
+      variants: [{ volume: "30ml" }]
     },
     {
       id: "restoring-eye-cream",
@@ -94,7 +94,7 @@ const AntiAging = () => {
         : "Восстанавливающий крем для глаз с пептидами. Разглаживает морщинки, укрепляет нежную кожу вокруг глаз и уменьшает признаки усталости.",
       image: "/Renew/12.png",
       hoverImage: "/Renew/12.1.jpeg",
-      variants: [{ article: "1103030", volume: "30ml" }]
+      variants: [{ volume: "30ml" }]
     },
     {
       id: "aqua-vital-cream",
@@ -105,7 +105,7 @@ const AntiAging = () => {
         : "Ревитализирующий крем с гиалуроновой кислотой. Увлажняет все слои кожи, заполняет морщины и придает коже новую жизненную силу.",
       image: "/Renew/13.png",
       hoverImage: "/Renew/13.1.jpeg",
-      variants: [{ article: "1104050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }]
     },
     {
       id: "energy-refill-cream",
@@ -116,7 +116,7 @@ const AntiAging = () => {
         : "Энергетический крем с коэнзимом Q10. Оживляет уставшую кожу, защищает от свободных радикалов и придает новую энергию и сияние.",
       image: "/Renew/14.png",
       hoverImage: "/Renew/14.1.jpeg",
-      variants: [{ article: "1105050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }]
     },
     // Retinol Line
     {
@@ -128,7 +128,7 @@ const AntiAging = () => {
         : "Высокодозированная сыворотка с ретинолом. Ускоряет обновление клеток, разглаживает морщины и сужает поры. Наносить вечером на очищенную кожу.",
       image: "/Renew/15.jpeg",
       hoverImage: "/Renew/15.1.jpeg",
-      variants: [{ article: "1401030", volume: "30ml" }]
+      variants: [{ volume: "30ml" }]
     },
     {
       id: "rejuvenating-cream-retinol",
@@ -139,7 +139,7 @@ const AntiAging = () => {
         : "Ночной крем с ретинолом. Осветляет пигментные пятна, улучшает текстуру кожи и уменьшает мелкие морщинки. С витамином Е для дополнительного ухода.",
       image: "/Renew/16.jpeg",
       hoverImage: "/Renew/16.1.jpeg",
-      variants: [{ article: "1402050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }]
     },
     // Biorepair Pro Line
     {
@@ -150,7 +150,7 @@ const AntiAging = () => {
         ? "Anti-Akne Konzentrat mit Azelainsäure und Salicylsäure. Reguliert Talgproduktion, bekämpft Entzündungen und verhindert neue Unreinheiten."
         : "Концентрат против акне с азелаиновой и салициловой кислотами. Регулирует выработку кожного сала, борется с воспалениями и предотвращает новые высыпания.",
       image: "/Renew/17.png",
-      variants: [{ article: "1501010", volume: "10ml" }]
+      variants: [{ volume: "10ml" }]
     },
     {
       id: "biolumine",
@@ -160,7 +160,7 @@ const AntiAging = () => {
         ? "Aufhellendes Konzentrat mit Tranexamsäure. Hemmt Melaninbildung, reduziert Pigmentflecken und sorgt für strahlenden, ebenmäßigen Teint."
         : "Осветляющий концентрат с транексамовой кислотой. Подавляет образование меланина, уменьшает пигментные пятна и придает сияющий ровный тон.",
       image: "/Renew/18.png",
-      variants: [{ article: "1502010", volume: "10ml" }]
+      variants: [{ volume: "10ml" }]
     },
     {
       id: "bioreparant",
@@ -170,7 +170,7 @@ const AntiAging = () => {
         ? "Regenerierendes Konzentrat mit Wachstumsfaktoren. Beschleunigt Wundheilung, fördert Hauterneuerung und repariert geschädigte Haut."
         : "Регенерирующий концентрат с факторами роста. Ускоряет заживление, способствует обновлению кожи и восстанавливает поврежденную кожу.",
       image: "/Renew/19.jpeg",
-      variants: [{ article: "1503010", volume: "10ml" }]
+      variants: [{ volume: "10ml" }]
     },
     {
       id: "botopeptide",
@@ -180,7 +180,7 @@ const AntiAging = () => {
         ? "Peptid-Konzentrat mit Botox-ähnlicher Wirkung. Entspannt mimische Falten ohne Injektion, glättet Stirnfalten und Krähenfüße."
         : "Пептидный концентрат с ботокс-подобным эффектом. Расслабляет мимические морщины без инъекций, разглаживает морщины на лбу и гусиные лапки.",
       image: "/Renew/20.png",
-      variants: [{ article: "1504010", volume: "10ml" }]
+      variants: [{ volume: "10ml" }]
     },
     {
       id: "dermacell",
@@ -190,7 +190,7 @@ const AntiAging = () => {
         ? "Stammzellen-Konzentrat. Aktiviert hauteigene Regenerationsprozesse, verjüngt tiefgreifend und verbessert die Hautdichte."
         : "Концентрат стволовых клеток. Активирует собственные регенерационные процессы кожи, глубоко омолаживает и улучшает плотность кожи.",
       image: "/Renew/21.png",
-      variants: [{ article: "1505010", volume: "10ml" }]
+      variants: [{ volume: "10ml" }]
     },
     {
       id: "eyessence",
@@ -200,7 +200,7 @@ const AntiAging = () => {
         ? "Spezielles Augenkonzentrat mit Peptiden und Koffein. Reduziert Tränensäcke, dunkle Ringe und glättet feine Fältchen um die Augen."
         : "Специальный концентрат для глаз с пептидами и кофеином. Уменьшает мешки под глазами, темные круги и разглаживает мелкие морщинки вокруг глаз.",
       image: "/Renew/22.png",
-      variants: [{ article: "1507010", volume: "10ml" }]
+      variants: [{ volume: "10ml" }]
     }
   ];
 
@@ -266,9 +266,9 @@ const AntiAging = () => {
                     {product.description}
                   </p>
                   <div className="space-y-1">
-                    {product.variants.map((variant) => (
-                      <p key={variant.article} className="text-sm text-brand-coffee/60">
-                        Art. {variant.article} • {variant.volume}
+                    {product.variants.map((variant, idx) => (
+                      <p key={idx} className="text-sm text-brand-coffee/60">
+                        {variant.volume}
                       </p>
                     ))}
                   </div>

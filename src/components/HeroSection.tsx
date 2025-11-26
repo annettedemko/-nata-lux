@@ -12,11 +12,11 @@ export const HeroSection = () => {
 
   return (
     <section
-      className="relative min-h-screen h-screen flex items-center justify-center overflow-hidden z-10"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden z-10"
     >
 
       {/* Content - смещён вправо на 15% на десктопе, центрирован на мобильных */}
-      <div className="container mx-auto px-4 md:px-6 relative z-20 py-12 md:py-16 lg:py-20">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 relative z-20 py-8 sm:py-12 md:py-16 lg:py-20">
         <div className="max-w-3xl text-center md:text-right md:-translate-x-[15%]" style={{ marginLeft: 'auto', marginRight: '0' }}>
           {/* Logo - эффект возрождения с золотой пылью */}
           <motion.div
@@ -38,7 +38,7 @@ export const HeroSection = () => {
                 delay: 0.4,
                 ease: [0.16, 1, 0.3, 1]
               }}
-              className="text-4xl md:text-5xl lg:text-7xl font-heading font-semibold text-brand-espresso mb-6 leading-tight px-2 md:px-0"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-semibold text-brand-espresso mb-6 leading-tight px-2 md:px-0"
               style={{
                 textShadow: '0 2px 10px rgba(255,255,255,0.9), 0 4px 20px rgba(255,255,255,0.8), 0 1px 3px rgba(0,0,0,0.15)',
               }}
@@ -55,7 +55,7 @@ export const HeroSection = () => {
                 delay: 0.6,
                 ease: [0.16, 1, 0.3, 1]
               }}
-              className="text-xl md:text-2xl lg:text-3xl font-heading mb-6 leading-relaxed font-bold px-2 md:px-0"
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading mb-6 leading-relaxed font-bold px-2 md:px-0"
               style={{
                 color: '#8B6F3D',
                 textShadow: '0 2px 8px rgba(255,255,255,0.95), 0 4px 16px rgba(255,255,255,0.8), 0 0 30px rgba(255,255,255,0.6), 0 1px 3px rgba(0,0,0,0.2)',
@@ -74,7 +74,7 @@ export const HeroSection = () => {
                 delay: 0.8,
                 ease: [0.16, 1, 0.3, 1]
               }}
-              className="text-lg md:text-xl mb-12 leading-relaxed max-w-3xl mx-auto font-medium"
+              className="text-base sm:text-lg md:text-xl mb-8 sm:mb-10 md:mb-12 leading-relaxed max-w-3xl mx-auto font-medium"
               style={{
                 color: '#2B1F18',
                 textShadow: '0 2px 10px rgba(255,255,255,0.9), 0 4px 20px rgba(255,255,255,0.7)',
@@ -103,7 +103,7 @@ export const HeroSection = () => {
               <Button
                 size="lg"
                 asChild
-                className="text-lg px-10 py-7 relative overflow-hidden"
+                className="text-base sm:text-lg px-6 py-4 sm:px-8 sm:py-5 md:px-10 md:py-7 relative overflow-hidden min-h-11"
                 style={{
                   background: 'linear-gradient(90deg, #BFA77A, #D7C5A0)',
                   backgroundSize: '200% 100%',
@@ -143,7 +143,7 @@ export const HeroSection = () => {
                 size="lg"
                 variant="outline"
                 asChild
-                className="text-lg px-10 py-7"
+                className="text-base sm:text-lg px-6 py-4 sm:px-8 sm:py-5 md:px-10 md:py-7 min-h-11"
                 style={{
                   backgroundColor: 'rgba(255, 255, 255, 0.7)',
                   backdropFilter: 'blur(10px)',
@@ -185,7 +185,7 @@ export const HeroSection = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="text-lg px-10 py-7"
+                  className="text-base sm:text-lg px-6 py-4 sm:px-8 sm:py-5 md:px-10 md:py-7 min-h-11"
                   style={{
                     backgroundColor: 'rgba(255, 255, 255, 0.7)',
                     backdropFilter: 'blur(10px)',

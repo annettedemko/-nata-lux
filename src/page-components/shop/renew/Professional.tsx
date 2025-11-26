@@ -18,7 +18,7 @@ const Professional = () => {
         : "Освежающий увлажняющий лосьон",
       image: "/Renew/76.png",
       hoverImage: "/Renew/76.1.png",
-      variants: [{ article: "2501200", volume: "200ml" }],
+      variants: [{ volume: "250ml" }, { volume: "500ml" }],
       fitContain: true
     },
     {
@@ -29,7 +29,7 @@ const Professional = () => {
         : "Профессиональное очищающее средство для всех типов кожи",
       image: "/Renew/77.webp",
       hoverImage: "/Renew/77.1.png",
-      variants: [{ article: "2502200", volume: "200ml" }]
+      variants: [{ volume: "250ml" }, { volume: "500ml" }]
     },
     {
       id: "azelaic-acid-cream-20",
@@ -38,7 +38,7 @@ const Professional = () => {
         ? "Hochkonzentrierte Azelainsäure-Creme für professionelle Anwendung"
         : "Высококонцентрированный крем с азелаиновой кислотой для профессионального применения",
       image: "/Renew/78.jpeg",
-      variants: [{ article: "2503050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }]
     },
     {
       id: "spot-local-gel",
@@ -47,7 +47,7 @@ const Professional = () => {
         ? "Lokale Behandlung für punktuelle Anwendung"
         : "Локальное средство для точечного применения",
       image: "/Renew/79.jpeg",
-      variants: [{ article: "2504030", volume: "30ml" }],
+      variants: [{ volume: "30ml" }],
       fitContain: true
     },
     {
@@ -58,7 +58,7 @@ const Professional = () => {
         : "Восстанавливающий крем для поврежденной кожи",
       image: "/Renew/80.png",
       hoverImage: "/Renew/80.1.png",
-      variants: [{ article: "2505050", volume: "50ml" }],
+      variants: [{ volume: "100ml" }, { volume: "250ml" }],
       fitContain: true
     },
     {
@@ -68,7 +68,7 @@ const Professional = () => {
         ? "Mattierendes Fluid für ölige Hautpartien"
         : "Матирующий флюид для жирных участков кожи",
       image: "/Renew/81.jpeg",
-      variants: [{ article: "2506050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }]
     },
     {
       id: "aloevend-gel",
@@ -78,7 +78,7 @@ const Professional = () => {
         : "Успокаивающий гель с алоэ вера для раздраженной кожи",
       image: "/Renew/82.webp",
       hoverImage: "/Renew/82.1.png",
-      variants: [{ article: "2507070", volume: "70ml" }],
+      variants: [{ volume: "100ml" }, { volume: "250ml" }],
       fitContain: true
     },
     {
@@ -89,7 +89,7 @@ const Professional = () => {
         : "Сыворотка с гиалуроновой кислотой для интенсивного увлажнения",
       image: "/Renew/83.webp",
       hoverImage: "/Renew/83.1.jpeg",
-      variants: [{ article: "2508030", volume: "30ml" }]
+      variants: [{ volume: "30ml" }, { volume: "100ml" }]
     }
   ];
 
@@ -140,9 +140,9 @@ const Professional = () => {
                   {product.description}
                 </p>
                 <div className="space-y-1">
-                  {product.variants.map((variant) => (
-                    <p key={variant.article} className="text-sm text-brand-coffee/60">
-                      Art. {variant.article} • {variant.volume}
+                  {product.variants.map((variant, idx) => (
+                    <p key={idx} className="text-sm text-brand-coffee/60">
+                      {variant.volume}
                     </p>
                   ))}
                 </div>

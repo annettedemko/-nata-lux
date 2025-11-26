@@ -115,7 +115,7 @@ export const ServicePageLayout = ({
             </motion.div>
 
             {/* Title with gradient underline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-espresso mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-espresso mb-6 leading-tight">
               {title}
             </h1>
 
@@ -154,7 +154,7 @@ export const ServicePageLayout = ({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative glass rounded-3xl p-8 md:p-10 mb-12 border border-brand-gold/10 shadow-xl shadow-brand-gold/5"
+          className="relative glass rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 mb-12 border border-brand-gold/10 shadow-xl shadow-brand-gold/5"
         >
           <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <div className="px-4 py-1 bg-brand-cream rounded-full border border-brand-gold/20 text-xs text-brand-gold tracking-widest uppercase">
@@ -177,12 +177,12 @@ export const ServicePageLayout = ({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative glass rounded-3xl p-8 md:p-10 mb-12 border border-brand-gold/10 shadow-xl shadow-brand-gold/5"
+          className="relative glass rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 mb-12 border border-brand-gold/10 shadow-xl shadow-brand-gold/5"
         >
           <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-8">
             {isGerman ? 'Ihre Vorteile' : 'Ваши преимущества'}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
@@ -208,12 +208,12 @@ export const ServicePageLayout = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative glass rounded-3xl p-8 md:p-10 mb-12 border border-brand-gold/10 shadow-xl shadow-brand-gold/5"
+            className="relative glass rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 mb-12 border border-brand-gold/10 shadow-xl shadow-brand-gold/5"
           >
             <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-8">
               {isGerman ? 'Wie läuft die Behandlung ab?' : 'Как проходит процедура?'}
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               {steps.map((step, index) => (
                 <motion.div
                   key={index}
@@ -265,7 +265,7 @@ export const ServicePageLayout = ({
               <Link to={`/prices#${priceSection}`}>
                 <Button
                   size="lg"
-                  className="bg-brand-gold hover:bg-brand-gold/90 text-white font-medium rounded-2xl px-8 py-6 text-lg shadow-lg shadow-brand-gold/30 hover:shadow-brand-gold/50 transition-all duration-300"
+                  className="bg-brand-gold hover:bg-brand-gold/90 text-white font-medium rounded-2xl px-6 py-4 md:px-8 md:py-6 text-base md:text-lg min-h-11 shadow-lg shadow-brand-gold/30 hover:shadow-brand-gold/50 transition-all duration-300"
                 >
                   {isGerman ? 'Zu den Preisen' : 'К ценам'}
                 </Button>
@@ -281,7 +281,7 @@ export const ServicePageLayout = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative glass rounded-3xl p-8 md:p-10 mb-12 border border-brand-gold/10 shadow-xl shadow-brand-gold/5"
+            className="relative glass rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 mb-12 border border-brand-gold/10 shadow-xl shadow-brand-gold/5"
           >
             <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-4">
               {isGerman ? 'Kontraindikationen' : 'Противопоказания'}
@@ -337,7 +337,7 @@ export const ServicePageLayout = ({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative rounded-3xl p-10 md:p-14 text-center overflow-hidden"
+          className="relative rounded-3xl p-6 sm:p-8 md:p-10 lg:p-14 text-center overflow-hidden"
         >
           {/* Premium gradient background */}
           <div className="absolute inset-0 bg-gradient-to-br from-brand-gold via-brand-gold-light to-brand-gold" />
@@ -356,10 +356,10 @@ export const ServicePageLayout = ({
             <p className="text-white/90 mb-8 text-lg max-w-xl mx-auto">
               {ctaDescription}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-white hover:bg-brand-cream text-brand-espresso font-semibold rounded-2xl px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+                className="bg-white hover:bg-brand-cream text-brand-espresso font-semibold rounded-2xl px-6 py-4 md:px-8 md:py-6 text-base md:text-lg min-h-11 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
                 asChild
               >
                 <a href="https://wa.me/4917677267269" target="_blank" rel="noopener noreferrer">
@@ -370,7 +370,7 @@ export const ServicePageLayout = ({
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white/10 font-semibold rounded-2xl px-8 py-6 text-lg transition-all duration-300 hover:-translate-y-0.5"
+                  className="border-2 border-white text-white hover:bg-white/10 font-semibold rounded-2xl px-6 py-4 md:px-8 md:py-6 text-base md:text-lg min-h-11 transition-all duration-300 hover:-translate-y-0.5"
                 >
                   {isGerman ? 'Beratung anfragen' : 'Запросить консультацию'}
                 </Button>

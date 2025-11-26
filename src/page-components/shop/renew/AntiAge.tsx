@@ -20,7 +20,7 @@ const AntiAge = () => {
         : "Укрепляющая маска с коллагеном и эластином. Мгновенный лифтинг-эффект и интенсивное увлажнение. Идеально перед особыми мероприятиями.",
       image: "/Renew/10.png",
       hoverImage: "/Renew/10.1.jpeg",
-      variants: [{ article: "1101250", volume: "250ml" }, { article: "1101070", volume: "70ml" }]
+      variants: [{ volume: "50ml" }, { volume: "250ml" }]
     },
     {
       id: "intense-skin-revitalizer",
@@ -30,7 +30,7 @@ const AntiAge = () => {
         ? "Intensivserum mit Stammzellen-Extrakt. Stimuliert die Zellerneuerung und verjüngt die Haut von innen. Sichtbare Ergebnisse nach 2 Wochen."
         : "Интенсивная сыворотка с экстрактом стволовых клеток. Стимулирует обновление клеток и омолаживает кожу изнутри. Видимые результаты через 2 недели.",
       image: "/Renew/11.png",
-      variants: [{ article: "1102030", volume: "30ml" }]
+      variants: [{ volume: "30ml" }]
     },
     {
       id: "restoring-eye-cream",
@@ -41,7 +41,7 @@ const AntiAge = () => {
         : "Восстанавливающий крем для глаз с пептидами. Разглаживает морщинки, укрепляет нежную кожу вокруг глаз и уменьшает признаки усталости.",
       image: "/Renew/12.png",
       hoverImage: "/Renew/12.1.jpeg",
-      variants: [{ article: "1103030", volume: "30ml" }]
+      variants: [{ volume: "30ml" }, { volume: "250ml" }]
     },
     {
       id: "aqua-vital-cream",
@@ -52,7 +52,7 @@ const AntiAge = () => {
         : "Ревитализирующий крем с гиалуроновой кислотой. Увлажняет все слои кожи, заполняет морщины и придает коже новую жизненную силу.",
       image: "/Renew/13.png",
       hoverImage: "/Renew/13.1.jpeg",
-      variants: [{ article: "1104050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }, { volume: "250ml" }]
     },
     {
       id: "energy-refill-cream",
@@ -63,7 +63,7 @@ const AntiAge = () => {
         : "Энергетический крем с коэнзимом Q10. Оживляет уставшую кожу, защищает от свободных радикалов и придает новую энергию и сияние.",
       image: "/Renew/14.png",
       hoverImage: "/Renew/14.1.jpeg",
-      variants: [{ article: "1105050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }, { volume: "250ml" }]
     },
   ];
 
@@ -116,9 +116,9 @@ const AntiAge = () => {
                   {product.description}
                 </p>
                 <div className="space-y-1">
-                  {product.variants.map((variant) => (
-                    <p key={variant.article} className="text-sm text-brand-coffee/60">
-                      Art. {variant.article} • {variant.volume}
+                  {product.variants.map((variant, idx) => (
+                    <p key={idx} className="text-sm text-brand-coffee/60">
+                      {variant.volume}
                     </p>
                   ))}
                 </div>

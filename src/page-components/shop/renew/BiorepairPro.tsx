@@ -17,7 +17,7 @@ const BiorepairPro = () => {
         ? "Anti-Akne Konzentrat mit Azelainsäure und Salicylsäure. Reguliert Talgproduktion, bekämpft Entzündungen und verhindert neue Unreinheiten."
         : "Концентрат против акне с азелаиновой и салициловой кислотами. Регулирует выработку кожного сала, борется с воспалениями и предотвращает новые высыпания.",
       image: "/Renew/17.png",
-      variants: [{ article: "1501010", volume: "10ml" }]
+      variants: [{ volume: "10ml" }]
     },
     {
       id: "biolumine",
@@ -26,7 +26,7 @@ const BiorepairPro = () => {
         ? "Aufhellendes Konzentrat mit Tranexamsäure. Hemmt Melaninbildung, reduziert Pigmentflecken und sorgt für strahlenden, ebenmäßigen Teint."
         : "Осветляющий концентрат с транексамовой кислотой. Подавляет образование меланина, уменьшает пигментные пятна и придает сияющий ровный тон.",
       image: "/Renew/18.png",
-      variants: [{ article: "1502010", volume: "10ml" }]
+      variants: [{ volume: "10ml" }]
     },
     {
       id: "bioreparant",
@@ -35,7 +35,7 @@ const BiorepairPro = () => {
         ? "Regenerierendes Konzentrat mit Wachstumsfaktoren. Beschleunigt Wundheilung, fördert Hauterneuerung und repariert geschädigte Haut."
         : "Регенерирующий концентрат с факторами роста. Ускоряет заживление, способствует обновлению кожи и восстанавливает поврежденную кожу.",
       image: "/Renew/19.jpeg",
-      variants: [{ article: "1503010", volume: "10ml" }]
+      variants: [{ volume: "10ml" }]
     },
     {
       id: "botopeptide",
@@ -44,7 +44,7 @@ const BiorepairPro = () => {
         ? "Peptid-Konzentrat mit Botox-ähnlicher Wirkung. Entspannt mimische Falten ohne Injektion, glättet Stirnfalten und Krähenfüße."
         : "Пептидный концентрат с ботокс-подобным эффектом. Расслабляет мимические морщины без инъекций, разглаживает морщины на лбу и гусиные лапки.",
       image: "/Renew/20.png",
-      variants: [{ article: "1504010", volume: "10ml" }]
+      variants: [{ volume: "10ml" }]
     },
     {
       id: "dermacell",
@@ -53,7 +53,7 @@ const BiorepairPro = () => {
         ? "Stammzellen-Konzentrat. Aktiviert hauteigene Regenerationsprozesse, verjüngt tiefgreifend und verbessert die Hautdichte."
         : "Концентрат стволовых клеток. Активирует собственные регенерационные процессы кожи, глубоко омолаживает и улучшает плотность кожи.",
       image: "/Renew/21.png",
-      variants: [{ article: "1505010", volume: "10ml" }]
+      variants: [{ volume: "10ml" }]
     },
     {
       id: "eyessence",
@@ -62,7 +62,7 @@ const BiorepairPro = () => {
         ? "Spezielles Augenkonzentrat mit Peptiden und Koffein. Reduziert Tränensäcke, dunkle Ringe und glättet feine Fältchen um die Augen."
         : "Специальный концентрат для глаз с пептидами и кофеином. Уменьшает мешки под глазами, темные круги и разглаживает мелкие морщинки вокруг глаз.",
       image: "/Renew/22.png",
-      variants: [{ article: "1507010", volume: "10ml" }]
+      variants: [{ volume: "10ml" }]
     }
   ];
 
@@ -111,9 +111,9 @@ const BiorepairPro = () => {
                   {product.description}
                 </p>
                 <div className="space-y-1">
-                  {product.variants.map((variant) => (
-                    <p key={variant.article} className="text-sm text-brand-coffee/60">
-                      Art. {variant.article} • {variant.volume}
+                  {product.variants.map((variant, idx) => (
+                    <p key={idx} className="text-sm text-brand-coffee/60">
+                      {variant.volume}
                     </p>
                   ))}
                 </div>

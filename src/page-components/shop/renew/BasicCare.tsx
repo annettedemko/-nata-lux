@@ -18,7 +18,7 @@ const BasicCare = () => {
         : "Питательный крем с маслом ши и жожоба для интенсивного увлажнения. Идеально для сухой и нормальной кожи. Укрепляет кожный барьер и оставляет кожу мягкой и эластичной.",
       image: "/Renew/49.png",
       hoverImage: "/Renew/49.1.jpeg",
-      variants: [{ article: "2001050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }, { volume: "250ml" }]
     },
     {
       id: "aha-skin-repair",
@@ -27,7 +27,7 @@ const BasicCare = () => {
         ? "Reparierende Pflege mit Fruchtsäuren. Glättet raue Haut, verbessert die Textur und fördert die Zellerneuerung. Für ein ebenmäßiges, strahlendes Hautbild."
         : "Восстанавливающий уход с фруктовыми кислотами. Разглаживает грубую кожу, улучшает текстуру и способствует обновлению клеток. Для ровного сияющего цвета лица.",
       image: "/Renew/50.png",
-      variants: [{ article: "2002050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }]
     },
     {
       id: "neck-decollete-cream",
@@ -37,7 +37,7 @@ const BasicCare = () => {
         : "Специальный уход за шеей и декольте с пептидами и витамином Е. Подтягивает дряблую кожу, уменьшает морщины и улучшает эластичность в этих деликатных зонах.",
       image: "/Renew/51.png",
       hoverImage: "/Renew/51.1.jpeg",
-      variants: [{ article: "2003050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }, { volume: "250ml" }]
     },
     {
       id: "restructuring-cream",
@@ -47,7 +47,7 @@ const BasicCare = () => {
         : "Крем с церамидами для восстановления структуры кожи. Укрепляет кожный барьер, восстанавливает поврежденную кожу и защищает от потери влаги.",
       image: "/Renew/52.jpeg",
       hoverImage: "/Renew/52.1.jpeg",
-      variants: [{ article: "2004050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }, { volume: "250ml" }]
     },
     {
       id: "multifruit-peel-soap",
@@ -57,7 +57,7 @@ const BasicCare = () => {
         : "Пилинг-мыло с мультифруктовыми кислотами для ежедневного мягкого обновления кожи. Очищает, отшелушивает и улучшает кожу при каждом применении без раздражения.",
       image: "/Renew/53.jpeg",
       hoverImage: "/Renew/53.1.jpeg",
-      variants: [{ article: "2005100", volume: "100ml" }]
+      variants: [{ volume: "250ml" }, { volume: "500ml" }]
     }
   ];
 
@@ -107,9 +107,9 @@ const BasicCare = () => {
                   {product.description}
                 </p>
                 <div className="space-y-1">
-                  {product.variants.map((variant) => (
-                    <p key={variant.article} className="text-sm text-brand-coffee/60">
-                      Art. {variant.article} • {variant.volume}
+                  {product.variants.map((variant, idx) => (
+                    <p key={idx} className="text-sm text-brand-coffee/60">
+                      {variant.volume}
                     </p>
                   ))}
                 </div>

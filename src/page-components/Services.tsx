@@ -161,7 +161,7 @@ const Services = () => {
           {/* ДРАМАТИЧНЫЙ HERO - Минималистичный */}
           <div className="pt-24 md:pt-28 lg:pt-32 pb-12 md:pb-16 lg:pb-24 text-center">
             <h1
-              className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-heading font-bold tracking-tighter leading-none mb-4 md:mb-6 px-4"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-heading font-bold tracking-tighter leading-none mb-4 md:mb-6 px-4"
               style={{
                 color: 'hsl(25, 27%, 19%)',
                 letterSpacing: '-0.02em'
@@ -184,7 +184,7 @@ const Services = () => {
                   style={{ boxShadow: '0 0 20px hsla(38, 70%, 70%, 0.5)' }}
                 ></div>
                 <div>
-                  <h2 className="text-3xl md:text-4xl lg:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-brand-espresso tracking-tight mb-0.5 md:mb-1">
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-bold text-brand-espresso tracking-tight mb-0.5 md:mb-1">
                     {t('lashesbrows.title')}
                   </h2>
                   <p className="text-brand-espresso/60 text-sm md:text-base lg:text-lg font-light italic">
@@ -193,7 +193,7 @@ const Services = () => {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 gap-4 md:gap-6 lg:gap-8">
               {lashesBrowsServices.map((service) => (
                 <ServiceCard key={service.title} {...service} />
               ))}
@@ -218,7 +218,7 @@ const Services = () => {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 gap-4 md:gap-6 lg:gap-8">
               {pmuServices.map((service) => (
                 <ServiceCard key={service.title} {...service} />
               ))}
@@ -243,7 +243,7 @@ const Services = () => {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 gap-4 md:gap-6 lg:gap-8">
               {laserServices.map((service) => (
                 <ServiceCard key={service.title} {...service} />
               ))}
@@ -268,7 +268,7 @@ const Services = () => {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 gap-4 md:gap-6 lg:gap-8">
               {antiagingServices.map((service) => (
                 <ServiceCard key={service.title} {...service} />
               ))}

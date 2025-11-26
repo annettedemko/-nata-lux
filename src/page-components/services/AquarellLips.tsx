@@ -1,9 +1,10 @@
 'use client'
 
 import { ServicePageLayout } from '@/components/ServicePageLayout';
-import { Heart } from 'lucide-react';
+import { Heart, Palette, Eye, Sparkles } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { PremiumGallery } from '@/components/PremiumGallery';
+import { ServiceCard } from '@/components/ServiceCard';
 
 const AquarellLips = () => {
   const { language } = useLanguage();
@@ -22,6 +23,38 @@ const AquarellLips = () => {
 
   const photoGallery = (
     <PremiumGallery images={galleryImages} />
+  );
+
+  // Recommended PMU services
+  const RecommendedServices = () => (
+    <div className="mt-12">
+      <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-6 text-center">
+        {isGerman ? 'Weitere PMU Behandlungen' : 'Другие PMU процедуры'}
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <ServiceCard
+          title="Powder Brows"
+          description={isGerman ? 'Pudertechnik für perfekte Augenbrauen' : 'Пудровая техника для идеальных бровей'}
+          icon={Palette}
+          href="/services/powder-brows"
+          image="/147.jpeg"
+        />
+        <ServiceCard
+          title={isGerman ? 'Wimpernkranz' : 'Межресничка'}
+          description={isGerman ? 'Permanent Make-up Wimpernkranz' : 'Перманентный макияж межресничного пространства'}
+          icon={Eye}
+          href="/services/wimpernkranz"
+          image="/56.jpg"
+        />
+        <ServiceCard
+          title={isGerman ? 'Wimpernverlängerung' : 'Наращивание ресниц'}
+          description={isGerman ? 'Klassisch oder Volumentechnik' : 'Классика или объём'}
+          icon={Sparkles}
+          href="/services/wimpernverlaengerung"
+          image="/8.jpeg"
+        />
+      </div>
+    </div>
   );
 
   return (
@@ -95,7 +128,12 @@ const AquarellLips = () => {
           description: 'Через 4-6 недель совершенствуем результат для оптимальной стойкости.'
         }
       ]}
-      additionalSections={photoGallery}
+      additionalSections={
+        <>
+          {photoGallery}
+          <RecommendedServices />
+        </>
+      }
       priceSection="pmu"
       contraindications={isGerman ? [
         'Schwangerschaft und Stillzeit',

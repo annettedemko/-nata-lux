@@ -39,7 +39,7 @@ const About = () => {
             <p className="text-xs md:text-sm uppercase tracking-[0.2em] md:tracking-[0.3em] text-brand-gold mb-4 md:mb-6 font-light">
               {isGerman ? 'Natalia' : 'Наталья'}
             </p>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-light tracking-tight leading-[0.95] md:leading-[0.9] mb-8 md:mb-12 lg:mb-16 text-brand-espresso px-4">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-heading font-light tracking-tight leading-[0.95] md:leading-[0.9] mb-8 md:mb-12 lg:mb-16 text-brand-espresso px-4">
               {isGerman ? 'Über mich' : 'Обо мне'}
             </h1>
           </motion.div>
@@ -55,7 +55,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="space-y-4 md:space-y-6 lg:space-y-8"
           >
-            <div className="relative h-[400px] md:h-[500px] lg:h-[700px] overflow-hidden rounded-lg md:rounded-none">
+            <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] overflow-hidden rounded-lg md:rounded-none">
               <Image
                 src="/5.jpeg"
                 alt="Natalia"
@@ -64,7 +64,7 @@ const About = () => {
                 style={{ objectPosition: 'center' }}
               />
             </div>
-            <div className="relative h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden rounded-lg md:rounded-none">
+            <div className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden rounded-lg md:rounded-none">
               <Image
                 src="/6.jpeg"
                 alt="Natalia"
@@ -210,7 +210,7 @@ const About = () => {
 
             {/* Google Map */}
             <div
-              className="relative h-[300px] md:h-[400px] lg:h-[500px] rounded-2xl md:rounded-3xl overflow-hidden"
+              className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] rounded-2xl md:rounded-3xl overflow-hidden"
               style={{
                 boxShadow: '0 20px 60px rgba(58, 44, 34, 0.15)',
               }}

@@ -18,7 +18,7 @@ const Hydration = () => {
         ? "Reinigungsschaum für jeden Hauttyp mit tiefenwirksamer Feuchtigkeitspflege. Enthält PHA-Säure Gluconolacton für sanfte Hauterneuerung ohne Reizung mit sofortigem Lifting-Effekt nach der Reinigung"
         : "Пенка для очищения кожи любого типа с эффектом глубокого увлажнения. Содержит РНА-кислоту глюконолактон, которая бережно восстанавливает кожу без раздражения, оказывая эффект лифтинга сразу после умывания",
       image: "/Renew/61.jpeg",
-      variants: [{ article: "2301200", volume: "200ml" }]
+      variants: [{ volume: "200ml" }]
     },
     {
       id: "eye-lip-makeup-remover",
@@ -29,7 +29,7 @@ const Hydration = () => {
         : "Специально разработанное средство для снятия макияжа и очищения кожи. Не раздражает чувствительную кожу вокруг глаз и эффективно удаляет косметику, а также загрязнения с поверхности кожи",
       image: "/Renew/62.jpeg",
       hoverImage: "/Renew/62.1.jpeg",
-      variants: [{ article: "2302200", volume: "200ml" }]
+      variants: [{ volume: "200ml" }]
     },
     {
       id: "pha-refining-tonic",
@@ -40,7 +40,7 @@ const Hydration = () => {
         : "Увлажняющий тоник с выраженным антиоксидантным действием для кожи любого типа. Содержит 5% РНА-глюконовой кислоты для обновления кожи, придавая ей сияние и здоровый вид",
       image: "/Renew/63.jpeg",
       hoverImage: "/Renew/63.1.jpeg",
-      variants: [{ article: "2303200", volume: "200ml" }]
+      variants: [{ volume: "200ml" }]
     },
     {
       id: "soft-peeling-gel",
@@ -50,7 +50,7 @@ const Hydration = () => {
         ? "Abrollendes Gel zur sanften Reinigung jeden Hauttyps. Einzigartige Synergie von Hyaluronsäure mit Pflanzenextrakten sättigt die Haut mit Mikroelementen und Vitaminen"
         : "Скатывающийся гель для мягкого очищения кожи любого типа. Уникальная синергия гиалуроновой кислоты с растительными экстрактами насыщает кожу микроэлементами и витаминами",
       image: "/Renew/64.jpeg",
-      variants: [{ article: "2304070", volume: "70ml" }]
+      variants: [{ volume: "70ml" }]
     },
     {
       id: "skin-repair-moisturizing-mask",
@@ -61,7 +61,7 @@ const Hydration = () => {
         : "Приятная гелевая маска с активными компонентами, нормализующими физиологические процессы в эпидермисе, поддерживающими водный баланс и способствующими омоложению кожи",
       image: "/Renew/65.jpeg",
       hoverImage: "/Renew/65.1.jpeg",
-      variants: [{ article: "2305070", volume: "70ml" }]
+      variants: [{ volume: "70ml" }]
     },
     {
       id: "hydro-comfort-glow",
@@ -72,7 +72,7 @@ const Hydration = () => {
         : "Увлажняющий крем мгновенно придает коже сияние и здоровый вид. Поддерживает баланс увлажненности, восстанавливает барьерные свойства эпидермиса, улучшает кровообращение. SPF 25",
       image: "/Renew/66.png",
       hoverImage: "/Renew/66.1.jpeg",
-      variants: [{ article: "2306050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }]
     },
     {
       id: "eye-contour-gel",
@@ -83,7 +83,7 @@ const Hydration = () => {
         : "Гель легкой текстуры и мощного действия разглаживает и осветляет кожу вокруг глаз. Специальный комплекс пептидов BIO-Placenta регулирует рост и деление клеток эпидермиса",
       image: "/Renew/67.jpeg",
       hoverImage: "/Renew/67.1.jpeg",
-      variants: [{ article: "2307030", volume: "30ml" }]
+      variants: [{ volume: "30ml" }]
     },
     {
       id: "antistress-nourishing-cream",
@@ -94,7 +94,7 @@ const Hydration = () => {
         : "Нежный крем с питательными свойствами формирует защитную систему для сопротивления внешней агрессии. Масло бабассу смягчает раздраженную и чувствительную кожу, AQUAXYL увлажняет",
       image: "/Renew/68.jpeg",
       hoverImage: "/Renew/68.1.jpeg",
-      variants: [{ article: "2308050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }]
     },
     // Vitamin C Line
     {
@@ -105,7 +105,7 @@ const Hydration = () => {
         ? "Zarter Schaum ideal zur Reinigung jeden Hauttyps. Reinigt sanft und effektiv, entfernt Make-up ohne die Haut auszutrocknen oder zu reizen. Enthält 3-O-Ethyl-Ascorbinsäure"
         : "Деликатная пенка идеально подходит для умывания кожи любого типа. Мягко и эффективно очищает, снимает макияж, не пересушивая и не раздражая кожу. Содержит 3-О-Ethyl аскорбиновую кислоту",
       image: "/Renew/69.jpeg",
-      variants: [{ article: "2401200", volume: "200ml" }]
+      variants: [{ volume: "200ml" }]
     },
     {
       id: "vitamin-c-peel-lotion",
@@ -116,7 +116,7 @@ const Hydration = () => {
         : "Лосьон с рН 3,5 и содержанием АНА кислот 4%, салициловой кислоты 2% для эффективного очищения кожи лица и подготовки её к нанесению других препаратов. Мягко отшелушивает мертвые клетки",
       image: "/Renew/70.jpeg",
       hoverImage: "/Renew/70.1.jpeg",
-      variants: [{ article: "2402200", volume: "200ml" }]
+      variants: [{ volume: "200ml" }]
     },
     {
       id: "age-reverse-mask",
@@ -127,7 +127,7 @@ const Hydration = () => {
         : "Маска приятной кремообразной текстуры с высокой концентрацией витамина С в стабильной форме в сочетании с кремнием для нормального синтеза коллагена и защиты от вредного воздействия",
       image: "/Renew/71.webp",
       hoverImage: "/Renew/71.1.jpeg",
-      variants: [{ article: "2403070", volume: "70ml" }]
+      variants: [{ volume: "70ml" }]
     },
     {
       id: "age-reverse-serum",
@@ -138,7 +138,7 @@ const Hydration = () => {
         : "Богатый комплекс натуральных экстрактов и масел, содержащих чистый витамин С. Защищает кожу от вредного воздействия окружающей среды, нейтрализует свободные радикалы, способствует выработке коллагена",
       image: "/Renew/72.jpeg",
       hoverImage: "/Renew/72.1.jpeg",
-      variants: [{ article: "2404030", volume: "30ml" }]
+      variants: [{ volume: "30ml" }]
     },
     {
       id: "age-reverse-cream",
@@ -149,7 +149,7 @@ const Hydration = () => {
         : "Питательный крем с витамином С содержит уникальную композицию активных ингредиентов, способных быстро восстанавливать кожу и питать её без комедогенного воздействия. Обновляет кожу, выравнивает тон и рельеф",
       image: "/Renew/73.jpeg",
       hoverImage: "/Renew/73.1.jpeg",
-      variants: [{ article: "2405050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }]
     },
     {
       id: "shining-eyes",
@@ -160,7 +160,7 @@ const Hydration = () => {
         : "Уникальная формула крема имеет сбалансированный состав и идеальную текстуру. Легкая текстура не оставляет следа после нанесения, отличная основа под макияж. Содержит витамин С в стабильной жирорастворимой форме и комплекс пептидов",
       image: "/Renew/74.jpeg",
       hoverImage: "/Renew/74.1.jpeg",
-      variants: [{ article: "2406030", volume: "30ml" }]
+      variants: [{ volume: "30ml" }]
     },
     {
       id: "moisturizing-cream-spf25",
@@ -171,7 +171,7 @@ const Hydration = () => {
         : "Нежный увлажняющий крем с приятным цитрусовым ароматом быстро впитывается, не оставляя ощущения жирности. Высокая концентрация витамина С в стабильной жирорастворимой форме как мощный антиоксидант. SPF-25",
       image: "/Renew/75.png",
       hoverImage: "/Renew/75.1.jpeg",
-      variants: [{ article: "2407050", volume: "50ml" }]
+      variants: [{ volume: "50ml" }]
     }
   ];
 
@@ -237,9 +237,9 @@ const Hydration = () => {
                     {product.description}
                   </p>
                   <div className="space-y-1">
-                    {product.variants.map((variant) => (
-                      <p key={variant.article} className="text-sm text-brand-coffee/60">
-                        Art. {variant.article} • {variant.volume}
+                    {product.variants.map((variant, idx) => (
+                      <p key={idx} className="text-sm text-brand-coffee/60">
+                        {variant.volume}
                       </p>
                     ))}
                   </div>
