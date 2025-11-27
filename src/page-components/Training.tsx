@@ -122,19 +122,6 @@ const Training = () => {
                     className="w-full h-full object-cover"
                     style={{ objectPosition: course.imagePosition || 'center' }}
                   />
-                  {/* Logo stamp */}
-                  <div
-                    className="absolute -bottom-6 -right-2 w-20 h-20 opacity-50"
-                    style={{ transform: 'rotate(-15deg)' }}
-                  >
-                    <Image
-                      src="/1.png"
-                      alt="NataLux stamp"
-                      width={80}
-                      height={80}
-                      className="object-contain"
-                    />
-                  </div>
                 </div>
               )}
               <div className="p-8">
