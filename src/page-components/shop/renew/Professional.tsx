@@ -19,7 +19,8 @@ const Professional = () => {
       image: "/Renew/76.png",
       hoverImage: "/Renew/76.1.png",
       variants: [{ volume: "250ml" }, { volume: "500ml" }],
-      fitContain: true
+      fitContain: true,
+      hoverFitContain: true
     },
     {
       id: "dermakey-cleanser",
@@ -29,7 +30,8 @@ const Professional = () => {
         : "Профессиональное очищающее средство для всех типов кожи",
       image: "/Renew/77.webp",
       hoverImage: "/Renew/77.1.png",
-      variants: [{ volume: "250ml" }, { volume: "500ml" }]
+      variants: [{ volume: "250ml" }, { volume: "500ml" }],
+      hoverFitContain: true
     },
     {
       id: "azelaic-acid-cream-20",
@@ -79,7 +81,8 @@ const Professional = () => {
       image: "/Renew/82.webp",
       hoverImage: "/Renew/82.1.png",
       variants: [{ volume: "100ml" }, { volume: "250ml" }],
-      fitContain: true
+      fitContain: true,
+      hoverFitContain: true
     },
     {
       id: "dew-drops-ha",
@@ -131,6 +134,7 @@ const Professional = () => {
                 hoverImage={product.hoverImage}
                 name={product.name}
                 fitContain={product.fitContain}
+                hoverFitContain={product.hoverFitContain}
                 delay={index * 100}
               >
                 <h3 className="text-xl font-heading font-semibold text-brand-espresso mb-2">

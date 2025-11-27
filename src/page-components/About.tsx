@@ -73,6 +73,24 @@ const About = () => {
                 style={{ objectPosition: 'center' }}
               />
             </div>
+            <div className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden rounded-lg md:rounded-none">
+              <Image
+                src="/117.PNG"
+                alt="Natalia - Professional work"
+                fill
+                className="object-cover"
+                style={{ objectPosition: 'center' }}
+              />
+            </div>
+            <div className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden rounded-lg md:rounded-none">
+              <Image
+                src="/122.PNG"
+                alt="Natalia - Studio"
+                fill
+                className="object-cover"
+                style={{ objectPosition: 'center' }}
+              />
+            </div>
           </motion.div>
 
           {/* Right - Text */}

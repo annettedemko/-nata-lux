@@ -115,7 +115,7 @@ const Training = () => {
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {course.image && (
-                <div className="h-64 overflow-hidden relative">
+                <div className="overflow-hidden relative" style={{ height: 'calc(16rem * 1.3)' }}>
                   <img
                     src={course.image}
                     alt={course.title}

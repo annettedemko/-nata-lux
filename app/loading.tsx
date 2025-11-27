@@ -9,7 +9,7 @@ export default function Loading() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);
-    }, 3000);
+    }, 1200);
 
     return () => clearTimeout(timer);
   }, []);
@@ -174,7 +174,7 @@ export default function Loading() {
             initial={{ width: '0%' }}
             animate={{ width: '100%' }}
             transition={{
-              duration: 2.8,
+              duration: 1.0,
               ease: 'easeInOut',
             }}
           />
