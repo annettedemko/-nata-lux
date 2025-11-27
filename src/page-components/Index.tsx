@@ -8,6 +8,7 @@ import { GlassServiceCard, GlassFeatureCard, GlassReviewCard } from '@/component
 import { CategoryCard } from '@/components/CategoryCard';
 import { SearchBar } from '@/components/SearchBar';
 import { SectionDivider } from '@/components/SectionDivider';
+import { BackgroundVideo } from '@/components/BackgroundVideo';
 import {
   Sparkles,
   Zap,
@@ -227,21 +228,8 @@ const Index = () => {
 
   return (
     <div className="relative">
-      {/* Глобальный фон с параллаксом для всей страницы */}
-      <div
-        className="fixed inset-0 z-0"
-        style={{
-          top: '80px',
-          backgroundImage: 'url(/25.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
-        {/* Gradient для читаемости */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-white/10 to-white/20 pointer-events-none" />
-      </div>
-
+      {/* Глобальный видео фон для всей страницы */}
+      <BackgroundVideo />
 
       {/* Hero Section with Parallax */}
       <HeroSection />
