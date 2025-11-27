@@ -45,61 +45,13 @@ const About = () => {
           </motion.div>
         </div>
 
-        {/* Main Content Grid - Magazine Style */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 mb-16 md:mb-24 lg:mb-32 max-w-6xl mx-auto">
-          {/* Left - Photos */}
+        {/* Main Content - Text First */}
+        <div className="max-w-4xl mx-auto mb-16 md:mb-24 lg:mb-32">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="space-y-4 md:space-y-6 lg:space-y-8"
-          >
-            <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] overflow-hidden rounded-lg md:rounded-none">
-              <Image
-                src="/5.jpeg"
-                alt="Natalia"
-                fill
-                className="object-cover"
-                style={{ objectPosition: 'center' }}
-              />
-            </div>
-            <div className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden rounded-lg md:rounded-none">
-              <Image
-                src="/6.jpeg"
-                alt="Natalia"
-                fill
-                className="object-cover"
-                style={{ objectPosition: 'center' }}
-              />
-            </div>
-            <div className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden rounded-lg md:rounded-none">
-              <Image
-                src="/117.PNG"
-                alt="Natalia - Professional work"
-                fill
-                className="object-cover"
-                style={{ objectPosition: 'center' }}
-              />
-            </div>
-            <div className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden rounded-lg md:rounded-none">
-              <Image
-                src="/122.PNG"
-                alt="Natalia - Studio"
-                fill
-                className="object-cover"
-                style={{ objectPosition: 'center' }}
-              />
-            </div>
-          </motion.div>
-
-          {/* Right - Text */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="flex flex-col justify-center"
           >
             <div className="space-y-4 md:space-y-6 text-brand-espresso leading-relaxed text-sm md:text-base">
               {isGerman ? (
@@ -163,6 +115,54 @@ const About = () => {
                   </p>
                 </>
               )}
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Photo Gallery */}
+        <div className="max-w-6xl mx-auto mb-16 md:mb-24 lg:mb-32">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6"
+          >
+            <div className="relative h-[400px] md:h-[500px] overflow-hidden rounded-2xl">
+              <Image
+                src="/5.jpeg"
+                alt="Natalia"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-700"
+                style={{ objectPosition: 'center' }}
+              />
+            </div>
+            <div className="relative h-[400px] md:h-[500px] overflow-hidden rounded-2xl">
+              <Image
+                src="/6.jpeg"
+                alt="Natalia - Professional"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-700"
+                style={{ objectPosition: 'center' }}
+              />
+            </div>
+            <div className="relative h-[400px] md:h-[500px] overflow-hidden rounded-2xl">
+              <Image
+                src="/117.PNG"
+                alt="Natalia - Studio work"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-700"
+                style={{ objectPosition: 'center' }}
+              />
+            </div>
+            <div className="relative h-[400px] md:h-[500px] overflow-hidden rounded-2xl">
+              <Image
+                src="/122.PNG"
+                alt="Natalia - Treatment"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-700"
+                style={{ objectPosition: 'center' }}
+              />
             </div>
           </motion.div>
         </div>
