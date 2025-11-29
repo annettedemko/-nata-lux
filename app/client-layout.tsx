@@ -25,7 +25,7 @@ export function ClientLayout({ children }: { children: ReactNode }) {
             <PageParallaxBackground>
               <div className="flex flex-col min-h-screen m-0 p-0">
                 <Header />
-                <main className="flex-grow m-0 p-0 pb-24 md:pb-0">
+                <main className="flex-grow m-0 p-0">
                   {children}
                 </main>
                 <InstagramSection />
