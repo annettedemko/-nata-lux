@@ -7,7 +7,8 @@ import { TooltipProvider } from "@/components/ui/tooltip"
 import { LanguageProvider } from "@/contexts/LanguageContext"
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
-import { FloatingWhatsApp } from "@/components/FloatingWhatsApp"
+import { FloatingButtons } from "@/components/FloatingButtons"
+import { InstagramSection } from "@/components/InstagramSection"
 import { PageParallaxBackground } from "@/components/PageParallaxBackground"
 import { GoldenCursor } from "@/components/GoldenCursor"
 import { PageTransition } from "@/components/PageTransition"
@@ -24,11 +25,12 @@ export function ClientLayout({ children }: { children: ReactNode }) {
             <PageParallaxBackground>
               <div className="flex flex-col min-h-screen m-0 p-0">
                 <Header />
-                <main className="flex-grow m-0 p-0">
+                <main className="flex-grow m-0 p-0 pb-24 md:pb-0">
                   {children}
                 </main>
+                <InstagramSection />
                 <Footer />
-                <FloatingWhatsApp />
+                <FloatingButtons />
               </div>
             </PageParallaxBackground>
           </PageTransition>
