@@ -39,7 +39,7 @@ const About = () => {
             <p className="text-xs md:text-sm uppercase tracking-[0.2em] md:tracking-[0.3em] text-brand-gold mb-4 md:mb-6 font-light">
               {isGerman ? 'Natalia' : 'Наталья'}
             </p>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-heading font-light tracking-tight leading-[0.95] md:leading-[0.9] mb-8 md:mb-12 lg:mb-16 text-brand-espresso px-4 break-words hyphens-auto" style={{ wordWrap: 'break-word', overflowWrap: 'break-word' }}>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-light tracking-tight leading-[0.95] md:leading-[0.9] mb-8 md:mb-12 lg:mb-16 text-brand-espresso px-4 break-words" style={{ wordWrap: 'break-word', overflowWrap: 'break-word', hyphens: 'none' }}>
               {isGerman ? 'Über mich' : 'Обо мне'}
             </h1>
           </motion.div>
@@ -176,7 +176,7 @@ const About = () => {
           className="pb-16 md:pb-24 lg:pb-32"
         >
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-heading font-light text-brand-espresso text-center mb-8 md:mb-12 lg:mb-16 px-4 break-words hyphens-auto" style={{ wordWrap: 'break-word', overflowWrap: 'break-word' }}>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-light text-brand-espresso text-center mb-8 md:mb-12 lg:mb-16 px-4 break-words" style={{ wordWrap: 'break-word', overflowWrap: 'break-word', hyphens: 'none' }}>
               {isGerman ? 'So finden Sie uns' : 'Как нас найти'}
             </h2>
 

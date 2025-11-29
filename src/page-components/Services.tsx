@@ -184,7 +184,7 @@ const Services = () => {
                   style={{ boxShadow: '0 0 20px hsla(38, 70%, 70%, 0.5)' }}
                 ></div>
                 <div>
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-bold text-brand-espresso tracking-tight mb-0.5 md:mb-1 break-words hyphens-auto" style={{ wordWrap: 'break-word', overflowWrap: 'break-word' }}>
+                  <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-heading font-bold text-brand-espresso tracking-tight mb-0.5 md:mb-1 break-words" style={{ wordWrap: 'break-word', overflowWrap: 'break-word', hyphens: 'none' }}>
                     {t('lashesbrows.title')}
                   </h2>
                   <p className="text-brand-espresso/60 text-sm md:text-base lg:text-lg font-light italic">
@@ -209,7 +209,7 @@ const Services = () => {
                   style={{ boxShadow: '0 0 20px hsla(38, 70%, 70%, 0.5)' }}
                 ></div>
                 <div>
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-brand-espresso tracking-tight mb-1 break-words hyphens-auto" style={{ wordWrap: 'break-word', overflowWrap: 'break-word' }}>
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-brand-espresso tracking-tight mb-1 break-words" style={{ wordWrap: 'break-word', overflowWrap: 'break-word', hyphens: 'none' }}>
                     {t('pmu.title')}
                   </h2>
                   <p className="text-brand-espresso/60 text-sm md:text-base lg:text-lg font-light italic">
@@ -234,7 +234,7 @@ const Services = () => {
                   style={{ boxShadow: '0 0 20px hsla(38, 70%, 70%, 0.5)' }}
                 ></div>
                 <div>
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-brand-espresso tracking-tight mb-1 break-words hyphens-auto" style={{ wordWrap: 'break-word', overflowWrap: 'break-word' }}>
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-brand-espresso tracking-tight mb-1 break-words" style={{ wordWrap: 'break-word', overflowWrap: 'break-word', hyphens: 'none' }}>
                     {t('laser.title')}
                   </h2>
                   <p className="text-brand-espresso/60 text-sm md:text-base lg:text-lg font-light italic">
@@ -259,7 +259,7 @@ const Services = () => {
                   style={{ boxShadow: '0 0 20px hsla(38, 70%, 70%, 0.5)' }}
                 ></div>
                 <div>
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-brand-espresso tracking-tight mb-1 break-words hyphens-auto" style={{ wordWrap: 'break-word', overflowWrap: 'break-word' }}>
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-brand-espresso tracking-tight mb-1 break-words" style={{ wordWrap: 'break-word', overflowWrap: 'break-word', hyphens: 'none' }}>
                     {t('antiaging.title')}
                   </h2>
                   <p className="text-brand-espresso/60 text-sm md:text-base lg:text-lg font-light italic">

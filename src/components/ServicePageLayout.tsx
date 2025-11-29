@@ -115,7 +115,7 @@ export const ServicePageLayout = ({
             </motion.div>
 
             {/* Title with gradient underline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-espresso mb-6 leading-tight break-words hyphens-auto px-4" style={{ wordWrap: 'break-word', overflowWrap: 'break-word' }}>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-brand-espresso mb-6 leading-tight break-words px-4" style={{ wordWrap: 'break-word', overflowWrap: 'break-word', hyphens: 'none' }}>
               {title}
             </h1>
 
@@ -127,7 +127,7 @@ export const ServicePageLayout = ({
               className="h-1 bg-gradient-to-r from-transparent via-brand-gold to-transparent mx-auto mb-6"
             />
 
-            <p className="text-xl md:text-2xl text-brand-espresso/70 font-heading mb-2 break-words hyphens-auto px-4" style={{ wordWrap: 'break-word', overflowWrap: 'break-word' }}>
+            <p className="text-lg md:text-xl text-brand-espresso/70 font-heading mb-2 break-words px-4" style={{ wordWrap: 'break-word', overflowWrap: 'break-word', hyphens: 'none' }}>
               {subtitle}
             </p>
 

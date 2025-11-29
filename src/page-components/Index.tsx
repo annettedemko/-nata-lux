@@ -293,7 +293,7 @@ const Index = () => {
                 <Sparkles className="w-6 h-6 md:w-8 md:h-8 text-brand-gold" />
               </div>
             </motion.div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-semibold text-brand-espresso mb-3 md:mb-4 px-4 break-words hyphens-auto" style={{ wordWrap: 'break-word', overflowWrap: 'break-word' }}>
+            <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-heading font-semibold text-brand-espresso mb-3 md:mb-4 px-4 break-words" style={{ wordWrap: 'break-word', overflowWrap: 'break-word', hyphens: 'none' }}>
               {t('categories.title')}
             </h2>
             <p className="text-base md:text-lg text-brand-coffee/70 max-w-2xl mx-auto leading-relaxed px-4">
@@ -338,7 +338,7 @@ const Index = () => {
                 <Star className="w-6 h-6 md:w-8 md:h-8 text-brand-gold" />
               </div>
             </motion.div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-semibold text-brand-espresso mb-3 md:mb-4 px-4 break-words hyphens-auto" style={{ wordWrap: 'break-word', overflowWrap: 'break-word' }}>
+            <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-heading font-semibold text-brand-espresso mb-3 md:mb-4 px-4 break-words" style={{ wordWrap: 'break-word', overflowWrap: 'break-word', hyphens: 'none' }}>
               {t('services.title')}
             </h2>
           </motion.div>
@@ -417,7 +417,7 @@ const Index = () => {
                 <Award className="w-6 h-6 md:w-8 md:h-8 text-brand-gold" />
               </div>
             </motion.div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-semibold text-brand-espresso mb-3 md:mb-4 px-4 break-words hyphens-auto" style={{ wordWrap: 'break-word', overflowWrap: 'break-word' }}>
+            <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-heading font-semibold text-brand-espresso mb-3 md:mb-4 px-4 break-words" style={{ wordWrap: 'break-word', overflowWrap: 'break-word', hyphens: 'none' }}>
               {t('about.title')}
             </h2>
           </motion.div>
@@ -457,7 +457,7 @@ const Index = () => {
                 <Heart className="w-6 h-6 md:w-8 md:h-8 text-brand-gold" />
               </div>
             </motion.div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-semibold text-brand-espresso mb-3 md:mb-4 px-4 break-words hyphens-auto" style={{ wordWrap: 'break-word', overflowWrap: 'break-word' }}>
+            <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-heading font-semibold text-brand-espresso mb-3 md:mb-4 px-4 break-words" style={{ wordWrap: 'break-word', overflowWrap: 'break-word', hyphens: 'none' }}>
               {t('reviews.title')}
             </h2>
 
@@ -591,7 +591,7 @@ const Index = () => {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="text-center mb-5 md:mb-7"
           >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-semibold text-brand-espresso mb-3 md:mb-4 px-4 break-words hyphens-auto" style={{ wordWrap: 'break-word', overflowWrap: 'break-word' }}>
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-3 md:mb-4 px-4 break-words" style={{ wordWrap: 'break-word', overflowWrap: 'break-word', hyphens: 'none' }}>
               {language === 'de' ? 'Besuchen Sie uns' : 'Посетите нас'}
             </h2>
             <p className="text-base md:text-lg text-brand-coffee/70 max-w-2xl mx-auto px-4">

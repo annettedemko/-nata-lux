@@ -238,7 +238,7 @@ const Laser = () => {
               <Zap className="w-10 h-10 md:w-12 md:h-12 text-brand-gold" />
             </div>
 
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-heading font-bold text-brand-espresso mb-6 leading-tight px-4 break-words hyphens-auto" style={{ wordWrap: 'break-word', overflowWrap: 'break-word' }}>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-bold text-brand-espresso mb-6 leading-tight px-4 break-words" style={{ wordWrap: 'break-word', overflowWrap: 'break-word', hyphens: 'none' }}>
               {isGerman
                 ? 'Laser-Haarentfernung auf Dreiwellenlaser'
                 : 'Лазерная эпиляция на трёхволновом лазере'}

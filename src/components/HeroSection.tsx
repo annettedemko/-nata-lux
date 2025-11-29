@@ -38,11 +38,12 @@ export const HeroSection = () => {
                 delay: 0.4,
                 ease: [0.16, 1, 0.3, 1]
               }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-semibold text-brand-espresso mb-6 leading-tight px-2 md:px-0 break-words hyphens-auto"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-heading font-semibold text-brand-espresso mb-6 leading-tight px-2 md:px-0 break-words"
               style={{
                 textShadow: '0 2px 10px rgba(255,255,255,0.9), 0 4px 20px rgba(255,255,255,0.8), 0 1px 3px rgba(0,0,0,0.15)',
                 wordWrap: 'break-word',
                 overflowWrap: 'break-word',
+                hyphens: 'none',
               }}
             >
               {t('hero.title')}
@@ -57,13 +58,14 @@ export const HeroSection = () => {
                 delay: 0.6,
                 ease: [0.16, 1, 0.3, 1]
               }}
-              className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading mb-6 leading-relaxed font-bold px-2 md:px-0 break-words hyphens-auto"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl font-heading mb-6 leading-relaxed font-bold px-2 md:px-0 break-words"
               style={{
                 color: '#8B6F3D',
                 textShadow: '0 2px 8px rgba(255,255,255,0.95), 0 4px 16px rgba(255,255,255,0.8), 0 0 30px rgba(255,255,255,0.6), 0 1px 3px rgba(0,0,0,0.2)',
                 WebkitTextStroke: '0.5px rgba(255,255,255,0.4)',
                 wordWrap: 'break-word',
                 overflowWrap: 'break-word',
+                hyphens: 'none',
               }}
             >
               {t('hero.subtitle')}
