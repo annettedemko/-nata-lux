@@ -35,7 +35,7 @@ export const ServiceCard = ({ title, description, icon: Icon, href, image, image
           <div className="w-12 h-12 rounded-xl bg-brand-gold/10 flex items-center justify-center mb-4 group-hover:bg-brand-gold/20 transition-colors">
             <Icon className="w-6 h-6 text-brand-gold" />
           </div>
-          <h3 className="text-xl font-heading font-semibold text-brand-espresso mb-2">
+          <h3 className="text-xl font-heading font-semibold text-brand-espresso mb-2 break-words hyphens-auto">
             {title}
           </h3>
           <p className="text-brand-coffee/70 mb-4 leading-relaxed">

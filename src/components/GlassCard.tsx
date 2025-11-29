@@ -76,7 +76,7 @@ export const GlassServiceCard = ({ title, description, icon: Icon, delay = 0, im
         )}
 
         {/* Title */}
-        <h3 className="text-lg md:text-xl font-heading font-semibold text-brand-espresso mb-3 group-hover:text-brand-gold transition-colors leading-tight">
+        <h3 className="text-lg md:text-xl font-heading font-semibold text-brand-espresso mb-3 group-hover:text-brand-gold transition-colors leading-tight break-words hyphens-auto">
           {title}
         </h3>
 
@@ -122,7 +122,7 @@ export const GlassFeatureCard = ({ title, description, icon: Icon, delay = 0 }: 
       </motion.div>
 
       {/* Title */}
-      <h3 className="text-xl font-heading font-semibold text-brand-espresso mb-3">
+      <h3 className="text-xl font-heading font-semibold text-brand-espresso mb-3 break-words hyphens-auto">
         {title}
       </h3>
 

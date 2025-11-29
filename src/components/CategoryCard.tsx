@@ -61,7 +61,7 @@ export const CategoryCard = ({
               <div className={`absolute inset-0 bg-gradient-to-br from-brand-espresso/70 via-brand-espresso/60 to-black/70 flex items-center justify-center transition-opacity duration-500 ${
                 isHovered ? 'opacity-100' : 'opacity-0'
               }`}>
-                <h3 className="text-xl md:text-2xl lg:text-3xl font-heading font-medium text-white text-center px-4 md:px-6 transform transition-all duration-500 tracking-wide">
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-heading font-medium text-white text-center px-4 md:px-6 transform transition-all duration-500 tracking-wide break-words hyphens-auto">
                   {title}
                 </h3>
               </div>
@@ -88,7 +88,7 @@ export const CategoryCard = ({
 
           {/* Content Section */}
           <div className="p-4 md:p-5 lg:p-6 flex-grow flex flex-col">
-            <h3 className="text-xl md:text-2xl font-heading font-semibold text-brand-espresso mb-2 md:mb-3 group-hover:text-brand-gold transition-colors">
+            <h3 className="text-xl md:text-2xl font-heading font-semibold text-brand-espresso mb-2 md:mb-3 group-hover:text-brand-gold transition-colors break-words hyphens-auto">
               {title}
             </h3>
             <p className="text-sm md:text-base text-brand-coffee/70 mb-4 md:mb-6 leading-relaxed flex-grow">

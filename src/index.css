@@ -96,6 +96,15 @@
   .font-heading {
     letter-spacing: 0.02em;
   }
+
+  /* Правильный перенос слов для всех языков */
+  .hyphens-auto {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
 }
 
 @layer components {
