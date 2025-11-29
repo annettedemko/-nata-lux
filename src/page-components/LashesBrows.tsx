@@ -60,7 +60,7 @@ const LashesBrows = () => {
             <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl bg-brand-gold/10 mb-4 md:mb-6">
               <Sparkles className="w-8 h-8 md:w-10 md:h-10 text-brand-gold" />
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6 px-4">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6 px-4 break-words hyphens-auto" style={{ wordWrap: 'break-word', overflowWrap: 'break-word' }}>
               {t('lashesbrows.title')}
             </h1>
             <p className="text-lg md:text-xl text-brand-coffee/80 leading-relaxed mb-6 md:mb-8 px-4">
