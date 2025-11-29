@@ -27,7 +27,7 @@ export const FloatingButtons = () => {
         onClick={handleTermin}
         className="fixed bottom-6 left-4 z-50 md:hidden flex items-center gap-2 px-4 py-3 rounded-full transition-all duration-300 hover:scale-105 active:scale-95"
         style={{
-          background: 'rgba(43, 31, 24, 0.95)',
+          background: 'rgba(43, 31, 24, 0.65)',
           boxShadow: '0 8px 24px rgba(0,0,0,0.2)',
           backdropFilter: 'blur(10px)',
         }}
@@ -43,7 +43,7 @@ export const FloatingButtons = () => {
         onClick={handleWhatsApp}
         className="fixed bottom-6 right-4 z-50 md:hidden w-14 h-14 rounded-full transition-all duration-300 hover:scale-110 active:scale-95 flex items-center justify-center"
         style={{
-          background: 'rgba(43, 31, 24, 0.95)',
+          background: 'rgba(43, 31, 24, 0.65)',
           boxShadow: '0 8px 24px rgba(0,0,0,0.2)',
           backdropFilter: 'blur(10px)',
         }}
