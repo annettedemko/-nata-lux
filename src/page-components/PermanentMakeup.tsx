@@ -60,7 +60,7 @@ const PermanentMakeup = () => {
             <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl bg-brand-gold/10 mb-4 md:mb-6">
               <Palette className="w-8 h-8 md:w-10 md:h-10 text-brand-gold" />
             </div>
-            <h1 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6 px-4 break-words" style={{ wordWrap: 'break-word', overflowWrap: 'anywhere', wordBreak: 'break-word', hyphens: 'none', maxWidth: '100%' }}>
+            <h1 className="font-heading font-semibold text-brand-espresso mb-4 md:mb-6 px-4" style={{ fontSize: 'clamp(1.25rem, 5vw, 3rem)', hyphens: 'none', maxWidth: '100%' }}>
               {t('pmu.title')}
             </h1>
             <p className="text-xl text-brand-coffee/80 leading-relaxed mb-8">
