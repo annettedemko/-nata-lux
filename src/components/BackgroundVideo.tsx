@@ -6,11 +6,8 @@ export const BackgroundVideo = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [autoplayBlocked, setAutoplayBlocked] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Определяем мобильное устройство
-    setIsMobile(window.innerWidth < 768);
 
     const video = videoRef.current;
     if (!video) {
@@ -138,8 +135,8 @@ export const BackgroundVideo = () => {
           filter: 'brightness(1.1) contrast(0.95)',
           opacity: isLoaded ? 1 : 0,
           transition: 'opacity 1s ease-in-out',
-          // Адаптивный масштаб: меньше на мобильных, больше на десктопе
-          transform: isMobile ? 'scale(1.0)' : 'scale(1.05)',
+          // Фиксированный масштаб для стабильности
+          transform: 'scale(1.0)',
           transformOrigin: 'center center',
         }}
       >
