@@ -4,10 +4,21 @@ import { ServicePageLayout } from '@/components/ServicePageLayout';
 import { Zap, Droplet, Activity, Star } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ServiceCard } from '@/components/ServiceCard';
+import { ProcedureSchema } from '@/components/ProcedureSchema';
 
 const RFLifting = () => {
   const { language } = useLanguage();
   const isGerman = language === 'de';
+
+  // Schema section
+  const SchemaSection = () => (
+    <ProcedureSchema
+      germanImages={['/181 1.jpg']}
+      russianImages={['/181.jpg']}
+      altTextGerman="RF-Lifting Gesicht Schema"
+      altTextRussian="Схема RF-лифтинга лица"
+    />
+  );
 
   // Custom section for Face RF benefits
   const RFApplications = () => (
@@ -189,7 +200,12 @@ const RFLifting = () => {
         }
       ]}
       // Add custom section for Face vs Body RF
-      additionalSections={<RFApplications />}
+      additionalSections={
+        <>
+          <SchemaSection />
+          <RFApplications />
+        </>
+      }
       priceSection="apparative-antiaging"
       contraindications={[
         isGerman ? 'Schwangerschaft und Stillzeit' : 'Беременность и кормление грудью',

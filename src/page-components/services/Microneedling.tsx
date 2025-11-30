@@ -4,12 +4,23 @@ import { ServicePageLayout } from '@/components/ServicePageLayout';
 import { Scissors } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { PremiumGallery } from '@/components/PremiumGallery';
+import { ProcedureSchema } from '@/components/ProcedureSchema';
 
 const Microneedling = () => {
   const { language } = useLanguage();
   const isGerman = language === 'de';
 
   const galleryImages = ['/87.jpg', '/88.jpg', '/89.jpg', '/90.jpg', '/91.jpg'];
+
+  // Schema section
+  const schemaSection = (
+    <ProcedureSchema
+      germanImages={['/176.jpg']}
+      russianImages={['/176 1.jpg']}
+      altTextGerman="Microneedling Schema"
+      altTextRussian="Схема микронидлинга"
+    />
+  );
 
   const photoGallery = (
     <PremiumGallery images={galleryImages} />
@@ -96,7 +107,12 @@ const Microneedling = () => {
           description: 'Успокаивающая маска, дарсонваль или пилинг при необходимости. Инструкции по уходу дома.'
         }
       ]}
-      additionalSections={photoGallery}
+      additionalSections={
+        <>
+          {schemaSection}
+          {photoGallery}
+        </>
+      }
       priceSection="microneedling"
       contraindications={isGerman ? [
         'Aktive Akne oder Hautinfektionen',

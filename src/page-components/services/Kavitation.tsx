@@ -4,9 +4,20 @@ import { ServicePageLayout } from '@/components/ServicePageLayout';
 import { Waves, Star, Zap, Droplet } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ServiceCard } from '@/components/ServiceCard';
+import { ProcedureSchema } from '@/components/ProcedureSchema';
 
 const Kavitation = () => {
   const { isGerman } = useLanguage();
+
+  // Schema section with 2 images
+  const SchemaSection = () => (
+    <ProcedureSchema
+      germanImages={['/188.jpg', '/189 1.jpg']}
+      russianImages={['/188 1.jpg', '/189.jpg']}
+      altTextGerman="Kavitation Schema"
+      altTextRussian="Схема кавитации"
+    />
+  );
 
   // Recommended body contouring services
   const RecommendedServices = () => (
@@ -118,7 +129,12 @@ const Kavitation = () => {
             : 'Вы получаете детальные рекомендации для периода после процедуры, чтобы оптимально поддержать липолиз: пить много воды (мин. 2–3 литра в день), здоровое питание с низким содержанием жиров (овощи, фрукты, нежирный белок), умеренное движение (30 мин. прогулки, лёгкое кардио, йога), избегать алкоголя 48 часов (алкоголь замедляет липолиз через печень). Для оптимального и долговременного результата мы рекомендуем курс из 8–12 процедур, в идеале 1× в неделю (мин. 5–7 дней перерыв между сеансами). Результаты кумулятивные — чем больше процедур, тем больше уменьшение жира. После завершения курса рекомендуем поддерживающие сеансы каждые 2–3 месяца для долгосрочного сохранения результата.'
         }
       ]}
-      additionalSections={<RecommendedServices />}
+      additionalSections={
+        <>
+          <SchemaSection />
+          <RecommendedServices />
+        </>
+      }
       priceSection="body-treatments"
       contraindications={[
         isGerman ? 'Schwangerschaft und Stillzeit' : 'Беременность и кормление грудью',

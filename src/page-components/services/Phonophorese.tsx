@@ -4,9 +4,20 @@ import { ServicePageLayout } from '@/components/ServicePageLayout';
 import { Droplet, Activity, Sun, Zap } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ServiceCard } from '@/components/ServiceCard';
+import { ProcedureSchema } from '@/components/ProcedureSchema';
 
 const Phonophorese = () => {
   const { isGerman } = useLanguage();
+
+  // Schema section
+  const SchemaSection = () => (
+    <ProcedureSchema
+      germanImages={['/186.jpg']}
+      russianImages={['/186 1.jpg']}
+      altTextGerman="Ultraschall-Phonophorese Schema"
+      altTextRussian="Схема ультразвукового фонофореза"
+    />
+  );
 
   // Custom section for recommended combinations
   const RecommendedServices = () => (
@@ -241,7 +252,12 @@ const Phonophorese = () => {
           a: 'При обычной ультразвуковой чистке лица (сонофорезе) ультразвук используется в основном для глубокой очистки, пилинга и массажа. При фонофорезе же основное внимание уделяется глубокому проникновению высококачественных активных веществ (гиалурон, коллаген, витамины, экзосомы и т.д.). Ультразвук открывает клеточные мембраны и транспортирует активные вещества в 10× глубже в кожу. Таким образом, фонофорез значительно эффективнее для anti-age, интенсивного увлажнения и регенерации.'
         }
       ]}
-      additionalSections={<RecommendedServices />}
+      additionalSections={
+        <>
+          <SchemaSection />
+          <RecommendedServices />
+        </>
+      }
       ctaTitle={isGerman ? "Bereit für tiefenwirksame Hautpflege in München?" : "Готовы к глубокому уходу за кожей в Мюнхене?"}
       ctaDescription={isGerman
         ? "Buchen Sie jetzt Ihre Ultraschall-Phonophorese in unserem Studio in München-Haidhausen und erleben Sie den Unterschied: intensiv durchfeuchtete, strahlende und verjüngte Haut – ohne Nadeln, ohne Schmerzen, mit sofort sichtbaren Ergebnissen. Kostenlose Beratung inklusive!"

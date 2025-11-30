@@ -4,10 +4,21 @@ import { ServicePageLayout } from '@/components/ServicePageLayout';
 import { Sun, Zap, Droplet, Activity } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ServiceCard } from '@/components/ServiceCard';
+import { ProcedureSchema } from '@/components/ProcedureSchema';
 
 const Lichttherapie = () => {
   const { language } = useLanguage();
   const isGerman = language === 'de';
+
+  // Schema section with 2 images
+  const SchemaSection = () => (
+    <ProcedureSchema
+      germanImages={['/182 1.jpg', '/166 1.jpg']}
+      russianImages={['/182.jpg', '/166.jpg']}
+      altTextGerman="LED-Lichttherapie Schema"
+      altTextRussian="Схема LED-светотерапии"
+    />
+  );
 
   // Custom section for recommended combinations
   const RecommendedServices = () => (
@@ -243,7 +254,12 @@ const Lichttherapie = () => {
           a: 'Да, для всех типов и оттенков кожи (включая тёмную), в отличие от IPL/лазера. Также идеальна для чувствительной кожи и розацеа.'
         }
       ]}
-      additionalSections={<RecommendedServices />}
+      additionalSections={
+        <>
+          <SchemaSection />
+          <RecommendedServices />
+        </>
+      }
       ctaTitle={isGerman ? "Bereit für strahlende, gesunde Haut in München?" : "Готовы к сияющей, здоровой коже в Мюнхене?"}
       ctaDescription={isGerman
         ? "Buchen Sie jetzt Ihre LED-Lichttherapie in unserem Studio in München-Haidhausen und erleben Sie die heilende Kraft des Lichts – wissenschaftlich bewährt, schmerzfrei und für alle Hauttypen geeignet. Kostenlose Beratung inklusive!"

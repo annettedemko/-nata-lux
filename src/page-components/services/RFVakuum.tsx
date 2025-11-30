@@ -4,10 +4,21 @@ import { ServicePageLayout } from '@/components/ServicePageLayout';
 import { Star, Waves, Zap, Activity } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ServiceCard } from '@/components/ServiceCard';
+import { ProcedureSchema } from '@/components/ProcedureSchema';
 
 const RFVakuum = () => {
   const { language } = useLanguage();
   const isGerman = language === 'de';
+
+  // Schema section
+  const SchemaSection = () => (
+    <ProcedureSchema
+      germanImages={['/187 1.jpg']}
+      russianImages={['/187.jpg']}
+      altTextGerman="RF-Vakuum Schema"
+      altTextRussian="Схема RF-вакуум"
+    />
+  );
 
   // Recommended body contouring services
   const RecommendedServices = () => (
@@ -114,7 +125,12 @@ const RFVakuum = () => {
           description: 'Подтягивающий уход и рекомендации для дома.'
         }
       ]}
-      additionalSections={<RecommendedServices />}
+      additionalSections={
+        <>
+          <SchemaSection />
+          <RecommendedServices />
+        </>
+      }
       priceSection="body-treatments"
       contraindications={isGerman ? [
         'Schwangerschaft und Stillzeit',

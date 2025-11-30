@@ -3,10 +3,21 @@
 import { ServicePageLayout } from '@/components/ServicePageLayout';
 import { Zap } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { ProcedureSchema } from '@/components/ProcedureSchema';
 
 const DarsonvalHaare = () => {
   const { language } = useLanguage();
   const isGerman = language === 'de';
+
+  // Schema section
+  const SchemaSection = () => (
+    <ProcedureSchema
+      germanImages={['/190.jpg']}
+      russianImages={['/190 1.jpg']}
+      altTextGerman="Darsonval Schema"
+      altTextRussian="Схема дарсонваль"
+    />
+  );
 
   return (
     <ServicePageLayout
@@ -134,6 +145,7 @@ const DarsonvalHaare = () => {
           a: 'Да, дарсонваль может помочь при гормональном или стрессовом выпадении волос, стимулируя волосяные фолликулы. При тяжёлых формах рекомендуем также проконсультироваться с дерматологом.'
         }
       ]}
+      additionalSections={<SchemaSection />}
       ctaTitle={isGerman ? "Bereit für kräftigeres, gesünderes Haar?" : "Готовы к более крепким, здоровым волосам?"}
       ctaDescription={isGerman
         ? "Buchen Sie jetzt Ihre Darsonval-Behandlung und starten Sie Ihre Haar-Kur."
