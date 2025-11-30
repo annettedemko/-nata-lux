@@ -290,7 +290,7 @@ const Laser = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-heading font-bold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
               {isGerman ? 'Warum Dreiwellenlaser?' : 'Почему трёхволновой лазер?'}
             </h2>
             <p className="text-brand-coffee/70 max-w-3xl mx-auto text-lg">
@@ -338,7 +338,7 @@ const Laser = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-heading font-bold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
               {isGerman ? 'Drei Wellenlängen – Drei Stärken' : 'Три длины волны — три преимущества'}
             </h2>
             <p className="text-brand-coffee/70 max-w-3xl mx-auto text-lg">
@@ -405,7 +405,7 @@ const Laser = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-heading font-bold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
               {isGerman ? 'Wie läuft die Behandlung ab?' : 'Как проходит процедура?'}
             </h2>
           </motion.div>
@@ -445,7 +445,7 @@ const Laser = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-heading font-bold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
               {isGerman ? 'Behandlungszonen' : 'Зоны обработки'}
             </h2>
             <p className="text-brand-coffee/70 max-w-2xl mx-auto">
@@ -496,7 +496,7 @@ const Laser = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-heading font-bold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
               {isGerman ? 'Häufige Fragen' : 'Частые вопросы'}
             </h2>
           </motion.div>

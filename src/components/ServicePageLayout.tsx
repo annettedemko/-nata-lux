@@ -72,9 +72,9 @@ export const ServicePageLayout = ({
   const isGerman = language === 'de';
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden">
+    <div className="relative w-full overflow-x-hidden">
       {/* Background */}
-      <div className="fixed inset-0 z-0">
+      <div className="fixed inset-0 z-0 w-full">
         <div
           className="absolute inset-0"
           style={{
@@ -87,14 +87,14 @@ export const ServicePageLayout = ({
       </div>
 
       {/* Content */}
-      <div className="relative z-10 min-h-screen overflow-x-hidden max-w-full">
+      <div className="relative z-10 w-full overflow-x-hidden">
       {/* Background Decorations */}
       <div className="absolute top-0 right-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-brand-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-brand-gold/3 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3 pointer-events-none" />
 
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16 md:pt-32 md:pb-20 overflow-x-hidden">
-        <div className="container mx-auto px-4 max-w-5xl overflow-x-hidden">
+      <section className="relative pt-24 pb-16 md:pt-32 md:pb-20 w-full">
+        <div className="container mx-auto px-4 max-w-5xl w-full">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -115,7 +115,7 @@ export const ServicePageLayout = ({
             </motion.div>
 
             {/* Title with gradient underline */}
-            <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-heading font-bold text-brand-espresso mb-6 leading-tight px-2 sm:px-4 max-w-full break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
+            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-heading font-bold text-brand-espresso mb-6 leading-tight px-2 sm:px-4 max-w-full break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', wordWrap: 'break-word' }}>
               {title}
             </h1>
 
@@ -146,7 +146,7 @@ export const ServicePageLayout = ({
         </div>
       </section>
 
-      <div className="container mx-auto px-4 max-w-5xl pb-20 overflow-x-hidden">
+      <div className="container mx-auto px-4 max-w-5xl pb-20 w-full">
 
         {/* About Service */}
         <motion.section
@@ -161,7 +161,7 @@ export const ServicePageLayout = ({
               {isGerman ? 'Über die Behandlung' : 'О процедуре'}
             </div>
           </div>
-          <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-heading font-semibold text-brand-espresso mb-6 mt-2 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-6 mt-2 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', wordWrap: 'break-word' }}>
             {aboutTitle}
           </h2>
           {aboutDescription.map((paragraph, index) => (
@@ -179,7 +179,7 @@ export const ServicePageLayout = ({
           transition={{ duration: 0.6 }}
           className="relative glass rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 mb-12 border border-brand-gold/10 shadow-xl shadow-brand-gold/5"
         >
-          <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-heading font-semibold text-brand-espresso mb-8 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-8 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', wordWrap: 'break-word' }}>
             {isGerman ? 'Ihre Vorteile' : 'Ваши преимущества'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
@@ -210,7 +210,7 @@ export const ServicePageLayout = ({
             transition={{ duration: 0.6 }}
             className="relative glass rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 mb-12 border border-brand-gold/10 shadow-xl shadow-brand-gold/5"
           >
-            <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-heading font-semibold text-brand-espresso mb-8 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-8 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', wordWrap: 'break-word' }}>
               {isGerman ? 'Wie läuft die Behandlung ab?' : 'Как проходит процедура?'}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
@@ -230,7 +230,7 @@ export const ServicePageLayout = ({
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-brand-espresso mb-1 text-sm sm:text-base md:text-lg max-w-full break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>{step.title}</h3>
+                    <h3 className="font-semibold text-brand-espresso mb-1 text-base sm:text-lg md:text-xl max-w-full break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', wordWrap: 'break-word' }}>{step.title}</h3>
                     <p className="text-brand-coffee/70 leading-relaxed">{step.description}</p>
                   </div>
                 </motion.div>
@@ -254,7 +254,7 @@ export const ServicePageLayout = ({
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,175,55,0.15),transparent_50%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(212,175,55,0.1),transparent_50%)]" />
             <div className="relative">
-              <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-heading font-semibold text-white mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
+              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-white mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', wordWrap: 'break-word' }}>
                 {isGerman ? 'Preise & Dauer' : 'Цены и длительность'}
               </h2>
               <p className="text-white/70 mb-8 max-w-md mx-auto">
@@ -283,7 +283,7 @@ export const ServicePageLayout = ({
             transition={{ duration: 0.6 }}
             className="relative glass rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 mb-12 border border-brand-gold/10 shadow-xl shadow-brand-gold/5"
           >
-            <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-heading font-semibold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', wordWrap: 'break-word' }}>
               {isGerman ? 'Kontraindikationen' : 'Противопоказания'}
             </h2>
             <p className="text-brand-coffee/70 mb-6 leading-relaxed">
@@ -310,7 +310,7 @@ export const ServicePageLayout = ({
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
-            <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-heading font-semibold text-brand-espresso mb-8 text-center max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-8 text-center max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', wordWrap: 'break-word' }}>
               {isGerman ? 'Häufige Fragen' : 'Частые вопросы'}
             </h2>
             <div className="space-y-4">
@@ -323,7 +323,7 @@ export const ServicePageLayout = ({
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="glass rounded-2xl p-6 md:p-8 border border-brand-gold/10 hover:border-brand-gold/30 transition-colors duration-300"
                 >
-                  <h3 className="font-semibold text-brand-espresso mb-3 text-sm sm:text-base md:text-lg max-w-full break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>{item.q}</h3>
+                  <h3 className="font-semibold text-brand-espresso mb-3 text-base sm:text-lg md:text-xl max-w-full break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', wordWrap: 'break-word' }}>{item.q}</h3>
                   <p className="text-brand-coffee/70 leading-relaxed whitespace-pre-line">{item.a}</p>
                 </motion.div>
               ))}
@@ -350,7 +350,7 @@ export const ServicePageLayout = ({
           </div>
 
           <div className="relative">
-            <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-heading font-bold text-white mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-heading font-bold text-white mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', wordWrap: 'break-word' }}>
               {ctaTitle}
             </h2>
             <p className="text-white/90 mb-8 text-lg max-w-xl mx-auto">
