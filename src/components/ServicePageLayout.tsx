@@ -72,7 +72,7 @@ export const ServicePageLayout = ({
   const isGerman = language === 'de';
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen overflow-x-hidden">
       {/* Background */}
       <div className="fixed inset-0 z-0">
         <div
@@ -87,14 +87,14 @@ export const ServicePageLayout = ({
       </div>
 
       {/* Content */}
-      <div className="relative z-10 min-h-screen">
+      <div className="relative z-10 min-h-screen overflow-x-hidden max-w-full">
       {/* Background Decorations */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-gold/3 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3 pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-brand-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-brand-gold/3 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3 pointer-events-none" />
 
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16 md:pt-32 md:pb-20">
-        <div className="container mx-auto px-4 max-w-5xl">
+      <section className="relative pt-24 pb-16 md:pt-32 md:pb-20 overflow-x-hidden">
+        <div className="container mx-auto px-4 max-w-5xl overflow-x-hidden">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -146,7 +146,7 @@ export const ServicePageLayout = ({
         </div>
       </section>
 
-      <div className="container mx-auto px-4 max-w-5xl pb-20">
+      <div className="container mx-auto px-4 max-w-5xl pb-20 overflow-x-hidden">
 
         {/* About Service */}
         <motion.section
