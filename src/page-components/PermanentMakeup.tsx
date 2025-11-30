@@ -60,7 +60,7 @@ const PermanentMakeup = () => {
             <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl bg-brand-gold/10 mb-4 md:mb-6">
               <Palette className="w-8 h-8 md:w-10 md:h-10 text-brand-gold" />
             </div>
-            <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6 px-4" style={{ hyphens: 'none' }}>
+            <h1 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6 px-4 max-w-full" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
               {t('pmu.title')}
             </h1>
             <p className="text-xl text-brand-coffee/80 leading-relaxed mb-8">
@@ -99,7 +99,7 @@ const PermanentMakeup = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-4">
+            <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl font-heading font-semibold text-brand-espresso mb-4 max-w-full" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
               {isGerman ? 'Unsere Leistungen' : 'Наши услуги'}
             </h2>
           </motion.div>
@@ -130,7 +130,7 @@ const PermanentMakeup = () => {
             transition={{ duration: 0.8 }}
             className="glass rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12"
           >
-            <h3 className="text-lg md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6">
+            <h3 className="text-sm sm:text-base md:text-xl lg:text-2xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6 max-w-full" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
               {isGerman ? 'Was ist Permanent Make-up?' : 'Что такое перманентный макияж?'}
             </h3>
             <div className="space-y-3 md:space-y-4 text-sm md:text-base text-brand-coffee/80 leading-relaxed">
@@ -168,7 +168,7 @@ const PermanentMakeup = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-semibold text-white mb-4 md:mb-6">
+            <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl font-heading font-semibold text-white mb-4 md:mb-6 max-w-full" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
               {isGerman ? 'Beratungstermin vereinbaren' : 'Запишитесь на консультацию'}
             </h2>
             <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">

@@ -238,7 +238,7 @@ const Laser = () => {
               <Zap className="w-10 h-10 md:w-12 md:h-12 text-brand-gold" />
             </div>
 
-            <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-heading font-bold text-brand-espresso mb-6 leading-tight px-4" style={{ hyphens: 'none' }}>
+            <h1 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-heading font-bold text-brand-espresso mb-6 leading-tight px-4 max-w-full" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
               {isGerman
                 ? 'Laser-Haarentfernung auf Dreiwellenlaser'
                 : 'Лазерная эпиляция на трёхволновом лазере'}
@@ -290,7 +290,7 @@ const Laser = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-4">
+            <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl font-heading font-bold text-brand-espresso mb-4 max-w-full" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
               {isGerman ? 'Warum Dreiwellenlaser?' : 'Почему трёхволновой лазер?'}
             </h2>
             <p className="text-brand-coffee/70 max-w-3xl mx-auto text-lg">
@@ -338,7 +338,7 @@ const Laser = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-4">
+            <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl font-heading font-bold text-brand-espresso mb-4 max-w-full" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
               {isGerman ? 'Drei Wellenlängen – Drei Stärken' : 'Три длины волны — три преимущества'}
             </h2>
             <p className="text-brand-coffee/70 max-w-3xl mx-auto text-lg">
@@ -405,7 +405,7 @@ const Laser = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-4">
+            <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl font-heading font-bold text-brand-espresso mb-4 max-w-full" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
               {isGerman ? 'Wie läuft die Behandlung ab?' : 'Как проходит процедура?'}
             </h2>
           </motion.div>
@@ -445,7 +445,7 @@ const Laser = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-4">
+            <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl font-heading font-bold text-brand-espresso mb-4 max-w-full" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
               {isGerman ? 'Behandlungszonen' : 'Зоны обработки'}
             </h2>
             <p className="text-brand-coffee/70 max-w-2xl mx-auto">
@@ -496,7 +496,7 @@ const Laser = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-4">
+            <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl font-heading font-bold text-brand-espresso mb-4 max-w-full" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
               {isGerman ? 'Häufige Fragen' : 'Частые вопросы'}
             </h2>
           </motion.div>
@@ -540,7 +540,7 @@ const Laser = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="h-[2px] bg-gradient-to-r from-transparent via-brand-gold to-transparent mx-auto mb-6"
             />
-            <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-2">
+            <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl font-heading font-bold text-brand-espresso mb-2 max-w-full" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
               {isGerman ? 'Unsere Arbeiten' : 'Наши работы'}
             </h2>
             <p className="text-brand-coffee/60 text-sm tracking-widest uppercase">
@@ -621,7 +621,7 @@ const Laser = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-bold text-white mb-6">
+            <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl font-heading font-bold text-white mb-6 max-w-full" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
               {isGerman ? 'Glatte Haut – dauerhaft' : 'Гладкая кожа — надолго'}
             </h2>
             <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">

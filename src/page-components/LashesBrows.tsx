@@ -60,7 +60,7 @@ const LashesBrows = () => {
             <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl bg-brand-gold/10 mb-4 md:mb-6">
               <Sparkles className="w-8 h-8 md:w-10 md:h-10 text-brand-gold" />
             </div>
-            <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6 px-4" style={{ hyphens: 'none' }}>
+            <h1 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6 px-4 max-w-full" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
               {t('lashesbrows.title')}
             </h1>
             <p className="text-lg md:text-xl text-brand-coffee/80 leading-relaxed mb-6 md:mb-8 px-4">
@@ -99,7 +99,7 @@ const LashesBrows = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-8 md:mb-12"
           >
-            <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-3 md:mb-4 px-4">
+            <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl font-heading font-semibold text-brand-espresso mb-3 md:mb-4 px-4 max-w-full" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
               {isGerman ? 'Unsere Leistungen' : 'Наши услуги'}
             </h2>
           </motion.div>
@@ -130,7 +130,7 @@ const LashesBrows = () => {
             transition={{ duration: 0.8 }}
             className="glass rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12"
           >
-            <h3 className="text-lg md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6">
+            <h3 className="text-sm sm:text-base md:text-xl lg:text-2xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6 max-w-full" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
               {isGerman ? 'Warum uns wählen?' : 'Почему выбирают нас?'}
             </h3>
             <div className="space-y-3 md:space-y-4 text-sm md:text-base text-brand-coffee/80 leading-relaxed">
@@ -163,7 +163,7 @@ const LashesBrows = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-semibold text-white mb-4 md:mb-6 px-4">
+            <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl font-heading font-semibold text-white mb-4 md:mb-6 px-4 max-w-full" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
               {isGerman ? 'Bereit für Ihre Verwandlung?' : 'Готовы к преображению?'}
             </h2>
             <p className="text-white/90 text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto px-4">
