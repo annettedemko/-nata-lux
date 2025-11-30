@@ -290,7 +290,7 @@ const Laser = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-brand-espresso mb-4">
+            <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-4">
               {isGerman ? 'Warum Dreiwellenlaser?' : 'Почему трёхволновой лазер?'}
             </h2>
             <p className="text-brand-coffee/70 max-w-3xl mx-auto text-lg">
@@ -338,7 +338,7 @@ const Laser = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-brand-espresso mb-4">
+            <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-4">
               {isGerman ? 'Drei Wellenlängen – Drei Stärken' : 'Три длины волны — три преимущества'}
             </h2>
             <p className="text-brand-coffee/70 max-w-3xl mx-auto text-lg">
@@ -405,7 +405,7 @@ const Laser = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-brand-espresso mb-4">
+            <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-4">
               {isGerman ? 'Wie läuft die Behandlung ab?' : 'Как проходит процедура?'}
             </h2>
           </motion.div>
@@ -445,7 +445,7 @@ const Laser = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-brand-espresso mb-4">
+            <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-4">
               {isGerman ? 'Behandlungszonen' : 'Зоны обработки'}
             </h2>
             <p className="text-brand-coffee/70 max-w-2xl mx-auto">
@@ -496,7 +496,7 @@ const Laser = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-brand-espresso mb-4">
+            <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-4">
               {isGerman ? 'Häufige Fragen' : 'Частые вопросы'}
             </h2>
           </motion.div>
@@ -540,7 +540,7 @@ const Laser = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="h-[2px] bg-gradient-to-r from-transparent via-brand-gold to-transparent mx-auto mb-6"
             />
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-brand-espresso mb-2">
+            <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-2">
               {isGerman ? 'Unsere Arbeiten' : 'Наши работы'}
             </h2>
             <p className="text-brand-coffee/60 text-sm tracking-widest uppercase">
@@ -621,7 +621,7 @@ const Laser = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-white mb-6">
+            <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-bold text-white mb-6">
               {isGerman ? 'Glatte Haut – dauerhaft' : 'Гладкая кожа — надолго'}
             </h2>
             <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">

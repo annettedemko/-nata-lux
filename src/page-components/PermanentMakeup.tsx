@@ -99,7 +99,7 @@ const PermanentMakeup = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-xl md:text-2xl lg:text-3xl lg:text-4xl font-heading font-semibold text-brand-espresso mb-4">
+            <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-4">
               {isGerman ? 'Unsere Leistungen' : 'Наши услуги'}
             </h2>
           </motion.div>
@@ -130,7 +130,7 @@ const PermanentMakeup = () => {
             transition={{ duration: 0.8 }}
             className="glass rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12"
           >
-            <h3 className="text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6">
+            <h3 className="text-lg md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6">
               {isGerman ? 'Was ist Permanent Make-up?' : 'Что такое перманентный макияж?'}
             </h3>
             <div className="space-y-3 md:space-y-4 text-sm md:text-base text-brand-coffee/80 leading-relaxed">
@@ -168,7 +168,7 @@ const PermanentMakeup = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-xl md:text-2xl lg:text-3xl lg:text-4xl font-heading font-semibold text-white mb-4 md:mb-6">
+            <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-semibold text-white mb-4 md:mb-6">
               {isGerman ? 'Beratungstermin vereinbaren' : 'Запишитесь на консультацию'}
             </h2>
             <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">

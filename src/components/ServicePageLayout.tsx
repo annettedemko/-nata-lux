@@ -161,7 +161,7 @@ export const ServicePageLayout = ({
               {isGerman ? 'Über die Behandlung' : 'О процедуре'}
             </div>
           </div>
-          <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-6 mt-2">
+          <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-6 mt-2">
             {aboutTitle}
           </h2>
           {aboutDescription.map((paragraph, index) => (
@@ -179,7 +179,7 @@ export const ServicePageLayout = ({
           transition={{ duration: 0.6 }}
           className="relative glass rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 mb-12 border border-brand-gold/10 shadow-xl shadow-brand-gold/5"
         >
-          <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-8">
+          <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-8">
             {isGerman ? 'Ihre Vorteile' : 'Ваши преимущества'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
@@ -210,7 +210,7 @@ export const ServicePageLayout = ({
             transition={{ duration: 0.6 }}
             className="relative glass rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 mb-12 border border-brand-gold/10 shadow-xl shadow-brand-gold/5"
           >
-            <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-8">
+            <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-8">
               {isGerman ? 'Wie läuft die Behandlung ab?' : 'Как проходит процедура?'}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
@@ -230,7 +230,7 @@ export const ServicePageLayout = ({
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-brand-espresso mb-1 text-lg">{step.title}</h3>
+                    <h3 className="font-semibold text-brand-espresso mb-1 text-base md:text-lg">{step.title}</h3>
                     <p className="text-brand-coffee/70 leading-relaxed">{step.description}</p>
                   </div>
                 </motion.div>
@@ -254,7 +254,7 @@ export const ServicePageLayout = ({
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,175,55,0.15),transparent_50%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(212,175,55,0.1),transparent_50%)]" />
             <div className="relative">
-              <h2 className="text-2xl md:text-3xl font-heading font-semibold text-white mb-4">
+              <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-semibold text-white mb-4">
                 {isGerman ? 'Preise & Dauer' : 'Цены и длительность'}
               </h2>
               <p className="text-white/70 mb-8 max-w-md mx-auto">
@@ -283,7 +283,7 @@ export const ServicePageLayout = ({
             transition={{ duration: 0.6 }}
             className="relative glass rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 mb-12 border border-brand-gold/10 shadow-xl shadow-brand-gold/5"
           >
-            <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-4">
+            <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-4">
               {isGerman ? 'Kontraindikationen' : 'Противопоказания'}
             </h2>
             <p className="text-brand-coffee/70 mb-6 leading-relaxed">
@@ -310,7 +310,7 @@ export const ServicePageLayout = ({
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
-            <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-8 text-center">
+            <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-8 text-center">
               {isGerman ? 'Häufige Fragen' : 'Частые вопросы'}
             </h2>
             <div className="space-y-4">
@@ -323,7 +323,7 @@ export const ServicePageLayout = ({
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="glass rounded-2xl p-6 md:p-8 border border-brand-gold/10 hover:border-brand-gold/30 transition-colors duration-300"
                 >
-                  <h3 className="font-semibold text-brand-espresso mb-3 text-lg">{item.q}</h3>
+                  <h3 className="font-semibold text-brand-espresso mb-3 text-base md:text-lg">{item.q}</h3>
                   <p className="text-brand-coffee/70 leading-relaxed whitespace-pre-line">{item.a}</p>
                 </motion.div>
               ))}
@@ -350,7 +350,7 @@ export const ServicePageLayout = ({
           </div>
 
           <div className="relative">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-white mb-4">
+            <h2 className="text-lg md:text-2xl lg:text-3xl xl:text-4xl font-heading font-bold text-white mb-4">
               {ctaTitle}
             </h2>
             <p className="text-white/90 mb-8 text-lg max-w-xl mx-auto">

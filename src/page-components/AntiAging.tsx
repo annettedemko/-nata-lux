@@ -120,7 +120,7 @@ const AntiAging = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-xl md:text-2xl lg:text-3xl lg:text-4xl font-heading font-semibold text-brand-espresso mb-4">
+            <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-4">
               {isGerman ? 'Unsere Behandlungen' : 'Наши процедуры'}
             </h2>
             <p className="text-brand-coffee/70 max-w-2xl mx-auto">
@@ -158,7 +158,7 @@ const AntiAging = () => {
               transition={{ duration: 0.8 }}
               className="glass rounded-3xl p-8"
             >
-              <h3 className="text-2xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6">
+              <h3 className="text-lg md:text-2xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6">
                 {isGerman ? 'Für Gesicht, Hals, Dekolleté' : 'Для лица, шеи, декольте'}
               </h3>
               <ul className="space-y-3 text-brand-coffee/80">
@@ -197,7 +197,7 @@ const AntiAging = () => {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="glass rounded-3xl p-8"
             >
-              <h3 className="text-2xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6">
+              <h3 className="text-lg md:text-2xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6">
                 {isGerman ? 'Für den Körper' : 'Для тела'}
               </h3>
               <ul className="space-y-3 text-brand-coffee/80">
@@ -243,7 +243,7 @@ const AntiAging = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="glass rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 mt-8 max-w-4xl mx-auto"
           >
-            <h3 className="text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-6 text-center">
+            <h3 className="text-lg md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-6 text-center">
               {isGerman ? 'Ergebnisse' : 'Результаты'}
             </h3>
             <div className="space-y-3 md:space-y-4 text-sm md:text-base text-brand-coffee/80 leading-relaxed">
@@ -276,7 +276,7 @@ const AntiAging = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-xl md:text-2xl lg:text-3xl lg:text-4xl font-heading font-semibold text-white mb-4 md:mb-6">
+            <h2 className="text-lg md:text-2xl lg:text-3xl font-heading font-semibold text-white mb-4 md:mb-6">
               {isGerman ? 'Beginnen Sie Ihren Weg zur Jugend' : 'Начните путь к молодости'}
             </h2>
             <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
