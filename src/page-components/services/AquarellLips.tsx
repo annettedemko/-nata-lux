@@ -37,21 +37,21 @@ const AquarellLips = () => {
           description={isGerman ? 'Pudertechnik für perfekte Augenbrauen' : 'Пудровая техника для идеальных бровей'}
           icon={Palette}
           href="/services/powder-brows"
-          image="/147.jpeg"
+          image="/65.jpg"
         />
         <ServiceCard
           title={isGerman ? 'Wimpernkranz' : 'Межресничка'}
           description={isGerman ? 'Permanent Make-up Wimpernkranz' : 'Перманентный макияж межресничного пространства'}
           icon={Eye}
           href="/services/wimpernkranz"
-          image="/56.jpg"
+          image="/114.jpg"
         />
         <ServiceCard
           title={isGerman ? 'Wimpernverlängerung' : 'Наращивание ресниц'}
           description={isGerman ? 'Klassisch oder Volumentechnik' : 'Классика или объём'}
           icon={Sparkles}
           href="/services/wimpernverlaengerung"
-          image="/8.jpeg"
+          image="/43.png"
         />
       </div>
     </div>

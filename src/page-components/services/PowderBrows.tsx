@@ -28,21 +28,21 @@ const PowderBrows = () => {
           description={isGerman ? 'Natürliche Lippenpigmentierung' : 'Естественная пигментация губ'}
           icon={Heart}
           href="/services/aquarell-lips"
-          image="/52.jpg"
+          image="/138.jpeg"
         />
         <ServiceCard
           title={isGerman ? 'Wimpernkranz' : 'Межресничка'}
           description={isGerman ? 'Permanent Make-up Wimpernkranz' : 'Перманентный макияж межресничного пространства'}
           icon={Eye}
           href="/services/wimpernkranz"
-          image="/56.jpg"
+          image="/114.jpg"
         />
         <ServiceCard
           title={isGerman ? 'Wimpernlaminierung' : 'Ламинирование ресниц'}
           description={isGerman ? 'Lash Lift für natürlich geschwungene Wimpern' : 'Lash Lift для естественно изогнутых ресниц'}
           icon={Sparkles}
           href="/services/wimpern-augenbrauen-laminierung"
-          image="/3.jpeg"
+          image="/131.jpeg"
         />
       </div>
     </div>

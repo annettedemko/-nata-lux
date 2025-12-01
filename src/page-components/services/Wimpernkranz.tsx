@@ -28,21 +28,21 @@ const Wimpernkranz = () => {
           description={isGerman ? 'Pudertechnik für perfekte Augenbrauen' : 'Пудровая техника для идеальных бровей'}
           icon={Palette}
           href="/services/powder-brows"
-          image="/147.jpeg"
+          image="/65.jpg"
         />
         <ServiceCard
           title="Aquarell Lips"
           description={isGerman ? 'Natürliche Lippenpigmentierung' : 'Естественная пигментация губ'}
           icon={Heart}
           href="/services/aquarell-lips"
-          image="/52.jpg"
+          image="/138.jpeg"
         />
         <ServiceCard
           title={isGerman ? 'Wimpernverlängerung' : 'Наращивание ресниц'}
           description={isGerman ? 'Klassisch oder Volumentechnik' : 'Классика или объём'}
           icon={Sparkles}
           href="/services/wimpernverlaengerung"
-          image="/8.jpeg"
+          image="/43.png"
         />
       </div>
     </div>
