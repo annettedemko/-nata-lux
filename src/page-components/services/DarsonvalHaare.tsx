@@ -16,6 +16,7 @@ const DarsonvalHaare = () => {
       russianImages={['/190 1.jpg']}
       altTextGerman="Darsonval Schema"
       altTextRussian="Схема дарсонваль"
+      scale={0.5}
     />
   );
 

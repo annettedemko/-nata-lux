@@ -150,7 +150,7 @@ export const ServicePageLayout = ({
         </div>
       </section>
 
-      <div className="container mx-auto px-4 max-w-5xl pb-20 w-full">
+      <div className="container mx-auto px-4 max-w-5xl pb-6 md:pb-20 w-full">
 
         {/* About Service */}
         <motion.section
@@ -266,7 +266,7 @@ export const ServicePageLayout = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative rounded-3xl p-10 md:p-12 mb-12 text-center bg-gradient-to-br from-brand-espresso via-brand-coffee to-brand-espresso overflow-hidden"
+            className="relative z-10 rounded-3xl p-10 md:p-12 mb-12 mt-6 text-center bg-gradient-to-br from-brand-espresso via-brand-coffee to-brand-espresso overflow-hidden"
           >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,175,55,0.15),transparent_50%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(212,175,55,0.1),transparent_50%)]" />
@@ -298,7 +298,7 @@ export const ServicePageLayout = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative glass rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 mb-12 border border-brand-gold/10 shadow-xl shadow-brand-gold/5"
+            className="relative glass rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 mb-12 mt-6 md:mt-0 border border-brand-gold/10 shadow-xl shadow-brand-gold/5"
           >
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', wordWrap: 'break-word' }}>
               {isGerman ? 'Kontraindikationen' : 'Противопоказания'}

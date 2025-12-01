@@ -601,8 +601,7 @@ const Laser = () => {
             key={selectedImage}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="relative w-[90vw] h-[80vh] md:w-[80vw] md:h-[85vh]"
-            onClick={(e) => e.stopPropagation()}
+            className="relative w-[90vw] h-[80vh] md:w-[80vw] md:h-[85vh] cursor-pointer"
           >
             <Image src={galleryImages[selectedImage]} alt="" fill className="object-contain" sizes="90vw" priority />
           </motion.div>

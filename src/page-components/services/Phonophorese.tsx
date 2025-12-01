@@ -16,6 +16,7 @@ const Phonophorese = () => {
       russianImages={['/186 1.jpg']}
       altTextGerman="Ultraschall-Phonophorese Schema"
       altTextRussian="Схема ультразвукового фонофореза"
+      scale={0.5}
     />
   );
 

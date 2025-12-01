@@ -10,6 +10,7 @@ interface ProcedureSchemaProps {
   altTextGerman: string;
   altTextRussian: string;
   className?: string;
+  scale?: number; // Scale factor: 0.5 = 50%, 1 = 100%, 1.5 = 150%
 }
 
 export const ProcedureSchema = ({
@@ -17,7 +18,8 @@ export const ProcedureSchema = ({
   russianImages,
   altTextGerman,
   altTextRussian,
-  className = ''
+  className = '',
+  scale = 1
 }: ProcedureSchemaProps) => {
   const { language } = useLanguage();
   const isGerman = language === 'de';
@@ -26,7 +28,7 @@ export const ProcedureSchema = ({
   const altText = isGerman ? altTextGerman : altTextRussian;
 
   return (
-    <div className={`my-6 md:my-8 ${className}`}>
+    <div className={`my-6 md:my-8 ${className}`} style={{ transform: `scale(${scale})`, transformOrigin: 'top center' }}>
       {images.map((imagePath, index) => (
         <motion.div
           key={imagePath}

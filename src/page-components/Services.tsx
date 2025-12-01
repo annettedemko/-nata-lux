@@ -54,7 +54,7 @@ const Services = () => {
       description: t('pmu.lips.desc'),
       icon: Heart,
       href: '/services/aquarell-lips',
-      image: '/96.jpg',
+      image: '/138.jpeg',
     },
     {
       title: t('pmu.eyeliner'),

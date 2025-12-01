@@ -17,6 +17,7 @@ const RFVakuum = () => {
       russianImages={['/187.jpg']}
       altTextGerman="RF-Vakuum Schema"
       altTextRussian="Схема RF-вакуум"
+      scale={0.5}
     />
   );
 

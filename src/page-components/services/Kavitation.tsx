@@ -16,6 +16,7 @@ const Kavitation = () => {
       russianImages={['/188 1.jpg', '/189.jpg']}
       altTextGerman="Kavitation Schema"
       altTextRussian="Схема кавитации"
+      scale={0.5}
     />
   );
 

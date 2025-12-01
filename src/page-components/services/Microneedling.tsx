@@ -19,6 +19,7 @@ const Microneedling = () => {
       russianImages={['/176 1.jpg']}
       altTextGerman="Microneedling Schema"
       altTextRussian="Схема микронидлинга"
+      scale={0.67}
     />
   );
 

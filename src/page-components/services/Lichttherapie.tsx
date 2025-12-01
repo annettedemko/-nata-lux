@@ -13,10 +13,11 @@ const Lichttherapie = () => {
   // Schema section with 2 images
   const SchemaSection = () => (
     <ProcedureSchema
-      germanImages={['/182 1.jpg', '/166 1.jpg']}
+      germanImages={['/182%201.jpg', '/166%201.jpg']}
       russianImages={['/182.jpg', '/166.jpeg']}
       altTextGerman="LED-Lichttherapie Schema"
       altTextRussian="Схема LED-светотерапии"
+      scale={0.5}
     />
   );
 
@@ -190,7 +191,15 @@ const Lichttherapie = () => {
       faq={isGerman ? [
         {
           q: 'Welche Lichtfarbe ist für mein Hautproblem richtig?',
-          a: '🔴 Rotes Licht für Anti-Aging, Faltenreduktion und Kollagenstimulation. 🔵 Blaues Licht für Akne und Entzündungen. 🟢 Grünes Licht für Pigmentflecken. 🟡 Gelbes Licht für empfindliche Haut und Rosacea. Oft kombinieren wir mehrere Farben für maximale Wirkung.'
+          a: `🔴 Rotes Licht für Anti-Aging, Faltenreduktion und Kollagenstimulation.
+
+🔵 Blaues Licht für Akne und Entzündungen.
+
+🟢 Grünes Licht für Pigmentflecken.
+
+🟡 Gelbes Licht für empfindliche Haut und Rosacea.
+
+Oft kombinieren wir mehrere Farben für maximale Wirkung.`
         },
         {
           q: 'Wie viele Sitzungen brauche ich für sichtbare Ergebnisse?',
@@ -223,7 +232,15 @@ const Lichttherapie = () => {
       ] : [
         {
           q: 'Какой цвет света подходит для моей проблемы?',
-          a: '🔴 Красный свет для anti-age, морщин и коллагена. 🔵 Синий свет для акне и воспалений. 🟢 Зелёный свет для пигментации. 🟡 Жёлтый свет для чувствительной кожи и розацеа. Часто комбинируем несколько цветов.'
+          a: `🔴 Красный свет для anti-age, морщин и коллагена.
+
+🔵 Синий свет для акне и воспалений.
+
+🟢 Зелёный свет для пигментации.
+
+🟡 Жёлтый свет для чувствительной кожи и розацеа.
+
+Часто комбинируем несколько цветов.`
         },
         {
           q: 'Сколько сеансов нужно для видимых результатов?',

@@ -17,6 +17,7 @@ const RFLifting = () => {
       russianImages={['/181.jpg']}
       altTextGerman="RF-Lifting Gesicht Schema"
       altTextRussian="Схема RF-лифтинга лица"
+      scale={0.67}
     />
   );
 
