@@ -107,12 +107,8 @@ const Microneedling = () => {
           description: 'Успокаивающая маска, дарсонваль или пилинг при необходимости. Инструкции по уходу дома.'
         }
       ]}
-      additionalSections={
-        <>
-          {schemaSection}
-          {photoGallery}
-        </>
-      }
+      procedureSchema={schemaSection}
+      additionalSections={photoGallery}
       priceSection="microneedling"
       contraindications={isGerman ? [
         'Aktive Akne oder Hautinfektionen',

@@ -45,6 +45,9 @@ export interface ServicePageProps {
     a: string;
   }[];
 
+  // Procedure schema (displayed after about, before benefits)
+  procedureSchema?: ReactNode;
+
   // Additional sections (для уникального контента)
   additionalSections?: ReactNode;
 
@@ -64,6 +67,7 @@ export const ServicePageLayout = ({
   priceSection,
   contraindications,
   faq,
+  procedureSchema,
   additionalSections,
   ctaTitle,
   ctaDescription,
@@ -170,6 +174,19 @@ export const ServicePageLayout = ({
             </p>
           ))}
         </motion.section>
+
+        {/* Procedure Schema */}
+        {procedureSchema && (
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-12"
+          >
+            {procedureSchema}
+          </motion.section>
+        )}
 
         {/* Benefits */}
         <motion.section

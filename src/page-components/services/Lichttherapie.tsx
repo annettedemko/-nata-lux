@@ -254,12 +254,8 @@ const Lichttherapie = () => {
           a: 'Да, для всех типов и оттенков кожи (включая тёмную), в отличие от IPL/лазера. Также идеальна для чувствительной кожи и розацеа.'
         }
       ]}
-      additionalSections={
-        <>
-          <SchemaSection />
-          <RecommendedServices />
-        </>
-      }
+      procedureSchema={<SchemaSection />}
+      additionalSections={<RecommendedServices />}
       ctaTitle={isGerman ? "Bereit für strahlende, gesunde Haut in München?" : "Готовы к сияющей, здоровой коже в Мюнхене?"}
       ctaDescription={isGerman
         ? "Buchen Sie jetzt Ihre LED-Lichttherapie in unserem Studio in München-Haidhausen und erleben Sie die heilende Kraft des Lichts – wissenschaftlich bewährt, schmerzfrei und für alle Hauttypen geeignet. Kostenlose Beratung inklusive!"

@@ -125,12 +125,8 @@ const RFVakuum = () => {
           description: 'Подтягивающий уход и рекомендации для дома.'
         }
       ]}
-      additionalSections={
-        <>
-          <SchemaSection />
-          <RecommendedServices />
-        </>
-      }
+      procedureSchema={<SchemaSection />}
+      additionalSections={<RecommendedServices />}
       priceSection="body-treatments"
       contraindications={isGerman ? [
         'Schwangerschaft und Stillzeit',

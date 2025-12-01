@@ -145,7 +145,7 @@ const DarsonvalHaare = () => {
           a: 'Да, дарсонваль может помочь при гормональном или стрессовом выпадении волос, стимулируя волосяные фолликулы. При тяжёлых формах рекомендуем также проконсультироваться с дерматологом.'
         }
       ]}
-      additionalSections={<SchemaSection />}
+      procedureSchema={<SchemaSection />}
       ctaTitle={isGerman ? "Bereit für kräftigeres, gesünderes Haar?" : "Готовы к более крепким, здоровым волосам?"}
       ctaDescription={isGerman
         ? "Buchen Sie jetzt Ihre Darsonval-Behandlung und starten Sie Ihre Haar-Kur."

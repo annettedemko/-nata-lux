@@ -199,13 +199,9 @@ const RFLifting = () => {
             : '8–12 процедур, 1–2× в неделю. Поддержание: 1× в месяц.'
         }
       ]}
+      procedureSchema={<SchemaSection />}
       // Add custom section for Face vs Body RF
-      additionalSections={
-        <>
-          <SchemaSection />
-          <RFApplications />
-        </>
-      }
+      additionalSections={<RFApplications />}
       priceSection="apparative-antiaging"
       contraindications={[
         isGerman ? 'Schwangerschaft und Stillzeit' : 'Беременность и кормление грудью',
