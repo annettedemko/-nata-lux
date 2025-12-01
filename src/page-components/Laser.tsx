@@ -682,3 +682,4 @@ const Laser = () => {
 };
 
 export default Laser;
+
