@@ -384,6 +384,8 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
     localStorage.setItem('language', lang);
+    // Force re-render by triggering a storage event
+    window.dispatchEvent(new Event('storage'));
   };
 
   const t = (key: string): string => {
