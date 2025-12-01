@@ -14,7 +14,7 @@ const Lichttherapie = () => {
   const SchemaSection = () => (
     <ProcedureSchema
       germanImages={['/182 1.jpg', '/166 1.jpg']}
-      russianImages={['/182.jpg', '/166.jpg']}
+      russianImages={['/182.jpg', '/166.jpeg']}
       altTextGerman="LED-Lichttherapie Schema"
       altTextRussian="Схема LED-светотерапии"
     />
