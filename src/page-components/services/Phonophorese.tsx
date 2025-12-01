@@ -79,37 +79,27 @@ const Phonophorese = () => {
           : 'Как самостоятельная процедура или в сочетании с микротоковой терапией, RF-лифтингом или LED-светотерапией — ультразвуковой фонофорез является одним из самых эффективных методов интенсивного ухода за кожей, регенерации и anti-age в современной эстетической косметологии.'
       ]}
       benefits={isGerman ? [
-        'Bis zu 10-fach tiefere Wirkstoffpenetration im Vergleich zu herkömmlichen Methoden',
-        'Intensive Tiefenhydratation und Nährstoffversorgung der Haut',
-        'Natürlicher Straffungs- und Lifting-Effekt ohne Injektionen',
-        'Verbesserung der Hautelastizität und Spannkraft',
-        'Sichtbare Reduzierung von feinen Linien, Falten und Schwellungen',
-        'Aufhellung von Pigmentflecken, Altersflecken und Hyperpigmentierung',
-        'Verbesserung des Hautbildes bei Aknenarben, Operationsnarben und Dehnungsstreifen',
-        'Anregung der körpereigenen Kollagen- und Elastinproduktion',
-        'Verbesserung der Mikrozirkulation und Sauerstoffversorgung',
-        'Lymphdrainage-Effekt für ein frisches, entgiftetes Hautbild',
-        'Linderung von Rötungen und Couperose',
-        'Sofort sichtbare Ergebnisse – prallere, strahlendere Haut direkt nach der Behandlung',
-        'Völlig schmerzfrei, entspannend und ohne Ausfallzeiten',
-        'Kombinierbar mit Mikrostromtherapie, RF-Lifting oder LED-Lichttherapie',
-        'Geeignet für alle Hauttypen, auch für empfindliche und zu Irritationen neigende Haut'
+        'Bis zu 10-fach tiefere Wirkstoffpenetration',
+        'Intensive Tiefenhydratation der Haut',
+        'Natürlicher Lifting-Effekt ohne Injektionen',
+        'Sichtbare Reduzierung von Falten und Schwellungen',
+        'Aufhellung von Pigmentflecken',
+        'Anregung der Kollagen- und Elastinproduktion',
+        'Verbesserung bei Narben und Dehnungsstreifen',
+        'Völlig schmerzfrei und ohne Ausfallzeiten',
+        'Kombinierbar mit anderen Behandlungen',
+        'Für alle Hauttypen geeignet'
       ] : [
-        'Проникновение активных веществ в 10 раз глубже по сравнению с традиционными методами',
-        'Интенсивное глубокое увлажнение и питание кожи',
-        'Естественный эффект подтяжки и лифтинга без инъекций',
-        'Улучшение эластичности и упругости кожи',
-        'Видимое уменьшение мелких морщин, складок и отеков',
-        'Осветление пигментных пятен, возрастных пятен и гиперпигментации',
-        'Улучшение состояния кожи при акне-рубцах, послеоперационных рубцах и растяжках',
-        'Стимуляция собственной выработки коллагена и эластина',
-        'Улучшение микроциркуляции и снабжения кожи кислородом',
-        'Лимфодренажный эффект для свежего, детоксицированного вида кожи',
-        'Уменьшение покраснений и купероза',
-        'Мгновенно видимые результаты – более упругая, сияющая кожа сразу после процедуры',
-        'Полностью безболезненно, расслабляюще и без периода восстановления',
-        'Комбинируется с микротоковой терапией, RF-лифтингом или LED-светотерапией',
-        'Подходит для всех типов кожи, в том числе для чувствительной и склонной к раздражениям'
+        'Проникновение активных веществ в 10 раз глубже',
+        'Интенсивное глубокое увлажнение кожи',
+        'Естественный лифтинг без инъекций',
+        'Видимое уменьшение морщин и отеков',
+        'Осветление пигментных пятен',
+        'Стимуляция выработки коллагена и эластина',
+        'Улучшение состояния при рубцах и растяжках',
+        'Полностью безболезненно и без восстановления',
+        'Комбинируется с другими процедурами',
+        'Подходит для всех типов кожи'
       ]}
       steps={isGerman ? [
         {
@@ -208,10 +198,6 @@ const Phonophorese = () => {
           a: 'Die Ultraschall-Phonophorese ist vielseitig einsetzbar und eignet sich bei: trockener, dehydrierter Haut | feinen Linien, Falten und Alterungserscheinungen | Pigmentflecken, Altersflecken und Hyperpigmentierung | Akne, Entzündungen und Unreinheiten | Aknenarben, Operationsnarben und Dehnungsstreifen | Couperose und Rötungen | schlaffer, erschlaffter Haut | müdem, fahlem Teint | Vorbereitung auf besondere Events (z.B. Hochzeit) | Nachbehandlung nach ästhetischen Eingriffen.'
         },
         {
-          q: 'Was kostet eine Phonophorese-Behandlung in München?',
-          a: 'Die Preise variieren je nach Behandlungsumfang: Phonophorese Gesicht (60 Min.) kostet 85€, Gesicht + Hals + Dekolleté (75 Min.) 105€ und die Premium-Variante mit Exosomen (75 Min.) 150€. Wir bieten attraktive Kur-Pakete: 3er-Karte für 230€ (spart 25€) und 5er-Karte für 360€ (spart 65€). Damit sichern Sie sich nicht nur bessere Preise, sondern auch nachhaltige, langfristige Ergebnisse. Die Investition lohnt sich – viele Kunden berichten, dass die Phonophorese ihre teuren Cremes und Seren ersetzen konnte.'
-        },
-        {
           q: 'Unterschied zwischen Phonophorese und Ultraschall-Gesichtsbehandlung?',
           a: 'Bei der reinen Ultraschall-Gesichtsbehandlung (Sonophorese) wird der Ultraschall hauptsächlich zur Tiefenreinigung, zum Peeling und zur Massage eingesetzt. Bei der Phonophorese hingegen steht die tiefe Einschleusung von hochwertigen Wirkstoffen (Hyaluron, Kollagen, Vitamine, Exosomen etc.) im Vordergrund. Der Ultraschall öffnet dabei die Zellmembranen und transportiert die Wirkstoffe bis zu 10× tiefer in die Haut. Die Phonophorese ist somit deutlich effektiver für Anti-Aging, intensive Feuchtigkeit und Regeneration.'
         }
@@ -243,10 +229,6 @@ const Phonophorese = () => {
         {
           q: 'При каких проблемах кожи подходит фонофорез?',
           a: 'Ультразвуковой фонофорез универсален и подходит при: сухой, обезвоженной коже | мелких морщинах, складках и признаках старения | пигментных пятнах, возрастных пятнах и гиперпигментации | акне, воспалениях и несовершенствах | рубцах от акне, послеоперационных рубцах и растяжках | куперозе и покраснениях | дряблой, обвисшей коже | усталом, тусклом цвете лица | подготовке к особым событиям (например, свадьбе) | последующем уходе после эстетических процедур.'
-        },
-        {
-          q: 'Сколько стоит процедура фонофореза в Мюнхене?',
-          a: 'Цены варьируются в зависимости от объема процедуры: фонофорез лица (60 мин.) стоит 85€, лицо + шея + декольте (75 мин.) 105€, а премиум-вариант с экзосомами (75 мин.) 150€. Мы предлагаем привлекательные курсовые пакеты: карта на 3 процедуры за 230€ (экономия 25€) и карта на 5 процедур за 360€ (экономия 65€). Так вы получаете не только лучшие цены, но и устойчивые, долгосрочные результаты. Инвестиция того стоит — многие клиенты сообщают, что фонофорез смог заменить их дорогие кремы и сыворотки.'
         },
         {
           q: 'Разница между фонофорезом и ультразвуковой чисткой лица?',

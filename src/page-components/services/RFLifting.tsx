@@ -5,6 +5,7 @@ import { Zap, Droplet, Activity, Star } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ServiceCard } from '@/components/ServiceCard';
 import { ProcedureSchema } from '@/components/ProcedureSchema';
+import { PremiumGallery } from '@/components/PremiumGallery';
 
 const RFLifting = () => {
   const { language } = useLanguage();
@@ -119,6 +120,12 @@ const RFLifting = () => {
         </div>
       </div>
 
+      {/* Gallery */}
+      <PremiumGallery
+        images={['/162.jpeg', '/183.jpg', '/184.jpg']}
+        title={isGerman ? 'Vorher-Nachher Ergebnisse' : 'Результаты до и после'}
+      />
+
       {/* Related Services */}
       <div className="mt-12">
         <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-6 text-center">
@@ -188,7 +195,7 @@ const RFLifting = () => {
             : 'Очищение и нанесение контактного геля.'
         },
         {
-          title: isGerman ? '3. Behandlung (45-75 Min.)' : '3. Процедура (45-75 мин.)',
+          title: isGerman ? '3. Behandlung (60 Min.)' : '3. Процедура (60 мин.)',
           description: isGerman
             ? 'Sanfte RF-Behandlung mit angenehmer Wärme. Die Gesamtbehandlungsdauer beträgt ca. 60 Min.: Gesicht 30 Min., Hals 15 Min., Dekolleté 15 Min.'
             : 'Мягкая RF-обработка с приятным теплом. Общая продолжительность процедуры около 60 мин.: лицо 30 мин., шея 15 мин., декольте 15 мин.'

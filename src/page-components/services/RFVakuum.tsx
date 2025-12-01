@@ -5,6 +5,7 @@ import { Star, Waves, Zap, Activity } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ServiceCard } from '@/components/ServiceCard';
 import { ProcedureSchema } from '@/components/ProcedureSchema';
+import { PremiumGallery } from '@/components/PremiumGallery';
 
 const RFVakuum = () => {
   const { language } = useLanguage();
@@ -21,36 +22,42 @@ const RFVakuum = () => {
     />
   );
 
-  // Recommended body contouring services
-  const RecommendedServices = () => (
-    <div className="mt-12">
-      <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-6 text-center">
-        {isGerman ? 'Empfohlene Kombinationen' : 'Рекомендуемые комбинации'}
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <ServiceCard
-          title={isGerman ? 'Kavitation' : 'Кавитация'}
-          description={isGerman ? 'Ultraschall für Fettreduktion' : 'Ультразвук для уменьшения жира'}
-          icon={Waves}
-          href="/services/koerperbehandlungen/kavitation"
-          image="/83.jpg"
-        />
-        <ServiceCard
-          title="RF-Lifting"
-          description={isGerman ? 'Radiofrequenz für Gesichtsstraffung' : 'Радиочастоты для подтяжки лица'}
-          icon={Zap}
-          href="/services/apparative-anti-aging/rf-lifting"
-          image="/162.jpeg"
-        />
-        <ServiceCard
-          title={isGerman ? 'Biostrom' : 'Биотоки'}
-          description={isGerman ? 'Mikrostrom für Lifting-Effekt' : 'Микротоки для лифтинг-эффекта'}
-          icon={Activity}
-          href="/services/apparative-anti-aging/biostrom"
-          image="/125.webp"
-        />
+  // Additional sections with gallery and recommended services
+  const AdditionalSections = () => (
+    <>
+      <PremiumGallery
+        images={['/78.PNG', '/77.PNG', '/81.jpg', '/82.jpg', '/83.jpg', '/84.jpg', '/85.jpg', '/86.jpg']}
+        title={isGerman ? 'Unsere Arbeiten' : 'Наши работы'}
+      />
+      <div className="mt-12">
+        <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-6 text-center">
+          {isGerman ? 'Empfohlene Kombinationen' : 'Рекомендуемые комбинации'}
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <ServiceCard
+            title={isGerman ? 'Kavitation' : 'Кавитация'}
+            description={isGerman ? 'Ultraschall für Fettreduktion' : 'Ультразвук для уменьшения жира'}
+            icon={Waves}
+            href="/services/koerperbehandlungen/kavitation"
+            image="/83.jpg"
+          />
+          <ServiceCard
+            title="RF-Lifting"
+            description={isGerman ? 'Radiofrequenz für Gesichtsstraffung' : 'Радиочастоты для подтяжки лица'}
+            icon={Zap}
+            href="/services/apparative-anti-aging/rf-lifting"
+            image="/162.jpeg"
+          />
+          <ServiceCard
+            title={isGerman ? 'Biostrom' : 'Биотоки'}
+            description={isGerman ? 'Mikrostrom für Lifting-Effekt' : 'Микротоки для лифтинг-эффекта'}
+            icon={Activity}
+            href="/services/apparative-anti-aging/biostrom"
+            image="/125.webp"
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 
   return (
@@ -127,7 +134,7 @@ const RFVakuum = () => {
         }
       ]}
       procedureSchema={<SchemaSection />}
-      additionalSections={<RecommendedServices />}
+      additionalSections={<AdditionalSections />}
       priceSection="body-treatments"
       contraindications={isGerman ? [
         'Schwangerschaft und Stillzeit',

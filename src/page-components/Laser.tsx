@@ -221,9 +221,24 @@ const Laser = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-brand-cream">
+    <div className="relative w-full overflow-x-hidden">
+      {/* Background */}
+      <div className="fixed inset-0 z-0 w-full">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: 'url(/45.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 w-full overflow-x-hidden min-h-screen">
       {/* Hero Section - SEO optimized */}
-      <section className="relative py-20 md:py-28 lg:py-32 bg-gradient-to-br from-brand-latte via-brand-cream to-white overflow-hidden">
+      <section className="relative py-20 md:py-28 lg:py-32 overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 md:w-[500px] md:h-[500px] bg-brand-gold/10 rounded-full blur-3xl -z-0" />
         <div className="absolute bottom-0 left-0 w-64 h-64 md:w-[400px] md:h-[400px] bg-brand-gold/5 rounded-full blur-3xl -z-0" />
 
@@ -661,6 +676,7 @@ const Laser = () => {
           </motion.div>
         </div>
       </section>
+      </div>
     </div>
   );
 };

@@ -4,10 +4,22 @@ import { ServicePageLayout } from '@/components/ServicePageLayout';
 import { Activity, Droplet, Sun, Zap } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ServiceCard } from '@/components/ServiceCard';
+import { ProcedureSchema } from '@/components/ProcedureSchema';
 
 const Biostrom = () => {
   const { language } = useLanguage();
   const isGerman = language === 'de';
+
+  // Schema section
+  const SchemaSection = () => (
+    <ProcedureSchema
+      germanImages={['/182 1.jpg']}
+      russianImages={['/182.jpg']}
+      altTextGerman="Mikrostromtherapie Schema"
+      altTextRussian="Схема микротоковой терапии"
+      scale={0.67}
+    />
+  );
 
   // Custom section for recommended combinations
   const RecommendedServices = () => (
@@ -130,6 +142,7 @@ const Biostrom = () => {
           description: 'Для оптимальных и долговременных результатов вы получите индивидуальные рекомендации по уходу дома и план последующих процедур.'
         }
       ]}
+      procedureSchema={<SchemaSection />}
       priceSection="apparative-antiaging"
       contraindications={isGerman ? [
         'Schwangerschaft',

@@ -2,14 +2,24 @@
 
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { CheckCircle2, Clock, Eye, Sparkles, Heart } from 'lucide-react';
+import { CheckCircle2, Clock, Eye, Sparkles, Heart, X, ChevronLeft, ChevronRight, Palette, Layers } from 'lucide-react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Link } from '@/components/LinkAdapter';
+import { ServiceCard } from '@/components/ServiceCard';
+import { useState } from 'react';
 
 const Wimpernverlaengerung = () => {
   const { language } = useLanguage();
   const isGerman = language === 'de';
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+
+  const galleryImages = ['/43.png', '/59.jpg', '/61.jpg', '/63.jpg', '/64.jpg', '/72.jpg', '/113.jpg', '/116.jpg', '/139.jpeg', '/140.jpeg', '/144.jpeg', '/145.jpeg', '/146.jpeg'];
+
+  const openLightbox = (index: number) => setSelectedImage(index);
+  const closeLightbox = () => setSelectedImage(null);
+  const nextImage = () => setSelectedImage((prev) => prev !== null ? (prev + 1) % galleryImages.length : null);
+  const prevImage = () => setSelectedImage((prev) => prev !== null ? (prev - 1 + galleryImages.length) % galleryImages.length : null);
 
   return (
     <div className="relative min-h-screen">
@@ -685,20 +695,94 @@ const Wimpernverlaengerung = () => {
                 {isGerman ? 'Unsere Arbeiten' : 'Наши работы'}
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {['/43.png', '/59.jpg', '/61.jpg', '/63.jpg', '/64.jpg', '/72.jpg', '/113.jpg', '/116.jpg', '/139.jpeg', '/140.jpeg', '/144.jpeg', '/145.jpeg', '/146.jpeg'].map((src, index) => (
-                  <div key={index} className="relative aspect-square rounded-xl overflow-hidden">
+                {galleryImages.map((src, index) => (
+                  <div
+                    key={index}
+                    className="relative aspect-square rounded-xl overflow-hidden cursor-pointer group"
+                    onClick={() => openLightbox(index)}
+                  >
                     <Image
                       src={src}
                       alt={`${isGerman ? 'Wimpernverlängerung' : 'Наращивание ресниц'} ${index + 1}`}
                       fill
-                      className="object-cover hover:scale-105 transition-transform duration-300"
+                      className="object-cover group-hover:scale-110 transition-transform duration-300"
                       sizes="(max-width: 768px) 50vw, 25vw"
                     />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
                   </div>
                 ))}
               </div>
             </div>
           </motion.section>
+
+          {/* Recommended Services */}
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-20"
+          >
+            <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-10 md:p-12">
+              <h2 className="text-3xl font-heading font-bold text-brand-espresso mb-8 text-center">
+                {isGerman ? 'Weitere Behandlungen' : 'Другие процедуры'}
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <ServiceCard
+                  title="Powder Brows"
+                  description={isGerman ? 'Permanent Make-up für perfekte Augenbrauen' : 'Перманентный макияж для идеальных бровей'}
+                  icon={Palette}
+                  href="/services/powder-brows"
+                  image="/65.jpg"
+                />
+                <ServiceCard
+                  title={isGerman ? 'Wimpern- & Augenbrauenlaminierung' : 'Ламинирование ресниц и бровей'}
+                  description={isGerman ? 'Lash Lift & Brow Lift' : 'Lash Lift и Brow Lift'}
+                  icon={Layers}
+                  href="/services/wimpern-augenbrauen-laminierung"
+                  image="/131.jpeg"
+                />
+                <ServiceCard
+                  title={isGerman ? 'Wimpernkranz' : 'Межресничка'}
+                  description={isGerman ? 'Permanent Make-up Wimpernkranz' : 'Перманентный макияж межресничного пространства'}
+                  icon={Eye}
+                  href="/services/wimpernkranz"
+                  image="/114.jpg"
+                />
+              </div>
+            </div>
+          </motion.section>
+
+          {/* Lightbox */}
+          {selectedImage !== null && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex items-center justify-center"
+              onClick={closeLightbox}
+            >
+              <button onClick={closeLightbox} className="absolute top-6 right-6 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-300">
+                <X className="w-6 h-6 text-white" />
+              </button>
+              <button onClick={(e) => { e.stopPropagation(); prevImage(); }} className="absolute left-4 md:left-8 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-300">
+                <ChevronLeft className="w-6 h-6 text-white" />
+              </button>
+              <button onClick={(e) => { e.stopPropagation(); nextImage(); }} className="absolute right-4 md:right-8 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-300">
+                <ChevronRight className="w-6 h-6 text-white" />
+              </button>
+              <motion.div
+                key={selectedImage}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="relative w-[90vw] h-[80vh] md:w-[80vw] md:h-[85vh] cursor-pointer"
+              >
+                <Image src={galleryImages[selectedImage]} alt="" fill className="object-contain" sizes="90vw" priority />
+              </motion.div>
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/60 text-sm font-medium tracking-wider">
+                {selectedImage + 1} / {galleryImages.length}
+              </div>
+            </motion.div>
+          )}
 
           {/* SEO Footer Note */}
           <div className="text-center text-sm text-brand-espresso/50 pb-8">

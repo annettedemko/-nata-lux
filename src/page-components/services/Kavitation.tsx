@@ -5,9 +5,11 @@ import { Waves, Star, Zap, Droplet } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ServiceCard } from '@/components/ServiceCard';
 import { ProcedureSchema } from '@/components/ProcedureSchema';
+import { PremiumGallery } from '@/components/PremiumGallery';
 
 const Kavitation = () => {
-  const { isGerman } = useLanguage();
+  const { language } = useLanguage();
+  const isGerman = language === 'de';
 
   // Schema section with 2 images
   const SchemaSection = () => (
@@ -16,40 +18,46 @@ const Kavitation = () => {
       russianImages={['/188 1.jpg', '/189.jpg']}
       altTextGerman="Kavitation Schema"
       altTextRussian="Схема кавитации"
-      scale={0.5}
+      scale={0.25}
     />
   );
 
-  // Recommended body contouring services
-  const RecommendedServices = () => (
-    <div className="mt-12">
-      <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-6 text-center">
-        {isGerman ? 'Empfohlene Kombinationen' : 'Рекомендуемые комбинации'}
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <ServiceCard
-          title="RF-Vakuum"
-          description={isGerman ? 'Radiofrequenz mit Vakuum für Cellulite-Reduktion' : 'Радиочастоты с вакуумом для уменьшения целлюлита'}
-          icon={Star}
-          href="/services/koerperbehandlungen/rf-vakuum"
-          image="/83.jpg"
-        />
-        <ServiceCard
-          title="RF-Lifting"
-          description={isGerman ? 'Radiofrequenz für Hautstraffung' : 'Радиочастоты для подтяжки кожи'}
-          icon={Zap}
-          href="/services/apparative-anti-aging/rf-lifting"
-          image="/162.jpeg"
-        />
-        <ServiceCard
-          title={isGerman ? 'Ultraschall' : 'Ультразвук'}
-          description={isGerman ? 'Tiefenwirksame Hautpflege' : 'Глубокий уход за кожей'}
-          icon={Droplet}
-          href="/services/apparative-anti-aging/ultraschall"
-          image="/126.jpeg"
-        />
+  // Additional sections with gallery and recommended services
+  const AdditionalSections = () => (
+    <>
+      <PremiumGallery
+        images={['/173.jpeg', '/171.jpeg', '/172.jpeg']}
+        title={isGerman ? 'Unsere Arbeiten' : 'Наши работы'}
+      />
+      <div className="mt-12">
+        <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-6 text-center">
+          {isGerman ? 'Empfohlene Kombinationen' : 'Рекомендуемые комбинации'}
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <ServiceCard
+            title="RF-Vakuum"
+            description={isGerman ? 'Radiofrequenz mit Vakuum für Cellulite-Reduktion' : 'Радиочастоты с вакуумом для уменьшения целлюлита'}
+            icon={Star}
+            href="/services/koerperbehandlungen/rf-vakuum"
+            image="/83.jpg"
+          />
+          <ServiceCard
+            title="RF-Lifting"
+            description={isGerman ? 'Radiofrequenz für Hautstraffung' : 'Радиочастоты для подтяжки кожи'}
+            icon={Zap}
+            href="/services/apparative-anti-aging/rf-lifting"
+            image="/162.jpeg"
+          />
+          <ServiceCard
+            title={isGerman ? 'Ultraschall' : 'Ультразвук'}
+            description={isGerman ? 'Tiefenwirksame Hautpflege' : 'Глубокий уход за кожей'}
+            icon={Droplet}
+            href="/services/apparative-anti-aging/ultraschall"
+            image="/126.jpeg"
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 
   return (
@@ -60,78 +68,60 @@ const Kavitation = () => {
       aboutTitle={isGerman ? "Was ist Ultraschallkavitation?" : "Что такое ультразвуковая кавитация"}
       aboutDescription={[
         isGerman
-          ? 'Ultraschallkavitation (auch Fett-Kavitation oder Lipolyse genannt) ist eine moderne, hochwirksame und völlig nicht-invasive apparative Methode zur gezielten Reduktion lokaler Fettdepots und zur Körperkonturierung. In unserem Kosmetikstudio in München-Haidhausen setzen wir professionelle Kavitationsgeräte der neuesten Generation ein, die niederfrequenten Ultraschall (typischerweise 28–40 kHz) zur sanften, aber effektiven Zerstörung von Fettzellen nutzen — ohne Operation, ohne Schnitte, ohne Injektionen und ohne Ausfallzeiten.'
-          : 'Ультразвуковая кавитация (также называется жировая кавитация или липолиз) — это современный, высокоэффективный и полностью неинвазивный аппаратный метод целенаправленного уменьшения локальных жировых отложений и коррекции контуров тела. В нашей косметологической студии в Мюнхене-Хайдхаузен мы применяем профессиональное кавитационное оборудование нового поколения, которое использует низкочастотный ультразвук (обычно 28–40 кГц) для мягкого, но эффективного разрушения жировых клеток — без операции, без разрезов, без инъекций и без периода реабилитации.',
+          ? 'Ultraschallkavitation ist eine nicht-invasive Methode zur gezielten Fettreduktion mit niederfrequentem Ultraschall (28–40 kHz). Die Ultraschallwellen erzeugen Kavitationsblasen, die Fettzellen sanft zerstören — ohne Operation, ohne Schnitte, ohne Ausfallzeiten.'
+          : 'Ультразвуковая кавитация — это неинвазивный метод целенаправленного уменьшения жира с помощью низкочастотного ультразвука (28–40 кГц). Ультразвуковые волны создают кавитационные пузырьки, которые мягко разрушают жировые клетки — без операции, без разрезов, без реабилитации.',
 
         isGerman
-          ? 'Wie funktioniert die Kavitation? Die niederfrequenten Ultraschallwellen dringen tief in das Unterhautfettgewebe (Hypodermis) ein und erzeugen dort einen physikalischen Effekt namens „Kavitation": Es entstehen mikroskopisch kleine Gasblasen (Kavitationsblasen) innerhalb und zwischen den Fettzellen. Diese Blasen expandieren und kollabieren schnell (implodieren), wodurch ein Druckwechsel entsteht, der die Membran der Fettzellen (Adipozyten) destabilisiert und auflöst. Das in den Fettzellen gespeicherte Fett (Triglyceride) wird freigesetzt und in kleinere Moleküle (freie Fettsäuren und Glycerin) zerlegt.'
-          : 'Как работает кавитация? Низкочастотные ультразвуковые волны проникают глубоко в подкожную жировую ткань (гиподерму) и создают там физический эффект под названием «кавитация»: возникают микроскопические газовые пузырьки (кавитационные пузырьки) внутри и между жировыми клетками. Эти пузырьки быстро расширяются и схлопываются (имплодируют), создавая перепад давления, который дестабилизирует и разрушает мембрану жировых клеток (адипоцитов). Хранящийся в жировых клетках жир (триглицериды) высвобождается и расщепляется на более мелкие молекулы (свободные жирные кислоты и глицерин).',
+          ? 'Das freigesetzte Fett wird vom Körper natürlich über Lymphe, Leber und Nieren ausgeschieden (3–7 Tage). Wichtig: viel Wasser trinken, moderate Bewegung, gesunde Ernährung.'
+          : 'Высвобожденный жир естественным образом выводится организмом через лимфу, печень и почки (3–7 дней). Важно: пить много воды, умеренное движение, здоровое питание.',
 
         isGerman
-          ? 'Die freigesetzten Fettsäuren und Glycerin werden anschließend vom Körper auf natürlichem Wege verarbeitet und ausgeschieden: über das Lymphsystem abtransportiert, in die Leber gebracht, dort verstoffwechselt und schließlich über die Nieren und den Darm ausgeschieden. Dieser Prozess dauert 3–7 Tage nach jeder Behandlung. Daher ist es wichtig, nach der Kavitation ausreichend Wasser zu trinken (mind. 2 Liter täglich), sich moderat zu bewegen (Spaziergang, leichter Sport) und auf eine gesunde Ernährung zu achten, um den Fettabbau zu beschleunigen und zu unterstützen.'
-          : 'Высвобожденные жирные кислоты и глицерин затем естественным образом перерабатываются и выводятся организмом: транспортируются через лимфатическую систему, попадают в печень, там метаболизируются и в конечном итоге выводятся через почки и кишечник. Этот процесс занимает 3–7 дней после каждой процедуры. Поэтому важно после кавитации пить достаточно воды (мин. 2 литра в день), умеренно двигаться (прогулки, лёгкий спорт) и придерживаться здорового питания, чтобы ускорить и поддержать липолиз.',
-
-        isGerman
-          ? 'Im Gegensatz zur operativen Fettabsaugung (Liposuktion) ist die Ultraschallkavitation völlig nicht-invasiv, schmerzfrei, sicher und ohne Ausfallzeiten. Es gibt keine Narben, keine Blutergüsse, keine Schwellungen und kein Risiko für Komplikationen wie Infektionen oder Anästhesierisiken. Die Behandlung ist ideal für Menschen, die hartnäckige Fettpolster („Problemzonen") haben, die sich trotz gesunder Ernährung und regelmäßigem Sport nicht reduzieren lassen. Die Kavitation ist keine Methode zur Gewichtsreduktion bei starkem Übergewicht, sondern eine Methode zur gezielten Körperkonturierung und Formung bei normalem oder leicht erhöhtem Body-Mass-Index (BMI 18–30).'
-          : 'В отличие от операционной липосакции, ультразвуковая кавитация полностью неинвазивна, безболезненна, безопасна и без периода реабилитации. Нет рубцов, синяков, отёков и риска осложнений, таких как инфекции или риски анестезии. Процедура идеальна для людей, у которых есть упорные жировые отложения («проблемные зоны»), которые не уменьшаются несмотря на здоровое питание и регулярные занятия спортом. Кавитация — это не метод похудения при сильном избыточном весе, а метод целенаправленной коррекции контуров тела и формирования при нормальном или слегка повышенном индексе массы тела (ИМТ 18–30).',
-
-        isGerman
-          ? 'In unserem Kosmetikstudio in München bieten wir Ultraschallkavitation für alle typischen Problemzonen an: Bauch (Oberbauch, Unterbauch, seitlicher Bauch/"Love Handles"), Hüften („Reiterhosen"), Oberschenkel (Innen- und Außenseite), Gesäß, Arme (Oberarme/"Winkearme"), Knie (über den Knien) und Rücken (unterer Rücken). Die Behandlung kann einzeln oder in Kombination mit anderen Methoden (RF-Lifting für Hautstraffung, Vakuum-Therapie für Lymphdrainage, LED-Lichttherapie für Regeneration) durchgeführt werden, um maximale Ergebnisse zu erzielen. Viele unserer Kunden aus München und Umgebung wählen die Kavitation als effektivste und sicherste nicht-invasive Alternative zur Fettabsaugung.'
-          : 'В нашей косметологической студии в Мюнхене мы предлагаем ультразвуковую кавитацию для всех типичных проблемных зон: живот (верхний живот, нижний живот, боковой живот/"ушки"), бёдра («галифе»), бедра (внутренняя и наружная сторона), ягодицы, руки (плечи/"крылья"), колени (над коленями) и спина (нижняя часть спины). Процедура может проводиться отдельно или в комбинации с другими методами (RF-лифтинг для подтяжки кожи, вакуумная терапия для лимфодренажа, светотерапия для регенерации) для достижения максимальных результатов. Многие наши клиенты из Мюнхена и окрестностей выбирают кавитацию как самую эффективную и безопасную неинвазивную альтернативу липосакции.'
+          ? 'Ideal für hartnäckige Problemzonen bei BMI 18–30. Typische Zonen: Bauch, Hüften, Oberschenkel, Gesäß, Arme. Kombinierbar mit RF-Lifting, Vakuum-Therapie und Lymphdrainage.'
+          : 'Идеально для упорных проблемных зон при ИМТ 18–30. Типичные зоны: живот, бёдра, галифе, ягодицы, руки. Можно комбинировать с RF-лифтингом, вакуумной терапией и лимфодренажем.'
       ]}
       benefits={[
-        isGerman ? 'Gezielte Reduktion lokaler Fettdepots ohne Operation und ohne Schnitte' : 'Целенаправленное уменьшение локальных жировых отложений без операции и без разрезов',
-        isGerman ? 'Umfangsreduktion von 2–6 cm pro Behandlungszone (je nach Ausgangsvolumen)' : 'Уменьшение объёмов на 2–6 см за зону обработки (в зависимости от начального объёма)',
-        isGerman ? 'Körperkonturierung und Modellierung der Silhouette' : 'Коррекция контуров тела и моделирование силуэта',
-        isGerman ? 'Reduzierung hartnäckiger Fettpolster an Bauch, Hüften, Oberschenkeln, Gesäß, Armen' : 'Уменьшение упорных жировых отложений на животе, бёдрах, галифе, ягодицах, руках',
-        isGerman ? 'Verbesserung der Hautstruktur und Reduzierung von Cellulite ("Orangenhaut")' : 'Улучшение структуры кожи и уменьшение целлюлита ("апельсиновой корки")',
-        isGerman ? 'Straffung der Haut und Verbesserung der Hautqualität' : 'Подтяжка кожи и улучшение качества кожи',
-        isGerman ? 'Aktivierung des Lymphsystems und Entgiftung' : 'Активация лимфатической системы и детоксикация',
-        isGerman ? 'Verbesserung der Mikrozirkulation und des Stoffwechsels' : 'Улучшение микроциркуляции и метаболизма',
-        isGerman ? 'Völlig schmerzfrei und entspannend' : 'Абсолютно безболезненно и расслабляюще',
-        isGerman ? 'Keine Narben, keine Blutergüsse, keine Schwellungen' : 'Без рубцов, без синяков, без отёков',
-        isGerman ? 'Keine Ausfallzeiten — sofort zurück zum normalen Alltag' : 'Без периода реабилитации — сразу возврат к обычной жизни',
-        isGerman ? 'Keine Anästhesie, keine Injektionen, keine Risiken' : 'Без анестезии, без инъекций, без рисков',
-        isGerman ? 'Natürliche, sichere Alternative zur Liposuktion (Fettabsaugung)' : 'Естественная, безопасная альтернатива липосакции',
-        isGerman ? 'Kombinierbar mit RF-Lifting, Vakuum-Therapie und Lymphdrainage für maximale Wirkung' : 'Можно комбинировать с RF-лифтингом, вакуумной терапией и лимфодренажем для максимального эффекта',
-        isGerman ? 'Geeignet für Frauen und Männer mit BMI 18–30' : 'Подходит для женщин и мужчин с ИМТ 18–30',
-        isGerman ? 'Sofort sichtbare Ergebnisse nach 3–4 Behandlungen' : 'Сразу видимые результаты после 3–4 процедур',
-        isGerman ? 'Langfristige Ergebnisse bei gesunder Lebensweise' : 'Долгосрочные результаты при здоровом образе жизни'
+        isGerman ? 'Gezielte Fettreduktion ohne Operation' : 'Целенаправленное уменьшение жира без операции',
+        isGerman ? 'Umfangsreduktion 2–6 cm pro Zone' : 'Уменьшение объёмов 2–6 см за зону',
+        isGerman ? 'Reduzierung von Cellulite' : 'Уменьшение целлюлита',
+        isGerman ? 'Völlig schmerzfrei und entspannend' : 'Абсолютно безболезненно',
+        isGerman ? 'Keine Ausfallzeiten' : 'Без реабилитации',
+        isGerman ? 'Sichere Alternative zur Liposuktion' : 'Безопасная альтернатива липосакции',
+        isGerman ? 'Sichtbare Ergebnisse nach 3–4 Behandlungen' : 'Видимые результаты после 3–4 процедур'
       ]}
       steps={[
         {
-          title: isGerman ? '1. Kostenlose Beratung, Körperanalyse und Vermessung' : '1. Бесплатная консультация, анализ тела и замеры',
+          title: isGerman ? '1. Beratung und Vermessung' : '1. Консультация и замеры',
           description: isGerman
-            ? 'Zu Beginn analysieren wir Ihre Körperkonstitution, Ihren BMI und Ihre individuellen Behandlungsziele. Wir besprechen, welche Problemzonen Sie behandeln möchten (Bauch, Hüften, Oberschenkel, Gesäß, Arme, Knie, Rücken) und welche Ergebnisse realistisch erreichbar sind. Wir messen die Umfänge der Behandlungszonen (mit Maßband), machen optional Fotos für den Vorher-Nachher-Vergleich und klären alle Fragen zu Ablauf, Wirkung, empfohlener Anzahl der Sitzungen und möglichen Kombinationen mit anderen Behandlungen (RF-Lifting, Vakuum-Therapie, Lymphdrainage). Alle Kontraindikationen werden besprochen.'
-            : 'В начале мы анализируем вашу конституцию тела, ИМТ и индивидуальные цели. Обсуждаем, какие проблемные зоны вы хотите обработать (живот, бёдра, галифе, ягодицы, руки, колени, спина) и какие результаты реально достижимы. Мы измеряем объёмы зон обработки (сантиметровой лентой), опционально делаем фото для сравнения до/после и отвечаем на все вопросы о процедуре, эффекте, рекомендуемом количестве сеансов и возможных комбинациях с другими процедурами (RF-лифтинг, вакуумная терапия, лимфодренаж). Обсуждаем все противопоказания.'
+            ? 'Analyse der Problemzonen, Messung der Umfänge, Besprechung der Ziele.'
+            : 'Анализ проблемных зон, измерение объёмов, обсуждение целей.'
         },
         {
-          title: isGerman ? '2. Vorbereitung der Behandlungszone' : '2. Подготовка зоны обработки',
+          title: isGerman ? '2. Vorbereitung' : '2. Подготовка',
           description: isGerman
-            ? 'Die Behandlungszone wird sanft gereinigt und von Cremes, Ölen oder Schweiß befreit. Eine saubere Haut ist wichtig für die optimale Übertragung der Ultraschallwellen. Anschließend wird ein spezielles Ultraschall-Kontaktgel aufgetragen, das die Kavitationswellen optimal überträgt und ein angenehmes Gleiten des Kavitationskopfes ermöglicht. Wir markieren die zu behandelnden Zonen und legen Sie bequem hin.'
-            : 'Зона обработки деликатно очищается от кремов, масел или пота. Чистая кожа важна для оптимальной передачи ультразвуковых волн. Затем наносится специальный ультразвуковой контактный гель, который оптимально передаёт кавитационные волны и обеспечивает комфортное скольжение кавитационной насадки. Мы отмечаем зоны для обработки и укладываем вас удобно.'
+            ? 'Reinigung der Zone und Auftragen des Ultraschall-Gels.'
+            : 'Очищение зоны и нанесение ультразвукового геля.'
         },
         {
-          title: isGerman ? '3. Ultraschall-Kavitation (30-60 Minuten)' : '3. Ультразвуковая кавитация (30-60 минут)',
+          title: isGerman ? '3. Kavitation (30-60 Min.)' : '3. Кавитация (30-60 мин.)',
           description: isGerman
-            ? 'Mit einem speziellen Kavitationskopf (Handstück) werden sanfte, kreisende Bewegungen über die Fettzone ausgeführt. Die niederfrequenten Ultraschallwellen (28–40 kHz) dringen tief in das Fettgewebe ein und erzeugen dort Kavitationsblasen, die die Fettzellen zerstören. Sie spüren während der Behandlung ein leichtes Summen oder Vibrieren, eventuell eine sanfte Wärme — keine Schmerzen, kein Brennen. Die Behandlung ist völlig schmerzfrei und wird von den meisten Kunden als angenehm und entspannend empfunden. Die Behandlungsdauer variiert je nach Zone und Größe: Eine kleine Zone (Knie, Oberarme) dauert 30 Min., eine mittlere Zone (Bauch, Gesäß) dauert 40–45 Min., zwei Zonen dauern 60 Min. Wir behandeln maximal 1–2 Zonen pro Sitzung, um das Lymphsystem nicht zu überlasten.'
-            : 'Специальной кавитационной насадкой выполняются мягкие круговые движения по жировой зоне. Низкочастотные ультразвуковые волны (28–40 кГц) проникают глубоко в жировую ткань и создают там кавитационные пузырьки, которые разрушают жировые клетки. Во время процедуры вы чувствуете лёгкое жужжание или вибрацию, возможно лёгкое тепло — без боли, без жжения. Процедура абсолютно безболезненна и большинством клиентов воспринимается как приятная и расслабляющая. Продолжительность зависит от зоны и размера: малая зона (колени, плечи) 30 мин., средняя зона (живот, ягодицы) 40–45 мин., две зоны 60 мин. Мы обрабатываем максимум 1–2 зоны за сеанс, чтобы не перегружать лимфатическую систему.'
+            ? 'Sanfte Behandlung mit Ultraschall. Völlig schmerzfrei.'
+            : 'Мягкая обработка ультразвуком. Абсолютно безболезненно.'
         },
         {
-          title: isGerman ? '4. Nachbehandlung und optionale Kombinationen' : '4. Последующий уход и опциональные комбинации',
+          title: isGerman ? '4. Nachbehandlung' : '4. Последующий уход',
           description: isGerman
-            ? 'Nach der Kavitation ist es wichtig, den Fettabbau zu unterstützen und zu beschleunigen. Optional kann die Kavitation mit anderen Behandlungen kombiniert werden, um den Effekt zu maximieren: Lymphdrainage-Massage (um den Abtransport der Fettsäuren über die Lymphe zu beschleunigen), RF-Lifting (für zusätzliche Hautstraffung und Verbesserung der Hautqualität), Vakuum-Therapie (für verstärkte Durchblutung und Anti-Cellulite-Wirkung) oder Kryotherapie (zur Verstärkung des Fettabbaus und Straffung). Wir beraten Sie gerne zu den besten Kombinationen für Ihre Körperformungsziele. Nach der Behandlung sollten Sie sofort 1–2 Gläser Wasser trinken.'
-            : 'После кавитации важно поддержать и ускорить липолиз. Опционально кавитацию можно комбинировать с другими процедурами для максимизации эффекта: лимфодренажный массаж (для ускорения выведения жирных кислот через лимфу), RF-лифтинг (для дополнительной подтяжки кожи и улучшения качества кожи), вакуумная терапия (для усиленного кровообращения и антицеллюлитного эффекта) или криотерапия (для усиления липолиза и подтяжки). Мы с радостью проконсультируем вас по лучшим комбинациям для ваших целей коррекции фигуры. После процедуры следует сразу выпить 1–2 стакана воды.'
+            ? 'Optional Kombination mit Lymphdrainage, RF-Lifting oder Vakuum-Therapie.'
+            : 'Опционально комбинация с лимфодренажем, RF-лифтингом или вакуумной терапией.'
         },
         {
-          title: isGerman ? '5. Empfehlungen für zu Hause und Behandlungsplan' : '5. Рекомендации для дома и план процедур',
+          title: isGerman ? '5. Empfehlungen' : '5. Рекомендации',
           description: isGerman
-            ? 'Sie erhalten detaillierte Empfehlungen für die Zeit nach der Behandlung, um den Fettabbau optimal zu unterstützen: Viel Wasser trinken (mind. 2–3 Liter täglich), gesunde, fettarme Ernährung (Gemüse, Obst, mageres Protein), moderate Bewegung (30 Min. Spaziergang, leichtes Cardio, Yoga), Alkohol 48 Stunden meiden (Alkohol verlangsamt den Fettabbau durch die Leber). Für optimale und langanhaltende Ergebnisse empfehlen wir eine Kur von 8–12 Behandlungen, idealerweise 1× pro Woche (mind. 5–7 Tage Abstand zwischen den Sitzungen). Die Ergebnisse sind kumulativ — je mehr Behandlungen, desto mehr Fettreduktion. Nach Abschluss der Kur empfehlen wir Erhaltungsbehandlungen alle 2–3 Monate, um das Ergebnis langfristig zu bewahren.'
-            : 'Вы получаете детальные рекомендации для периода после процедуры, чтобы оптимально поддержать липолиз: пить много воды (мин. 2–3 литра в день), здоровое питание с низким содержанием жиров (овощи, фрукты, нежирный белок), умеренное движение (30 мин. прогулки, лёгкое кардио, йога), избегать алкоголя 48 часов (алкоголь замедляет липолиз через печень). Для оптимального и долговременного результата мы рекомендуем курс из 8–12 процедур, в идеале 1× в неделю (мин. 5–7 дней перерыв между сеансами). Результаты кумулятивные — чем больше процедур, тем больше уменьшение жира. После завершения курса рекомендуем поддерживающие сеансы каждые 2–3 месяца для долгосрочного сохранения результата.'
+            ? 'Viel Wasser, Bewegung, gesunde Ernährung. Kur: 8–12 Behandlungen, 1× pro Woche.'
+            : 'Много воды, движение, здоровое питание. Курс: 8–12 процедур, 1× в неделю.'
         }
       ]}
       procedureSchema={<SchemaSection />}
-      additionalSections={<RecommendedServices />}
+      additionalSections={<AdditionalSections />}
       priceSection="body-treatments"
       contraindications={[
         isGerman ? 'Schwangerschaft und Stillzeit' : 'Беременность и кормление грудью',
@@ -194,12 +184,6 @@ const Kavitation = () => {
           a: isGerman
             ? 'Kavitation ist geeignet für Frauen und Männer mit normalem oder leicht erhöhtem BMI (18–30), die hartnäckige Fettpolster („Problemzonen") haben, die sich trotz gesunder Ernährung und regelmäßigem Sport nicht reduzieren lassen. Typische Problemzonen: Bauch (Unterbauch, „Love Handles"), Hüften („Reiterhosen"), Oberschenkel (Innen- und Außenseite), Gesäß, Oberarme, Knie, unterer Rücken. Kavitation ist auch ideal nach Schwangerschaft oder Gewichtsverlust zur Feinmodellierung. Nicht geeignet ist Kavitation bei starkem Übergewicht (BMI > 30), Schwangerschaft, Leber-/Nierenerkrankungen, Herzschrittmachern, Thrombose/Krampfadern und einigen anderen medizinischen Zuständen (siehe Kontraindikationen). Wir besprechen alle Kontraindikationen in der kostenlosen Beratung in unserem Kosmetikstudio in München.'
             : 'Кавитация подходит для женщин и мужчин с нормальным или слегка повышенным ИМТ (18–30), у которых есть упорные жировые отложения («проблемные зоны»), которые не уменьшаются несмотря на здоровое питание и регулярные занятия спортом. Типичные проблемные зоны: живот (нижний живот, «ушки»), бёдра («галифе»), бедра (внутренняя и наружная сторона), ягодицы, плечи, колени, нижняя часть спины. Кавитация также идеальна после беременности или похудения для точной коррекции. Не подходит кавитация при сильном избыточном весе (ИМТ > 30), беременности, заболеваниях печени/почек, кардиостимуляторе, тромбозе/варикозе и некоторых других медицинских состояниях (см. противопоказания). Мы обсуждаем все противопоказания на бесплатной консультации в нашей косметологической студии в Мюнхене.'
-        },
-        {
-          q: isGerman ? 'Was kostet Kavitation in München?' : 'Сколько стоит кавитация в Мюнхене?',
-          a: isGerman
-            ? 'Die Preise variieren je nach Behandlungszone und Umfang: 🔹 Kavitation eine Zone (Bauch, Gesäß, Oberschenkel, 40 Min.) kostet 60€. 🔹 Kavitation zwei Zonen (60 Min.) kostet 95€. 🔹 Kavitation kleine Zone (Arme, Knie, 30 Min.) kostet 45€. 🔹 Kavitation + Lymphdrainage-Massage (75 Min.) kostet 120€. 🔹 Kavitation + RF-Lifting Körper (90 Min.) kostet 150€. Wir bieten attraktive Kur-Pakete an: 5er-Kur (eine Zone) für 270€ (spart 30€), 8er-Kur (eine Zone) für 420€ (spart 60€), 10er-Kur (eine Zone) für 500€ (spart 100€). Mit den Kur-Paketen sparen Sie nicht nur Geld, sondern sichern sich auch nachhaltige, langfristige Ergebnisse. Die Investition lohnt sich — Kavitation ist eine der kosteneffektivsten nicht-invasiven Body-Contouring-Methoden mit wissenschaftlich bewährter Wirkung und deutlich günstiger als eine Liposuktion.'
-            : 'Цены варьируются в зависимости от зоны обработки и объёма: 🔹 Кавитация одна зона (живот, ягодицы, бедро, 40 мин.) стоит 60€. 🔹 Кавитация две зоны (60 мин.) стоит 95€. 🔹 Кавитация малая зона (руки, колени, 30 мин.) стоит 45€. 🔹 Кавитация + лимфодренажный массаж (75 мин.) стоит 120€. 🔹 Кавитация + RF-лифтинг тела (90 мин.) стоит 150€. Мы предлагаем выгодные курсовые пакеты: курс 5 процедур (одна зона) за 270€ (экономия 30€), курс 8 процедур (одна зона) за 420€ (экономия 60€), курс 10 процедур (одна зона) за 500€ (экономия 100€). С курсовыми пакетами вы не только экономите деньги, но и обеспечиваете устойчивый, долговременный результат. Инвестиция оправдана — кавитация является одним из самых рентабельных неинвазивных методов body-contouring с научно доказанной эффективностью и значительно дешевле липосакции.'
         }
       ]}
       ctaTitle={isGerman ? "Bereit für eine schlanke, definierte Silhouette in München?" : "Готовы к стройному, очерченному силуэту в Мюнхене?"}

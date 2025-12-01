@@ -3,6 +3,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ServiceCard } from '@/components/ServiceCard';
 import { Star, Zap, Sun, Activity } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const ApparativeAntiAging = () => {
   const { t, language } = useLanguage();
@@ -86,7 +87,7 @@ const ApparativeAntiAging = () => {
         {/* Treatments Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16">
           {treatments.map((treatment, index) => (
-            <div key={treatment.title} className="animate-slide-up" style={{ animationDelay: `${index * 50}ms` }}>
+            <div key={treatment.title} className="animate-slide-up h-full flex" style={{ animationDelay: `${index * 50}ms` }}>
               <ServiceCard {...treatment} />
             </div>
           ))}
@@ -119,6 +120,15 @@ const ApparativeAntiAging = () => {
               ? 'Buchen Sie eine kostenlose Beratung und wir finden gemeinsam die optimale Behandlung für Ihre Haut.'
               : 'Запишитесь на бесплатную консультацию, и мы вместе подберём оптимальную процедуру для вашей кожи.'}
           </p>
+          <Button
+            size="lg"
+            className="bg-white hover:bg-brand-cream text-brand-espresso font-medium rounded-xl px-8 py-6"
+            asChild
+          >
+            <a href="https://wa.me/4917677267269" target="_blank" rel="noopener noreferrer">
+              {isGerman ? 'Beratung anfragen' : 'Запросить консультацию'}
+            </a>
+          </Button>
         </div>
         </div>
       </div>

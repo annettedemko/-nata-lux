@@ -2,13 +2,22 @@
 
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { CheckCircle2, Clock, Droplet, Sparkles } from 'lucide-react';
+import { CheckCircle2, Clock, Droplet, Sparkles, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useState } from 'react';
 
 const Gesichtsreinigung = () => {
   const { language } = useLanguage();
   const isGerman = language === 'de';
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+
+  const galleryImages = ['/51.jpg', '/101.jpg', '/100.jpg', '/99.jpg', '/142.jpeg'];
+
+  const openLightbox = (index: number) => setSelectedImage(index);
+  const closeLightbox = () => setSelectedImage(null);
+  const nextImage = () => setSelectedImage((prev) => prev !== null ? (prev + 1) % galleryImages.length : null);
+  const prevImage = () => setSelectedImage((prev) => prev !== null ? (prev - 1 + galleryImages.length) % galleryImages.length : null);
 
   return (
     <div className="relative min-h-screen">
@@ -114,44 +123,44 @@ const Gesichtsreinigung = () => {
                   {
                     titleDE: '1. Reinigung & Tonisierung',
                     titleRU: '1. Очищение и тонизация',
-                    descDE: 'Sanfte Reinigung der Haut und Tonisierung zur Vorbereitung auf die Behandlung.',
-                    descRU: 'Мягкое очищение кожи и тонизация для подготовки к процедуре.'
+                    descDE: 'Vorbereitung der Haut.',
+                    descRU: 'Подготовка кожи.'
                   },
                   {
                     titleDE: '2. Peeling',
                     titleRU: '2. Пилинг',
-                    descDE: 'Enzymatisches oder mechanisches Peeling zur Entfernung abgestorbener Hautschüppchen.',
-                    descRU: 'Энзимный или механический пилинг для удаления омертвевших клеток кожи.'
+                    descDE: 'Entfernung abgestorbener Hautschüppchen.',
+                    descRU: 'Удаление омертвевших клеток.'
                   },
                   {
                     titleDE: '3. Porenöffnende Maske',
-                    titleRU: '3. Маска, открывающая поры',
-                    descDE: 'Spezielle Maske zur sanften Öffnung der Poren für die optimale Ausreinigung.',
-                    descRU: 'Специальная маска для мягкого раскрытия пор для оптимального очищения.'
+                    titleRU: '3. Маска для пор',
+                    descDE: 'Sanfte Öffnung der Poren.',
+                    descRU: 'Мягкое раскрытие пор.'
                   },
                   {
                     titleDE: '4. Ultraschall + Manuelle Reinigung',
                     titleRU: '4. Аппаратная + Механическая чистка',
-                    descDE: 'Kombination aus Ultraschallreinigung und professioneller manueller Ausreinigung von Mitessern und Unreinheiten.',
-                    descRU: 'Комбинация ультразвуковой чистки и профессионального ручного удаления черных точек и загрязнений.'
+                    descDE: 'Tiefenreinigung und Ausreinigung.',
+                    descRU: 'Глубокое очищение.'
                   },
                   {
                     titleDE: '5. Porenschließende Masken',
-                    titleRU: '5. Маски для закрытия пор',
-                    descDE: 'Beruhigende Masken zum Schließen der Poren und zur Regeneration der Haut.',
-                    descRU: 'Успокаивающие маски для закрытия пор и восстановления кожи.'
+                    titleRU: '5. Успокаивающие маски',
+                    descDE: 'Beruhigung und Schließen der Poren.',
+                    descRU: 'Успокоение и закрытие пор.'
                   },
                   {
                     titleDE: '6. Abschlusspflege mit SPF',
                     titleRU: '6. Финальный крем с SPF',
-                    descDE: 'Pflegende Creme mit Lichtschutzfaktor zum Schutz der frisch gereinigten Haut.',
-                    descRU: 'Ухаживающий крем с SPF для защиты свежеочищенной кожи.'
+                    descDE: 'Schutz der frisch gereinigten Haut.',
+                    descRU: 'Защита очищенной кожи.'
                   },
                   {
                     titleDE: '7. Darsonval / Phonophorese (nach Bedarf)',
-                    titleRU: '7. Дарсонваль / Фонофорез (при необходимости)',
-                    descDE: 'Ergänzende Behandlung mit Darsonval oder Phonophorese, wenn der Spezialist es für notwendig hält.',
-                    descRU: 'Дополнительная процедура дарсонвалем или фонофорезом, если мастер считает необходимым.'
+                    titleRU: '7. Дарсонваль / Фонофорез',
+                    descDE: 'Ergänzend nach Bedarf.',
+                    descRU: 'Дополнительно при необходимости.'
                   },
                 ].map((step, index) => (
                   <div key={index} className="flex items-start gap-4">
@@ -369,20 +378,56 @@ const Gesichtsreinigung = () => {
                 {isGerman ? 'Unsere Arbeiten' : 'Наши работы'}
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {['/51.jpg', '/101.jpg', '/100.jpg', '/99.jpg', '/142.jpeg'].map((src, index) => (
-                  <div key={index} className="relative aspect-square rounded-xl overflow-hidden">
+                {galleryImages.map((src, index) => (
+                  <div
+                    key={index}
+                    className="relative aspect-square rounded-xl overflow-hidden cursor-pointer group"
+                    onClick={() => openLightbox(index)}
+                  >
                     <Image
                       src={src}
                       alt={`${isGerman ? 'Gesichtsreinigung' : 'Чистка лица'} ${index + 1}`}
                       fill
-                      className="object-cover hover:scale-105 transition-transform duration-300"
+                      className="object-cover group-hover:scale-110 transition-transform duration-300"
                       sizes="(max-width: 768px) 50vw, 25vw"
                     />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
                   </div>
                 ))}
               </div>
             </div>
           </motion.section>
+
+          {/* Lightbox */}
+          {selectedImage !== null && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex items-center justify-center"
+              onClick={closeLightbox}
+            >
+              <button onClick={closeLightbox} className="absolute top-6 right-6 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-300">
+                <X className="w-6 h-6 text-white" />
+              </button>
+              <button onClick={(e) => { e.stopPropagation(); prevImage(); }} className="absolute left-4 md:left-8 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-300">
+                <ChevronLeft className="w-6 h-6 text-white" />
+              </button>
+              <button onClick={(e) => { e.stopPropagation(); nextImage(); }} className="absolute right-4 md:right-8 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-300">
+                <ChevronRight className="w-6 h-6 text-white" />
+              </button>
+              <motion.div
+                key={selectedImage}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="relative w-[90vw] h-[80vh] md:w-[80vw] md:h-[85vh] cursor-pointer"
+              >
+                <Image src={galleryImages[selectedImage]} alt="" fill className="object-contain" sizes="90vw" priority />
+              </motion.div>
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/60 text-sm font-medium tracking-wider">
+                {selectedImage + 1} / {galleryImages.length}
+              </div>
+            </motion.div>
+          )}
 
           {/* SEO Footer */}
           <div className="text-center text-sm text-brand-espresso/50 pb-8">

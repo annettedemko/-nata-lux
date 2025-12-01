@@ -1,12 +1,13 @@
 'use client'
 
 import { ServicePageLayout } from '@/components/ServicePageLayout';
-import { Waves } from 'lucide-react';
-import Link from 'next/link';
+import { Waves, Droplet, Zap, Sparkles } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { ServiceCard } from '@/components/ServiceCard';
 
 const Ultraschall = () => {
-  const { isGerman } = useLanguage();
+  const { language } = useLanguage();
+  const isGerman = language === 'de';
 
   // Custom sections component for procedure links
   const UltraschallProcedures = () => (
@@ -16,59 +17,33 @@ const Ultraschall = () => {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* Phonophorese */}
-        <Link href="/services/phonophorese" className="group">
-          <div className="h-full p-6 bg-white rounded-lg border-2 border-brand-gold/20 hover:border-brand-gold transition-all duration-300 hover:shadow-lg">
-            <h3 className="text-xl font-heading font-semibold text-brand-espresso mb-3 group-hover:text-brand-gold transition-colors">
-              {isGerman ? 'Ultraschall-Phonophorese' : 'Ультразвуковая фонофорез'}
-            </h3>
-            <p className="text-brand-espresso/80 mb-4">
-              {isGerman
-                ? 'Tiefe Einschleusung von hochwertigen Wirkstoffen (Hyaluronsäure, Kollagen, Vitamine, Exosomen) mithilfe von Ultraschallwellen. Bis zu 10-fach tiefere Penetration für maximale Anti-Aging-Wirkung, intensive Hydratation und Hautregeneration.'
-                : 'Глубокое введение активных веществ (гиалуроновая кислота, коллаген, витамины, экзосомы) при помощи ультразвука. Проникновение в 10 раз глубже для максимального омолаживающего эффекта, интенсивного увлажнения и регенерации кожи.'
-              }
-            </p>
-            <span className="text-brand-gold font-semibold group-hover:underline">
-              {isGerman ? 'Mehr erfahren →' : 'Узнать больше →'}
-            </span>
-          </div>
-        </Link>
-
-        {/* Kavitation */}
-        <Link href="/services/koerperbehandlungen/kavitation" className="group">
-          <div className="h-full p-6 bg-white rounded-lg border-2 border-brand-gold/20 hover:border-brand-gold transition-all duration-300 hover:shadow-lg">
-            <h3 className="text-xl font-heading font-semibold text-brand-espresso mb-3 group-hover:text-brand-gold transition-colors">
-              {isGerman ? 'Ultraschall-Kavitation' : 'Ультразвуковая кавитация'}
-            </h3>
-            <p className="text-brand-espresso/80 mb-4">
-              {isGerman
-                ? 'Nicht-invasive Körperformung durch Ultraschall-Fettreduktion. Die hochfrequenten Ultraschallwellen erzeugen Mikroblasen, die Fettzellen sanft auflösen. Ideal für Bauch, Hüften, Oberschenkel und andere Problemzonen – ohne OP, ohne Schmerzen.'
-                : 'Неинвазивная коррекция фигуры через ультразвуковое разрушение жировых клеток. Высокочастотные ультразвуковые волны создают микропузырьки, которые мягко растворяют жир. Идеально для живота, бёдер, галифе — без операции, без боли.'
-              }
-            </p>
-            <span className="text-brand-gold font-semibold group-hover:underline">
-              {isGerman ? 'Mehr erfahren →' : 'Узнать больше →'}
-            </span>
-          </div>
-        </Link>
-
-        {/* Gesichtsreinigung */}
-        <Link href="/services/gesichtsreinigung" className="group">
-          <div className="h-full p-6 bg-white rounded-lg border-2 border-brand-gold/20 hover:border-brand-gold transition-all duration-300 hover:shadow-lg">
-            <h3 className="text-xl font-heading font-semibold text-brand-espresso mb-3 group-hover:text-brand-gold transition-colors">
-              {isGerman ? 'Ultraschall-Gesichtsreinigung' : 'Ультразвуковая чистка лица'}
-            </h3>
-            <p className="text-brand-espresso/80 mb-4">
-              {isGerman
-                ? 'Sanfte, aber gründliche Tiefenreinigung der Haut mit Ultraschallwellen. Entfernt sanft abgestorbene Hautzellen, Talg, Unreinheiten und Mitesser, verfeinert die Poren und stimuliert den Zellstoffwechsel – völlig schmerzfrei und ohne Hautschäden.'
-                : 'Мягкая, но тщательная глубокая очистка кожи ультразвуковыми волнами. Деликатно удаляет ороговевшие клетки, кожное сало, загрязнения и комедоны, сужает поры и стимулирует клеточный обмен — абсолютно безболезненно и без повреждений кожи.'
-              }
-            </p>
-            <span className="text-brand-gold font-semibold group-hover:underline">
-              {isGerman ? 'Mehr erfahren →' : 'Узнать больше →'}
-            </span>
-          </div>
-        </Link>
+        <ServiceCard
+          title={isGerman ? 'Phonophorese' : 'Фонофорез'}
+          description={isGerman
+            ? 'Tiefe Einschleusung von Wirkstoffen mit Ultraschall'
+            : 'Глубокое введение активных веществ ультразвуком'}
+          icon={Droplet}
+          href="/services/phonophorese"
+          image="/128.jpeg"
+        />
+        <ServiceCard
+          title={isGerman ? 'Kavitation' : 'Кавитация'}
+          description={isGerman
+            ? 'Nicht-invasive Körperformung und Fettreduktion'
+            : 'Неинвазивная коррекция фигуры и липолиз'}
+          icon={Zap}
+          href="/services/koerperbehandlungen/kavitation"
+          image="/173.jpeg"
+        />
+        <ServiceCard
+          title={isGerman ? 'Gesichtsreinigung' : 'Чистка лица'}
+          description={isGerman
+            ? 'Sanfte Tiefenreinigung mit Ultraschall'
+            : 'Мягкое глубокое очищение ультразвуком'}
+          icon={Sparkles}
+          href="/services/gesichtsreinigung"
+          image="/51.jpg"
+        />
       </div>
 
       <div className="mt-8 p-6 bg-brand-gold/5 rounded-lg border border-brand-gold/20">
@@ -90,24 +65,16 @@ const Ultraschall = () => {
       aboutTitle={isGerman ? "Was ist Ultraschalltherapie und wie funktioniert sie?" : "Что такое ультразвуковая терапия и как она работает?"}
       aboutDescription={[
         isGerman
-          ? 'Ultraschalltherapie ist eine moderne, wissenschaftlich fundierte Methode der Physiotherapie und ästhetischen Kosmetologie, bei der hochfrequente Schallwellen (20.000 bis 3.000.000 Hz) gezielt auf Haut und Gewebe einwirken. Diese für das menschliche Ohr unhörbaren Schwingungen erzeugen sanfte Mikrovibrationen in den tieferen Hautschichten, die eine Vielzahl positiver biologischer Effekte auslösen. In unserem Kosmetikstudio in München-Haidhausen setzen wir professionelle, medizinisch zertifizierte Ultraschallgeräte ein, die höchste Sicherheit und maximale Wirksamkeit garantieren.'
-          : 'Ультразвуковая терапия — это современный, научно обоснованный метод физиотерапии и эстетической косметологии, при котором высокочастотные звуковые волны (от 20 000 до 3 000 000 Гц) целенаправленно воздействуют на кожу и ткани. Эти неслышимые для человеческого уха колебания создают мягкие микровибрации в глубоких слоях кожи, которые запускают множество положительных биологических эффектов. В нашей косметологической студии в Мюнхене-Хайдхаузен мы используем профессиональное, медицински сертифицированное ультразвуковое оборудование, которое гарантирует максимальную безопасность и эффективность.',
+          ? 'Ultraschalltherapie nutzt hochfrequente Schallwellen (20.000 bis 3.000.000 Hz), die sanfte Mikrovibrationen in den tieferen Hautschichten erzeugen. Diese verbessern die Mikrozirkulation, aktivieren den Zellstoffwechsel, stimulieren Kollagen und Elastin und fördern die Regeneration — völlig schmerzfrei und ohne Ausfallzeiten.'
+          : 'Ультразвуковая терапия использует высокочастотные звуковые волны (20 000-3 000 000 Гц), создающие мягкие микровибрации в глубоких слоях кожи. Они улучшают микроциркуляцию, активируют метаболизм, стимулируют коллаген и эластин и способствуют регенерации — абсолютно безболезненно и без реабилитации.',
 
         isGerman
-          ? 'Die Ultraschallwellen wirken auf zellulärer Ebene: Sie verbessern die Mikrozirkulation von Blut und Lymphe, aktivieren den Zellstoffwechsel und die Sauerstoffversorgung, stimulieren die Produktion von Kollagen und Elastin (den „Bausteinen" junger Haut), fördern die Regeneration geschädigter Zellen und wirken entzündungshemmend sowie schmerzlindernd. Gleichzeitig erzeugen die Ultraschallwellen eine Art „Mikromassage" der Haut, die Verspannungen löst, die Hautstruktur verfeinert und den natürlichen Entgiftungsprozess (Lymphdrainage) unterstützt.'
-          : 'Ультразвуковые волны воздействуют на клеточном уровне: они улучшают микроциркуляцию крови и лимфы, активируют клеточный метаболизм и снабжение кислородом, стимулируют производство коллагена и эластина (строительных блоков молодой кожи), способствуют регенерации поврежденных клеток и оказывают противовоспалительное и обезболивающее действие. Одновременно ультразвуковые волны создают своеобразный «микромассаж» кожи, который снимает напряжение, улучшает текстуру кожи и поддерживает естественный процесс детоксикации (лимфодренаж).',
+          ? 'Besonderer Vorteil: Ultraschall macht Zellmembranen durchlässiger (Sonophorese-Effekt) und schleust Wirkstoffe wie Hyaluronsäure, Kollagen oder Exosomen bis zu 10-mal tiefer ein.'
+          : 'Особое преимущество: ультразвук делает клеточные мембраны проницаемыми (эффект сонофореза) и вводит активные вещества как гиалуроновая кислота, коллаген или экзосомы в 10 раз глубже.',
 
         isGerman
-          ? 'Ein besonderer Vorteil der Ultraschalltherapie besteht darin, dass sie die Zellmembranen vorübergehend durchlässiger macht (Sonophorese-Effekt). Dies ermöglicht es, kosmetische und medizinische Wirkstoffe — wie Hyaluronsäure, Kollagen, Vitamine, Peptide oder hochmoderne Exosomen — bis zu 10-mal tiefer in die Haut einzuschleusen, als es mit herkömmlichen Methoden möglich wäre. Dadurch können diese Wirkstoffe dort wirken, wo sie am dringendsten benötigt werden: in den tiefen Schichten der Dermis.'
-          : 'Особое преимущество ультразвуковой терапии заключается в том, что она временно делает клеточные мембраны более проницаемыми (эффект сонофореза). Это позволяет вводить косметические и медицинские активные вещества — такие как гиалуроновая кислота, коллаген, витамины, пептиды или современные экзосомы — в 10 раз глубже в кожу, чем это возможно при использовании обычных методов. Благодаря этому эти вещества могут действовать там, где они больше всего необходимы: в глубоких слоях дермы.',
-
-        isGerman
-          ? 'Die Ultraschalltherapie wird in der Medizin und ästhetischen Kosmetik seit Jahrzehnten erfolgreich eingesetzt und hat ihre Wirksamkeit in zahlreichen wissenschaftlichen Studien bewiesen. Sie ist völlig schmerzfrei, sicher, nicht-invasiv (ohne Injektionen oder Schnitte) und eignet sich für alle Hauttypen und Altersgruppen. Anders als invasive Verfahren gibt es keine Ausfallzeiten, keine Rötungen und kein Risiko für Komplikationen — Sie können direkt nach der Behandlung Ihrem normalen Alltag nachgehen.'
-          : 'Ультразвуковая терапия уже несколько десятилетий успешно применяется в медицине и эстетической косметологии и доказала свою эффективность в многочисленных научных исследованиях. Она абсолютно безболезненна, безопасна, неинвазивна (без инъекций или разрезов) и подходит для всех типов кожи и возрастов. В отличие от инвазивных процедур, здесь нет периода реабилитации, покраснений и риска осложнений — вы можете сразу после процедуры вернуться к обычной жизни.',
-
-        isGerman
-          ? 'In unserem Kosmetikstudio in München bieten wir drei verschiedene Arten von Ultraschall-Behandlungen an, die alle auf der gleichen wissenschaftlichen Grundlage basieren, sich jedoch in ihren Zielen und Anwendungsbereichen unterscheiden: Ultraschall-Phonophorese für intensive Anti-Aging-Pflege und Wirkstoffeinschleusung, Ultraschall-Kavitation für nicht-invasive Körperformung und Fettreduktion sowie Ultraschall-Gesichtsreinigung für sanfte, aber gründliche Tiefenreinigung der Haut.'
-          : 'В нашей косметологической студии в Мюнхене мы предлагаем три различных вида ультразвуковых процедур, которые основаны на одной и той же научной базе, но различаются по целям и областям применения: ультразвуковая фонофорез для интенсивного омоложения и введения активных веществ, ультразвуковая кавитация для неинвазивной коррекции фигуры и липолиза, а также ультразвуковая чистка лица для деликатного, но глубокого очищения кожи.'
+          ? 'Wir bieten drei Arten: Phonophorese (intensive Anti-Aging-Pflege), Kavitation (Körperformung und Fettreduktion) und Gesichtsreinigung (sanfte Tiefenreinigung).'
+          : 'Мы предлагаем три вида: фонофорез (интенсивное омоложение), кавитация (коррекция фигуры и липолиз) и чистка лица (мягкое глубокое очищение).'
       ]}
       benefits={[
         isGerman ? 'Verbesserung der Mikrozirkulation und Sauerstoffversorgung der Haut' : 'Улучшение микроциркуляции и снабжения кожи кислородом',
@@ -131,32 +98,32 @@ const Ultraschall = () => {
         {
           title: isGerman ? '1. Kostenlose Beratung und Hautanalyse' : '1. Бесплатная консультация и анализ кожи',
           description: isGerman
-            ? 'Zu Beginn analysieren wir Ihren Hauttyp, Ihre Hautprobleme (Falten, Trockenheit, Unreinheiten, Pigmentierung, Schwellungen etc.) und Ihre individuellen Behandlungsziele. Basierend auf dieser Analyse empfehlen wir Ihnen die optimale Ultraschall-Behandlung: Phonophorese für Anti-Aging und intensive Pflege, Kavitation für Körperformung oder Ultraschall-Gesichtsreinigung für gründliche Hautreinigung. Wir besprechen auch mögliche Kombinationen mit anderen Behandlungen wie Mikrostromtherapie, RF-Lifting oder LED-Lichttherapie.'
-            : 'В начале мы анализируем ваш тип кожи, проблемы (морщины, сухость, несовершенства, пигментация, отёки и т.д.) и индивидуальные цели. На основе этого анализа мы рекомендуем оптимальную ультразвуковую процедуру: фонофорез для омоложения и интенсивного ухода, кавитацию для коррекции фигуры или ультразвуковую чистку лица для глубокого очищения. Мы также обсуждаем возможные комбинации с другими процедурами, такими как микротоки, RF-лифтинг или светотерапия.'
+            ? 'Analyse von Hauttyp, Problemen und Zielen. Empfehlung der optimalen Ultraschall-Behandlung.'
+            : 'Анализ типа кожи, проблем и целей. Рекомендация оптимальной ультразвуковой процедуры.'
         },
         {
           title: isGerman ? '2. Vorbereitung der Haut' : '2. Подготовка кожи',
           description: isGerman
-            ? 'Die Haut wird sanft, aber gründlich von Make-up, Talg, Schmutz und abgestorbenen Hautzellen befreit. Eine saubere Haut ist essentiell für die optimale Wirkung der Ultraschallbehandlung. Anschließend wird ein spezielles Kontaktgel aufgetragen, das die Übertragung der Ultraschallwellen optimiert und ein angenehmes Gleiten des Ultraschallkopfes ermöglicht. Bei Phonophorese werden zusätzlich hochwertige Wirkstoffe (Seren, Ampullen) aufgetragen, die mit dem Ultraschall in die Tiefe eingeschleust werden.'
-            : 'Кожа деликатно, но тщательно очищается от макияжа, кожного сала, загрязнений и ороговевших клеток. Чистая кожа необходима для оптимального эффекта ультразвука. Затем наносится специальный контактный гель, который оптимизирует передачу ультразвуковых волн и обеспечивает комфортное скольжение датчика. При фонофорезе дополнительно наносятся высококачественные активные вещества (сыворотки, ампулы), которые с помощью ультразвука проникают в глубокие слои кожи.'
+            ? 'Gründliche Reinigung und Auftragen des Kontaktgels. Bei Phonophorese zusätzlich Auftragen hochwertiger Wirkstoffe.'
+            : 'Тщательное очищение и нанесение контактного геля. При фонофорезе дополнительно нанесение активных веществ.'
         },
         {
           title: isGerman ? '3. Ultraschall-Behandlung (30-60 Minuten)' : '3. Ультразвуковая процедура (30-60 минут)',
           description: isGerman
-            ? 'Mit einem speziellen Ultraschallkopf (Schallkopf) werden sanfte, kreisende Bewegungen über die Haut ausgeführt. Die hochfrequenten Schallwellen dringen in die tieferen Hautschichten ein und entfalten dort ihre vielfältigen positiven Wirkungen: Sie verbessern die Durchblutung, aktivieren den Stoffwechsel, stimulieren die Kollagenproduktion und fördern die Regeneration. Die Behandlung ist völlig schmerzfrei und wird von den meisten Kunden als sehr angenehm und entspannend empfunden — Sie spüren lediglich eine sanfte Wärme und leichte Vibrationen. Die Behandlungsdauer variiert je nach gewählter Methode: Phonophorese 60-75 Min., Kavitation 30-60 Min., Gesichtsreinigung als Teil einer umfassenden Gesichtsbehandlung.'
-            : 'Специальным ультразвуковым датчиком выполняются мягкие круговые движения по коже. Высокочастотные звуковые волны проникают в глубокие слои кожи и оказывают там множественное положительное воздействие: улучшают кровообращение, активируют метаболизм, стимулируют производство коллагена и способствуют регенерации. Процедура абсолютно безболезненна и большинством клиентов воспринимается как очень приятная и расслабляющая — вы чувствуете лишь мягкое тепло и лёгкие вибрации. Продолжительность процедуры варьируется в зависимости от выбранного метода: фонофорез 60-75 мин., кавитация 30-60 мин., чистка лица как часть комплексной процедуры для лица.'
+            ? 'Sanfte Behandlung mit Ultraschallkopf. Völlig schmerzfrei und entspannend.'
+            : 'Мягкая обработка ультразвуковым датчиком. Абсолютно безболезненно и расслабляюще.'
         },
         {
-          title: isGerman ? '4. Abschlusspflege und optionale Kombinationen' : '4. Завершающий уход и опциональные комбинации',
+          title: isGerman ? '4. Abschlusspflege' : '4. Завершающий уход',
           description: isGerman
-            ? 'Nach der Ultraschallbehandlung tragen wir eine beruhigende, nährende Maske oder ein hochwertiges Serum auf, um die Regeneration zu unterstützen und den Behandlungseffekt zu verstärken und zu versiegeln. Optional kann die Ultraschalltherapie mit anderen Behandlungen kombiniert werden, um den Anti-Aging-Effekt, die Straffung oder die Tiefenreinigung zu maximieren: Mikrostromtherapie (für zusätzlichen Lifting-Effekt), LED-Lichttherapie (zur Beruhigung und Kollagenstimulation), RF-Lifting (für intensive Straffung) oder hochwertige Ampullen und Masken. Wir beraten Sie gerne zu den besten Kombinationen für Ihre individuellen Hautbedürfnisse.'
-            : 'После ультразвуковой процедуры мы наносим успокаивающую питательную маску или высококачественную сыворотку, чтобы поддержать регенерацию и усилить и закрепить эффект процедуры. Опционально ультразвуковую терапию можно комбинировать с другими процедурами для максимизации омолаживающего эффекта, лифтинга или глубокого очищения: микротоки (для дополнительного лифтинга), светотерапия (для успокоения и стимуляции коллагена), RF-лифтинг (для интенсивной подтяжки) или высококачественные ампулы и маски. Мы с радостью проконсультируем вас по лучшим комбинациям для ваших индивидуальных потребностей.'
+            ? 'Beruhigende Maske und Serum. Optional Kombination mit anderen Behandlungen.'
+            : 'Успокаивающая маска и сыворотка. Опционально комбинация с другими процедурами.'
         },
         {
-          title: isGerman ? '5. Pflegeempfehlungen und Behandlungsplan' : '5. Рекомендации по уходу и план процедур',
+          title: isGerman ? '5. Pflegeempfehlungen' : '5. Рекомендации',
           description: isGerman
-            ? 'Sie erhalten individuelle Empfehlungen für Ihre häusliche Pflege sowie einen Plan für Folgebehandlungen. Für optimale und langanhaltende Ergebnisse empfehlen wir je nach Behandlungsart eine Kur von 6-10 Behandlungen (Phonophorese, Gesichtsreinigung) bzw. 8-12 Behandlungen (Kavitation), gefolgt von regelmäßigen Erhaltungsbehandlungen. Bei Kavitation ist es wichtig, ausreichend Wasser zu trinken und sich moderat zu bewegen, um die Ausscheidung der aufgelösten Fettzellen über das Lymphsystem zu unterstützen.'
-            : 'Вы получаете индивидуальные рекомендации по домашнему уходу, а также план последующих процедур. Для оптимального и долговременного результата мы рекомендуем в зависимости от типа процедуры курс из 6-10 процедур (фонофорез, чистка лица) или 8-12 процедур (кавитация), после чего регулярные поддерживающие сеансы. При кавитации важно пить достаточно воды и умеренно двигаться, чтобы поддержать выведение растворённых жировых клеток через лимфатическую систему.'
+            ? 'Individuelle Pflegetipps und Behandlungsplan für optimale Ergebnisse.'
+            : 'Индивидуальные рекомендации по уходу и план процедур для оптимального результата.'
         }
       ]}
       // Add custom section for procedures
@@ -191,30 +158,6 @@ const Ultraschall = () => {
           a: isGerman
             ? 'Die Anzahl der Behandlungen hängt von der gewählten Methode und Ihren individuellen Zielen ab: ✅ Phonophorese: Erste Ergebnisse (prallere, strahlendere Haut) bereits nach 1-2 Behandlungen sichtbar. Für nachhaltige Anti-Aging-Effekte empfehlen wir eine Kur von 8-10 Behandlungen, 1-2× pro Woche, gefolgt von Erhaltungsbehandlungen 1× pro Monat. ✅ Kavitation: Erste Verbesserungen nach 3-4 Behandlungen spürbar. Für optimale Körperformung und Fettreduktion empfehlen wir 8-12 Behandlungen, 1× pro Woche, ggf. gefolgt von Erhaltungsbehandlungen alle 2-3 Monate. ✅ Gesichtsreinigung: Sofortiger Effekt nach jeder Behandlung (frischere, reinere Haut). Für langfristig reine, porenverfeinerung Haut empfehlen wir 1× alle 4-6 Wochen.'
             : 'Количество процедур зависит от выбранного метода и ваших индивидуальных целей: ✅ Фонофорез: Первые результаты (более упругая, сияющая кожа) видны уже после 1-2 процедур. Для устойчивого омолаживающего эффекта мы рекомендуем курс из 8-10 процедур, 1-2× в неделю, после чего поддерживающие сеансы 1× в месяц. ✅ Кавитация: Первые улучшения ощутимы после 3-4 процедур. Для оптимальной коррекции фигуры и липолиза мы рекомендуем 8-12 процедур, 1× в неделю, при необходимости с последующими поддерживающими сеансами каждые 2-3 месяца. ✅ Чистка лица: Мгновенный эффект после каждой процедуры (более свежая, чистая кожа). Для долгосрочной чистой кожи с суженными порами мы рекомендуем 1× каждые 4-6 недель.'
-        },
-        {
-          q: isGerman ? 'Kann ich Ultraschalltherapie mit anderen Behandlungen kombinieren?' : 'Можно ли комбинировать ультразвуковую терапию с другими процедурами?',
-          a: isGerman
-            ? 'Ja, die Ultraschalltherapie lässt sich hervorragend mit anderen Behandlungen kombinieren und verstärkt deren Wirkung erheblich! Besonders empfehlenswerte Kombinationen: 🔸 Ultraschall + Mikrostromtherapie = maximaler Lifting-Effekt und Straffung. 🔸 Ultraschall + LED-Lichttherapie = intensive Kollagenstimulation und Beruhigung. 🔸 Ultraschall + RF-Lifting = tiefenwirksame Straffung und Anti-Aging. 🔸 Phonophorese + Gesichtsreinigung = perfekte Vorbereitung + intensive Wirkstoffeinschleusung. 🔸 Kavitation + Lymphdrainage-Massage = beschleunigte Fettausscheidung und Entgiftung. Die Kombination verstärkt die Synergie-Effekte und kann individuell auf Ihre Hautbedürfnisse abgestimmt werden. Wir beraten Sie gerne in unserem Studio in München-Haidhausen zu den besten Kombinationen.'
-            : 'Да, ультразвуковую терапию можно отлично комбинировать с другими процедурами, что значительно усиливает их эффект! Особенно рекомендуемые комбинации: 🔸 Ультразвук + микротоки = максимальный лифтинг-эффект и подтяжка. 🔸 Ультразвук + светотерапия = интенсивная стимуляция коллагена и успокоение. 🔸 Ультразвук + RF-лифтинг = глубокая подтяжка и омоложение. 🔸 Фонофорез + чистка лица = идеальная подготовка + интенсивное введение активных веществ. 🔸 Кавитация + лимфодренажный массаж = ускоренное выведение жира и детоксикация. Комбинация усиливает синергетические эффекты и может быть индивидуально адаптирована к вашим потребностям. Мы с радостью проконсультируем вас в нашей студии в Мюнхене-Хайдхаузен по лучшим комбинациям.'
-        },
-        {
-          q: isGerman ? 'Gibt es Ausfallzeiten nach einer Ultraschallbehandlung?' : 'Есть ли период реабилитации после ультразвуковой процедуры?',
-          a: isGerman
-            ? 'Nein, es gibt absolut keine Ausfallzeiten nach einer Ultraschallbehandlung! Anders als bei invasiven Verfahren (Laser, IPL, Injektionen) können Sie direkt nach der Behandlung Ihrem normalen Alltag nachgehen, Make-up auftragen, arbeiten gehen oder Sport treiben. Die Haut kann maximal leicht gerötet sein (besonders nach Kavitation oder intensiver Gesichtsreinigung), was aber innerhalb von 1-2 Stunden vollständig abklingt. Bei Kavitation empfehlen wir, in den folgenden 24-48 Stunden ausreichend Wasser zu trinken (mind. 2 Liter) und sich moderat zu bewegen, um die Ausscheidung der aufgelösten Fettzellen über das Lymphsystem zu unterstützen. Das macht die Ultraschalltherapie ideal für berufstätige Menschen und alle, die eine schnelle, effektive Behandlung ohne Einschränkungen suchen.'
-            : 'Нет, абсолютно никакого периода реабилитации после ультразвуковой процедуры! В отличие от инвазивных процедур (лазер, IPL, инъекции), вы можете сразу после процедуры вернуться к обычной жизни, наносить макияж, идти на работу или заниматься спортом. Кожа может быть максимум слегка покрасневшей (особенно после кавитации или интенсивной чистки лица), но это полностью проходит в течение 1-2 часов. При кавитации мы рекомендуем в течение следующих 24-48 часов пить достаточно воды (мин. 2 литра) и умеренно двигаться, чтобы поддержать выведение растворённых жировых клеток через лимфатическую систему. Это делает ультразвуковую терапию идеальной для работающих людей и всех, кто ищет быструю, эффективную процедуру без ограничений.'
-        },
-        {
-          q: isGerman ? 'Für wen ist Ultraschalltherapie geeignet?' : 'Для кого подходит ультразвуковая терапия?',
-          a: isGerman
-            ? 'Ultraschalltherapie ist für fast alle Hauttypen und Altersgruppen geeignet: ✅ Phonophorese: für alle ab Mitte 20 mit ersten Alterungserscheinungen, trockener Haut, Pigmentierung oder dem Wunsch nach intensiver Hautpflege und Prävention. ✅ Kavitation: für alle ab 18 mit lokalen Fettdepots (Bauch, Hüften, Oberschenkel), die sich trotz Sport und Diät nicht reduzieren lassen — ideal als nicht-invasive Alternative zur Fettabsaugung. ✅ Gesichtsreinigung: für alle Hauttypen, besonders bei unreiner, zu Akne neigender Haut, verstopften Poren oder als regelmäßige Tiefenreinigung. Nicht geeignet ist Ultraschall bei Schwangerschaft, Herzschrittmachern, Thrombose, Epilepsie und einigen anderen medizinischen Zuständen. Wir besprechen alle Kontraindikationen in der kostenlosen Beratung in unserem Kosmetikstudio in München.'
-            : 'Ультразвуковая терапия подходит практически для всех типов кожи и возрастов: ✅ Фонофорез: для всех с середины 20-х с первыми признаками старения, сухой кожей, пигментацией или желанием интенсивного ухода и профилактики. ✅ Кавитация: для всех с 18 лет с локальными жировыми отложениями (живот, бёдра, галифе), которые не уходят несмотря на спорт и диету — идеально как неинвазивная альтернатива липосакции. ✅ Чистка лица: для всех типов кожи, особенно при проблемной коже, склонной к акне, забитых порах или как регулярное глубокое очищение. Не подходит ультразвук при беременности, кардиостимуляторе, тромбозе, эпилепсии и некоторых других медицинских состояниях. Мы обсуждаем все противопоказания на бесплатной консультации в нашей косметологической студии в Мюнхене.'
-        },
-        {
-          q: isGerman ? 'Was kostet Ultraschalltherapie in München?' : 'Сколько стоит ультразвуковая терапия в Мюнхене?',
-          a: isGerman
-            ? 'Die Preise variieren je nach gewählter Behandlung: 🔹 Ultraschall-Phonophorese: ab 85€ für Gesicht (60 Min.), ab 105€ für Gesicht + Hals + Dekolleté (75 Min.), ab 150€ für Premium-Variante mit Exosomen. Kur-Pakete: 3× für 230€, 5× für 360€. 🔹 Ultraschall-Kavitation: ab 60€ pro Zone (30-45 Min.), Mehrfachzonen günstiger. Kur-Pakete für optimale Ergebnisse verfügbar. 🔹 Ultraschall-Gesichtsreinigung: ab 95€ für kombinierte Gesichtsreinigung (90 Min.), ab 140€ in Kombination mit Phonophorese. Die genauen Preise und Kur-Angebote finden Sie auf den jeweiligen Seiten unserer Ultraschall-Behandlungen oder in unserem Studio in München-Haidhausen. Wir beraten Sie gerne individuell und erstellen Ihnen ein maßgeschneidertes Behandlungskonzept.'
-            : 'Цены варьируются в зависимости от выбранной процедуры: 🔹 Ультразвуковая фонофорез: от 85€ за лицо (60 мин.), от 105€ за лицо + шея + декольте (75 мин.), от 150€ за премиум-вариант с экзосомами. Курсовые пакеты: 3× за 230€, 5× за 360€. 🔹 Ультразвуковая кавитация: от 60€ за зону (30-45 мин.), при работе с несколькими зонами дешевле. Доступны курсовые пакеты для оптимального результата. 🔹 Ультразвуковая чистка лица: от 95€ за комбинированную чистку лица (90 мин.), от 140€ в сочетании с фонофорезом. Точные цены и курсовые предложения вы найдёте на соответствующих страницах наших ультразвуковых процедур или в нашей студии в Мюнхене-Хайдхаузен. Мы с радостью проконсультируем вас индивидуально и составим персонализированную концепцию процедур.'
         }
       ]}
       ctaTitle={isGerman ? "Bereit für moderne Ultraschalltherapie in München?" : "Готовы к современной ультразвуковой терапии в Мюнхене?"}
