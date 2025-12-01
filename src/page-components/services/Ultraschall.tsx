@@ -65,16 +65,12 @@ const Ultraschall = () => {
       aboutTitle={isGerman ? "Was ist Ultraschalltherapie und wie funktioniert sie?" : "Что такое ультразвуковая терапия и как она работает?"}
       aboutDescription={[
         isGerman
-          ? 'Ultraschalltherapie nutzt hochfrequente Schallwellen (20.000 bis 3.000.000 Hz), die sanfte Mikrovibrationen in den tieferen Hautschichten erzeugen. Diese verbessern die Mikrozirkulation, aktivieren den Zellstoffwechsel, stimulieren Kollagen und Elastin und fördern die Regeneration — völlig schmerzfrei und ohne Ausfallzeiten.'
-          : 'Ультразвуковая терапия использует высокочастотные звуковые волны (20 000-3 000 000 Гц), создающие мягкие микровибрации в глубоких слоях кожи. Они улучшают микроциркуляцию, активируют метаболизм, стимулируют коллаген и эластин и способствуют регенерации — абсолютно безболезненно и без реабилитации.',
+          ? 'Ultraschalltherapie nutzt hochfrequente Schallwellen, die sanfte Mikrovibrationen in den Hautschichten erzeugen. Diese aktivieren den Stoffwechsel, stimulieren Kollagen und fördern die Regeneration — völlig schmerzfrei.'
+          : 'Ультразвуковая терапия использует высокочастотные волны, создающие микровибрации в коже. Они активируют метаболизм, стимулируют коллаген и способствуют регенерации — абсолютно безболезненно.',
 
         isGerman
-          ? 'Besonderer Vorteil: Ultraschall macht Zellmembranen durchlässiger (Sonophorese-Effekt) und schleust Wirkstoffe wie Hyaluronsäure, Kollagen oder Exosomen bis zu 10-mal tiefer ein.'
-          : 'Особое преимущество: ультразвук делает клеточные мембраны проницаемыми (эффект сонофореза) и вводит активные вещества как гиалуроновая кислота, коллаген или экзосомы в 10 раз глубже.',
-
-        isGerman
-          ? 'Wir bieten drei Arten: Phonophorese (intensive Anti-Aging-Pflege), Kavitation (Körperformung und Fettreduktion) und Gesichtsreinigung (sanfte Tiefenreinigung).'
-          : 'Мы предлагаем три вида: фонофорез (интенсивное омоложение), кавитация (коррекция фигуры и липолиз) и чистка лица (мягкое глубокое очищение).'
+          ? 'Wir bieten drei Arten: Phonophorese (Anti-Aging), Kavitation (Körperformung) und Gesichtsreinigung (Tiefenreinigung).'
+          : 'Мы предлагаем три вида: фонофорез (омоложение), кавитация (коррекция фигуры) и чистка лица (глубокое очищение).'
       ]}
       benefits={[
         isGerman ? 'Verbesserung der Mikrozirkulation und Sauerstoffversorgung der Haut' : 'Улучшение микроциркуляции и снабжения кожи кислородом',
@@ -144,8 +140,20 @@ const Ultraschall = () => {
         {
           q: isGerman ? 'Was ist der Unterschied zwischen Phonophorese, Kavitation und Ultraschall-Gesichtsreinigung?' : 'В чём разница между фонофорезом, кавитацией и ультразвуковой чисткой лица?',
           a: isGerman
-            ? 'Alle drei Verfahren nutzen Ultraschallwellen, unterscheiden sich jedoch in Frequenz, Intensität und Zielsetzung: 🔹 Ultraschall-Phonophorese (1-3 MHz) schleust hochwertige Wirkstoffe (Hyaluronsäure, Kollagen, Vitamine, Exosomen) bis zu 10-mal tiefer in die Haut ein — ideal für Anti-Aging, intensive Hydratation und Hautregeneration. 🔹 Ultraschall-Kavitation (40 kHz) erzeugt Mikroblasen im Fettgewebe, die Fettzellen sanft auflösen — ideal für nicht-invasive Körperformung und Fettreduktion an Bauch, Hüften, Oberschenkeln. 🔹 Ultraschall-Gesichtsreinigung (20-30 kHz) entfernt sanft abgestorbene Hautzellen, Talg und Unreinheiten — ideal für gründliche, aber schonende Tiefenreinigung und Porenverfeinerung.'
-            : 'Все три метода используют ультразвуковые волны, но различаются по частоте, интенсивности и целям: 🔹 Ультразвуковая фонофорез (1-3 МГц) вводит высококачественные активные вещества (гиалуроновая кислота, коллаген, витамины, экзосомы) в 10 раз глубже в кожу — идеально для омоложения, интенсивного увлажнения и регенерации кожи. 🔹 Ультразвуковая кавитация (40 кГц) создаёт микропузырьки в жировой ткани, которые мягко растворяют жировые клетки — идеально для неинвазивной коррекции фигуры и липолиза на животе, бёдрах, галифе. 🔹 Ультразвуковая чистка лица (20-30 кГц) деликатно удаляет ороговевшие клетки, кожное сало и загрязнения — идеально для глубокого, но щадящего очищения и сужения пор.'
+            ? `Alle drei Verfahren nutzen Ultraschallwellen, unterscheiden sich jedoch in Frequenz, Intensität und Zielsetzung:
+
+🔹 Ultraschall-Phonophorese (1-3 MHz) schleust hochwertige Wirkstoffe (Hyaluronsäure, Kollagen, Vitamine, Exosomen) bis zu 10-mal tiefer in die Haut ein — ideal für Anti-Aging, intensive Hydratation und Hautregeneration.
+
+🔹 Ultraschall-Kavitation (40 kHz) erzeugt Mikroblasen im Fettgewebe, die Fettzellen sanft auflösen — ideal für nicht-invasive Körperformung und Fettreduktion an Bauch, Hüften, Oberschenkeln.
+
+🔹 Ultraschall-Gesichtsreinigung (20-30 kHz) entfernt sanft abgestorbene Hautzellen, Talg und Unreinheiten — ideal für gründliche, aber schonende Tiefenreinigung und Porenverfeinerung.`
+            : `Все три метода используют ультразвуковые волны, но различаются по частоте, интенсивности и целям:
+
+🔹 Ультразвуковая фонофорез (1-3 МГц) вводит высококачественные активные вещества (гиалуроновая кислота, коллаген, витамины, экзосомы) в 10 раз глубже в кожу — идеально для омоложения, интенсивного увлажнения и регенерации кожи.
+
+🔹 Ультразвуковая кавитация (40 кГц) создаёт микропузырьки в жировой ткани, которые мягко растворяют жировые клетки — идеально для неинвазивной коррекции фигуры и липолиза на животе, бёдрах, галифе.
+
+🔹 Ультразвуковая чистка лица (20-30 кГц) деликатно удаляет ороговевшие клетки, кожное сало и загрязнения — идеально для глубокого, но щадящего очищения и сужения пор.`
         },
         {
           q: isGerman ? 'Ist Ultraschalltherapie schmerzhaft oder gefährlich?' : 'Ультразвуковая терапия болезненна или опасна?',
@@ -156,8 +164,20 @@ const Ultraschall = () => {
         {
           q: isGerman ? 'Wie viele Behandlungen brauche ich für sichtbare Ergebnisse?' : 'Сколько процедур нужно для видимого результата?',
           a: isGerman
-            ? 'Die Anzahl der Behandlungen hängt von der gewählten Methode und Ihren individuellen Zielen ab: ✅ Phonophorese: Erste Ergebnisse (prallere, strahlendere Haut) bereits nach 1-2 Behandlungen sichtbar. Für nachhaltige Anti-Aging-Effekte empfehlen wir eine Kur von 8-10 Behandlungen, 1-2× pro Woche, gefolgt von Erhaltungsbehandlungen 1× pro Monat. ✅ Kavitation: Erste Verbesserungen nach 3-4 Behandlungen spürbar. Für optimale Körperformung und Fettreduktion empfehlen wir 8-12 Behandlungen, 1× pro Woche, ggf. gefolgt von Erhaltungsbehandlungen alle 2-3 Monate. ✅ Gesichtsreinigung: Sofortiger Effekt nach jeder Behandlung (frischere, reinere Haut). Für langfristig reine, porenverfeinerung Haut empfehlen wir 1× alle 4-6 Wochen.'
-            : 'Количество процедур зависит от выбранного метода и ваших индивидуальных целей: ✅ Фонофорез: Первые результаты (более упругая, сияющая кожа) видны уже после 1-2 процедур. Для устойчивого омолаживающего эффекта мы рекомендуем курс из 8-10 процедур, 1-2× в неделю, после чего поддерживающие сеансы 1× в месяц. ✅ Кавитация: Первые улучшения ощутимы после 3-4 процедур. Для оптимальной коррекции фигуры и липолиза мы рекомендуем 8-12 процедур, 1× в неделю, при необходимости с последующими поддерживающими сеансами каждые 2-3 месяца. ✅ Чистка лица: Мгновенный эффект после каждой процедуры (более свежая, чистая кожа). Для долгосрочной чистой кожи с суженными порами мы рекомендуем 1× каждые 4-6 недель.'
+            ? `Die Anzahl der Behandlungen hängt von der gewählten Methode und Ihren individuellen Zielen ab:
+
+✅ Phonophorese: Erste Ergebnisse (prallere, strahlendere Haut) bereits nach 1-2 Behandlungen sichtbar. Für nachhaltige Anti-Aging-Effekte empfehlen wir eine Kur von 8-10 Behandlungen, 1-2× pro Woche, gefolgt von Erhaltungsbehandlungen 1× pro Monat.
+
+✅ Kavitation: Erste Verbesserungen nach 3-4 Behandlungen spürbar. Für optimale Körperformung und Fettreduktion empfehlen wir 8-12 Behandlungen, 1× pro Woche, ggf. gefolgt von Erhaltungsbehandlungen alle 2-3 Monate.
+
+✅ Gesichtsreinigung: Sofortiger Effekt nach jeder Behandlung (frischere, reinere Haut). Für langfristig reine, porenverfeinerung Haut empfehlen wir 1× alle 4-6 Wochen.`
+            : `Количество процедур зависит от выбранного метода и ваших индивидуальных целей:
+
+✅ Фонофорез: Первые результаты (более упругая, сияющая кожа) видны уже после 1-2 процедур. Для устойчивого омолаживающего эффекта мы рекомендуем курс из 8-10 процедур, 1-2× в неделю, после чего поддерживающие сеансы 1× в месяц.
+
+✅ Кавитация: Первые улучшения ощутимы после 3-4 процедур. Для оптимальной коррекции фигуры и липолиза мы рекомендуем 8-12 процедур, 1× в неделю, при необходимости с последующими поддерживающими сеансами каждые 2-3 месяца.
+
+✅ Чистка лица: Мгновенный эффект после каждой процедуры (более свежая, чистая кожа). Для долгосрочной чистой кожи с суженными порами мы рекомендуем 1× каждые 4-6 недель.`
         }
       ]}
       ctaTitle={isGerman ? "Bereit für moderne Ultraschalltherapie in München?" : "Готовы к современной ультразвуковой терапии в Мюнхене?"}
