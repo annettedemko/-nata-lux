@@ -60,7 +60,7 @@ const AquarellLips = () => {
   return (
     <ServicePageLayout
       icon={Heart}
-      title="Aquarell Lips"
+      title={isGerman ? "Aquarell Lips" : "Акварельные губы"}
       subtitle={isGerman
         ? "Natürliche Lippenpigmentierung mit Aquarell & Velvet Techniken"
         : "Естественная пигментация губ в техниках Aquarell и Velvet"}
