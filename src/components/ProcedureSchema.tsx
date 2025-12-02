@@ -28,7 +28,7 @@ export const ProcedureSchema = ({
   const altText = isGerman ? altTextGerman : altTextRussian;
 
   return (
-    <div className={`my-4 md:my-6 ${className}`} style={{ transform: `scale(${scale})`, transformOrigin: 'top center' }}>
+    <div className={`my-3 md:my-4 ${className}`} style={{ transform: `scale(${scale})`, transformOrigin: 'top center' }}>
       {images.map((imagePath, index) => (
         <motion.div
           key={imagePath}

@@ -102,14 +102,14 @@ export const ServicePageLayout = ({
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.0, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
             className="text-center"
           >
             {/* Icon with glow effect */}
             <motion.div
               initial={{ scale: 0, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
-              transition={{ duration: 0.8, delay: 1.2, type: "spring", stiffness: 200 }}
+              transition={{ duration: 0.8, delay: 0.7, type: "spring", stiffness: 200 }}
               className="relative inline-block mb-8"
             >
               <div className="absolute inset-0 bg-brand-gold/20 rounded-3xl blur-xl animate-pulse" />
@@ -127,7 +127,7 @@ export const ServicePageLayout = ({
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: '120px' }}
-              transition={{ duration: 0.8, delay: 1.4 }}
+              transition={{ duration: 0.8, delay: 0.9 }}
               className="h-1 bg-gradient-to-r from-transparent via-brand-gold to-transparent mx-auto mb-6"
             />
 
@@ -150,7 +150,7 @@ export const ServicePageLayout = ({
         </div>
       </section>
 
-      <div className="container mx-auto px-4 max-w-5xl pb-6 md:pb-20 w-full">
+      <div className="container mx-auto px-4 max-w-5xl pb-6 md:pb-12 w-full">
 
         {/* About Service */}
         <motion.section

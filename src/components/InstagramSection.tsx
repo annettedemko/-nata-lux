@@ -12,7 +12,7 @@ export const InstagramSection = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden">
+    <section className="py-12 md:py-16 relative overflow-hidden">
       <div
         className="absolute inset-0"
         style={{
