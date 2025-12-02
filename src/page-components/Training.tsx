@@ -80,7 +80,7 @@ const Training = () => {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url(/45.png)',
+            backgroundImage: 'url(/45.webp)',
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',

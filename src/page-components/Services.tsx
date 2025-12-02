@@ -26,7 +26,7 @@ const Services = () => {
       description: t('lashesbrows.extensions.desc'),
       icon: Sparkles,
       href: '/services/wimpernverlaengerung',
-      image: '/43.png',
+      image: '/43.webp',
       imagePosition: 'center 60%',
     },
     {

@@ -26,7 +26,7 @@ const RFVakuum = () => {
   const AdditionalSections = () => (
     <>
       <PremiumGallery
-        images={['/78.PNG', '/77.PNG', '/81.jpg', '/82.jpg', '/83.jpg', '/84.jpg', '/85.jpg', '/86.jpg']}
+        images={['/78.PNG', '/77.PNG', '/81.webp', '/82.webp', '/83.webp', '/84.webp', '/85.webp', '/86.webp']}
         title={isGerman ? 'Unsere Arbeiten' : 'Наши работы'}
       />
       <div className="mt-12">
