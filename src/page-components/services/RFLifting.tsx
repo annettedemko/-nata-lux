@@ -24,7 +24,7 @@ const RFLifting = () => {
 
   // Custom section for Face RF benefits
   const RFApplications = () => (
-    <div className="space-y-8 mb-12">
+    <div className="space-y-6 mb-12">
       <div className="glass rounded-2xl p-8">
         <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-6">
           {isGerman ? 'Was gibt RF-Lifting Gesicht' : 'Что даёт RF-лифтинг лица'}

@@ -182,7 +182,7 @@ export const ServicePageLayout = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
-            className="mb-12"
+            className="mb-4"
           >
             {procedureSchema}
           </motion.section>
