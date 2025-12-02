@@ -1,80 +1,201 @@
 'use client'
 
-;
 import { Link } from '@/components/LinkAdapter'
-import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export const Footer = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <footer className="bg-brand-latte/90 backdrop-blur-md border-t border-brand-gold/10 relative z-10">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 md:gap-8">
           {/* Brand */}
-          <div>
+          <div className="xl:col-span-1">
             <h3 className="text-xl md:text-2xl font-heading font-semibold text-brand-espresso mb-4">
               NATA LUX
             </h3>
             <p className="text-brand-coffee/70 mb-4">
               {t('hero.subtitle')}
             </p>
-            <div className="flex space-x-3">
-              <a
-                href="https://www.instagram.com/nata_lux_pm?igsh=bnluOTNuZ2RsNnp2"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-brand-sand/50 flex items-center justify-center text-brand-coffee hover:bg-brand-gold hover:text-white transition-all"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-            </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
+          {/* Dienstleistungen */}
+          <div className="xl:col-span-2">
             <h4 className="text-lg font-heading font-semibold text-brand-espresso mb-4">
               {t('nav.services')}
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-sm grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-x-4">
               <li>
                 <Link
                   to="/services/wimpernverlaengerung"
                   className="text-brand-coffee/70 hover:text-brand-gold transition-colors"
                 >
-                  {t('services.lashes.title')}
+                  {t('lashesbrows.extensions')}
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/services/pmu-brows-powder"
+                  to="/services/wimpern-augenbrauen-laminierung"
                   className="text-brand-coffee/70 hover:text-brand-gold transition-colors"
                 >
-                  {t('services.pmu.title')}
+                  {t('lashesbrows.lashlifting')} & {t('lashesbrows.browlifting')}
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/services/laser-hair-removal"
+                  to="/services/powder-brows"
                   className="text-brand-coffee/70 hover:text-brand-gold transition-colors"
                 >
-                  {t('services.laser.title')}
+                  {t('pmu.brows')}
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/training"
+                  to="/services/aquarell-lips"
                   className="text-brand-coffee/70 hover:text-brand-gold transition-colors"
                 >
-                  {t('nav.training')}
+                  {t('pmu.lips')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/wimpernkranz"
+                  className="text-brand-coffee/70 hover:text-brand-gold transition-colors"
+                >
+                  {t('pmu.eyeliner')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/pmu-remover"
+                  className="text-brand-coffee/70 hover:text-brand-gold transition-colors"
+                >
+                  {t('pmu.removal')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/laser"
+                  className="text-brand-coffee/70 hover:text-brand-gold transition-colors"
+                >
+                  {t('laser.triwave')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/apparative-anti-aging"
+                  className="text-brand-coffee/70 hover:text-brand-gold transition-colors"
+                >
+                  {t('antiaging.devices')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/koerperbehandlungen"
+                  className="text-brand-coffee/70 hover:text-brand-gold transition-colors"
+                >
+                  {t('antiaging.body')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/gesichtsreinigung"
+                  className="text-brand-coffee/70 hover:text-brand-gold transition-colors"
+                >
+                  {t('antiaging.facial')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/phonophorese"
+                  className="text-brand-coffee/70 hover:text-brand-gold transition-colors"
+                >
+                  {t('antiaging.phonophoresis')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/microneedling"
+                  className="text-brand-coffee/70 hover:text-brand-gold transition-colors"
+                >
+                  {t('antiaging.microneedling')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/darsonval-haare"
+                  className="text-brand-coffee/70 hover:text-brand-gold transition-colors"
+                >
+                  {t('antiaging.darsonval')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/hautveraenderungen-entfernen"
+                  className="text-brand-coffee/70 hover:text-brand-gold transition-colors"
+                >
+                  {t('antiaging.removal')}
                 </Link>
               </li>
             </ul>
           </div>
 
+          {/* Schulung */}
+          <div className="xl:col-span-1">
+            <h4 className="text-lg font-heading font-semibold text-brand-espresso mb-4">
+              {t('nav.training')}
+            </h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link
+                  to="/training"
+                  className="text-brand-coffee/70 hover:text-brand-gold transition-colors"
+                >
+                  {language === 'de' ? 'Schulungsangebot' : 'Программы обучения'}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/training#wimpern"
+                  className="text-brand-coffee/70 hover:text-brand-gold transition-colors"
+                >
+                  {language === 'de' ? 'Wimpernverlängerung' : 'Наращивание ресниц'}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/training#pmu"
+                  className="text-brand-coffee/70 hover:text-brand-gold transition-colors"
+                >
+                  {language === 'de' ? 'Permanent Make-up' : 'Перманентный макияж'}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Kosmetik */}
+          <div className="xl:col-span-1">
+            <h4 className="text-lg font-heading font-semibold text-brand-espresso mb-4">
+              {t('categories.shop')}
+            </h4>
+            <p className="text-brand-coffee/70 text-sm mb-3">
+              {t('categories.shop.desc')}
+            </p>
+            <Link
+              to="/shop"
+              className="inline-flex items-center text-sm font-medium text-brand-gold hover:text-brand-gold/80 transition-colors"
+            >
+              {language === 'de' ? 'Zum Shop' : 'В магазин'}
+              <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+
           {/* Contact */}
-          <div>
+          <div className="xl:col-span-1">
             <h4 className="text-lg font-heading font-semibold text-brand-espresso mb-4">
               {t('nav.contact')}
             </h4>
@@ -114,11 +235,11 @@ export const Footer = () => {
           </div>
 
           {/* Hours */}
-          <div>
+          <div className="xl:col-span-1">
             <h4 className="text-lg font-heading font-semibold text-brand-espresso mb-4">
               {t('footer.hours')}
             </h4>
-            <ul className="space-y-2 text-brand-coffee/70">
+            <ul className="space-y-2 text-brand-coffee/70 text-sm">
               <li>{t('footer.hours.weekdays')}</li>
               <li>{t('footer.hours.saturday')}</li>
               <li>{t('footer.hours.sunday')}</li>

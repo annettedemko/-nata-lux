@@ -103,8 +103,19 @@ export const BackgroundVideo = () => {
 
   return (
     <div
-      className="fixed inset-0 w-full h-full overflow-hidden"
-      style={{ zIndex: -1 }}
+      className="overflow-hidden"
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        width: '100%',
+        height: '100%',
+        zIndex: -1,
+        transform: 'none',
+        willChange: 'auto',
+      }}
     >
       {/* Fallback статичный фон на случай блокировки видео */}
       {autoplayBlocked && (
@@ -130,14 +141,29 @@ export const BackgroundVideo = () => {
         controls={false}
         disablePictureInPicture
         disableRemotePlayback
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        className="pointer-events-none"
         style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
           filter: 'brightness(1.1) contrast(0.95)',
           opacity: isLoaded ? 1 : 0,
           transition: 'opacity 1s ease-in-out',
-          // Фиксированный масштаб для стабильности
-          transform: 'scale(1.0)',
+          // ЖЁСТКАЯ БЛОКИРОВКА любых трансформаций
+          transform: 'none',
           transformOrigin: 'center center',
+          willChange: 'opacity',
+          backfaceVisibility: 'hidden',
+          WebkitBackfaceVisibility: 'hidden',
+          imageRendering: 'auto',
+          // Отключаем любые возможные GPU эффекты которые могут вызывать масштабирование
+          WebkitTransform: 'none',
+          MozTransform: 'none',
+          msTransform: 'none',
+          OTransform: 'none',
         }}
       >
         <source src="/kling_2.webm" type="video/webm" />
@@ -147,17 +173,31 @@ export const BackgroundVideo = () => {
 
       {/* Gradient overlay для лучшей читаемости текста */}
       <div
-        className="absolute inset-0"
+        className="pointer-events-none"
         style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
           background: 'linear-gradient(135deg, rgba(255, 250, 245, 0.3) 0%, rgba(245, 235, 220, 0.3) 50%, rgba(235, 220, 200, 0.3) 100%)',
+          transform: 'none',
+          willChange: 'auto',
         }}
       />
 
       {/* Дополнительный overlay для центра (где текст) */}
       <div
-        className="absolute inset-0"
+        className="pointer-events-none"
         style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
           background: 'radial-gradient(ellipse at center, rgba(255, 250, 245, 0.4) 0%, transparent 70%)',
+          transform: 'none',
+          willChange: 'auto',
         }}
       />
     </div>

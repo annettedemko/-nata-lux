@@ -326,7 +326,7 @@ const Prices = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           >
             <h1
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold tracking-tight leading-none mb-6"
@@ -351,13 +351,13 @@ const Prices = () => {
             return (
               <motion.div
                 key={category.id}
-                initial={categoryIndex === 0 ? { opacity: 0, y: 0 } : { opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{
-                  duration: 0.8,
+                  duration: 0.5,
                   ease: [0.25, 0.1, 0.25, 1],
-                  delay: categoryIndex === 0 ? 0.8 : 0
+                  delay: 0
                 }}
               >
                 {/* Bold Card with Strong Separation */}

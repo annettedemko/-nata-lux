@@ -190,16 +190,23 @@ const Shop = () => {
               {t('shop.subtitle')}
             </p>
 
-            {/* RENEW Brand Section */}
+            {/* Shop Section */}
             <div className="glass rounded-2xl p-6 max-w-3xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-3">
-                RENEW Professional Cosmetics
+                {isGerman ? "Kosmetik-Shop" : "Магазин косметики"}
               </h2>
-              <p className="text-brand-coffee/70">
+              <p className="text-brand-coffee/70 mb-3">
                 {isGerman
-                  ? "Israelische Profi-Kosmetik für Kosmetologen. Wählen Sie eine Kategorie nach Ihrem Hautproblem."
-                  : "Израильская профессиональная косметика для косметологов. Выберите категорию по вашей проблеме кожи."}
+                  ? "Premium-Produkte für zu Hause und professionelle Anwendung. Wählen Sie eine Kategorie nach Ihrem Hautproblem."
+                  : "Премиум-продукты для дома и профессионального использования. Выберите категорию по вашей проблеме кожи."}
               </p>
+              <div className="inline-block bg-brand-gold/10 border border-brand-gold/20 rounded-lg px-4 py-2">
+                <p className="text-sm font-medium text-brand-espresso">
+                  {isGerman
+                    ? "✨ Für Privatpersonen, Kosmetologen und B2B"
+                    : "✨ Для частных лиц, косметологов и B2B"}
+                </p>
+              </div>
             </div>
           </div>
 

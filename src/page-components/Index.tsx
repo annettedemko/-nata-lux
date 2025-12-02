@@ -29,14 +29,11 @@ import {
   ChevronRight
 } from 'lucide-react';
 ;
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 
 const Index = () => {
   const { t, language } = useLanguage();
-  const { scrollYProgress } = useScroll();
-  const imageY = useTransform(scrollYProgress, [0, 1], ["-10%", "20%"]);
-  const bgOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.6, 0.3]);
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
 
   const serviceCategories = [
@@ -237,7 +234,7 @@ const Index = () => {
       <SectionDivider />
 
       {/* Search Section */}
-      <section className="py-6 pb-16 md:py-9 md:pb-32 relative overflow-hidden z-10">
+      <section className="py-4 pb-8 md:py-9 md:pb-32 relative overflow-hidden z-10">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -273,20 +270,20 @@ const Index = () => {
       <SectionDivider />
 
       {/* Service Categories */}
-      <section className="py-8 md:py-11 relative overflow-hidden z-10">
+      <section className="py-6 md:py-11 relative overflow-hidden z-10">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className="text-center mb-6 md:mb-9"
           >
             <motion.div
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2, type: "spring", stiffness: 200 }}
+              initial={{ scale: 0.9, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               className="inline-block mb-4 md:mb-6"
             >
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto rounded-2xl bg-gradient-to-br from-brand-gold/20 to-brand-gold-light/20 flex items-center justify-center backdrop-blur-sm">
@@ -321,17 +318,17 @@ const Index = () => {
       <section className="py-8 md:py-11 relative overflow-hidden z-10">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className="text-center mb-6 md:mb-9"
           >
             <motion.div
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2, type: "spring", stiffness: 200 }}
+              initial={{ scale: 0.9, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               className="inline-block mb-4 md:mb-6"
             >
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto rounded-2xl bg-gradient-to-br from-brand-gold/20 to-brand-gold-light/20 flex items-center justify-center backdrop-blur-sm">
@@ -354,10 +351,10 @@ const Index = () => {
           </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="text-center mt-7"
           >
             <Link to="/services">
@@ -400,17 +397,17 @@ const Index = () => {
       <section className="py-8 md:py-11 relative overflow-hidden z-10">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className="text-center mb-6 md:mb-9"
           >
             <motion.div
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2, type: "spring", stiffness: 200 }}
+              initial={{ scale: 0.9, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               className="inline-block mb-4 md:mb-6"
             >
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto rounded-2xl bg-gradient-to-br from-brand-gold/20 to-brand-gold-light/20 flex items-center justify-center backdrop-blur-sm">
@@ -440,17 +437,17 @@ const Index = () => {
       <section className="py-8 md:py-11 relative overflow-hidden z-10">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className="text-center mb-6 md:mb-9"
           >
             <motion.div
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2, type: "spring", stiffness: 200 }}
+              initial={{ scale: 0.9, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               className="inline-block mb-4 md:mb-6"
             >
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto rounded-2xl bg-gradient-to-br from-brand-gold/20 to-brand-gold-light/20 flex items-center justify-center backdrop-blur-sm">
@@ -463,10 +460,10 @@ const Index = () => {
 
             {/* Google Rating Badge */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
               className="flex items-center justify-center gap-3 mt-6"
             >
               <div className="flex items-center gap-2 px-6 py-3 rounded-2xl glass-strong">
@@ -538,10 +535,10 @@ const Index = () => {
               <AnimatePresence mode="wait" initial={false}>
                 <motion.div
                   key={currentReviewIndex}
-                  initial={{ opacity: 0, x: 100 }}
+                  initial={{ opacity: 0, x: 30 }}
                   animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -100 }}
-                  transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                  exit={{ opacity: 0, x: -30 }}
+                  transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                   className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8"
                 >
                   {reviews.slice(currentReviewIndex, currentReviewIndex + 3).map((review, index) => (
@@ -557,10 +554,10 @@ const Index = () => {
 
             {/* Google Reviews Link */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.3 }}
               className="text-center mt-8"
             >
               <a
@@ -585,10 +582,10 @@ const Index = () => {
       <section className="py-8 md:py-11 relative overflow-hidden z-10">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className="text-center mb-5 md:mb-7"
           >
             <h2 className="text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-3 md:mb-4 px-4 break-words" style={{ wordWrap: 'break-word', overflowWrap: 'break-word', hyphens: 'none' }}>
@@ -671,10 +668,10 @@ const Index = () => {
 
             {/* Transport & Parking Info */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.3 }}
               className="mt-4 md:mt-6"
             >
               <div className="glass rounded-xl md:rounded-2xl p-4 md:p-6">

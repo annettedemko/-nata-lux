@@ -8,7 +8,7 @@ export const InstagramSection = () => {
   const { language } = useLanguage();
 
   const handleInstagramClick = () => {
-    window.open('https://www.instagram.com/natalux_beauty/', '_blank');
+    window.open('https://www.instagram.com/nata_lux_pm?igsh=bnluOTNuZ2RsNnp2', '_blank');
   };
 
   return (

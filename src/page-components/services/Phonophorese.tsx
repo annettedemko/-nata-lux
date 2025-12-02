@@ -7,7 +7,8 @@ import { ServiceCard } from '@/components/ServiceCard';
 import { ProcedureSchema } from '@/components/ProcedureSchema';
 
 const Phonophorese = () => {
-  const { isGerman } = useLanguage();
+  const { language } = useLanguage();
+  const isGerman = language === 'de';
 
   // Schema section
   const SchemaSection = () => (

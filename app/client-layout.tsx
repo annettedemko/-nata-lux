@@ -11,7 +11,7 @@ import { FloatingButtons } from "@/components/FloatingButtons"
 import { InstagramSection } from "@/components/InstagramSection"
 import { PageParallaxBackground } from "@/components/PageParallaxBackground"
 import { GoldenCursor } from "@/components/GoldenCursor"
-import { PageTransition } from "@/components/PageTransition"
+import { ScrollToTop } from "@/components/ScrollToTop"
 import { Providers } from './providers'
 
 export function ClientLayout({ children }: { children: ReactNode }) {
@@ -21,19 +21,18 @@ export function ClientLayout({ children }: { children: ReactNode }) {
         <Toaster />
         <Sonner />
         <LanguageProvider>
-          <PageTransition>
-            <PageParallaxBackground>
-              <div className="flex flex-col min-h-screen m-0 p-0">
-                <Header />
-                <main className="flex-grow m-0 p-0">
-                  {children}
-                </main>
-                <InstagramSection />
-                <Footer />
-                <FloatingButtons />
-              </div>
-            </PageParallaxBackground>
-          </PageTransition>
+          <ScrollToTop />
+          <PageParallaxBackground>
+            <div className="flex flex-col min-h-screen m-0 p-0">
+              <Header />
+              <main className="flex-grow m-0 p-0 pt-16 md:pt-20">
+                {children}
+              </main>
+              <InstagramSection />
+              <Footer />
+              <FloatingButtons />
+            </div>
+          </PageParallaxBackground>
           <GoldenCursor />
         </LanguageProvider>
       </TooltipProvider>

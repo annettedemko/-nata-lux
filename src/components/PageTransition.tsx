@@ -15,7 +15,7 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
     const timer = setTimeout(() => {
       setIsLoading(false);
       setDisplayedChildren(children);
-    }, 2000);
+    }, 800);
 
     return () => clearTimeout(timer);
   }, [pathname]);
@@ -188,7 +188,7 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
                   initial={{ width: '0%' }}
                   animate={{ width: '100%' }}
                   transition={{
-                    duration: 1.8,
+                    duration: 0.7,
                     ease: 'easeInOut',
                   }}
                 />

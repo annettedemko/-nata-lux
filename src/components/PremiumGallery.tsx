@@ -189,7 +189,7 @@ export const PremiumGallery = ({ images, title }: PremiumGalleryProps) => {
           {/* Close Button */}
           <button
             onClick={closeLightbox}
-            className="absolute top-6 right-6 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-300 group"
+            className="absolute top-6 right-6 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-300 group font-sans"
           >
             <X className="w-6 h-6 text-white group-hover:rotate-90 transition-transform duration-300" />
           </button>
@@ -197,7 +197,7 @@ export const PremiumGallery = ({ images, title }: PremiumGalleryProps) => {
           {/* Navigation - Previous */}
           <button
             onClick={(e) => { e.stopPropagation(); prevImage(); }}
-            className="absolute left-4 md:left-8 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-300"
+            className="absolute left-4 md:left-8 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-300 font-sans"
           >
             <ChevronLeft className="w-6 h-6 text-white" />
           </button>
@@ -205,7 +205,7 @@ export const PremiumGallery = ({ images, title }: PremiumGalleryProps) => {
           {/* Navigation - Next */}
           <button
             onClick={(e) => { e.stopPropagation(); nextImage(); }}
-            className="absolute right-4 md:right-8 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-300"
+            className="absolute right-4 md:right-8 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-300 font-sans"
           >
             <ChevronRight className="w-6 h-6 text-white" />
           </button>

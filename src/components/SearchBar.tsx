@@ -15,7 +15,7 @@ export const SearchBar = () => {
   const router = useRouter();
   const searchRef = useRef<HTMLDivElement>(null);
 
-  // Search function
+  // Search function - searches across both languages
   const performSearch = (searchQuery: string) => {
     if (!searchQuery.trim()) {
       setResults([]);
@@ -24,16 +24,25 @@ export const SearchBar = () => {
 
     const lowerQuery = searchQuery.toLowerCase();
     const filtered = searchIndex.filter((item) => {
-      const title = item.title[language].toLowerCase();
-      const description = item.description[language].toLowerCase();
-      const keywords = item.keywords[language].join(' ').toLowerCase();
-      const category = item.category[language].toLowerCase();
+      // Search in both German and Russian regardless of selected language
+      const titleDe = item.title.de.toLowerCase();
+      const titleRu = item.title.ru.toLowerCase();
+      const descriptionDe = item.description.de.toLowerCase();
+      const descriptionRu = item.description.ru.toLowerCase();
+      const keywordsDe = item.keywords.de.join(' ').toLowerCase();
+      const keywordsRu = item.keywords.ru.join(' ').toLowerCase();
+      const categoryDe = item.category.de.toLowerCase();
+      const categoryRu = item.category.ru.toLowerCase();
 
       return (
-        title.includes(lowerQuery) ||
-        description.includes(lowerQuery) ||
-        keywords.includes(lowerQuery) ||
-        category.includes(lowerQuery)
+        titleDe.includes(lowerQuery) ||
+        titleRu.includes(lowerQuery) ||
+        descriptionDe.includes(lowerQuery) ||
+        descriptionRu.includes(lowerQuery) ||
+        keywordsDe.includes(lowerQuery) ||
+        keywordsRu.includes(lowerQuery) ||
+        categoryDe.includes(lowerQuery) ||
+        categoryRu.includes(lowerQuery)
       );
     });
 

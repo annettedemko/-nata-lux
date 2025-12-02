@@ -30,6 +30,21 @@ export const ProcedureSchema = ({
   const altText = isGerman ? altTextGerman : altTextRussian;
 
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  // Detect screen size
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
+
+    // Check on mount
+    checkScreenSize();
+
+    // Add resize listener
+    window.addEventListener('resize', checkScreenSize);
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
 
   const openLightbox = (index: number) => {
     setSelectedImage(index);
@@ -38,7 +53,7 @@ export const ProcedureSchema = ({
 
   const closeLightbox = useCallback(() => {
     setSelectedImage(null);
-    document.body.style.overflow = 'unset';
+    document.body.style.overflow = '';
   }, []);
 
   const nextImage = useCallback(() => {
@@ -52,6 +67,13 @@ export const ProcedureSchema = ({
       setSelectedImage((selectedImage - 1 + images.length) % images.length);
     }
   }, [selectedImage, images.length]);
+
+  // Cleanup body overflow on unmount
+  useEffect(() => {
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, []);
 
   // Keyboard navigation
   useEffect(() => {
@@ -78,28 +100,35 @@ export const ProcedureSchema = ({
   return (
     <>
       {/* Full-width container on mobile, scaled on desktop */}
-      <div className={`mt-3 md:mt-4 mb-0 ${className} -mx-4 md:mx-0`} style={{ transform: `scale(${scale})`, transformOrigin: 'top center' }}>
-        {images.map((imagePath, index) => (
-          <motion.div
-            key={imagePath}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            className={`relative w-full ${index > 0 ? 'mt-4 md:mt-6' : ''}`}
-          >
-            <div
-              className="relative w-full md:rounded-2xl overflow-hidden shadow-lg bg-white cursor-pointer hover:shadow-xl transition-shadow duration-300"
-              onClick={() => openLightbox(index)}
+      <div className={`mt-3 md:mt-4 mb-0 ${className} -mx-4 md:mx-0`}>
+        {/* Scale wrapper - only applies on desktop */}
+        <div
+          style={isDesktop && scale !== 1 ? {
+            transform: `scale(${scale})`,
+            transformOrigin: 'top center'
+          } : undefined}
+        >
+          {images.map((imagePath, index) => (
+            <motion.div
+              key={imagePath}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className={`relative w-full ${index > 0 ? 'mt-4 md:mt-6' : ''}`}
             >
-              <Image
-                src={imagePath}
-                alt={`${altText} ${images.length > 1 ? `- ${index + 1}` : ''}`}
-                width={1200}
-                height={800}
-                className="w-full h-auto"
-                priority={index === 0}
-              />
+              <div
+                className="relative w-full md:rounded-2xl overflow-hidden shadow-lg bg-white cursor-pointer hover:shadow-xl transition-shadow duration-300"
+                onClick={() => openLightbox(index)}
+              >
+                <Image
+                  src={imagePath}
+                  alt={`${altText} ${images.length > 1 ? `- ${index + 1}` : ''}`}
+                  width={1200}
+                  height={800}
+                  className="w-full h-auto"
+                  priority={index === 0}
+                />
               {/* Click indicator */}
               <div className="absolute inset-0 bg-black/0 hover:bg-black/5 transition-colors duration-300 flex items-center justify-center">
                 <div className="opacity-0 hover:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-3">
@@ -111,6 +140,7 @@ export const ProcedureSchema = ({
             </div>
           </motion.div>
         ))}
+        </div>
       </div>
 
       {/* Lightbox */}
@@ -126,7 +156,7 @@ export const ProcedureSchema = ({
             {/* Close button */}
             <button
               onClick={closeLightbox}
-              className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+              className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors font-sans"
               aria-label="Close"
             >
               <X className="w-6 h-6 text-white" />
@@ -140,7 +170,7 @@ export const ProcedureSchema = ({
                     e.stopPropagation();
                     prevImage();
                   }}
-                  className="absolute left-4 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                  className="absolute left-4 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors font-sans"
                   aria-label="Previous"
                 >
                   <ChevronLeft className="w-6 h-6 text-white" />
@@ -150,7 +180,7 @@ export const ProcedureSchema = ({
                     e.stopPropagation();
                     nextImage();
                   }}
-                  className="absolute right-4 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                  className="absolute right-4 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors font-sans"
                   aria-label="Next"
                 >
                   <ChevronRight className="w-6 h-6 text-white" />
@@ -175,14 +205,13 @@ export const ProcedureSchema = ({
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ duration: 0.3 }}
               className="relative max-w-7xl max-h-[90vh] w-full h-full flex items-center justify-center p-4"
-              onClick={(e) => e.stopPropagation()}
             >
               <Image
                 src={images[selectedImage]}
                 alt={`${altText} ${images.length > 1 ? `- ${selectedImage + 1}` : ''}`}
                 width={1200}
                 height={800}
-                className="w-auto h-auto max-w-full max-h-full object-contain rounded-lg"
+                className="w-auto h-auto max-w-full max-h-full object-contain rounded-lg cursor-pointer"
                 priority
               />
             </motion.div>

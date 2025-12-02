@@ -17,12 +17,28 @@ interface Particle {
 export const GoldenCursor: React.FC = () => {
   const [mousePos, setMousePos] = useState({ x: -100, y: -100 });
   const [isMoving, setIsMoving] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
   const particlesRef = useRef<Particle[]>([]);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationFrameRef = useRef<number>();
   const particleIdRef = useRef(0);
   const lastPosRef = useRef({ x: -100, y: -100 });
   const movementTimeoutRef = useRef<NodeJS.Timeout>();
+
+  // Detect if device is desktop (has hover capability)
+  useEffect(() => {
+    const checkIsDesktop = () => {
+      const hasHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+      setIsDesktop(hasHover);
+    };
+
+    checkIsDesktop();
+    window.addEventListener('resize', checkIsDesktop);
+
+    return () => {
+      window.removeEventListener('resize', checkIsDesktop);
+    };
+  }, []);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -175,6 +191,11 @@ export const GoldenCursor: React.FC = () => {
       }
     };
   }, []);
+
+  // Only render on desktop devices
+  if (!isDesktop) {
+    return null;
+  }
 
   return (
     <>

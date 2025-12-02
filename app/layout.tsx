@@ -35,7 +35,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de">
-      <body className={`${playfair.variable} ${cormorant.variable} ${inter.variable} font-sans`}>
+      <body className={`${playfair.variable} ${cormorant.variable} ${inter.variable} font-heading`}>
         <ClientLayout>
           {children}
         </ClientLayout>

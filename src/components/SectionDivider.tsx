@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export const SectionDivider = () => {
   return (
-    <div className="relative w-full h-40 overflow-hidden my-8">
+    <div className="relative w-full h-16 md:h-40 overflow-hidden my-4 md:my-8">
       {/* Soft golden light beam from top - more visible */}
       <motion.div
         initial={{ opacity: 0, scaleY: 0 }}

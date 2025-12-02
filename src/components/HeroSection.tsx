@@ -12,224 +12,247 @@ export const HeroSection = () => {
 
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden z-10"
+      className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden z-10 font-sans"
     >
+      {/* Content */}
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-20 py-12 md:py-32">
+        <div className="max-w-4xl mx-auto text-center">
 
-      {/* Content - смещён вправо на 15% на десктопе, центрирован на мобильных */}
-      <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 relative z-20 py-8 sm:py-12 md:py-16 lg:py-20">
-        <div className="max-w-3xl text-center md:text-right md:-translate-x-[15%]" style={{ marginLeft: 'auto', marginRight: '0' }}>
           {/* Logo - эффект возрождения с золотой пылью */}
           <motion.div
-            className="mb-12 mt-16 flex justify-center md:justify-end relative"
+            className="mb-6 md:mb-12 flex justify-center relative scale-75 md:scale-100"
           >
             <LogoRebirth />
             {/* Subtle sparkles around logo */}
             <SparkleContainer count={3} />
           </motion.div>
 
-          {/* Text content wrapper - поднимаем только текст, не трогая логотип */}
-          <div style={{ transform: 'translateY(-40px)' }}>
-            {/* Title with enhanced mobile readability */}
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.8,
-                delay: 0.4,
-                ease: [0.16, 1, 0.3, 1]
-              }}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-heading font-semibold text-brand-espresso mb-6 leading-tight px-2 md:px-0 break-words"
-              style={{
-                textShadow: '0 2px 10px rgba(255,255,255,0.9), 0 4px 20px rgba(255,255,255,0.8), 0 1px 3px rgba(0,0,0,0.15)',
-                wordWrap: 'break-word',
-                overflowWrap: 'break-word',
-                hyphens: 'none',
-              }}
-            >
-              {t('hero.title')}
-            </motion.h1>
+          {/* Main Heading - Playfair Display, semi-bold, premium taupe */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.2,
+              ease: [0.16, 1, 0.3, 1]
+            }}
+            className="font-serif font-semibold mb-4 md:mb-8 leading-tight"
+            style={{
+              fontFamily: 'Playfair Display, serif',
+              fontWeight: 600,
+              fontSize: 'clamp(1.725rem, 5.75vw, 4.025rem)',
+              color: '#4A4038',
+              letterSpacing: '-0.01em',
+              lineHeight: 1.3,
+            }}
+          >
+            {language === 'de' ? (
+              <>
+                Aesthetic Studio München
+                <br className="sm:hidden" />
+                <span style={{ whiteSpace: 'nowrap' }}> – NATA LUX</span>
+              </>
+            ) : (
+              <>
+                Aesthetic Studio München
+                <br className="sm:hidden" />
+                <span style={{ whiteSpace: 'nowrap' }}> – NATA LUX</span>
+              </>
+            )}
+          </motion.h1>
 
-            {/* Subtitle with enhanced mobile contrast */}
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.8,
-                delay: 0.6,
-                ease: [0.16, 1, 0.3, 1]
-              }}
-              className="text-base sm:text-lg md:text-xl lg:text-2xl font-heading mb-6 leading-relaxed font-bold px-2 md:px-0 break-words"
-              style={{
-                color: '#8B6F3D',
-                textShadow: '0 2px 8px rgba(255,255,255,0.95), 0 4px 16px rgba(255,255,255,0.8), 0 0 30px rgba(255,255,255,0.6), 0 1px 3px rgba(0,0,0,0.2)',
-                WebkitTextStroke: '0.5px rgba(255,255,255,0.4)',
-                wordWrap: 'break-word',
-                overflowWrap: 'break-word',
-                hyphens: 'none',
-              }}
-            >
-              {t('hero.subtitle')}
-            </motion.p>
+          {/* Services Line - Inter, medium, caps, muted colors */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.4,
+              ease: [0.16, 1, 0.3, 1]
+            }}
+            className="mb-4 md:mb-8"
+            style={{
+              fontFamily: 'Inter, sans-serif',
+              fontWeight: 500,
+              fontSize: 'clamp(0.8125rem, 2vw, 1.125rem)',
+              letterSpacing: '0.05em',
+              lineHeight: 1.6,
+            }}
+          >
+            {t('hero.services').split('·').map((service, index, arr) => (
+              <span key={index}>
+                <span style={{ color: '#8E8072' }}>
+                  {service.trim()}
+                </span>
+                {index < arr.length - 1 && (
+                  <span style={{ color: '#D8C7A2', margin: '0 0.5rem' }}>·</span>
+                )}
+              </span>
+            ))}
+          </motion.div>
 
-            {/* Description */}
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.8,
-                delay: 0.8,
-                ease: [0.16, 1, 0.3, 1]
-              }}
-              className="text-base sm:text-lg md:text-xl mb-8 sm:mb-10 md:mb-12 leading-relaxed max-w-3xl mx-auto font-medium"
-              style={{
-                color: '#2B1F18',
-                textShadow: '0 2px 10px rgba(255,255,255,0.9), 0 4px 20px rgba(255,255,255,0.7)',
-              }}
-            >
-              {t('hero.description')}
-            </motion.p>
+          {/* Subtitle Line 1 - Inter, semi-bold, dark taupe */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.6,
+              ease: [0.16, 1, 0.3, 1]
+            }}
+            className="mb-2"
+            style={{
+              fontFamily: 'Inter, sans-serif',
+              fontWeight: 500,
+              fontSize: 'clamp(0.875rem, 2.5vw, 1.5rem)',
+              color: '#4A4038',
+              lineHeight: 1.5,
+            }}
+          >
+            {t('hero.subtitle1')}
+          </motion.p>
 
-            {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.8,
-                delay: 1,
-                ease: [0.16, 1, 0.3, 1]
-              }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-            >
-            {/* Primary button - Termin buchen */}
-            <motion.div
-              whileHover={{ scale: 1.02, y: -2 }}
-              whileTap={{ scale: 0.98 }}
-              className="primary-button-wrapper"
-            >
-              <Button
-                size="lg"
-                asChild
-                className="text-base sm:text-lg px-6 py-4 sm:px-8 sm:py-5 md:px-10 md:py-7 relative overflow-hidden min-h-11"
-                style={{
-                  background: 'linear-gradient(90deg, #BFA77A, #D7C5A0)',
-                  backgroundSize: '200% 100%',
-                  backgroundPosition: '0% 0%',
-                  color: '#FFFFFF',
-                  fontWeight: 500,
-                  letterSpacing: '0.5px',
-                  borderRadius: '0.6rem',
-                  border: 'none',
-                  transition: 'all 0.3s ease',
-                  boxShadow: '0 4px 12px rgba(191,167,122,0.3), 0 2px 4px rgba(0,0,0,0.1)',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundPosition = '100% 0%';
-                  e.currentTarget.style.boxShadow = 'inset 0 0 8px rgba(255,255,255,0.35), 0 8px 20px rgba(191,167,122,0.5), 0 4px 8px rgba(0,0,0,0.15)';
-                  e.currentTarget.style.background = 'linear-gradient(90deg, #A8916A, #BFA77A)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundPosition = '0% 0%';
-                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(191,167,122,0.3), 0 2px 4px rgba(0,0,0,0.1)';
-                  e.currentTarget.style.background = 'linear-gradient(90deg, #BFA77A, #D7C5A0)';
-                }}
-              >
-                <a href="tel:+4917677267269" className="relative z-10">
-                  {t('hero.cta.book')}
-                </a>
-              </Button>
-            </motion.div>
+          {/* Subtitle Line 2 - Inter, regular, soft mocha */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.8,
+              ease: [0.16, 1, 0.3, 1]
+            }}
+            className="mb-6 md:mb-10"
+            style={{
+              fontFamily: 'Inter, sans-serif',
+              fontWeight: 400,
+              fontSize: 'clamp(0.8125rem, 2vw, 1.25rem)',
+              color: '#A49786',
+              lineHeight: 1.5,
+            }}
+          >
+            {t('hero.subtitle2')}
+          </motion.p>
 
-            {/* Secondary button - WhatsApp */}
-            <motion.div
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              delay: 1,
+              ease: [0.16, 1, 0.3, 1]
+            }}
+            className="flex flex-col sm:flex-row gap-3 justify-center items-center w-full sm:w-auto"
+          >
+            {/* Primary Button - Termin buchen */}
+            <motion.a
+              href="tel:+4917677267269"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="secondary-button-wrapper"
+              className="inline-block w-full sm:w-auto"
             >
-              <Button
-                size="lg"
-                variant="outline"
-                asChild
-                className="text-base sm:text-lg px-6 py-4 sm:px-8 sm:py-5 md:px-10 md:py-7 min-h-11"
+              <button
+                className="px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-medium transition-all duration-300 w-full sm:w-auto"
                 style={{
-                  backgroundColor: 'rgba(255, 255, 255, 0.7)',
-                  backdropFilter: 'blur(10px)',
-                  borderWidth: '2px',
-                  borderColor: '#BFA77A',
-                  color: '#8B7355',
+                  backgroundColor: '#C9A974',
+                  color: '#FFFFFF',
+                  borderRadius: '9999px',
+                  border: 'none',
+                  fontFamily: 'Inter, sans-serif',
                   fontWeight: 500,
-                  letterSpacing: '0.5px',
-                  borderRadius: '0.6rem',
-                  transition: 'all 0.3s ease',
-                  boxShadow: '0 4px 12px rgba(191,167,122,0.2), inset 0 1px 0 rgba(255,255,255,0.5)',
+                  letterSpacing: '0.02em',
+                  boxShadow: '0 2px 8px rgba(201, 169, 116, 0.25)',
+                  minWidth: '180px',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(191,167,122,0.15)';
-                  e.currentTarget.style.borderColor = '#D7C5A0';
-                  e.currentTarget.style.color = '#6B5A45';
-                  e.currentTarget.style.boxShadow = '0 0 16px rgba(191,167,122,0.4), inset 0 0 10px rgba(191,167,122,0.2)';
+                  e.currentTarget.style.backgroundColor = '#B8986A';
+                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(201, 169, 116, 0.35)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.7)';
-                  e.currentTarget.style.borderColor = '#BFA77A';
-                  e.currentTarget.style.color = '#8B7355';
-                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(191,167,122,0.2), inset 0 1px 0 rgba(255,255,255,0.5)';
+                  e.currentTarget.style.backgroundColor = '#C9A974';
+                  e.currentTarget.style.boxShadow = '0 2px 8px rgba(201, 169, 116, 0.25)';
                 }}
               >
-                <a href="https://wa.me/4917677267269" target="_blank" rel="noopener noreferrer">
-                  {t('hero.cta.whatsapp')}
-                </a>
-              </Button>
-            </motion.div>
+                {t('hero.cta.book')}
+              </button>
+            </motion.a>
 
-            {/* Secondary button - Preise ansehen */}
-            <Link to={`${language === 'ru' ? '/ru' : ''}/prices`}>
-              <motion.div
+            {/* Secondary Button - WhatsApp */}
+            <motion.a
+              href="https://wa.me/4917677267269"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-block w-full sm:w-auto"
+            >
+              <button
+                className="px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-medium transition-all duration-300 w-full sm:w-auto"
+                style={{
+                  backgroundColor: '#FFFFFF',
+                  color: '#4A4038',
+                  borderRadius: '9999px',
+                  border: '2px solid #C9A974',
+                  fontFamily: 'Inter, sans-serif',
+                  fontWeight: 500,
+                  letterSpacing: '0.02em',
+                  boxShadow: '0 2px 8px rgba(201, 169, 116, 0.15)',
+                  minWidth: '180px',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#FAFAF8';
+                  e.currentTarget.style.borderColor = '#B8986A';
+                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(201, 169, 116, 0.25)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = '#FFFFFF';
+                  e.currentTarget.style.borderColor = '#C9A974';
+                  e.currentTarget.style.boxShadow = '0 2px 8px rgba(201, 169, 116, 0.15)';
+                }}
+              >
+                {t('hero.cta.whatsapp')}
+              </button>
+            </motion.a>
+
+            {/* Tertiary Button - Preisliste */}
+            <Link to="/prices" className="w-full sm:w-auto">
+              <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="secondary-button-wrapper"
+                className="px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-medium transition-all duration-300 w-full sm:w-auto"
+                style={{
+                  backgroundColor: 'transparent',
+                  color: '#4A4038',
+                  borderRadius: '9999px',
+                  border: '2px solid #D8C7A2',
+                  fontFamily: 'Inter, sans-serif',
+                  fontWeight: 500,
+                  letterSpacing: '0.02em',
+                  boxShadow: '0 2px 8px rgba(216, 199, 162, 0.15)',
+                  minWidth: '180px',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = 'rgba(216, 199, 162, 0.1)';
+                  e.currentTarget.style.borderColor = '#C9A974';
+                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(216, 199, 162, 0.25)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                  e.currentTarget.style.borderColor = '#D8C7A2';
+                  e.currentTarget.style.boxShadow = '0 2px 8px rgba(216, 199, 162, 0.15)';
+                }}
               >
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="text-base sm:text-lg px-6 py-4 sm:px-8 sm:py-5 md:px-10 md:py-7 min-h-11"
-                  style={{
-                    backgroundColor: 'rgba(255, 255, 255, 0.7)',
-                    backdropFilter: 'blur(10px)',
-                    borderWidth: '2px',
-                    borderColor: '#BFA77A',
-                    color: '#8B7355',
-                    fontWeight: 500,
-                    letterSpacing: '0.5px',
-                    borderRadius: '0.6rem',
-                    transition: 'all 0.3s ease',
-                    boxShadow: '0 4px 12px rgba(191,167,122,0.2), inset 0 1px 0 rgba(255,255,255,0.5)',
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = 'rgba(191,167,122,0.15)';
-                    e.currentTarget.style.borderColor = '#D7C5A0';
-                    e.currentTarget.style.color = '#6B5A45';
-                    e.currentTarget.style.boxShadow = '0 0 16px rgba(191,167,122,0.4), inset 0 0 10px rgba(191,167,122,0.2)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.7)';
-                    e.currentTarget.style.borderColor = '#BFA77A';
-                    e.currentTarget.style.color = '#8B7355';
-                    e.currentTarget.style.boxShadow = '0 4px 12px rgba(191,167,122,0.2), inset 0 1px 0 rgba(255,255,255,0.5)';
-                  }}
-                >
-                  {t('hero.cta.prices')}
-                </Button>
-              </motion.div>
+                {t('hero.cta.prices')}
+              </motion.button>
             </Link>
           </motion.div>
-          </div>
 
           {/* Scroll indicator */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5, duration: 1 }}
-            className="mt-20"
+            className="mt-4 md:mt-12"
           >
             <motion.div
               animate={{ y: [0, 10, 0] }}
@@ -240,7 +263,12 @@ export const HeroSection = () => {
               }}
               className="inline-block"
             >
-              <div className="w-6 h-10 border-2 border-brand-gold/30 rounded-full p-1">
+              <div
+                className="w-6 h-10 rounded-full p-1"
+                style={{
+                  border: '2px solid rgba(216, 199, 162, 0.4)',
+                }}
+              >
                 <motion.div
                   animate={{ y: [0, 12, 0] }}
                   transition={{
@@ -248,7 +276,10 @@ export const HeroSection = () => {
                     repeat: Infinity,
                     ease: "easeInOut"
                   }}
-                  className="w-1 h-2 bg-brand-gold rounded-full mx-auto"
+                  className="w-1 h-2 rounded-full mx-auto"
+                  style={{
+                    backgroundColor: '#D8C7A2',
+                  }}
                 />
               </div>
             </motion.div>

@@ -26,12 +26,13 @@ const translations = {
     'nav.contact': 'Kontakt',
 
     // Hero
-    'hero.title': 'Münchner Salon für Ästhetik',
-    'hero.subtitle': 'Wimpern, Permanent Make-up, Laser, Anti-Aging',
-    'hero.description': 'Natürlicher Effekt ohne Schmerzen und Ausfallzeiten. Kostenlose Beratung vor der Behandlung.',
+    'hero.title': 'Aesthetic Studio München – NATA LUX',
+    'hero.services': 'Wimpern · Permanent Make-up · Laser · Anti-Aging',
+    'hero.subtitle1': 'Moderne Ästhetik mit natürlichen Ergebnissen.',
+    'hero.subtitle2': 'Beratung inklusive.',
     'hero.cta.book': 'Termin buchen',
-    'hero.cta.whatsapp': 'WhatsApp',
-    'hero.cta.prices': 'Preise ansehen',
+    'hero.cta.whatsapp': 'WhatsApp schreiben',
+    'hero.cta.prices': 'Preisliste',
 
     // Services
     'services.title': 'Unsere Top-Dienstleistungen',
@@ -122,8 +123,8 @@ const translations = {
     'categories.antiaging.desc': 'Apparative Behandlungen für Gesicht und Körper',
     'categories.training': 'Schulungen',
     'categories.training.desc': 'Professionelle Ausbildung in der Beauty-Branche',
-    'categories.shop': 'Home Care Shop',
-    'categories.shop.desc': 'Premium-Kosmetik für die Heimpflege',
+    'categories.shop': 'Kosmetik-Shop',
+    'categories.shop.desc': 'Premium-Produkte für zu Hause und professionelle Anwendung',
 
     // Lashes & Brows subcategories
     'lashesbrows.title': 'Lashes & Brows',
@@ -184,8 +185,8 @@ const translations = {
     'training.business.description': 'Schritt-für-Schritt-Anleitung für Beauty-Business in Deutschland',
 
     // Shop subcategories
-    'shop.title': 'Home Care Shop',
-    'shop.subtitle': 'Premium-Kosmetik für zu Hause',
+    'shop.title': 'Kosmetik-Shop',
+    'shop.subtitle': 'Premium-Produkte für zu Hause und professionelle Anwendung',
     'shop.brands': 'Unsere Marken',
     'shop.renew': 'RENEW',
     'shop.renew.desc': 'Bio-Repair Produkte für professionelle Hautpflege',
@@ -203,12 +204,13 @@ const translations = {
     'nav.contact': 'Контакты',
 
     // Hero
-    'hero.title': 'Салон эстетики в Мюнхене',
-    'hero.subtitle': 'Ресницы, перманент, лазер, anti-aging',
-    'hero.description': 'Натуральный эффект без боли и простоев. Консультация перед процедурой — бесплатно.',
+    'hero.title': 'Aesthetic Studio München – NATA LUX',
+    'hero.services': 'Ресницы · Перманент · Лазер · Anti-Aging',
+    'hero.subtitle1': 'Современная эстетика с естественными результатами.',
+    'hero.subtitle2': 'Консультация включена.',
     'hero.cta.book': 'Записаться',
-    'hero.cta.whatsapp': 'WhatsApp',
-    'hero.cta.prices': 'Прайс',
+    'hero.cta.whatsapp': 'Написать в WhatsApp',
+    'hero.cta.prices': 'Прайс-лист',
 
     // Services
     'services.title': 'Наши топ-услуги',
@@ -299,8 +301,8 @@ const translations = {
     'categories.antiaging.desc': 'Аппаратные процедуры для лица и тела',
     'categories.training': 'Обучение',
     'categories.training.desc': 'Профессиональное обучение в бьюти-индустрии',
-    'categories.shop': 'Косметика для дома',
-    'categories.shop.desc': 'Премиум-косметика для домашнего ухода',
+    'categories.shop': 'Магазин косметики',
+    'categories.shop.desc': 'Премиум-продукты для дома и профессионального использования',
 
     // Lashes & Brows subcategories
     'lashesbrows.title': 'Брови и ресницы',
@@ -361,8 +363,8 @@ const translations = {
     'training.business.description': 'Пошаговая инструкция по открытию бьюти-бизнеса в Германии',
 
     // Shop subcategories
-    'shop.title': 'Косметика для дома',
-    'shop.subtitle': 'Премиум-косметика для домашнего ухода',
+    'shop.title': 'Магазин косметики',
+    'shop.subtitle': 'Премиум-продукты для дома и профессионального использования',
     'shop.brands': 'Наши бренды',
     'shop.renew': 'RENEW',
     'shop.renew.desc': 'Bio-Repair продукция для профессионального ухода',

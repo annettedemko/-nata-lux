@@ -91,10 +91,12 @@ export const ServicePageLayout = ({
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full overflow-x-hidden">
-      {/* Background Decorations */}
-      <div className="absolute top-0 right-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-brand-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-brand-gold/3 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3 pointer-events-none" />
+      <div className="relative z-10 w-full">
+      {/* Background Decorations Container with overflow control */}
+      <div className="absolute inset-0 overflow-x-hidden pointer-events-none">
+        <div className="absolute top-0 right-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-brand-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
+        <div className="absolute bottom-0 left-0 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-brand-gold/3 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3" />
+      </div>
 
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 md:pt-32 md:pb-20 w-full">
@@ -102,14 +104,14 @@ export const ServicePageLayout = ({
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="text-center"
           >
             {/* Icon with glow effect */}
             <motion.div
               initial={{ scale: 0, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
-              transition={{ duration: 0.8, delay: 0.7, type: "spring", stiffness: 200 }}
+              transition={{ duration: 0.5, delay: 0.2, type: "spring", stiffness: 200 }}
               className="relative inline-block mb-8"
             >
               <div className="absolute inset-0 bg-brand-gold/20 rounded-3xl blur-xl animate-pulse" />
@@ -127,7 +129,7 @@ export const ServicePageLayout = ({
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: '120px' }}
-              transition={{ duration: 0.8, delay: 0.9 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
               className="h-1 bg-gradient-to-r from-transparent via-brand-gold to-transparent mx-auto mb-6"
             />
 
@@ -157,10 +159,10 @@ export const ServicePageLayout = ({
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
           className="relative glass rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 mb-12 border border-brand-gold/10 shadow-xl shadow-brand-gold/5"
         >
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div className="absolute top-0 left-0 right-0 flex justify-center -translate-y-1/2">
             <div className="px-4 py-1 bg-brand-cream rounded-full border border-brand-gold/20 text-xs text-brand-gold tracking-widest uppercase">
               {isGerman ? 'Über die Behandlung' : 'О процедуре'}
             </div>
@@ -206,7 +208,7 @@ export const ServicePageLayout = ({
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
+                transition={{ duration: 0.3, delay: index * 0.02 }}
                 className="flex items-start p-3 rounded-xl hover:bg-brand-gold/5 transition-colors duration-300"
               >
                 <div className="w-6 h-6 rounded-full bg-gradient-to-br from-brand-gold to-brand-gold-light flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">

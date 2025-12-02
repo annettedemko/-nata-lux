@@ -93,16 +93,16 @@ export const searchIndex: SearchItem[] = [
   },
   {
     id: 'shop',
-    title: { de: 'Home Care Shop', ru: 'Косметика для дома' },
+    title: { de: 'Kosmetik-Shop', ru: 'Магазин косметики' },
     description: {
-      de: 'Premium-Kosmetik für die Heimpflege',
-      ru: 'Премиум-косметика для домашнего ухода'
+      de: 'Premium-Produkte für zu Hause und professionelle Anwendung',
+      ru: 'Премиум-продукты для дома и профессионального использования'
     },
     category: { de: 'Kategorie', ru: 'Категория' },
     path: '/shop',
     keywords: {
-      de: ['shop', 'kosmetik', 'pflege', 'renew', 'produkte'],
-      ru: ['магазин', 'косметика', 'уход', 'средства', 'renew']
+      de: ['shop', 'kosmetik', 'pflege', 'renew', 'produkte', 'b2b', 'professionell'],
+      ru: ['магазин', 'косметика', 'уход', 'средства', 'renew', 'б2б', 'профессионально']
     }
   },
 
@@ -122,45 +122,17 @@ export const searchIndex: SearchItem[] = [
     }
   },
   {
-    id: 'lash-lifting',
-    title: { de: 'Wimpern Laminierung', ru: 'Ламинирование ресниц' },
+    id: 'lash-brow-lifting',
+    title: { de: 'Wimpern + Augenbrauen Laminierung', ru: 'Ламинирование ресниц + бровей' },
     description: {
-      de: 'Natürlicher Curl und Glanz für Ihre Wimpern',
-      ru: 'Натуральный изгиб и блеск для ваших ресниц'
+      de: 'Natürlicher Curl und gepflegte Form',
+      ru: 'Натуральный изгиб и ухоженная форма'
     },
     category: { de: 'Lashes & Brows', ru: 'Брови и ресницы' },
-    path: '/services/lash-lifting',
+    path: '/services/wimpern-augenbrauen-laminierung',
     keywords: {
-      de: ['lash lifting', 'laminierung', 'curl', 'wimpern'],
-      ru: ['ламинирование', 'лифтинг', 'изгиб', 'ресницы']
-    }
-  },
-  {
-    id: 'brow-lifting',
-    title: { de: 'Augenbrauen Laminierung', ru: 'Ламинирование бровей' },
-    description: {
-      de: 'Gepflegte Form bis zu 6 Wochen',
-      ru: 'Ухоженная форма до 6 недель'
-    },
-    category: { de: 'Lashes & Brows', ru: 'Брови и ресницы' },
-    path: '/services/brow-lifting',
-    keywords: {
-      de: ['brow lifting', 'augenbrauen', 'laminierung', 'form'],
-      ru: ['ламинирование бровей', 'брови', 'форма', 'укладка']
-    }
-  },
-  {
-    id: 'brow-styling',
-    title: { de: 'Augenbrauen Styling', ru: 'Оформление бровей' },
-    description: {
-      de: 'Zupfen, Färben, Formen',
-      ru: 'Коррекция, окрашивание, форма'
-    },
-    category: { de: 'Lashes & Brows', ru: 'Брови и ресницы' },
-    path: '/services/brow-styling',
-    keywords: {
-      de: ['augenbrauen', 'styling', 'zupfen', 'färben', 'form'],
-      ru: ['брови', 'оформление', 'коррекция', 'окрашивание', 'форма']
+      de: ['lash lifting', 'brow lifting', 'laminierung', 'curl', 'wimpern', 'augenbrauen', 'form'],
+      ru: ['ламинирование', 'лифтинг', 'изгиб', 'ресницы', 'брови', 'форма', 'укладка']
     }
   },
 
@@ -173,52 +145,152 @@ export const searchIndex: SearchItem[] = [
       ru: 'Пудровая техника для естественных бровей'
     },
     category: { de: 'Permanent Make-up', ru: 'Перманентный макияж' },
-    path: '/services/pmu-powder-brows',
+    path: '/services/powder-brows',
     keywords: {
       de: ['powder brows', 'pmu', 'augenbrauen', 'permanent', 'pudertechnik'],
       ru: ['пудровые брови', 'пму', 'перманент', 'брови', 'напыление']
     }
   },
   {
-    id: 'pmu-lips',
+    id: 'aquarell-lips',
     title: { de: 'Aquarell Lips', ru: 'Акварельные губы' },
     description: {
       de: 'Aquarell & Velvet Techniken',
       ru: 'Акварель и Вельвет техники'
     },
     category: { de: 'Permanent Make-up', ru: 'Перманентный макияж' },
-    path: '/services/pmu-lips',
+    path: '/services/aquarell-lips',
     keywords: {
       de: ['aquarell lips', 'pmu', 'lippen', 'velvet', 'permanent'],
       ru: ['акварельные губы', 'пму', 'губы', 'вельвет', 'перманент']
     }
   },
   {
-    id: 'pmu-eyeliner',
+    id: 'wimpernkranz',
     title: { de: 'Wimpernkranz', ru: 'Межресничка' },
     description: {
       de: 'Klassisch oder intensiv',
       ru: 'Классическая или интенсивная'
     },
     category: { de: 'Permanent Make-up', ru: 'Перманентный макияж' },
-    path: '/services/pmu-eyeliner',
+    path: '/services/wimpernkranz',
     keywords: {
       de: ['wimpernkranz', 'eyeliner', 'pmu', 'lidstrich', 'permanent'],
       ru: ['межресничка', 'веко', 'пму', 'стрелки', 'перманент']
     }
   },
   {
-    id: 'pmu-removal',
+    id: 'pmu-remover',
     title: { de: 'PMU Remover', ru: 'Удаление ПМ' },
     description: {
       de: '2-stufiges Verfahren: Salon + Heimpflege',
       ru: '2-этапная процедура: салон + домашний уход'
     },
     category: { de: 'Permanent Make-up', ru: 'Перманентный макияж' },
-    path: '/services/pmu-removal',
+    path: '/services/pmu-remover',
     keywords: {
       de: ['remover', 'entfernung', 'pmu', 'korrektur', 'removal'],
       ru: ['ремувер', 'удаление', 'пму', 'коррекция', 'выведение']
+    }
+  },
+
+  // Anti-Aging Subcategories
+  {
+    id: 'apparative-anti-aging',
+    title: { de: 'Apparative Anti-Aging', ru: 'Аппаратный Anti-Aging' },
+    description: {
+      de: 'RF-Lifting, Lichttherapie, Biostrom, Ultraschall',
+      ru: 'RF-лифтинг, световая терапия, биотоки, УЗ'
+    },
+    category: { de: 'Anti-Aging & Kosmetologie', ru: 'Anti-Aging и косметология' },
+    path: '/services/apparative-anti-aging',
+    keywords: {
+      de: ['rf-lifting', 'radiofrequenz', 'lichttherapie', 'biostrom', 'ultraschall', 'apparative', 'anti-aging'],
+      ru: ['рф-лифтинг', 'радиочастотный', 'световая терапия', 'биотоки', 'узи', 'аппаратный', 'антиэйдж']
+    }
+  },
+  {
+    id: 'koerperbehandlungen',
+    title: { de: 'Körperbehandlungen', ru: 'Процедуры для тела' },
+    description: {
+      de: 'RF-Vakuum, Kavitation für Bauch, Gesäß, Oberschenkel',
+      ru: 'RF-вакуум, кавитация для живота, ягодиц, бёдер'
+    },
+    category: { de: 'Anti-Aging & Kosmetologie', ru: 'Anti-Aging и косметология' },
+    path: '/services/koerperbehandlungen',
+    keywords: {
+      de: ['körperbehandlung', 'rf-vakuum', 'kavitation', 'bauch', 'gesäß', 'oberschenkel', 'körper', 'cellulite'],
+      ru: ['тело', 'процедуры', 'рф-вакуум', 'кавитация', 'живот', 'ягодицы', 'бёдра', 'целлюлит']
+    }
+  },
+  {
+    id: 'gesichtsreinigung',
+    title: { de: 'Gesichtsreinigung', ru: 'Чистка лица' },
+    description: {
+      de: '90 Min kombiniert: Reinigung, Peeling, Masken, Darsonval',
+      ru: '90 мин комплекс: очищение, пилинг, маски, дарсонваль'
+    },
+    category: { de: 'Anti-Aging & Kosmetologie', ru: 'Anti-Aging и косметология' },
+    path: '/services/gesichtsreinigung',
+    keywords: {
+      de: ['gesichtsreinigung', 'facial', 'reinigung', 'peeling', 'maske', 'darsonval', 'gesicht'],
+      ru: ['чистка лица', 'чистка', 'очищение', 'пилинг', 'маска', 'дарсонваль', 'лицо']
+    }
+  },
+  {
+    id: 'phonophorese',
+    title: { de: 'Phonophorese', ru: 'Фонофорез' },
+    description: {
+      de: 'Tiefenpflege mit Kollagen, Vitaminen, Ölen, Exosomen',
+      ru: 'Глубокое питание коллагеном, витаминами, маслами, экзосомами'
+    },
+    category: { de: 'Anti-Aging & Kosmetologie', ru: 'Anti-Aging и косметология' },
+    path: '/services/phonophorese',
+    keywords: {
+      de: ['phonophorese', 'ultraschall', 'kollagen', 'vitamine', 'exosome', 'tiefenpflege'],
+      ru: ['фонофорез', 'ультразвук', 'коллаген', 'витамины', 'экзосомы', 'питание']
+    }
+  },
+  {
+    id: 'microneedling',
+    title: { de: 'Microneedling', ru: 'Микронидлинг' },
+    description: {
+      de: 'Gesicht, Hals, Dekolleté, Kopfhaut',
+      ru: 'Лицо, шея, декольте, кожа головы'
+    },
+    category: { de: 'Anti-Aging & Kosmetologie', ru: 'Anti-Aging и косметология' },
+    path: '/services/microneedling',
+    keywords: {
+      de: ['microneedling', 'gesicht', 'hals', 'dekolleté', 'kopfhaut', 'nadeln', 'kollagen'],
+      ru: ['микронидлинг', 'лицо', 'шея', 'декольте', 'голова', 'иглы', 'коллаген']
+    }
+  },
+  {
+    id: 'darsonval-haare',
+    title: { de: 'Darsonval für Haare', ru: 'Дарсонваль для волос' },
+    description: {
+      de: 'Wachstumsstimulation, Wurzelstärkung',
+      ru: 'Стимуляция роста, укрепление луковиц'
+    },
+    category: { de: 'Anti-Aging & Kosmetologie', ru: 'Anti-Aging и косметология' },
+    path: '/services/darsonval-haare',
+    keywords: {
+      de: ['darsonval', 'haare', 'haarwachstum', 'haarausfall', 'kopfhaut', 'wurzeln'],
+      ru: ['дарсонваль', 'волосы', 'рост волос', 'выпадение', 'кожа головы', 'луковицы']
+    }
+  },
+  {
+    id: 'hautveraenderungen-entfernen',
+    title: { de: 'Hautveränderungen entfernen', ru: 'Удаление новообразований' },
+    description: {
+      de: 'Papillome, Warzen (mit Dermatologe)',
+      ru: 'Папилломы, бородавки (с дерматологом)'
+    },
+    category: { de: 'Anti-Aging & Kosmetologie', ru: 'Anti-Aging и косметология' },
+    path: '/services/hautveraenderungen-entfernen',
+    keywords: {
+      de: ['hautveränderungen', 'entfernen', 'papillome', 'warzen', 'neoplasie', 'dermatologe'],
+      ru: ['удаление', 'новообразования', 'папилломы', 'бородавки', 'дерматолог', 'образования']
     }
   },
 
