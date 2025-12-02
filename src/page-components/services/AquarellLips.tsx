@@ -18,7 +18,6 @@ const AquarellLips = () => {
     '/55.jpg',
     '/93.jpg',
     '/96.jpg',
-    '/138.jpeg',
   ];
 
   const photoGallery = (
