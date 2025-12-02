@@ -100,16 +100,16 @@ export const ServicePageLayout = ({
       <section className="relative pt-24 pb-16 md:pt-32 md:pb-20 w-full">
         <div className="container mx-auto px-4 max-w-5xl w-full">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.8, delay: 1.0, ease: [0.16, 1, 0.3, 1] }}
             className="text-center"
           >
             {/* Icon with glow effect */}
             <motion.div
               initial={{ scale: 0, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
-              transition={{ duration: 0.8, delay: 0.2, type: "spring", stiffness: 200 }}
+              transition={{ duration: 0.8, delay: 1.2, type: "spring", stiffness: 200 }}
               className="relative inline-block mb-8"
             >
               <div className="absolute inset-0 bg-brand-gold/20 rounded-3xl blur-xl animate-pulse" />
@@ -127,7 +127,7 @@ export const ServicePageLayout = ({
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: '120px' }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{ duration: 0.8, delay: 1.4 }}
               className="h-1 bg-gradient-to-r from-transparent via-brand-gold to-transparent mx-auto mb-6"
             />
 
@@ -154,10 +154,10 @@ export const ServicePageLayout = ({
 
         {/* About Service */}
         <motion.section
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
           className="relative glass rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 mb-12 border border-brand-gold/10 shadow-xl shadow-brand-gold/5"
         >
           <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -178,10 +178,10 @@ export const ServicePageLayout = ({
         {/* Procedure Schema */}
         {procedureSchema && (
           <motion.section
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
             className="mb-12"
           >
             {procedureSchema}
@@ -190,10 +190,10 @@ export const ServicePageLayout = ({
 
         {/* Benefits */}
         <motion.section
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
           className="relative glass rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 mb-12 border border-brand-gold/10 shadow-xl shadow-brand-gold/5"
         >
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-8 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', wordWrap: 'break-word' }}>
@@ -205,7 +205,7 @@ export const ServicePageLayout = ({
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 className="flex items-start p-3 rounded-xl hover:bg-brand-gold/5 transition-colors duration-300"
               >
@@ -221,10 +221,10 @@ export const ServicePageLayout = ({
         {/* Steps (optional) */}
         {steps && steps.length > 0 && (
           <motion.section
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
             className="relative glass rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 mb-12 border border-brand-gold/10 shadow-xl shadow-brand-gold/5"
           >
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-8 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', wordWrap: 'break-word' }}>
@@ -236,7 +236,7 @@ export const ServicePageLayout = ({
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex items-start group"
                 >
@@ -262,10 +262,10 @@ export const ServicePageLayout = ({
         {/* Price Section Link */}
         {priceSection && (
           <motion.section
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
             className="relative z-10 rounded-3xl p-10 md:p-12 mb-12 mt-6 text-center bg-gradient-to-br from-brand-espresso via-brand-coffee to-brand-espresso overflow-hidden"
           >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,175,55,0.15),transparent_50%)]" />
@@ -294,10 +294,10 @@ export const ServicePageLayout = ({
         {/* Contraindications (optional) */}
         {contraindications && contraindications.length > 0 && (
           <motion.section
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
             className="relative glass rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 mb-12 mt-6 md:mt-0 border border-brand-gold/10 shadow-xl shadow-brand-gold/5"
           >
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', wordWrap: 'break-word' }}>
@@ -321,10 +321,10 @@ export const ServicePageLayout = ({
         {/* FAQ (optional) */}
         {faq && faq.length > 0 && (
           <motion.section
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
             className="mb-12"
           >
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-8 text-center max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', wordWrap: 'break-word' }}>
@@ -336,7 +336,7 @@ export const ServicePageLayout = ({
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="glass rounded-2xl p-6 md:p-8 border border-brand-gold/10 hover:border-brand-gold/30 transition-colors duration-300"
                 >
@@ -350,9 +350,9 @@ export const ServicePageLayout = ({
 
         {/* CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
           className="relative rounded-3xl p-6 sm:p-8 md:p-10 lg:p-14 text-center overflow-hidden"
         >
