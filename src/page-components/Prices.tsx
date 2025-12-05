@@ -78,9 +78,11 @@ const Prices = () => {
           ]
         },
         {
-          name: isGerman ? 'Wimpernkranz (Lidstrich)' : 'Межресничка',
+          name: isGerman ? 'Augen (Eyes)' : 'Глаза (Eyes)',
           items: [
-            { name: isGerman ? 'Klassisch' : 'Классическая', price: '200 €' },
+            { name: isGerman ? 'Wimpernkranzverdichtung' : 'Межресничка', price: '200 €' },
+            { name: isGerman ? 'Lidstrich' : 'Стрелка', price: '300 €' },
+            { name: isGerman ? 'Lidstrich mit Schattierung' : 'Стрелка с растушевкой', price: '350 €' },
             { name: isGerman ? 'Korrektur' : 'Коррекция', price: '100 €' },
           ]
         },
@@ -102,65 +104,106 @@ const Prices = () => {
       icon: Zap,
       title: isGerman ? 'Laser Haarentfernung auf Dreiwellenlaser' : 'Лазерная эпиляция на трёхволновом лазере',
       subtitle: isGerman ? 'Alexandrit + Diode + Nd:YAG' : 'Александрит + Диод + Nd:YAG',
-      consultation: isGerman ? '🕊 Konsultation vor der Behandlung — kostenlos.' : '🕊 Консультация перед процедурой — бесплатная.',
+      consultation: isGerman ? 'Beratung inklusive' : 'Консультация включена',
       isDualColumn: true,
       columns: [
         {
           name: isGerman ? 'Damen' : 'Женщины',
-          items: [
-            { name: isGerman ? 'Oberlippe' : 'Верхняя губа', price: '30 €' },
-            { name: isGerman ? 'Kinn' : 'Подбородок', price: '30 €' },
-            { name: isGerman ? 'Wangen' : 'Щёки', price: '30 €' },
-            { name: isGerman ? 'Finger' : 'Пальцы', price: '30 €' },
-            { name: isGerman ? 'Bauchstreifen' : 'Полоска на животе', price: '30 €' },
-            { name: isGerman ? 'Nacken' : 'Шея', price: '50 €' },
-            { name: isGerman ? 'Unterer Rücken' : 'Поясница', price: '50 €' },
-            { name: isGerman ? 'Achselhöhlen' : 'Подмышки', price: '60 €' },
-            { name: isGerman ? 'Gesicht komplett' : 'Лицо полностью', price: '70 €' },
-            { name: isGerman ? 'Bauch' : 'Живот', price: '70 €' },
-            { name: isGerman ? 'Brust' : 'Грудь', price: '70 €' },
-            { name: isGerman ? 'Unterarme' : 'Предплечья', price: '70 €' },
-            { name: isGerman ? 'Oberarme' : 'Плечи', price: '70 €' },
-            { name: isGerman ? 'Pobacken' : 'Ягодицы', price: '70 €' },
-            { name: isGerman ? 'Bikini komplett' : 'Бикини полностью', price: '90 €' },
-            { name: isGerman ? 'Arme komplett' : 'Руки полностью', price: '90 €' },
-            { name: isGerman ? 'Rücken' : 'Спина', price: '100 €' },
-            { name: isGerman ? 'Unterschenkel' : 'Голени', price: '100 €' },
-            { name: isGerman ? 'Oberschenkel + Knie' : 'Бёдра + колени', price: '100 €' },
-            { name: isGerman ? 'Beine komplett' : 'Ноги полностью', price: '120 €' },
-            { name: isGerman ? 'Bikini + Achseln' : 'Бикини + подмышки', price: '130 €' },
-            { name: isGerman ? 'Bikini + Achseln + Unterschenkel' : 'Бикини + подмышки + голени', price: '170 €' },
-            { name: isGerman ? 'Bikini + Achseln + Oberschenkel + Knie' : 'Бикини + подмышки + бёдра + колени', price: '170 €' },
-            { name: isGerman ? 'Bikini + Achseln + Beine komplett' : 'Бикини + подмышки + ноги полностью', price: '210 €' },
-            { name: isGerman ? 'Bikini + Achseln + Beine + Arme komplett' : 'Бикини + подмышки + ноги + руки', price: '240 €' },
-            { name: isGerman ? 'Ganzer Körper' : 'Всё тело', price: '400 €' },
+          sections: [
+            {
+              name: isGerman ? 'Gesicht' : 'Лицо',
+              items: [
+                { name: isGerman ? 'Kinn' : 'Подбородок', price: '29 €' },
+                { name: isGerman ? 'Oberlippe' : 'Верхняя губа', price: '25 €' },
+                { name: isGerman ? 'Wangen' : 'Щёки', price: '34 €' },
+                { name: isGerman ? 'Gesicht komplett' : 'Лицо полностью', price: '64 €' },
+              ]
+            },
+            {
+              name: isGerman ? 'Oberkörper' : 'Верхняя часть тела',
+              items: [
+                { name: isGerman ? 'Achseln' : 'Подмышки', price: '49 €' },
+                { name: isGerman ? 'Oberarme' : 'Плечи', price: '64 €' },
+                { name: isGerman ? 'Unterarme' : 'Предплечья', price: '64 €' },
+                { name: isGerman ? 'Arme komplett' : 'Руки полностью', price: '99 €' },
+                { name: isGerman ? 'Bauchhaarlinie' : 'Полоска на животе', price: '35 €' },
+              ]
+            },
+            {
+              name: isGerman ? 'Unterkörper & Po' : 'Нижняя часть тела и ягодицы',
+              items: [
+                { name: isGerman ? 'Pofalte' : 'Складка ягодиц', price: '44 €' },
+                { name: isGerman ? 'Po' : 'Ягодицы', price: '64 €' },
+                { name: isGerman ? 'Bikini' : 'Бикини', price: '39 €' },
+                { name: isGerman ? 'Bikini & Intim' : 'Бикини и интим', price: '84 €' },
+                { name: isGerman ? 'Bikini & Intim & Po komplett' : 'Бикини, интим и ягодицы', price: '114 €' },
+              ]
+            },
+            {
+              name: isGerman ? 'Beine & Füße' : 'Ноги и стопы',
+              items: [
+                { name: isGerman ? 'Füße' : 'Стопы', price: '34 €' },
+                { name: isGerman ? 'Oberschenkel' : 'Бёдра', price: '68 €' },
+                { name: isGerman ? 'Unterschenkel' : 'Голени', price: '68 €' },
+                { name: isGerman ? 'Komplett Beine' : 'Ноги полностью', price: '119 €' },
+              ]
+            },
+            {
+              name: isGerman ? 'Ganzkörper' : 'Всё тело',
+              items: [
+                { name: isGerman ? 'Ganzkörper' : 'Всё тело', price: '289 €' },
+              ]
+            },
           ]
         },
         {
           name: isGerman ? 'Herren' : 'Мужчины',
-          items: [
-            { name: isGerman ? 'Oberlippe' : 'Верхняя губа', price: '30 €' },
-            { name: isGerman ? 'Kinn' : 'Подбородок', price: '30 €' },
-            { name: isGerman ? 'Wangen' : 'Щёки', price: '30 €' },
-            { name: isGerman ? 'Finger' : 'Пальцы', price: '30 €' },
-            { name: isGerman ? 'Bauchstreifen' : 'Полоска на животе', price: '30 €' },
-            { name: isGerman ? 'Nacken' : 'Шея', price: '50 €' },
-            { name: isGerman ? 'Achselhöhlen' : 'Подмышки', price: '60 €' },
-            { name: isGerman ? 'Gesicht komplett' : 'Лицо полностью', price: '70 €' },
-            { name: isGerman ? 'Unterarme' : 'Предплечья', price: '80 €' },
-            { name: isGerman ? 'Oberarme' : 'Плечи', price: '80 €' },
-            { name: isGerman ? 'Pobacken' : 'Ягодицы', price: '100 €' },
-            { name: isGerman ? 'Unterer Rücken' : 'Поясница', price: '100 €' },
-            { name: isGerman ? 'Unterschenkel' : 'Голени', price: '100 €' },
-            { name: isGerman ? 'Oberschenkel + Knie' : 'Бёдра + колени', price: '100 €' },
-            { name: isGerman ? 'Bauch' : 'Живот', price: '110 €' },
-            { name: isGerman ? 'Brust' : 'Грудь', price: '110 €' },
-            { name: isGerman ? 'Arme komplett' : 'Руки полностью', price: '120 €' },
-            { name: isGerman ? 'Beine komplett' : 'Ноги полностью', price: '150 €' },
-            { name: isGerman ? 'Bikini komplett' : 'Бикини полностью', price: '150 €' },
-            { name: isGerman ? 'Rücken komplett' : 'Спина полностью', price: '180 €' },
-            { name: isGerman ? 'Bikini + Achseln + Beine komplett' : 'Бикини + подмышки + ноги полностью', price: '300 €' },
-            { name: isGerman ? 'Ganzer Körper' : 'Всё тело', price: '600 €' },
+          sections: [
+            {
+              name: isGerman ? 'Gesicht' : 'Лицо',
+              items: [
+                { name: isGerman ? 'Kinn' : 'Подбородок', price: '35 €' },
+                { name: isGerman ? 'Oberlippe' : 'Верхняя губа', price: '35 €' },
+                { name: isGerman ? 'Koteletten' : 'Бакенбарды', price: '35 €' },
+                { name: isGerman ? 'Wangen' : 'Щёки', price: '40 €' },
+                { name: isGerman ? 'Gesicht komplett' : 'Лицо полностью', price: '135 €' },
+              ]
+            },
+            {
+              name: isGerman ? 'Oberkörper' : 'Верхняя часть тела',
+              items: [
+                { name: isGerman ? 'Brustwarzen' : 'Соски', price: '39 €' },
+                { name: isGerman ? 'Hals (ohne Nacken)' : 'Шея (без затылка)', price: '39 €' },
+                { name: isGerman ? 'Nacken' : 'Затылок', price: '39 €' },
+                { name: isGerman ? 'Achseln' : 'Подмышки', price: '49 €' },
+                { name: isGerman ? 'Hände' : 'Кисти рук', price: '39 €' },
+                { name: isGerman ? 'Schultern' : 'Плечи', price: '56 €' },
+                { name: isGerman ? 'Oberarme' : 'Верхняя часть рук', price: '66 €' },
+                { name: isGerman ? 'Unterarme' : 'Предплечья', price: '66 €' },
+                { name: isGerman ? 'Bauch' : 'Живот', price: '66 €' },
+                { name: isGerman ? 'Brust' : 'Грудь', price: '66 €' },
+                { name: isGerman ? 'Rücken oben' : 'Верхняя часть спины', price: '66 €' },
+                { name: isGerman ? 'Rücken unten' : 'Нижняя часть спины', price: '66 €' },
+                { name: isGerman ? 'Rücken komplett' : 'Спина полностью', price: '118 €' },
+              ]
+            },
+            {
+              name: isGerman ? 'Unterkörper & Po' : 'Нижняя часть тела и ягодицы',
+              items: [
+                { name: isGerman ? 'Pofalte' : 'Складка ягодиц', price: '52 €' },
+                { name: isGerman ? 'Bikini' : 'Бикини', price: '52 €' },
+                { name: isGerman ? 'Po komplett' : 'Ягодицы полностью', price: '79 €' },
+              ]
+            },
+            {
+              name: isGerman ? 'Beine & Füße' : 'Ноги и стопы',
+              items: [
+                { name: isGerman ? 'Füße' : 'Стопы', price: '39 €' },
+                { name: isGerman ? 'Oberschenkel' : 'Бёдра', price: '80 €' },
+                { name: isGerman ? 'Unterschenkel' : 'Голени', price: '80 €' },
+                { name: isGerman ? 'Beine komplett' : 'Ноги полностью', price: '149 €' },
+              ]
+            },
           ]
         },
       ]
@@ -400,21 +443,48 @@ const Prices = () => {
                           <h3 className="text-2xl font-heading font-semibold text-brand-espresso mb-6 pb-4 border-b-2 border-brand-gold/30">
                             {column.name}
                           </h3>
-                          <div className="space-y-3">
-                            {column.items.map((item, itemIndex) => (
-                              <div
-                                key={itemIndex}
-                                className="flex items-start justify-between gap-6 py-2"
-                              >
-                                <span className="text-brand-espresso/85 text-base leading-relaxed flex-grow">
-                                  {item.name}
-                                </span>
-                                <span className="text-brand-gold font-heading font-semibold text-xl whitespace-nowrap text-right flex-shrink-0">
-                                  {item.price}
-                                </span>
-                              </div>
-                            ))}
-                          </div>
+                          {column.sections ? (
+                            <div className="space-y-8">
+                              {column.sections.map((section, sectionIndex) => (
+                                <div key={sectionIndex}>
+                                  <h4 className="text-lg font-heading font-semibold text-brand-espresso/80 mb-4 uppercase tracking-wide">
+                                    {section.name}
+                                  </h4>
+                                  <div className="space-y-2">
+                                    {section.items.map((item, itemIndex) => (
+                                      <div
+                                        key={itemIndex}
+                                        className="flex items-start justify-between gap-6 py-1.5"
+                                      >
+                                        <span className="text-brand-espresso/85 text-base leading-relaxed flex-grow">
+                                          {item.name}
+                                        </span>
+                                        <span className="text-brand-gold font-heading font-semibold text-xl whitespace-nowrap text-right flex-shrink-0">
+                                          {item.price}
+                                        </span>
+                                      </div>
+                                    ))}
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          ) : (
+                            <div className="space-y-3">
+                              {column.items.map((item, itemIndex) => (
+                                <div
+                                  key={itemIndex}
+                                  className="flex items-start justify-between gap-6 py-2"
+                                >
+                                  <span className="text-brand-espresso/85 text-base leading-relaxed flex-grow">
+                                    {item.name}
+                                  </span>
+                                  <span className="text-brand-gold font-heading font-semibold text-xl whitespace-nowrap text-right flex-shrink-0">
+                                    {item.price}
+                                  </span>
+                                </div>
+                              ))}
+                            </div>
+                          )}
                         </div>
                       ))}
                     </div>

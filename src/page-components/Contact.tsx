@@ -242,7 +242,7 @@ const Contact = () => {
               </div>
 
               {/* Quick Transport Info under Map */}
-              <div className="glass rounded-2xl p-6">
+              <div className="glass rounded-2xl px-6 py-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
                   <div>
                     <div className="flex items-center gap-2 mb-2">
@@ -347,7 +347,7 @@ const Contact = () => {
             {/* Studio Photo */}
             <div className="mt-6 rounded-xl overflow-hidden">
               <Image
-                src="/123.PNG"
+                src="/133.jpeg"
                 alt="NataLux Studio"
                 width={800}
                 height={600}
