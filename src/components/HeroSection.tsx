@@ -16,11 +16,11 @@ export const HeroSection = () => {
     >
       {/* Content */}
       <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-20 py-12 md:py-32">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto lg:ml-auto lg:mr-8 text-center lg:text-right">
 
           {/* Logo - эффект возрождения с золотой пылью */}
           <motion.div
-            className="mb-6 md:mb-12 flex justify-center relative scale-75 md:scale-100"
+            className="mb-6 md:mb-12 flex justify-center lg:justify-end relative scale-75 md:scale-100"
           >
             <LogoRebirth />
             {/* Subtle sparkles around logo */}
@@ -142,7 +142,7 @@ export const HeroSection = () => {
               delay: 1,
               ease: [0.16, 1, 0.3, 1]
             }}
-            className="flex flex-col sm:flex-row gap-3 justify-center items-center w-full sm:w-auto"
+            className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-end items-center w-full sm:w-auto"
           >
             {/* Primary Button - Termin buchen */}
             <motion.a

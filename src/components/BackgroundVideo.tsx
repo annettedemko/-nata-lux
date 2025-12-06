@@ -40,6 +40,9 @@ export const BackgroundVideo = () => {
       }
     };
 
+    // НЕМЕДЛЕННАЯ ПОПЫТКА запуска (особенно важно для десктопа)
+    playVideo();
+
     // Пробуем запустить при любом взаимодействии пользователя
     const handleUserInteraction = () => {
       if (autoplayBlocked || video.paused) {
