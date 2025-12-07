@@ -347,7 +347,7 @@ const Contact = () => {
             {/* Studio Photo */}
             <div className="mt-6 rounded-xl overflow-hidden">
               <Image
-                src="/133.jpeg"
+                src="/192.jpeg"
                 alt="NataLux Studio"
                 width={800}
                 height={600}
