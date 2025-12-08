@@ -13,10 +13,40 @@ const Contact = () => {
   const { t, language } = useLanguage();
   const isGerman = language === 'de';
   const [agreed, setAgreed] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    const formData = new FormData(e.currentTarget);
+
+    // Add Web3Forms access key - REPLACE WITH YOUR ACTUAL KEY
+    formData.append('access_key', 'YOUR_WEB3FORMS_ACCESS_KEY_HERE');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitStatus('success');
+        e.currentTarget.reset();
+        setAgreed(false);
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -276,14 +306,30 @@ const Contact = () => {
             </h2>
             
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Success Message */}
+              {submitStatus === 'success' && (
+                <div className="p-4 rounded-xl bg-green-50 border border-green-200 text-green-800">
+                  {isGerman ? '✓ Nachricht erfolgreich gesendet!' : '✓ Сообщение успешно отправлено!'}
+                </div>
+              )}
+
+              {/* Error Message */}
+              {submitStatus === 'error' && (
+                <div className="p-4 rounded-xl bg-red-50 border border-red-200 text-red-800">
+                  {isGerman ? '✗ Fehler beim Senden. Bitte versuchen Sie es erneut.' : '✗ Ошибка отправки. Попробуйте снова.'}
+                </div>
+              )}
+
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-brand-espresso mb-2">
                   {t('contact.name')}
                 </label>
                 <Input
                   id="name"
+                  name="name"
                   type="text"
                   required
+                  disabled={isSubmitting}
                   className="bg-white/50 border-brand-gold/20 focus:border-brand-gold"
                 />
               </div>
@@ -294,8 +340,10 @@ const Contact = () => {
                 </label>
                 <Input
                   id="email"
+                  name="email"
                   type="email"
                   required
+                  disabled={isSubmitting}
                   className="bg-white/50 border-brand-gold/20 focus:border-brand-gold"
                 />
               </div>
@@ -306,7 +354,9 @@ const Contact = () => {
                 </label>
                 <Input
                   id="phone"
+                  name="phone"
                   type="tel"
+                  disabled={isSubmitting}
                   className="bg-white/50 border-brand-gold/20 focus:border-brand-gold"
                 />
               </div>
@@ -317,8 +367,10 @@ const Contact = () => {
                 </label>
                 <Textarea
                   id="message"
+                  name="message"
                   rows={5}
                   required
+                  disabled={isSubmitting}
                   className="bg-white/50 border-brand-gold/20 focus:border-brand-gold resize-none"
                 />
               </div>
@@ -337,10 +389,12 @@ const Contact = () => {
 
               <Button
                 type="submit"
-                disabled={!agreed}
+                disabled={!agreed || isSubmitting}
                 className="w-full bg-brand-gold hover:bg-brand-gold/90 text-white font-medium rounded-xl text-lg py-6 disabled:opacity-50"
               >
-                {t('contact.submit')}
+                {isSubmitting
+                  ? (isGerman ? 'Wird gesendet...' : 'Отправка...')
+                  : t('contact.submit')}
               </Button>
             </form>
 
