@@ -57,7 +57,9 @@ const AGB = () => {
                   <p className="font-semibold text-brand-espresso mb-2">
                     {isGerman ? 'Anbieter:' : 'Провайдер:'}
                   </p>
-                  <p className="text-sm">Nataliia Koziukevych / Наталия Козюкевич</p>
+                  <p className="text-sm">
+                    {isGerman ? 'Nataliia Koziukevych' : 'Наталия Козюкевич'}
+                  </p>
                   <p className="text-sm">NataLux</p>
                   <p className="text-sm">Rosenheimerstraße 159, 81671 München</p>
                 </div>
@@ -360,7 +362,9 @@ const AGB = () => {
                     : 'При вопросах о наших Общих условиях мы с удовольствием будем к вашим услугам:'}
                 </p>
                 <div className="space-y-2">
-                  <p className="font-medium">Nataliia Koziukevych</p>
+                  <p className="font-medium">
+                    {isGerman ? 'Nataliia Koziukevych' : 'Наталия Козюкевич'}
+                  </p>
                   <p className="text-sm">Natali.lux@web.de</p>
                   <p className="text-sm">+49 176 77267269</p>
                 </div>

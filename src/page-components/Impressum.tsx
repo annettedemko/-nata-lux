@@ -46,10 +46,7 @@ const Impressum = () => {
                 </h2>
                 <div className="space-y-3">
                   <p className="text-lg font-medium text-brand-espresso">
-                    Nataliia Koziukevych
-                  </p>
-                  <p className="text-lg font-medium text-brand-espresso">
-                    {isGerman ? 'Наталия Козюкевич' : 'Nataliia Koziukevych'}
+                    {isGerman ? 'Nataliia Koziukevych' : 'Наталия Козюкевич'}
                   </p>
                   <p className="font-medium">NataLux</p>
                   <p className="text-sm text-brand-coffee/60">

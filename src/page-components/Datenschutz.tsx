@@ -76,7 +76,9 @@ const Datenschutz = () => {
                     : 'Кто несет ответственность за сбор данных на этом сайте?'}
                 </h3>
                 <div className="mb-4">
-                  <p className="font-medium mb-2">Nataliia Koziukevych</p>
+                  <p className="font-medium mb-2">
+                    {isGerman ? 'Nataliia Koziukevych' : 'Наталия Козюкевич'}
+                  </p>
                   <p>NataLux</p>
                   <p>Rosenheimerstraße 159</p>
                   <p>81671 München</p>
@@ -249,7 +251,9 @@ const Datenschutz = () => {
                     : 'Если у вас есть вопросы о защите данных, пожалуйста, напишите нам по электронной почте или свяжитесь напрямую с ответственным за защиту данных в нашей организации:'}
                 </p>
                 <div className="space-y-2">
-                  <p className="font-medium">Nataliia Koziukevych</p>
+                  <p className="font-medium">
+                    {isGerman ? 'Nataliia Koziukevych' : 'Наталия Козюкевич'}
+                  </p>
                   <div className="flex items-center gap-2">
                     <Mail className="w-4 h-4 text-brand-gold" />
                     <button
