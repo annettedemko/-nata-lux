@@ -113,7 +113,7 @@ const Training = () => {
           {courses.map((course, index) => (
             <div
               key={course.title}
-              className="glass rounded-2xl overflow-hidden hover-lift animate-slide-up"
+              className="glass rounded-2xl overflow-hidden hover-lift animate-slide-up flex flex-col"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {course.image && (
@@ -126,7 +126,7 @@ const Training = () => {
                   />
                 </div>
               )}
-              <div className="p-8">
+              <div className="p-8 flex flex-col flex-1">
               <div className="flex items-start mb-6">
                 <div className="w-16 h-16 rounded-xl bg-brand-gold/10 flex items-center justify-center mr-4 flex-shrink-0">
                   <course.icon className="w-8 h-8 text-brand-gold" />
@@ -163,10 +163,11 @@ const Training = () => {
                 ))}
               </div>
 
+              <div className="mt-auto">
               <div className="grid grid-cols-3 gap-2">
                 <a
                   href="tel:+4917677267269"
-                  className="flex items-center justify-center gap-1.5 px-3 py-3 bg-brand-espresso hover:bg-brand-espresso/90 text-white font-medium rounded-xl transition-colors"
+                  className="flex items-center justify-center gap-1.5 px-3 py-3 border-2 border-brand-gold/30 hover:border-brand-gold hover:bg-brand-gold/5 text-brand-espresso font-medium rounded-xl transition-all"
                 >
                   <Phone className="w-4 h-4" />
                   <span className="text-sm">{isGerman ? 'Anrufen' : 'Звонок'}</span>
@@ -175,7 +176,7 @@ const Training = () => {
                   href="https://wa.me/4917677267269"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-1.5 px-3 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-xl transition-colors"
+                  className="flex items-center justify-center gap-1.5 px-3 py-3 border-2 border-brand-gold/30 hover:border-brand-gold hover:bg-brand-gold/5 text-brand-espresso font-medium rounded-xl transition-all"
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span className="text-sm">WhatsApp</span>
@@ -184,11 +185,12 @@ const Training = () => {
                   href="https://t.me/+4917677267269"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-1.5 px-3 py-3 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-xl transition-colors"
+                  className="flex items-center justify-center gap-1.5 px-3 py-3 border-2 border-brand-gold/30 hover:border-brand-gold hover:bg-brand-gold/5 text-brand-espresso font-medium rounded-xl transition-all"
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span className="text-sm">Telegram</span>
                 </a>
+              </div>
               </div>
               </div>
             </div>
