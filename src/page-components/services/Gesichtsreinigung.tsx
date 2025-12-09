@@ -48,14 +48,14 @@ const Gesichtsreinigung = () => {
             <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-brand-gold/10 mb-6">
               <Droplet className="w-10 h-10 text-brand-gold" />
             </div>
-            <h1 className="text-6xl md:text-7xl font-heading font-bold tracking-tight text-brand-espresso mb-8">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold tracking-tight text-brand-espresso mb-8">
               {isGerman ? 'GESICHTSREINIGUNG' : 'ЧИСТКА ЛИЦА'}
             </h1>
-            <p className="text-2xl font-heading font-light text-brand-espresso/80 mb-4">
+            <p className="text-lg md:text-2xl font-heading font-light text-brand-espresso/80 mb-4">
               {isGerman ? 'in München' : 'в Мюнхене'}
             </p>
             <div className="w-32 h-0.5 bg-brand-gold mx-auto mb-8"></div>
-            <p className="text-xl text-brand-espresso/70 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-base md:text-xl text-brand-espresso/70 leading-relaxed max-w-3xl mx-auto">
               {isGerman
                 ? '90 Min kombiniert: Ultrasound + Manuelle Reinigung für strahlend reine Haut'
                 : '90 мин комбинированная: ультразвуковая + механическая для сияющей чистой кожи'}
@@ -71,7 +71,7 @@ const Gesichtsreinigung = () => {
             className="mb-20"
           >
             <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-10 md:p-12">
-              <h2 className="text-4xl font-heading font-bold text-brand-espresso mb-6">
+              <h2 className="text-2xl md:text-4xl font-heading font-bold text-brand-espresso mb-6">
                 {isGerman
                   ? 'Was ist eine professionelle Gesichtsreinigung?'
                   : 'Что такое профессиональная чистка лица?'}
@@ -115,7 +115,7 @@ const Gesichtsreinigung = () => {
             className="mb-20"
           >
             <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-10 md:p-12">
-              <h2 className="text-4xl font-heading font-bold text-brand-espresso mb-8">
+              <h2 className="text-2xl md:text-4xl font-heading font-bold text-brand-espresso mb-8">
                 {isGerman ? 'Wie läuft die Behandlung ab?' : 'Как проходит процедура?'}
               </h2>
               <div className="space-y-6">
@@ -200,7 +200,7 @@ const Gesichtsreinigung = () => {
             className="mb-20"
           >
             <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-10 md:p-12">
-              <h2 className="text-4xl font-heading font-bold text-brand-espresso mb-8">
+              <h2 className="text-2xl md:text-4xl font-heading font-bold text-brand-espresso mb-8">
                 {isGerman ? 'Ihre Vorteile' : 'Ваши преимущества'}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -234,7 +234,7 @@ const Gesichtsreinigung = () => {
             className="mb-20"
           >
             <div className="bg-gradient-to-br from-brand-gold/20 via-brand-gold/10 to-transparent backdrop-blur-xl rounded-3xl p-10 md:p-12 border border-brand-gold/20">
-              <h2 className="text-4xl font-heading font-bold text-brand-espresso mb-6">
+              <h2 className="text-2xl md:text-4xl font-heading font-bold text-brand-espresso mb-6">
                 {isGerman ? 'Empfehlungen' : 'Рекомендации'}
               </h2>
               <div className="space-y-4 text-brand-espresso/85 leading-relaxed text-lg">
@@ -294,7 +294,7 @@ const Gesichtsreinigung = () => {
             className="mb-20"
           >
             <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-10 md:p-12">
-              <h2 className="text-4xl font-heading font-bold text-brand-espresso mb-6">
+              <h2 className="text-2xl md:text-4xl font-heading font-bold text-brand-espresso mb-6">
                 {isGerman ? 'Kontraindikationen' : 'Противопоказания'}
               </h2>
               <p className="text-lg text-brand-espresso/70 mb-6 leading-relaxed">
@@ -349,7 +349,7 @@ const Gesichtsreinigung = () => {
             className="mb-20"
           >
             <div className="bg-gradient-to-br from-brand-espresso/5 via-brand-gold/10 to-brand-espresso/5 backdrop-blur-xl rounded-3xl p-10 md:p-12 border-2 border-brand-gold/30 text-center">
-              <h2 className="text-4xl font-heading font-bold text-brand-espresso mb-6">
+              <h2 className="text-2xl md:text-4xl font-heading font-bold text-brand-espresso mb-6">
                 {isGerman
                   ? 'Bereit für strahlend reine Haut?'
                   : 'Готовы к сияющей чистой коже?'}

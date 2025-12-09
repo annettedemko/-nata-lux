@@ -10,7 +10,9 @@ import {
   CheckCircle2,
   X,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  Phone,
+  MessageCircle
 } from 'lucide-react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -161,11 +163,33 @@ const Training = () => {
                 ))}
               </div>
 
-              <Button
-                className="w-full bg-brand-gold hover:bg-brand-gold/90 text-white font-medium rounded-xl"
-              >
-                {t('training.cta')}
-              </Button>
+              <div className="grid grid-cols-3 gap-2">
+                <a
+                  href="tel:+4917677267269"
+                  className="flex items-center justify-center gap-1.5 px-3 py-3 bg-brand-espresso hover:bg-brand-espresso/90 text-white font-medium rounded-xl transition-colors"
+                >
+                  <Phone className="w-4 h-4" />
+                  <span className="text-sm">{isGerman ? 'Anrufen' : 'Звонок'}</span>
+                </a>
+                <a
+                  href="https://wa.me/4917677267269"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-1.5 px-3 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-xl transition-colors"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  <span className="text-sm">WhatsApp</span>
+                </a>
+                <a
+                  href="https://t.me/+4917677267269"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-1.5 px-3 py-3 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-xl transition-colors"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  <span className="text-sm">Telegram</span>
+                </a>
+              </div>
               </div>
             </div>
           ))}

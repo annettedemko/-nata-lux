@@ -27,6 +27,7 @@ const translations = {
 
     // Hero
     'hero.title': 'Aesthetic Studio München – NATA LUX',
+    'hero.subtitle': 'Premium Beauty Studio in München – Hochwertige Behandlungen für natürliche Schönheit',
     'hero.services': 'Wimpern · Permanent Make-up · Laser · Anti-Aging',
     'hero.subtitle1': 'Moderne Ästhetik mit natürlichen Ergebnissen.',
     'hero.subtitle2': 'Beratung inklusive.',
@@ -205,6 +206,7 @@ const translations = {
 
     // Hero
     'hero.title': 'Aesthetic Studio München – NATA LUX',
+    'hero.subtitle': 'Премиум beauty-студия в Мюнхене – качественные процедуры для естественной красоты',
     'hero.services': 'Ресницы · Перманент · Лазер · Anti-Aging',
     'hero.subtitle1': 'Современная эстетика с естественными результатами.',
     'hero.subtitle2': 'Консультация включена.',

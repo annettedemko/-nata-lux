@@ -33,15 +33,18 @@ export const BackgroundVideo = () => {
         setIsLoaded(true);
         setAutoplayBlocked(false);
       } catch (error) {
-        console.error('❌ Video autoplay failed:', error);
-        // Автовоспроизведение заблокировано - показываем статичный фон
+        // Автовоспроизведение заблокировано браузером - это нормально
+        // Показываем статичный фон вместо видео
+        console.log('ℹ️ Video autoplay blocked by browser, using fallback image');
         setAutoplayBlocked(true);
-        setIsLoaded(true); // Всё равно показываем компонент
+        setIsLoaded(true);
       }
     };
 
-    // НЕМЕДЛЕННАЯ ПОПЫТКА запуска (особенно важно для десктопа)
-    playVideo();
+    // Попытка запуска с небольшой задержкой для лучшей совместимости
+    const playTimer = setTimeout(() => {
+      playVideo();
+    }, 100);
 
     // Пробуем запустить при любом взаимодействии пользователя
     const handleUserInteraction = () => {
@@ -94,6 +97,7 @@ export const BackgroundVideo = () => {
     document.addEventListener('scroll', handleUserInteraction, { once: true });
 
     return () => {
+      clearTimeout(playTimer);
       video.removeEventListener('loadeddata', handleLoadedData);
       video.removeEventListener('error', handleError);
       video.removeEventListener('loadstart', handleLoadStart);
