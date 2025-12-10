@@ -205,7 +205,7 @@ const Reviews = () => {
         {/* CTA */}
         <div className="glass rounded-2xl p-8 md:p-12 max-w-2xl mx-auto mt-16 text-center">
           <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-            {isGerman ? 'Teilen Sie Ihre Erfahrung' : 'Поделитесь своим опытом'}
+            {language === 'de' ? 'Teilen Sie Ihre Erfahrung' : language === 'ru' ? 'Поделитесь своим опытом' : 'Поделитесь своим опытом'}
           </h2>
           <p className="text-brand-coffee/70 mb-6 leading-relaxed">
             {isGerman
@@ -218,7 +218,7 @@ const Reviews = () => {
             rel="noopener noreferrer"
             className="inline-block px-8 py-3 bg-brand-gold hover:bg-brand-gold/90 text-white font-medium rounded-xl transition-all shadow-medium hover:shadow-glow"
           >
-            {isGerman ? 'Bewertung auf Google schreiben' : 'Написать отзыв на Google'}
+            {language === 'de' ? 'Bewertung auf Google schreiben' : language === 'ru' ? 'Написать отзыв на Google' : 'Написать отзыв на Google'}
           </a>
         </div>
       </div>

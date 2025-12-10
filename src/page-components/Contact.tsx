@@ -84,7 +84,7 @@ const Contact = () => {
           <div className="space-y-8 animate-slide-up">
             <div className="glass rounded-2xl p-8">
               <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-6">
-                {isGerman ? 'Kontaktinformationen' : 'Контактная информация'}
+                {language === 'de' ? 'Kontaktinformationen' : language === 'ru' ? 'Контактная информация' : 'Контактна інформація'}
               </h2>
               
               <div className="space-y-6">
@@ -93,7 +93,7 @@ const Contact = () => {
                     <MapPin className="w-6 h-6 text-brand-gold" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-brand-espresso mb-1">{isGerman ? 'Adresse' : 'Адрес'}</h3>
+                    <h3 className="font-semibold text-brand-espresso mb-1">{language === 'de' ? 'Adresse' : language === 'ru' ? 'Адрес' : 'Адреса'}</h3>
                     <a
                       href="https://maps.google.com/?q=Elsässer+Straße+33+81667+München"
                       target="_blank"
@@ -112,7 +112,7 @@ const Contact = () => {
                     <Phone className="w-6 h-6 text-brand-gold" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-brand-espresso mb-1">{isGerman ? 'Telefon / WhatsApp / Telegram' : 'Телефон / WhatsApp / Telegram'}</h3>
+                    <h3 className="font-semibold text-brand-espresso mb-1">{language === 'de' ? 'Telefon / WhatsApp / Telegram' : language === 'ru' ? 'Телефон / WhatsApp / Telegram' : 'Телефон / WhatsApp / Telegram'}</h3>
                     <a href="tel:+4917677267269" className="text-brand-coffee/70 hover:text-brand-gold transition-colors block mb-2">
                       +49 176 77267269
                     </a>
@@ -188,8 +188,8 @@ const Contact = () => {
                       <Car className="w-6 h-6 text-brand-gold" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-brand-espresso mb-2">{isGerman ? 'Anfahrt & Parken' : 'Как добраться и парковка'}</h3>
-                      <p className="text-sm text-brand-coffee/70 mb-2">{isGerman ? 'Zu Fuß: 5–7 Min. vom Ostbahnhof/Orleansplatz' : 'Пешком: 5–7 мин. от Ostbahnhof/Orleansplatz'}</p>
+                      <h3 className="font-semibold text-brand-espresso mb-2">{language === 'de' ? 'Anfahrt & Parken' : language === 'ru' ? 'Как добраться и парковка' : 'Як дістатися та парковка'}</h3>
+                      <p className="text-sm text-brand-coffee/70 mb-2">{language === 'de' ? 'Zu Fuß: 5–7 Min. vom Ostbahnhof/Orleansplatz' : language === 'ru' ? 'Пешком: 5–7 мин. от Ostbahnhof/Orleansplatz' : 'Пішки: 5–7 хв. від Ostbahnhof/Orleansplatz'}</p>
                       <ul className="text-sm text-brand-coffee/70 space-y-1">
                         <li>
                           • <a
@@ -220,7 +220,7 @@ const Contact = () => {
                       <Train className="w-6 h-6 text-brand-gold" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-brand-espresso mb-2">{isGerman ? 'ÖPNV' : 'Общественный транспорт'}</h3>
+                      <h3 className="font-semibold text-brand-espresso mb-2">{language === 'de' ? 'ÖPNV' : language === 'ru' ? 'Общественный транспорт' : 'Громадський транспорт'}</h3>
                       <ul className="text-sm text-brand-coffee/70 space-y-1">
                         <li>• S-Bahn München Ost (5–7 Min. Fußweg)</li>
                         <li>• U5 Ostbahnhof (5–7 Min. Fußweg)</li>
@@ -254,7 +254,7 @@ const Contact = () => {
                         81667 München-Haidhausen
                       </p>
                       <p className="text-brand-gold text-sm font-semibold flex items-center gap-2">
-                        {isGerman ? 'Route in Google Maps öffnen →' : 'Открыть маршрут в Google Maps →'}
+                        {language === 'de' ? 'Route in Google Maps öffnen →' : language === 'ru' ? 'Открыть маршрут в Google Maps →' : 'Відкрити маршрут в Google Maps →'}
                       </p>
                     </div>
                   </div>
@@ -277,7 +277,7 @@ const Contact = () => {
                   <div>
                     <div className="flex items-center gap-2 mb-2">
                       <Car className="w-4 h-4 text-brand-gold" />
-                      <span className="font-semibold text-brand-espresso">{isGerman ? 'Parkplätze:' : 'Парковки:'}</span>
+                      <span className="font-semibold text-brand-espresso">{language === 'de' ? 'Parkplätze:' : language === 'ru' ? 'Парковки:' : 'Парковки:'}</span>
                     </div>
                     <ul className="text-brand-coffee/70 space-y-1 ml-6">
                       <li>• <a href="https://maps.app.goo.gl/aamBNHd7cQLSozwt7" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors underline">Parkhaus Ostbahnhof</a> (6 Min.)</li>
@@ -302,21 +302,21 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="glass rounded-2xl p-8 animate-slide-up" style={{ animationDelay: '100ms' }}>
             <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-6">
-              {isGerman ? 'Nachricht senden' : 'Отправить сообщение'}
+              {language === 'de' ? 'Nachricht senden' : language === 'ru' ? 'Отправить сообщение' : 'Надіслати повідомлення'}
             </h2>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Success Message */}
               {submitStatus === 'success' && (
                 <div className="p-4 rounded-xl bg-green-50 border border-green-200 text-green-800">
-                  {isGerman ? '✓ Nachricht erfolgreich gesendet!' : '✓ Сообщение успешно отправлено!'}
+                  {language === 'de' ? '✓ Nachricht erfolgreich gesendet!' : language === 'ru' ? '✓ Сообщение успешно отправлено!' : '✓ Повідомлення успішно надіслано!'}
                 </div>
               )}
 
               {/* Error Message */}
               {submitStatus === 'error' && (
                 <div className="p-4 rounded-xl bg-red-50 border border-red-200 text-red-800">
-                  {isGerman ? '✗ Fehler beim Senden. Bitte versuchen Sie es erneut.' : '✗ Ошибка отправки. Попробуйте снова.'}
+                  {language === 'de' ? '✗ Fehler beim Senden. Bitte versuchen Sie es erneut.' : language === 'ru' ? '✗ Ошибка отправки. Попробуйте снова.' : '✗ Помилка відправки. Спробуйте ще раз.'}
                 </div>
               )}
 
@@ -393,7 +393,7 @@ const Contact = () => {
                 className="w-full bg-brand-gold hover:bg-brand-gold/90 text-white font-medium rounded-xl text-lg py-6 disabled:opacity-50"
               >
                 {isSubmitting
-                  ? (isGerman ? 'Wird gesendet...' : 'Отправка...')
+                  ? (language === 'de' ? 'Wird gesendet...' : language === 'ru' ? 'Отправка...' : 'Відправка...')
                   : t('contact.submit')}
               </Button>
             </form>

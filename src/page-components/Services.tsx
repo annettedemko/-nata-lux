@@ -167,7 +167,7 @@ const Services = () => {
                 letterSpacing: '-0.02em'
               }}
             >
-              {isGerman ? 'LEISTUNGEN' : 'УСЛУГИ'}
+              {language === 'de' ? 'LEISTUNGEN' : language === 'ru' ? 'УСЛУГИ' : 'ПОСЛУГИ'}
             </h1>
             <div className="w-12 md:w-16 h-0.5 bg-brand-gold mx-auto opacity-60"></div>
           </div>

@@ -98,7 +98,7 @@ const Portfolio = () => {
         {/* Instagram CTA */}
         <div className="glass rounded-2xl p-8 md:p-12 max-w-2xl mx-auto mt-16 text-center">
           <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-            {isGerman ? 'Folgen Sie uns auf Instagram' : 'Подписывайтесь на нас в Instagram'}
+            {language === 'de' ? 'Folgen Sie uns auf Instagram' : language === 'ru' ? 'Подписывайтесь на нас в Instagram' : 'Подписывайтесь на нас в Instagram'}
           </h2>
           <p className="text-brand-coffee/70 mb-6 leading-relaxed">
             {isGerman

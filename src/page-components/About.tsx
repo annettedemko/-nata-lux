@@ -37,10 +37,10 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <p className="text-xs md:text-sm uppercase tracking-[0.2em] md:tracking-[0.3em] text-brand-gold mb-4 md:mb-6 font-light">
-              {isGerman ? 'Natalia' : 'Наталья'}
+              {language === 'de' ? 'Natalia' : language === 'ru' ? 'Наталья' : 'Наталія'}
             </p>
             <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-light tracking-tight leading-[0.95] md:leading-[0.9] mb-8 md:mb-12 lg:mb-16 text-brand-espresso px-4 break-words" style={{ wordWrap: 'break-word', overflowWrap: 'break-word', hyphens: 'none' }}>
-              {isGerman ? 'Über mich' : 'Обо мне'}
+              {language === 'de' ? 'Über mich' : language === 'ru' ? 'Обо мне' : 'Про мене'}
             </h1>
           </motion.div>
         </div>
@@ -177,7 +177,7 @@ const About = () => {
         >
           <div className="max-w-6xl mx-auto">
             <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-light text-brand-espresso text-center mb-8 md:mb-12 lg:mb-16 px-4 break-words" style={{ wordWrap: 'break-word', overflowWrap: 'break-word', hyphens: 'none' }}>
-              {isGerman ? 'So finden Sie uns' : 'Как нас найти'}
+              {language === 'de' ? 'So finden Sie uns' : language === 'ru' ? 'Как нас найти' : 'Як нас знайти'}
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
@@ -187,7 +187,7 @@ const About = () => {
                   <MapPin className="w-6 h-6 md:w-8 md:h-8 text-brand-gold" />
                 </div>
                 <h3 className="text-lg md:text-xl font-heading font-semibold text-brand-espresso mb-2">
-                  {isGerman ? 'Adresse' : 'Адрес'}
+                  {language === 'de' ? 'Adresse' : language === 'ru' ? 'Адрес' : 'Адреса'}
                 </h3>
                 <p className="text-sm md:text-base text-brand-espresso/70 leading-relaxed">
                   Elsasser Straße 33<br />
@@ -201,12 +201,12 @@ const About = () => {
                   <Clock className="w-6 h-6 md:w-8 md:h-8 text-brand-gold" />
                 </div>
                 <h3 className="text-lg md:text-xl font-heading font-semibold text-brand-espresso mb-2">
-                  {isGerman ? 'Öffnungszeiten' : 'Часы работы'}
+                  {language === 'de' ? 'Öffnungszeiten' : language === 'ru' ? 'Часы работы' : 'Години роботи'}
                 </h3>
                 <p className="text-sm md:text-base text-brand-espresso/70 leading-relaxed">
-                  {isGerman ? 'Mo-Fr: 10:00 - 20:00' : 'Пн-Пт: 10:00 - 20:00'}<br />
-                  {isGerman ? 'Sa: 10:00 - 18:00' : 'Сб: 10:00 - 18:00'}<br />
-                  {isGerman ? 'So: Geschlossen' : 'Вс: Закрыто'}
+                  {language === 'de' ? 'Mo-Fr: 10:00 - 20:00' : language === 'ru' ? 'Пн-Пт: 10:00 - 20:00' : 'Пн-Пт: 10:00 - 20:00'}<br />
+                  {language === 'de' ? 'Sa: 10:00 - 18:00' : language === 'ru' ? 'Сб: 10:00 - 18:00' : 'Сб: 10:00 - 18:00'}<br />
+                  {language === 'de' ? 'So: Geschlossen' : language === 'ru' ? 'Вс: Закрыто' : 'Нд: Зачинено'}
                 </p>
               </div>
 
@@ -216,12 +216,12 @@ const About = () => {
                   <Train className="w-6 h-6 md:w-8 md:h-8 text-brand-gold" />
                 </div>
                 <h3 className="text-lg md:text-xl font-heading font-semibold text-brand-espresso mb-2">
-                  {isGerman ? 'Anfahrt' : 'Как добраться'}
+                  {language === 'de' ? 'Anfahrt' : language === 'ru' ? 'Как добраться' : 'Как добраться'}
                 </h3>
                 <p className="text-sm md:text-base text-brand-espresso/70 leading-relaxed">
-                  {isGerman ? 'U-Bahn: U4, U5' : 'Метро: U4, U5'}<br />
-                  {isGerman ? 'Heimeranplatz' : 'Станция Heimeranplatz'}<br />
-                  {isGerman ? '5 Min zu Fuß' : '5 мин пешком'}
+                  {language === 'de' ? 'U-Bahn: U4, U5' : language === 'ru' ? 'Метро: U4, U5' : 'Метро: U4, U5'}<br />
+                  {language === 'de' ? 'Heimeranplatz' : language === 'ru' ? 'Станция Heimeranplatz' : 'Станция Heimeranplatz'}<br />
+                  {language === 'de' ? '5 Min zu Fuß' : language === 'ru' ? '5 мин пешком' : '5 мин пешком'}
                 </p>
               </div>
             </div>

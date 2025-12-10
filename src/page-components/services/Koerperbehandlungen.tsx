@@ -54,10 +54,10 @@ const Koerperbehandlungen = () => {
             <Star className="w-10 h-10 text-brand-gold" />
           </div>
           <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-6">
-            {isGerman ? 'Körperbehandlungen' : 'Процедуры для тела'}
+            {language === 'de' ? 'Körperbehandlungen' : language === 'ru' ? 'Процедуры для тела' : 'Процедуры для тела'}
           </h1>
           <p className="text-xl text-brand-gold font-heading mb-4">
-            {isGerman ? 'RF-Vakuum und Kavitation für Body Contouring' : 'RF-вакуум и кавитация для контурирования тела'}
+            {language === 'de' ? 'RF-Vakuum und Kavitation für Body Contouring' : language === 'ru' ? 'RF-вакуум и кавитация для контурирования тела' : 'RF-вакуум и кавитация для контурирования тела'}
           </p>
           <p className="text-lg text-brand-coffee/80 max-w-2xl mx-auto leading-relaxed">
             {isGerman
@@ -78,7 +78,7 @@ const Koerperbehandlungen = () => {
         {/* About Section */}
         <section className="glass rounded-2xl p-8 mb-12">
           <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-            {isGerman ? 'Was sind Körperbehandlungen?' : 'Что такое процедуры для тела?'}
+            {language === 'de' ? 'Was sind Körperbehandlungen?' : language === 'ru' ? 'Что такое процедуры для тела?' : 'Что такое процедуры для тела?'}
           </h2>
           <p className="text-brand-coffee/80 leading-relaxed mb-4">
             {isGerman
@@ -95,7 +95,7 @@ const Koerperbehandlungen = () => {
         {/* CTA */}
         <div className="bg-gold-gradient rounded-2xl p-8 text-center">
           <h2 className="text-2xl font-heading font-semibold text-white mb-4">
-            {isGerman ? 'Bereit für Ihre Traumfigur?' : 'Готовы к фигуре мечты?'}
+            {language === 'de' ? 'Bereit für Ihre Traumfigur?' : language === 'ru' ? 'Готовы к фигуре мечты?' : 'Готовы к фигуре мечты?'}
           </h2>
           <p className="text-white/90 mb-6">
             {isGerman
@@ -108,7 +108,7 @@ const Koerperbehandlungen = () => {
             asChild
           >
             <a href="https://wa.me/4917677267269" target="_blank" rel="noopener noreferrer">
-              {isGerman ? 'Beratung anfragen' : 'Запросить консультацию'}
+              {language === 'de' ? 'Beratung anfragen' : language === 'ru' ? 'Запросить консультацию' : 'Запросить консультацию'}
             </a>
           </Button>
         </div>

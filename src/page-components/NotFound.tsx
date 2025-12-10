@@ -18,13 +18,13 @@ const NotFound = () => {
       <div className="text-center">
         <h1 className="mb-4 text-6xl font-heading font-bold text-brand-gold">404</h1>
         <p className="mb-6 text-xl text-brand-espresso/80">
-          {isGerman ? 'Seite nicht gefunden' : 'Страница не найдена'}
+          {language === 'de' ? 'Seite nicht gefunden' : language === 'ru' ? 'Страница не найдена' : 'Страница не найдена'}
         </p>
         <a
           href="/"
           className="inline-block px-6 py-3 bg-brand-gold hover:bg-brand-gold/90 text-white font-medium rounded-xl transition-all"
         >
-          {isGerman ? 'Zur Startseite' : 'На главную'}
+          {language === 'de' ? 'Zur Startseite' : language === 'ru' ? 'На главную' : 'На главную'}
         </a>
       </div>
     </div>

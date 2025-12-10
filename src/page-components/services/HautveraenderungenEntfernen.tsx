@@ -13,32 +13,32 @@ const HautveraenderungenEntfernen = () => {
   const beforeAfterSection = (
     <section className="glass rounded-2xl p-8 mb-12 animate-slide-up" style={{ animationDelay: '250ms' }}>
       <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-6 text-center">
-        {isGerman ? 'Vorher / Nachher' : 'До / После'}
+        {language === 'de' ? 'Vorher / Nachher' : language === 'ru' ? 'До / После' : 'До / После'}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
         <div className="text-center">
           <div className="relative aspect-square rounded-xl overflow-hidden mb-2">
             <Image
               src="/66.jpeg"
-              alt={isGerman ? 'Vorher' : 'До'}
+              alt={language === 'de' ? 'Vorher' : language === 'ru' ? 'До' : 'До'}
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
-          <p className="text-brand-coffee/70 font-medium">{isGerman ? 'Vorher' : 'До'}</p>
+          <p className="text-brand-coffee/70 font-medium">{language === 'de' ? 'Vorher' : language === 'ru' ? 'До' : 'До'}</p>
         </div>
         <div className="text-center">
           <div className="relative aspect-square rounded-xl overflow-hidden mb-2">
             <Image
               src="/67.jpeg"
-              alt={isGerman ? 'Nachher' : 'После'}
+              alt={language === 'de' ? 'Nachher' : language === 'ru' ? 'После' : 'После'}
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
-          <p className="text-brand-coffee/70 font-medium">{isGerman ? 'Nachher' : 'После'}</p>
+          <p className="text-brand-coffee/70 font-medium">{language === 'de' ? 'Nachher' : language === 'ru' ? 'После' : 'После'}</p>
         </div>
       </div>
     </section>
@@ -48,26 +48,26 @@ const HautveraenderungenEntfernen = () => {
   const RecommendedServices = () => (
     <div className="mt-12">
       <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-6 text-center">
-        {isGerman ? 'Hautpflege nach der Behandlung' : 'Уход за кожей после процедуры'}
+        {language === 'de' ? 'Hautpflege nach der Behandlung' : language === 'ru' ? 'Уход за кожей после процедуры' : 'Догляд за кожей после процедуры'}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <ServiceCard
-          title={isGerman ? 'Gesichtsreinigung' : 'Чистка лица'}
-          description={isGerman ? 'Tiefenreinigung für reine Haut' : 'Глубокое очищение для чистой кожи'}
+          title={language === 'de' ? 'Gesichtsreinigung' : language === 'ru' ? 'Чистка лица' : 'Чистка обличчя'}
+          description={language === 'de' ? 'Tiefenreinigung für reine Haut' : language === 'ru' ? 'Глубокое очищение для чистой кожи' : 'Глубокое очищение для чистой кожи'}
           icon={Droplet}
           href="/services/gesichtsreinigung"
           image="/51.jpg"
         />
         <ServiceCard
-          title={isGerman ? 'Lichttherapie' : 'Светотерапия'}
-          description={isGerman ? 'LED-Licht für Regeneration' : 'LED-свет для регенерации'}
+          title={language === 'de' ? 'Lichttherapie' : language === 'ru' ? 'Светотерапия' : 'Светотерапия'}
+          description={language === 'de' ? 'LED-Licht für Regeneration' : language === 'ru' ? 'LED-свет для регенерации' : 'LED-свет для регенерации'}
           icon={Sun}
           href="/services/apparative-anti-aging/lichttherapie"
           image="/124.jpeg"
         />
         <ServiceCard
-          title={isGerman ? 'Phonophorese' : 'Фонофорез'}
-          description={isGerman ? 'Tiefenwirksame Hautpflege' : 'Глубокий уход за кожей'}
+          title={language === 'de' ? 'Phonophorese' : language === 'ru' ? 'Фонофорез' : 'Фонофорез'}
+          description={language === 'de' ? 'Tiefenwirksame Hautpflege' : language === 'ru' ? 'Глубокий уход за кожей' : 'Глубокий уход за кожей'}
           icon={Zap}
           href="/services/phonophorese"
           image="/128.jpeg"

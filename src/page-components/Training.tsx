@@ -36,9 +36,11 @@ const Training = () => {
       description: t('training.lashes.desc'),
       icon: GraduationCap,
       image: '/136.png',
-      includes: isGerman
+      includes: language === 'de'
         ? ['Theorie und Praxis', 'Zertifikat']
-        : ['Теория и практика', 'Сертификат'],
+        : language === 'ru'
+        ? ['Теория и практика', 'Сертификат']
+        : ['Теорія та практика', 'Сертифікат'],
       showPricing: false,
     },
     {
@@ -46,9 +48,11 @@ const Training = () => {
       description: t('training.pmu.desc'),
       icon: Award,
       image: '/135.png',
-      includes: isGerman
+      includes: language === 'de'
         ? ['Theorie und Praxis', 'Zertifikat']
-        : ['Теория и практика', 'Сертификат'],
+        : language === 'ru'
+        ? ['Теория и практика', 'Сертификат']
+        : ['Теорія та практика', 'Сертифікат'],
       showPricing: false,
     },
     {
@@ -57,9 +61,11 @@ const Training = () => {
       icon: FileText,
       image: '/117.PNG',
       imagePosition: 'center 20%',
-      includes: isGerman
+      includes: language === 'de'
         ? ['Theorie und Praxis', 'Zertifikat']
-        : ['Теория и практика', 'Сертификат'],
+        : language === 'ru'
+        ? ['Теория и практика', 'Сертификат']
+        : ['Теорія та практика', 'Сертифікат'],
       showPricing: false,
     },
     {
@@ -68,9 +74,11 @@ const Training = () => {
       icon: Users,
       image: '/134.jpeg',
       imagePosition: 'center 20%',
-      includes: isGerman
+      includes: language === 'de'
         ? ['Rechtliche Grundlagen', 'Geschäftsformen', 'Preisgestaltung', 'Marketing-Tipps', 'Checklisten']
-        : ['Правовые основы', 'Формы бизнеса', 'Ценообразование', 'Маркетинг-советы', 'Чеклисты'],
+        : language === 'ru'
+        ? ['Правовые основы', 'Формы бизнеса', 'Ценообразование', 'Маркетинг-советы', 'Чеклисты']
+        : ['Правові основи', 'Форми бізнесу', 'Ціноутворення', 'Маркетингові поради', 'Чеклісти'],
       showPricing: false,
     },
   ];
@@ -102,9 +110,11 @@ const Training = () => {
             {t('training.subtitle')}
           </p>
           <p className="text-lg text-brand-coffee/80 leading-relaxed">
-            {isGerman
+            {language === 'de'
               ? 'Wir bieten professionelle Schulungen für angehende Beauty-Profis. Individuell oder in Mini-Gruppen, mit Zertifikat und lebenslanger Unterstützung.'
-              : 'Мы предлагаем профессиональное обучение для начинающих бьюти-мастеров. Индивидуально или в мини-группах, с сертификатом и пожизненной поддержкой.'}
+              : language === 'ru'
+              ? 'Мы предлагаем профессиональное обучение для начинающих бьюти-мастеров. Индивидуально или в мини-группах, с сертификатом и пожизненной поддержкой.'
+              : 'Ми пропонуємо професійне навчання для початківців б\'юті-майстрів. Індивідуально або в міні-групах, з сертифікатом та довічною підтримкою.'}
           </p>
         </div>
 
@@ -144,11 +154,11 @@ const Training = () => {
               {course.showPricing && (
                 <div className="flex items-center justify-between mb-6 pb-6 border-b border-brand-gold/10">
                   <div>
-                    <p className="text-sm text-brand-coffee/60 mb-1">{isGerman ? 'Dauer' : 'Длительность'}</p>
+                    <p className="text-sm text-brand-coffee/60 mb-1">{language === 'de' ? 'Dauer' : language === 'ru' ? 'Длительность' : 'Тривалість'}</p>
                     <p className="text-brand-espresso font-semibold">{course.duration}</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-sm text-brand-coffee/60 mb-1">{isGerman ? 'Preis' : 'Цена'}</p>
+                    <p className="text-sm text-brand-coffee/60 mb-1">{language === 'de' ? 'Preis' : language === 'ru' ? 'Цена' : 'Ціна'}</p>
                     <p className="text-2xl font-heading font-semibold text-brand-gold">{course.price}</p>
                   </div>
                 </div>
@@ -170,7 +180,7 @@ const Training = () => {
                   className="flex items-center justify-center gap-1.5 px-3 py-3 border-2 border-brand-gold/30 hover:border-brand-gold hover:bg-brand-gold/5 text-brand-espresso font-medium rounded-xl transition-all"
                 >
                   <Phone className="w-4 h-4" />
-                  <span className="text-sm">{isGerman ? 'Anrufen' : 'Звонок'}</span>
+                  <span className="text-sm">{language === 'de' ? 'Anrufen' : language === 'ru' ? 'Звонок' : 'Дзвінок'}</span>
                 </a>
                 <a
                   href="https://wa.me/4917677267269"
@@ -200,7 +210,7 @@ const Training = () => {
         {/* Why Choose Us */}
         <div className="glass rounded-3xl p-8 md:p-12 max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-heading font-semibold text-brand-espresso mb-6">
-            {isGerman ? 'Warum bei uns lernen?' : 'Почему учиться у нас?'}
+            {language === 'de' ? 'Warum bei uns lernen?' : language === 'ru' ? 'Почему учиться у нас?' : 'Чому варто навчатися у нас?'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
@@ -208,10 +218,10 @@ const Training = () => {
                 <Award className="w-6 h-6 text-brand-gold" />
               </div>
               <h3 className="text-lg font-semibold text-brand-espresso mb-2">
-                {isGerman ? 'Zertifiziert' : 'Сертификат'}
+                {language === 'de' ? 'Zertifiziert' : language === 'ru' ? 'Сертификат' : 'Сертифіковано'}
               </h3>
               <p className="text-brand-coffee/70 text-sm">
-                {isGerman ? 'Offizielles Zertifikat nach Abschluss' : 'Официальный сертификат по окончании'}
+                {language === 'de' ? 'Offizielles Zertifikat nach Abschluss' : language === 'ru' ? 'Официальный сертификат по окончании' : 'Офіційний сертифікат після закінчення'}
               </p>
             </div>
             <div>
@@ -219,10 +229,10 @@ const Training = () => {
                 <Users className="w-6 h-6 text-brand-gold" />
               </div>
               <h3 className="text-lg font-semibold text-brand-espresso mb-2">
-                {isGerman ? 'Kleine Gruppen' : 'Малые группы'}
+                {language === 'de' ? 'Kleine Gruppen' : language === 'ru' ? 'Малые группы' : 'Малі групи'}
               </h3>
               <p className="text-brand-coffee/70 text-sm">
-                {isGerman ? 'Individuelle Betreuung garantiert' : 'Гарантированное индивидуальное внимание'}
+                {language === 'de' ? 'Individuelle Betreuung garantiert' : language === 'ru' ? 'Гарантированное индивидуальное внимание' : 'Гарантована індивідуальна увага'}
               </p>
             </div>
             <div>
@@ -230,10 +240,10 @@ const Training = () => {
                 <GraduationCap className="w-6 h-6 text-brand-gold" />
               </div>
               <h3 className="text-lg font-semibold text-brand-espresso mb-2">
-                {isGerman ? 'Support' : 'Поддержка'}
+                {language === 'de' ? 'Support' : language === 'ru' ? 'Поддержка' : 'Підтримка'}
               </h3>
               <p className="text-brand-coffee/70 text-sm">
-                {isGerman ? 'Lebenslange Unterstützung nach dem Kurs' : 'Пожизненная поддержка после курса'}
+                {language === 'de' ? 'Lebenslange Unterstützung nach dem Kurs' : language === 'ru' ? 'Пожизненная поддержка после курса' : 'Довічна підтримка після курсу'}
               </p>
             </div>
           </div>
@@ -256,10 +266,10 @@ const Training = () => {
               className="h-[2px] bg-gradient-to-r from-transparent via-brand-gold to-transparent mx-auto mb-6"
             />
             <h2 className="text-3xl md:text-4xl font-heading font-semibold text-brand-espresso mb-2">
-              {isGerman ? 'Galerie' : 'Галерея'}
+              {language === 'de' ? 'Galerie' : language === 'ru' ? 'Галерея' : 'Галерея'}
             </h2>
             <p className="text-brand-coffee/60 text-sm tracking-widest uppercase">
-              {isGerman ? 'Zertifikate & Arbeiten unserer Schülerinnen' : 'Сертификаты и работы наших учениц'}
+              {language === 'de' ? 'Zertifikate & Arbeiten unserer Schülerinnen' : language === 'ru' ? 'Сертификаты и работы наших учениц' : 'Сертифікати та роботи наших учениць'}
             </p>
           </div>
 
@@ -277,7 +287,7 @@ const Training = () => {
               >
                 <Image
                   src={src}
-                  alt={`${isGerman ? 'Training' : 'Обучение'} ${index + 1}`}
+                  alt={`${language === 'de' ? 'Training' : language === 'ru' ? 'Обучение' : 'Навчання'} ${index + 1}`}
                   fill
                   className="object-cover transition-all duration-700 ease-out group-hover:scale-110"
                   sizes="(max-width: 768px) 50vw, 25vw"
@@ -290,7 +300,7 @@ const Training = () => {
                 </div>
                 <div className="absolute bottom-3 left-3 right-3 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
                   <span className="text-white text-xs font-medium tracking-wider uppercase bg-black/30 backdrop-blur-sm px-3 py-1.5 rounded-full">
-                    {isGerman ? 'Ansehen' : 'Смотреть'}
+                    {language === 'de' ? 'Ansehen' : language === 'ru' ? 'Смотреть' : 'Дивитись'}
                   </span>
                 </div>
               </motion.div>

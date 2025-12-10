@@ -37,7 +37,7 @@ const Datenschutz = () => {
               <div className="flex items-center gap-3 mb-4">
                 <Shield className="w-10 h-10 text-brand-gold" />
                 <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso">
-                  {isGerman ? 'Datenschutzerklärung' : 'Политика конфиденциальности'}
+                  {language === 'de' ? 'Datenschutzerklärung' : language === 'ru' ? 'Политика конфиденциальности' : 'Политика конфиденциальности'}
                 </h1>
               </div>
               <p className="text-brand-coffee/70">
@@ -52,10 +52,10 @@ const Datenschutz = () => {
               {/* Introduction */}
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-                  {isGerman ? '1. Datenschutz auf einen Blick' : '1. Защита данных с первого взгляда'}
+                  {language === 'de' ? '1. Datenschutz auf einen Blick' : language === 'ru' ? '1. Защита данных с первого взгляда' : '1. Защита данных с первого взгляда'}
                 </h2>
                 <h3 className="text-xl font-semibold text-brand-espresso mb-3">
-                  {isGerman ? 'Allgemeine Hinweise' : 'Общая информация'}
+                  {language === 'de' ? 'Allgemeine Hinweise' : language === 'ru' ? 'Общая информация' : 'Общая информация'}
                 </h3>
                 <p className="leading-relaxed mb-4">
                   {isGerman
@@ -68,7 +68,7 @@ const Datenschutz = () => {
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4 flex items-center gap-2">
                   <FileText className="w-6 h-6 text-brand-gold" />
-                  {isGerman ? '2. Datenerfassung auf dieser Website' : '2. Сбор данных на этом сайте'}
+                  {language === 'de' ? '2. Datenerfassung auf dieser Website' : language === 'ru' ? '2. Сбор данных на этом сайте' : '2. Сбор данных на этом сайте'}
                 </h2>
                 <h3 className="text-xl font-semibold text-brand-espresso mb-3">
                   {isGerman
@@ -77,7 +77,7 @@ const Datenschutz = () => {
                 </h3>
                 <div className="mb-4">
                   <p className="font-medium mb-2">
-                    {isGerman ? 'Nataliia Koziukevych' : 'Наталия Козюкевич'}
+                    {language === 'de' ? 'Nataliia Koziukevych' : language === 'ru' ? 'Наталия Козюкевич' : 'Наталия Козюкевич'}
                   </p>
                   <p>NataLux</p>
                   <p>Rosenheimerstraße 159</p>
@@ -95,7 +95,7 @@ const Datenschutz = () => {
                 </div>
 
                 <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-6">
-                  {isGerman ? 'Wie erfassen wir Ihre Daten?' : 'Как мы собираем ваши данные?'}
+                  {language === 'de' ? 'Wie erfassen wir Ihre Daten?' : language === 'ru' ? 'Как мы собираем ваши данные?' : 'Как мы собираем ваши данные?'}
                 </h3>
                 <p className="leading-relaxed mb-4">
                   {isGerman
@@ -113,7 +113,7 @@ const Datenschutz = () => {
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4 flex items-center gap-2">
                   <Eye className="w-6 h-6 text-brand-gold" />
-                  {isGerman ? '3. Wofür nutzen wir Ihre Daten?' : '3. Для чего мы используем ваши данные?'}
+                  {language === 'de' ? '3. Wofür nutzen wir Ihre Daten?' : language === 'ru' ? '3. Для чего мы используем ваши данные?' : '3. Для чего мы используем ваши данные?'}
                 </h2>
                 <p className="leading-relaxed mb-4">
                   {isGerman
@@ -131,7 +131,7 @@ const Datenschutz = () => {
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4 flex items-center gap-2">
                   <AlertCircle className="w-6 h-6 text-brand-gold" />
-                  {isGerman ? '4. Welche Rechte haben Sie?' : '4. Какие у вас есть права?'}
+                  {language === 'de' ? '4. Welche Rechte haben Sie?' : language === 'ru' ? '4. Какие у вас есть права?' : '4. Какие у вас есть права?'}
                 </h2>
                 <div className="space-y-3">
                   <p className="leading-relaxed">
@@ -141,21 +141,21 @@ const Datenschutz = () => {
                   </p>
                   <div className="bg-brand-gold/10 p-4 rounded-xl">
                     <p className="font-semibold text-brand-espresso mb-2">
-                      {isGerman ? 'Ihre Rechte im Überblick:' : 'Ваши права в обзоре:'}
+                      {language === 'de' ? 'Ihre Rechte im Überblick:' : language === 'ru' ? 'Ваши права в обзоре:' : 'Ваши права в обзоре:'}
                     </p>
                     <ul className="list-disc list-inside space-y-1 text-sm">
-                      <li>{isGerman ? 'Recht auf Auskunft' : 'Право на информацию'}</li>
-                      <li>{isGerman ? 'Recht auf Berichtigung' : 'Право на исправление'}</li>
-                      <li>{isGerman ? 'Recht auf Löschung' : 'Право на удаление'}</li>
+                      <li>{language === 'de' ? 'Recht auf Auskunft' : language === 'ru' ? 'Право на информацию' : 'Право на информацию'}</li>
+                      <li>{language === 'de' ? 'Recht auf Berichtigung' : language === 'ru' ? 'Право на исправление' : 'Право на исправление'}</li>
+                      <li>{language === 'de' ? 'Recht auf Löschung' : language === 'ru' ? 'Право на удаление' : 'Право на удаление'}</li>
                       <li>
                         {isGerman
                           ? 'Recht auf Einschränkung der Verarbeitung'
                           : 'Право на ограничение обработки'}
                       </li>
                       <li>
-                        {isGerman ? 'Recht auf Datenübertragbarkeit' : 'Право на переносимость данных'}
+                        {language === 'de' ? 'Recht auf Datenübertragbarkeit' : language === 'ru' ? 'Право на переносимость данных' : 'Право на переносимость данных'}
                       </li>
-                      <li>{isGerman ? 'Widerspruchsrecht' : 'Право на возражение'}</li>
+                      <li>{language === 'de' ? 'Widerspruchsrecht' : language === 'ru' ? 'Право на возражение' : 'Право на возражение'}</li>
                     </ul>
                   </div>
                 </div>
@@ -165,7 +165,7 @@ const Datenschutz = () => {
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4 flex items-center gap-2">
                   <Lock className="w-6 h-6 text-brand-gold" />
-                  {isGerman ? '5. Server-Log-Dateien' : '5. Файлы журналов сервера'}
+                  {language === 'de' ? '5. Server-Log-Dateien' : language === 'ru' ? '5. Файлы журналов сервера' : '5. Файлы журналов сервера'}
                 </h2>
                 <p className="leading-relaxed mb-4">
                   {isGerman
@@ -173,12 +173,12 @@ const Datenschutz = () => {
                     : 'Провайдер страниц автоматически собирает и сохраняет информацию в так называемых файлах журналов сервера, которые ваш браузер автоматически передает нам. Это:'}
                 </p>
                 <ul className="list-disc list-inside space-y-2 mb-4">
-                  <li>{isGerman ? 'Browsertyp und Browserversion' : 'Тип и версия браузера'}</li>
-                  <li>{isGerman ? 'Verwendetes Betriebssystem' : 'Используемая операционная система'}</li>
-                  <li>{isGerman ? 'Referrer URL' : 'Реферальный URL'}</li>
-                  <li>{isGerman ? 'Hostname des zugreifenden Rechners' : 'Имя хоста компьютера'}</li>
-                  <li>{isGerman ? 'Uhrzeit der Serveranfrage' : 'Время запроса к серверу'}</li>
-                  <li>{isGerman ? 'IP-Adresse' : 'IP-адрес'}</li>
+                  <li>{language === 'de' ? 'Browsertyp und Browserversion' : language === 'ru' ? 'Тип и версия браузера' : 'Тип и версия браузера'}</li>
+                  <li>{language === 'de' ? 'Verwendetes Betriebssystem' : language === 'ru' ? 'Используемая операционная система' : 'Используемая операционная система'}</li>
+                  <li>{language === 'de' ? 'Referrer URL' : language === 'ru' ? 'Реферальный URL' : 'Реферальный URL'}</li>
+                  <li>{language === 'de' ? 'Hostname des zugreifenden Rechners' : language === 'ru' ? 'Имя хоста компьютера' : 'Имя хоста компьютера'}</li>
+                  <li>{language === 'de' ? 'Uhrzeit der Serveranfrage' : language === 'ru' ? 'Время запроса к серверу' : 'Время запроса к серверу'}</li>
+                  <li>{language === 'de' ? 'IP-Adresse' : language === 'ru' ? 'IP-адрес' : 'IP-адрес'}</li>
                 </ul>
                 <p className="leading-relaxed">
                   {isGerman
@@ -190,7 +190,7 @@ const Datenschutz = () => {
               {/* Contact Form */}
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-                  {isGerman ? '6. Kontaktformular' : '6. Контактная форма'}
+                  {language === 'de' ? '6. Kontaktformular' : language === 'ru' ? '6. Контактная форма' : '6. Контактная форма'}
                 </h2>
                 <p className="leading-relaxed mb-4">
                   {isGerman
@@ -207,7 +207,7 @@ const Datenschutz = () => {
               {/* Email Contact */}
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-                  {isGerman ? '7. Anfrage per E-Mail oder Telefon' : '7. Запрос по электронной почте или телефону'}
+                  {language === 'de' ? '7. Anfrage per E-Mail oder Telefon' : language === 'ru' ? '7. Запрос по электронной почте или телефону' : '7. Запрос по электронной почте или телефону'}
                 </h2>
                 <p className="leading-relaxed">
                   {isGerman
@@ -219,7 +219,7 @@ const Datenschutz = () => {
               {/* SSL Encryption */}
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-                  {isGerman ? '8. SSL- bzw. TLS-Verschlüsselung' : '8. SSL/TLS-шифрование'}
+                  {language === 'de' ? '8. SSL- bzw. TLS-Verschlüsselung' : language === 'ru' ? '8. SSL/TLS-шифрование' : '8. SSL/TLS-шифрование'}
                 </h2>
                 <p className="leading-relaxed">
                   {isGerman
@@ -231,7 +231,7 @@ const Datenschutz = () => {
               {/* Data Deletion */}
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-                  {isGerman ? '9. Speicherdauer' : '9. Срок хранения'}
+                  {language === 'de' ? '9. Speicherdauer' : language === 'ru' ? '9. Срок хранения' : '9. Срок хранения'}
                 </h2>
                 <p className="leading-relaxed">
                   {isGerman
@@ -243,7 +243,7 @@ const Datenschutz = () => {
               {/* Contact for Questions */}
               <section className="bg-brand-gold/5 p-6 rounded-2xl">
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-                  {isGerman ? '10. Fragen zum Datenschutz?' : '10. Вопросы о защите данных?'}
+                  {language === 'de' ? '10. Fragen zum Datenschutz?' : language === 'ru' ? '10. Вопросы о защите данных?' : '10. Вопросы о защите данных?'}
                 </h2>
                 <p className="leading-relaxed mb-4">
                   {isGerman
@@ -252,7 +252,7 @@ const Datenschutz = () => {
                 </p>
                 <div className="space-y-2">
                   <p className="font-medium">
-                    {isGerman ? 'Nataliia Koziukevych' : 'Наталия Козюкевич'}
+                    {language === 'de' ? 'Nataliia Koziukevych' : language === 'ru' ? 'Наталия Козюкевич' : 'Наталия Козюкевич'}
                   </p>
                   <div className="flex items-center gap-2">
                     <Mail className="w-4 h-4 text-brand-gold" />
@@ -269,7 +269,7 @@ const Datenschutz = () => {
               {/* Last Updated */}
               <section className="text-sm text-brand-coffee/60 pt-4 border-t border-brand-gold/10">
                 <p>
-                  {isGerman ? 'Stand: Dezember 2024' : 'Состояние: декабрь 2024 года'}
+                  {language === 'de' ? 'Stand: Dezember 2024' : language === 'ru' ? 'Состояние: декабрь 2024 года' : 'Состояние: декабрь 2024 года'}
                 </p>
               </section>
             </div>

@@ -25,26 +25,26 @@ const Lichttherapie = () => {
   const RecommendedServices = () => (
     <div className="mt-12">
       <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-6 text-center">
-        {isGerman ? 'Empfohlene Kombinationen' : 'Рекомендуемые комбинации'}
+        {language === 'de' ? 'Empfohlene Kombinationen' : language === 'ru' ? 'Рекомендуемые комбинации' : 'Рекомендуемые комбинации'}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <ServiceCard
-          title={isGerman ? 'Biostrom' : 'Биотоки'}
-          description={isGerman ? 'Mikrostrom für zusätzlichen Lifting-Effekt' : 'Микротоки для дополнительного лифтинг-эффекта'}
+          title={language === 'de' ? 'Biostrom' : language === 'ru' ? 'Биотоки' : 'Биотоки'}
+          description={language === 'de' ? 'Mikrostrom für zusätzlichen Lifting-Effekt' : language === 'ru' ? 'Микротоки для дополнительного лифтинг-эффекта' : 'Микротоки для дополнительного лифтинг-эффекта'}
           icon={Activity}
           href="/services/apparative-anti-aging/biostrom"
           image="/125.webp"
         />
         <ServiceCard
-          title={isGerman ? 'Phonophorese' : 'Фонофорез'}
-          description={isGerman ? 'Ultraschall für tiefe Wirkstoffeinschleusung' : 'Ультразвук для глубокого введения активных веществ'}
+          title={language === 'de' ? 'Phonophorese' : language === 'ru' ? 'Фонофорез' : 'Фонофорез'}
+          description={language === 'de' ? 'Ultraschall für tiefe Wirkstoffeinschleusung' : language === 'ru' ? 'Ультразвук для глубокого введения активных веществ' : 'Ультразвук для глубокого введения активных веществ'}
           icon={Droplet}
           href="/services/phonophorese"
           image="/128.jpeg"
         />
         <ServiceCard
           title="RF-Lifting"
-          description={isGerman ? 'Radiofrequenz für intensive Straffung' : 'Радиочастоты для интенсивной подтяжки'}
+          description={language === 'de' ? 'Radiofrequenz für intensive Straffung' : language === 'ru' ? 'Радиочастоты для интенсивной подтяжки' : 'Радиочастоты для интенсивной подтяжки'}
           icon={Zap}
           href="/services/apparative-anti-aging/rf-lifting"
           image="/162.jpeg"

@@ -378,11 +378,11 @@ const Prices = () => {
                 letterSpacing: '-0.02em',
               }}
             >
-              {isGerman ? 'PREISE' : 'ЦЕНЫ'}
+              {language === 'de' ? 'PREISE' : language === 'ru' ? 'ЦЕНЫ' : 'ЦЕНЫ'}
             </h1>
             <div className="w-32 h-0.5 bg-brand-gold mx-auto opacity-80 mb-6"></div>
             <p className="text-lg text-brand-espresso/60 font-light italic">
-              {isGerman ? 'Exklusive Beauty-Behandlungen' : 'Эксклюзивные бьюти-процедуры'}
+              {language === 'de' ? 'Exklusive Beauty-Behandlungen' : language === 'ru' ? 'Эксклюзивные бьюти-процедуры' : 'Эксклюзивные бьюти-процедуры'}
             </p>
           </motion.div>
         </div>
@@ -530,7 +530,7 @@ const Prices = () => {
                         {section.additional && (
                           <div className="mt-8 pt-6 border-t-2 border-brand-gold/20">
                             <p className="text-sm font-semibold uppercase tracking-wider text-brand-espresso/60 mb-5">
-                              {isGerman ? 'Zusätzlich' : 'Дополнительно'}
+                              {language === 'de' ? 'Zusätzlich' : language === 'ru' ? 'Дополнительно' : 'Дополнительно'}
                             </p>
                             <div className="space-y-3">
                               {section.additional.map((item, idx) => (

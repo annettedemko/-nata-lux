@@ -34,7 +34,7 @@ const Impressum = () => {
           <div className="glass rounded-3xl p-8 md:p-12 animate-fade-in">
             {/* Header */}
             <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-8">
-              {isGerman ? 'Impressum' : 'Выходные данные'}
+              {language === 'de' ? 'Impressum' : language === 'ru' ? 'Выходные данные' : 'Выходные данные'}
             </h1>
 
             {/* Legal Notice Content */}
@@ -42,15 +42,15 @@ const Impressum = () => {
               {/* Company Information */}
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-                  {isGerman ? 'Angaben gemäß § 5 TMG' : 'Информация согласно § 5 TMG'}
+                  {language === 'de' ? 'Angaben gemäß § 5 TMG' : language === 'ru' ? 'Информация согласно § 5 TMG' : 'Информация согласно § 5 TMG'}
                 </h2>
                 <div className="space-y-3">
                   <p className="text-lg font-medium text-brand-espresso">
-                    {isGerman ? 'Nataliia Koziukevych' : 'Наталия Козюкевич'}
+                    {language === 'de' ? 'Nataliia Koziukevych' : language === 'ru' ? 'Наталия Козюкевич' : 'Наталия Козюкевич'}
                   </p>
                   <p className="font-medium">NataLux</p>
                   <p className="text-sm text-brand-coffee/60">
-                    {isGerman ? 'Gewerbebetrieb' : 'Предприятие торговли'}
+                    {language === 'de' ? 'Gewerbebetrieb' : language === 'ru' ? 'Предприятие торговли' : 'Предприятие торговли'}
                   </p>
                 </div>
               </section>
@@ -59,7 +59,7 @@ const Impressum = () => {
               <section>
                 <h3 className="text-xl font-heading font-semibold text-brand-espresso mb-3 flex items-center gap-2">
                   <MapPin className="w-5 h-5 text-brand-gold" />
-                  {isGerman ? 'Anschrift' : 'Адрес'}
+                  {language === 'de' ? 'Anschrift' : language === 'ru' ? 'Адрес' : 'Адрес'}
                 </h3>
                 <div className="pl-7">
                   <p>Rosenheimerstraße 159</p>
@@ -71,7 +71,7 @@ const Impressum = () => {
               {/* Contact */}
               <section>
                 <h3 className="text-xl font-heading font-semibold text-brand-espresso mb-3">
-                  {isGerman ? 'Kontakt' : 'Контакты'}
+                  {language === 'de' ? 'Kontakt' : language === 'ru' ? 'Контакты' : 'Контакты'}
                 </h3>
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
@@ -95,18 +95,18 @@ const Impressum = () => {
               {/* Tax Information */}
               <section>
                 <h3 className="text-xl font-heading font-semibold text-brand-espresso mb-3">
-                  {isGerman ? 'Umsatzsteuer-Identifikationsnummer' : 'Налоговая информация'}
+                  {language === 'de' ? 'Umsatzsteuer-Identifikationsnummer' : language === 'ru' ? 'Налоговая информация' : 'Налоговая информация'}
                 </h3>
                 <div className="space-y-2">
                   <p>
                     <span className="font-medium">
-                      {isGerman ? 'Steuernummer:' : 'Налоговый номер:'}
+                      {language === 'de' ? 'Steuernummer:' : language === 'ru' ? 'Налоговый номер:' : 'Налоговый номер:'}
                     </span>{' '}
                     145/144/40930
                   </p>
                   <p>
                     <span className="font-medium">
-                      {isGerman ? 'Identifikationsnummer:' : 'Идентификационный номер:'}
+                      {language === 'de' ? 'Identifikationsnummer:' : language === 'ru' ? 'Идентификационный номер:' : 'Идентификационный номер:'}
                     </span>{' '}
                     82143363058
                   </p>
@@ -142,7 +142,7 @@ const Impressum = () => {
               {/* Liability for Content */}
               <section>
                 <h3 className="text-xl font-heading font-semibold text-brand-espresso mb-3">
-                  {isGerman ? 'Haftung für Inhalte' : 'Ответственность за контент'}
+                  {language === 'de' ? 'Haftung für Inhalte' : language === 'ru' ? 'Ответственность за контент' : 'Відветственность за контент'}
                 </h3>
                 <p className="leading-relaxed">
                   {isGerman
@@ -154,7 +154,7 @@ const Impressum = () => {
               {/* Liability for Links */}
               <section>
                 <h3 className="text-xl font-heading font-semibold text-brand-espresso mb-3">
-                  {isGerman ? 'Haftung für Links' : 'Ответственность за ссылки'}
+                  {language === 'de' ? 'Haftung für Links' : language === 'ru' ? 'Ответственность за ссылки' : 'Відветственность за ссылки'}
                 </h3>
                 <p className="leading-relaxed">
                   {isGerman
@@ -166,7 +166,7 @@ const Impressum = () => {
               {/* Copyright */}
               <section>
                 <h3 className="text-xl font-heading font-semibold text-brand-espresso mb-3">
-                  {isGerman ? 'Urheberrecht' : 'Авторское право'}
+                  {language === 'de' ? 'Urheberrecht' : language === 'ru' ? 'Авторское право' : 'Авторское право'}
                 </h3>
                 <p className="leading-relaxed">
                   {isGerman

@@ -20,26 +20,26 @@ const PowderBrows = () => {
   const RecommendedServices = () => (
     <div className="mt-12">
       <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-6 text-center">
-        {isGerman ? 'Weitere PMU Behandlungen' : 'Другие PMU процедуры'}
+        {language === 'de' ? 'Weitere PMU Behandlungen' : language === 'ru' ? 'Другие PMU процедуры' : 'Другие PMU процедуры'}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <ServiceCard
           title="Aquarell Lips"
-          description={isGerman ? 'Natürliche Lippenpigmentierung' : 'Естественная пигментация губ'}
+          description={language === 'de' ? 'Natürliche Lippenpigmentierung' : language === 'ru' ? 'Естественная пигментация губ' : 'Естественная пигментация губ'}
           icon={Heart}
           href="/services/aquarell-lips"
           image="/138.jpeg"
         />
         <ServiceCard
-          title={isGerman ? 'Wimpernkranz' : 'Межресничка'}
-          description={isGerman ? 'Permanent Make-up Wimpernkranz' : 'Перманентный макияж межресничного пространства'}
+          title={language === 'de' ? 'Wimpernkranz' : language === 'ru' ? 'Межресничка' : 'Межресничка'}
+          description={language === 'de' ? 'Permanent Make-up Wimpernkranz' : language === 'ru' ? 'Перманентный макияж межресничного пространства' : 'Перманентный макияж межресничного пространства'}
           icon={Eye}
           href="/services/wimpernkranz"
           image="/114.jpg"
         />
         <ServiceCard
-          title={isGerman ? 'Wimpernlaminierung' : 'Ламинирование ресниц'}
-          description={isGerman ? 'Lash Lift für natürlich geschwungene Wimpern' : 'Lash Lift для естественно изогнутых ресниц'}
+          title={language === 'de' ? 'Wimpernlaminierung' : language === 'ru' ? 'Ламинирование ресниц' : 'Ламінування ресниц'}
+          description={language === 'de' ? 'Lash Lift für natürlich geschwungene Wimpern' : language === 'ru' ? 'Lash Lift для естественно изогнутых ресниц' : 'Lash Lift для естественно изогнутых ресниц'}
           icon={Sparkles}
           href="/services/wimpern-augenbrauen-laminierung"
           image="/131.jpeg"

@@ -20,26 +20,26 @@ const PMURemover = () => {
   const RecommendedServices = () => (
     <div className="mt-12">
       <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-6 text-center">
-        {isGerman ? 'Neues PMU nach Entfernung' : 'Новый PMU после удаления'}
+        {language === 'de' ? 'Neues PMU nach Entfernung' : language === 'ru' ? 'Новый PMU после удаления' : 'Новый PMU после удаления'}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <ServiceCard
           title="Powder Brows"
-          description={isGerman ? 'Moderne Pudertechnik für natürliche Augenbrauen' : 'Современная пудровая техника для естественных бровей'}
+          description={language === 'de' ? 'Moderne Pudertechnik für natürliche Augenbrauen' : language === 'ru' ? 'Современная пудровая техника для естественных бровей' : 'Современная пудровая техника для естественных бровей'}
           icon={Palette}
           href="/services/powder-brows"
           image="/65.jpg"
         />
         <ServiceCard
           title="Aquarell Lips"
-          description={isGerman ? 'Natürliche Lippenpigmentierung' : 'Естественная пигментация губ'}
+          description={language === 'de' ? 'Natürliche Lippenpigmentierung' : language === 'ru' ? 'Естественная пигментация губ' : 'Естественная пигментация губ'}
           icon={Heart}
           href="/services/aquarell-lips"
           image="/138.jpeg"
         />
         <ServiceCard
-          title={isGerman ? 'Wimpernkranz' : 'Межресничка'}
-          description={isGerman ? 'Permanent Make-up Wimpernkranz' : 'Перманентный макияж межресничного пространства'}
+          title={language === 'de' ? 'Wimpernkranz' : language === 'ru' ? 'Межресничка' : 'Межресничка'}
+          description={language === 'de' ? 'Permanent Make-up Wimpernkranz' : language === 'ru' ? 'Перманентный макияж межресничного пространства' : 'Перманентный макияж межресничного пространства'}
           icon={Eye}
           href="/services/wimpernkranz"
           image="/114.jpg"

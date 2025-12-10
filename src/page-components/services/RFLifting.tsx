@@ -27,62 +27,62 @@ const RFLifting = () => {
     <div className="space-y-6 mb-12">
       <div className="glass rounded-2xl p-8">
         <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-6">
-          {isGerman ? 'Was gibt RF-Lifting Gesicht' : 'Что даёт RF-лифтинг лица'}
+          {language === 'de' ? 'Was gibt RF-Lifting Gesicht' : language === 'ru' ? 'Что даёт RF-лифтинг лица' : 'Что даёт RF-лифтинг обличчя'}
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <h4 className="text-lg font-semibold text-brand-gold mb-3">
-              {isGerman ? 'Ergebnisse' : 'Результаты'}
+              {language === 'de' ? 'Ergebnisse' : language === 'ru' ? 'Результаты' : 'Результаты'}
             </h4>
             <ul className="space-y-2">
               <li className="flex items-start gap-2 text-brand-espresso/80">
                 <span className="text-brand-gold mt-1">✓</span>
-                <span>{isGerman ? 'Straffung des Gesichtsovals' : 'Подтяжка овала лица'}</span>
+                <span>{language === 'de' ? 'Straffung des Gesichtsovals' : language === 'ru' ? 'Подтяжка овала лица' : 'Подтяжка овала обличчя'}</span>
               </li>
               <li className="flex items-start gap-2 text-brand-espresso/80">
                 <span className="text-brand-gold mt-1">✓</span>
-                <span>{isGerman ? 'Reduzierung des Doppelkinns' : 'Уменьшение второго подбородка'}</span>
+                <span>{language === 'de' ? 'Reduzierung des Doppelkinns' : language === 'ru' ? 'Уменьшение второго подбородка' : 'Уменьшение второго подбородка'}</span>
               </li>
               <li className="flex items-start gap-2 text-brand-espresso/80">
                 <span className="text-brand-gold mt-1">✓</span>
-                <span>{isGerman ? 'Glättung von Falten und Linien' : 'Разглаживание морщин'}</span>
+                <span>{language === 'de' ? 'Glättung von Falten und Linien' : language === 'ru' ? 'Разглаживание морщин' : 'Разглаживание морщин'}</span>
               </li>
               <li className="flex items-start gap-2 text-brand-espresso/80">
                 <span className="text-brand-gold mt-1">✓</span>
-                <span>{isGerman ? 'Verbesserung der Hauttextur' : 'Улучшение текстуры кожи'}</span>
+                <span>{language === 'de' ? 'Verbesserung der Hauttextur' : language === 'ru' ? 'Улучшение текстуры кожи' : 'Улучшение текстуры кожи'}</span>
               </li>
               <li className="flex items-start gap-2 text-brand-espresso/80">
                 <span className="text-brand-gold mt-1">✓</span>
-                <span>{isGerman ? 'Effekt eines erholten Gesichts' : 'Эффект отдохнувшего лица'}</span>
+                <span>{language === 'de' ? 'Effekt eines erholten Gesichts' : language === 'ru' ? 'Эффект отдохнувшего лица' : 'Эффект отдохнувшего обличчя'}</span>
               </li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-lg font-semibold text-brand-gold mb-3">
-              {isGerman ? 'Vorteile' : 'Преимущества'}
+              {language === 'de' ? 'Vorteile' : language === 'ru' ? 'Преимущества' : 'Преимущества'}
             </h4>
             <ul className="space-y-2">
               <li className="flex items-start gap-2 text-brand-espresso/80">
                 <span className="text-brand-gold">→</span>
-                <span>{isGerman ? 'Sichtbarer Effekt nach 1 Behandlung' : 'Видимый эффект после 1 процедуры'}</span>
+                <span>{language === 'de' ? 'Sichtbarer Effekt nach 1 Behandlung' : language === 'ru' ? 'Видимый эффект после 1 процедуры' : 'Видимый эффект после 1 процедуры'}</span>
               </li>
               <li className="flex items-start gap-2 text-brand-espresso/80">
                 <span className="text-brand-gold">→</span>
-                <span>{isGerman ? 'Ohne Schmerzen und Injektionen' : 'Без боли и инъекций'}</span>
+                <span>{language === 'de' ? 'Ohne Schmerzen und Injektionen' : language === 'ru' ? 'Без боли и инъекций' : 'Без боли и инъекций'}</span>
               </li>
               <li className="flex items-start gap-2 text-brand-espresso/80">
                 <span className="text-brand-gold">→</span>
-                <span>{isGerman ? 'Keine Ausfallzeiten' : 'Без реабилитации'}</span>
+                <span>{language === 'de' ? 'Keine Ausfallzeiten' : language === 'ru' ? 'Без реабилитации' : 'Без реабилитации'}</span>
               </li>
               <li className="flex items-start gap-2 text-brand-espresso/80">
                 <span className="text-brand-gold">→</span>
-                <span>{isGerman ? 'Ganzjährig möglich' : 'Можно проводить круглый год'}</span>
+                <span>{language === 'de' ? 'Ganzjährig möglich' : language === 'ru' ? 'Можно проводить круглый год' : 'Можно проводить круглый год'}</span>
               </li>
               <li className="flex items-start gap-2 text-brand-espresso/80">
                 <span className="text-brand-gold">→</span>
-                <span>{isGerman ? 'Für Frauen und Männer' : 'Для женщин и мужчин'}</span>
+                <span>{language === 'de' ? 'Für Frauen und Männer' : language === 'ru' ? 'Для женщин и мужчин' : 'Для женщин и мужчин'}</span>
               </li>
             </ul>
           </div>
@@ -92,17 +92,17 @@ const RFLifting = () => {
       {/* Ideal Combinations */}
       <div className="glass rounded-2xl p-8">
         <h3 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-          {isGerman ? 'Ideale Kombinationen' : 'Идеальные сочетания'}
+          {language === 'de' ? 'Ideale Kombinationen' : language === 'ru' ? 'Идеальные сочетания' : 'Идеальные сочетания'}
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="flex items-start gap-3">
             <span className="text-brand-gold text-xl">•</span>
             <div>
               <p className="font-semibold text-brand-espresso">
-                {isGerman ? 'RF + Mikrostromtherapie' : 'RF + микротоки'}
+                {language === 'de' ? 'RF + Mikrostromtherapie' : language === 'ru' ? 'RF + микротоки' : 'RF + микротоки'}
               </p>
               <p className="text-sm text-brand-espresso/70">
-                {isGerman ? 'Verstärkter Lifting-Effekt' : 'Усиленный лифтинг-эффект'}
+                {language === 'de' ? 'Verstärkter Lifting-Effekt' : language === 'ru' ? 'Усиленный лифтинг-эффект' : 'Усиленный лифтинг-эффект'}
               </p>
             </div>
           </div>
@@ -110,10 +110,10 @@ const RFLifting = () => {
             <span className="text-brand-gold text-xl">•</span>
             <div>
               <p className="font-semibold text-brand-espresso">
-                {isGerman ? 'RF + Phonophorese' : 'RF + фонофорез'}
+                {language === 'de' ? 'RF + Phonophorese' : language === 'ru' ? 'RF + фонофорез' : 'RF + фонофорез'}
               </p>
               <p className="text-sm text-brand-espresso/70">
-                {isGerman ? 'Tiefe Hydratation' : 'Глубокое увлажнение'}
+                {language === 'de' ? 'Tiefe Hydratation' : language === 'ru' ? 'Глубокое увлажнение' : 'Глубокое увлажнение'}
               </p>
             </div>
           </div>
@@ -123,32 +123,32 @@ const RFLifting = () => {
       {/* Gallery */}
       <PremiumGallery
         images={['/162.jpeg', '/183.jpg', '/184.jpg']}
-        title={isGerman ? 'Vorher-Nachher Ergebnisse' : 'Результаты до и после'}
+        title={language === 'de' ? 'Vorher-Nachher Ergebnisse' : language === 'ru' ? 'Результаты до и после' : 'Результаты до и после'}
       />
 
       {/* Related Services */}
       <div className="mt-12">
         <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-6 text-center">
-          {isGerman ? 'Weitere empfohlene Behandlungen' : 'Рекомендуемые процедуры'}
+          {language === 'de' ? 'Weitere empfohlene Behandlungen' : language === 'ru' ? 'Рекомендуемые процедуры' : 'Рекомендуемые процедуры'}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <ServiceCard
-            title={isGerman ? 'Phonophorese' : 'Фонофорез'}
-            description={isGerman ? 'Ultraschall für tiefe Wirkstoffeinschleusung' : 'Ультразвук для глубокого введения активных веществ'}
+            title={language === 'de' ? 'Phonophorese' : language === 'ru' ? 'Фонофорез' : 'Фонофорез'}
+            description={language === 'de' ? 'Ultraschall für tiefe Wirkstoffeinschleusung' : language === 'ru' ? 'Ультразвук для глубокого введения активных веществ' : 'Ультразвук для глубокого введения активных веществ'}
             icon={Droplet}
             href="/services/phonophorese"
             image="/128.jpeg"
           />
           <ServiceCard
-            title={isGerman ? 'RF-Vakuum (Körper)' : 'RF-вакуум (тело)'}
-            description={isGerman ? 'Radiofrequenz mit Vakuum für Körperstraffung' : 'Радиочастоты с вакуумом для подтяжки тела'}
+            title={language === 'de' ? 'RF-Vakuum (Körper)' : language === 'ru' ? 'RF-вакуум (тело)' : 'RF-вакуум (тело)'}
+            description={language === 'de' ? 'Radiofrequenz mit Vakuum für Körperstraffung' : language === 'ru' ? 'Радиочастоты с вакуумом для подтяжки тела' : 'Радиочастоты с вакуумом для подтяжки тела'}
             icon={Star}
             href="/services/koerperbehandlungen/rf-vakuum"
             image="/83.jpg"
           />
           <ServiceCard
-            title={isGerman ? 'Biostrom' : 'Биотоки'}
-            description={isGerman ? 'Mikrostrom für Muskelstimulation und Lifting' : 'Микротоки для стимуляции мышц и лифтинга'}
+            title={language === 'de' ? 'Biostrom' : language === 'ru' ? 'Биотоки' : 'Биотоки'}
+            description={language === 'de' ? 'Mikrostrom für Muskelstimulation und Lifting' : language === 'ru' ? 'Микротоки для стимуляции мышц и лифтинга' : 'Микротоки для стимуляции мышц и лифтинга'}
             icon={Activity}
             href="/services/apparative-anti-aging/biostrom"
             image="/125.webp"

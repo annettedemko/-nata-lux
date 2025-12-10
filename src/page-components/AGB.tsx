@@ -31,7 +31,7 @@ const AGB = () => {
               <div className="flex items-center gap-3 mb-4">
                 <FileText className="w-10 h-10 text-brand-gold" />
                 <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso">
-                  {isGerman ? 'Allgemeine Geschäftsbedingungen' : 'Общие условия и положения'}
+                  {language === 'de' ? 'Allgemeine Geschäftsbedingungen' : language === 'ru' ? 'Общие условия и положения' : 'Общие условия и положения'}
                 </h1>
               </div>
               <p className="text-brand-coffee/70">
@@ -46,7 +46,7 @@ const AGB = () => {
               {/* Scope */}
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-                  {isGerman ? '1. Geltungsbereich' : '1. Область применения'}
+                  {language === 'de' ? '1. Geltungsbereich' : language === 'ru' ? '1. Область применения' : '1. Область применения'}
                 </h2>
                 <p className="leading-relaxed mb-4">
                   {isGerman
@@ -55,10 +55,10 @@ const AGB = () => {
                 </p>
                 <div className="bg-brand-gold/5 p-4 rounded-xl">
                   <p className="font-semibold text-brand-espresso mb-2">
-                    {isGerman ? 'Anbieter:' : 'Провайдер:'}
+                    {language === 'de' ? 'Anbieter:' : language === 'ru' ? 'Провайдер:' : 'Провайдер:'}
                   </p>
                   <p className="text-sm">
-                    {isGerman ? 'Nataliia Koziukevych' : 'Наталия Козюкевич'}
+                    {language === 'de' ? 'Nataliia Koziukevych' : language === 'ru' ? 'Наталия Козюкевич' : 'Наталия Козюкевич'}
                   </p>
                   <p className="text-sm">NataLux</p>
                   <p className="text-sm">Rosenheimerstraße 159, 81671 München</p>
@@ -68,7 +68,7 @@ const AGB = () => {
               {/* Services */}
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-                  {isGerman ? '2. Leistungsumfang' : '2. Объем услуг'}
+                  {language === 'de' ? '2. Leistungsumfang' : language === 'ru' ? '2. Объем услуг' : '2. Объем услуг'}
                 </h2>
                 <p className="leading-relaxed mb-4">
                   {isGerman
@@ -77,7 +77,7 @@ const AGB = () => {
                 </p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li>
-                    {isGerman ? 'Permanent Make-Up (Augenbrauen, Lippen, Augen)' : 'Перманентный макияж (брови, губы, глаза)'}
+                    {language === 'de' ? 'Permanent Make-Up (Augenbrauen, Lippen, Augen)' : language === 'ru' ? 'Перманентный макияж (брови, губы, глаза)' : 'Перманентный макияж (брови, губы, глаза)'}
                   </li>
                   <li>
                     {isGerman
@@ -105,7 +105,7 @@ const AGB = () => {
                       : 'Процедуры для тела (кавитация, RF-вакуум)'}
                   </li>
                   <li>
-                    {isGerman ? 'Schulungen und Beratung' : 'Обучение и консультации'}
+                    {language === 'de' ? 'Schulungen und Beratung' : language === 'ru' ? 'Обучение и консультации' : 'Обучение и консультации'}
                   </li>
                 </ul>
                 <p className="leading-relaxed mt-4">
@@ -119,11 +119,11 @@ const AGB = () => {
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4 flex items-center gap-2">
                   <Calendar className="w-6 h-6 text-brand-gold" />
-                  {isGerman ? '3. Terminvereinbarung und Stornierung' : '3. Запись и отмена'}
+                  {language === 'de' ? '3. Terminvereinbarung und Stornierung' : language === 'ru' ? '3. Запись и отмена' : '3. Запись и отмена'}
                 </h2>
 
                 <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-6">
-                  {isGerman ? 'Terminvereinbarung' : 'Запись на прием'}
+                  {language === 'de' ? 'Terminvereinbarung' : language === 'ru' ? 'Запись на прием' : 'Запись на прием'}
                 </h3>
                 <p className="leading-relaxed mb-4">
                   {isGerman
@@ -132,7 +132,7 @@ const AGB = () => {
                 </p>
 
                 <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-6">
-                  {isGerman ? 'Stornierung durch den Kunden' : 'Отмена клиентом'}
+                  {language === 'de' ? 'Stornierung durch den Kunden' : language === 'ru' ? 'Отмена клиентом' : 'Відмена клиентом'}
                 </h3>
                 <div className="bg-brand-gold/10 p-5 rounded-xl mb-4">
                   <p className="leading-relaxed mb-3">
@@ -160,7 +160,7 @@ const AGB = () => {
                 </p>
 
                 <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-6">
-                  {isGerman ? 'Verspätung' : 'Опоздание'}
+                  {language === 'de' ? 'Verspätung' : language === 'ru' ? 'Опоздание' : 'Опоздание'}
                 </h3>
                 <p className="leading-relaxed">
                   {isGerman
@@ -173,7 +173,7 @@ const AGB = () => {
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4 flex items-center gap-2">
                   <CreditCard className="w-6 h-6 text-brand-gold" />
-                  {isGerman ? '4. Zahlung' : '4. Оплата'}
+                  {language === 'de' ? '4. Zahlung' : language === 'ru' ? '4. Оплата' : '4. Оплата'}
                 </h2>
                 <p className="leading-relaxed mb-4">
                   {isGerman
@@ -181,9 +181,9 @@ const AGB = () => {
                     : 'Оплата производится непосредственно после оказания услуги. Принимаются следующие способы оплаты:'}
                 </p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>{isGerman ? 'Barzahlung' : 'Наличные'}</li>
-                  <li>{isGerman ? 'EC-Karte' : 'EC-карта'}</li>
-                  <li>{isGerman ? 'Überweisung (nach Vereinbarung)' : 'Банковский перевод (по договоренности)'}</li>
+                  <li>{language === 'de' ? 'Barzahlung' : language === 'ru' ? 'Наличные' : 'Наличные'}</li>
+                  <li>{language === 'de' ? 'EC-Karte' : language === 'ru' ? 'EC-карта' : 'EC-карта'}</li>
+                  <li>{language === 'de' ? 'Überweisung (nach Vereinbarung)' : language === 'ru' ? 'Банковский перевод (по договоренности)' : 'Банковский перевод (по договоренности)'}</li>
                 </ul>
                 <p className="leading-relaxed mt-4">
                   {isGerman
@@ -196,11 +196,11 @@ const AGB = () => {
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4 flex items-center gap-2">
                   <AlertTriangle className="w-6 h-6 text-brand-gold" />
-                  {isGerman ? '5. Pflichten des Kunden' : '5. Обязанности клиента'}
+                  {language === 'de' ? '5. Pflichten des Kunden' : language === 'ru' ? '5. Обязанности клиента' : '5. Обязанности клиента'}
                 </h2>
 
                 <h3 className="text-xl font-semibold text-brand-espresso mb-3">
-                  {isGerman ? 'Gesundheitsangaben' : 'Информация о здоровье'}
+                  {language === 'de' ? 'Gesundheitsangaben' : language === 'ru' ? 'Информация о здоровье' : 'Информация о здоровье'}
                 </h3>
                 <p className="leading-relaxed mb-4">
                   {isGerman
@@ -208,17 +208,17 @@ const AGB = () => {
                     : 'Клиент обязан перед началом процедуры правдиво предоставить всю информацию о здоровье, особенно:'}
                 </p>
                 <ul className="list-disc list-inside space-y-2 ml-4 mb-4">
-                  <li>{isGerman ? 'Allergien und Unverträglichkeiten' : 'Аллергии и непереносимости'}</li>
-                  <li>{isGerman ? 'Hauterkrankungen' : 'Кожные заболевания'}</li>
-                  <li>{isGerman ? 'Einnahme von Medikamenten' : 'Прием лекарств'}</li>
-                  <li>{isGerman ? 'Schwangerschaft oder Stillzeit' : 'Беременность или грудное вскармливание'}</li>
+                  <li>{language === 'de' ? 'Allergien und Unverträglichkeiten' : language === 'ru' ? 'Аллергии и непереносимости' : 'Аллергии и непереносимости'}</li>
+                  <li>{language === 'de' ? 'Hauterkrankungen' : language === 'ru' ? 'Кожные заболевания' : 'Кожные заболевания'}</li>
+                  <li>{language === 'de' ? 'Einnahme von Medikamenten' : language === 'ru' ? 'Прием лекарств' : 'Прием лекарств'}</li>
+                  <li>{language === 'de' ? 'Schwangerschaft oder Stillzeit' : language === 'ru' ? 'Беременность или грудное вскармливание' : 'Беременность или грудное вскармливание'}</li>
                   <li>
-                    {isGerman ? 'Vorherige kosmetische Behandlungen' : 'Предыдущие косметические процедуры'}
+                    {language === 'de' ? 'Vorherige kosmetische Behandlungen' : language === 'ru' ? 'Предыдущие косметические процедуры' : 'Предыдущие косметические процедуры'}
                   </li>
                 </ul>
 
                 <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-6">
-                  {isGerman ? 'Nachsorge' : 'Последующий уход'}
+                  {language === 'de' ? 'Nachsorge' : language === 'ru' ? 'Последующий уход' : 'Последующий уход'}
                 </h3>
                 <p className="leading-relaxed mb-4">
                   {isGerman
@@ -227,7 +227,7 @@ const AGB = () => {
                 </p>
 
                 <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-6">
-                  {isGerman ? 'Altersbeschränkung' : 'Возрастное ограничение'}
+                  {language === 'de' ? 'Altersbeschränkung' : language === 'ru' ? 'Возрастное ограничение' : 'Возрастное ограничение'}
                 </h3>
                 <p className="leading-relaxed">
                   {isGerman
@@ -240,7 +240,7 @@ const AGB = () => {
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4 flex items-center gap-2">
                   <Scale className="w-6 h-6 text-brand-gold" />
-                  {isGerman ? '6. Haftung' : '6. Ответственность'}
+                  {language === 'de' ? '6. Haftung' : language === 'ru' ? '6. Ответственность' : '6. Відветственность'}
                 </h2>
                 <p className="leading-relaxed mb-4">
                   {isGerman
@@ -254,7 +254,7 @@ const AGB = () => {
                 </p>
                 <div className="bg-amber-50/50 border-l-4 border-amber-500 p-4 rounded">
                   <p className="text-sm font-semibold text-amber-900 mb-2">
-                    {isGerman ? 'Wichtiger Hinweis:' : 'Важное замечание:'}
+                    {language === 'de' ? 'Wichtiger Hinweis:' : language === 'ru' ? 'Важное замечание:' : 'Важное замечание:'}
                   </p>
                   <p className="text-sm text-amber-800">
                     {isGerman
@@ -268,7 +268,7 @@ const AGB = () => {
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4 flex items-center gap-2">
                   <Clock className="w-6 h-6 text-brand-gold" />
-                  {isGerman ? '7. Gewährleistung' : '7. Гарантия'}
+                  {language === 'de' ? '7. Gewährleistung' : language === 'ru' ? '7. Гарантия' : '7. Гарантия'}
                 </h2>
                 <p className="leading-relaxed mb-4">
                   {isGerman
@@ -290,7 +290,7 @@ const AGB = () => {
               {/* Photos and Marketing */}
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-                  {isGerman ? '8. Foto- und Videoaufnahmen' : '8. Фото и видео'}
+                  {language === 'de' ? '8. Foto- und Videoaufnahmen' : language === 'ru' ? '8. Фото и видео' : '8. Фото и видео'}
                 </h2>
                 <p className="leading-relaxed">
                   {isGerman
@@ -302,14 +302,14 @@ const AGB = () => {
               {/* Data Protection */}
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-                  {isGerman ? '9. Datenschutz' : '9. Защита данных'}
+                  {language === 'de' ? '9. Datenschutz' : language === 'ru' ? '9. Защита данных' : '9. Защита данных'}
                 </h2>
                 <p className="leading-relaxed">
                   {isGerman
                     ? 'Die Erhebung und Verarbeitung personenbezogener Daten erfolgt gemäß unserer Datenschutzerklärung und den Bestimmungen der DSGVO. Weitere Informationen finden Sie in unserer '
                     : 'Сбор и обработка персональных данных осуществляются в соответствии с нашей политикой конфиденциальности и положениями GDPR. Дополнительную информацию вы найдете в нашей '}
                   <a href="/datenschutz" className="text-brand-gold hover:underline font-medium">
-                    {isGerman ? 'Datenschutzerklärung' : 'политике конфиденциальности'}
+                    {language === 'de' ? 'Datenschutzerklärung' : language === 'ru' ? 'политике конфиденциальности' : 'политике конфиденциальности'}
                   </a>
                   .
                 </p>
@@ -318,7 +318,7 @@ const AGB = () => {
               {/* Hygiene */}
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-                  {isGerman ? '10. Hygiene und Sicherheit' : '10. Гигиена и безопасность'}
+                  {language === 'de' ? '10. Hygiene und Sicherheit' : language === 'ru' ? '10. Гигиена и безопасность' : '10. Гигиена и безопасность'}
                 </h2>
                 <p className="leading-relaxed">
                   {isGerman
@@ -330,7 +330,7 @@ const AGB = () => {
               {/* Severability */}
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-                  {isGerman ? '11. Salvatorische Klausel' : '11. Сохранение действия'}
+                  {language === 'de' ? '11. Salvatorische Klausel' : language === 'ru' ? '11. Сохранение действия' : '11. Сохранение действия'}
                 </h2>
                 <p className="leading-relaxed">
                   {isGerman
@@ -342,7 +342,7 @@ const AGB = () => {
               {/* Applicable Law */}
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-                  {isGerman ? '12. Anwendbares Recht und Gerichtsstand' : '12. Применимое право и юрисдикция'}
+                  {language === 'de' ? '12. Anwendbares Recht und Gerichtsstand' : language === 'ru' ? '12. Применимое право и юрисдикция' : '12. Применимое право и юрисдикция'}
                 </h2>
                 <p className="leading-relaxed">
                   {isGerman
@@ -354,7 +354,7 @@ const AGB = () => {
               {/* Contact */}
               <section className="bg-brand-gold/5 p-6 rounded-2xl">
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-                  {isGerman ? '13. Fragen zu den AGB?' : '13. Вопросы об условиях?'}
+                  {language === 'de' ? '13. Fragen zu den AGB?' : language === 'ru' ? '13. Вопросы об условиях?' : '13. Вопросы об условиях?'}
                 </h2>
                 <p className="leading-relaxed mb-4">
                   {isGerman
@@ -363,7 +363,7 @@ const AGB = () => {
                 </p>
                 <div className="space-y-2">
                   <p className="font-medium">
-                    {isGerman ? 'Nataliia Koziukevych' : 'Наталия Козюкевич'}
+                    {language === 'de' ? 'Nataliia Koziukevych' : language === 'ru' ? 'Наталия Козюкевич' : 'Наталия Козюкевич'}
                   </p>
                   <p className="text-sm">Natali.lux@web.de</p>
                   <p className="text-sm">+49 176 77267269</p>
@@ -373,7 +373,7 @@ const AGB = () => {
               {/* Last Updated */}
               <section className="text-sm text-brand-coffee/60 pt-4 border-t border-brand-gold/10">
                 <p>
-                  {isGerman ? 'Stand: Dezember 2024' : 'Состояние: декабрь 2024 года'}
+                  {language === 'de' ? 'Stand: Dezember 2024' : language === 'ru' ? 'Состояние: декабрь 2024 года' : 'Состояние: декабрь 2024 года'}
                 </p>
               </section>
             </div>

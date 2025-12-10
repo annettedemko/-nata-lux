@@ -277,7 +277,7 @@ const Laser = () => {
                   size="lg"
                   className="bg-brand-gold hover:bg-brand-gold/90 text-white font-medium rounded-2xl px-10 py-7 text-lg"
                 >
-                  {isGerman ? 'Preise ansehen' : 'Смотреть цены'}
+                  {language === 'de' ? 'Preise ansehen' : language === 'ru' ? 'Смотреть цены' : 'Смотреть цены'}
                 </Button>
               </Link>
               <Button
@@ -287,7 +287,7 @@ const Laser = () => {
                 asChild
               >
                 <a href="https://wa.me/4917677267269" target="_blank" rel="noopener noreferrer">
-                  {isGerman ? 'Beratung buchen' : 'Записаться на консультацию'}
+                  {language === 'de' ? 'Beratung buchen' : language === 'ru' ? 'Записаться на консультацию' : 'Записаться на консультацию'}
                 </a>
               </Button>
             </div>
@@ -306,7 +306,7 @@ const Laser = () => {
             className="text-center mb-12 md:mb-16"
           >
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
-              {isGerman ? 'Warum Dreiwellenlaser?' : 'Почему трёхволновой лазер?'}
+              {language === 'de' ? 'Warum Dreiwellenlaser?' : language === 'ru' ? 'Почему трёхволновой лазер?' : 'Почему трёхволновой лазер?'}
             </h2>
             <p className="text-brand-coffee/70 max-w-3xl mx-auto text-lg">
               {isGerman
@@ -354,7 +354,7 @@ const Laser = () => {
             className="text-center mb-12 md:mb-16"
           >
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
-              {isGerman ? 'Drei Wellenlängen – Drei Stärken' : 'Три длины волны — три преимущества'}
+              {language === 'de' ? 'Drei Wellenlängen – Drei Stärken' : language === 'ru' ? 'Три длины волны — три преимущества' : 'Три длины волны — три преимущества'}
             </h2>
             <p className="text-brand-coffee/70 max-w-3xl mx-auto text-lg">
               {isGerman
@@ -421,7 +421,7 @@ const Laser = () => {
             className="text-center mb-12 md:mb-16"
           >
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
-              {isGerman ? 'Wie läuft die Behandlung ab?' : 'Как проходит процедура?'}
+              {language === 'de' ? 'Wie läuft die Behandlung ab?' : language === 'ru' ? 'Как проходит процедура?' : 'Как проходит процедура?'}
             </h2>
           </motion.div>
 
@@ -461,7 +461,7 @@ const Laser = () => {
             className="text-center mb-12"
           >
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
-              {isGerman ? 'Behandlungszonen' : 'Зоны обработки'}
+              {language === 'de' ? 'Behandlungszonen' : language === 'ru' ? 'Зоны обработки' : 'Зоны обработки'}
             </h2>
             <p className="text-brand-coffee/70 max-w-2xl mx-auto">
               {isGerman
@@ -493,7 +493,7 @@ const Laser = () => {
                 <Button
                   className="bg-brand-gold hover:bg-brand-gold/90 text-white font-medium rounded-xl"
                 >
-                  {isGerman ? 'Alle Preise ansehen' : 'Смотреть все цены'}
+                  {language === 'de' ? 'Alle Preise ansehen' : language === 'ru' ? 'Смотреть все цены' : 'Смотреть все цены'}
                 </Button>
               </Link>
             </div>
@@ -512,7 +512,7 @@ const Laser = () => {
             className="text-center mb-12"
           >
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
-              {isGerman ? 'Häufige Fragen' : 'Частые вопросы'}
+              {language === 'de' ? 'Häufige Fragen' : language === 'ru' ? 'Частые вопросы' : 'Частые вопросы'}
             </h2>
           </motion.div>
 
@@ -556,10 +556,10 @@ const Laser = () => {
               className="h-[2px] bg-gradient-to-r from-transparent via-brand-gold to-transparent mx-auto mb-6"
             />
             <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl font-heading font-bold text-brand-espresso mb-2 max-w-full" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
-              {isGerman ? 'Unsere Arbeiten' : 'Наши работы'}
+              {language === 'de' ? 'Unsere Arbeiten' : language === 'ru' ? 'Наши работы' : 'Наши работы'}
             </h2>
             <p className="text-brand-coffee/60 text-sm tracking-widest uppercase">
-              {isGerman ? 'Galerie' : 'Галерея'}
+              {language === 'de' ? 'Galerie' : language === 'ru' ? 'Галерея' : 'Галерея'}
             </p>
           </motion.div>
 
@@ -577,7 +577,7 @@ const Laser = () => {
               >
                 <Image
                   src={src}
-                  alt={`${isGerman ? 'Laser-Haarentfernung' : 'Лазерная эпиляция'} ${index + 1}`}
+                  alt={`${language === 'de' ? 'Laser-Haarentfernung' : language === 'ru' ? 'Лазерная эпиляция' : 'Лазерна епіляція'} ${index + 1}`}
                   fill
                   className="object-cover transition-all duration-700 ease-out group-hover:scale-110"
                   sizes="(max-width: 768px) 50vw, 20vw"
@@ -586,7 +586,7 @@ const Laser = () => {
                 <div className="absolute inset-0 rounded-2xl border-2 border-brand-gold/0 group-hover:border-brand-gold/40 transition-all duration-500" />
                 <div className="absolute bottom-3 left-3 right-3 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
                   <span className="text-white text-xs font-medium tracking-wider uppercase bg-black/30 backdrop-blur-sm px-3 py-1.5 rounded-full">
-                    {isGerman ? 'Ansehen' : 'Смотреть'}
+                    {language === 'de' ? 'Ansehen' : language === 'ru' ? 'Смотреть' : 'Смотреть'}
                   </span>
                 </div>
               </motion.div>
@@ -636,7 +636,7 @@ const Laser = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl font-heading font-bold text-white mb-6 max-w-full" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
-              {isGerman ? 'Glatte Haut – dauerhaft' : 'Гладкая кожа — надолго'}
+              {language === 'de' ? 'Glatte Haut – dauerhaft' : language === 'ru' ? 'Гладкая кожа — надолго' : 'Гладкая кожа — надолго'}
             </h2>
             <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
               {isGerman
@@ -650,7 +650,7 @@ const Laser = () => {
                 asChild
               >
                 <a href="https://wa.me/4917677267269" target="_blank" rel="noopener noreferrer">
-                  {isGerman ? 'Termin buchen' : 'Записаться'}
+                  {language === 'de' ? 'Termin buchen' : language === 'ru' ? 'Записаться' : 'Записаться'}
                 </a>
               </Button>
               <Button
@@ -660,7 +660,7 @@ const Laser = () => {
                 asChild
               >
                 <a href="https://wa.me/4917677267269" target="_blank" rel="noopener noreferrer">
-                  {isGerman ? 'Beratung anfragen' : 'Запросить консультацию'}
+                  {language === 'de' ? 'Beratung anfragen' : language === 'ru' ? 'Запросить консультацию' : 'Запросить консультацию'}
                 </a>
               </Button>
               <Link to="/contact">
@@ -669,7 +669,7 @@ const Laser = () => {
                   variant="outline"
                   className="border-2 border-white text-white hover:bg-white/10 font-medium rounded-2xl text-lg px-10 py-7"
                 >
-                  {isGerman ? 'Kontakt' : 'Контакты'}
+                  {language === 'de' ? 'Kontakt' : language === 'ru' ? 'Контакты' : 'Контакты'}
                 </Button>
               </Link>
             </div>

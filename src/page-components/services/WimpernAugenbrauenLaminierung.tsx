@@ -20,26 +20,26 @@ const WimpernAugenbrauenLaminierung = () => {
   const RecommendedServices = () => (
     <div className="mt-12">
       <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-6 text-center">
-        {isGerman ? 'Weitere Beauty-Behandlungen' : 'Другие бьюти-процедуры'}
+        {language === 'de' ? 'Weitere Beauty-Behandlungen' : language === 'ru' ? 'Другие бьюти-процедуры' : 'Другие бьюти-процедуры'}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <ServiceCard
-          title={isGerman ? 'Wimpernverlängerung' : 'Наращивание ресниц'}
-          description={isGerman ? 'Klassisch oder Volumentechnik' : 'Классика или объём'}
+          title={language === 'de' ? 'Wimpernverlängerung' : language === 'ru' ? 'Наращивание ресниц' : 'Нарощування ресниц'}
+          description={language === 'de' ? 'Klassisch oder Volumentechnik' : language === 'ru' ? 'Классика или объём' : 'Класика или объём'}
           icon={Sparkles}
           href="/services/wimpernverlaengerung"
           image="/43.png"
         />
         <ServiceCard
           title="Powder Brows"
-          description={isGerman ? 'Permanent Make-up für perfekte Augenbrauen' : 'Перманентный макияж для идеальных бровей'}
+          description={language === 'de' ? 'Permanent Make-up für perfekte Augenbrauen' : language === 'ru' ? 'Перманентный макияж для идеальных бровей' : 'Перманентный макияж для идеальных бровей'}
           icon={Palette}
           href="/services/powder-brows"
           image="/65.jpg"
         />
         <ServiceCard
-          title={isGerman ? 'Wimpernkranz' : 'Межресничка'}
-          description={isGerman ? 'Permanent Make-up Wimpernkranz' : 'Перманентный макияж межресничного пространства'}
+          title={language === 'de' ? 'Wimpernkranz' : language === 'ru' ? 'Межресничка' : 'Межресничка'}
+          description={language === 'de' ? 'Permanent Make-up Wimpernkranz' : language === 'ru' ? 'Перманентный макияж межресничного пространства' : 'Перманентный макияж межресничного пространства'}
           icon={Eye}
           href="/services/wimpernkranz"
           image="/114.jpg"

@@ -25,26 +25,26 @@ const Phonophorese = () => {
   const RecommendedServices = () => (
     <div className="mt-12">
       <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-6 text-center">
-        {isGerman ? 'Empfohlene Kombinationen' : 'Рекомендуемые комбинации'}
+        {language === 'de' ? 'Empfohlene Kombinationen' : language === 'ru' ? 'Рекомендуемые комбинации' : 'Рекомендуемые комбинации'}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <ServiceCard
-          title={isGerman ? 'Biostrom' : 'Биотоки'}
-          description={isGerman ? 'Mikrostrom für zusätzlichen Lifting-Effekt' : 'Микротоки для дополнительного лифтинг-эффекта'}
+          title={language === 'de' ? 'Biostrom' : language === 'ru' ? 'Биотоки' : 'Биотоки'}
+          description={language === 'de' ? 'Mikrostrom für zusätzlichen Lifting-Effekt' : language === 'ru' ? 'Микротоки для дополнительного лифтинг-эффекта' : 'Микротоки для дополнительного лифтинг-эффекта'}
           icon={Activity}
           href="/services/apparative-anti-aging/biostrom"
           image="/125.webp"
         />
         <ServiceCard
-          title={isGerman ? 'Lichttherapie' : 'Светотерапия'}
-          description={isGerman ? 'LED-Licht für Beruhigung und Kollagenstimulation' : 'LED-свет для успокоения и стимуляции коллагена'}
+          title={language === 'de' ? 'Lichttherapie' : language === 'ru' ? 'Светотерапия' : 'Светотерапия'}
+          description={language === 'de' ? 'LED-Licht für Beruhigung und Kollagenstimulation' : language === 'ru' ? 'LED-свет для успокоения и стимуляции коллагена' : 'LED-свет для успокоения и стимуляции коллагена'}
           icon={Sun}
           href="/services/apparative-anti-aging/lichttherapie"
           image="/124.jpeg"
         />
         <ServiceCard
           title="RF-Lifting"
-          description={isGerman ? 'Radiofrequenz für Straffung' : 'Радиочастоты для подтяжки'}
+          description={language === 'de' ? 'Radiofrequenz für Straffung' : language === 'ru' ? 'Радиочастоты для подтяжки' : 'Радиочастоты для подтяжки'}
           icon={Zap}
           href="/services/apparative-anti-aging/rf-lifting"
           image="/162.jpeg"

@@ -13,12 +13,12 @@ const Ultraschall = () => {
   const UltraschallProcedures = () => (
     <div className="space-y-6">
       <h2 className="text-3xl font-heading font-bold text-brand-espresso mb-8">
-        {isGerman ? 'Unsere Ultraschall-Behandlungen in München' : 'Наши ультразвуковые процедуры в Мюнхене'}
+        {language === 'de' ? 'Unsere Ultraschall-Behandlungen in München' : language === 'ru' ? 'Наши ультразвуковые процедуры в Мюнхене' : 'Наши ультразвуковые процедуры в Мюнхене'}
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <ServiceCard
-          title={isGerman ? 'Phonophorese' : 'Фонофорез'}
+          title={language === 'de' ? 'Phonophorese' : language === 'ru' ? 'Фонофорез' : 'Фонофорез'}
           description={isGerman
             ? 'Tiefe Einschleusung von Wirkstoffen mit Ultraschall'
             : 'Глубокое введение активных веществ ультразвуком'}
@@ -27,7 +27,7 @@ const Ultraschall = () => {
           image="/128.jpeg"
         />
         <ServiceCard
-          title={isGerman ? 'Kavitation' : 'Кавитация'}
+          title={language === 'de' ? 'Kavitation' : language === 'ru' ? 'Кавитация' : 'Кавитация'}
           description={isGerman
             ? 'Nicht-invasive Körperformung und Fettreduktion'
             : 'Неинвазивная коррекция фигуры и липолиз'}
@@ -36,7 +36,7 @@ const Ultraschall = () => {
           image="/173.jpeg"
         />
         <ServiceCard
-          title={isGerman ? 'Gesichtsreinigung' : 'Чистка лица'}
+          title={language === 'de' ? 'Gesichtsreinigung' : language === 'ru' ? 'Чистка лица' : 'Чистка обличчя'}
           description={isGerman
             ? 'Sanfte Tiefenreinigung mit Ultraschall'
             : 'Мягкое глубокое очищение ультразвуком'}

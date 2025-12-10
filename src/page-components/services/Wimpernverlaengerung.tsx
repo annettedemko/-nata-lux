@@ -42,10 +42,10 @@ const Wimpernverlaengerung = () => {
             className="text-center mb-20 pt-16"
           >
             <h1 className="text-6xl md:text-7xl font-heading font-bold tracking-tight text-brand-espresso mb-8">
-              {isGerman ? 'WIMPERN­VERLÄNGERUNG' : 'НАРАЩИВАНИЕ РЕСНИЦ'}
+              {language === 'de' ? 'WIMPERN­VERLÄNGERUNG' : language === 'ru' ? 'НАРАЩИВАНИЕ РЕСНИЦ' : 'НАРАЩИВАНИЕ РЕСНИЦ'}
             </h1>
             <p className="text-2xl font-heading font-light text-brand-espresso/80 mb-4">
-              {isGerman ? 'in München' : 'в Мюнхене'}
+              {language === 'de' ? 'in München' : language === 'ru' ? 'в Мюнхене' : 'в Мюнхене'}
             </p>
             <div className="w-32 h-0.5 bg-brand-gold mx-auto mb-8"></div>
             <p className="text-xl text-brand-espresso/70 leading-relaxed max-w-3xl mx-auto">
@@ -110,7 +110,7 @@ const Wimpernverlaengerung = () => {
           >
             <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-10 md:p-12">
               <h2 className="text-4xl font-heading font-bold text-brand-espresso mb-8">
-                {isGerman ? 'Was ist wichtig zu wissen' : 'Что важно знать'}
+                {language === 'de' ? 'Was ist wichtig zu wissen' : language === 'ru' ? 'Что важно знать' : 'Что важно знать'}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
@@ -171,7 +171,7 @@ const Wimpernverlaengerung = () => {
           >
             <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-10 md:p-12">
               <h2 className="text-4xl font-heading font-bold text-brand-espresso mb-8">
-                {isGerman ? 'Dauer & Haltbarkeit' : 'Длительность процедуры и носки'}
+                {language === 'de' ? 'Dauer & Haltbarkeit' : language === 'ru' ? 'Длительность процедуры и носки' : 'Длительность процедуры и носки'}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[
@@ -236,7 +236,7 @@ const Wimpernverlaengerung = () => {
           >
             <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-10 md:p-12">
               <h2 className="text-4xl font-heading font-bold text-brand-espresso mb-8">
-                {isGerman ? 'Techniken & Stile' : 'Техники, с которыми работает мастер'}
+                {language === 'de' ? 'Techniken & Stile' : language === 'ru' ? 'Техники, с которыми работает мастер' : 'Техники, с которыми работает мастер'}
               </h2>
               <div className="space-y-6">
                 {[
@@ -312,7 +312,7 @@ const Wimpernverlaengerung = () => {
           >
             <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-10 md:p-12">
               <h2 className="text-4xl font-heading font-bold text-brand-espresso mb-4">
-                {isGerman ? 'Korrektur der Augenform mit Wimpernverlängerung' : 'Коррекция формы глаз с помощью наращивания'}
+                {language === 'de' ? 'Korrektur der Augenform mit Wimpernverlängerung' : language === 'ru' ? 'Коррекция формы глаз с помощью наращивания' : 'Корекція формы глаз с помощью наращивания'}
               </h2>
               <p className="text-lg text-brand-espresso/70 mb-8 leading-relaxed">
                 {isGerman
@@ -369,7 +369,7 @@ const Wimpernverlaengerung = () => {
           >
             <div className="bg-gradient-to-br from-brand-gold/20 via-brand-gold/10 to-transparent backdrop-blur-xl rounded-3xl p-10 md:p-12 border border-brand-gold/20">
               <h2 className="text-4xl font-heading font-bold text-brand-espresso mb-6">
-                {isGerman ? 'Mein Ansatz – über 10 Jahre Erfahrung' : 'Мой подход — более 10 лет опыта'}
+                {language === 'de' ? 'Mein Ansatz – über 10 Jahre Erfahrung' : language === 'ru' ? 'Мой подход — более 10 лет опыта' : 'Мой подход — более 10 лет опыта'}
               </h2>
               <div className="space-y-4 text-brand-espresso/85 leading-relaxed text-lg">
                 {isGerman ? (
@@ -417,7 +417,7 @@ const Wimpernverlaengerung = () => {
           >
             <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-10 md:p-12">
               <h2 className="text-4xl font-heading font-bold text-brand-espresso mb-6">
-                {isGerman ? 'Pflegeempfehlungen für Ihre Wimpernverlängerung' : 'Рекомендации по уходу за наращенными ресницами'}
+                {language === 'de' ? 'Pflegeempfehlungen für Ihre Wimpernverlängerung' : language === 'ru' ? 'Рекомендации по уходу за наращенными ресницами' : 'Рекомендации по уходу за наращенными ресницами'}
               </h2>
               <p className="text-lg text-brand-espresso/70 mb-8 leading-relaxed">
                 {isGerman
@@ -489,7 +489,7 @@ const Wimpernverlaengerung = () => {
           >
             <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-10 md:p-12">
               <h2 className="text-4xl font-heading font-bold text-brand-espresso mb-6">
-                {isGerman ? 'Wie lange hält das Ergebnis?' : 'Сколько держится результат?'}
+                {language === 'de' ? 'Wie lange hält das Ergebnis?' : language === 'ru' ? 'Сколько держится результат?' : 'Сколько держится результат?'}
               </h2>
               <div className="space-y-4 text-brand-espresso/85 leading-relaxed text-lg">
                 {isGerman ? (
@@ -537,7 +537,7 @@ const Wimpernverlaengerung = () => {
           >
             <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-10 md:p-12">
               <h2 className="text-4xl font-heading font-bold text-brand-espresso mb-6">
-                {isGerman ? 'Kontraindikationen' : 'Противопоказания'}
+                {language === 'de' ? 'Kontraindikationen' : language === 'ru' ? 'Противопоказания' : 'Противопоказания'}
               </h2>
               <p className="text-lg text-brand-espresso/70 mb-6 leading-relaxed">
                 {isGerman
@@ -663,12 +663,12 @@ const Wimpernverlaengerung = () => {
                 <div className="flex flex-wrap gap-4 justify-center">
                   <Link to="/prices#lashes-brows">
                     <Button className="bg-brand-gold hover:bg-brand-gold/90 text-white font-medium rounded-xl px-8 py-6 text-lg">
-                      {isGerman ? 'Preise ansehen' : 'Посмотреть цены'}
+                      {language === 'de' ? 'Preise ansehen' : language === 'ru' ? 'Посмотреть цены' : 'Посмотреть цены'}
                     </Button>
                   </Link>
                   <Link to="/contact">
                     <Button variant="outline" className="border-2 border-brand-gold text-brand-espresso hover:bg-brand-gold/10 font-medium rounded-xl px-8 py-6 text-lg">
-                      {isGerman ? 'Kontakt' : 'Контакты'}
+                      {language === 'de' ? 'Kontakt' : language === 'ru' ? 'Контакты' : 'Контакты'}
                     </Button>
                   </Link>
                 </div>
@@ -689,26 +689,26 @@ const Wimpernverlaengerung = () => {
           >
             <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-10 md:p-12">
               <h2 className="text-3xl font-heading font-bold text-brand-espresso mb-8 text-center">
-                {isGerman ? 'Weitere Behandlungen' : 'Другие процедуры'}
+                {language === 'de' ? 'Weitere Behandlungen' : language === 'ru' ? 'Другие процедуры' : 'Другие процедуры'}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <ServiceCard
                   title="Powder Brows"
-                  description={isGerman ? 'Permanent Make-up für perfekte Augenbrauen' : 'Перманентный макияж для идеальных бровей'}
+                  description={language === 'de' ? 'Permanent Make-up für perfekte Augenbrauen' : language === 'ru' ? 'Перманентный макияж для идеальных бровей' : 'Перманентный макияж для идеальных бровей'}
                   icon={Palette}
                   href="/services/powder-brows"
                   image="/65.jpg"
                 />
                 <ServiceCard
-                  title={isGerman ? 'Wimpern- & Augenbrauenlaminierung' : 'Ламинирование ресниц и бровей'}
-                  description={isGerman ? 'Lash Lift & Brow Lift' : 'Lash Lift и Brow Lift'}
+                  title={language === 'de' ? 'Wimpern- & Augenbrauenlaminierung' : language === 'ru' ? 'Ламинирование ресниц и бровей' : 'Ламінування ресниц и бровей'}
+                  description={language === 'de' ? 'Lash Lift & Brow Lift' : language === 'ru' ? 'Lash Lift и Brow Lift' : 'Lash Lift и Brow Lift'}
                   icon={Layers}
                   href="/services/wimpern-augenbrauen-laminierung"
                   image="/131.jpeg"
                 />
                 <ServiceCard
-                  title={isGerman ? 'Wimpernkranz' : 'Межресничка'}
-                  description={isGerman ? 'Permanent Make-up Wimpernkranz' : 'Перманентный макияж межресничного пространства'}
+                  title={language === 'de' ? 'Wimpernkranz' : language === 'ru' ? 'Межресничка' : 'Межресничка'}
+                  description={language === 'de' ? 'Permanent Make-up Wimpernkranz' : language === 'ru' ? 'Перманентный макияж межресничного пространства' : 'Перманентный макияж межресничного пространства'}
                   icon={Eye}
                   href="/services/wimpernkranz"
                   image="/114.jpg"

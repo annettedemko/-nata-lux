@@ -100,7 +100,7 @@ const LashesBrows = () => {
             className="text-center mb-8 md:mb-12"
           >
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-3 md:mb-4 px-2 sm:px-4 max-w-full break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
-              {isGerman ? 'Unsere Leistungen' : 'Наши услуги'}
+              {language === 'de' ? 'Unsere Leistungen' : language === 'ru' ? 'Наши услуги' : 'Наши услуги'}
             </h2>
           </motion.div>
 
@@ -131,7 +131,7 @@ const LashesBrows = () => {
             className="glass rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12"
           >
             <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
-              {isGerman ? 'Warum uns wählen?' : 'Почему выбирают нас?'}
+              {language === 'de' ? 'Warum uns wählen?' : language === 'ru' ? 'Почему выбирают нас?' : 'Почему выбирают нас?'}
             </h3>
             <div className="space-y-3 md:space-y-4 text-sm md:text-base text-brand-coffee/80 leading-relaxed">
               <p>
@@ -164,7 +164,7 @@ const LashesBrows = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl font-heading font-semibold text-white mb-4 md:mb-6 px-4 max-w-full" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
-              {isGerman ? 'Bereit für Ihre Verwandlung?' : 'Готовы к преображению?'}
+              {language === 'de' ? 'Bereit für Ihre Verwandlung?' : language === 'ru' ? 'Готовы к преображению?' : 'Готовы к преображению?'}
             </h2>
             <p className="text-white/90 text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto px-4">
               {isGerman

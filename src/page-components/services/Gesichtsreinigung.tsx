@@ -49,10 +49,10 @@ const Gesichtsreinigung = () => {
               <Droplet className="w-10 h-10 text-brand-gold" />
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold tracking-tight text-brand-espresso mb-8">
-              {isGerman ? 'GESICHTSREINIGUNG' : 'ЧИСТКА ЛИЦА'}
+              {language === 'de' ? 'GESICHTSREINIGUNG' : language === 'ru' ? 'ЧИСТКА ЛИЦА' : 'ЧИСТКА ЛИЦА'}
             </h1>
             <p className="text-lg md:text-2xl font-heading font-light text-brand-espresso/80 mb-4">
-              {isGerman ? 'in München' : 'в Мюнхене'}
+              {language === 'de' ? 'in München' : language === 'ru' ? 'в Мюнхене' : 'в Мюнхене'}
             </p>
             <div className="w-32 h-0.5 bg-brand-gold mx-auto mb-8"></div>
             <p className="text-base md:text-xl text-brand-espresso/70 leading-relaxed max-w-3xl mx-auto">
@@ -116,7 +116,7 @@ const Gesichtsreinigung = () => {
           >
             <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-10 md:p-12">
               <h2 className="text-2xl md:text-4xl font-heading font-bold text-brand-espresso mb-8">
-                {isGerman ? 'Wie läuft die Behandlung ab?' : 'Как проходит процедура?'}
+                {language === 'de' ? 'Wie läuft die Behandlung ab?' : language === 'ru' ? 'Как проходит процедура?' : 'Как проходит процедура?'}
               </h2>
               <div className="space-y-6">
                 {[
@@ -180,7 +180,7 @@ const Gesichtsreinigung = () => {
               </div>
               <div className="mt-8 p-6 bg-brand-gold/10 rounded-2xl">
                 <p className="text-brand-espresso/80 font-semibold mb-2">
-                  {isGerman ? '⏱ Dauer: 90 Minuten' : '⏱ Длительность: 90 минут'}
+                  {language === 'de' ? '⏱ Dauer: 90 Minuten' : language === 'ru' ? '⏱ Длительность: 90 минут' : '⏱ Длительность: 90 хвилин'}
                 </p>
                 <p className="text-brand-espresso/70 text-sm">
                   {isGerman
@@ -201,7 +201,7 @@ const Gesichtsreinigung = () => {
           >
             <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-10 md:p-12">
               <h2 className="text-2xl md:text-4xl font-heading font-bold text-brand-espresso mb-8">
-                {isGerman ? 'Ihre Vorteile' : 'Ваши преимущества'}
+                {language === 'de' ? 'Ihre Vorteile' : language === 'ru' ? 'Ваши преимущества' : 'Ваши преимущества'}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {[
@@ -235,7 +235,7 @@ const Gesichtsreinigung = () => {
           >
             <div className="bg-gradient-to-br from-brand-gold/20 via-brand-gold/10 to-transparent backdrop-blur-xl rounded-3xl p-10 md:p-12 border border-brand-gold/20">
               <h2 className="text-2xl md:text-4xl font-heading font-bold text-brand-espresso mb-6">
-                {isGerman ? 'Empfehlungen' : 'Рекомендации'}
+                {language === 'de' ? 'Empfehlungen' : language === 'ru' ? 'Рекомендации' : 'Рекомендации'}
               </h2>
               <div className="space-y-4 text-brand-espresso/85 leading-relaxed text-lg">
                 {isGerman ? (
@@ -295,7 +295,7 @@ const Gesichtsreinigung = () => {
           >
             <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-10 md:p-12">
               <h2 className="text-2xl md:text-4xl font-heading font-bold text-brand-espresso mb-6">
-                {isGerman ? 'Kontraindikationen' : 'Противопоказания'}
+                {language === 'de' ? 'Kontraindikationen' : language === 'ru' ? 'Противопоказания' : 'Противопоказания'}
               </h2>
               <p className="text-lg text-brand-espresso/70 mb-6 leading-relaxed">
                 {isGerman
@@ -360,7 +360,7 @@ const Gesichtsreinigung = () => {
                   : 'Запишитесь на чистку лица и подарите своей коже профессиональный глубокий уход.'}
               </p>
               <Button className="bg-brand-gold hover:bg-brand-gold/90 text-white font-medium rounded-xl px-8 py-6 text-lg">
-                {isGerman ? 'Jetzt Termin vereinbaren' : 'Записаться на процедуру'}
+                {language === 'de' ? 'Jetzt Termin vereinbaren' : language === 'ru' ? 'Записаться на процедуру' : 'Записаться на процедуру'}
               </Button>
             </div>
           </motion.section>
@@ -375,7 +375,7 @@ const Gesichtsreinigung = () => {
           >
             <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-10 md:p-12">
               <h2 className="text-3xl font-heading font-bold text-brand-espresso mb-8 text-center">
-                {isGerman ? 'Unsere Arbeiten' : 'Наши работы'}
+                {language === 'de' ? 'Unsere Arbeiten' : language === 'ru' ? 'Наши работы' : 'Наши работы'}
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {galleryImages.map((src, index) => (
@@ -386,7 +386,7 @@ const Gesichtsreinigung = () => {
                   >
                     <Image
                       src={src}
-                      alt={`${isGerman ? 'Gesichtsreinigung' : 'Чистка лица'} ${index + 1}`}
+                      alt={`${language === 'de' ? 'Gesichtsreinigung' : language === 'ru' ? 'Чистка лица' : 'Чистка обличчя'} ${index + 1}`}
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-300"
                       sizes="(max-width: 768px) 50vw, 25vw"

@@ -121,7 +121,7 @@ const AntiAging = () => {
             className="text-center mb-12"
           >
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
-              {isGerman ? 'Unsere Behandlungen' : 'Наши процедуры'}
+              {language === 'de' ? 'Unsere Behandlungen' : language === 'ru' ? 'Наши процедуры' : 'Наши процедуры'}
             </h2>
             <p className="text-brand-coffee/70 max-w-2xl mx-auto">
               {isGerman
@@ -159,32 +159,32 @@ const AntiAging = () => {
               className="glass rounded-3xl p-8"
             >
               <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
-                {isGerman ? 'Für Gesicht, Hals, Dekolleté' : 'Для лица, шеи, декольте'}
+                {language === 'de' ? 'Für Gesicht, Hals, Dekolleté' : language === 'ru' ? 'Для лица, шеи, декольте' : 'Для обличчя, шеи, декольте'}
               </h3>
               <ul className="space-y-3 text-brand-coffee/80">
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>{isGerman ? 'RF-Lifting — Straffung ohne OP' : 'RF-лифтинг — подтяжка без операции'}</span>
+                  <span>{language === 'de' ? 'RF-Lifting — Straffung ohne OP' : language === 'ru' ? 'RF-лифтинг — подтяжка без операции' : 'RF-лифтинг — подтяжка без операции'}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>{isGerman ? 'Lichttherapie — Verjüngung und Tonus' : 'Световая терапия — омоложение и тонус'}</span>
+                  <span>{language === 'de' ? 'Lichttherapie — Verjüngung und Tonus' : language === 'ru' ? 'Световая терапия — омоложение и тонус' : 'Световая терапия — омоложение и тонус'}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>{isGerman ? 'Biostrom — Lymphdrainage und Muskelstraffung' : 'Биотоки — лимфодренаж и укрепление мышц'}</span>
+                  <span>{language === 'de' ? 'Biostrom — Lymphdrainage und Muskelstraffung' : language === 'ru' ? 'Биотоки — лимфодренаж и укрепление мышц' : 'Биотоки — лимфодренаж и укрепление мышц'}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>{isGerman ? 'Ultraschall + Phonophorese — Tiefenpflege' : 'Ультразвук + фонофорез — глубокое питание'}</span>
+                  <span>{language === 'de' ? 'Ultraschall + Phonophorese — Tiefenpflege' : language === 'ru' ? 'Ультразвук + фонофорез — глубокое питание' : 'Ультразвук + фонофорез — глубокое питание'}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>{isGerman ? 'Komplexe Reinigung 90 Min.' : 'Комплексная чистка 90 мин'}</span>
+                  <span>{language === 'de' ? 'Komplexe Reinigung 90 Min.' : language === 'ru' ? 'Комплексная чистка 90 мин' : 'Комплексная чистка 90 мин'}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>{isGerman ? 'Microneedling — Hautregeneration' : 'Микронидлинг — регенерация кожи'}</span>
+                  <span>{language === 'de' ? 'Microneedling — Hautregeneration' : language === 'ru' ? 'Микронидлинг — регенерация кожи' : 'Микронидлинг — регенерация кожи'}</span>
                 </li>
               </ul>
             </motion.div>
@@ -198,37 +198,37 @@ const AntiAging = () => {
               className="glass rounded-3xl p-8"
             >
               <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
-                {isGerman ? 'Für den Körper' : 'Для тела'}
+                {language === 'de' ? 'Für den Körper' : language === 'ru' ? 'Для тела' : 'Для тела'}
               </h3>
               <ul className="space-y-3 text-brand-coffee/80">
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>{isGerman ? 'RF-Vakuum-Lifting — Anti-Cellulite' : 'RF-вакуумный лифтинг — антицеллюлит'}</span>
+                  <span>{language === 'de' ? 'RF-Vakuum-Lifting — Anti-Cellulite' : language === 'ru' ? 'RF-вакуумный лифтинг — антицеллюлит' : 'RF-вакуумный лифтинг — антицеллюлит'}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>{isGerman ? 'Kavitation — Volumenreduktion' : 'Кавитация — уменьшение объемов'}</span>
+                  <span>{language === 'de' ? 'Kavitation — Volumenreduktion' : language === 'ru' ? 'Кавитация — уменьшение объемов' : 'Кавитация — уменьшение объемов'}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>{isGerman ? 'Zonen: Bauch, Gesäß, Oberschenkel, Arme' : 'Зоны: живот, ягодицы, бёдра, руки'}</span>
+                  <span>{language === 'de' ? 'Zonen: Bauch, Gesäß, Oberschenkel, Arme' : language === 'ru' ? 'Зоны: живот, ягодицы, бёдра, руки' : 'Зоны: живот, ягодицы, бёдра, руки'}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>{isGerman ? 'Kurse: 5 oder 10 Behandlungen mit Rabatt' : 'Курсы: 5 или 10 процедур со скидкой'}</span>
+                  <span>{language === 'de' ? 'Kurse: 5 oder 10 Behandlungen mit Rabatt' : language === 'ru' ? 'Курсы: 5 или 10 процедур со скидкой' : 'Курсы: 5 или 10 процедур со скидкой'}</span>
                 </li>
               </ul>
 
               <div className="mt-6 pt-6 border-t border-brand-gold/20">
-                <h4 className="font-semibold text-brand-espresso mb-3">{isGerman ? 'Zusätzlich' : 'Дополнительно'}</h4>
+                <h4 className="font-semibold text-brand-espresso mb-3">{language === 'de' ? 'Zusätzlich' : language === 'ru' ? 'Дополнительно' : 'Дополнительно'}</h4>
                 <ul className="space-y-2 text-brand-coffee/80">
                   <li className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                    <span>{isGerman ? 'Darsonval für Haare' : 'Дарсонваль для волос'}</span>
+                    <span>{language === 'de' ? 'Darsonval für Haare' : language === 'ru' ? 'Дарсонваль для волос' : 'Дарсонваль для волос'}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                    <span>{isGerman ? 'Entfernung von Papillomen (mit Dermatologe)' : 'Удаление папиллом (с дерматологом)'}</span>
+                    <span>{language === 'de' ? 'Entfernung von Papillomen (mit Dermatologe)' : language === 'ru' ? 'Удаление папиллом (с дерматологом)' : 'Видалення папиллом (с дерматологом)'}</span>
                   </li>
                 </ul>
               </div>
@@ -244,7 +244,7 @@ const AntiAging = () => {
             className="glass rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 mt-8 max-w-4xl mx-auto"
           >
             <h3 className="text-sm sm:text-base md:text-xl lg:text-2xl font-heading font-semibold text-brand-espresso mb-6 text-center max-w-full" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
-              {isGerman ? 'Ergebnisse' : 'Результаты'}
+              {language === 'de' ? 'Ergebnisse' : language === 'ru' ? 'Результаты' : 'Результаты'}
             </h3>
             <div className="space-y-3 md:space-y-4 text-sm md:text-base text-brand-coffee/80 leading-relaxed">
               <p>
@@ -277,7 +277,7 @@ const AntiAging = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-white mb-4 md:mb-6 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
-              {isGerman ? 'Beginnen Sie Ihren Weg zur Jugend' : 'Начните путь к молодости'}
+              {language === 'de' ? 'Beginnen Sie Ihren Weg zur Jugend' : language === 'ru' ? 'Начните путь к молодости' : 'Начните путь к молодости'}
             </h2>
             <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
               {isGerman

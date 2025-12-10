@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 
-type Language = 'de' | 'ru';
+type Language = 'de' | 'ru' | 'ua';
 
 interface LanguageContextType {
   language: Language;
@@ -371,6 +371,185 @@ const translations = {
     'shop.renew': 'RENEW',
     'shop.renew.desc': 'Bio-Repair продукция для профессионального ухода',
   },
+  ua: {
+    // Navigation
+    'nav.services': 'Послуги',
+    'nav.training': 'Навчання',
+    'nav.prices': 'Ціни',
+    'nav.kosmetik': 'Косметика',
+    'nav.about': 'Про мене',
+    'nav.portfolio': 'Роботи',
+    'nav.reviews': 'Відгуки',
+    'nav.faq': 'FAQ',
+    'nav.contact': 'Контакти',
+
+    // Hero
+    'hero.title': 'Aesthetic Studio München – NATA LUX',
+    'hero.subtitle': 'Преміум beauty-студія в Мюнхені – якісні процедури для природної краси',
+    'hero.services': 'Вії · Перманент · Лазер · Anti-Aging',
+    'hero.subtitle1': 'Сучасна естетика з природними результатами.',
+    'hero.subtitle2': 'Консультація включена.',
+    'hero.cta.book': 'Записатися',
+    'hero.cta.whatsapp': 'Написати в WhatsApp',
+    'hero.cta.prices': 'Прайс-лист',
+
+    // Services
+    'services.title': 'Наші топ-послуги',
+    'services.lashes.title': 'Нарощування вій',
+    'services.lashes.desc': 'Шовковисті, стійкі вії за 60–90 хв. Природний ефект.',
+    'services.pmu.title': 'Перманентний макіяж',
+    'services.pmu.desc': 'Брови, губи, міжвійка. Природний вигляд, тримається 1-3 роки.',
+    'services.laser.title': 'Лазерна епіляція',
+    'services.laser.desc': 'Александрит/діод. Швидко і безболісно. Назавжди.',
+    'services.antiaging.title': 'Anti-Aging',
+    'services.antiaging.desc': 'RF, світло, біострум, УЗ. Ліфтинг без ін\'єкцій.',
+    'services.browlamination.title': 'Ламінування брів',
+    'services.browlamination.desc': 'Доглянута форма, природний блиск. До 6 тижнів.',
+    'services.facial.title': 'Догляд за обличчям',
+    'services.facial.desc': 'Глибоке очищення, живлення, зволоження.',
+
+    // About
+    'about.title': 'Про наш салон',
+    'about.experience': 'Досвід та експертиза',
+    'about.experience.desc': 'Сертифіковані спеціалісти з багаторічним досвідом.',
+    'about.sterility': 'Стерильність та гігієна',
+    'about.sterility.desc': 'Німецькі стандарти чистоти та безпеки.',
+    'about.equipment': 'Преміум-обладнання',
+    'about.equipment.desc': 'Найновіше німецьке обладнання для найкращих результатів.',
+
+    // Training
+    'training.title': 'Навчання',
+    'training.subtitle': 'Стань професіоналом в б\'юті-індустрії',
+    'training.lashes': 'Курс нарощування вій',
+    'training.lashes.desc': 'Повне навчання з нуля. Сертифікат включений.',
+    'training.pmu': 'Курс видалення ПМ',
+    'training.pmu.desc': 'Безпечні техніки видалення. Практика.',
+    'training.advanced': 'Підвищення кваліфікації',
+    'training.advanced.desc': 'Просунуті техніки та нові тренди.',
+    'training.consulting': 'Бізнес-консалтинг',
+    'training.consulting.desc': 'Відкриття та ведення салону в Німеччині.',
+    'training.cta': 'Дізнатися більше',
+
+    // Reviews
+    'reviews.title': 'Що кажуть наші клієнти',
+
+    // FAQ
+    'faq.title': 'Часті питання',
+
+    // CTA
+    'cta.questions': 'Залишились питання?',
+    'cta.whatsapp': 'Напишіть в WhatsApp',
+
+    // Footer
+    'footer.hours': 'Години роботи',
+    'footer.hours.weekdays': 'Пн-Пт: 10:00 - 20:00',
+    'footer.hours.saturday': 'Сб: 10:00 - 18:00',
+    'footer.hours.sunday': 'Нд: Вихідний',
+    'footer.address': 'Elsasser Straße 33, Мюнхен',
+    'footer.legal': 'Правова інформація',
+    'footer.impressum': 'Impressum',
+    'footer.privacy': 'Конфіденційність',
+    'footer.terms': 'Умови',
+
+    // Contact
+    'contact.title': 'Зв\'яжіться з нами',
+    'contact.name': 'Ім\'я',
+    'contact.email': 'Email',
+    'contact.phone': 'Телефон',
+    'contact.message': 'Повідомлення',
+    'contact.privacy': 'Я приймаю політику конфіденційності',
+    'contact.submit': 'Відправити',
+
+    // Common
+    'common.book': 'Записатися',
+    'common.learnMore': 'Дізнатися більше',
+    'common.viewPrices': 'Дивитись ціни',
+
+    // Search
+    'search.placeholder': 'Пошук...',
+    'search.noResults': 'Нічого не знайдено',
+    'search.tryOther': 'Спробуйте інші ключові слова',
+
+    // Service Categories (Main)
+    'categories.title': 'Наші послуги',
+    'categories.lashesbrows': 'Брови та вії',
+    'categories.lashesbrows.desc': 'Нарощування, ламінування, оформлення брів',
+    'categories.pmu': 'Перманентний макіяж',
+    'categories.pmu.desc': 'Брови, губи, міжвійка. Природно і довговічно',
+    'categories.laser': 'Лазерна епіляція',
+    'categories.laser.desc': 'Видалення волосся назавжди із сучасними лазерами',
+    'categories.antiaging': 'Anti-Aging та косметологія',
+    'categories.antiaging.desc': 'Апаратні процедури для обличчя та тіла',
+    'categories.training': 'Навчання',
+    'categories.training.desc': 'Професійне навчання в б\'юті-індустрії',
+    'categories.shop': 'Магазин косметики',
+    'categories.shop.desc': 'Преміум-продукти для дому та професійного використання',
+
+    // Lashes & Brows subcategories
+    'lashesbrows.title': 'Брови та вії',
+    'lashesbrows.subtitle': 'Ідеальні вії та брови',
+    'lashesbrows.extensions': 'Нарощування вій',
+    'lashesbrows.extensions.desc': 'Класика, 2D, 3D, промінці, вигин L, нижні вії',
+    'lashesbrows.lashlifting': 'Ламінування вій',
+    'lashesbrows.lashlifting.desc': 'Природний вигин і блиск для ваших вій',
+    'lashesbrows.browlifting': 'Ламінування брів',
+    'lashesbrows.browlifting.desc': 'Доглянута форма до 6 тижнів',
+    'lashesbrows.browstyling': 'Оформлення брів',
+    'lashesbrows.browstyling.desc': 'Корекція, фарбування, форма',
+
+    // PMU subcategories
+    'pmu.title': 'Перманентний макіяж',
+    'pmu.subtitle': 'Природна краса щодня',
+    'pmu.brows': 'Пудрові брови',
+    'pmu.brows.desc': 'Пудрова техніка для природних брів',
+    'pmu.lips': 'Акварельні губи',
+    'pmu.lips.desc': 'Акварель та Велюр техніки',
+    'pmu.eyeliner': 'Міжвійка',
+    'pmu.eyeliner.desc': 'Класична або інтенсивна',
+    'pmu.removal': 'Видалення ПМ',
+    'pmu.removal.desc': '2-етапна процедура: салон + домашній догляд',
+
+    // Laser subcategories
+    'laser.title': 'Лазерна епіляція',
+    'laser.subtitle': 'Довготривалий результат',
+    'laser.triwave': 'Лазерна епіляція на трихвильовому лазері',
+    'laser.triwave.desc': 'Александрит + Діод + Nd:YAG. Для всіх типів шкіри та волосся',
+    'laser.areas': 'Зони обробки',
+    'laser.areas.desc': 'Обличчя, пахви, руки, ноги, бікіні, спина, живіт',
+
+    // Anti-Aging subcategories
+    'antiaging.title': 'Anti-Aging та косметологія',
+    'antiaging.subtitle': 'Природне омолодження без ін\'єкцій',
+    'antiaging.devices': 'Апаратний Anti-Aging',
+    'antiaging.devices.desc': 'RF-ліфтинг, світлова терапія, біострум, УЗ',
+    'antiaging.body': 'Процедури для тіла',
+    'antiaging.body.desc': 'RF-вакуум, кавітація для живота, сідниць, стегон',
+    'antiaging.facial': 'Чистка обличчя',
+    'antiaging.facial.desc': '90 хв комплекс: очищення, пілінг, маски, дарсонваль',
+    'antiaging.phonophoresis': 'Фонофорез',
+    'antiaging.phonophoresis.desc': 'Глибоке живлення колагеном, вітамінами, оліями, екзосомами',
+    'antiaging.microneedling': 'Мікронідлінг',
+    'antiaging.microneedling.desc': 'Обличчя, шия, декольте, шкіра голови',
+    'antiaging.darsonval': 'Дарсонваль для волосся',
+    'antiaging.darsonval.desc': 'Стимуляція росту, зміцнення цибулин',
+    'antiaging.removal': 'Видалення новоутворень',
+    'antiaging.removal.desc': 'Папіломи, бородавки (з дерматологом)',
+
+    // Training subcategories
+    'training.lashes.title': 'Курс нарощування вій',
+    'training.lashes.description': 'Теорія та практика, сертифікат включений',
+    'training.pmuremoval.title': 'Курс видалення ПМ',
+    'training.pmuremoval.description': 'Теорія та практика, сертифікат включений',
+    'training.business.title': 'Бізнес-консалтинг',
+    'training.business.description': 'Покрокова інструкція з відкриття б\'юті-бізнесу в Німеччині',
+
+    // Shop subcategories
+    'shop.title': 'Магазин косметики',
+    'shop.subtitle': 'Преміум-продукти для дому та професійного використання',
+    'shop.brands': 'Наші бренди',
+    'shop.renew': 'RENEW',
+    'shop.renew.desc': 'Bio-Repair продукція для професійного догляду',
+  },
 };
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
@@ -379,7 +558,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   // Load language from localStorage on mount
   useEffect(() => {
     const savedLang = localStorage.getItem('language') as Language | null;
-    if (savedLang && (savedLang === 'de' || savedLang === 'ru')) {
+    if (savedLang && (savedLang === 'de' || savedLang === 'ru' || savedLang === 'ua')) {
       setLanguageState(savedLang);
     }
   }, []);

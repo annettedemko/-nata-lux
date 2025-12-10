@@ -20,26 +20,26 @@ const Wimpernkranz = () => {
   const RecommendedServices = () => (
     <div className="mt-12">
       <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-6 text-center">
-        {isGerman ? 'Weitere Behandlungen' : 'Другие процедуры'}
+        {language === 'de' ? 'Weitere Behandlungen' : language === 'ru' ? 'Другие процедуры' : 'Другие процедуры'}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <ServiceCard
           title="Powder Brows"
-          description={isGerman ? 'Pudertechnik für perfekte Augenbrauen' : 'Пудровая техника для идеальных бровей'}
+          description={language === 'de' ? 'Pudertechnik für perfekte Augenbrauen' : language === 'ru' ? 'Пудровая техника для идеальных бровей' : 'Пудровая техника для идеальных бровей'}
           icon={Palette}
           href="/services/powder-brows"
           image="/65.jpg"
         />
         <ServiceCard
           title="Aquarell Lips"
-          description={isGerman ? 'Natürliche Lippenpigmentierung' : 'Естественная пигментация губ'}
+          description={language === 'de' ? 'Natürliche Lippenpigmentierung' : language === 'ru' ? 'Естественная пигментация губ' : 'Естественная пигментация губ'}
           icon={Heart}
           href="/services/aquarell-lips"
           image="/138.jpeg"
         />
         <ServiceCard
-          title={isGerman ? 'Wimpernverlängerung' : 'Наращивание ресниц'}
-          description={isGerman ? 'Klassisch oder Volumentechnik' : 'Классика или объём'}
+          title={language === 'de' ? 'Wimpernverlängerung' : language === 'ru' ? 'Наращивание ресниц' : 'Нарощування ресниц'}
+          description={language === 'de' ? 'Klassisch oder Volumentechnik' : language === 'ru' ? 'Классика или объём' : 'Класика или объём'}
           icon={Sparkles}
           href="/services/wimpernverlaengerung"
           image="/43.png"

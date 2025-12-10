@@ -72,10 +72,10 @@ const ApparativeAntiAging = () => {
             <Star className="w-10 h-10 text-brand-gold" />
           </div>
           <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-6">
-            {isGerman ? 'Apparative Anti-Aging' : 'Аппаратный Anti-Aging'}
+            {language === 'de' ? 'Apparative Anti-Aging' : language === 'ru' ? 'Аппаратный Anti-Aging' : 'Аппаратный Anti-Aging'}
           </h1>
           <p className="text-xl text-brand-espresso/80 font-heading mb-4">
-            {isGerman ? 'RF-Lifting, Lichttherapie, Biostrom, Ultraschall' : 'RF-лифтинг, Световая терапия, Биотоки, Ультразвук'}
+            {language === 'de' ? 'RF-Lifting, Lichttherapie, Biostrom, Ultraschall' : language === 'ru' ? 'RF-лифтинг, Световая терапия, Биотоки, Ультразвук' : 'RF-лифтинг, Световая терапия, Биотоки, Ультразвук'}
           </p>
           <p className="text-lg text-brand-coffee/80 max-w-2xl mx-auto leading-relaxed">
             {isGerman
@@ -96,7 +96,7 @@ const ApparativeAntiAging = () => {
         {/* About Section */}
         <section className="glass rounded-2xl p-8 mb-12">
           <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-            {isGerman ? 'Was ist apparative Anti-Aging?' : 'Что такое аппаратный Anti-Aging?'}
+            {language === 'de' ? 'Was ist apparative Anti-Aging?' : language === 'ru' ? 'Что такое аппаратный Anti-Aging?' : 'Что такое аппаратный Anti-Aging?'}
           </h2>
           <p className="text-brand-coffee/80 leading-relaxed mb-4">
             {isGerman
@@ -113,7 +113,7 @@ const ApparativeAntiAging = () => {
         {/* CTA */}
         <div className="bg-gold-gradient rounded-2xl p-8 text-center">
           <h2 className="text-2xl font-heading font-semibold text-white mb-4">
-            {isGerman ? 'Welche Behandlung passt zu Ihnen?' : 'Какая процедура подходит вам?'}
+            {language === 'de' ? 'Welche Behandlung passt zu Ihnen?' : language === 'ru' ? 'Какая процедура подходит вам?' : 'Какая процедура подходит вам?'}
           </h2>
           <p className="text-white/90 mb-6">
             {isGerman
@@ -126,7 +126,7 @@ const ApparativeAntiAging = () => {
             asChild
           >
             <a href="https://wa.me/4917677267269" target="_blank" rel="noopener noreferrer">
-              {isGerman ? 'Beratung anfragen' : 'Запросить консультацию'}
+              {language === 'de' ? 'Beratung anfragen' : language === 'ru' ? 'Запросить консультацию' : 'Запросить консультацию'}
             </a>
           </Button>
         </div>

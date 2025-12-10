@@ -27,30 +27,30 @@ const Kavitation = () => {
     <>
       <PremiumGallery
         images={['/173.jpeg', '/171.jpeg', '/172.jpeg']}
-        title={isGerman ? 'Unsere Arbeiten' : 'Наши работы'}
+        title={language === 'de' ? 'Unsere Arbeiten' : language === 'ru' ? 'Наши работы' : 'Наши работы'}
       />
       <div className="mt-12">
         <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-6 text-center">
-          {isGerman ? 'Empfohlene Kombinationen' : 'Рекомендуемые комбинации'}
+          {language === 'de' ? 'Empfohlene Kombinationen' : language === 'ru' ? 'Рекомендуемые комбинации' : 'Рекомендуемые комбинации'}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <ServiceCard
             title="RF-Vakuum"
-            description={isGerman ? 'Radiofrequenz mit Vakuum für Cellulite-Reduktion' : 'Радиочастоты с вакуумом для уменьшения целлюлита'}
+            description={language === 'de' ? 'Radiofrequenz mit Vakuum für Cellulite-Reduktion' : language === 'ru' ? 'Радиочастоты с вакуумом для уменьшения целлюлита' : 'Радиочастоты с вакуумом для уменьшения целлюлита'}
             icon={Star}
             href="/services/koerperbehandlungen/rf-vakuum"
             image="/83.jpg"
           />
           <ServiceCard
             title="RF-Lifting"
-            description={isGerman ? 'Radiofrequenz für Hautstraffung' : 'Радиочастоты для подтяжки кожи'}
+            description={language === 'de' ? 'Radiofrequenz für Hautstraffung' : language === 'ru' ? 'Радиочастоты для подтяжки кожи' : 'Радиочастоты для подтяжки кожи'}
             icon={Zap}
             href="/services/apparative-anti-aging/rf-lifting"
             image="/162.jpeg"
           />
           <ServiceCard
-            title={isGerman ? 'Ultraschall' : 'Ультразвук'}
-            description={isGerman ? 'Tiefenwirksame Hautpflege' : 'Глубокий уход за кожей'}
+            title={language === 'de' ? 'Ultraschall' : language === 'ru' ? 'Ультразвук' : 'Ультразвук'}
+            description={language === 'de' ? 'Tiefenwirksame Hautpflege' : language === 'ru' ? 'Глубокий уход за кожей' : 'Глубокий уход за кожей'}
             icon={Droplet}
             href="/services/apparative-anti-aging/ultraschall"
             image="/126.jpeg"

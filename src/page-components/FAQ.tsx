@@ -276,7 +276,7 @@ const FAQ = () => {
         {/* Contact CTA */}
         <div className="glass rounded-2xl p-8 md:p-12 max-w-2xl mx-auto mt-16 text-center">
           <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-            {isGerman ? 'Noch Fragen?' : 'Остались вопросы?'}
+            {language === 'de' ? 'Noch Fragen?' : language === 'ru' ? 'Остались вопросы?' : 'Остались вопросы?'}
           </h2>
           <p className="text-brand-coffee/70 mb-6 leading-relaxed">
             {isGerman
@@ -296,7 +296,7 @@ const FAQ = () => {
               href="tel:+4917677267269"
               className="px-8 py-3 border-2 border-brand-gold text-brand-espresso hover:bg-brand-gold/10 font-medium rounded-xl transition-all inline-block"
             >
-              {isGerman ? 'Anrufen' : 'Позвонить'}
+              {language === 'de' ? 'Anrufen' : language === 'ru' ? 'Позвонить' : 'Позвонить'}
             </a>
           </div>
         </div>

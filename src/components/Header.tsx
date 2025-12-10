@@ -88,6 +88,16 @@ export const Header = () => {
               >
                 RU
               </button>
+              <button
+                onClick={() => setLanguage('ua')}
+                className={`px-3 py-1 text-sm font-medium font-sans rounded-md transition-colors ${
+                  language === 'ua'
+                    ? 'bg-brand-gold text-white'
+                    : 'text-brand-coffee hover:text-brand-gold'
+                }`}
+              >
+                UA
+              </button>
             </div>
 
             {/* Phone */}
@@ -146,7 +156,7 @@ export const Header = () => {
             <div className="pt-4 border-t border-brand-gold/10">
               <div className="flex items-center justify-between mb-4">
                 <span className="text-sm font-medium text-brand-coffee">
-                  {language === 'de' ? 'Sprache' : 'Язык'}
+                  {language === 'de' ? 'Sprache' : language === 'ru' ? 'Язык' : 'Мова'}
                 </span>
                 <div className="flex items-center bg-brand-sand/30 rounded-lg p-1">
                   <button
@@ -168,6 +178,16 @@ export const Header = () => {
                     }`}
                   >
                     RU
+                  </button>
+                  <button
+                    onClick={() => setLanguage('ua')}
+                    className={`px-3 py-1 text-sm font-medium font-sans rounded-md transition-colors ${
+                      language === 'ua'
+                        ? 'bg-brand-gold text-white'
+                        : 'text-brand-coffee'
+                    }`}
+                  >
+                    UA
                   </button>
                 </div>
               </div>
