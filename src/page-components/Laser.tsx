@@ -20,7 +20,7 @@ const Laser = () => {
   const nextImage = () => setSelectedImage((prev) => prev !== null ? (prev + 1) % galleryImages.length : null);
   const prevImage = () => setSelectedImage((prev) => prev !== null ? (prev - 1 + galleryImages.length) % galleryImages.length : null);
 
-  const wavelengths = isGerman ? [
+  const wavelengths = language === 'de' ? [
     {
       name: 'Alexandrit (755 nm)',
       icon: Sun,
@@ -45,7 +45,7 @@ const Laser = () => {
       description: 'Speziell für dunkle und gebräunte Haut. Die längste Wellenlänge minimiert das Risiko von Pigmentstörungen und ist sicher auch bei Sonnenbräune.',
       benefits: ['Sicher für dunkle Haut', 'Auch bei Bräune möglich', 'Minimales Pigmentrisiko', 'Tiefste Penetration']
     }
-  ] : [
+  ] : language === 'ru' ? [
     {
       name: 'Александрит (755 нм)',
       icon: Sun,
@@ -70,9 +70,34 @@ const Laser = () => {
       description: 'Специально для тёмной и загорелой кожи. Самая длинная волна минимизирует риск пигментации и безопасна даже при загаре.',
       benefits: ['Безопасен для тёмной кожи', 'Можно при загаре', 'Минимальный риск пигментации', 'Самое глубокое проникновение']
     }
+  ] : [
+    {
+      name: 'Олександрит (755 нм)',
+      icon: Sun,
+      color: 'from-red-400 to-red-600',
+      skinTypes: 'Фототип I-III',
+      description: 'Золотий стандарт для світлої шкіри. Максимальне поглинання меланіну, надзвичайно ефективний для тонкого та світлого волосся. Найшвидша обробка великих зон.',
+      benefits: ['Ідеальний для світлої шкіри', 'Ефективний для тонкого волосся', 'Швидка процедура', 'Максимум поглинання меланіну']
+    },
+    {
+      name: 'Діод (808 нм)',
+      icon: Target,
+      color: 'from-amber-400 to-amber-600',
+      skinTypes: 'Фототип I-V',
+      description: 'Найуніверсальніший лазер. Глибше проникає в шкіру і досягає глибоко розташованих фолікулів. Підходить практично для всіх типів шкіри та волосся.',
+      benefits: ['Універсальне застосування', 'Глибоке проникнення', 'Для всіх типів волосся', 'Безпечний вплив']
+    },
+    {
+      name: 'Nd:YAG (1064 нм)',
+      icon: Moon,
+      color: 'from-violet-400 to-violet-600',
+      skinTypes: 'Фототип IV-VI',
+      description: 'Спеціально для темної та засмаглої шкіри. Найдовша хвиля мінімізує ризик пігментації та безпечна навіть при засмазі.',
+      benefits: ['Безпечний для темної шкіри', 'Можна при засмазі', 'Мінімальний ризик пігментації', 'Найглибше проникнення']
+    }
   ];
 
-  const advantages = isGerman ? [
+  const advantages = language === 'de' ? [
     {
       icon: Zap,
       title: '3 Wellenlängen in einem Gerät',
@@ -116,7 +141,7 @@ const Laser = () => {
     }
   ];
 
-  const treatmentAreas = isGerman ? [
+  const treatmentAreas = language === 'de' ? [
     { zone: 'Gesicht', areas: 'Oberlippe, Kinn, Wangen, Koteletten' },
     { zone: 'Oberkörper', areas: 'Achseln, Brust, Bauch, Rücken, Schultern' },
     { zone: 'Arme', areas: 'Komplett, Oberarme, Unterarme, Finger' },
@@ -132,7 +157,7 @@ const Laser = () => {
     { zone: 'Другое', areas: 'Шея, ягодицы, межъягодичная зона' },
   ];
 
-  const processSteps = isGerman ? [
+  const processSteps = language === 'de' ? [
     {
       step: 1,
       title: 'Kostenlose Beratung',
@@ -176,7 +201,7 @@ const Laser = () => {
     }
   ];
 
-  const faqs = isGerman ? [
+  const faqs = language === 'de' ? [
     {
       q: 'Warum ist ein Dreiwellenlaser besser als ein einzelner Laser?',
       a: 'Ein Dreiwellenlaser kombiniert die Vorteile aller drei Technologien: Alexandrit für helle Haut und feine Haare, Diode für universelle Anwendung, Nd:YAG für dunkle Haut. Der Spezialist kann die optimale Wellenlänge für Ihren Hauttyp wählen oder sogar kombinieren – für maximale Effektivität und Sicherheit.'
@@ -254,21 +279,25 @@ const Laser = () => {
             </div>
 
             <h1 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-heading font-bold text-brand-espresso mb-6 leading-tight px-4 max-w-full" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
-              {isGerman
+              {language === 'de'
                 ? 'Laser-Haarentfernung auf Dreiwellenlaser'
-                : 'Лазерная эпиляция на трёхволновом лазере'}
+                : language === 'ru'
+                ? 'Лазерная эпиляция на трёхволновом лазере'
+                : 'Лазерна епіляція на трихвильовому лазері'}
             </h1>
 
             <p className="text-xl md:text-2xl text-brand-gold font-heading font-medium mb-4">
-              {isGerman
+              {language === 'de'
                 ? 'Alexandrit + Diode + Nd:YAG'
                 : 'Александрит + Диод + Nd:YAG'}
             </p>
 
             <p className="text-lg md:text-xl text-brand-coffee/80 leading-relaxed mb-10 max-w-3xl mx-auto">
-              {isGerman
+              {language === 'de'
                 ? 'Modernste Technologie für alle Hauttypen. Schmerzfrei dank Kühlung bis -4°C. Dauerhafte Haarreduktion in München-Haidhausen.'
-                : 'Новейшая технология для всех типов кожи. Безболезненно благодаря охлаждению до -4°C. Стойкое удаление волос в Мюнхене.'}
+                : language === 'ru'
+                ? 'Новейшая технология для всех типов кожи. Безболезненно благодаря охлаждению до -4°C. Стойкое удаление волос в Мюнхене.'
+                : 'Найновіша технологія для всіх типів шкіри. Безболісно завдяки охолодженню до -4°C. Стійке видалення волосся в Мюнхені.'}
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center">

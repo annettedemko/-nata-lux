@@ -7,7 +7,7 @@ const Reviews = () => {
   const { t, language } = useLanguage();
   const isGerman = language === 'de';
 
-  const reviews = isGerman ? [
+  const reviews = language === 'de' ? [
     {
       name: 'Anna M.',
       rating: 5,
@@ -71,7 +71,7 @@ const Reviews = () => {
       text: 'Ich kann NATA LUX nur wärmstens empfehlen! Besonders die PMU-Entfernung war ein Erfolg. Professionell, sauber und mit tollem Ergebnis. Das Team nimmt sich wirklich Zeit für jeden Kunden.',
       service: 'PMU Entfernung',
     },
-  ] : [
+  ] : language === 'ru' ? [
     {
       name: 'Анна М.',
       rating: 5,
@@ -135,6 +135,70 @@ const Reviews = () => {
       text: 'Могу только горячо рекомендовать NATA LUX! Особенно удаление ПМ прошло успешно. Профессионально, чисто и с отличным результатом. Команда действительно уделяет время каждому клиенту.',
       service: 'Удаление ПМ',
     },
+  ] : [
+    {
+      name: 'Анна М.',
+      rating: 5,
+      date: '2 тижні тому',
+      text: 'Я у повному захваті від нових вій! Команда супер професійна, а атмосфера в салоні дуже приємна. Процедура була безболісною, а результат перевершив усі мої очікування. Природньо, об\'ємно і просто ідеально!',
+      service: 'Нарощування вій',
+    },
+    {
+      name: 'Марія Ш.',
+      rating: 5,
+      date: '3 тижні тому',
+      text: 'Найкраща процедура ПМ, яку я коли-небудь робила! Консультація була детальною, і я почувалася в надійних руках. Мої брови тепер виглядають ідеально щодня, без витрати часу на макіяж. Абсолютно рекомендую!',
+      service: 'Перманентний макіяж',
+    },
+    {
+      name: 'Юлія К.',
+      rating: 5,
+      date: '1 місяць тому',
+      text: 'Після лише 3 сеансів я вже бачу значні результати лазерної епіляції. Процедура була набагато комфортнішою, ніж я очікувала. Персонал дуже доброзичливий і компетентний. Співвідношення ціни і якості чудове!',
+      service: 'Лазерна епіляція',
+    },
+    {
+      name: 'Софія В.',
+      rating: 5,
+      date: '1 місяць тому',
+      text: 'Ламінування брів тримається вже більше 5 тижнів і виглядає все ще чудово! Нарешті у мене доглянуті, рівні брови, про які я завжди мріяла. Салон сучасний і дуже чистий.',
+      service: 'Ламінування',
+    },
+    {
+      name: 'Олена П.',
+      rating: 5,
+      date: '2 місяці тому',
+      text: 'Пройшла курс Anti-Aging і більш ніж задоволена. Моя шкіра стала більш пружною і свіжою. Процедури були розслаблюючими, а результати говорять самі за себе. З задоволенням прийду знову!',
+      service: 'Anti-Aging',
+    },
+    {
+      name: 'Наталія Х.',
+      rating: 5,
+      date: '2 місяці тому',
+      text: 'Чудовий досвід! Я пройшла тут курс нарощування вій і можу тільки рекомендувати. Тренер була дуже терплячою і все чудово пояснила. Тепер я сама працюю лешмейкером!',
+      service: 'Навчання',
+    },
+    {
+      name: 'Ліза М.',
+      rating: 5,
+      date: '3 місяці тому',
+      text: 'Гігієна та професіоналізм на найвищому рівні. Тут я завжди почуваюся в надійних руках. Ціни справедливі, а якість роботи відмінна. Мій постійний салон!',
+      service: 'Різні процедури',
+    },
+    {
+      name: 'Крістіна Б.',
+      rating: 5,
+      date: '3 місяці тому',
+      text: 'Догляд за обличчям був фантастичним! Моя шкіра така м\'яка і свіжа. Продукти, які використовувалися, високої якості, і різниця помітна одразу.',
+      service: 'Догляд за обличчям',
+    },
+    {
+      name: 'Ольга К.',
+      rating: 5,
+      date: '4 місяці тому',
+      text: 'Можу тільки гаряче рекомендувати NATA LUX! Особливо видалення ПМ пройшло успішно. Професійно, чисто і з чудовим результатом. Команда справді приділяє час кожному клієнту.',
+      service: 'Видалення ПМ',
+    },
   ];
 
   const averageRating = reviews.reduce((acc, review) => acc + review.rating, 0) / reviews.length;
@@ -160,9 +224,11 @@ const Reviews = () => {
               {averageRating.toFixed(1)}
             </div>
             <p className="text-brand-coffee/70">
-              {isGerman
+              {language === 'de'
                 ? `Basierend auf ${totalReviews} Bewertungen`
-                : `На основе ${totalReviews} отзывов`}
+                : language === 'ru'
+                ? `На основе ${totalReviews} отзывов`
+                : `На основі ${totalReviews} відгуків`}
             </p>
           </div>
         </div>
@@ -205,12 +271,14 @@ const Reviews = () => {
         {/* CTA */}
         <div className="glass rounded-2xl p-8 md:p-12 max-w-2xl mx-auto mt-16 text-center">
           <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-            {language === 'de' ? 'Teilen Sie Ihre Erfahrung' : language === 'ru' ? 'Поделитесь своим опытом' : 'Поделитесь своим опытом'}
+            {language === 'de' ? 'Teilen Sie Ihre Erfahrung' : language === 'ru' ? 'Поделитесь своим опытом' : 'Поділіться своїм досвідом'}
           </h2>
           <p className="text-brand-coffee/70 mb-6 leading-relaxed">
-            {isGerman
+            {language === 'de'
               ? 'Waren Sie zufrieden mit unserer Behandlung? Wir freuen uns über Ihr Feedback!'
-              : 'Остались довольны нашей процедурой? Мы будем рады вашему отзыву!'}
+              : language === 'ru'
+              ? 'Остались довольны нашей процедурой? Мы будем рады вашему отзыву!'
+              : 'Залишилися задоволені нашою процедурою? Ми будемо раді вашому відгуку!'}
           </p>
           <a
             href="https://g.page/r/..."
@@ -218,7 +286,7 @@ const Reviews = () => {
             rel="noopener noreferrer"
             className="inline-block px-8 py-3 bg-brand-gold hover:bg-brand-gold/90 text-white font-medium rounded-xl transition-all shadow-medium hover:shadow-glow"
           >
-            {language === 'de' ? 'Bewertung auf Google schreiben' : language === 'ru' ? 'Написать отзыв на Google' : 'Написать отзыв на Google'}
+            {language === 'de' ? 'Bewertung auf Google schreiben' : language === 'ru' ? 'Написать отзыв на Google' : 'Написати відгук на Google'}
           </a>
         </div>
       </div>

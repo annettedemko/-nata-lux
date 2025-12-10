@@ -26,8 +26,8 @@ export const ProcedureSchema = ({
   const { language } = useLanguage();
   const isGerman = language === 'de';
 
-  const images = isGerman ? germanImages : russianImages;
-  const altText = isGerman ? altTextGerman : altTextRussian;
+  const images = language === 'de' ? germanImages : russianImages;
+  const altText = language === 'de' ? altTextGerman : altTextRussian;
 
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [isDesktop, setIsDesktop] = useState(false);

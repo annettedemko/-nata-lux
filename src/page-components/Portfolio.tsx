@@ -8,15 +8,21 @@ const Portfolio = () => {
   const isGerman = language === 'de';
   const [filter, setFilter] = useState('all');
 
-  const categories = isGerman ? [
+  const categories = language === 'de' ? [
     { id: 'all', name: 'Alle' },
     { id: 'lashes', name: 'Wimpern' },
     { id: 'pmu', name: 'PMU' },
     { id: 'brows', name: 'Augenbrauen' },
     { id: 'laser', name: 'Laser' },
-  ] : [
+  ] : language === 'ru' ? [
     { id: 'all', name: 'Все' },
     { id: 'lashes', name: 'Ресницы' },
+    { id: 'pmu', name: 'ПМ' },
+    { id: 'brows', name: 'Брови' },
+    { id: 'laser', name: 'Лазер' },
+  ] : [
+    { id: 'all', name: 'Всі' },
+    { id: 'lashes', name: 'Вії' },
     { id: 'pmu', name: 'ПМ' },
     { id: 'brows', name: 'Брови' },
     { id: 'laser', name: 'Лазер' },
@@ -45,9 +51,11 @@ const Portfolio = () => {
             {t('nav.portfolio')}
           </h1>
           <p className="text-lg text-brand-coffee/80 max-w-2xl mx-auto leading-relaxed">
-            {isGerman
+            {language === 'de'
               ? 'Entdecken Sie unsere Arbeiten und lassen Sie sich von den Ergebnissen inspirieren.'
-              : 'Посмотрите наши работы и вдохновитесь результатами.'}
+              : language === 'ru'
+              ? 'Посмотрите наши работы и вдохновитесь результатами.'
+              : 'Подивіться наші роботи та надихайтеся результатами.'}
           </p>
         </div>
 
@@ -98,12 +106,14 @@ const Portfolio = () => {
         {/* Instagram CTA */}
         <div className="glass rounded-2xl p-8 md:p-12 max-w-2xl mx-auto mt-16 text-center">
           <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-            {language === 'de' ? 'Folgen Sie uns auf Instagram' : language === 'ru' ? 'Подписывайтесь на нас в Instagram' : 'Подписывайтесь на нас в Instagram'}
+            {language === 'de' ? 'Folgen Sie uns auf Instagram' : language === 'ru' ? 'Подписывайтесь на нас в Instagram' : 'Підписуйтесь на нас в Instagram'}
           </h2>
           <p className="text-brand-coffee/70 mb-6 leading-relaxed">
-            {isGerman
+            {language === 'de'
               ? 'Für täglich neue Inspirationen und Vorher-Nachher-Bilder folgen Sie uns auf Instagram.'
-              : 'Следите за новыми работами и фото до/после в нашем Instagram.'}
+              : language === 'ru'
+              ? 'Следите за новыми работами и фото до/после в нашем Instagram.'
+              : 'Слідкуйте за новими роботами та фото до/після в нашому Instagram.'}
           </p>
           <a
             href="https://instagram.com"
