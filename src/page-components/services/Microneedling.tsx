@@ -34,7 +34,7 @@ const Microneedling = () => {
       subtitle={isGerman
         ? "Kollagen-Induktionstherapie für Hautverjüngung, Narbenbehandlung und Haarwuchsstimulation"
         : "Коллаген-индукционная терапия для омоложения кожи, лечения рубцов и стимуляции роста волос"}
-      aboutTitle={isGerman ? "Was ist Microneedling?" : "Что такое микронидлинг?"}
+      aboutTitle={language === 'de' ? "Was ist Microneedling?" : language === 'ru' ? "Что такое микронидлинг?" : "Что такое микронидлинг?"}
       aboutDescription={isGerman ? [
         'Microneedling (auch Kollagen-Induktionstherapie genannt) ist eine innovative Behandlung zur Hautverjüngung und Regeneration. Mit einem speziellen Gerät werden feine Mikrokanäle in die Haut erzeugt, die die natürliche Kollagen- und Elastinproduktion anregen.',
         'Diese kontrollierte Verletzung aktiviert die Selbstheilungskräfte der Haut und fördert die Aufnahme von Wirkstoffen wie Hyaluronsäure, Vitaminen und Exosomen – für sichtbar straffere, glattere und jugendlichere Haut.',
@@ -175,7 +175,7 @@ const Microneedling = () => {
           a: 'Экзосомы — крошечные клеточные мессенджеры, ускоряющие регенерацию и заживление. Они глубоко проникают в кожу и значительно усиливают эффект микронидлинга.'
         }
       ]}
-      ctaTitle={isGerman ? "Bereit für strahlende, verjüngte Haut?" : "Готовы к сияющей, помолодевшей коже?"}
+      ctaTitle={language === 'de' ? "Bereit für strahlende, verjüngte Haut?" : language === 'ru' ? "Готовы к сияющей, помолодевшей коже?" : "Готовы к сияющей, помолодевшей коже?"}
       ctaDescription={isGerman
         ? "Buchen Sie jetzt Ihre Microneedling-Behandlung oder vereinbaren Sie eine kostenlose Beratung."
         : "Запишитесь на процедуру микронидлинг или договоритесь о бесплатной консультации."}

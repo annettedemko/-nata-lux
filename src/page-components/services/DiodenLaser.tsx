@@ -11,11 +11,11 @@ const DiodenLaser = () => {
   return (
     <ServicePageLayout
       icon={Zap}
-      title={isGerman ? "Dioden Laser Haarentfernung" : "Диодный лазер для удаления волос"}
+      title={language === 'de' ? "Dioden Laser Haarentfernung" : language === 'ru' ? "Диодный лазер для удаления волос" : "Диодный лазер для удаления волос"}
       subtitle={isGerman
         ? "Für alle Hauttypen geeignet – Schonend, effektiv und dauerhaft"
         : "Подходит для всех типов кожи – Щадящий, эффективный и постоянный"}
-      aboutTitle={isGerman ? "Was ist der Dioden Laser?" : "Что такое диодный лазер?"}
+      aboutTitle={language === 'de' ? "Was ist der Dioden Laser?" : language === 'ru' ? "Что такое диодный лазер?" : "Что такое диодный лазер?"}
       aboutDescription={isGerman ? [
         'Der Dioden Laser ist eine vielseitige Laser-Technologie zur dauerhaften Haarentfernung, die für ALLE Hauttypen geeignet ist – von sehr hell bis dunkel (Hauttyp I-VI nach Fitzpatrick).',
         'Mit einer Wellenlänge von 808 nm dringt der Dioden Laser tiefer in die Haut ein als andere Laser und ist dadurch besonders effektiv bei dickeren, stärkeren Haaren. Gleichzeitig ist er schonend zur Haut und verursacht kaum Schmerzen.',
@@ -140,7 +140,7 @@ const DiodenLaser = () => {
           a: 'Побрейте зону в день процедуры. За 4 недели избегайте солнца, солярия и автозагара. Не делайте ваксинг или эпиляцию!'
         }
       ]}
-      ctaTitle={isGerman ? "Bereit für dauerhaft glatte Haut?" : "Готовы к гладкой коже навсегда?"}
+      ctaTitle={language === 'de' ? "Bereit für dauerhaft glatte Haut?" : language === 'ru' ? "Готовы к гладкой коже навсегда?" : "Готовы к гладкой коже навсегда?"}
       ctaDescription={isGerman
         ? "Buchen Sie jetzt Ihre kostenlose Beratung und profitieren Sie von modernster Laser-Technologie."
         : "Запишитесь на бесплатную консультацию и воспользуйтесь преимуществами современнейшей лазерной технологии."}

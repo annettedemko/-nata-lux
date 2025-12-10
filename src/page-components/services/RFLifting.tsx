@@ -161,9 +161,9 @@ const RFLifting = () => {
   return (
     <ServicePageLayout
       icon={Zap}
-      title={isGerman ? "RF-Lifting Gesicht in München — Hautverjüngung und Straffung ohne Operation" : "RF-лифтинг лица в Мюнхене — омоложение и подтяжка без операции"}
-      subtitle={isGerman ? "Radiofrequenztherapie für natürliches Gesichts-Lifting in München-Haidhausen" : "Радиочастотная терапия для натурального лифтинга лица в Мюнхене-Хайдхаузен"}
-      aboutTitle={isGerman ? "Was ist RF-Lifting (Radiofrequenz-Lifting)?" : "Что такое RF-лифтинг"}
+      title={language === 'de' ? "RF-Lifting Gesicht in München — Hautverjüngung und Straffung ohne Operation" : language === 'ru' ? "RF-лифтинг лица в Мюнхене — омоложение и подтяжка без операции" : "RF-лифтинг лица в Мюнхене — омоложение и подтяжка без операции"}
+      subtitle={language === 'de' ? "Radiofrequenztherapie für natürliches Gesichts-Lifting in München-Haidhausen" : language === 'ru' ? "Радиочастотная терапия для натурального лифтинга лица в Мюнхене-Хайдхаузен" : "Радиочастотная терапия для натурального лифтинга лица в Мюнхене-Хайдхаузен"}
+      aboutTitle={language === 'de' ? "Was ist RF-Lifting (Radiofrequenz-Lifting)?" : language === 'ru' ? "Что такое RF-лифтинг" : "Что такое RF-лифтинг"}
       aboutDescription={[
         isGerman
           ? 'RF-Lifting Gesicht ist eine nicht-invasive Anti-Aging-Behandlung mit Radiofrequenz-Technologie. Die Radiowellen erwärmen die tieferen Hautschichten kontrolliert auf 40–45°C, wodurch Kollagen- und Elastinfasern sofort gestrafft werden und die Neubildung angeregt wird.'
@@ -174,34 +174,34 @@ const RFLifting = () => {
           : 'В отличие от ботокса или филлеров, RF-лифтинг работает изнутри — без игл, без реабилитации, абсолютно безболезненно. Идеально для лица, шеи и декольте.'
       ]}
       benefits={[
-        isGerman ? 'Sofortige Straffung nach der ersten Behandlung' : 'Моментальная подтяжка после первой процедуры',
-        isGerman ? 'Kollagen-Neubildung für langfristige Verjüngung' : 'Стимуляция коллагена для долгосрочного омоложения',
-        isGerman ? 'Ohne Injektionen, ohne OP, ohne Ausfallzeiten' : 'Без инъекций, без операции, без реабилитации',
-        isGerman ? 'Straffung Gesichtsoval, Doppelkinn, Falten' : 'Подтяжка овала, второго подбородка, морщин',
-        isGerman ? 'Schmerzfrei — nur angenehme Wärme' : 'Безболезненно — только приятное тепло',
-        isGerman ? 'Für alle Hauttypen ab 25 Jahren' : 'Для всех типов кожи от 25 лет'
+        language === 'de' ? 'Sofortige Straffung nach der ersten Behandlung' : language === 'ru' ? 'Моментальная подтяжка после первой процедуры' : 'Моментальная подтяжка после первой процедуры',
+        language === 'de' ? 'Kollagen-Neubildung für langfristige Verjüngung' : language === 'ru' ? 'Стимуляция коллагена для долгосрочного омоложения' : 'Стимуляция коллагена для долгосрочного омоложения',
+        language === 'de' ? 'Ohne Injektionen, ohne OP, ohne Ausfallzeiten' : language === 'ru' ? 'Без инъекций, без операции, без реабилитации' : 'Без инъекций, без операции, без реабилитации',
+        language === 'de' ? 'Straffung Gesichtsoval, Doppelkinn, Falten' : language === 'ru' ? 'Подтяжка овала, второго подбородка, морщин' : 'Подтяжка овала, второго подбородка, морщин',
+        language === 'de' ? 'Schmerzfrei — nur angenehme Wärme' : language === 'ru' ? 'Безболезненно — только приятное тепло' : 'Безболезненно — только приятное тепло',
+        language === 'de' ? 'Für alle Hauttypen ab 25 Jahren' : language === 'ru' ? 'Для всех типов кожи от 25 лет' : 'Для всех типов кожи от 25 лет'
       ]}
       steps={[
         {
-          title: isGerman ? '1. Beratung' : '1. Консультация',
+          title: language === 'de' ? '1. Beratung' : language === 'ru' ? '1. Консультация' : '1. Консультація',
           description: isGerman
             ? 'Analyse Ihres Hauttyps und Behandlungsziele. Klärung aller Fragen.'
             : 'Анализ типа кожи и целей. Ответы на все вопросы.'
         },
         {
-          title: isGerman ? '2. Vorbereitung' : '2. Подготовка',
+          title: language === 'de' ? '2. Vorbereitung' : language === 'ru' ? '2. Подготовка' : '2. Подготовка',
           description: isGerman
             ? 'Reinigung und Auftragen des Kontaktgels.'
             : 'Очищение и нанесение контактного геля.'
         },
         {
-          title: isGerman ? '3. Behandlung (60 Min.)' : '3. Процедура (60 мин.)',
+          title: language === 'de' ? '3. Behandlung (60 Min.)' : language === 'ru' ? '3. Процедура (60 мин.)' : '3. Процедура (60 хв.)',
           description: isGerman
             ? 'Sanfte RF-Behandlung mit angenehmer Wärme. Die Gesamtbehandlungsdauer beträgt ca. 60 Min.: Gesicht 30 Min., Hals 15 Min., Dekolleté 15 Min.'
             : 'Мягкая RF-обработка с приятным теплом. Общая продолжительность процедуры около 60 мин.: лицо 30 мин., шея 15 мин., декольте 15 мин.'
         },
         {
-          title: isGerman ? '4. Empfehlung' : '4. Рекомендации',
+          title: language === 'de' ? '4. Empfehlung' : language === 'ru' ? '4. Рекомендации' : '4. Рекомендации',
           description: isGerman
             ? '8–12 Behandlungen, 1–2× pro Woche. Erhaltung: 1× pro Monat.'
             : '8–12 процедур, 1–2× в неделю. Поддержание: 1× в месяц.'
@@ -212,44 +212,44 @@ const RFLifting = () => {
       additionalSections={<RFApplications />}
       priceSection="apparative-antiaging"
       contraindications={[
-        isGerman ? 'Schwangerschaft und Stillzeit' : 'Беременность и кормление грудью',
-        isGerman ? 'Herzschrittmacher oder implantierte elektronische Geräte (ICD, Insulinpumpe)' : 'Кардиостимулятор или имплантированные электронные устройства (ИКД, инсулиновая помпа)',
-        isGerman ? 'Metallimplantate im Behandlungsbereich (Platten, Schrauben, Zahnimplantate)' : 'Металлические имплантаты в зоне обработки (пластины, винты, зубные имплантаты)',
-        isGerman ? 'Aktive Hautinfektionen, Herpes, offene Wunden oder Entzündungen' : 'Активные кожные инфекции, герпес, открытые раны или воспаления',
-        isGerman ? 'Frische Filler oder Botox im Behandlungsbereich (mind. 2 Wochen Abstand)' : 'Недавние филлеры или ботокс в зоне обработки (мин. 2 недели после)',
-        isGerman ? 'Autoimmunerkrankungen (Lupus, Sklerodermie)' : 'Аутоиммунные заболевания (волчанка, склеродермия)',
-        isGerman ? 'Krebs, Chemotherapie oder Strahlentherapie' : 'Онкология, химиотерапия или лучевая терапия',
-        isGerman ? 'Epilepsie oder neurologische Erkrankungen' : 'Эпилепсия или неврологические заболевания',
-        isGerman ? 'Schwere Herz-Kreislauf-Erkrankungen' : 'Тяжёлые сердечно-сосудистые заболевания',
-        isGerman ? 'Thrombose oder schwere Venenerkrankungen im Behandlungsbereich' : 'Тромбоз или тяжёлые заболевания вен в зоне обработки'
+        language === 'de' ? 'Schwangerschaft und Stillzeit' : language === 'ru' ? 'Беременность и кормление грудью' : 'Беременность и кормление грудью',
+        language === 'de' ? 'Herzschrittmacher oder implantierte elektronische Geräte (ICD, Insulinpumpe)' : language === 'ru' ? 'Кардиостимулятор или имплантированные электронные устройства (ИКД, инсулиновая помпа)' : 'Кардиостимулятор или имплантированные электронные устройства (ИКД, инсулиновая помпа)',
+        language === 'de' ? 'Metallimplantate im Behandlungsbereich (Platten, Schrauben, Zahnimplantate)' : language === 'ru' ? 'Металлические имплантаты в зоне обработки (пластины, винты, зубные имплантаты)' : 'Металлические имплантаты в зоне обработки (пластины, винты, зубные имплантаты)',
+        language === 'de' ? 'Aktive Hautinfektionen, Herpes, offene Wunden oder Entzündungen' : language === 'ru' ? 'Активные кожные инфекции, герпес, открытые раны или воспаления' : 'Активные кожные инфекции, герпес, открытые раны или воспаления',
+        language === 'de' ? 'Frische Filler oder Botox im Behandlungsbereich (mind. 2 Wochen Abstand)' : language === 'ru' ? 'Недавние филлеры или ботокс в зоне обработки (мин. 2 недели после)' : 'Недавние филлеры или ботокс в зоне обработки (хв. 2 недели после)',
+        language === 'de' ? 'Autoimmunerkrankungen (Lupus, Sklerodermie)' : language === 'ru' ? 'Аутоиммунные заболевания (волчанка, склеродермия)' : 'Аутоиммунные заболевания (волчанка, склеродермия)',
+        language === 'de' ? 'Krebs, Chemotherapie oder Strahlentherapie' : language === 'ru' ? 'Онкология, химиотерапия или лучевая терапия' : 'Онкология, химиотерапия или лучевая терапия',
+        language === 'de' ? 'Epilepsie oder neurologische Erkrankungen' : language === 'ru' ? 'Эпилепсия или неврологические заболевания' : 'Эпилепсия или неврологические заболевания',
+        language === 'de' ? 'Schwere Herz-Kreislauf-Erkrankungen' : language === 'ru' ? 'Тяжёлые сердечно-сосудистые заболевания' : 'Тяжёлые сердечно-сосудистые заболевания',
+        language === 'de' ? 'Thrombose oder schwere Venenerkrankungen im Behandlungsbereich' : language === 'ru' ? 'Тромбоз или тяжёлые заболевания вен в зоне обработки' : 'Тромбоз или тяжёлые заболевания вен в зоне обработки'
       ]}
       faq={[
         {
-          q: isGerman ? 'Wie viele Behandlungen brauche ich?' : 'Сколько процедур нужно?',
+          q: language === 'de' ? 'Wie viele Behandlungen brauche ich?' : language === 'ru' ? 'Сколько процедур нужно?' : 'Сколько процедур нужно?',
           a: isGerman
             ? '8–12 Behandlungen, 1–2× pro Woche. Erste Straffung sofort sichtbar, voller Effekt nach 2–3 Monaten. Ergebnis hält 6–12 Monate. Erhaltung: 1× monatlich.'
             : '8–12 процедур, 1–2× в неделю. Первая подтяжка видна сразу, полный эффект через 2–3 месяца. Результат держится 6–12 месяцев. Поддержание: 1× в месяц.'
         },
         {
-          q: isGerman ? 'Ist RF-Lifting schmerzhaft?' : 'Это болезненно?',
+          q: language === 'de' ? 'Ist RF-Lifting schmerzhaft?' : language === 'ru' ? 'Это болезненно?' : 'Это болезненно?',
           a: isGerman
             ? 'Nein, völlig schmerzfrei. Sie spüren nur angenehme Wärme — viele Kunden entspannen sich so sehr, dass sie einschlafen.'
             : 'Нет, абсолютно безболезненно. Вы чувствуете только приятное тепло — многие клиенты расслабляются так, что засыпают.'
         },
         {
-          q: isGerman ? 'Gibt es Ausfallzeiten?' : 'Нужна реабилитация?',
+          q: language === 'de' ? 'Gibt es Ausfallzeiten?' : language === 'ru' ? 'Нужна реабилитация?' : 'Нужна реабилитация?',
           a: isGerman
             ? 'Keine! Sofort zurück zum Alltag. Leichte Rötung verschwindet in 1–3 Stunden.'
             : 'Нет! Сразу возврат к жизни. Лёгкое покраснение проходит за 1–3 часа.'
         },
         {
-          q: isGerman ? 'Für wen ist RF-Lifting geeignet?' : 'Для кого подходит?',
+          q: language === 'de' ? 'Für wen ist RF-Lifting geeignet?' : language === 'ru' ? 'Для кого подходит?' : 'Для кого подходит?',
           a: isGerman
             ? 'Für alle Hauttypen ab 25 Jahren. Ideal bei Doppelkinn, erschlafften Wangen, Falten, müder Haut. Für Frauen und Männer.'
             : 'Для всех типов кожи от 25 лет. Идеально при втором подбородке, обвисших щеках, морщинах, усталой коже. Для женщин и мужчин.'
         },
       ]}
-      ctaTitle={isGerman ? "Bereit für natürliches Gesichts-Lifting in München?" : "Готовы к натуральному лифтингу лица в Мюнхене?"}
+      ctaTitle={language === 'de' ? "Bereit für natürliches Gesichts-Lifting in München?" : language === 'ru' ? "Готовы к натуральному лифтингу лица в Мюнхене?" : "Готовы к натуральному лифтингу лица в Мюнхене?"}
       ctaDescription={isGerman
         ? "Buchen Sie jetzt Ihre RF-Lifting Gesicht Behandlung in München-Haidhausen — straffe, jugendliche Haut ohne Operation und ohne Schmerzen. Kostenlose Beratung inklusive!"
         : "Запишитесь на RF-лифтинг лица в Мюнхене-Хайдхаузен — упругая, молодая кожа без операции и без боли. Бесплатная консультация включена!"

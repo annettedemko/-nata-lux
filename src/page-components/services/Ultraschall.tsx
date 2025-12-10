@@ -60,9 +60,9 @@ const Ultraschall = () => {
   return (
     <ServicePageLayout
       icon={Waves}
-      title={isGerman ? "Ultraschalltherapie in München — Moderne Technologien für Hautpflege und Regeneration" : "Ультразвуковая терапия в Мюнхене — Современные технологии ухода и восстановления"}
-      subtitle={isGerman ? "Wissenschaftlich bewährte, nicht-invasive Behandlungen für Gesicht und Körper in München-Haidhausen" : "Научно обоснованные, неинвазивные процедуры для лица и тела в Мюнхене-Хайдхаузен"}
-      aboutTitle={isGerman ? "Was ist Ultraschalltherapie und wie funktioniert sie?" : "Что такое ультразвуковая терапия и как она работает?"}
+      title={language === 'de' ? "Ultraschalltherapie in München — Moderne Technologien für Hautpflege und Regeneration" : language === 'ru' ? "Ультразвуковая терапия в Мюнхене — Современные технологии ухода и восстановления" : "Ультразвуковая терапия в Мюнхене — Современные технологии ухода и восстановления"}
+      subtitle={language === 'de' ? "Wissenschaftlich bewährte, nicht-invasive Behandlungen für Gesicht und Körper in München-Haidhausen" : language === 'ru' ? "Научно обоснованные, неинвазивные процедуры для лица и тела в Мюнхене-Хайдхаузен" : "Научно обоснованные, неинвазивные процедуры для лица и тела в Мюнхене-Хайдхаузен"}
+      aboutTitle={language === 'de' ? "Was ist Ultraschalltherapie und wie funktioniert sie?" : language === 'ru' ? "Что такое ультразвуковая терапия и как она работает?" : "Что такое ультразвуковая терапия и как она работает?"}
       aboutDescription={[
         isGerman
           ? 'Ultraschalltherapie nutzt hochfrequente Schallwellen, die sanfte Mikrovibrationen in den Hautschichten erzeugen. Diese aktivieren den Stoffwechsel, stimulieren Kollagen und fördern die Regeneration — völlig schmerzfrei.'
@@ -73,50 +73,50 @@ const Ultraschall = () => {
           : 'Мы предлагаем три вида: фонофорез (омоложение), кавитация (коррекция фигуры) и чистка лица (глубокое очищение).'
       ]}
       benefits={[
-        isGerman ? 'Verbesserung der Mikrozirkulation und Sauerstoffversorgung der Haut' : 'Улучшение микроциркуляции и снабжения кожи кислородом',
-        isGerman ? 'Stimulation der Kollagen- und Elastinproduktion für straffere, jugendlichere Haut' : 'Стимуляция производства коллагена и эластина для более упругой, молодой кожи',
-        isGerman ? 'Bis zu 10-fach tiefere Wirkstoffpenetration bei Phonophorese' : 'Проникновение активных веществ в 10 раз глубже при фонофорезе',
-        isGerman ? 'Aktivierung des Zellstoffwechsels und Beschleunigung der Regeneration' : 'Активация клеточного метаболизма и ускорение регенерации',
-        isGerman ? 'Lymphdrainage-Effekt für Entgiftung und Reduzierung von Schwellungen' : 'Лимфодренажный эффект для детоксикации и уменьшения отёков',
-        isGerman ? 'Sanfte Mikromassage zur Entspannung der Gesichtsmuskulatur' : 'Мягкий микромассаж для расслабления лицевых мышц',
-        isGerman ? 'Entzündungshemmende und schmerzlindernde Wirkung' : 'Противовоспалительное и обезболивающее действие',
-        isGerman ? 'Porenverfeinerung und Verbesserung der Hautstruktur' : 'Сужение пор и улучшение текстуры кожи',
-        isGerman ? 'Nicht-invasive Körperformung und Fettreduktion bei Kavitation' : 'Неинвазивная коррекция фигуры и липолиз при кавитации',
-        isGerman ? 'Tiefenreinigung ohne mechanische Belastung der Haut' : 'Глубокое очищение без механического травмирования кожи',
-        isGerman ? 'Völlig schmerzfrei, sicher und entspannend' : 'Абсолютно безболезненно, безопасно и расслабляюще',
-        isGerman ? 'Keine Ausfallzeiten — sofort gesellschaftsfähig' : 'Без периода реабилитации — сразу готовы к общению',
-        isGerman ? 'Kombinierbar mit anderen Behandlungen (Mikrostrom, RF, LED-Lichttherapie)' : 'Можно комбинировать с другими процедурами (микротоки, RF, светотерапия)',
-        isGerman ? 'Geeignet für alle Hauttypen und Altersgruppen' : 'Подходит для всех типов кожи и возрастов',
-        isGerman ? 'Wissenschaftlich bewährte Methode mit Jahrzehnten klinischer Erfahrung' : 'Научно обоснованный метод с десятилетиями клинического опыта',
-        isGerman ? 'Natürliche, nicht-invasive Alternative zu Injektionen und operativen Eingriffen' : 'Естественная, неинвазивная альтернатива инъекциям и операциям'
+        language === 'de' ? 'Verbesserung der Mikrozirkulation und Sauerstoffversorgung der Haut' : language === 'ru' ? 'Улучшение микроциркуляции и снабжения кожи кислородом' : 'Улучшение микроциркуляции и снабжения кожи кислородом',
+        language === 'de' ? 'Stimulation der Kollagen- und Elastinproduktion für straffere, jugendlichere Haut' : language === 'ru' ? 'Стимуляция производства коллагена и эластина для более упругой, молодой кожи' : 'Стимуляция производства коллагена и эластина для более упругой, молодой кожи',
+        language === 'de' ? 'Bis zu 10-fach tiefere Wirkstoffpenetration bei Phonophorese' : language === 'ru' ? 'Проникновение активных веществ в 10 раз глубже при фонофорезе' : 'Проникновение активных веществ в 10 раз глубже при фонофорезе',
+        language === 'de' ? 'Aktivierung des Zellstoffwechsels und Beschleunigung der Regeneration' : language === 'ru' ? 'Активация клеточного метаболизма и ускорение регенерации' : 'Активация клеточного метаболизма и ускорение регенерации',
+        language === 'de' ? 'Lymphdrainage-Effekt für Entgiftung und Reduzierung von Schwellungen' : language === 'ru' ? 'Лимфодренажный эффект для детоксикации и уменьшения отёков' : 'Лимфодренажный эффект для детоксикации и уменьшения отёков',
+        language === 'de' ? 'Sanfte Mikromassage zur Entspannung der Gesichtsmuskulatur' : language === 'ru' ? 'Мягкий микромассаж для расслабления лицевых мышц' : 'Мягкий микромассаж для расслабления лицевых мышц',
+        language === 'de' ? 'Entzündungshemmende und schmerzlindernde Wirkung' : language === 'ru' ? 'Противовоспалительное и обезболивающее действие' : 'Противовоспалительное и обезболивающее действие',
+        language === 'de' ? 'Porenverfeinerung und Verbesserung der Hautstruktur' : language === 'ru' ? 'Сужение пор и улучшение текстуры кожи' : 'Сужение пор и улучшение текстуры кожи',
+        language === 'de' ? 'Nicht-invasive Körperformung und Fettreduktion bei Kavitation' : language === 'ru' ? 'Неинвазивная коррекция фигуры и липолиз при кавитации' : 'Неинвазивная коррекция фигуры и липолиз при кавитации',
+        language === 'de' ? 'Tiefenreinigung ohne mechanische Belastung der Haut' : language === 'ru' ? 'Глубокое очищение без механического травмирования кожи' : 'Глубокое очищение без механического травмирования кожи',
+        language === 'de' ? 'Völlig schmerzfrei, sicher und entspannend' : language === 'ru' ? 'Абсолютно безболезненно, безопасно и расслабляюще' : 'Абсолютно безболезненно, безопасно и расслабляюще',
+        language === 'de' ? 'Keine Ausfallzeiten — sofort gesellschaftsfähig' : language === 'ru' ? 'Без периода реабилитации — сразу готовы к общению' : 'Без периода реабилитации — сразу готовы к общению',
+        language === 'de' ? 'Kombinierbar mit anderen Behandlungen (Mikrostrom, RF, LED-Lichttherapie)' : language === 'ru' ? 'Можно комбинировать с другими процедурами (микротоки, RF, светотерапия)' : 'Можно комбинировать с другими процедурами (микротоки, RF, светотерапия)',
+        language === 'de' ? 'Geeignet für alle Hauttypen und Altersgruppen' : language === 'ru' ? 'Подходит для всех типов кожи и возрастов' : 'Подходит для всех типов кожи и возрастов',
+        language === 'de' ? 'Wissenschaftlich bewährte Methode mit Jahrzehnten klinischer Erfahrung' : language === 'ru' ? 'Научно обоснованный метод с десятилетиями клинического опыта' : 'Научно обоснованный метод с десятилетиями клинического опыта',
+        language === 'de' ? 'Natürliche, nicht-invasive Alternative zu Injektionen und operativen Eingriffen' : language === 'ru' ? 'Естественная, неинвазивная альтернатива инъекциям и операциям' : 'Естественная, неинвазивная альтернатива инъекциям и операциям'
       ]}
       steps={[
         {
-          title: isGerman ? '1. Kostenlose Beratung und Hautanalyse' : '1. Бесплатная консультация и анализ кожи',
+          title: language === 'de' ? '1. Kostenlose Beratung und Hautanalyse' : language === 'ru' ? '1. Бесплатная консультация и анализ кожи' : '1. Бесплатная консультація и анализ кожи',
           description: isGerman
             ? 'Analyse von Hauttyp, Problemen und Zielen. Empfehlung der optimalen Ultraschall-Behandlung.'
             : 'Анализ типа кожи, проблем и целей. Рекомендация оптимальной ультразвуковой процедуры.'
         },
         {
-          title: isGerman ? '2. Vorbereitung der Haut' : '2. Подготовка кожи',
+          title: language === 'de' ? '2. Vorbereitung der Haut' : language === 'ru' ? '2. Подготовка кожи' : '2. Подготовка кожи',
           description: isGerman
             ? 'Gründliche Reinigung und Auftragen des Kontaktgels. Bei Phonophorese zusätzlich Auftragen hochwertiger Wirkstoffe.'
             : 'Тщательное очищение и нанесение контактного геля. При фонофорезе дополнительно нанесение активных веществ.'
         },
         {
-          title: isGerman ? '3. Ultraschall-Behandlung (30-60 Minuten)' : '3. Ультразвуковая процедура (30-60 минут)',
+          title: language === 'de' ? '3. Ultraschall-Behandlung (30-60 Minuten)' : language === 'ru' ? '3. Ультразвуковая процедура (30-60 минут)' : '3. Ультразвуковая процедура (30-60 хвилин)',
           description: isGerman
             ? 'Sanfte Behandlung mit Ultraschallkopf. Völlig schmerzfrei und entspannend.'
             : 'Мягкая обработка ультразвуковым датчиком. Абсолютно безболезненно и расслабляюще.'
         },
         {
-          title: isGerman ? '4. Abschlusspflege' : '4. Завершающий уход',
+          title: language === 'de' ? '4. Abschlusspflege' : language === 'ru' ? '4. Завершающий уход' : '4. Завершающий уход',
           description: isGerman
             ? 'Beruhigende Maske und Serum. Optional Kombination mit anderen Behandlungen.'
             : 'Успокаивающая маска и сыворотка. Опционально комбинация с другими процедурами.'
         },
         {
-          title: isGerman ? '5. Pflegeempfehlungen' : '5. Рекомендации',
+          title: language === 'de' ? '5. Pflegeempfehlungen' : language === 'ru' ? '5. Рекомендации' : '5. Рекомендации',
           description: isGerman
             ? 'Individuelle Pflegetipps und Behandlungsplan für optimale Ergebnisse.'
             : 'Индивидуальные рекомендации по уходу и план процедур для оптимального результата.'
@@ -127,18 +127,18 @@ const Ultraschall = () => {
       // No price table - redirect to individual services
       priceSection="apparative-antiaging"
       contraindications={[
-        isGerman ? 'Schwangerschaft' : 'Беременность',
-        isGerman ? 'Herzschrittmacher oder Metallimplantate im Behandlungsbereich' : 'Кардиостимулятор или металлические имплантаты в зоне воздействия',
-        isGerman ? 'Thrombose oder schwere Venenerkrankungen' : 'Тромбоз или тяжёлые заболевания вен',
-        isGerman ? 'Krebs oder Chemotherapie' : 'Онкология или химиотерапия',
-        isGerman ? 'Epilepsie' : 'Эпилепсия',
-        isGerman ? 'Aktive Hautinfektionen, Herpes oder offene Wunden' : 'Активные кожные инфекции, герпес или открытые раны',
-        isGerman ? 'Frische Operationen (mind. 3-6 Monate Abstand)' : 'Недавние операции (мин. 3-6 месяцев после)',
-        isGerman ? 'Frische Filler oder Botox (mind. 2 Wochen Abstand)' : 'Недавние филлеры или ботокс (мин. 2 недели после)'
+        language === 'de' ? 'Schwangerschaft' : language === 'ru' ? 'Беременность' : 'Беременность',
+        language === 'de' ? 'Herzschrittmacher oder Metallimplantate im Behandlungsbereich' : language === 'ru' ? 'Кардиостимулятор или металлические имплантаты в зоне воздействия' : 'Кардиостимулятор или металлические имплантаты в зоне воздействия',
+        language === 'de' ? 'Thrombose oder schwere Venenerkrankungen' : language === 'ru' ? 'Тромбоз или тяжёлые заболевания вен' : 'Тромбоз или тяжёлые заболевания вен',
+        language === 'de' ? 'Krebs oder Chemotherapie' : language === 'ru' ? 'Онкология или химиотерапия' : 'Онкология или химиотерапия',
+        language === 'de' ? 'Epilepsie' : language === 'ru' ? 'Эпилепсия' : 'Эпилепсия',
+        language === 'de' ? 'Aktive Hautinfektionen, Herpes oder offene Wunden' : language === 'ru' ? 'Активные кожные инфекции, герпес или открытые раны' : 'Активные кожные инфекции, герпес или открытые раны',
+        language === 'de' ? 'Frische Operationen (mind. 3-6 Monate Abstand)' : language === 'ru' ? 'Недавние операции (мин. 3-6 месяцев после)' : 'Недавние операции (хв. 3-6 месяцев после)',
+        language === 'de' ? 'Frische Filler oder Botox (mind. 2 Wochen Abstand)' : language === 'ru' ? 'Недавние филлеры или ботокс (мин. 2 недели после)' : 'Недавние филлеры или ботокс (хв. 2 недели после)'
       ]}
       faq={[
         {
-          q: isGerman ? 'Was ist der Unterschied zwischen Phonophorese, Kavitation und Ultraschall-Gesichtsreinigung?' : 'В чём разница между фонофорезом, кавитацией и ультразвуковой чисткой лица?',
+          q: language === 'de' ? 'Was ist der Unterschied zwischen Phonophorese, Kavitation und Ultraschall-Gesichtsreinigung?' : language === 'ru' ? 'В чём разница между фонофорезом, кавитацией и ультразвуковой чисткой лица?' : 'В чём разница между фонофорезом, кавитацией и ультразвуковой чисткой лица?',
           a: isGerman
             ? `Alle drei Verfahren nutzen Ultraschallwellen, unterscheiden sich jedoch in Frequenz, Intensität und Zielsetzung:
 
@@ -156,13 +156,13 @@ const Ultraschall = () => {
 🔹 Ультразвуковая чистка лица (20-30 кГц) деликатно удаляет ороговевшие клетки, кожное сало и загрязнения — идеально для глубокого, но щадящего очищения и сужения пор.`
         },
         {
-          q: isGerman ? 'Ist Ultraschalltherapie schmerzhaft oder gefährlich?' : 'Ультразвуковая терапия болезненна или опасна?',
+          q: language === 'de' ? 'Ist Ultraschalltherapie schmerzhaft oder gefährlich?' : language === 'ru' ? 'Ультразвуковая терапия болезненна или опасна?' : 'Ультразвуковая терапия болезненна или опасна?',
           a: isGerman
             ? 'Nein, die Ultraschalltherapie ist völlig schmerzfrei, sicher und wird von den meisten Kunden als sehr angenehm und entspannend empfunden. Sie spüren lediglich eine sanfte Wärme und leichte Vibrationen auf der Haut. Die Methode wird seit Jahrzehnten in der Medizin und ästhetischen Kosmetik eingesetzt und hat ihre Sicherheit in zahlreichen wissenschaftlichen Studien bewiesen. Anders als invasive Verfahren gibt es keine Injektionen, keine Schnitte, keine Ausfallzeiten und kein Risiko für Komplikationen. Die einzigen Kontraindikationen sind Schwangerschaft, Herzschrittmacher, Thrombose und einige andere medizinische Zustände, die wir in der Beratung besprechen.'
             : 'Нет, ультразвуковая терапия абсолютно безболезненна, безопасна и большинством клиентов воспринимается как очень приятная и расслабляющая. Вы чувствуете лишь мягкое тепло и лёгкие вибрации на коже. Метод применяется десятилетиями в медицине и эстетической косметологии и доказал свою безопасность в многочисленных научных исследованиях. В отличие от инвазивных процедур, здесь нет инъекций, разрезов, периода реабилитации и риска осложнений. Единственные противопоказания — беременность, кардиостимулятор, тромбоз и некоторые другие медицинские состояния, которые мы обсуждаем на консультации.'
         },
         {
-          q: isGerman ? 'Wie viele Behandlungen brauche ich für sichtbare Ergebnisse?' : 'Сколько процедур нужно для видимого результата?',
+          q: language === 'de' ? 'Wie viele Behandlungen brauche ich für sichtbare Ergebnisse?' : language === 'ru' ? 'Сколько процедур нужно для видимого результата?' : 'Сколько процедур нужно для видимого результата?',
           a: isGerman
             ? `Die Anzahl der Behandlungen hängt von der gewählten Methode und Ihren individuellen Zielen ab:
 
@@ -180,7 +180,7 @@ const Ultraschall = () => {
 ✅ Чистка лица: Мгновенный эффект после каждой процедуры (более свежая, чистая кожа). Для долгосрочной чистой кожи с суженными порами мы рекомендуем 1× каждые 4-6 недель.`
         }
       ]}
-      ctaTitle={isGerman ? "Bereit für moderne Ultraschalltherapie in München?" : "Готовы к современной ультразвуковой терапии в Мюнхене?"}
+      ctaTitle={language === 'de' ? "Bereit für moderne Ultraschalltherapie in München?" : language === 'ru' ? "Готовы к современной ультразвуковой терапии в Мюнхене?" : "Готовы к современной ультразвуковой терапии в Мюнхене?"}
       ctaDescription={isGerman
         ? "Entdecken Sie die vielfältigen Möglichkeiten der Ultraschalltherapie in unserem Kosmetikstudio in München-Haidhausen: intensive Anti-Aging-Pflege mit Phonophorese, nicht-invasive Körperformung mit Kavitation oder gründliche Gesichtsreinigung — alles schmerzfrei, sicher und mit wissenschaftlich bewährter Wirkung. Kostenlose Beratung inklusive!"
         : "Откройте для себя разнообразные возможности ультразвуковой терапии в нашей косметологической студии в Мюнхене-Хайдхаузен: интенсивный омолаживающий уход с фонофорезом, неинвазивная коррекция фигуры с кавитацией или глубокая чистка лица — всё безболезненно, безопасно и с научно доказанной эффективностью. Бесплатная консультация включена!"

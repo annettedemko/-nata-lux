@@ -133,10 +133,10 @@ const Peelings = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <Link to="/shop" className="text-brand-rose hover:text-brand-espresso transition-colors mb-4 inline-block">
-              ← {isGerman ? "Zurück zum Shop" : "Назад в магазин"}
+              ← {language === 'de' ? "Zurück zum Shop" : language === 'ru' ? "Назад в магазин" : "Назад в магазин"}
             </Link>
             <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-4">
-              {isGerman ? "Peelings & Erneuerung" : "Пилинги и обновление"}
+              {language === 'de' ? "Peelings & Erneuerung" : language === 'ru' ? "Пилинги и обновление" : "Пилинги и обновление"}
             </h1>
             <p className="text-lg text-brand-coffee/80 max-w-3xl mx-auto leading-relaxed">
               {isGerman

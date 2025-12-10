@@ -63,11 +63,11 @@ const RFVakuum = () => {
   return (
     <ServicePageLayout
       icon={Star}
-      title={isGerman ? "RF-Vakuum" : "RF-вакуум"}
+      title={language === 'de' ? "RF-Vakuum" : language === 'ru' ? "RF-вакуум" : "RF-вакуум"}
       subtitle={isGerman
         ? "Radiofrequenz mit Vakuum für Straffung und Cellulite-Reduktion"
         : "Радиочастоты с вакуумом для подтяжки и уменьшения целлюлита"}
-      aboutTitle={isGerman ? "Was ist RF-Vakuum?" : "Что такое RF-вакуум?"}
+      aboutTitle={language === 'de' ? "Was ist RF-Vakuum?" : language === 'ru' ? "Что такое RF-вакуум?" : "Что такое RF-вакуум?"}
       aboutDescription={isGerman ? [
         'RF-Vakuum kombiniert zwei hochwirksame Technologien: Radiofrequenz-Wellen zur Hautstraffung und Vakuum-Massage zur Cellulite-Reduktion und Lymphdrainage.',
         'Die Radiofrequenz erwärmt die tiefen Hautschichten und regt die Kollagenproduktion an, während die Vakuum-Massage die Durchblutung fördert, Fettgewebe mobilisiert und Cellulite sichtbar reduziert.',
@@ -196,7 +196,7 @@ const RFVakuum = () => {
           a: 'Нет, вы можете сразу вернуться к обычной деятельности. Кожа может быть слегка покрасневшей, что проходит через 1-2 часа.'
         }
       ]}
-      ctaTitle={isGerman ? "Bereit für straffere, glattere Haut?" : "Готовы к более упругой, гладкой коже?"}
+      ctaTitle={language === 'de' ? "Bereit für straffere, glattere Haut?" : language === 'ru' ? "Готовы к более упругой, гладкой коже?" : "Готовы к более упругой, гладкой коже?"}
       ctaDescription={isGerman
         ? "Buchen Sie jetzt Ihre RF-Vakuum Behandlung und verabschieden Sie sich von Cellulite!"
         : "Запишитесь на процедуру RF-вакуум и попрощайтесь с целлюлитом!"}

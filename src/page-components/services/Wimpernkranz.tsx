@@ -51,11 +51,11 @@ const Wimpernkranz = () => {
   return (
     <ServicePageLayout
       icon={Eye}
-      title={isGerman ? "Wimpernkranz (Eyeliner PMU)" : "Межресничка (Eyeliner PMU)"}
+      title={language === 'de' ? "Wimpernkranz (Eyeliner PMU)" : language === 'ru' ? "Межресничка (Eyeliner PMU)" : "Межресничка (Eyeliner PMU)"}
       subtitle={isGerman
         ? "Permanent Make-up Wimpernkranzverdichtung – klassisch oder intensiv"
         : "Перманентный макияж межресничного пространства – классический или интенсивный"}
-      aboutTitle={isGerman ? "Was ist ein Wimpernkranz?" : "Что такое межресничка?"}
+      aboutTitle={language === 'de' ? "Was ist ein Wimpernkranz?" : language === 'ru' ? "Что такое межресничка?" : "Что такое межресничка?"}
       aboutDescription={isGerman ? [
         'Der Wimpernkranz (auch Lid-Strich oder Eyeliner PMU genannt) ist eine Permanent Make-up Behandlung, bei der Pigmente direkt am Wimpernkranz eingearbeitet werden.',
         'Das Ergebnis ist eine optisch dichtere Wimpernlinie, die Ihre Augen ausdrucksstärker wirken lässt – ganz ohne tägliches Eyeliner auftragen.',
@@ -176,7 +176,7 @@ const Wimpernkranz = () => {
           a: 'Нет, пожалуйста, приходите без контактных линз. При необходимости возьмите с собой очки.'
         }
       ]}
-      ctaTitle={isGerman ? "Bereit für ausdrucksstarke Augen?" : "Готовы к выразительному взгляду?"}
+      ctaTitle={language === 'de' ? "Bereit für ausdrucksstarke Augen?" : language === 'ru' ? "Готовы к выразительному взгляду?" : "Готовы к выразительному взгляду?"}
       ctaDescription={isGerman
         ? "Buchen Sie jetzt Ihren Wimpernkranz Termin oder lassen Sie sich kostenlos beraten."
         : "Запишитесь на процедуру межреснички или получите бесплатную консультацию."}

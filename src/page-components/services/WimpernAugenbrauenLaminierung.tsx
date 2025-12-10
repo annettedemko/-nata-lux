@@ -51,11 +51,11 @@ const WimpernAugenbrauenLaminierung = () => {
   return (
     <ServicePageLayout
       icon={Eye}
-      title={isGerman ? "Wimpern- & Augenbrauenlaminierung in München" : "Ламинирование ресниц и бровей в Мюнхене"}
+      title={language === 'de' ? "Wimpern- & Augenbrauenlaminierung in München" : language === 'ru' ? "Ламинирование ресниц и бровей в Мюнхене" : "Ламинирование вій и брів в Мюнхене"}
       subtitle={isGerman
         ? "Lash Lifting & Brow Lamination – natürlicher Curl, Volumen und gepflegte Form für 6-8 Wochen"
         : "Lash Lifting & Brow Lamination – естественный изгиб, объём и ухоженная форма на 6-8 недель"}
-      aboutTitle={isGerman ? "Was ist Wimpern- und Augenbrauenlaminierung?" : "Что такое ламинирование ресниц и бровей?"}
+      aboutTitle={language === 'de' ? "Was ist Wimpern- und Augenbrauenlaminierung?" : language === 'ru' ? "Что такое ламинирование ресниц и бровей?" : "Что такое ламинирование вій и брів?"}
       aboutDescription={isGerman ? [
         'Die Wimpern- und Augenbrauenlaminierung (auch Lash Lifting und Brow Lamination genannt) ist eine der beliebtesten Beauty-Behandlungen in München für einen natürlichen, ausdrucksstarken Look ohne tägliches Styling. In unserem Studio in München-Haidhausen bieten wir beide Behandlungen mit hochwertigen Produkten und professioneller Technik an.',
         'Bei der Wimpernlaminierung (Lash Lifting) werden Ihre natürlichen Wimpern sanft von der Wurzel an nach oben gebogen und mit einer speziellen Lösung fixiert. Das Ergebnis: ein natürlicher, offener Blick mit optisch längeren und volleren Wimpern – ganz ohne Wimpernzange oder Extensions. Ideal für alle, die ihre natürlichen Wimpern betonen möchten.',
@@ -232,7 +232,7 @@ const WimpernAugenbrauenLaminierung = () => {
           a: 'Это разные процедуры: ламинирование подчёркивает ваши натуральные ресницы, наращивание добавляет искусственные. Ламинирование проще в уходе и естественнее, наращивание даёт больше объёма и драматичности.'
         }
       ]}
-      ctaTitle={isGerman ? "Bereit für perfekte Wimpern und Augenbrauen in München?" : "Готовы к идеальным ресницам и бровям в Мюнхене?"}
+      ctaTitle={language === 'de' ? "Bereit für perfekte Wimpern und Augenbrauen in München?" : language === 'ru' ? "Готовы к идеальным ресницам и бровям в Мюнхене?" : "Готовы к идеальным війам и бровям в Мюнхене?"}
       ctaDescription={isGerman
         ? "Buchen Sie jetzt Ihre Wimpern- und/oder Augenbrauenlaminierung in München-Haidhausen. Lash Lifting und Brow Lamination für einen natürlichen, pflegeleichten Look. Kostenlose Beratung inklusive!"
         : "Запишитесь на ламинирование ресниц и/или бровей в Мюнхене-Хайдхаузен. Lash Lifting и Brow Lamination для естественного, неприхотливого образа. Бесплатная консультация включена!"}

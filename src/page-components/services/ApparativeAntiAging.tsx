@@ -20,7 +20,7 @@ const ApparativeAntiAging = () => {
       image: '/162.jpeg',
     },
     {
-      title: isGerman ? 'Lichttherapie' : 'Световая терапия',
+      title: language === 'de' ? 'Lichttherapie' : language === 'ru' ? 'Световая терапия' : 'Световая терапия',
       description: isGerman
         ? 'LED und IPL für Anti-Aging und Hautregeneration'
         : 'LED и IPL для омоложения и регенерации кожи',
@@ -29,7 +29,7 @@ const ApparativeAntiAging = () => {
       image: '/124.jpeg',
     },
     {
-      title: isGerman ? 'Biostrom' : 'Биотоки',
+      title: language === 'de' ? 'Biostrom' : language === 'ru' ? 'Биотоки' : 'Биотоки',
       description: isGerman
         ? 'Mikrostrom für Muskelstimulation und Lifting'
         : 'Микротоки для стимуляции мышц и лифтинга',
@@ -38,7 +38,7 @@ const ApparativeAntiAging = () => {
       image: '/125.webp',
     },
     {
-      title: isGerman ? 'Ultraschall' : 'Ультразвук',
+      title: language === 'de' ? 'Ultraschall' : language === 'ru' ? 'Ультразвук' : 'Ультразвук',
       description: isGerman
         ? 'Tiefenwirksame Hautpflege und Straffung'
         : 'Глубокий уход за кожей и подтяжка',

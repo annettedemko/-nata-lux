@@ -23,11 +23,11 @@ const DarsonvalHaare = () => {
   return (
     <ServicePageLayout
       icon={Zap}
-      title={isGerman ? "Darsonval für Haare" : "Дарсонваль для волос"}
+      title={language === 'de' ? "Darsonval für Haare" : language === 'ru' ? "Дарсонваль для волос" : "Дарсонваль для волос"}
       subtitle={isGerman
         ? "Wachstumsstimulation und Wurzelstärkung mit Hochfrequenzstrom"
         : "Стимуляция роста и укрепление корней высокочастотным током"}
-      aboutTitle={isGerman ? "Was ist Darsonval für Haare?" : "Что такое дарсонваль для волос?"}
+      aboutTitle={language === 'de' ? "Was ist Darsonval für Haare?" : language === 'ru' ? "Что такое дарсонваль для волос?" : "Что такое дарсонваль для волос?"}
       aboutDescription={isGerman ? [
         'Darsonval ist eine bewährte elektrotherapeutische Behandlung mit Hochfrequenzstrom, die die Kopfhaut stimuliert und das Haarwachstum anregt.',
         'Durch die sanften elektrischen Impulse werden die Durchblutung der Kopfhaut verbessert, die Haarfollikel gestärkt und die Nährstoffversorgung optimiert. Dies führt zu kräftigerem Haarwachstum und kann Haarausfall vorbeugen.',
@@ -147,7 +147,7 @@ const DarsonvalHaare = () => {
         }
       ]}
       procedureSchema={<SchemaSection />}
-      ctaTitle={isGerman ? "Bereit für kräftigeres, gesünderes Haar?" : "Готовы к более крепким, здоровым волосам?"}
+      ctaTitle={language === 'de' ? "Bereit für kräftigeres, gesünderes Haar?" : language === 'ru' ? "Готовы к более крепким, здоровым волосам?" : "Готовы к более крепким, здоровым волосам?"}
       ctaDescription={isGerman
         ? "Buchen Sie jetzt Ihre Darsonval-Behandlung und starten Sie Ihre Haar-Kur."
         : "Запишитесь на процедуру дарсонваль и начните курс для волос."}

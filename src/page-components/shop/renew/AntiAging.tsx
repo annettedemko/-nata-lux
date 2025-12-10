@@ -32,7 +32,7 @@ const AntiAging = () => {
     },
     {
       id: "eye-contour-cream-golden",
-      name: isGerman ? "Augenkonturcreme" : "Крем для контура глаз",
+      name: language === 'de' ? "Augenkonturcreme" : language === 'ru' ? "Крем для контура глаз" : "Крем для контура глаз",
       line: "Golden Age",
       description: isGerman
         ? "Spezielle Augenpflege mit Peptiden und Hyaluronsäure. Reduziert Schwellungen, dunkle Augenringe und Krähenfüße. Strafft die empfindliche Augenpartie."
@@ -43,7 +43,7 @@ const AntiAging = () => {
     },
     {
       id: "night-active-cream",
-      name: isGerman ? "Nachtaktive Creme" : "Ночной активный крем",
+      name: language === 'de' ? "Nachtaktive Creme" : language === 'ru' ? "Ночной активный крем" : "Ночной активный крем",
       line: "Golden Age",
       description: isGerman
         ? "Intensive Nachtcreme mit Retinol und Kollagen. Regeneriert die Haut während des Schlafs, glättet Falten und verbessert die Hautstruktur."
@@ -54,7 +54,7 @@ const AntiAging = () => {
     },
     {
       id: "lifting-moisturizing-cream",
-      name: isGerman ? "Lifting Feuchtigkeitscreme" : "Лифтинг увлажняющий крем",
+      name: language === 'de' ? "Lifting Feuchtigkeitscreme" : language === 'ru' ? "Лифтинг увлажняющий крем" : "Лифтинг увлажняющий крем",
       line: "Golden Age",
       description: isGerman
         ? "Tagescreme mit sofortigem Lifting-Effekt. Spendet Feuchtigkeit, strafft die Gesichtskonturen und schützt vor Umwelteinflüssen."
@@ -66,7 +66,7 @@ const AntiAging = () => {
     // Anti Age Line
     {
       id: "anti-aging-firming-mask",
-      name: isGerman ? "Anti-Aging Straffende Maske" : "Антивозрастная укрепляющая маска",
+      name: language === 'de' ? "Anti-Aging Straffende Maske" : language === 'ru' ? "Антивозрастная укрепляющая маска" : "Антивозрастная укрепляющая маска",
       line: "Anti Age",
       description: isGerman
         ? "Straffende Maske mit Kollagen und Elastin. Sofortiger Lifting-Effekt und intensive Feuchtigkeitsversorgung. Ideal vor besonderen Anlässen."
@@ -87,7 +87,7 @@ const AntiAging = () => {
     },
     {
       id: "restoring-eye-cream",
-      name: isGerman ? "Regenerierende Augencreme" : "Восстанавливающий крем для глаз",
+      name: language === 'de' ? "Regenerierende Augencreme" : language === 'ru' ? "Восстанавливающий крем для глаз" : "Восстанавливающий крем для глаз",
       line: "Anti Age",
       description: isGerman
         ? "Regenerierende Augencreme mit Peptiden. Glättet Fältchen, festigt die empfindliche Augenpartie und reduziert Anzeichen von Müdigkeit."
@@ -121,7 +121,7 @@ const AntiAging = () => {
     // Retinol Line
     {
       id: "rejuvenating-serum-retinol",
-      name: isGerman ? "Verjüngendes Retinol Serum" : "Омолаживающая сыворотка с ретинолом",
+      name: language === 'de' ? "Verjüngendes Retinol Serum" : language === 'ru' ? "Омолаживающая сыворотка с ретинолом" : "Омолаживающая сыворотка с ретинолом",
       line: "Retinol",
       description: isGerman
         ? "Hochdosiertes Retinol-Serum. Beschleunigt die Zellerneuerung, glättet Falten und verfeinert die Poren. Abends auf die gereinigte Haut auftragen."
@@ -132,7 +132,7 @@ const AntiAging = () => {
     },
     {
       id: "rejuvenating-cream-retinol",
-      name: isGerman ? "Verjüngende Retinol Creme" : "Омолаживающий крем с ретинолом",
+      name: language === 'de' ? "Verjüngende Retinol Creme" : language === 'ru' ? "Омолаживающий крем с ретинолом" : "Омолаживающий крем с ретинолом",
       line: "Retinol",
       description: isGerman
         ? "Retinol-Creme für die Nacht. Mildert Pigmentflecken, verbessert die Hautstruktur und reduziert feine Linien. Mit Vitamin E für zusätzliche Pflege."
@@ -222,10 +222,10 @@ const AntiAging = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <Link to="/shop" className="text-brand-rose hover:text-brand-espresso transition-colors mb-4 inline-block">
-              ← {isGerman ? "Zurück zum Shop" : "Назад в магазин"}
+              ← {language === 'de' ? "Zurück zum Shop" : language === 'ru' ? "Назад в магазин" : "Назад в магазин"}
             </Link>
             <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-4">
-              {isGerman ? "Anti-Aging Pflege" : "Антивозрастной уход"}
+              {language === 'de' ? "Anti-Aging Pflege" : language === 'ru' ? "Антивозрастной уход" : "Антивозрастной уход"}
             </h1>
             <p className="text-lg text-brand-coffee/80 max-w-3xl mx-auto leading-relaxed">
               {isGerman

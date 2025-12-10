@@ -56,12 +56,12 @@ const Phonophorese = () => {
   return (
     <ServicePageLayout
       icon={Droplet}
-      title={isGerman ? "Ultraschall-Phonophorese in München" : "Ультразвуковой фонофорез в Мюнхене"}
+      title={language === 'de' ? "Ultraschall-Phonophorese in München" : language === 'ru' ? "Ультразвуковой фонофорез в Мюнхене" : "Ультразвуковой фонофорез в Мюнхене"}
       subtitle={isGerman
         ? "Tiefenwirksame Wirkstoffeinschleusung mit Ultraschall – Intensive Hautpflege in München-Haidhausen"
         : "Глубокое проникновение активных веществ с помощью ультразвука – Интенсивный уход за кожей в Мюнхене-Хайдхаузен"
       }
-      aboutTitle={isGerman ? "Was ist Ultraschall-Phonophorese?" : "Что такое ультразвуковой фонофорез?"}
+      aboutTitle={language === 'de' ? "Was ist Ultraschall-Phonophorese?" : language === 'ru' ? "Что такое ультразвуковой фонофорез?" : "Что такое ультразвуковой фонофорез?"}
       aboutDescription={[
         isGerman
           ? 'Die Ultraschall-Phonophorese (auch Ultraphonophorese oder Sonophorese genannt) ist eine innovative nicht-invasive Methode der ästhetischen Kosmetik, bei der hochwertige kosmetische oder medizinische Wirkstoffe mithilfe von Ultraschallwellen tief in die Haut eingeschleust werden. In unserem Kosmetikstudio in München-Haidhausen arbeiten wir mit modernsten zertifizierten Ultraschallgeräten und professionellen Präparaten höchster Qualität.'
@@ -238,7 +238,7 @@ const Phonophorese = () => {
       ]}
       procedureSchema={<SchemaSection />}
       additionalSections={<RecommendedServices />}
-      ctaTitle={isGerman ? "Bereit für tiefenwirksame Hautpflege in München?" : "Готовы к глубокому уходу за кожей в Мюнхене?"}
+      ctaTitle={language === 'de' ? "Bereit für tiefenwirksame Hautpflege in München?" : language === 'ru' ? "Готовы к глубокому уходу за кожей в Мюнхене?" : "Готовы к глубокому уходу за кожей в Мюнхене?"}
       ctaDescription={isGerman
         ? "Buchen Sie jetzt Ihre Ultraschall-Phonophorese in unserem Studio in München-Haidhausen und erleben Sie den Unterschied: intensiv durchfeuchtete, strahlende und verjüngte Haut – ohne Nadeln, ohne Schmerzen, mit sofort sichtbaren Ergebnissen. Kostenlose Beratung inklusive!"
         : "Забронируйте сейчас ваш ультразвуковой фонофорез в нашей студии в Мюнхене-Хайдхаузен и ощутите разницу: интенсивно увлажненная, сияющая и омолодившаяся кожа – без игл, без боли, с мгновенно видимыми результатами. Бесплатная консультация включена!"

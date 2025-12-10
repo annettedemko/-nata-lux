@@ -11,11 +11,11 @@ const AlexandritLaser = () => {
   return (
     <ServicePageLayout
       icon={Zap}
-      title={isGerman ? "Alexandrit Laser Haarentfernung" : "Александритовый лазер для удаления волос"}
+      title={language === 'de' ? "Alexandrit Laser Haarentfernung" : language === 'ru' ? "Александритовый лазер для удаления волос" : "Александритовый лазер для удаления волос"}
       subtitle={isGerman
         ? "Ideal für helle Haut und dunkles Haar – Schnell, effektiv und dauerhaft"
         : "Идеален для светлой кожи и тёмных волос – Быстро, эффективно и навсегда"}
-      aboutTitle={isGerman ? "Was ist der Alexandrit Laser?" : "Что такое александритовый лазер?"}
+      aboutTitle={language === 'de' ? "Was ist der Alexandrit Laser?" : language === 'ru' ? "Что такое александритовый лазер?" : "Что такое александритовый лазер?"}
       aboutDescription={isGerman ? [
         'Der Alexandrit Laser ist der Goldstandard für dauerhafte Haarentfernung bei hellen bis mittleren Hauttönen. Mit einer Wellenlänge von 755 nm zielt er präzise auf das Melanin im Haarfollikel ab und zerstört diesen nachhaltig.',
         'Diese Technologie ist besonders effektiv bei dunklen Haaren auf heller Haut (Hauttyp I-IV nach Fitzpatrick). Die Behandlung ist schnell, nahezu schmerzfrei dank integriertem Kühlsystem und liefert langanhaltende Ergebnisse.',
@@ -140,7 +140,7 @@ const AlexandritLaser = () => {
           a: 'Не делать ваксинг, выщипывание или эпиляцию – только бритьё! За 4 недели до процедуры избегать солнца и солярия. В день процедуры побрить зону.'
         }
       ]}
-      ctaTitle={isGerman ? "Bereit für dauerhaft glatte Haut?" : "Готовы к гладкой коже навсегда?"}
+      ctaTitle={language === 'de' ? "Bereit für dauerhaft glatte Haut?" : language === 'ru' ? "Готовы к гладкой коже навсегда?" : "Готовы к гладкой коже навсегда?"}
       ctaDescription={isGerman
         ? "Buchen Sie jetzt Ihre kostenlose Beratung und starten Sie Ihre Laser-Haarentfernung."
         : "Запишитесь на бесплатную консультацию и начните лазерное удаление волос."}

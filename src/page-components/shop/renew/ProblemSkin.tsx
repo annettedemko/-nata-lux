@@ -33,7 +33,7 @@ const ProblemSkin = () => {
     },
     {
       id: "dermo-control-mask",
-      name: isGerman ? "Dermo Control Maske" : "Маска Дермо Контроль",
+      name: language === 'de' ? "Dermo Control Maske" : language === 'ru' ? "Маска Дермо Контроль" : "Маска Дермо Контроль",
       line: "Dermo Control",
       description: isGerman
         ? "Reinigende Maske mit Kaolin und Zink. Absorbiert überschüssigen Talg, verfeinert die Poren und beruhigt entzündete Haut."
@@ -44,7 +44,7 @@ const ProblemSkin = () => {
     },
     {
       id: "dermo-control-lotion",
-      name: isGerman ? "Dermo Control Lotion" : "Лосьон Дермо Контроль",
+      name: language === 'de' ? "Dermo Control Lotion" : language === 'ru' ? "Лосьон Дермо Контроль" : "Лосьон Дермо Контроль",
       line: "Dermo Control",
       description: isGerman
         ? "Ausgleichende Lotion mit BHA. Klärt die Haut, reguliert die Talgproduktion und beugt Unreinheiten vor. Täglich nach der Reinigung anwenden."
@@ -65,7 +65,7 @@ const ProblemSkin = () => {
     },
     {
       id: "moisturizing-cream-spf15",
-      name: isGerman ? "Feuchtigkeitscreme SPF-15" : "Увлажняющий крем SPF-15",
+      name: language === 'de' ? "Feuchtigkeitscreme SPF-15" : language === 'ru' ? "Увлажняющий крем SPF-15" : "Увлажняющий крем SPF-15",
       line: "Dermo Control",
       description: isGerman
         ? "Leichte Tagescreme mit Sonnenschutz für fettige Haut. Mattiert, schützt vor UV-Strahlung und spendet Feuchtigkeit ohne zu glänzen."
@@ -76,7 +76,7 @@ const ProblemSkin = () => {
     },
     {
       id: "moisturizing-cream-oil-free",
-      name: isGerman ? "Feuchtigkeitscreme Oil-Free" : "Увлажняющий крем без масла",
+      name: language === 'de' ? "Feuchtigkeitscreme Oil-Free" : language === 'ru' ? "Увлажняющий крем без масла" : "Увлажняющий крем без масла",
       line: "Dermo Control",
       description: isGerman
         ? "Ölfreie Feuchtigkeitscreme für fettige Haut. Versorgt mit Feuchtigkeit ohne zu fetten und hinterlässt ein mattes Finish."
@@ -149,7 +149,7 @@ const ProblemSkin = () => {
     },
     {
       id: "charcoal-soothing-mask",
-      name: isGerman ? "Beruhigende Kohlemaske" : "Успокаивающая угольная маска",
+      name: language === 'de' ? "Beruhigende Kohlemaske" : language === 'ru' ? "Успокаивающая угольная маска" : "Успокаивающая угольная маска",
       line: "Propioguard",
       description: isGerman
         ? "Tiefenreinigende Maske mit Aktivkohle. Entgiftet die Haut, absorbiert Unreinheiten und beruhigt Entzündungen."
@@ -189,10 +189,10 @@ const ProblemSkin = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <Link to="/shop" className="text-brand-rose hover:text-brand-espresso transition-colors mb-4 inline-block">
-              ← {isGerman ? "Zurück zum Shop" : "Назад в магазин"}
+              ← {language === 'de' ? "Zurück zum Shop" : language === 'ru' ? "Назад в магазин" : "Назад в магазин"}
             </Link>
             <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-4">
-              {isGerman ? "Problemhaut & Akne" : "Проблемная кожа и акне"}
+              {language === 'de' ? "Problemhaut & Akne" : language === 'ru' ? "Проблемная кожа и акне" : "Проблемная кожа и акне"}
             </h1>
             <p className="text-lg text-brand-coffee/80 max-w-3xl mx-auto leading-relaxed">
               {isGerman

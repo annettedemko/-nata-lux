@@ -12,7 +12,7 @@ const Shop = () => {
   const renewCategories = [
     {
       id: "whitening",
-      name: isGerman ? "Aufhellung & Pigmentierung" : "Осветление и пигментация",
+      name: language === 'de' ? "Aufhellung & Pigmentierung" : language === 'ru' ? "Осветление и пигментация" : "Осветление и пигментация",
       description: isGerman
         ? "Produkte gegen Pigmentflecken und für einen ebenmäßigen Teint"
         : "Средства против пигментных пятен и для ровного тона кожи",
@@ -82,7 +82,7 @@ const Shop = () => {
     },
     {
       id: "peelings",
-      name: isGerman ? "Peelings & Erneuerung" : "Пилинги и обновление",
+      name: language === 'de' ? "Peelings & Erneuerung" : language === 'ru' ? "Пилинги и обновление" : "Пилинги и обновление",
       description: isGerman
         ? "Professionelle Peelings für Hauterneuerung"
         : "Профессиональные пилинги для обновления кожи",
@@ -92,7 +92,7 @@ const Shop = () => {
     },
     {
       id: "masks",
-      name: isGerman ? "Masken & Intensivpflege" : "Маски и интенсивный уход",
+      name: language === 'de' ? "Masken & Intensivpflege" : language === 'ru' ? "Маски и интенсивный уход" : "Маски и интенсивный уход",
       description: isGerman
         ? "Intensive Masken für tiefe Pflege"
         : "Интенсивные маски для глубокого ухода",
@@ -102,7 +102,7 @@ const Shop = () => {
     },
     {
       id: "basic-care",
-      name: isGerman ? "Basispflege" : "Базовый уход",
+      name: language === 'de' ? "Basispflege" : language === 'ru' ? "Базовый уход" : "Базовый уход",
       description: isGerman
         ? "Gele und Cremes für die tägliche Pflege"
         : "Гели и кремы для ежедневного ухода",
@@ -112,7 +112,7 @@ const Shop = () => {
     },
     {
       id: "sun-protection",
-      name: isGerman ? "Sonnenschutz" : "Защита от солнца",
+      name: language === 'de' ? "Sonnenschutz" : language === 'ru' ? "Защита от солнца" : "Защита от солнца",
       description: isGerman
         ? "Schutz vor UV-Strahlung und Photoaging"
         : "Защита от УФ-излучения и фотостарения",
@@ -122,7 +122,7 @@ const Shop = () => {
     },
     {
       id: "sensitive-skin",
-      name: isGerman ? "Empfindliche Haut & Couperose" : "Чувствительная кожа и купероз",
+      name: language === 'de' ? "Empfindliche Haut & Couperose" : language === 'ru' ? "Чувствительная кожа и купероз" : "Чувствительная кожа и купероз",
       description: isGerman
         ? "Beruhigende Pflege für empfindliche Haut und Rötungen"
         : "Успокаивающий уход для чувствительной кожи и покраснений",
@@ -152,7 +152,7 @@ const Shop = () => {
     },
     {
       id: "professional",
-      name: isGerman ? "Professionelle Behandlungen" : "Профессиональные процедуры",
+      name: language === 'de' ? "Professionelle Behandlungen" : language === 'ru' ? "Профессиональные процедуры" : "Профессиональные процедуры",
       description: isGerman
         ? "Spezielle Produkte für professionelle Anwendungen"
         : "Специальные средства для профессиональных процедур",
@@ -193,7 +193,7 @@ const Shop = () => {
             {/* Shop Section */}
             <div className="glass rounded-2xl p-6 max-w-3xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-3">
-                {isGerman ? "Kosmetik-Shop" : "Магазин косметики"}
+                {language === 'de' ? "Kosmetik-Shop" : language === 'ru' ? "Магазин косметики" : "Магазин косметики"}
               </h2>
               <p className="text-brand-coffee/70 mb-3">
                 {isGerman

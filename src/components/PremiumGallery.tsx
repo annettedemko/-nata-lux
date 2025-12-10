@@ -107,10 +107,10 @@ export const PremiumGallery = ({ images, title }: PremiumGalleryProps) => {
             className="h-[2px] bg-gradient-to-r from-transparent via-brand-gold to-transparent mx-auto mb-6"
           />
           <h2 className="text-3xl md:text-4xl font-heading font-semibold text-brand-espresso mb-2">
-            {title || (isGerman ? 'Unsere Arbeiten' : 'Наши работы')}
+            {title || (language === 'de' ? 'Unsere Arbeiten' : language === 'ru' ? 'Наши работы' : 'Наши работы')}
           </h2>
           <p className="text-brand-coffee/60 text-sm tracking-widest uppercase">
-            {isGerman ? 'Galerie' : 'Галерея'}
+            {language === 'de' ? 'Galerie' : language === 'ru' ? 'Галерея' : 'Галерея'}
           </p>
         </div>
 
@@ -141,7 +141,7 @@ export const PremiumGallery = ({ images, title }: PremiumGalleryProps) => {
               ) : (
                 <Image
                   src={getSrc(item)}
-                  alt={`${isGerman ? 'Arbeit' : 'Работа'} ${index + 1}`}
+                  alt={`${language === 'de' ? 'Arbeit' : language === 'ru' ? 'Работа' : 'Работа'} ${index + 1}`}
                   fill
                   className="object-cover transition-all duration-700 ease-out group-hover:scale-110"
                   sizes="(max-width: 768px) 50vw, 25vw"
@@ -162,7 +162,7 @@ export const PremiumGallery = ({ images, title }: PremiumGalleryProps) => {
               {/* View indicator */}
               <div className="absolute bottom-3 left-3 right-3 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
                 <span className="text-white text-xs font-medium tracking-wider uppercase bg-black/30 backdrop-blur-sm px-3 py-1.5 rounded-full">
-                  {isGerman ? 'Ansehen' : 'Смотреть'}
+                  {language === 'de' ? 'Ansehen' : language === 'ru' ? 'Смотреть' : 'Смотреть'}
                 </span>
               </div>
             </motion.div>
@@ -232,7 +232,7 @@ export const PremiumGallery = ({ images, title }: PremiumGalleryProps) => {
             ) : (
               <Image
                 src={getSrc(images[selectedImage])}
-                alt={`${isGerman ? 'Arbeit' : 'Работа'} ${selectedImage + 1}`}
+                alt={`${language === 'de' ? 'Arbeit' : language === 'ru' ? 'Работа' : 'Работа'} ${selectedImage + 1}`}
                 fill
                 className="object-contain"
                 sizes="90vw"

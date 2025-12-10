@@ -59,11 +59,11 @@ const AquarellLips = () => {
   return (
     <ServicePageLayout
       icon={Heart}
-      title={isGerman ? "Aquarell Lips" : "Акварельные губы"}
+      title={language === 'de' ? "Aquarell Lips" : language === 'ru' ? "Акварельные губы" : "Акварельные губы"}
       subtitle={isGerman
         ? "Natürliche Lippenpigmentierung mit Aquarell & Velvet Techniken"
         : "Естественная пигментация губ в техниках Aquarell и Velvet"}
-      aboutTitle={isGerman ? "Was sind Aquarell Lips?" : "Что такое Aquarell Lips?"}
+      aboutTitle={language === 'de' ? "Was sind Aquarell Lips?" : language === 'ru' ? "Что такое Aquarell Lips?" : "Что такое Aquarell Lips?"}
       aboutDescription={isGerman ? [
         'Aquarell Lips ist eine sanfte Permanent Make-up Technik für die Lippen, die einen natürlichen, zarten Farbton verleiht – wie ein Hauch von Farbe, der Ihre natürliche Lippenfarbe betont.',
         'Die Aquarell-Technik erzeugt einen weichen, transparenten Effekt, während die Velvet-Technik für etwas mehr Deckkraft sorgt. Beide Techniken verleihen Ihren Lippen eine schöne Definition und optisch mehr Volumen.',
@@ -184,7 +184,7 @@ const AquarellLips = () => {
           a: 'При склонности к герпесу на губах рекомендуем профилактический приём Ацикловира за 3 дня до и 5 дней после процедуры.'
         }
       ]}
-      ctaTitle={isGerman ? "Bereit für natürlich schöne Lippen?" : "Готовы к естественно красивым губам?"}
+      ctaTitle={language === 'de' ? "Bereit für natürlich schöne Lippen?" : language === 'ru' ? "Готовы к естественно красивым губам?" : "Готовы к естественно красивым губам?"}
       ctaDescription={isGerman
         ? "Buchen Sie jetzt Ihre Aquarell Lips Behandlung oder vereinbaren Sie eine kostenlose Beratung."
         : "Запишитесь на процедуру Aquarell Lips или договоритесь о бесплатной консультации."}

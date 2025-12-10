@@ -22,7 +22,7 @@ const Masks = () => {
     },
     {
       id: "purifying-mask",
-      name: isGerman ? "Reinigende Maske" : "Очищающая маска",
+      name: language === 'de' ? "Reinigende Maske" : language === 'ru' ? "Очищающая маска" : "Очищающая маска",
       description: isGerman
         ? "Tiefenreinigende Maske mit Kaolin und grünem Tee. Entgiftet die Haut, absorbiert überschüssigen Talg und verfeinert die Poren. Für ein klares, mattes Hautbild."
         : "Глубоко очищающая маска с каолином и зеленым чаем. Детоксифицирует кожу, абсорбирует избыток кожного сала и сужает поры. Для чистого матового цвета лица.",
@@ -50,10 +50,10 @@ const Masks = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <Link to="/shop" className="text-brand-rose hover:text-brand-espresso transition-colors mb-4 inline-block">
-              ← {isGerman ? "Zurück zum Shop" : "Назад в магазин"}
+              ← {language === 'de' ? "Zurück zum Shop" : language === 'ru' ? "Назад в магазин" : "Назад в магазин"}
             </Link>
             <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-4">
-              {isGerman ? "Masken & Intensivpflege" : "Маски и интенсивный уход"}
+              {language === 'de' ? "Masken & Intensivpflege" : language === 'ru' ? "Маски и интенсивный уход" : "Маски и интенсивный уход"}
             </h1>
             <p className="text-lg text-brand-coffee/80 max-w-3xl mx-auto leading-relaxed">
               {isGerman

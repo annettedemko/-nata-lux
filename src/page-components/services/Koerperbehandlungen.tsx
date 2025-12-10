@@ -11,7 +11,7 @@ const Koerperbehandlungen = () => {
 
   const treatments = [
     {
-      title: isGerman ? 'RF-Vakuum' : 'RF-вакуум',
+      title: language === 'de' ? 'RF-Vakuum' : language === 'ru' ? 'RF-вакуум' : 'RF-вакуум',
       description: isGerman
         ? 'Radiofrequenz mit Vakuum für Straffung und Cellulite-Reduktion'
         : 'Радиочастоты с вакуумом для подтяжки и уменьшения целлюлита',
@@ -20,7 +20,7 @@ const Koerperbehandlungen = () => {
       image: '/83.jpg',
     },
     {
-      title: isGerman ? 'Kavitation' : 'Кавитация',
+      title: language === 'de' ? 'Kavitation' : language === 'ru' ? 'Кавитация' : 'Кавитация',
       description: isGerman
         ? 'Ultraschall-Kavitation für Fettreduktion an Bauch, Gesäß und Oberschenkeln'
         : 'Ультразвуковая кавитация для уменьшения жировых отложений на животе, ягодицах и бёдрах',

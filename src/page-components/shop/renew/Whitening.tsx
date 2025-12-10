@@ -25,7 +25,7 @@ const Whitening = () => {
     },
     {
       id: "depigmenting-mask",
-      name: isGerman ? "Depigmentierende Maske" : "Депигментирующая маска",
+      name: language === 'de' ? "Depigmentierende Maske" : language === 'ru' ? "Депигментирующая маска" : "Депигментирующая маска",
       description: isGerman
         ? "Intensive Maske mit Arbutin und Vitamin C. Reduziert Hyperpigmentierung und verleiht der Haut Ausstrahlung. Ideal bei Altersflecken, Melasma und ungleichmäßigem Teint."
         : "Интенсивная маска с арбутином и витамином С. Уменьшает гиперпигментацию и придает коже сияние. Идеально при возрастных пятнах, мелазме и неровном тоне кожи.",
@@ -38,7 +38,7 @@ const Whitening = () => {
     },
     {
       id: "depigmenting-serum",
-      name: isGerman ? "Depigmentierendes Serum" : "Депигментирующая сыворотка",
+      name: language === 'de' ? "Depigmentierendes Serum" : language === 'ru' ? "Депигментирующая сыворотка" : "Депигментирующая сыворотка",
       description: isGerman
         ? "Hochkonzentriertes Serum mit Kojisäure und Niacinamid. Hemmt die Melaninproduktion und hellt bestehende Pigmentflecken auf. Für sichtbare Ergebnisse in 4-6 Wochen."
         : "Высококонцентрированная сыворотка с койевой кислотой и ниацинамидом. Подавляет выработку меланина и осветляет существующие пигментные пятна. Видимые результаты через 4-6 недель.",
@@ -49,7 +49,7 @@ const Whitening = () => {
     },
     {
       id: "depigmenting-cream",
-      name: isGerman ? "Depigmentierende Creme" : "Депигментирующий крем",
+      name: language === 'de' ? "Depigmentierende Creme" : language === 'ru' ? "Депигментирующий крем" : "Депигментирующий крем",
       description: isGerman
         ? "Tägliche Pflegecreme mit aufhellenden Wirkstoffen. Schützt vor neuer Pigmentierung und pflegt die Haut intensiv. Mit Vitamin C, Arbutin und Süßholzwurzelextrakt."
         : "Ежедневный крем с осветляющими компонентами. Защищает от новой пигментации и интенсивно ухаживает за кожей. С витамином С, арбутином и экстрактом корня солодки.",
@@ -78,10 +78,10 @@ const Whitening = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <Link to="/shop" className="text-brand-rose hover:text-brand-espresso transition-colors mb-4 inline-block">
-              ← {isGerman ? "Zurück zum Shop" : "Назад в магазин"}
+              ← {language === 'de' ? "Zurück zum Shop" : language === 'ru' ? "Назад в магазин" : "Назад в магазин"}
             </Link>
             <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-4">
-              {isGerman ? "Aufhellung & Pigmentierung" : "Осветление и пигментация"}
+              {language === 'de' ? "Aufhellung & Pigmentierung" : language === 'ru' ? "Осветление и пигментация" : "Осветление и пигментация"}
             </h1>
             <p className="text-lg text-brand-coffee/80 max-w-3xl mx-auto leading-relaxed">
               {isGerman

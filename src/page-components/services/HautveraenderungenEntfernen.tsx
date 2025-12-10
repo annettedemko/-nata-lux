@@ -79,11 +79,11 @@ const HautveraenderungenEntfernen = () => {
   return (
     <ServicePageLayout
       icon={Shield}
-      title={isGerman ? "Hautveränderungen entfernen" : "Удаление новообразований кожи"}
+      title={language === 'de' ? "Hautveränderungen entfernen" : language === 'ru' ? "Удаление новообразований кожи" : "Видалення новообразований кожи"}
       subtitle={isGerman
         ? "Sichere Entfernung von Papillomen und Warzen in Zusammenarbeit mit Dermatologen"
         : "Безопасное удаление папиллом и бородавок в сотрудничестве с дерматологами"}
-      aboutTitle={isGerman ? "Was sind Hautveränderungen?" : "Что такое новообразования кожи?"}
+      aboutTitle={language === 'de' ? "Was sind Hautveränderungen?" : language === 'ru' ? "Что такое новообразования кожи?" : "Что такое новообразования кожи?"}
       aboutDescription={isGerman ? [
         'Hautveränderungen wie Papillome (Hautanhängsel, Fibrome), Warzen und andere gutartige Wucherungen sind häufig und meist harmlos, können aber kosmetisch störend sein.',
         'Wir bieten die professionelle Entfernung solcher Hautveränderungen in enger Zusammenarbeit mit erfahrenen Dermatologen an. Vor jeder Behandlung erfolgt eine dermatologische Untersuchung zur Abklärung.',
@@ -212,7 +212,7 @@ const HautveraenderungenEntfernen = () => {
           a: 'Только при медицинских показаниях. Чисто косметические удаления оплачиваются пациентом.'
         }
       ]}
-      ctaTitle={isGerman ? "Bereit für ein makelloses Hautbild?" : "Готовы к безупречной коже?"}
+      ctaTitle={language === 'de' ? "Bereit für ein makelloses Hautbild?" : language === 'ru' ? "Готовы к безупречной коже?" : "Готовы к безупречной коже?"}
       ctaDescription={isGerman
         ? "Vereinbaren Sie jetzt eine dermatologische Beratung und lassen Sie Hautveränderungen professionell entfernen."
         : "Запишитесь на дерматологическую консультацию и удалите образования профессионально."}

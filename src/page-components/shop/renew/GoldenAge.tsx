@@ -30,7 +30,7 @@ const GoldenAge = () => {
     },
     {
       id: "eye-contour-cream-golden",
-      name: isGerman ? "Augenkonturcreme" : "Крем для контура глаз",
+      name: language === 'de' ? "Augenkonturcreme" : language === 'ru' ? "Крем для контура глаз" : "Крем для контура глаз",
       description: isGerman
         ? "Spezielle Augenpflege mit Peptiden und Hyaluronsäure. Reduziert Schwellungen, dunkle Augenringe und Krähenfüße. Strafft die empfindliche Augenpartie."
         : "Специальный уход за глазами с пептидами и гиалуроновой кислотой. Уменьшает отечность, темные круги и гусиные лапки. Подтягивает нежную кожу вокруг глаз.",
@@ -43,7 +43,7 @@ const GoldenAge = () => {
     },
     {
       id: "night-active-cream",
-      name: isGerman ? "Nachtaktive Creme" : "Ночной активный крем",
+      name: language === 'de' ? "Nachtaktive Creme" : language === 'ru' ? "Ночной активный крем" : "Ночной активный крем",
       description: isGerman
         ? "Intensive Nachtcreme mit Retinol und Kollagen. Regeneriert die Haut während des Schlafs, glättet Falten und verbessert die Hautstruktur."
         : "Интенсивный ночной крем с ретинолом и коллагеном. Восстанавливает кожу во время сна, разглаживает морщины и улучшает текстуру кожи.",
@@ -56,7 +56,7 @@ const GoldenAge = () => {
     },
     {
       id: "lifting-moisturizing-cream",
-      name: isGerman ? "Lifting Feuchtigkeitscreme" : "Лифтинг увлажняющий крем",
+      name: language === 'de' ? "Lifting Feuchtigkeitscreme" : language === 'ru' ? "Лифтинг увлажняющий крем" : "Лифтинг увлажняющий крем",
       description: isGerman
         ? "Tagescreme mit sofortigem Lifting-Effekt. Spendet Feuchtigkeit, strafft die Gesichtskonturen und schützt vor Umwelteinflüssen."
         : "Дневной крем с мгновенным лифтинг-эффектом. Увлажняет, подтягивает контуры лица и защищает от воздействия окружающей среды.",
@@ -87,7 +87,7 @@ const GoldenAge = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <Link to="/shop" className="text-brand-rose hover:text-brand-espresso transition-colors mb-4 inline-block">
-              ← {isGerman ? "Zurück zum Shop" : "Назад в магазин"}
+              ← {language === 'de' ? "Zurück zum Shop" : language === 'ru' ? "Назад в магазин" : "Назад в магазин"}
             </Link>
             <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-4">
               Golden Age

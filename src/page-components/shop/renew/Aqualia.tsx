@@ -21,7 +21,7 @@ const Aqualia = () => {
     },
     {
       id: "eye-lip-makeup-remover",
-      name: isGerman ? "Augen & Lippen Make-up Entferner" : "Средство для снятия макияжа с глаз и губ",
+      name: language === 'de' ? "Augen & Lippen Make-up Entferner" : language === 'ru' ? "Средство для снятия макияжа с глаз и губ" : "Средство для снятия макияжа с глаз и губ",
       description: isGerman
         ? "Speziell entwickeltes Mittel zur Make-up-Entfernung und Hautreinigung. Reizt nicht die empfindliche Haut um die Augen und entfernt effektiv Kosmetik sowie Verschmutzungen"
         : "Специально разработанное средство для снятия макияжа и очищения кожи. Не раздражает чувствительную кожу вокруг глаз и эффективно удаляет косметику, а также загрязнения с поверхности кожи",
@@ -50,7 +50,7 @@ const Aqualia = () => {
     },
     {
       id: "skin-repair-moisturizing-mask",
-      name: isGerman ? "Reparierende Feuchtigkeitsmaske" : "Восстанавливающая увлажняющая маска",
+      name: language === 'de' ? "Reparierende Feuchtigkeitsmaske" : language === 'ru' ? "Восстанавливающая увлажняющая маска" : "Восстанавливающая увлажняющая маска",
       description: isGerman
         ? "Angenehme Gelmaske mit aktiven Komponenten zur Normalisierung physiologischer Prozesse in der Epidermis, Aufrechterhaltung des Wasserhaushalts und Hautverjüngung"
         : "Приятная гелевая маска с активными компонентами, нормализующими физиологические процессы в эпидермисе, поддерживающими водный баланс и способствующими омоложению кожи",
@@ -71,7 +71,7 @@ const Aqualia = () => {
     },
     {
       id: "eye-contour-gel",
-      name: isGerman ? "Augenkontur-Gel" : "Гель для контура глаз",
+      name: language === 'de' ? "Augenkontur-Gel" : language === 'ru' ? "Гель для контура глаз" : "Гель для контура глаз",
       description: isGerman
         ? "Gel mit leichter Textur und starker Wirkung glättet und hellt die Haut um die Augen auf. Spezieller Peptidkomplex BIO-Placenta reguliert Wachstum und Teilung der Epidermiszellen"
         : "Гель легкой текстуры и мощного действия разглаживает и осветляет кожу вокруг глаз. Специальный комплекс пептидов BIO-Placenta регулирует рост и деление клеток эпидермиса",
@@ -81,7 +81,7 @@ const Aqualia = () => {
     },
     {
       id: "antistress-nourishing-cream",
-      name: isGerman ? "Antistress Nährcreme" : "Антистресс питательный крем",
+      name: language === 'de' ? "Antistress Nährcreme" : language === 'ru' ? "Антистресс питательный крем" : "Антистресс питательный крем",
       description: isGerman
         ? "Zarte Creme mit nährenden Eigenschaften bildet ein Schutzsystem gegen äußere Aggressionen. Babassuöl beruhigt gereizte und empfindliche Haut, AQUAXYL spendet Feuchtigkeit"
         : "Нежный крем с питательными свойствами формирует защитную систему для сопротивления внешней агрессии. Масло бабассу смягчает раздраженную и чувствительную кожу, AQUAXYL увлажняет",
@@ -109,7 +109,7 @@ const Aqualia = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <Link to="/shop" className="text-brand-rose hover:text-brand-espresso transition-colors mb-4 inline-block">
-              ← {isGerman ? "Zurück zum Shop" : "Назад в магазин"}
+              ← {language === 'de' ? "Zurück zum Shop" : language === 'ru' ? "Назад в магазин" : "Назад в магазин"}
             </Link>
             <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-4">
               Aqualia

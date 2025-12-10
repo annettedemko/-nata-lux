@@ -12,7 +12,7 @@ const BasicCare = () => {
   const products = [
     {
       id: "enriched-moisturizing-cream",
-      name: isGerman ? "Reichhaltige Feuchtigkeitscreme" : "Обогащенный увлажняющий крем",
+      name: language === 'de' ? "Reichhaltige Feuchtigkeitscreme" : language === 'ru' ? "Обогащенный увлажняющий крем" : "Обогащенный увлажняющий крем",
       description: isGerman
         ? "Nährende Creme mit Sheabutter und Jojobaöl für intensive Feuchtigkeit. Ideal für trockene und normale Haut. Stärkt die Hautbarriere und hinterlässt die Haut weich und geschmeidig."
         : "Питательный крем с маслом ши и жожоба для интенсивного увлажнения. Идеально для сухой и нормальной кожи. Укрепляет кожный барьер и оставляет кожу мягкой и эластичной.",
@@ -31,7 +31,7 @@ const BasicCare = () => {
     },
     {
       id: "neck-decollete-cream",
-      name: isGerman ? "Hals & Dekolleté Straffungscreme" : "Укрепляющий крем для шеи и декольте",
+      name: language === 'de' ? "Hals & Dekolleté Straffungscreme" : language === 'ru' ? "Укрепляющий крем для шеи и декольте" : "Укрепляющий крем для шеи и декольте",
       description: isGerman
         ? "Spezielle Pflege für Hals und Dekolleté mit Peptiden und Vitamin E. Strafft erschlaffte Haut, reduziert Falten und verbessert die Hautelastizität in diesen empfindlichen Bereichen."
         : "Специальный уход за шеей и декольте с пептидами и витамином Е. Подтягивает дряблую кожу, уменьшает морщины и улучшает эластичность в этих деликатных зонах.",
@@ -41,7 +41,7 @@ const BasicCare = () => {
     },
     {
       id: "restructuring-cream",
-      name: isGerman ? "Restrukturierende Creme" : "Реструктурирующий крем",
+      name: language === 'de' ? "Restrukturierende Creme" : language === 'ru' ? "Реструктурирующий крем" : "Реструктурирующий крем",
       description: isGerman
         ? "Creme mit Ceramiden zur Wiederherstellung der Hautstruktur. Stärkt die Hautbarriere, repariert geschädigte Haut und schützt vor Feuchtigkeitsverlust."
         : "Крем с церамидами для восстановления структуры кожи. Укрепляет кожный барьер, восстанавливает поврежденную кожу и защищает от потери влаги.",
@@ -79,10 +79,10 @@ const BasicCare = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <Link to="/shop" className="text-brand-rose hover:text-brand-espresso transition-colors mb-4 inline-block">
-              ← {isGerman ? "Zurück zum Shop" : "Назад в магазин"}
+              ← {language === 'de' ? "Zurück zum Shop" : language === 'ru' ? "Назад в магазин" : "Назад в магазин"}
             </Link>
             <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-4">
-              {isGerman ? "Basispflege" : "Базовый уход"}
+              {language === 'de' ? "Basispflege" : language === 'ru' ? "Базовый уход" : "Базовый уход"}
             </h1>
             <p className="text-lg text-brand-coffee/80 max-w-3xl mx-auto leading-relaxed">
               {isGerman

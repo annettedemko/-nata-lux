@@ -49,7 +49,7 @@ const Propioguard = () => {
     },
     {
       id: "charcoal-soothing-mask",
-      name: isGerman ? "Beruhigende Kohlemaske" : "Успокаивающая угольная маска",
+      name: language === 'de' ? "Beruhigende Kohlemaske" : language === 'ru' ? "Успокаивающая угольная маска" : "Успокаивающая угольная маска",
       description: isGerman
         ? "Tiefenreinigende Maske mit Aktivkohle. Entgiftet die Haut, absorbiert Unreinheiten und beruhigt Entzündungen."
         : "Глубоко очищающая маска с активированным углем. Детоксифицирует кожу, абсорбирует загрязнения и успокаивает воспаления.",
@@ -90,7 +90,7 @@ const Propioguard = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <Link to="/shop" className="text-brand-rose hover:text-brand-espresso transition-colors mb-4 inline-block">
-              ← {isGerman ? "Zurück zum Shop" : "Назад в магазин"}
+              ← {language === 'de' ? "Zurück zum Shop" : language === 'ru' ? "Назад в магазин" : "Назад в магазин"}
             </Link>
             <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-4">
               Propioguard

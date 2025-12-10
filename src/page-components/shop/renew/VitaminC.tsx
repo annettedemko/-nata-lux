@@ -72,7 +72,7 @@ const VitaminC = () => {
     },
     {
       id: "moisturizing-cream-spf25",
-      name: isGerman ? "Feuchtigkeitscreme SPF-25" : "Увлажняющий крем SPF-25",
+      name: language === 'de' ? "Feuchtigkeitscreme SPF-25" : language === 'ru' ? "Увлажняющий крем SPF-25" : "Увлажняющий крем SPF-25",
       description: isGerman
         ? "Zarte Feuchtigkeitscreme mit angenehmem Zitrusduft zieht schnell ein ohne Fettgefühl. Hohe Konzentration an stabilem fettlöslichem Vitamin C als starkes Antioxidans. SPF-25"
         : "Нежный увлажняющий крем с приятным цитрусовым ароматом быстро впитывается, не оставляя ощущения жирности. Высокая концентрация витамина С в стабильной жирорастворимой форме как мощный антиоксидант. SPF-25",
@@ -100,7 +100,7 @@ const VitaminC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <Link to="/shop" className="text-brand-rose hover:text-brand-espresso transition-colors mb-4 inline-block">
-              ← {isGerman ? "Zurück zum Shop" : "Назад в магазин"}
+              ← {language === 'de' ? "Zurück zum Shop" : language === 'ru' ? "Назад в магазин" : "Назад в магазин"}
             </Link>
             <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-4">
               Vitamin C

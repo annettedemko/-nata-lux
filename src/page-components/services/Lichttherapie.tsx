@@ -56,11 +56,11 @@ const Lichttherapie = () => {
   return (
     <ServicePageLayout
       icon={Sun}
-      title={isGerman ? "LED-Lichttherapie (Photonentherapie) in München" : "LED-светотерапия (фототерапия) в Мюнхене"}
+      title={language === 'de' ? "LED-Lichttherapie (Photonentherapie) in München" : language === 'ru' ? "LED-светотерапия (фототерапия) в Мюнхене" : "LED-светотерапия (фототерапия) в Мюнхене"}
       subtitle={isGerman
         ? "Sanfte Hautverjüngung und Regeneration mit Lichtenergie – Ihre Kosmetik in München-Haidhausen"
         : "Мягкое омоложение и регенерация кожи с помощью световой энергии – Ваша косметология в Мюнхене-Хайдхаузен"}
-      aboutTitle={isGerman ? "Was ist LED-Lichttherapie (Photonentherapie)?" : "Что такое LED-светотерапия (фототерапия)?"}
+      aboutTitle={language === 'de' ? "Was ist LED-Lichttherapie (Photonentherapie)?" : language === 'ru' ? "Что такое LED-светотерапия (фототерапия)?" : "Что такое LED-светотерапия (фототерапия)?"}
       aboutDescription={isGerman ? [
         'Die LED-Lichttherapie, auch Photonentherapie oder Photobiomodulation genannt, ist eine innovative nicht-invasive Methode der modernen ästhetischen Kosmetik, bei der Licht unterschiedlicher Wellenlängen gezielt eingesetzt wird, um verschiedene Hautprobleme zu behandeln und die natürliche Regeneration der Haut zu fördern. In unserem Kosmetikstudio in München-Haidhausen arbeiten wir mit professionellen LED-Systemen medizinischer Qualität, die eine präzise Dosierung der Lichtenergie ermöglichen.',
         'Die Behandlung basiert auf wissenschaftlich fundierter Photomedizin. Jede Lichtfarbe dringt unterschiedlich tief in die Haut ein und hat spezifische Wirkungen:',
@@ -273,7 +273,7 @@ Oft kombinieren wir mehrere Farben für maximale Wirkung.`
       ]}
       procedureSchema={<SchemaSection />}
       additionalSections={<RecommendedServices />}
-      ctaTitle={isGerman ? "Bereit für strahlende, gesunde Haut in München?" : "Готовы к сияющей, здоровой коже в Мюнхене?"}
+      ctaTitle={language === 'de' ? "Bereit für strahlende, gesunde Haut in München?" : language === 'ru' ? "Готовы к сияющей, здоровой коже в Мюнхене?" : "Готовы к сияющей, здоровой коже в Мюнхене?"}
       ctaDescription={isGerman
         ? "Buchen Sie jetzt Ihre LED-Lichttherapie in unserem Studio in München-Haidhausen und erleben Sie die heilende Kraft des Lichts – wissenschaftlich bewährt, schmerzfrei und für alle Hauttypen geeignet. Kostenlose Beratung inklusive!"
         : "Запишитесь на LED-светотерапию в нашей студии в Мюнхене-Хайдхаузен и ощутите целебную силу света — научно доказано, безболезненно и подходит для всех типов кожи. Бесплатная консультация включена!"}

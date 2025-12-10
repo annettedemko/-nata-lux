@@ -56,11 +56,11 @@ const Biostrom = () => {
   return (
     <ServicePageLayout
       icon={Activity}
-      title={isGerman ? "Mikrostromtherapie (Biostrom) in München" : "Микротоковая терапия (биотоки) в Мюнхене"}
+      title={language === 'de' ? "Mikrostromtherapie (Biostrom) in München" : language === 'ru' ? "Микротоковая терапия (биотоки) в Мюнхене" : "Микротоковая терапия (биотоки) в Мюнхене"}
       subtitle={isGerman
         ? "Natürliches Lifting und Hautregeneration ohne Injektionen – Ihre Kosmetik in München-Haidhausen"
         : "Естественный лифтинг и регенерация кожи без инъекций – Ваша косметология в Мюнхене-Хайдхаузен"}
-      aboutTitle={isGerman ? "Was ist Mikrostromtherapie (Biostrom)?" : "Что такое микротоковая терапия (биотоки)?"}
+      aboutTitle={language === 'de' ? "Was ist Mikrostromtherapie (Biostrom)?" : language === 'ru' ? "Что такое микротоковая терапия (биотоки)?" : "Что такое микротоковая терапия (биотоки)?"}
       aboutDescription={isGerman ? [
         'Die Mikrostromtherapie, auch als Biostrom oder Biolifting bekannt, ist eine moderne nicht-invasive Anti-Aging-Methode aus der ästhetischen Kosmetik. In unserem Studio in München-Haidhausen arbeiten wir mit professionellen, medizinisch zertifizierten Geräten, die sehr schwache elektrische Impulse aussenden – ähnlich den natürlichen Strömen des Körpers.',
         'Diese Mikroströme aktivieren den Zellstoffwechsel, verbessern die Mikrozirkulation von Blut und Lymphe und stimulieren die körpereigene Produktion von Kollagen und Elastin. Das Ergebnis: ein natürlicher Lifting-Effekt, straffere Haut und ein frisches, erholtes Hautbild – ganz ohne Schmerzen, Nadeln oder Ausfallzeiten.',
@@ -197,7 +197,7 @@ const Biostrom = () => {
         }
       ]}
       additionalSections={<RecommendedServices />}
-      ctaTitle={isGerman ? "Bereit für natürliches Face-Lifting in München?" : "Готовы к естественному лифтингу лица в Мюнхене?"}
+      ctaTitle={language === 'de' ? "Bereit für natürliches Face-Lifting in München?" : language === 'ru' ? "Готовы к естественному лифтингу лица в Мюнхене?" : "Готовы к естественному лифтингу лица в Мюнхене?"}
       ctaDescription={isGerman
         ? "Buchen Sie jetzt Ihre Mikrostromtherapie in unserem Studio in München-Haidhausen und erleben Sie den Lifting-Effekt ohne Nadeln, ohne Schmerzen und ohne Ausfallzeiten. Kostenlose Beratung inklusive!"
         : "Запишитесь на микротоковую терапию в нашей студии в Мюнхене-Хайдхаузен и ощутите лифтинг-эффект без игл, без боли и без периода восстановления. Бесплатная консультация включена!"}

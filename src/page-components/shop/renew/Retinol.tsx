@@ -12,7 +12,7 @@ const Retinol = () => {
   const products = [
     {
       id: "rejuvenating-serum-retinol",
-      name: isGerman ? "Verjüngendes Retinol Serum" : "Омолаживающая сыворотка с ретинолом",
+      name: language === 'de' ? "Verjüngendes Retinol Serum" : language === 'ru' ? "Омолаживающая сыворотка с ретинолом" : "Омолаживающая сыворотка с ретинолом",
       description: isGerman
         ? "Hochdosiertes Retinol-Serum. Beschleunigt die Zellerneuerung, glättet Falten und verfeinert die Poren. Abends auf die gereinigte Haut auftragen."
         : "Высокодозированная сыворотка с ретинолом. Ускоряет обновление клеток, разглаживает морщины и сужает поры. Наносить вечером на очищенную кожу.",
@@ -22,7 +22,7 @@ const Retinol = () => {
     },
     {
       id: "rejuvenating-cream-retinol",
-      name: isGerman ? "Verjüngende Retinol Creme" : "Омолаживающий крем с ретинолом",
+      name: language === 'de' ? "Verjüngende Retinol Creme" : language === 'ru' ? "Омолаживающий крем с ретинолом" : "Омолаживающий крем с ретинолом",
       description: isGerman
         ? "Retinol-Creme für die Nacht. Mildert Pigmentflecken, verbessert die Hautstruktur und reduziert feine Linien. Mit Vitamin E für zusätzliche Pflege."
         : "Ночной крем с ретинолом. Осветляет пигментные пятна, улучшает текстуру кожи и уменьшает мелкие морщинки. С витамином Е для дополнительного ухода.",
@@ -50,7 +50,7 @@ const Retinol = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <Link to="/shop" className="text-brand-rose hover:text-brand-espresso transition-colors mb-4 inline-block">
-              ← {isGerman ? "Zurück zum Shop" : "Назад в магазин"}
+              ← {language === 'de' ? "Zurück zum Shop" : language === 'ru' ? "Назад в магазин" : "Назад в магазин"}
             </Link>
             <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-4">
               Retinol

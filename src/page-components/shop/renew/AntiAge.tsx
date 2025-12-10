@@ -13,7 +13,7 @@ const AntiAge = () => {
     // Anti Age Line
     {
       id: "anti-aging-firming-mask",
-      name: isGerman ? "Anti-Aging Straffende Maske" : "Антивозрастная укрепляющая маска",
+      name: language === 'de' ? "Anti-Aging Straffende Maske" : language === 'ru' ? "Антивозрастная укрепляющая маска" : "Антивозрастная укрепляющая маска",
       line: "Anti Age",
       description: isGerman
         ? "Straffende Maske mit Kollagen und Elastin. Sofortiger Lifting-Effekt und intensive Feuchtigkeitsversorgung. Ideal vor besonderen Anlässen."
@@ -34,7 +34,7 @@ const AntiAge = () => {
     },
     {
       id: "restoring-eye-cream",
-      name: isGerman ? "Regenerierende Augencreme" : "Восстанавливающий крем для глаз",
+      name: language === 'de' ? "Regenerierende Augencreme" : language === 'ru' ? "Восстанавливающий крем для глаз" : "Восстанавливающий крем для глаз",
       line: "Anti Age",
       description: isGerman
         ? "Regenerierende Augencreme mit Peptiden. Glättet Fältchen, festigt die empfindliche Augenpartie und reduziert Anzeichen von Müdigkeit."
@@ -85,7 +85,7 @@ const AntiAge = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <Link to="/shop" className="text-brand-rose hover:text-brand-espresso transition-colors mb-4 inline-block">
-              ← {isGerman ? "Zurück zum Shop" : "Назад в магазин"}
+              ← {language === 'de' ? "Zurück zum Shop" : language === 'ru' ? "Назад в магазин" : "Назад в магазин"}
             </Link>
             <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-4">
               Anti Age

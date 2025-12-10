@@ -55,7 +55,7 @@ const PowderBrows = () => {
       subtitle={isGerman
         ? "Pudertechnik für natürliche, perfekt definierte Augenbrauen"
         : "Пудровая техника для естественных, идеально очерченных бровей"}
-      aboutTitle={isGerman ? "Was sind Powder Brows?" : "Что такое Powder Brows?"}
+      aboutTitle={language === 'de' ? "Was sind Powder Brows?" : language === 'ru' ? "Что такое Powder Brows?" : "Что такое Powder Brows?"}
       aboutDescription={isGerman ? [
         'Powder Brows sind eine moderne Permanent Make-up Technik, die Ihren Augenbrauen einen soften, pudrigen Look verleiht – ähnlich wie mit Augenbrauenpuder geschminkt.',
         'Anders als bei der Microblading-Technik werden hier keine Härchen nachgezeichnet, sondern die Farbe wird in feinen Punkten eingebracht. Das Ergebnis ist ein natürlicher, weicher Verlauf mit mehr Intensität im hinteren Bereich der Braue.',
@@ -174,7 +174,7 @@ const PowderBrows = () => {
           a: 'Коррекция через 4-6 недель совершенствует результат и обеспечивает оптимальную стойкость.'
         }
       ]}
-      ctaTitle={isGerman ? "Bereit für perfekte Augenbrauen?" : "Готовы к идеальным бровям?"}
+      ctaTitle={language === 'de' ? "Bereit für perfekte Augenbrauen?" : language === 'ru' ? "Готовы к идеальным бровям?" : "Готовы к идеальным бровям?"}
       ctaDescription={isGerman
         ? "Buchen Sie jetzt Ihre Powder Brows Behandlung oder vereinbaren Sie einen kostenlosen Beratungstermin."
         : "Запишитесь на процедуру Powder Brows или договоритесь о бесплатной консультации."}

@@ -22,7 +22,7 @@ const Hydration = () => {
     },
     {
       id: "eye-lip-makeup-remover",
-      name: isGerman ? "Augen & Lippen Make-up Entferner" : "Средство для снятия макияжа с глаз и губ",
+      name: language === 'de' ? "Augen & Lippen Make-up Entferner" : language === 'ru' ? "Средство для снятия макияжа с глаз и губ" : "Средство для снятия макияжа с глаз и губ",
       line: "Aqualia",
       description: isGerman
         ? "Speziell entwickeltes Mittel zur Make-up-Entfernung und Hautreinigung. Reizt nicht die empfindliche Haut um die Augen und entfernt effektiv Kosmetik sowie Verschmutzungen"
@@ -54,7 +54,7 @@ const Hydration = () => {
     },
     {
       id: "skin-repair-moisturizing-mask",
-      name: isGerman ? "Reparierende Feuchtigkeitsmaske" : "Восстанавливающая увлажняющая маска",
+      name: language === 'de' ? "Reparierende Feuchtigkeitsmaske" : language === 'ru' ? "Восстанавливающая увлажняющая маска" : "Восстанавливающая увлажняющая маска",
       line: "Aqualia",
       description: isGerman
         ? "Angenehme Gelmaske mit aktiven Komponenten zur Normalisierung physiologischer Prozesse in der Epidermis, Aufrechterhaltung des Wasserhaushalts und Hautverjüngung"
@@ -76,7 +76,7 @@ const Hydration = () => {
     },
     {
       id: "eye-contour-gel",
-      name: isGerman ? "Augenkontur-Gel" : "Гель для контура глаз",
+      name: language === 'de' ? "Augenkontur-Gel" : language === 'ru' ? "Гель для контура глаз" : "Гель для контура глаз",
       line: "Aqualia",
       description: isGerman
         ? "Gel mit leichter Textur und starker Wirkung glättet und hellt die Haut um die Augen auf. Spezieller Peptidkomplex BIO-Placenta reguliert Wachstum und Teilung der Epidermiszellen"
@@ -87,7 +87,7 @@ const Hydration = () => {
     },
     {
       id: "antistress-nourishing-cream",
-      name: isGerman ? "Antistress Nährcreme" : "Антистресс питательный крем",
+      name: language === 'de' ? "Antistress Nährcreme" : language === 'ru' ? "Антистресс питательный крем" : "Антистресс питательный крем",
       line: "Aqualia",
       description: isGerman
         ? "Zarte Creme mit nährenden Eigenschaften bildet ein Schutzsystem gegen äußere Aggressionen. Babassuöl beruhigt gereizte und empfindliche Haut, AQUAXYL spendet Feuchtigkeit"
@@ -164,7 +164,7 @@ const Hydration = () => {
     },
     {
       id: "moisturizing-cream-spf25",
-      name: isGerman ? "Feuchtigkeitscreme SPF-25" : "Увлажняющий крем SPF-25",
+      name: language === 'de' ? "Feuchtigkeitscreme SPF-25" : language === 'ru' ? "Увлажняющий крем SPF-25" : "Увлажняющий крем SPF-25",
       line: "Vitamin C",
       description: isGerman
         ? "Zarte Feuchtigkeitscreme mit angenehmem Zitrusduft zieht schnell ein ohne Fettgefühl. Hohe Konzentration an stabilem fettlöslichem Vitamin C als starkes Antioxidans. SPF-25"
@@ -193,10 +193,10 @@ const Hydration = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <Link to="/shop" className="text-brand-rose hover:text-brand-espresso transition-colors mb-4 inline-block">
-              ← {isGerman ? "Zurück zum Shop" : "Назад в магазин"}
+              ← {language === 'de' ? "Zurück zum Shop" : language === 'ru' ? "Назад в магазин" : "Назад в магазин"}
             </Link>
             <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-4">
-              {isGerman ? "Feuchtigkeit & Ausstrahlung" : "Увлажнение и сияние"}
+              {language === 'de' ? "Feuchtigkeit & Ausstrahlung" : language === 'ru' ? "Увлажнение и сияние" : "Увлажнение и сияние"}
             </h1>
             <p className="text-lg text-brand-coffee/80 max-w-2xl mx-auto">
               {isGerman

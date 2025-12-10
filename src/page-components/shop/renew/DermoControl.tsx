@@ -34,7 +34,7 @@ const DermoControl = () => {
     },
     {
       id: "dermo-control-mask",
-      name: isGerman ? "Dermo Control Maske" : "Маска Дермо Контроль",
+      name: language === 'de' ? "Dermo Control Maske" : language === 'ru' ? "Маска Дермо Контроль" : "Маска Дермо Контроль",
       description: isGerman
         ? "Reinigende Maske mit Kaolin und Zink. Absorbiert überschüssigen Talg, verfeinert die Poren und beruhigt entzündete Haut."
         : "Очищающая маска с каолином и цинком. Абсорбирует избыток кожного сала, сужает поры и успокаивает воспаленную кожу.",
@@ -47,7 +47,7 @@ const DermoControl = () => {
     },
     {
       id: "dermo-control-lotion",
-      name: isGerman ? "Dermo Control Lotion" : "Лосьон Дермо Контроль",
+      name: language === 'de' ? "Dermo Control Lotion" : language === 'ru' ? "Лосьон Дермо Контроль" : "Лосьон Дермо Контроль",
       description: isGerman
         ? "Ausgleichende Lotion mit BHA. Klärt die Haut, reguliert die Talgproduktion und beugt Unreinheiten vor. Täglich nach der Reinigung anwenden."
         : "Балансирующий лосьон с BHA. Очищает кожу, регулирует выработку себума и предотвращает высыпания. Применять ежедневно после очищения.",
@@ -69,7 +69,7 @@ const DermoControl = () => {
     },
     {
       id: "moisturizing-cream-spf15",
-      name: isGerman ? "Feuchtigkeitscreme SPF-15" : "Увлажняющий крем SPF-15",
+      name: language === 'de' ? "Feuchtigkeitscreme SPF-15" : language === 'ru' ? "Увлажняющий крем SPF-15" : "Увлажняющий крем SPF-15",
       description: isGerman
         ? "Leichte Tagescreme mit Sonnenschutz für fettige Haut. Mattiert, schützt vor UV-Strahlung und spendet Feuchtigkeit ohne zu glänzen."
         : "Легкий дневной крем с защитой от солнца для жирной кожи. Матирует, защищает от УФ-излучения и увлажняет без жирного блеска.",
@@ -82,7 +82,7 @@ const DermoControl = () => {
     },
     {
       id: "moisturizing-cream-oil-free",
-      name: isGerman ? "Feuchtigkeitscreme Oil-Free" : "Увлажняющий крем без масла",
+      name: language === 'de' ? "Feuchtigkeitscreme Oil-Free" : language === 'ru' ? "Увлажняющий крем без масла" : "Увлажняющий крем без масла",
       description: isGerman
         ? "Ölfreie Feuchtigkeitscreme für fettige Haut. Versorgt mit Feuchtigkeit ohne zu fetten und hinterlässt ein mattes Finish."
         : "Безмасляный увлажняющий крем для жирной кожи. Увлажняет без жирности и оставляет матовый финиш.",
@@ -131,7 +131,7 @@ const DermoControl = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <Link to="/shop" className="text-brand-rose hover:text-brand-espresso transition-colors mb-4 inline-block">
-              ← {isGerman ? "Zurück zum Shop" : "Назад в магазин"}
+              ← {language === 'de' ? "Zurück zum Shop" : language === 'ru' ? "Назад в магазин" : "Назад в магазин"}
             </Link>
             <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-4">
               Dermo Control

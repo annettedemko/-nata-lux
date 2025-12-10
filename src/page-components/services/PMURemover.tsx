@@ -55,7 +55,7 @@ const PMURemover = () => {
       subtitle={isGerman
         ? "Sichere Entfernung von Permanent Make-up – Professionell und schonend"
         : "Безопасное удаление перманентного макияжа – Профессионально и щадяще"}
-      aboutTitle={isGerman ? "Was ist PMU Remover?" : "Что такое PMU Remover?"}
+      aboutTitle={language === 'de' ? "Was ist PMU Remover?" : language === 'ru' ? "Что такое PMU Remover?" : "Что такое PMU Remover?"}
       aboutDescription={isGerman ? [
         'PMU Remover ist eine professionelle Methode zur Entfernung von unerwünschtem oder veraltetem Permanent Make-up. Anders als Laserbehandlungen arbeitet der Remover mit speziellen Lösungen, die die Pigmente schonend aus der Haut lösen.',
         'Diese Methode ist besonders effektiv bei Fremdarbeiten, verblassten Farben oder wenn Sie einfach einen Neuanfang wünschen. Der Remover kann für Augenbrauen, Lippen und Eyeliner eingesetzt werden.',
@@ -176,7 +176,7 @@ const PMURemover = () => {
           a: 'Ремувер работает со всеми цветами (включая красный, оранжевый, белый), тогда как лазер удаляет только тёмные пигменты. К тому же он более щадящий для кожи.'
         }
       ]}
-      ctaTitle={isGerman ? "Bereit für einen Neuanfang?" : "Готовы к новому началу?"}
+      ctaTitle={language === 'de' ? "Bereit für einen Neuanfang?" : language === 'ru' ? "Готовы к новому началу?" : "Готовы к новому началу?"}
       ctaDescription={isGerman
         ? "Buchen Sie jetzt eine kostenlose Beratung und wir erstellen Ihren individuellen Behandlungsplan."
         : "Запишитесь на бесплатную консультацию, и мы составим ваш индивидуальный план процедур."}
