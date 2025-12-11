@@ -83,37 +83,45 @@ const Index = () => {
 
   const topServices = [
     {
-      title: language === 'de' ? 'Wimpernverlängerung mit Zwischenwimpern-Technik' : 'Межресничка (наращивание ресниц)',
+      title: language === 'de' ? 'Wimpernverlängerung mit Zwischenwimpern-Technik' : language === 'ru' ? 'Межресничка (наращивание ресниц)' : 'Міжвійка (нарощування вій)',
       description: language === 'de'
         ? 'Natürliche Verdichtung der Wimpern für einen ausdrucksstarken Blick'
-        : 'Естественное уплотнение ресниц для выразительного взгляда',
+        : language === 'ru'
+        ? 'Естественное уплотнение ресниц для выразительного взгляда'
+        : 'Природне ущільнення вій для виразного погляду',
       icon: Sparkles,
       href: '/services/wimpernverlaengerung',
       image: '/43.png',
     },
     {
-      title: language === 'de' ? 'Diodenlaser-Haarentfernung' : 'Диодный лазер (удаление волос)',
+      title: language === 'de' ? 'Diodenlaser-Haarentfernung' : language === 'ru' ? 'Диодный лазер (удаление волос)' : 'Діодний лазер (видалення волосся)',
       description: language === 'de'
         ? 'Dauerhafte Haarentfernung mit modernster Diodenlaser-Technologie'
-        : 'Перманентное удаление волос с помощью современной диодной лазерной технологии',
+        : language === 'ru'
+        ? 'Перманентное удаление волос с помощью современной диодной лазерной технологии'
+        : 'Перманентне видалення волосся за допомогою сучасної діодної лазерної технології',
       icon: Zap,
       href: '/laser',
       image: '/41.jpg',
     },
     {
-      title: language === 'de' ? 'RF-Lifting für den Körper' : 'РФ лифтинг для тела',
+      title: language === 'de' ? 'RF-Lifting für den Körper' : language === 'ru' ? 'РФ лифтинг для тела' : 'РФ ліфтинг для тіла',
       description: language === 'de'
         ? 'Straffung und Konturierung des Körpers mit Radiofrequenz-Technologie'
-        : 'Подтяжка и контурирование тела с помощью радиочастотной технологии',
+        : language === 'ru'
+        ? 'Подтяжка и контурирование тела с помощью радиочастотной технологии'
+        : 'Підтяжка та контурування тіла за допомогою радіочастотної технології',
       icon: Star,
       href: '/services/koerperbehandlungen/rf-vakuum',
       image: '/39.jpeg',
     },
     {
-      title: language === 'de' ? 'Microneedling' : 'Микронидлинг',
+      title: language === 'de' ? 'Microneedling' : language === 'ru' ? 'Микронидлинг' : 'Мікронідлінг',
       description: language === 'de'
         ? 'Innovative Hautbehandlung für Kollagenbildung und Hautregeneration'
-        : 'Инновационная процедура для выработки коллагена и регенерации кожи',
+        : language === 'ru'
+        ? 'Инновационная процедура для выработки коллагена и регенерации кожи'
+        : 'Інноваційна процедура для вироблення колагену та регенерації шкіри',
       icon: Star,
       href: '/services/microneedling',
       image: '/44.png',
@@ -179,7 +187,7 @@ const Index = () => {
       rating: 5,
       text: 'Ich habe bei Natalia eine Schulung zur Wimpernverlängerung gemacht. Ich habe viele Informationen erhalten, alles war sehr verständlich, interessant und herzlich. Eine geduldige und weise Frau. Danke, dass es dich gibt! ❤️',
     },
-  ] : [
+  ] : language === 'ru' ? [
     {
       name: 'Мария Горскина',
       rating: 5,
@@ -220,6 +228,47 @@ const Index = () => {
       rating: 5,
       text: 'Прошла у Натальи обучение по наращиванию ресниц. Получила много информации, всё было понятно, интересно и душевно. Очень терпеливая и мудрая девушка. Очень рада, что выбрала именно Наталью и её студию. Даже после курса она всегда на связи, советует материалы и помогает выбрать лучшее. Спасибо, что ты есть ❤️',
     },
+  ] : [
+    {
+      name: 'Марія Горскіна',
+      rating: 5,
+      text: 'Сервіс на найвищому рівні, а сама процедура — просто ідеальна. В цілому можу тільки рекомендувати! 👍',
+    },
+    {
+      name: 'Лілі Тензера',
+      rating: 5,
+      text: 'Наталія робить приголомшливу роботу! Можу тільки щиро рекомендувати. У неї почуваєшся спокійно і в надійних руках. Чудова консультація. Тепер довіряю вії тільки їй! 🤍',
+    },
+    {
+      name: 'Роберт Обертрейс',
+      rating: 5,
+      text: 'Сьогодні був у Наталії на догляді за обличчям. Вона зустріла дуже доброзичливо, одразу відчувалася комфортна атмосфера. Наталія врахувала всі мої побажання, і шкіра після процедури відчувалася помітно оновленою. З задоволенням прийду знову.',
+    },
+    {
+      name: 'Аліса Хайрам',
+      rating: 5,
+      text: 'Я з Берліна, була в Мюнхені у відпустці і вирішила зробити вії. Чесно кажучи, мої очікування були повністю перевершені! Результат неймовірно природній та ідеальний, я дуже-дуже задоволена!!',
+    },
+    {
+      name: 'Ольга Хан',
+      rating: 5,
+      text: 'Робила у Наталії міжвійку. Дуже приємний досвід! Чудова консультація, почувалася максимально комфортно і спокійно. Під час процедури — ніяких больових відчуттів, після — лише легка припухлість. Результат ПЕРФЕКТНИЙ! Величезне спасибі!!',
+    },
+    {
+      name: 'Ольга Бойкова',
+      rating: 5,
+      text: 'Корекція та фарбування брів вийшли просто ідеально! Велике спасибі, Наталіє, за професіоналізм і чудову роботу. Абсолютно рекомендую! З радістю повернуся знову 💖',
+    },
+    {
+      name: 'S K',
+      rating: 5,
+      text: 'Тепер тільки до Наталії 👍 Після невдалої процедури в іншій студії (брови стали рожевими — жах!) прийшла до неї. Ніколи не мала таких гарних природних брів! Навіть спустя майже рік колір і форма залишаються чудовими. Велике спасибі за прекрасну роботу, Наталіє 🥰',
+    },
+    {
+      name: 'Леся Гнатко',
+      rating: 5,
+      text: 'Пройшла у Наталі навчання з нарощування вій. Отримала багато інформації, все було зрозуміло, цікаво і душевно. Дуже терпляча і мудра дівчина. Дуже рада, що обрала саме Наталю та її студію. Навіть після курсу вона завжди на зв\'язку, радить матеріали і допомагає вибрати найкраще. Спасибі, що ти є ❤️',
+    },
   ];
 
 
@@ -252,7 +301,7 @@ const Index = () => {
                 <Search className="w-8 h-8 md:w-10 md:h-10 text-brand-gold drop-shadow-sm" />
               </motion.div>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-semibold text-brand-espresso mb-3 md:mb-4 px-2">
-                {language === 'de' ? 'Finden Sie Ihre perfekte Behandlung' : 'Найдите вашу идеальную процедуру'}
+                {language === 'de' ? 'Finden Sie Ihre perfekte Behandlung' : language === 'ru' ? 'Найдите вашу идеальную процедуру' : 'Знайдіть вашу ідеальну процедуру'}
               </h2>
               <p className="text-brand-coffee/80 mb-6 md:mb-8 leading-relaxed text-base md:text-lg px-2">
                 {language === 'de'
@@ -385,7 +434,7 @@ const Index = () => {
                     e.currentTarget.style.boxShadow = '0 8px 24px rgba(197,151,80,0.15), 0 2px 8px rgba(0,0,0,0.05)';
                   }}
                 >
-                  {language === 'de' ? 'Alle Dienstleistungen ansehen' : 'Смотреть все услуги'}
+                  {language === 'de' ? 'Alle Dienstleistungen ansehen' : language === 'ru' ? 'Смотреть все услуги' : 'Дивитися всі послуги'}
                 </Button>
               </motion.div>
             </Link>
@@ -484,7 +533,7 @@ const Index = () => {
                       ))}
                     </div>
                   </div>
-                  <span className="text-xs text-brand-coffee/60 font-medium">{language === 'de' ? 'Google Bewertungen' : 'Отзывы Google'}</span>
+                  <span className="text-xs text-brand-coffee/60 font-medium">{language === 'de' ? 'Google Bewertungen' : language === 'ru' ? 'Отзывы Google' : 'Відгуки Google'}</span>
                 </div>
               </div>
             </motion.div>
@@ -566,7 +615,7 @@ const Index = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 glass-strong hover:scale-105"
               >
-                <span className="text-brand-espresso">{language === 'de' ? 'Mehr auf Google Maps' : 'Больше на Google Maps'}</span>
+                <span className="text-brand-espresso">{language === 'de' ? 'Mehr auf Google Maps' : language === 'ru' ? 'Больше на Google Maps' : 'Більше на Google Maps'}</span>
                 <svg className="w-5 h-5 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -589,7 +638,7 @@ const Index = () => {
             className="text-center mb-5 md:mb-7"
           >
             <h2 className="text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-3 md:mb-4 px-4 break-words" style={{ wordWrap: 'break-word', overflowWrap: 'break-word', hyphens: 'none' }}>
-              {language === 'de' ? 'Besuchen Sie uns' : 'Посетите нас'}
+              {language === 'de' ? 'Besuchen Sie uns' : language === 'ru' ? 'Посетите нас' : 'Відвідайте нас'}
             </h2>
             <p className="text-base md:text-lg text-brand-coffee/70 max-w-2xl mx-auto px-4">
               {language === 'de'
@@ -638,7 +687,7 @@ const Index = () => {
                           81667 München-Haidhausen
                         </p>
                         <p className="text-brand-gold text-sm font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
-                          <span>{language === 'de' ? 'Route in Google Maps öffnen' : 'Открыть маршрут в Google Maps'}</span>
+                          <span>{language === 'de' ? 'Route in Google Maps öffnen' : language === 'ru' ? 'Открыть маршрут в Google Maps' : 'Відкрити маршрут в Google Maps'}</span>
                           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                           </svg>
@@ -684,11 +733,11 @@ const Index = () => {
                         </svg>
                       </div>
                       <h3 className="font-semibold text-brand-espresso text-lg">
-                        {language === 'de' ? 'Anfahrt & Parken' : 'Как добраться и парковка'}
+                        {language === 'de' ? 'Anfahrt & Parken' : language === 'ru' ? 'Как добраться и парковка' : 'Як дістатися та парковка'}
                       </h3>
                     </div>
                     <p className="text-sm text-brand-coffee/70 mb-3">
-                      {language === 'de' ? 'Zu Fuß: 5–7 Min. vom Ostbahnhof/Orleansplatz' : 'Пешком: 5–7 мин. от Остбанхоф/Орлеансплатц'}
+                      {language === 'de' ? 'Zu Fuß: 5–7 Min. vom Ostbahnhof/Orleansplatz' : language === 'ru' ? 'Пешком: 5–7 мин. от Остбанхоф/Орлеансплатц' : 'Пішки: 5–7 хв. від Остбанхоф/Орлеансплатц'}
                     </p>
                     <ul className="text-sm text-brand-coffee/70 space-y-2">
                       <li className="flex items-start gap-2">
@@ -699,7 +748,7 @@ const Index = () => {
                           rel="noopener noreferrer"
                           className="hover:text-brand-gold transition-colors underline"
                         >
-                          {language === 'de' ? 'Parkhaus am Ostbahnhof' : 'Паркинг у Остбанхоф'}
+                          {language === 'de' ? 'Parkhaus am Ostbahnhof' : language === 'ru' ? 'Паркинг у Остбанхоф' : 'Паркінг біля Остбанхоф'}
                         </a>
                         <span className="text-brand-coffee/50">(6 Min.)</span>
                       </li>
@@ -724,7 +773,7 @@ const Index = () => {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                         </svg>
                       </div>
-                      <h3 className="font-semibold text-brand-espresso text-lg">{language === 'de' ? 'ÖPNV' : 'Общ. транспорт'}</h3>
+                      <h3 className="font-semibold text-brand-espresso text-lg">{language === 'de' ? 'ÖPNV' : language === 'ru' ? 'Общ. транспорт' : 'Громад. транспорт'}</h3>
                     </div>
                     <ul className="text-sm text-brand-coffee/70 space-y-2">
                       <li className="flex items-start gap-2">
