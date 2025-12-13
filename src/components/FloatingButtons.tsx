@@ -34,7 +34,7 @@ export const FloatingButtons = () => {
       >
         <Calendar className="w-5 h-5 text-white flex-shrink-0" />
         <span className="text-white text-sm font-medium">
-          {language === 'de' ? 'Termin b...' : 'Записать...'}
+          {language === 'de' ? 'Termin b...' : language === 'ru' ? 'Записать...' : 'Записатися...'}
         </span>
       </button>
 

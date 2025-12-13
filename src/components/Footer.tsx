@@ -153,7 +153,7 @@ export const Footer = () => {
                   to="/training"
                   className="text-brand-coffee/70 hover:text-brand-gold transition-colors"
                 >
-                  {language === 'de' ? 'Schulungsangebot' : 'Программы обучения'}
+                  {language === 'de' ? 'Schulungsangebot' : language === 'ru' ? 'Программы обучения' : 'Програми навчання'}
                 </Link>
               </li>
               <li>
@@ -161,7 +161,7 @@ export const Footer = () => {
                   to="/training#wimpern"
                   className="text-brand-coffee/70 hover:text-brand-gold transition-colors"
                 >
-                  {language === 'de' ? 'Wimpernverlängerung' : 'Наращивание ресниц'}
+                  {language === 'de' ? 'Wimpernverlängerung' : language === 'ru' ? 'Наращивание ресниц' : 'Нарощування вій'}
                 </Link>
               </li>
               <li>
@@ -169,7 +169,7 @@ export const Footer = () => {
                   to="/training#pmu"
                   className="text-brand-coffee/70 hover:text-brand-gold transition-colors"
                 >
-                  {language === 'de' ? 'Permanent Make-up' : 'Перманентный макияж'}
+                  {language === 'de' ? 'Permanent Make-up' : language === 'ru' ? 'Перманентный макияж' : 'Перманентний макіяж'}
                 </Link>
               </li>
             </ul>
@@ -187,7 +187,7 @@ export const Footer = () => {
               to="/shop"
               className="inline-flex items-center text-sm font-medium text-brand-gold hover:text-brand-gold/80 transition-colors"
             >
-              {language === 'de' ? 'Zum Shop' : 'В магазин'}
+              {language === 'de' ? 'Zum Shop' : language === 'ru' ? 'В магазин' : 'В магазин'}
               <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>

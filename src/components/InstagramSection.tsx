@@ -41,7 +41,7 @@ export const InstagramSection = () => {
           </div>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold text-brand-espresso mb-6">
-            {language === 'de' ? 'FOLGEN SIE UNS AUF INSTAGRAM' : 'ПОДПИСЫВАЙТЕСЬ НА НАС В INSTAGRAM'}
+            {language === 'de' ? 'FOLGEN SIE UNS AUF INSTAGRAM' : language === 'ru' ? 'ПОДПИСЫВАЙТЕСЬ НА НАС В INSTAGRAM' : 'ПІДПИСУЙТЕСЬ НА НАС В INSTAGRAM'}
           </h2>
 
           <p className="text-lg md:text-xl text-brand-coffee/80 mb-8 leading-relaxed">
@@ -61,7 +61,7 @@ export const InstagramSection = () => {
             }}
           >
             <Instagram className="w-6 h-6" />
-            <span>{language === 'de' ? 'FOLGEN SIE UNS' : 'ПОДПИСАТЬСЯ'}</span>
+            <span>{language === 'de' ? 'FOLGEN SIE UNS' : language === 'ru' ? 'ПОДПИСАТЬСЯ' : 'ПІДПИСАТИСЯ'}</span>
           </motion.button>
         </motion.div>
       </div>

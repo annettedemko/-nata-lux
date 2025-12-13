@@ -9,8 +9,10 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 interface ProcedureSchemaProps {
   germanImages: string[];
   russianImages: string[];
+  ukrainianImages?: string[];
   altTextGerman: string;
   altTextRussian: string;
+  altTextUkrainian?: string;
   className?: string;
   scale?: number; // Scale factor: 0.5 = 50%, 1 = 100%, 1.5 = 150%
 }
@@ -18,16 +20,18 @@ interface ProcedureSchemaProps {
 export const ProcedureSchema = ({
   germanImages,
   russianImages,
+  ukrainianImages,
   altTextGerman,
   altTextRussian,
+  altTextUkrainian,
   className = '',
   scale = 1
 }: ProcedureSchemaProps) => {
   const { language } = useLanguage();
   const isGerman = language === 'de';
 
-  const images = language === 'de' ? germanImages : russianImages;
-  const altText = language === 'de' ? altTextGerman : altTextRussian;
+  const images = language === 'de' ? germanImages : language === 'ru' ? russianImages : (ukrainianImages || russianImages);
+  const altText = language === 'de' ? altTextGerman : language === 'ru' ? altTextRussian : (altTextUkrainian || altTextRussian);
 
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [isDesktop, setIsDesktop] = useState(false);

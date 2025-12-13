@@ -46,19 +46,11 @@ export const HeroSection = () => {
               lineHeight: 1.3,
             }}
           >
-            {language === 'de' ? (
-              <>
-                Aesthetic Studio München
-                <br className="sm:hidden" />
-                <span style={{ whiteSpace: 'nowrap' }}> – NATA LUX</span>
-              </>
-            ) : (
-              <>
-                Aesthetic Studio München
-                <br className="sm:hidden" />
-                <span style={{ whiteSpace: 'nowrap' }}> – NATA LUX</span>
-              </>
-            )}
+            <>
+              Aesthetic Studio München
+              <br className="sm:hidden" />
+              <span style={{ whiteSpace: 'nowrap' }}> – NATA LUX</span>
+            </>
           </motion.h1>
 
           {/* Services Line - Inter, medium, caps, muted colors */}
