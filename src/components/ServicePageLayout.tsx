@@ -381,8 +381,8 @@ export const ServicePageLayout = ({
                 className="bg-white hover:bg-brand-cream text-brand-espresso font-semibold rounded-2xl px-6 py-4 md:px-8 md:py-6 text-base md:text-lg min-h-11 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
                 asChild
               >
-                <a href="https://wa.me/4917677267269" target="_blank" rel="noopener noreferrer">
-                  {language === 'de' ? 'Termin buchen' : language === 'ru' ? 'Записаться' : 'Записаться'}
+                <a href="https://dikidi.ru/1904110" target="_blank" rel="noopener noreferrer">
+                  {language === 'de' ? 'Termin buchen' : language === 'ru' ? 'Записаться' : 'Записатися'}
                 </a>
               </Button>
               <Link to="/contact">

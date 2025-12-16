@@ -15,10 +15,12 @@ const Microneedling = () => {
   // Schema section
   const schemaSection = (
     <ProcedureSchema
-      germanImages={['/176.jpg']}
-      russianImages={['/176 1.jpg']}
+      germanImages={['/194 1.png']}
+      russianImages={['/194.jpg']}
+      ukrainianImages={['/194.jpg']}
       altTextGerman="Microneedling Schema"
       altTextRussian="Схема микронидлинга"
+      altTextUkrainian="Схема мікронідлінгу"
       scale={0.67}
     />
   );

@@ -138,7 +138,9 @@ export const HeroSection = () => {
           >
             {/* Primary Button - Termin buchen */}
             <motion.a
-              href="tel:+4917677267269"
+              href="https://dikidi.ru/1904110"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="inline-block w-full sm:w-auto"

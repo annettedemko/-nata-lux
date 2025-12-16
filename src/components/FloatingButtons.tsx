@@ -17,7 +17,7 @@ export const FloatingButtons = () => {
   };
 
   const handleTermin = () => {
-    window.location.href = `tel:${phoneNumber}`;
+    window.open('https://dikidi.ru/1904110', '_blank');
   };
 
   return (

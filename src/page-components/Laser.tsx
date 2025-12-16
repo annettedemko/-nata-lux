@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { useState } from 'react';
+import { ProcedureSchema } from '@/components/ProcedureSchema';
 
 const Laser = () => {
   const { t, language } = useLanguage();
@@ -118,7 +119,7 @@ const Laser = () => {
       title: 'Alle Körperzonen',
       description: 'Von Oberlippe bis kompletter Körper – für Damen und Herren'
     }
-  ] : [
+  ] : language === 'ru' ? [
     {
       icon: Zap,
       title: '3 длины волны в одном аппарате',
@@ -139,6 +140,27 @@ const Laser = () => {
       title: 'Все зоны тела',
       description: 'От верхней губы до всего тела — для женщин и мужчин'
     }
+  ] : [
+    {
+      icon: Zap,
+      title: '3 довжини хвилі в одному апараті',
+      description: 'Оптимальна процедура для будь-якого типу шкіри та волосся без зміни обладнання'
+    },
+    {
+      icon: Shield,
+      title: 'Вбудована система охолодження',
+      description: 'Безболісна процедура завдяки контактному охолодженню до -4°C'
+    },
+    {
+      icon: Clock,
+      title: 'Швидкі результати',
+      description: '80-90% стійке видалення волосся після 6-8 сеансів'
+    },
+    {
+      icon: Sparkles,
+      title: 'Всі зони тіла',
+      description: 'Від верхньої губи до всього тіла — для жінок і чоловіків'
+    }
   ];
 
   const treatmentAreas = language === 'de' ? [
@@ -148,13 +170,20 @@ const Laser = () => {
     { zone: 'Intimbereich', areas: 'Bikini klassisch, Bikini tief, Bikini komplett' },
     { zone: 'Beine', areas: 'Komplett, Oberschenkel, Unterschenkel, Knie' },
     { zone: 'Sonstiges', areas: 'Nacken, Gesäß, Pofalte' },
-  ] : [
+  ] : language === 'ru' ? [
     { zone: 'Лицо', areas: 'Верхняя губа, подбородок, щёки, бакенбарды' },
     { zone: 'Верхняя часть тела', areas: 'Подмышки, грудь, живот, спина, плечи' },
     { zone: 'Руки', areas: 'Полностью, плечи, предплечья, пальцы' },
     { zone: 'Интимная зона', areas: 'Бикини классическое, глубокое, тотальное' },
     { zone: 'Ноги', areas: 'Полностью, бёдра, голени, колени' },
     { zone: 'Другое', areas: 'Шея, ягодицы, межъягодичная зона' },
+  ] : [
+    { zone: 'Обличчя', areas: 'Верхня губа, підборіддя, щоки, бакенбарди' },
+    { zone: 'Верхня частина тіла', areas: 'Пахви, груди, живіт, спина, плечі' },
+    { zone: 'Руки', areas: 'Повністю, плечі, передпліччя, пальці' },
+    { zone: 'Інтимна зона', areas: 'Бікіні класичне, глибоке, тотальне' },
+    { zone: 'Ноги', areas: 'Повністю, стегна, гомілки, коліна' },
+    { zone: 'Інше', areas: 'Шия, сідниці, міжсідничя' },
   ];
 
   const processSteps = language === 'de' ? [
@@ -178,7 +207,7 @@ const Laser = () => {
       title: 'Nachsorge',
       description: 'Beruhigende Pflege, Sonnenschutz, nächster Termin in 4-6 Wochen'
     }
-  ] : [
+  ] : language === 'ru' ? [
     {
       step: 1,
       title: 'Бесплатная консультация',
@@ -198,6 +227,27 @@ const Laser = () => {
       step: 4,
       title: 'Уход после',
       description: 'Успокаивающий уход, защита от солнца, следующий визит через 4-6 недель'
+    }
+  ] : [
+    {
+      step: 1,
+      title: 'Безкоштовна консультація',
+      description: 'Аналіз фототипу, перевірка протипоказань, індивідуальний план'
+    },
+    {
+      step: 2,
+      title: 'Підготовка',
+      description: 'Гоління зони за 24год, без засмаги 2 тижні до процедури'
+    },
+    {
+      step: 3,
+      title: 'Процедура',
+      description: 'Підбір оптимальної довжини хвилі, охолодження, точні імпульси лазера'
+    },
+    {
+      step: 4,
+      title: 'Догляд після',
+      description: 'Заспокійливий догляд, захист від сонця, наступний візит через 4-6 тижнів'
     }
   ];
 
@@ -222,7 +272,7 @@ const Laser = () => {
       q: 'Für wen ist Laser-Haarentfernung nicht geeignet?',
       a: 'Kontraindikationen sind: Schwangerschaft, aktive Hautinfektionen, Einnahme photosensibilisierender Medikamente, frische Bräune (2 Wochen), Epilepsie, Herzschrittmacher, Krebs. Bei chronischen Erkrankungen beraten wir Sie individuell.'
     }
-  ] : [
+  ] : language === 'ru' ? [
     {
       q: 'Почему трёхволновой лазер лучше обычного?',
       a: 'Трёхволновой лазер объединяет преимущества всех технологий: Александрит для светлой кожи и тонких волос, Диод для универсального применения, Nd:YAG для тёмной кожи. Мастер подбирает оптимальную длину волны для вашего фототипа или комбинирует их — для максимальной эффективности и безопасности.'
@@ -242,6 +292,27 @@ const Laser = () => {
     {
       q: 'Кому не подходит лазерная эпиляция?',
       a: 'Противопоказания: беременность, активные инфекции кожи, приём фотосенсибилизирующих препаратов, свежий загар (2 недели), эпилепсия, кардиостимулятор, онкология. При хронических заболеваниях проконсультируем индивидуально.'
+    }
+  ] : [
+    {
+      q: 'Чому трихвильовий лазер кращий за звичайний?',
+      a: 'Трихвильовий лазер об\'єднує переваги всіх технологій: Олександрит для світлої шкіри та тонкого волосся, Діод для універсального застосування, Nd:YAG для темної шкіри. Майстер підбирає оптимальну довжину хвилі для вашого фототипу або комбінує їх — для максимальної ефективності та безпеки.'
+    },
+    {
+      q: 'Це боляче?',
+      a: 'Завдяки вбудованій системі охолодження (до -4°C) процедура практично безболісна. Більшість клієнтів описують легке поколювання або відчуття тепла. Чутливі зони на кшталт бікіні можуть відчуватися інтенсивніше, але цілком терпимо.'
+    },
+    {
+      q: 'Скільки сеансів потрібно?',
+      a: 'Для 80-90% стійкого видалення волосся потрібно 6-8 сеансів з інтервалом 4-6 тижнів. Точна кількість залежить від типу волосся, зони та гормонального фону. При гормональних порушеннях може знадобитися більше сеансів.'
+    },
+    {
+      q: 'Чи можна робити влітку?',
+      a: 'Так! Nd:YAG лазер безпечний навіть при легкій засмазі. Однак слід уникати прямих сонячних променів 2 тижні до та після процедури. Ми індивідуально підберемо оптимальну довжину хвилі для вашого поточного відтінку шкіри.'
+    },
+    {
+      q: 'Кому не підходить лазерна епіляція?',
+      a: 'Протипоказання: вагітність, активні інфекції шкіри, прийом фотосенсибілізуючих препаратів, свіжа засмага (2 тижні), епілепсія, кардіостимулятор, онкологія. При хронічних захворюваннях проконсультуємо індивідуально.'
     }
   ];
 
@@ -306,7 +377,7 @@ const Laser = () => {
                   size="lg"
                   className="bg-brand-gold hover:bg-brand-gold/90 text-white font-medium rounded-2xl px-10 py-7 text-lg"
                 >
-                  {language === 'de' ? 'Preise ansehen' : language === 'ru' ? 'Смотреть цены' : 'Смотреть цены'}
+                  {language === 'de' ? 'Preise ansehen' : language === 'ru' ? 'Смотреть цены' : 'Дивитись ціни'}
                 </Button>
               </Link>
               <Button
@@ -316,7 +387,7 @@ const Laser = () => {
                 asChild
               >
                 <a href="https://wa.me/4917677267269" target="_blank" rel="noopener noreferrer">
-                  {language === 'de' ? 'Beratung buchen' : language === 'ru' ? 'Записаться на консультацию' : 'Записаться на консультацию'}
+                  {language === 'de' ? 'Beratung buchen' : language === 'ru' ? 'Записаться на консультацию' : 'Записатися на консультацію'}
                 </a>
               </Button>
             </div>
@@ -335,12 +406,14 @@ const Laser = () => {
             className="text-center mb-12 md:mb-16"
           >
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
-              {language === 'de' ? 'Warum Dreiwellenlaser?' : language === 'ru' ? 'Почему трёхволновой лазер?' : 'Почему трёхволновой лазер?'}
+              {language === 'de' ? 'Warum Dreiwellenlaser?' : language === 'ru' ? 'Почему трёхволновой лазер?' : 'Чому трихвильовий лазер?'}
             </h2>
             <p className="text-brand-coffee/70 max-w-3xl mx-auto text-lg">
-              {isGerman
+              {language === 'de'
                 ? 'Ein Gerät – drei Wellenlängen – optimale Ergebnisse für jeden Hauttyp'
-                : 'Один аппарат — три длины волны — оптимальные результаты для любого типа кожи'}
+                : language === 'ru'
+                ? 'Один аппарат — три длины волны — оптимальные результаты для любого типа кожи'
+                : 'Один апарат — три довжини хвилі — оптимальні результати для будь-якого типу шкіри'}
             </p>
           </motion.div>
 
@@ -383,12 +456,14 @@ const Laser = () => {
             className="text-center mb-12 md:mb-16"
           >
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
-              {language === 'de' ? 'Drei Wellenlängen – Drei Stärken' : language === 'ru' ? 'Три длины волны — три преимущества' : 'Три длины волны — три преимущества'}
+              {language === 'de' ? 'Drei Wellenlängen – Drei Stärken' : language === 'ru' ? 'Три длины волны — три преимущества' : 'Три довжини хвилі — три переваги'}
             </h2>
             <p className="text-brand-coffee/70 max-w-3xl mx-auto text-lg">
-              {isGerman
+              {language === 'de'
                 ? 'Jede Wellenlänge hat ihre Stärke. Wir wählen die optimale für Ihren Hauttyp.'
-                : 'Каждая длина волны имеет своё преимущество. Мы подберём оптимальную для вашего фототипа.'}
+                : language === 'ru'
+                ? 'Каждая длина волны имеет своё преимущество. Мы подберём оптимальную для вашего фототипа.'
+                : 'Кожна довжина хвилі має свою перевагу. Ми підберемо оптимальну для вашого фототипу.'}
             </p>
           </motion.div>
 
@@ -450,7 +525,7 @@ const Laser = () => {
             className="text-center mb-12 md:mb-16"
           >
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
-              {language === 'de' ? 'Wie läuft die Behandlung ab?' : language === 'ru' ? 'Как проходит процедура?' : 'Как проходит процедура?'}
+              {language === 'de' ? 'Wie läuft die Behandlung ab?' : language === 'ru' ? 'Как проходит процедура?' : 'Як проходить процедура?'}
             </h2>
           </motion.div>
 
@@ -479,6 +554,31 @@ const Laser = () => {
         </div>
       </section>
 
+      {/* Procedure Schema */}
+      <section className="py-16 md:py-20 lg:py-24">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-8"
+          >
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
+              {language === 'de' ? 'Behandlungsablauf' : language === 'ru' ? 'Схема процедуры' : 'Схема процедури'}
+            </h2>
+          </motion.div>
+          <ProcedureSchema
+            germanImages={['/193 1.png']}
+            russianImages={['/193.png']}
+            ukrainianImages={['/193.png']}
+            altTextGerman="Laser-Haarentfernung Behandlungsablauf"
+            altTextRussian="Схема лазерной эпиляции"
+            altTextUkrainian="Схема лазерної епіляції"
+          />
+        </div>
+      </section>
+
       {/* Treatment Areas */}
       <section className="py-16 md:py-20 lg:py-24 bg-white/50">
         <div className="container mx-auto px-4 max-w-5xl">
@@ -490,12 +590,14 @@ const Laser = () => {
             className="text-center mb-12"
           >
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
-              {language === 'de' ? 'Behandlungszonen' : language === 'ru' ? 'Зоны обработки' : 'Зоны обработки'}
+              {language === 'de' ? 'Behandlungszonen' : language === 'ru' ? 'Зоны обработки' : 'Зони обробки'}
             </h2>
             <p className="text-brand-coffee/70 max-w-2xl mx-auto">
-              {isGerman
+              {language === 'de'
                 ? 'Laser-Haarentfernung für Damen und Herren – alle Körperzonen'
-                : 'Лазерная эпиляция для женщин и мужчин — все зоны тела'}
+                : language === 'ru'
+                ? 'Лазерная эпиляция для женщин и мужчин — все зоны тела'
+                : 'Лазерна епіляція для жінок і чоловіків — всі зони тіла'}
             </p>
           </motion.div>
 
@@ -522,7 +624,7 @@ const Laser = () => {
                 <Button
                   className="bg-brand-gold hover:bg-brand-gold/90 text-white font-medium rounded-xl"
                 >
-                  {language === 'de' ? 'Alle Preise ansehen' : language === 'ru' ? 'Смотреть все цены' : 'Смотреть все цены'}
+                  {language === 'de' ? 'Alle Preise ansehen' : language === 'ru' ? 'Смотреть все цены' : 'Дивитись всі ціни'}
                 </Button>
               </Link>
             </div>
@@ -541,7 +643,7 @@ const Laser = () => {
             className="text-center mb-12"
           >
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-bold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
-              {language === 'de' ? 'Häufige Fragen' : language === 'ru' ? 'Частые вопросы' : 'Частые вопросы'}
+              {language === 'de' ? 'Häufige Fragen' : language === 'ru' ? 'Частые вопросы' : 'Часті питання'}
             </h2>
           </motion.div>
 
@@ -585,7 +687,7 @@ const Laser = () => {
               className="h-[2px] bg-gradient-to-r from-transparent via-brand-gold to-transparent mx-auto mb-6"
             />
             <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl font-heading font-bold text-brand-espresso mb-2 max-w-full" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
-              {language === 'de' ? 'Unsere Arbeiten' : language === 'ru' ? 'Наши работы' : 'Наши работы'}
+              {language === 'de' ? 'Unsere Arbeiten' : language === 'ru' ? 'Наши работы' : 'Наші роботи'}
             </h2>
             <p className="text-brand-coffee/60 text-sm tracking-widest uppercase">
               {language === 'de' ? 'Galerie' : language === 'ru' ? 'Галерея' : 'Галерея'}
@@ -615,7 +717,7 @@ const Laser = () => {
                 <div className="absolute inset-0 rounded-2xl border-2 border-brand-gold/0 group-hover:border-brand-gold/40 transition-all duration-500" />
                 <div className="absolute bottom-3 left-3 right-3 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
                   <span className="text-white text-xs font-medium tracking-wider uppercase bg-black/30 backdrop-blur-sm px-3 py-1.5 rounded-full">
-                    {language === 'de' ? 'Ansehen' : language === 'ru' ? 'Смотреть' : 'Смотреть'}
+                    {language === 'de' ? 'Ansehen' : language === 'ru' ? 'Смотреть' : 'Дивитись'}
                   </span>
                 </div>
               </motion.div>
@@ -665,12 +767,14 @@ const Laser = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl font-heading font-bold text-white mb-6 max-w-full" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
-              {language === 'de' ? 'Glatte Haut – dauerhaft' : language === 'ru' ? 'Гладкая кожа — надолго' : 'Гладкая кожа — надолго'}
+              {language === 'de' ? 'Glatte Haut – dauerhaft' : language === 'ru' ? 'Гладкая кожа — надолго' : 'Гладенька шкіра — надовго'}
             </h2>
             <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-              {isGerman
+              {language === 'de'
                 ? 'Kostenlose Beratung mit Hauttyp-Analyse. Wir erstellen Ihren individuellen Behandlungsplan.'
-                : 'Бесплатная консультация с анализом фототипа. Составим индивидуальный план процедур.'}
+                : language === 'ru'
+                ? 'Бесплатная консультация с анализом фототипа. Составим индивидуальный план процедур.'
+                : 'Безкоштовна консультація з аналізом фототипу. Складемо індивідуальний план процедур.'}
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button
@@ -678,8 +782,8 @@ const Laser = () => {
                 className="bg-white hover:bg-brand-cream text-brand-espresso font-medium rounded-2xl text-lg px-10 py-7"
                 asChild
               >
-                <a href="https://wa.me/4917677267269" target="_blank" rel="noopener noreferrer">
-                  {language === 'de' ? 'Termin buchen' : language === 'ru' ? 'Записаться' : 'Записаться'}
+                <a href="https://dikidi.ru/1904110" target="_blank" rel="noopener noreferrer">
+                  {language === 'de' ? 'Termin buchen' : language === 'ru' ? 'Записаться' : 'Записатися'}
                 </a>
               </Button>
               <Button
@@ -689,7 +793,7 @@ const Laser = () => {
                 asChild
               >
                 <a href="https://wa.me/4917677267269" target="_blank" rel="noopener noreferrer">
-                  {language === 'de' ? 'Beratung anfragen' : language === 'ru' ? 'Запросить консультацию' : 'Запросить консультацию'}
+                  {language === 'de' ? 'Beratung anfragen' : language === 'ru' ? 'Запросить консультацию' : 'Запросити консультацію'}
                 </a>
               </Button>
               <Link to="/contact">
@@ -698,7 +802,7 @@ const Laser = () => {
                   variant="outline"
                   className="border-2 border-white text-white hover:bg-white/10 font-medium rounded-2xl text-lg px-10 py-7"
                 >
-                  {language === 'de' ? 'Kontakt' : language === 'ru' ? 'Контакты' : 'Контакты'}
+                  {language === 'de' ? 'Kontakt' : language === 'ru' ? 'Контакты' : 'Контакти'}
                 </Button>
               </Link>
             </div>

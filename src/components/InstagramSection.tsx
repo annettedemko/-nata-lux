@@ -47,7 +47,9 @@ export const InstagramSection = () => {
           <p className="text-lg md:text-xl text-brand-coffee/80 mb-8 leading-relaxed">
             {language === 'de'
               ? 'Erleben Sie NataLux Beauty hautnah auf Instagram! Entdecken Sie unsere neuesten Arbeiten, Vorher-Nachher-Verwandlungen und exklusive Beauty-Tipps.'
-              : 'Следите за нашими работами в Instagram! Смотрите наши последние работы, преображения до и после, а также эксклюзивные советы по красоте.'}
+              : language === 'ru'
+              ? 'Следите за нашими работами в Instagram! Смотрите наши последние работы, преображения до и после, а также эксклюзивные советы по красоте.'
+              : 'Слідкуйте за нашими роботами в Instagram! Дивіться наші останні роботи, перетворення до і після, а також ексклюзивні поради з краси.'}
           </p>
 
           <motion.button
