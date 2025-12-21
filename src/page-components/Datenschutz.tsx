@@ -34,10 +34,10 @@ const Datenschutz = () => {
           <div className="glass rounded-3xl p-8 md:p-12 animate-fade-in">
             {/* Header */}
             <div className="mb-8">
-              <div className="flex items-center gap-3 mb-4">
-                <Shield className="w-8 h-8 md:w-10 md:h-10 text-brand-gold" />
-                <h1 className="text-3xl md:text-5xl font-heading font-semibold text-brand-espresso">
-                  {language === 'de' ? 'Datenschutzerklärung' : language === 'ru' ? 'Политика конфиденциальности' : 'Политика конфиденциальности'}
+              <div className="flex items-start gap-2 md:gap-3 mb-4">
+                <Shield className="w-7 h-7 md:w-10 md:h-10 text-brand-gold flex-shrink-0 mt-1" />
+                <h1 className="text-2xl md:text-5xl font-heading font-semibold text-brand-espresso break-words hyphens-auto leading-tight">
+                  {language === 'de' ? 'Datenschutzerklärung' : language === 'ru' ? 'Политика конфиденциальности' : 'Политика конфіденційності'}
                 </h1>
               </div>
               <p className="text-brand-coffee/70">
