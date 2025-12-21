@@ -129,6 +129,7 @@ export const LogoRebirth = () => {
       {/* Logo faster materializing from particles */}
       <motion.div
         className="relative z-10 w-full h-full"
+        style={{ backgroundColor: 'transparent' }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{
@@ -143,22 +144,26 @@ export const LogoRebirth = () => {
           className="w-full h-full object-contain"
           style={{
             filter: 'drop-shadow(0 4px 16px rgba(197,151,80,0.4))',
+            backgroundColor: 'transparent',
+            mixBlendMode: 'normal',
+            WebkitBackfaceVisibility: 'hidden',
+            backfaceVisibility: 'hidden',
           }}
           initial={{
-            scale: 0.85,
+            scale: 0.9,
             opacity: 0,
-            filter: 'blur(8px) drop-shadow(0 4px 16px rgba(197,151,80,0.4))',
           }}
           animate={{
             scale: 1,
             opacity: 1,
-            filter: 'blur(0px) drop-shadow(0 4px 16px rgba(197,151,80,0.4))',
           }}
           transition={{
-            duration: 1.2,
+            duration: 1,
             delay: 1.2,
             ease: [0.16, 1, 0.3, 1]
           }}
+          loading="eager"
+          decoding="async"
         />
       </motion.div>
 

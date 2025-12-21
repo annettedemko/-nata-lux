@@ -35,8 +35,8 @@ const Datenschutz = () => {
             {/* Header */}
             <div className="mb-8">
               <div className="flex items-center gap-3 mb-4">
-                <Shield className="w-10 h-10 text-brand-gold" />
-                <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso">
+                <Shield className="w-8 h-8 md:w-10 md:h-10 text-brand-gold" />
+                <h1 className="text-3xl md:text-5xl font-heading font-semibold text-brand-espresso">
                   {language === 'de' ? 'Datenschutzerklärung' : language === 'ru' ? 'Политика конфиденциальности' : 'Политика конфиденциальности'}
                 </h1>
               </div>
