@@ -26,25 +26,44 @@ export const BackgroundVideo = () => {
 
         // ВАЖНО: убедимся что видео действительно muted для автозапуска
         video.muted = true;
+        video.volume = 0;
         video.playbackRate = 0.8; // Слегка замедлить для плавности
 
-        await video.play();
-        console.log('✅ Video playing!');
-        setIsLoaded(true);
-        setAutoplayBlocked(false);
+        // Убеждаемся что видео загружено
+        if (video.readyState < 2) {
+          console.log('📥 Loading video...');
+          await new Promise((resolve) => {
+            video.addEventListener('loadeddata', resolve, { once: true });
+            video.load();
+          });
+        }
+
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          await playPromise;
+          console.log('✅ Video playing!');
+          setIsLoaded(true);
+          setAutoplayBlocked(false);
+        }
       } catch (error) {
         // Автовоспроизведение заблокировано браузером - это нормально
         // Показываем статичный фон вместо видео
-        console.log('ℹ️ Video autoplay blocked by browser, using fallback image');
+        console.log('ℹ️ Video autoplay blocked by browser:', error);
         setAutoplayBlocked(true);
         setIsLoaded(true);
       }
     };
 
-    // Попытка запуска с небольшой задержкой для лучшей совместимости
+    // Для десктопа - пробуем запустить немедленно
+    playVideo();
+
+    // Также пробуем через небольшую задержку для надежности
     const playTimer = setTimeout(() => {
-      playVideo();
-    }, 100);
+      if (video.paused) {
+        console.log('🔄 Retry playing after timeout...');
+        playVideo();
+      }
+    }, 500);
 
     // Пробуем запустить при любом взаимодействии пользователя
     const handleUserInteraction = () => {
@@ -57,7 +76,16 @@ export const BackgroundVideo = () => {
     // Обработчики событий видео
     const handleLoadedData = () => {
       console.log('📹 Video data loaded');
-      playVideo();
+      if (video.paused) {
+        playVideo();
+      }
+    };
+
+    const handleCanPlayThrough = () => {
+      console.log('✅ Video can play through');
+      if (video.paused) {
+        playVideo();
+      }
     };
 
     const handleError = (e: Event) => {
@@ -77,34 +105,49 @@ export const BackgroundVideo = () => {
 
     const handleCanPlay = () => {
       console.log('✅ Video can play');
+      if (video.paused) {
+        playVideo();
+      }
     };
 
     // Запускаем при загрузке
     video.addEventListener('loadeddata', handleLoadedData);
+    video.addEventListener('canplaythrough', handleCanPlayThrough);
     video.addEventListener('error', handleError);
     video.addEventListener('loadstart', handleLoadStart);
     video.addEventListener('canplay', handleCanPlay);
 
-    // Также пробуем запустить сразу
-    if (video.readyState >= 3) {
+    // Также пробуем запустить сразу если уже готово
+    if (video.readyState >= 2) {
       console.log('⚡ Video ready immediately');
       playVideo();
     }
+
+    // Обработчик для возврата на вкладку
+    const handleVisibilityChange = () => {
+      if (!document.hidden && video.paused) {
+        console.log('👁️ Tab became visible, trying to play...');
+        playVideo();
+      }
+    };
 
     // Слушаем клики/тачи на документе для запуска видео
     document.addEventListener('click', handleUserInteraction, { once: true });
     document.addEventListener('touchstart', handleUserInteraction, { once: true });
     document.addEventListener('scroll', handleUserInteraction, { once: true });
+    document.addEventListener('visibilitychange', handleVisibilityChange);
 
     return () => {
       clearTimeout(playTimer);
       video.removeEventListener('loadeddata', handleLoadedData);
+      video.removeEventListener('canplaythrough', handleCanPlayThrough);
       video.removeEventListener('error', handleError);
       video.removeEventListener('loadstart', handleLoadStart);
       video.removeEventListener('canplay', handleCanPlay);
       document.removeEventListener('click', handleUserInteraction);
       document.removeEventListener('touchstart', handleUserInteraction);
       document.removeEventListener('scroll', handleUserInteraction);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
   }, [autoplayBlocked]);
 
