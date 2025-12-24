@@ -12,6 +12,7 @@ import { InstagramSection } from "@/components/InstagramSection"
 import { PageParallaxBackground } from "@/components/PageParallaxBackground"
 import { GoldenCursor } from "@/components/GoldenCursor"
 import { ScrollToTop } from "@/components/ScrollToTop"
+import { CookieConsent } from "@/components/CookieConsent"
 import { Providers } from './providers'
 
 export function ClientLayout({ children }: { children: ReactNode }) {
@@ -34,6 +35,7 @@ export function ClientLayout({ children }: { children: ReactNode }) {
             </div>
           </PageParallaxBackground>
           <GoldenCursor />
+          <CookieConsent />
         </LanguageProvider>
       </TooltipProvider>
     </Providers>

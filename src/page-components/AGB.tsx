@@ -30,7 +30,7 @@ const AGB = () => {
             <div className="mb-8">
               <div className="flex items-center gap-3 mb-4">
                 <FileText className="w-10 h-10 text-brand-gold" />
-                <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso">
+                <h1 className="text-3xl md:text-5xl font-heading font-semibold text-brand-espresso">
                   {language === 'de' ? 'Allgemeine Geschäftsbedingungen' : language === 'ru' ? 'Общие условия и положения' : 'Общие условия и положения'}
                 </h1>
               </div>

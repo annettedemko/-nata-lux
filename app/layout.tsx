@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, Cormorant_Garamond, Inter } from 'next/font/google'
+import Script from 'next/script'
 import '../src/index.css'
 import { ClientLayout } from './client-layout'
 
@@ -59,6 +60,29 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de">
+      <head>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-9WW8PXXRQ0"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            // Default consent to denied (GDPR compliant)
+            gtag('consent', 'default', {
+              'analytics_storage': 'denied'
+            });
+
+            gtag('config', 'G-9WW8PXXRQ0', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
+      </head>
       <body className={`${playfair.variable} ${cormorant.variable} ${inter.variable} font-heading`}>
         <ClientLayout>
           {children}

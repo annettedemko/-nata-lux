@@ -49,8 +49,14 @@ const Impressum = () => {
                     {language === 'de' ? 'Nataliia Koziukevych' : language === 'ru' ? 'Наталия Козюкевич' : 'Наталия Козюкевич'}
                   </p>
                   <p className="font-medium">NataLux</p>
-                  <p className="text-sm text-brand-coffee/60">
+                  <p className="font-medium text-brand-espresso">
                     {language === 'de' ? 'Gewerbebetrieb' : language === 'ru' ? 'Предприятие торговли' : 'Предприятие торговли'}
+                  </p>
+                  <p>
+                    <span className="font-medium">
+                      {language === 'de' ? 'Berufsbezeichnung:' : language === 'ru' ? 'Профессия:' : 'Профессия:'}
+                    </span>{' '}
+                    {language === 'de' ? 'Kosmetikerin' : language === 'ru' ? 'Косметолог' : 'Косметолог'}
                   </p>
                 </div>
               </section>
@@ -110,6 +116,26 @@ const Impressum = () => {
                     </span>{' '}
                     82143363058
                   </p>
+                  <p className="mt-3 text-sm">
+                    {language === 'de'
+                      ? 'Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.'
+                      : language === 'ru'
+                      ? 'Согласно § 19 UStG (Закон об НДС) налог с оборота не взимается.'
+                      : 'Согласно § 19 UStG (Закон об НДС) налог с оборота не взимается.'}
+                  </p>
+                </div>
+              </section>
+
+              {/* Supervisory Authority */}
+              <section>
+                <h3 className="text-xl font-heading font-semibold text-brand-espresso mb-3">
+                  {language === 'de' ? 'Zuständige Aufsichtsbehörde' : language === 'ru' ? 'Контролирующий орган' : 'Контролирующий орган'}
+                </h3>
+                <div className="space-y-1">
+                  <p className="font-medium">Landeshauptstadt München</p>
+                  <p>Kreisverwaltungsreferat (KVR)</p>
+                  <p>Ruppertstraße 19</p>
+                  <p>80466 München</p>
                 </div>
               </section>
 
@@ -129,7 +155,7 @@ const Impressum = () => {
               <section>
                 <h3 className="text-xl font-heading font-semibold text-brand-espresso mb-3">
                   {isGerman
-                    ? 'Verbraucherstreitbeilegung/Universalschlichtungsstelle'
+                    ? 'Verbraucherstreitbeilegung/ Universalschlichtungsstelle'
                     : 'Разрешение споров потребителей'}
                 </h3>
                 <p className="leading-relaxed">

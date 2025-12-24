@@ -187,10 +187,135 @@ const Datenschutz = () => {
                 </p>
               </section>
 
+              {/* Cookies */}
+              <section>
+                <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4 flex items-center gap-2">
+                  <Lock className="w-6 h-6 text-brand-gold" />
+                  {language === 'de' ? '6. Cookies' : language === 'ru' ? '6. Файлы Cookie' : '6. Файлы Cookie'}
+                </h2>
+
+                <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-4">
+                  {language === 'de' ? 'Was sind Cookies?' : language === 'ru' ? 'Что такое Cookie?' : 'Что такое Cookie?'}
+                </h3>
+                <p className="leading-relaxed mb-4">
+                  {isGerman
+                    ? 'Cookies sind kleine Textdateien, die auf Ihrem Endgerät gespeichert werden und die Ihr Browser speichert. Sie dienen dazu, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen.'
+                    : 'Cookie — это небольшие текстовые файлы, которые сохраняются на вашем устройстве и которые хранит ваш браузер. Они служат для того, чтобы сделать наше предложение более удобным, эффективным и безопасным.'}
+                </p>
+
+                <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-6">
+                  {language === 'de' ? 'Welche Cookies verwenden wir?' : language === 'ru' ? 'Какие Cookie мы используем?' : 'Какие Cookie мы используем?'}
+                </h3>
+
+                <div className="bg-brand-gold/10 p-5 rounded-xl mb-4">
+                  <p className="font-semibold text-brand-espresso mb-3">
+                    {language === 'de' ? 'Technisch notwendige Cookies:' : language === 'ru' ? 'Технически необходимые Cookie:' : 'Технически необходимые Cookie:'}
+                  </p>
+                  <p className="text-sm leading-relaxed mb-3">
+                    {isGerman
+                      ? 'Diese Cookies sind erforderlich, damit die Website ordnungsgemäß funktioniert. Sie ermöglichen grundlegende Funktionen wie die Seitennavigation und den Zugriff auf sichere Bereiche der Website.'
+                      : 'Эти Cookie необходимы для правильной работы сайта. Они обеспечивают базовые функции, такие как навигация по страницам и доступ к защищенным разделам сайта.'}
+                  </p>
+                  <ul className="list-disc list-inside space-y-1 text-sm ml-4">
+                    <li>
+                      {language === 'de' ? 'Speicherung der Cookie-Einwilligung' : language === 'ru' ? 'Сохранение согласия на Cookie' : 'Сохранение согласия на Cookie'}
+                    </li>
+                    <li>
+                      {language === 'de' ? 'Spracheinstellungen' : language === 'ru' ? 'Языковые настройки' : 'Языковые настройки'}
+                    </li>
+                    <li>
+                      {language === 'de' ? 'Session-Verwaltung' : language === 'ru' ? 'Управление сессиями' : 'Управление сессиями'}
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-blue-50/50 border-l-4 border-blue-500 p-4 rounded mb-4">
+                  <p className="font-semibold text-blue-900 mb-2">
+                    {language === 'de' ? 'Analyse-Cookies:' : language === 'ru' ? 'Аналитические Cookie:' : 'Аналитические Cookie:'}
+                  </p>
+                  <p className="text-sm text-blue-800 mb-3">
+                    {isGerman
+                      ? 'Mit Ihrer Einwilligung verwenden wir folgende Analyse-Tools:'
+                      : 'С вашего согласия мы используем следующие инструменты анализа:'}
+                  </p>
+                  <ul className="list-disc list-inside space-y-2 text-sm text-blue-800 ml-4">
+                    <li>
+                      <span className="font-medium">Google Analytics:</span>{' '}
+                      {isGerman
+                        ? 'Zur Analyse des Nutzerverhaltens und Verbesserung unserer Website. Die Daten werden anonymisiert erfasst.'
+                        : 'Для анализа поведения пользователей и улучшения нашего сайта. Данные собираются анонимно.'}
+                    </li>
+                    <li>
+                      <span className="font-medium">Ahrefs:</span>{' '}
+                      {isGerman
+                        ? 'Zur Analyse der Website-Performance und SEO-Optimierung.'
+                        : 'Для анализа производительности сайта и SEO-оптимизации.'}
+                    </li>
+                  </ul>
+                </div>
+
+                <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-6">
+                  {language === 'de' ? 'Rechtsgrundlage' : language === 'ru' ? 'Правовая основа' : 'Правовая основа'}
+                </h3>
+                <p className="leading-relaxed mb-4">
+                  {isGerman
+                    ? 'Technisch notwendige Cookies werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO gespeichert. Analyse-Cookies werden nur mit Ihrer ausdrücklichen Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO gesetzt.'
+                    : 'Технически необходимые Cookie сохраняются на основании Art. 6 Abs. 1 lit. f GDPR. Аналитические Cookie устанавливаются только с вашего явного согласия в соответствии с Art. 6 Abs. 1 lit. a GDPR.'}
+                </p>
+
+                <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-6">
+                  {language === 'de' ? 'Cookies verwalten' : language === 'ru' ? 'Управление Cookie' : 'Управление Cookie'}
+                </h3>
+                <p className="leading-relaxed mb-3">
+                  {isGerman
+                    ? 'Sie können Ihre Cookie-Einstellungen jederzeit ändern:'
+                    : 'Вы можете в любое время изменить настройки Cookie:'}
+                </p>
+                <ul className="list-disc list-inside space-y-2 mb-4 ml-4">
+                  <li>
+                    {isGerman
+                      ? 'Über unseren Cookie-Banner auf der Website'
+                      : 'Через наш баннер Cookie на сайте'}
+                  </li>
+                  <li>
+                    {isGerman
+                      ? 'In den Einstellungen Ihres Browsers (alle Cookies löschen/blockieren)'
+                      : 'В настройках вашего браузера (удалить/заблокировать все Cookie)'}
+                  </li>
+                </ul>
+                <p className="text-sm text-brand-coffee/60">
+                  {isGerman
+                    ? 'Bitte beachten Sie: Das Deaktivieren von Cookies kann die Funktionalität unserer Website einschränken.'
+                    : 'Обратите внимание: отключение Cookie может ограничить функциональность нашего сайта.'}
+                </p>
+
+                <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-6">
+                  {language === 'de' ? 'Speicherdauer' : language === 'ru' ? 'Срок хранения' : 'Срок хранения'}
+                </h3>
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li>
+                    <span className="font-medium">
+                      {language === 'de' ? 'Session-Cookies:' : language === 'ru' ? 'Session-Cookie:' : 'Session-Cookie:'}
+                    </span>{' '}
+                    {isGerman
+                      ? 'werden nach Schließen des Browsers gelöscht'
+                      : 'удаляются после закрытия браузера'}
+                  </li>
+                  <li>
+                    <span className="font-medium">
+                      {language === 'de' ? 'Permanente Cookies:' : language === 'ru' ? 'Постоянные Cookie:' : 'Постоянные Cookie:'}
+                    </span>{' '}
+                    {isGerman
+                      ? 'werden nach maximal 13 Monaten automatisch gelöscht'
+                      : 'автоматически удаляются максимум через 13 месяцев'}
+                  </li>
+                </ul>
+              </section>
+
               {/* Contact Form */}
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-                  {language === 'de' ? '6. Kontaktformular' : language === 'ru' ? '6. Контактная форма' : '6. Контактная форма'}
+                  {language === 'de' ? '7. Kontaktformular' : language === 'ru' ? '7. Контактная форма' : '7. Контактная форма'}
                 </h2>
                 <p className="leading-relaxed mb-4">
                   {isGerman
@@ -204,10 +329,82 @@ const Datenschutz = () => {
                 </p>
               </section>
 
+              {/* Online Booking - Dikidi */}
+              <section>
+                <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
+                  {language === 'de' ? '8. Online-Terminbuchung (Dikidi)' : language === 'ru' ? '8. Онлайн-запись (Dikidi)' : '8. Онлайн-запись (Dikidi)'}
+                </h2>
+
+                <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-4">
+                  {language === 'de' ? 'Buchungssystem' : language === 'ru' ? 'Система бронирования' : 'Система бронирования'}
+                </h3>
+                <p className="leading-relaxed mb-4">
+                  {isGerman
+                    ? 'Für die Online-Terminbuchung nutzen wir den externen Dienst Dikidi (dikidi.ru). Wenn Sie über unsere Website einen Termin buchen, werden Ihre Daten an Dikidi übermittelt und dort verarbeitet.'
+                    : 'Для онлайн-записи на прием мы используем внешний сервис Dikidi (dikidi.ru). Когда вы бронируете время через наш сайт, ваши данные передаются в Dikidi и обрабатываются там.'}
+                </p>
+
+                <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-6">
+                  {language === 'de' ? 'Welche Daten werden verarbeitet?' : language === 'ru' ? 'Какие данные обрабатываются?' : 'Какие данные обрабатываются?'}
+                </h3>
+                <ul className="list-disc list-inside space-y-2 ml-4 mb-4">
+                  <li>{language === 'de' ? 'Name' : language === 'ru' ? 'Имя' : 'Имя'}</li>
+                  <li>{language === 'de' ? 'Telefonnummer' : language === 'ru' ? 'Номер телефона' : 'Номер телефона'}</li>
+                  <li>{language === 'de' ? 'E-Mail-Adresse' : language === 'ru' ? 'Email-адрес' : 'Email-адрес'}</li>
+                  <li>{language === 'de' ? 'Gewünschte Dienstleistung und Termindetails' : language === 'ru' ? 'Желаемая услуга и детали записи' : 'Желаемая услуга и детали записи'}</li>
+                </ul>
+
+                <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-6">
+                  {language === 'de' ? 'Zweck und Rechtsgrundlage' : language === 'ru' ? 'Цель и правовая основа' : 'Цель и правовая основа'}
+                </h3>
+                <p className="leading-relaxed mb-4">
+                  {isGerman
+                    ? 'Die Verarbeitung erfolgt zur Durchführung vorvertraglicher Maßnahmen (Terminvereinbarung) auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO. Die Daten werden ausschließlich zur Terminverwaltung und Kontaktaufnahme verwendet.'
+                    : 'Обработка осуществляется для выполнения предконтрактных мер (запись на прием) на основании Art. 6 Abs. 1 lit. b GDPR. Данные используются исключительно для управления записями и связи с вами.'}
+                </p>
+
+                <div className="bg-amber-50/50 border-l-4 border-amber-500 p-4 rounded mb-4">
+                  <p className="text-sm font-semibold text-amber-900 mb-2">
+                    {language === 'de' ? 'Wichtiger Hinweis - Datenübermittlung außerhalb der EU:' : language === 'ru' ? 'Важное замечание - передача данных за пределы ЕС:' : 'Важливе зауваження - передача даних за межі ЄС:'}
+                  </p>
+                  <p className="text-sm text-amber-800 mb-2">
+                    {isGerman
+                      ? 'Dikidi ist ein Dienst mit Sitz in Russland. Durch die Nutzung des Buchungssystems willigen Sie ein, dass Ihre Daten auf Servern außerhalb der EU/EWR verarbeitet werden. Das Datenschutzniveau entspricht möglicherweise nicht den EU-Standards.'
+                      : 'Dikidi — это сервис, расположенный в России. Используя систему бронирования, вы соглашаетесь с тем, что ваши данные обрабатываются на серверах за пределами ЕС/ЕЭЗ. Уровень защиты данных может не соответствовать стандартам ЕС.'}
+                  </p>
+                </div>
+
+                <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-6">
+                  {language === 'de' ? 'Speicherdauer' : language === 'ru' ? 'Срок хранения' : 'Срок хранения'}
+                </h3>
+                <p className="leading-relaxed mb-4">
+                  {isGerman
+                    ? 'Die Daten werden bei Dikidi gespeichert, solange dies für die Terminverwaltung erforderlich ist. Nach Abschluss der Behandlung werden die Daten gemäß den Aufbewahrungspflichten gespeichert.'
+                    : 'Данные хранятся в Dikidi до тех пор, пока это необходимо для управления записями. После завершения процедуры данные хранятся в соответствии с обязательствами по хранению.'}
+                </p>
+
+                <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-6">
+                  {language === 'de' ? 'Weitere Informationen' : language === 'ru' ? 'Дополнительная информация' : 'Додаткова інформація'}
+                </h3>
+                <p className="leading-relaxed">
+                  {isGerman
+                    ? 'Weitere Informationen zum Datenschutz bei Dikidi finden Sie unter: '
+                    : 'Дополнительную информацию о защите данных в Dikidi вы найдете по адресу: '}
+                  <a
+                    href="https://dikidi.ru/privacy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-brand-gold hover:underline"
+                  >
+                    https://dikidi.ru/privacy
+                  </a>
+                </p>
+              </section>
+
               {/* Email Contact */}
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-                  {language === 'de' ? '7. Anfrage per E-Mail oder Telefon' : language === 'ru' ? '7. Запрос по электронной почте или телефону' : '7. Запрос по электронной почте или телефону'}
+                  {language === 'de' ? '9. Anfrage per E-Mail oder Telefon' : language === 'ru' ? '9. Запрос по электронной почте или телефону' : '9. Запрос по электронной почте или телефону'}
                 </h2>
                 <p className="leading-relaxed">
                   {isGerman
@@ -219,7 +416,7 @@ const Datenschutz = () => {
               {/* SSL Encryption */}
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-                  {language === 'de' ? '8. SSL- bzw. TLS-Verschlüsselung' : language === 'ru' ? '8. SSL/TLS-шифрование' : '8. SSL/TLS-шифрование'}
+                  {language === 'de' ? '10. SSL- bzw. TLS-Verschlüsselung' : language === 'ru' ? '10. SSL/TLS-шифрование' : '10. SSL/TLS-шифрование'}
                 </h2>
                 <p className="leading-relaxed">
                   {isGerman
@@ -231,7 +428,7 @@ const Datenschutz = () => {
               {/* Data Deletion */}
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-                  {language === 'de' ? '9. Speicherdauer' : language === 'ru' ? '9. Срок хранения' : '9. Срок хранения'}
+                  {language === 'de' ? '11. Speicherdauer' : language === 'ru' ? '11. Срок хранения' : '11. Срок хранения'}
                 </h2>
                 <p className="leading-relaxed">
                   {isGerman
@@ -243,7 +440,7 @@ const Datenschutz = () => {
               {/* Contact for Questions */}
               <section className="bg-brand-gold/5 p-6 rounded-2xl">
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-                  {language === 'de' ? '10. Fragen zum Datenschutz?' : language === 'ru' ? '10. Вопросы о защите данных?' : '10. Вопросы о защите данных?'}
+                  {language === 'de' ? '12. Fragen zum Datenschutz?' : language === 'ru' ? '12. Вопросы о защите данных?' : '12. Вопросы о защите данных?'}
                 </h2>
                 <p className="leading-relaxed mb-4">
                   {isGerman
