@@ -8,7 +8,7 @@ const Datenschutz = () => {
   const isGerman = language === 'de';
 
   const handleEmailClick = () => {
-    const email = 'Natali.lux@web.de';
+    const email = 'natali.lux@web.de';
     const cc = 'natalux878@gmail.com';
     window.location.href = `mailto:${email}?cc=${cc}`;
   };
@@ -89,7 +89,7 @@ const Datenschutz = () => {
                       onClick={handleEmailClick}
                       className="hover:text-brand-gold transition-colors"
                     >
-                      Natali.lux@web.de
+                      natali.lux@web.de
                     </button>
                   </div>
                 </div>
@@ -329,74 +329,32 @@ const Datenschutz = () => {
                 </p>
               </section>
 
-              {/* Online Booking - Dikidi */}
+              {/* Online Booking - DIKIDI */}
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-                  {language === 'de' ? '8. Online-Terminbuchung (Dikidi)' : language === 'ru' ? '8. Онлайн-запись (Dikidi)' : '8. Онлайн-запись (Dikidi)'}
+                  {language === 'de' ? '8. Online-Terminbuchung über DIKIDI' : language === 'ru' ? '8. Онлайн-запись через DIKIDI' : '8. Онлайн-запись через DIKIDI'}
                 </h2>
-
-                <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-4">
-                  {language === 'de' ? 'Buchungssystem' : language === 'ru' ? 'Система бронирования' : 'Система бронирования'}
-                </h3>
                 <p className="leading-relaxed mb-4">
                   {isGerman
-                    ? 'Für die Online-Terminbuchung nutzen wir den externen Dienst Dikidi (dikidi.ru). Wenn Sie über unsere Website einen Termin buchen, werden Ihre Daten an Dikidi übermittelt und dort verarbeitet.'
-                    : 'Для онлайн-записи на прием мы используем внешний сервис Dikidi (dikidi.ru). Когда вы бронируете время через наш сайт, ваши данные передаются в Dikidi и обрабатываются там.'}
+                    ? 'Die Online-Terminbuchung erfolgt teilweise über den externen Dienst DIKIDI. Bei der Nutzung des Buchungssystems werden personenbezogene Daten wie Name, Telefonnummer, E-Mail-Adresse sowie Terminwünsche verarbeitet.'
+                    : 'Онлайн-запись осуществляется частично через внешний сервис DIKIDI. При использовании системы бронирования обрабатываются персональные данные, такие как имя, номер телефона, адрес электронной почты и желаемое время записи.'}
                 </p>
-
-                <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-6">
-                  {language === 'de' ? 'Welche Daten werden verarbeitet?' : language === 'ru' ? 'Какие данные обрабатываются?' : 'Какие данные обрабатываются?'}
-                </h3>
-                <ul className="list-disc list-inside space-y-2 ml-4 mb-4">
-                  <li>{language === 'de' ? 'Name' : language === 'ru' ? 'Имя' : 'Имя'}</li>
-                  <li>{language === 'de' ? 'Telefonnummer' : language === 'ru' ? 'Номер телефона' : 'Номер телефона'}</li>
-                  <li>{language === 'de' ? 'E-Mail-Adresse' : language === 'ru' ? 'Email-адрес' : 'Email-адрес'}</li>
-                  <li>{language === 'de' ? 'Gewünschte Dienstleistung und Termindetails' : language === 'ru' ? 'Желаемая услуга и детали записи' : 'Желаемая услуга и детали записи'}</li>
-                </ul>
-
-                <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-6">
-                  {language === 'de' ? 'Zweck und Rechtsgrundlage' : language === 'ru' ? 'Цель и правовая основа' : 'Цель и правовая основа'}
-                </h3>
                 <p className="leading-relaxed mb-4">
                   {isGerman
-                    ? 'Die Verarbeitung erfolgt zur Durchführung vorvertraglicher Maßnahmen (Terminvereinbarung) auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO. Die Daten werden ausschließlich zur Terminverwaltung und Kontaktaufnahme verwendet.'
-                    : 'Обработка осуществляется для выполнения предконтрактных мер (запись на прием) на основании Art. 6 Abs. 1 lit. b GDPR. Данные используются исключительно для управления записями и связи с вами.'}
+                    ? 'Die Verarbeitung der Daten erfolgt zum Zweck der Terminverwaltung und -organisation auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung bzw. vorvertragliche Maßnahmen).'
+                    : 'Обработка данных осуществляется с целью управления и организации записей на основании Art. 6 Abs. 1 lit. b DSGVO (выполнение договора или предконтрактные меры).'}
                 </p>
-
-                <div className="bg-amber-50/50 border-l-4 border-amber-500 p-4 rounded mb-4">
-                  <p className="text-sm font-semibold text-amber-900 mb-2">
-                    {language === 'de' ? 'Wichtiger Hinweis - Datenübermittlung außerhalb der EU:' : language === 'ru' ? 'Важное замечание - передача данных за пределы ЕС:' : 'Важливе зауваження - передача даних за межі ЄС:'}
-                  </p>
-                  <p className="text-sm text-amber-800 mb-2">
-                    {isGerman
-                      ? 'Dikidi ist ein Dienst mit Sitz in Russland. Durch die Nutzung des Buchungssystems willigen Sie ein, dass Ihre Daten auf Servern außerhalb der EU/EWR verarbeitet werden. Das Datenschutzniveau entspricht möglicherweise nicht den EU-Standards.'
-                      : 'Dikidi — это сервис, расположенный в России. Используя систему бронирования, вы соглашаетесь с тем, что ваши данные обрабатываются на серверах за пределами ЕС/ЕЭЗ. Уровень защиты данных может не соответствовать стандартам ЕС.'}
-                  </p>
-                </div>
-
-                <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-6">
-                  {language === 'de' ? 'Speicherdauer' : language === 'ru' ? 'Срок хранения' : 'Срок хранения'}
-                </h3>
-                <p className="leading-relaxed mb-4">
-                  {isGerman
-                    ? 'Die Daten werden bei Dikidi gespeichert, solange dies für die Terminverwaltung erforderlich ist. Nach Abschluss der Behandlung werden die Daten gemäß den Aufbewahrungspflichten gespeichert.'
-                    : 'Данные хранятся в Dikidi до тех пор, пока это необходимо для управления записями. После завершения процедуры данные хранятся в соответствии с обязательствами по хранению.'}
-                </p>
-
-                <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-6">
-                  {language === 'de' ? 'Weitere Informationen' : language === 'ru' ? 'Дополнительная информация' : 'Додаткова інформація'}
-                </h3>
                 <p className="leading-relaxed">
                   {isGerman
-                    ? 'Weitere Informationen zum Datenschutz bei Dikidi finden Sie unter: '
-                    : 'Дополнительную информацию о защите данных в Dikidi вы найдете по адресу: '}
+                    ? 'Die Datenverarbeitung im Rahmen der Online-Terminbuchung erfolgt in der Verantwortung des jeweiligen Anbieters. Es gelten die Datenschutzbestimmungen von DIKIDI: '
+                    : 'Обработка данных в рамках онлайн-записи осуществляется под ответственностью соответствующего поставщика. Применяются положения о защите данных DIKIDI: '}
                   <a
-                    href="https://dikidi.ru/privacy"
+                    href="https://dikidi.net/de/privacy"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-brand-gold hover:underline"
                   >
-                    https://dikidi.ru/privacy
+                    https://dikidi.net/de/privacy
                   </a>
                 </p>
               </section>
@@ -457,7 +415,7 @@ const Datenschutz = () => {
                       onClick={handleEmailClick}
                       className="hover:text-brand-gold transition-colors"
                     >
-                      Natali.lux@web.de
+                      natali.lux@web.de
                     </button>
                   </div>
                 </div>
