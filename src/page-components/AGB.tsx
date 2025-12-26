@@ -148,8 +148,8 @@ const AGB = () => {
                     </li>
                     <li>
                       {isGerman
-                        ? 'Weniger als 24 Stunden oder bei Nichterscheinen: 50% des Behandlungspreises werden berechnet'
-                        : 'Менее чем за 24 часа или при неявке: взимается 50% стоимости процедуры'}
+                        ? 'Bei einer Absage weniger als 24 Stunden vor dem Termin oder bei Nichterscheinen behalten wir uns vor, eine Ausfallpauschale in Höhe von bis zu 50 % des Behandlungspreises zu berechnen, sofern kein geringerer Schaden nachgewiesen wird. Dem Kunden bleibt der Nachweis vorbehalten, dass kein oder ein geringerer Schaden entstanden ist.'
+                        : 'При отмене менее чем за 24 часа до назначенного времени или при неявке мы оставляем за собой право взимать компенсацию за простой в размере до 50% стоимости процедуры, если не будет доказан меньший ущерб. За клиентом остается право доказать, что ущерб не возник или был меньше.'}
                     </li>
                   </ul>
                 </div>
@@ -164,8 +164,8 @@ const AGB = () => {
                 </h3>
                 <p className="leading-relaxed">
                   {isGerman
-                    ? 'Bei Verspätung des Kunden von mehr als 15 Minuten kann die Behandlung nicht mehr in vollem Umfang durchgeführt werden. Der volle Behandlungspreis bleibt dennoch bestehen.'
-                    : 'При опоздании клиента более чем на 15 минут процедура не может быть проведена в полном объеме. Однако полная стоимость процедуры остается.'}
+                    ? 'Bei Verspätung von mehr als 15 Minuten kann die Behandlungszeit entsprechend verkürzt werden. Ein Anspruch auf Preisreduzierung besteht in diesem Fall nicht.'
+                    : 'При опоздании более чем на 15 минут время процедуры может быть соответственно сокращено. Право на снижение цены в этом случае не предусмотрено.'}
                 </p>
               </section>
 
@@ -216,6 +216,11 @@ const AGB = () => {
                     {language === 'de' ? 'Vorherige kosmetische Behandlungen' : language === 'ru' ? 'Предыдущие косметические процедуры' : 'Предыдущие косметические процедуры'}
                   </li>
                 </ul>
+                <p className="leading-relaxed mb-4">
+                  {isGerman
+                    ? 'Der Kunde ist verpflichtet, bestehende Kontraindikationen vor der Behandlung mitzuteilen. Unterbleibt eine entsprechende Mitteilung, ist eine Haftung ausgeschlossen, soweit gesetzlich zulässig.'
+                    : 'Клиент обязан сообщить о существующих противопоказаниях до процедуры. В случае отсутствия соответствующего уведомления ответственность исключается в пределах, допустимых законом.'}
+                </p>
 
                 <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-6">
                   {language === 'de' ? 'Nachsorge' : language === 'ru' ? 'Последующий уход' : 'Последующий уход'}
@@ -251,6 +256,11 @@ const AGB = () => {
                   {isGerman
                     ? 'Alle Behandlungen werden nach bestem Wissen und Gewissen sowie nach dem aktuellen Stand der Technik durchgeführt. Individuelle Reaktionen des Körpers können jedoch nicht ausgeschlossen werden.'
                     : 'Все процедуры проводятся с лучшим знанием и совестью, а также в соответствии с текущим состоянием технологии. Однако индивидуальные реакции организма не могут быть исключены.'}
+                </p>
+                <p className="leading-relaxed mb-4">
+                  {isGerman
+                    ? 'Die Haftung nach dem Produkthaftungsgesetz bleibt unberührt.'
+                    : 'Ответственность в соответствии с законом об ответственности за продукцию остается неизменной.'}
                 </p>
                 <div className="bg-amber-50/50 border-l-4 border-amber-500 p-4 rounded">
                   <p className="text-sm font-semibold text-amber-900 mb-2">
@@ -365,7 +375,7 @@ const AGB = () => {
                   <p className="font-medium">
                     {language === 'de' ? 'Nataliia Koziukevych' : language === 'ru' ? 'Наталия Козюкевич' : 'Наталия Козюкевич'}
                   </p>
-                  <p className="text-sm">Natali.lux@web.de</p>
+                  <p className="text-sm">natali.lux@web.de</p>
                   <p className="text-sm">+49 176 77267269</p>
                 </div>
               </section>
