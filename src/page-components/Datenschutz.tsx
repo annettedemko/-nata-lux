@@ -349,12 +349,12 @@ const Datenschutz = () => {
                     ? 'Die Datenverarbeitung im Rahmen der Online-Terminbuchung erfolgt in der Verantwortung des jeweiligen Anbieters. Es gelten die Datenschutzbestimmungen von DIKIDI: '
                     : 'Обработка данных в рамках онлайн-записи осуществляется под ответственностью соответствующего поставщика. Применяются положения о защите данных DIKIDI: '}
                   <a
-                    href="https://dikidi.net/de/privacy"
+                    href="https://support.dikidi.net/en/knowledge-bases/6/articles/648-privacy-policy"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-brand-gold hover:underline"
+                    className="text-brand-gold hover:underline break-all"
                   >
-                    https://dikidi.net/de/privacy
+                    https://support.dikidi.net/en/knowledge-bases/6/articles/648-privacy-policy
                   </a>
                 </p>
               </section>
