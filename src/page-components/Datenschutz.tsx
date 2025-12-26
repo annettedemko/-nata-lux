@@ -158,6 +158,24 @@ const Datenschutz = () => {
                       <li>{language === 'de' ? 'Widerspruchsrecht' : language === 'ru' ? 'Право на возражение' : 'Право на возражение'}</li>
                     </ul>
                   </div>
+
+                  <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-6">
+                    {language === 'de' ? 'Recht auf Widerruf der Einwilligung' : language === 'ru' ? 'Право на отзыв согласия' : 'Право на отзыв согласия'}
+                  </h3>
+                  <p className="leading-relaxed mb-4">
+                    {isGerman
+                      ? 'Sie haben das Recht, eine bereits erteilte Einwilligung zur Verarbeitung Ihrer personenbezogenen Daten jederzeit zu widerrufen. Der Widerruf berührt nicht die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung.'
+                      : 'Вы имеете право в любое время отозвать уже данное согласие на обработку ваших персональных данных. Отзыв не влияет на законность обработки, проведенной до отзыва.'}
+                  </p>
+
+                  <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-6">
+                    {language === 'de' ? 'Beschwerderecht bei der Aufsichtsbehörde' : language === 'ru' ? 'Право на жалобу в надзорный орган' : 'Право на жалобу в надзорный орган'}
+                  </h3>
+                  <p className="leading-relaxed">
+                    {isGerman
+                      ? 'Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren, insbesondere in dem Mitgliedstaat Ihres gewöhnlichen Aufenthaltsortes, Ihres Arbeitsplatzes oder des Ortes des mutmaßlichen Verstoßes.'
+                      : 'Вы имеете право подать жалобу в надзорный орган по защите данных, особенно в государстве-члене вашего обычного места жительства, вашего места работы или места предполагаемого нарушения.'}
+                  </p>
                 </div>
               </section>
 
@@ -238,18 +256,18 @@ const Datenschutz = () => {
                       ? 'Mit Ihrer Einwilligung verwenden wir folgende Analyse-Tools:'
                       : 'С вашего согласия мы используем следующие инструменты анализа:'}
                   </p>
-                  <ul className="list-disc list-inside space-y-2 text-sm text-blue-800 ml-4">
+                  <ul className="list-disc list-inside space-y-3 text-sm text-blue-800 ml-4">
                     <li>
                       <span className="font-medium">Google Analytics:</span>{' '}
                       {isGerman
-                        ? 'Zur Analyse des Nutzerverhaltens und Verbesserung unserer Website. Die Daten werden anonymisiert erfasst.'
-                        : 'Для анализа поведения пользователей и улучшения нашего сайта. Данные собираются анонимно.'}
+                        ? 'Zur Analyse des Nutzerverhaltens und Verbesserung unserer Website. Die IP-Anonymisierung ist auf dieser Website aktiviert. Es kann nicht ausgeschlossen werden, dass Daten an Server von Google in den USA übertragen werden. Google ist nach dem EU-U.S. Data Privacy Framework zertifiziert.'
+                        : 'Для анализа поведения пользователей и улучшения нашего сайта. На этом сайте активирована анонимизация IP. Не исключается передача данных на серверы Google в США. Google сертифицирован в соответствии с EU-U.S. Data Privacy Framework.'}
                     </li>
                     <li>
                       <span className="font-medium">Ahrefs:</span>{' '}
                       {isGerman
-                        ? 'Zur Analyse der Website-Performance und SEO-Optimierung.'
-                        : 'Для анализа производительности сайта и SEO-оптимизации.'}
+                        ? 'Zur Analyse der Website-Performance und SEO-Optimierung. Es kann hierbei zu einer Übertragung von Daten in Drittstaaten kommen.'
+                        : 'Для анализа производительности сайта и SEO-оптимизации. При этом может происходить передача данных в третьи страны.'}
                     </li>
                   </ul>
                 </div>
@@ -259,8 +277,8 @@ const Datenschutz = () => {
                 </h3>
                 <p className="leading-relaxed mb-4">
                   {isGerman
-                    ? 'Technisch notwendige Cookies werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO gespeichert. Analyse-Cookies werden nur mit Ihrer ausdrücklichen Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO gesetzt.'
-                    : 'Технически необходимые Cookie сохраняются на основании Art. 6 Abs. 1 lit. f GDPR. Аналитические Cookie устанавливаются только с вашего явного согласия в соответствии с Art. 6 Abs. 1 lit. a GDPR.'}
+                    ? 'Technisch notwendige Cookies werden auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO gespeichert. Analyse-Cookies werden nur mit Ihrer ausdrücklichen Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO gesetzt.'
+                    : 'Технически необходимые Cookie сохраняются на основании Art. 6 Abs. 1 lit. c GDPR. Аналитические Cookie устанавливаются только с вашего явного согласия в соответствии с Art. 6 Abs. 1 lit. a GDPR.'}
                 </p>
 
                 <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-6">
@@ -364,10 +382,15 @@ const Datenschutz = () => {
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
                   {language === 'de' ? '9. Anfrage per E-Mail oder Telefon' : language === 'ru' ? '9. Запрос по электронной почте или телефону' : '9. Запрос по электронной почте или телефону'}
                 </h2>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed mb-4">
                   {isGerman
                     ? 'Wenn Sie uns per E-Mail oder Telefon kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.'
                     : 'Если вы свяжетесь с нами по электронной почте или телефону, ваш запрос, включая все полученные из него персональные данные (имя, запрос), будет сохранен и обработан нами для обработки вашего запроса. Мы не передаем эти данные без вашего согласия.'}
+                </p>
+                <p className="leading-relaxed">
+                  {isGerman
+                    ? 'Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (Bearbeitung Ihrer Anfrage) oder Art. 6 Abs. 1 lit. a DSGVO (Einwilligung).'
+                    : 'Обработка этих данных осуществляется на основании Art. 6 Abs. 1 lit. b GDPR (обработка вашего запроса) или Art. 6 Abs. 1 lit. a GDPR (согласие).'}
                 </p>
               </section>
 
