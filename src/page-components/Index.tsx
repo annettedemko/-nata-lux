@@ -349,6 +349,38 @@ const Index = () => {
             </p>
           </motion.div>
 
+          {/* AGB Hinweis */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="max-w-3xl mx-auto mb-8 md:mb-12"
+          >
+            <div className="glass-strong rounded-xl p-4 md:p-5 border border-brand-gold/20">
+              <p className="text-sm md:text-base text-brand-coffee/80 text-center">
+                <span className="inline-flex items-center gap-2">
+                  <Shield className="w-4 h-4 text-brand-gold flex-shrink-0" />
+                  <span>
+                    {language === 'de' ? 'Hinweis: ' : language === 'ru' ? 'Уведомление: ' : 'Повідомлення: '}
+                    {language === 'de'
+                      ? 'Mit jeder Terminbuchung gelten unsere '
+                      : language === 'ru'
+                      ? 'При каждом бронировании действуют наши '
+                      : 'При кожному бронюванні діють наші '}
+                    <Link
+                      href="/agb"
+                      className="font-medium text-brand-gold hover:text-brand-gold-light underline decoration-brand-gold/50 hover:decoration-brand-gold-light transition-colors"
+                    >
+                      {language === 'de' ? 'AGB' : language === 'ru' ? 'Общие условия' : 'Загальні умови'}
+                    </Link>
+                    .
+                  </span>
+                </span>
+              </p>
+            </div>
+          </motion.div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 max-w-7xl mx-auto">
             {serviceCategories.map((category, index) => (
               <CategoryCard
