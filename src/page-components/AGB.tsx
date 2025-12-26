@@ -338,10 +338,10 @@ const AGB = () => {
                 </h2>
                 <p className="leading-relaxed mb-4">
                   {language === 'de'
-                    ? 'Bei Permanent Make-Up wird eine kostenfreie Nachbehandlung innerhalb von 4-8 Wochen nach der Erstbehandlung angeboten. Diese dient zur Optimierung des Ergebnisses und ist im Preis inbegriffen.'
+                    ? 'Bei Permanent Make-Up kann je nach Hauttyp und individuellen Faktoren eine Nachbehandlung sinnvoll sein. Diese erfolgt gegen gesonderte Vergütung gemäß der aktuellen Preisliste.'
                     : language === 'ru'
-                    ? 'При перманентном макияже предлагается бесплатная коррекция в течение 4-8 недель после первой процедуры. Это служит для оптимизации результата и включено в цену.'
-                    : 'При перманентному макіяжі пропонується безкоштовна корекція протягом 4-8 тижнів після першої процедури. Це слугує для оптимізації результату та включено в ціну.'}
+                    ? 'При перманентном макияже в зависимости от типа кожи и индивидуальных факторов может быть целесообразна коррекция. Она проводится за отдельную плату согласно актуальному прайс-листу.'
+                    : 'При перманентному макіяжі залежно від типу шкіри та індивідуальних факторів може бути доцільна корекція. Вона проводиться за окрему плату згідно з актуальним прайс-листом.'}
                 </p>
                 <p className="leading-relaxed mb-4">
                   {language === 'de'
@@ -364,12 +364,26 @@ const AGB = () => {
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
                   {language === 'de' ? '8. Foto- und Videoaufnahmen' : language === 'ru' ? '8. Фото и видео' : '8. Фото та відео'}
                 </h2>
+                <p className="leading-relaxed mb-4">
+                  {language === 'de'
+                    ? 'Foto- und Videoaufnahmen von Behandlungsergebnissen erfolgen nur mit vorheriger ausdrücklicher schriftlicher Einwilligung des Kunden.'
+                    : language === 'ru'
+                    ? 'Фото и видео результатов процедур делаются только с предварительного явного письменного согласия клиента.'
+                    : 'Фото та відео результатів процедур робляться тільки з попередньої явної письмової згоди клієнта.'}
+                </p>
+                <p className="leading-relaxed mb-4">
+                  {language === 'de'
+                    ? 'Die Einwilligung kann jederzeit für die Zukunft widerrufen werden.'
+                    : language === 'ru'
+                    ? 'Согласие может быть отозвано в любое время на будущее.'
+                    : 'Згода може бути відкликана в будь-який час на майбутнє.'}
+                </p>
                 <p className="leading-relaxed">
                   {language === 'de'
-                    ? 'Foto- und Videoaufnahmen von Behandlungsergebnissen erfolgen nur mit ausdrücklicher schriftlicher Einwilligung des Kunden. Die Einwilligung kann jederzeit widerrufen werden. Bereits veröffentlichte Aufnahmen werden dann entfernt.'
+                    ? 'Ein Widerruf berührt nicht die Rechtmäßigkeit der bis zum Widerruf erfolgten Veröffentlichung.'
                     : language === 'ru'
-                    ? 'Фото и видео результатов процедур делаются только с явного письменного согласия клиента. Согласие может быть отозвано в любое время. Уже опубликованные материалы будут удалены.'
-                    : 'Фото та відео результатів процедур робляться тільки з явної письмової згоди клієнта. Згода може бути відкликана в будь-який час. Уже опубліковані матеріали будуть видалені.'}
+                    ? 'Отзыв не влияет на правомерность публикаций, сделанных до отзыва.'
+                    : 'Відкликання не впливає на правомірність публікацій, зроблених до відкликання.'}
                 </p>
               </section>
 
