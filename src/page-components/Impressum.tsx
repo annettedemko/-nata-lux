@@ -139,6 +139,18 @@ const Impressum = () => {
                 </div>
               </section>
 
+              {/* Professional Liability Insurance */}
+              <section>
+                <h3 className="text-xl font-heading font-semibold text-brand-espresso mb-3">
+                  {language === 'de' ? 'Berufshaftpflichtversicherung' : language === 'ru' ? 'Страхование профессиональной ответственности' : 'Страхование профессиональной ответственности'}
+                </h3>
+                <p className="leading-relaxed">
+                  {isGerman
+                    ? 'Es besteht eine Berufshaftpflichtversicherung.'
+                    : 'Имеется страхование профессиональной ответственности.'}
+                </p>
+              </section>
+
               {/* Responsible for Content */}
               <section>
                 <h3 className="text-xl font-heading font-semibold text-brand-espresso mb-3">
