@@ -386,10 +386,10 @@ const Prices = () => {
             </p>
             <p className="text-sm text-brand-espresso/50 font-light">
               {language === 'de'
-                ? 'Alle angegebenen Preise verstehen sich zuzüglich der gesetzlichen Mehrwertsteuer (19 %).'
+                ? 'Alle angegebenen Preise sind Endpreise. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.'
                 : language === 'ru'
-                ? 'Все указанные цены указаны дополнительно к законному НДС (19 %).'
-                : 'Всі зазначені ціни вказані додатково до законного ПДВ (19 %).'}
+                ? 'Все указанные цены являются окончательными. Согласно § 19 UStG НДС не взимается.'
+                : 'Всі зазначені ціни є остаточними. Згідно з § 19 UStG ПДВ не стягується.'}
             </p>
           </motion.div>
         </div>
