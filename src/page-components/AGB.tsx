@@ -185,10 +185,15 @@ const AGB = () => {
                   <li>{language === 'de' ? 'EC-Karte' : language === 'ru' ? 'EC-карта' : 'EC-карта'}</li>
                   <li>{language === 'de' ? 'Überweisung (nach Vereinbarung)' : language === 'ru' ? 'Банковский перевод (по договоренности)' : 'Банковский перевод (по договоренности)'}</li>
                 </ul>
-                <p className="leading-relaxed mt-4">
+                <p className="leading-relaxed mt-4 mb-4">
                   {isGerman
                     ? 'Bei mehrteiligen Behandlungen (z.B. Permanent Make-Up mit Nachbehandlung) ist die Zahlung nach jeder Sitzung fällig, sofern nicht anders vereinbart.'
                     : 'При многоэтапных процедурах (например, перманентный макияж с последующей коррекцией) оплата производится после каждого сеанса, если не согласовано иное.'}
+                </p>
+                <p className="leading-relaxed">
+                  {isGerman
+                    ? 'Alle Preise verstehen sich inklusive der gesetzlichen Mehrwertsteuer, sofern diese anfällt.'
+                    : 'Все цены указаны с включенным законным НДС, если он применяется.'}
                 </p>
               </section>
 
@@ -268,8 +273,8 @@ const AGB = () => {
                   </p>
                   <p className="text-sm text-amber-800">
                     {isGerman
-                      ? 'Bei Auftreten unerwarteter Reaktionen oder Komplikationen ist NataLux unverzüglich zu informieren. Eine Haftung für Folgeschäden, die durch verspätete Meldung entstehen, ist ausgeschlossen.'
-                      : 'При возникновении неожиданных реакций или осложнений необходимо немедленно сообщить в NataLux. Ответственность за косвенный ущерб, возникший из-за поздного уведомления, исключается.'}
+                      ? 'Bei Auftreten unerwarteter Reaktionen oder Komplikationen ist NataLux unverzüglich zu informieren. Eine Haftung für Folgeschäden, die durch eine verspätete Meldung entstehen, ist ausgeschlossen, soweit gesetzlich zulässig.'
+                      : 'При возникновении неожиданных реакций или осложнений необходимо немедленно сообщить в NataLux. Ответственность за косвенный ущерб, возникший из-за позднего уведомления, исключается в пределах, допустимых законом.'}
                   </p>
                 </div>
               </section>
@@ -344,8 +349,8 @@ const AGB = () => {
                 </h2>
                 <p className="leading-relaxed">
                   {isGerman
-                    ? 'Sollten einzelne Bestimmungen dieser AGB unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen hiervon unberührt. An die Stelle der unwirksamen Bestimmung tritt eine Regelung, die dem wirtschaftlichen Zweck der unwirksamen Bestimmung am nächsten kommt.'
-                    : 'Если отдельные положения этих Общих условий являются или станут недействительными, это не влияет на действительность остальных положений. Вместо недействительного положения вступает правило, которое наиболее близко соответствует экономической цели недействительного положения.'}
+                    ? 'Sollten einzelne Bestimmungen dieser AGB ganz oder teilweise unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.'
+                    : 'Если отдельные положения этих Общих условий полностью или частично являются или станут недействительными, это не влияет на действительность остальных положений.'}
                 </p>
               </section>
 
