@@ -198,10 +198,15 @@ const Datenschutz = () => {
                   <li>{language === 'de' ? 'Uhrzeit der Serveranfrage' : language === 'ru' ? 'Время запроса к серверу' : 'Время запроса к серверу'}</li>
                   <li>{language === 'de' ? 'IP-Adresse' : language === 'ru' ? 'IP-адрес' : 'IP-адрес'}</li>
                 </ul>
+                <p className="leading-relaxed mb-4">
+                  {isGerman
+                    ? 'Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.'
+                    : 'Объединение этих данных с другими источниками данных не производится.'}
+                </p>
                 <p className="leading-relaxed">
                   {isGerman
-                    ? 'Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.'
-                    : 'Объединение этих данных с другими источниками данных не производится. Сбор этих данных осуществляется на основании Art. 6 Abs. 1 lit. f GDPR.'}
+                    ? 'Die Verarbeitung erfolgt zur Gewährleistung der Sicherheit und Stabilität der Website. Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.'
+                    : 'Обработка осуществляется для обеспечения безопасности и стабильности сайта. Сбор этих данных осуществляется на основании Art. 6 Abs. 1 lit. f GDPR.'}
                 </p>
               </section>
 
@@ -279,6 +284,11 @@ const Datenschutz = () => {
                   {isGerman
                     ? 'Technisch notwendige Cookies werden auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO gespeichert. Analyse-Cookies werden nur mit Ihrer ausdrücklichen Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO gesetzt.'
                     : 'Технически необходимые Cookie сохраняются на основании Art. 6 Abs. 1 lit. c GDPR. Аналитические Cookie устанавливаются только с вашего явного согласия в соответствии с Art. 6 Abs. 1 lit. a GDPR.'}
+                </p>
+                <p className="leading-relaxed mb-4">
+                  {isGerman
+                    ? 'Nicht notwendige Cookies und Analyse-Tools werden erst nach Ihrer aktiven Einwilligung über das Cookie-Banner gesetzt.'
+                    : 'Необязательные файлы Cookie и инструменты анализа устанавливаются только после вашего активного согласия через баннер Cookie.'}
                 </p>
 
                 <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-6">
