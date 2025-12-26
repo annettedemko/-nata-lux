@@ -14,9 +14,12 @@ export function CookieConsent() {
     // Grant consent for analytics when user accepts
     if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
       (window as any).gtag('consent', 'update', {
-        'analytics_storage': 'granted'
+        'analytics_storage': 'granted',
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted'
       });
-      console.log('✅ Google Analytics activated - consent granted')
+      console.log('✅ Google Analytics activated - consent granted (Consent Mode v2)')
     }
   }
 

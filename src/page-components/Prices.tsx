@@ -381,8 +381,15 @@ const Prices = () => {
               {language === 'de' ? 'PREISE' : language === 'ru' ? 'ЦЕНЫ' : 'ЦЕНЫ'}
             </h1>
             <div className="w-32 h-0.5 bg-brand-gold mx-auto opacity-80 mb-6"></div>
-            <p className="text-lg text-brand-espresso/60 font-light italic">
-              {language === 'de' ? 'Exklusive Beauty-Behandlungen' : language === 'ru' ? 'Эксклюзивные бьюти-процедуры' : 'Эксклюзивные бьюти-процедуры'}
+            <p className="text-lg text-brand-espresso/60 font-light italic mb-4">
+              {language === 'de' ? 'Exklusive Beauty-Behandlungen' : language === 'ru' ? 'Эксклюзивные бьюти-процедуры' : 'Ексклюзивні бьюті-процедури'}
+            </p>
+            <p className="text-sm text-brand-espresso/50 font-light">
+              {language === 'de'
+                ? 'Alle angegebenen Preise verstehen sich zuzüglich der gesetzlichen Mehrwertsteuer (19 %).'
+                : language === 'ru'
+                ? 'Все указанные цены указаны дополнительно к законному НДС (19 %).'
+                : 'Всі зазначені ціни вказані додатково до законного ПДВ (19 %).'}
             </p>
           </motion.div>
         </div>

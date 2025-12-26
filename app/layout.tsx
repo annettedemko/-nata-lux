@@ -72,13 +72,20 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            // Default consent to denied (GDPR compliant)
+            // Default consent to denied (GDPR/DSGVO compliant - Consent Mode v2)
             gtag('consent', 'default', {
-              'analytics_storage': 'denied'
+              'analytics_storage': 'denied',
+              'ad_storage': 'denied',
+              'ad_user_data': 'denied',
+              'ad_personalization': 'denied',
+              'functionality_storage': 'granted',
+              'security_storage': 'granted',
+              'wait_for_update': 500
             });
 
             gtag('config', 'G-9WW8PXXRQ0', {
               page_path: window.location.pathname,
+              'anonymize_ip': true
             });
           `}
         </Script>
