@@ -8,7 +8,7 @@ const Impressum = () => {
   const isGerman = language === 'de';
 
   const handleEmailClick = () => {
-    const email = 'Natali.lux@web.de';
+    const email = 'natali.lux@web.de';
     const cc = 'natalux878@gmail.com';
     window.location.href = `mailto:${email}?cc=${cc}`;
   };
@@ -50,7 +50,7 @@ const Impressum = () => {
                   </p>
                   <p className="font-medium">NataLux</p>
                   <p className="font-medium text-brand-espresso">
-                    {language === 'de' ? 'Gewerbebetrieb' : language === 'ru' ? 'Предприятие торговли' : 'Предприятие торговли'}
+                    {language === 'de' ? 'Einzelunternehmen (Gewerbebetrieb)' : language === 'ru' ? 'Индивидуальное предприятие' : 'Индивидуальное предприятие'}
                   </p>
                   <p>
                     <span className="font-medium">
@@ -80,50 +80,38 @@ const Impressum = () => {
                   {language === 'de' ? 'Kontakt' : language === 'ru' ? 'Контакты' : 'Контакты'}
                 </h3>
                 <div className="space-y-2">
-                  <div className="flex items-center gap-2">
+                  <p className="flex items-center gap-2">
                     <Phone className="w-4 h-4 text-brand-gold" />
+                    <span className="font-medium">{language === 'de' ? 'Telefon:' : language === 'ru' ? 'Телефон:' : 'Телефон:'}</span>
                     <a href="tel:+4917677267269" className="hover:text-brand-gold transition-colors">
                       +49 176 77267269
                     </a>
-                  </div>
-                  <div className="flex items-center gap-2">
+                  </p>
+                  <p className="flex items-center gap-2">
                     <Mail className="w-4 h-4 text-brand-gold" />
+                    <span className="font-medium">E-Mail:</span>
                     <button
                       onClick={handleEmailClick}
                       className="hover:text-brand-gold transition-colors text-left"
                     >
-                      Natali.lux@web.de
+                      natali.lux@web.de
                     </button>
-                  </div>
+                  </p>
                 </div>
               </section>
 
               {/* Tax Information */}
               <section>
                 <h3 className="text-xl font-heading font-semibold text-brand-espresso mb-3">
-                  {language === 'de' ? 'Umsatzsteuer-Identifikationsnummer' : language === 'ru' ? 'Налоговая информация' : 'Налоговая информация'}
+                  {language === 'de' ? 'Umsatzsteuer' : language === 'ru' ? 'Налог с оборота' : 'Налог с оборота'}
                 </h3>
-                <div className="space-y-2">
-                  <p>
-                    <span className="font-medium">
-                      {language === 'de' ? 'Steuernummer:' : language === 'ru' ? 'Налоговый номер:' : 'Налоговый номер:'}
-                    </span>{' '}
-                    145/144/40930
-                  </p>
-                  <p>
-                    <span className="font-medium">
-                      {language === 'de' ? 'Identifikationsnummer:' : language === 'ru' ? 'Идентификационный номер:' : 'Идентификационный номер:'}
-                    </span>{' '}
-                    82143363058
-                  </p>
-                  <p className="mt-3 text-sm">
-                    {language === 'de'
-                      ? 'Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.'
-                      : language === 'ru'
-                      ? 'Согласно § 19 UStG (Закон об НДС) налог с оборота не взимается.'
-                      : 'Согласно § 19 UStG (Закон об НДС) налог с оборота не взимается.'}
-                  </p>
-                </div>
+                <p className="leading-relaxed">
+                  {language === 'de'
+                    ? 'Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.'
+                    : language === 'ru'
+                    ? 'Согласно § 19 UStG (Закон об НДС) налог с оборота не взимается.'
+                    : 'Согласно § 19 UStG (Закон об НДС) налог с оборота не взимается.'}
+                </p>
               </section>
 
               {/* Supervisory Authority */}
@@ -144,19 +132,27 @@ const Impressum = () => {
                 <h3 className="text-xl font-heading font-semibold text-brand-espresso mb-3">
                   {language === 'de' ? 'Berufshaftpflichtversicherung' : language === 'ru' ? 'Страхование профессиональной ответственности' : 'Страхование профессиональной ответственности'}
                 </h3>
-                <p className="leading-relaxed">
-                  {isGerman
-                    ? 'Es besteht eine Berufshaftpflichtversicherung.'
-                    : 'Имеется страхование профессиональной ответственности.'}
-                </p>
+                <div className="space-y-1">
+                  <p>
+                    {isGerman
+                      ? 'Es besteht eine Berufshaftpflichtversicherung.'
+                      : 'Имеется страхование профессиональной ответственности.'}
+                  </p>
+                  <p>
+                    <span className="font-medium">
+                      {language === 'de' ? 'Geltungsbereich:' : language === 'ru' ? 'Сфера действия:' : 'Сфера действия:'}
+                    </span>{' '}
+                    {language === 'de' ? 'Deutschland' : language === 'ru' ? 'Германия' : 'Германия'}
+                  </p>
+                </div>
               </section>
 
               {/* Responsible for Content */}
               <section>
                 <h3 className="text-xl font-heading font-semibold text-brand-espresso mb-3">
                   {isGerman
-                    ? 'Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV'
-                    : 'Ответственность за контент согласно § 55 Abs. 2 RStV'}
+                    ? 'Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV'
+                    : 'Ответственность за контент согласно § 18 Abs. 2 MStV'}
                 </h3>
                 <p>Nataliia Koziukevych</p>
                 <p>Rosenheimerstraße 159</p>
