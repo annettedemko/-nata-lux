@@ -384,7 +384,7 @@ const Prices = () => {
             <p className="text-lg text-brand-espresso/60 font-light italic mb-4">
               {language === 'de' ? 'Exklusive Beauty-Behandlungen' : language === 'ru' ? 'Эксклюзивные бьюти-процедуры' : 'Ексклюзивні бьюті-процедури'}
             </p>
-            <p className="text-sm text-brand-espresso/50 font-light">
+            <p className="text-sm text-brand-espresso/70 font-normal">
               {language === 'de'
                 ? 'Alle angegebenen Preise sind Endpreise. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.'
                 : language === 'ru'
