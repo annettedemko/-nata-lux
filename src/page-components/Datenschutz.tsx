@@ -393,6 +393,23 @@ const Datenschutz = () => {
                 </ul>
               </section>
 
+              {/* Right to Object to Tracking */}
+              <section>
+                <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4 flex items-center gap-2">
+                  <AlertCircle className="w-6 h-6 text-brand-gold" />
+                  {language === 'de' ? '6a. Widerspruch gegen Tracking und Analyse' : language === 'ru' ? '6a. Возражение против отслеживания и анализа' : '6a. Заперечення проти відстеження та аналізу'}
+                </h2>
+                <div className="bg-blue-50/50 border-l-4 border-blue-500 p-5 rounded-xl">
+                  <p className="leading-relaxed text-blue-900">
+                    {language === 'de'
+                      ? 'Sie können der Verarbeitung Ihrer Daten für Analyse- oder Tracking-Zwecke jederzeit widersprechen, indem Sie Ihre Cookie-Einstellungen entsprechend anpassen. Über unseren Cookie-Banner auf der Website können Sie Ihre Einwilligung verwalten und jederzeit ändern.'
+                      : language === 'ru'
+                      ? 'Вы можете в любое время возразить против обработки ваших данных для целей анализа или отслеживания, соответствующим образом настроив параметры Cookie. Через наш баннер Cookie на сайте вы можете управлять своим согласием и изменять его в любое время.'
+                      : 'Ви можете в будь-який час заперечити проти обробки ваших даних для цілей аналізу або відстеження, відповідним чином налаштувавши параметри Cookie. Через наш банер Cookie на сайті ви можете керувати своєю згодою та змінювати її в будь-який час.'}
+                  </p>
+                </div>
+              </section>
+
               {/* Contact Form */}
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
@@ -407,10 +424,10 @@ const Datenschutz = () => {
                 </p>
                 <p className="leading-relaxed">
                   {language === 'de'
-                    ? 'Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist.'
+                    ? 'Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).'
                     : language === 'ru'
-                    ? 'Мы не передаем эти данные без вашего согласия. Обработка этих данных осуществляется на основании Art. 6 Abs. 1 lit. b GDPR, если ваш запрос связан с выполнением контракта или необходим для выполнения предконтрактных мер.'
-                    : 'Ми не передаємо ці дані без вашої згоди. Обробка цих даних здійснюється на підставі Art. 6 Abs. 1 lit. b GDPR, якщо ваш запит пов\'язаний з виконанням контракту або необхідний для виконання передконтрактних заходів.'}
+                    ? 'Мы не передаем эти данные без вашего согласия. Обработка этих данных осуществляется на основании Art. 6 Abs. 1 lit. b GDPR, если ваш запрос связан с выполнением контракта или необходим для выполнения предконтрактных мер. Во всех остальных случаях обработка основывается на вашем согласии (Art. 6 Abs. 1 lit. a GDPR).'
+                    : 'Ми не передаємо ці дані без вашої згоди. Обробка цих даних здійснюється на підставі Art. 6 Abs. 1 lit. b GDPR, якщо ваш запит пов\'язаний з виконанням контракту або необхідний для виконання передконтрактних заходів. У всіх інших випадках обробка базується на вашій згоді (Art. 6 Abs. 1 lit. a GDPR).'}
                 </p>
               </section>
 
@@ -490,13 +507,36 @@ const Datenschutz = () => {
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
                   {language === 'de' ? '11. Speicherdauer' : language === 'ru' ? '11. Срок хранения' : '11. Термін зберігання'}
                 </h2>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed mb-4">
                   {language === 'de'
                     ? 'Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben.'
                     : language === 'ru'
                     ? 'Если в этой политике конфиденциальности не указан более конкретный срок хранения, ваши персональные данные остаются у нас до тех пор, пока не отпадет цель обработки данных. Если вы подадите обоснованный запрос на удаление или отзовете согласие на обработку данных, ваши данные будут удалены, если у нас нет других законных оснований для хранения ваших персональных данных.'
                     : 'Якщо в цій політиці конфіденційності не вказано більш конкретний термін зберігання, ваші персональні дані залишаються у нас до тих пір, поки не відпаде мета обробки даних. Якщо ви подасте обґрунтований запит на видалення або відкличете згоду на обробку даних, ваші дані будуть видалені, якщо у нас немає інших законних підстав для зберігання ваших персональних даних.'}
                 </p>
+                <div className="bg-brand-gold/10 p-5 rounded-xl">
+                  <p className="font-semibold text-brand-espresso mb-3">
+                    {language === 'de' ? 'Konkrete Speicherfristen:' : language === 'ru' ? 'Конкретные сроки хранения:' : 'Конкретні терміни зберігання:'}
+                  </p>
+                  <ul className="list-disc list-inside space-y-2 text-sm">
+                    <li>
+                      <span className="font-medium">
+                        {language === 'de' ? 'Kontaktanfragen (E-Mail, Telefon):' : language === 'ru' ? 'Контактные запросы (E-Mail, телефон):' : 'Контактні запити (E-Mail, телефон):'}
+                      </span>{' '}
+                      {language === 'de' ? '6–12 Monate nach Bearbeitung der Anfrage' : language === 'ru' ? '6–12 месяцев после обработки запроса' : '6–12 місяців після обробки запиту'}
+                    </li>
+                    <li>
+                      <span className="font-medium">
+                        {language === 'de' ? 'DIKIDI Buchungsdaten:' : language === 'ru' ? 'Данные бронирования DIKIDI:' : 'Дані бронювання DIKIDI:'}
+                      </span>{' '}
+                      {language === 'de'
+                        ? 'gemäß DIKIDI Datenschutzerklärung'
+                        : language === 'ru'
+                        ? 'согласно политике конфиденциальности DIKIDI'
+                        : 'згідно з політикою конфіденційності DIKIDI'}
+                    </li>
+                  </ul>
+                </div>
               </section>
 
               {/* Contact for Questions */}
