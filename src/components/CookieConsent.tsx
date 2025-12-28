@@ -142,7 +142,7 @@ export function CookieConsent() {
           <div className="mt-4 text-center">
             <Link
               href="/datenschutz"
-              className="text-sm text-brand-gold hover:text-brand-gold/80 transition-colors underline"
+              className="text-sm text-black hover:text-brand-espresso transition-colors underline"
             >
               {t.privacy}
             </Link>
