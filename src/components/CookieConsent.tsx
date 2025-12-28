@@ -4,11 +4,13 @@ import { useState, useEffect } from 'react'
 import { X, Cookie } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import Link from 'next/link'
+import { CookieSettings } from './CookieSettings'
 
 export function CookieConsent() {
   const { language } = useLanguage()
   const [isVisible, setIsVisible] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
+  const [showSettings, setShowSettings] = useState(false)
 
   const initializeAnalytics = () => {
     // Grant consent for analytics when user accepts
@@ -63,6 +65,15 @@ export function CookieConsent() {
     return null
   }
 
+  const handleOpenSettings = () => {
+    setShowSettings(true)
+  }
+
+  const handleCloseSettings = () => {
+    setShowSettings(false)
+    setIsVisible(false)
+  }
+
   const content = {
     de: {
       title: 'Cookie-Einstellungen',
@@ -71,6 +82,7 @@ export function CookieConsent() {
       acceptAll: 'Alle akzeptieren',
       rejectAll: 'Alle ablehnen',
       necessary: 'Nur notwendige',
+      settings: 'Cookie-Einstellungen anpassen',
       privacy: 'Datenschutzerklärung',
     },
     ru: {
@@ -80,6 +92,7 @@ export function CookieConsent() {
       acceptAll: 'Принять все',
       rejectAll: 'Отклонить все',
       necessary: 'Только необходимые',
+      settings: 'Настроить Cookie',
       privacy: 'Политика конфиденциальности',
     },
     uk: {
@@ -89,6 +102,7 @@ export function CookieConsent() {
       acceptAll: 'Прийняти всі',
       rejectAll: 'Відхилити всі',
       necessary: 'Тільки необхідні',
+      settings: 'Налаштувати Cookie',
       privacy: 'Політика конфіденційності',
     },
   }
@@ -138,17 +152,30 @@ export function CookieConsent() {
             </button>
           </div>
 
-          {/* Privacy Link */}
-          <div className="mt-4 text-center">
-            <Link
-              href="/datenschutz"
-              className="text-sm text-black hover:text-brand-espresso transition-colors underline"
-            >
-              {t.privacy}
-            </Link>
+          {/* Privacy Link & Settings Button */}
+          <div className="mt-4 text-center space-y-2">
+            <div>
+              <button
+                onClick={handleOpenSettings}
+                className="text-sm text-brand-gold hover:text-brand-gold/80 transition-colors underline font-medium"
+              >
+                {t.settings}
+              </button>
+            </div>
+            <div>
+              <Link
+                href="/datenschutz"
+                className="text-sm text-black hover:text-brand-espresso transition-colors underline"
+              >
+                {t.privacy}
+              </Link>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Cookie Settings Modal */}
+      <CookieSettings isOpen={showSettings} onClose={handleCloseSettings} />
     </div>
   )
 }

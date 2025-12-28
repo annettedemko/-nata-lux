@@ -1,11 +1,14 @@
 'use client'
 
+import { useState } from 'react'
 import { Link } from '@/components/LinkAdapter'
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { CookieSettings } from './CookieSettings';
 
 export const Footer = () => {
   const { t, language } = useLanguage();
+  const [showCookieSettings, setShowCookieSettings] = useState(false);
 
   return (
     <footer className="bg-brand-latte/90 backdrop-blur-md border-t border-brand-gold/10 relative z-10">
@@ -252,7 +255,7 @@ export const Footer = () => {
           <p className="text-brand-coffee/60 text-sm">
             © 2025 NATA LUX. All rights reserved.
           </p>
-          <div className="flex space-x-6 text-sm">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-sm">
             <Link
               to="/impressum"
               className="text-brand-coffee/60 hover:text-brand-gold transition-colors"
@@ -271,9 +274,18 @@ export const Footer = () => {
             >
               {t('footer.terms')}
             </Link>
+            <button
+              onClick={() => setShowCookieSettings(true)}
+              className="text-brand-coffee/60 hover:text-brand-gold transition-colors"
+            >
+              {language === 'de' ? 'Cookie-Einstellungen' : language === 'ru' ? 'Настройки Cookie' : 'Налаштування Cookie'}
+            </button>
           </div>
         </div>
       </div>
+
+      {/* Cookie Settings Modal */}
+      <CookieSettings isOpen={showCookieSettings} onClose={() => setShowCookieSettings(false)} />
     </footer>
   );
 };
