@@ -1,15 +1,24 @@
 'use client'
 
 import { MessageCircle } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export const FloatingWhatsApp = () => {
+  const { language } = useLanguage();
   const whatsappNumber = '4917677267269';
-  const message = 'Hallo! Ich interessiere mich für Ihre Dienstleistungen.';
 
   const handleClick = () => {
+    const message = language === 'de'
+      ? 'Hallo! Ich interessiere mich für Ihre Dienstleistungen.'
+      : language === 'ru'
+      ? 'Здравствуйте! Меня интересуют ваши услуги.'
+      : 'Привіт! Мене цікавлять ваші послуги.';
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   };
+
+  const ariaLabel = language === 'de' ? 'WhatsApp kontaktieren' : language === 'ru' ? 'Связаться по WhatsApp' : 'Зв\'язатися через WhatsApp';
+  const tooltip = language === 'de' ? 'WhatsApp schreiben' : language === 'ru' ? 'Написать в WhatsApp' : 'Написати в WhatsApp';
 
   return (
     <button
@@ -25,7 +34,7 @@ export const FloatingWhatsApp = () => {
       onMouseLeave={(e) => {
         e.currentTarget.style.boxShadow = '0 4px 20px rgba(129, 199, 132, 0.3)';
       }}
-      aria-label="WhatsApp kontaktieren"
+      aria-label={ariaLabel}
     >
       <MessageCircle className="w-6 h-6 text-white drop-shadow-sm" />
       <span className="absolute right-full mr-3 px-4 py-2 rounded-2xl text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none"
@@ -35,7 +44,7 @@ export const FloatingWhatsApp = () => {
           boxShadow: '0 4px 16px rgba(197,151,80,0.3)',
         }}
       >
-        WhatsApp schreiben
+        {tooltip}
       </span>
     </button>
   );

@@ -176,6 +176,23 @@ const Datenschutz = () => {
                     </ul>
                   </div>
 
+                  <div className="bg-red-50/50 border-l-4 border-red-500 p-5 rounded-xl mt-4 mb-4">
+                    <p className="font-bold text-red-900 mb-2">
+                      {language === 'de'
+                        ? 'Widerspruchsrecht nach Art. 21 DSGVO'
+                        : language === 'ru'
+                        ? 'Право на возражение согласно Art. 21 DSGVO'
+                        : 'Право на заперечення згідно Art. 21 DSGVO'}
+                    </p>
+                    <p className="text-sm text-red-800 leading-relaxed">
+                      {language === 'de'
+                        ? 'Soweit wir Ihre personenbezogenen Daten auf Grundlage von berechtigten Interessen gemäß Art. 6 Abs. 1 lit. f DSGVO verarbeiten, haben Sie das Recht, gemäß Art. 21 DSGVO Widerspruch gegen die Verarbeitung einzulegen. Legen Sie Widerspruch ein, werden wir Ihre personenbezogenen Daten nicht mehr verarbeiten, es sei denn, wir können zwingende schutzwürdige Gründe für die Verarbeitung nachweisen.'
+                        : language === 'ru'
+                        ? 'Если мы обрабатываем ваши персональные данные на основании законных интересов в соответствии с Art. 6 Abs. 1 lit. f DSGVO, вы имеете право согласно Art. 21 DSGVO возразить против обработки. Если вы подадите возражение, мы прекратим обработку ваших персональных данных, если не сможем доказать наличие убедительных законных оснований для обработки.'
+                        : 'Якщо ми обробляємо ваші персональні дані на підставі законних інтересів відповідно до Art. 6 Abs. 1 lit. f DSGVO, ви маєте право згідно Art. 21 DSGVO заперечити проти обробки. Якщо ви подасте заперечення, ми припинимо обробку ваших персональних даних, якщо не зможемо довести наявність переконливих законних підстав для обробки.'}
+                    </p>
+                  </div>
+
                   <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-6">
                     {language === 'de' ? 'Recht auf Widerruf der Einwilligung' : language === 'ru' ? 'Право на отзыв согласия' : 'Право на відкликання згоди'}
                   </h3>
@@ -190,13 +207,26 @@ const Datenschutz = () => {
                   <h3 className="text-xl font-semibold text-brand-espresso mb-3 mt-6">
                     {language === 'de' ? 'Beschwerderecht bei der Aufsichtsbehörde' : language === 'ru' ? 'Право на жалобу в надзорный орган' : 'Право на скаргу до наглядового органу'}
                   </h3>
-                  <p className="leading-relaxed">
+                  <p className="leading-relaxed mb-4">
                     {language === 'de'
                       ? 'Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren, insbesondere in dem Mitgliedstaat Ihres gewöhnlichen Aufenthaltsortes, Ihres Arbeitsplatzes oder des Ortes des mutmaßlichen Verstoßes.'
                       : language === 'ru'
                       ? 'Вы имеете право подать жалобу в надзорный орган по защите данных, особенно в государстве-члене вашего обычного места жительства, вашего места работы или места предполагаемого нарушения.'
                       : 'Ви маєте право подати скаргу до наглядового органу із захисту даних, особливо в державі-члені вашого звичайного місця проживання, вашого місця роботи або місця передбачуваного порушення.'}
                   </p>
+                  <div className="bg-brand-gold/10 p-4 rounded-xl">
+                    <p className="font-semibold text-brand-espresso mb-2">
+                      {language === 'de' ? 'Zuständige Aufsichtsbehörde:' : language === 'ru' ? 'Компетентный надзорный орган:' : 'Компетентний наглядовий орган:'}
+                    </p>
+                    <p className="text-sm">Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)</p>
+                    <p className="text-sm">Promenade 18</p>
+                    <p className="text-sm">91522 Ansbach</p>
+                    <p className="text-sm mt-1">
+                      <a href="https://www.lda.bayern.de" target="_blank" rel="noopener noreferrer" className="text-brand-gold hover:underline">
+                        www.lda.bayern.de
+                      </a>
+                    </p>
+                  </div>
                 </div>
               </section>
 
@@ -228,12 +258,19 @@ const Datenschutz = () => {
                     ? 'Объединение этих данных с другими источниками данных не производится.'
                     : 'Об\'єднання цих даних з іншими джерелами даних не проводиться.'}
                 </p>
+                <p className="leading-relaxed mb-4">
+                  {language === 'de'
+                    ? 'Die Verarbeitung erfolgt zur Gewährleistung der Sicherheit und Stabilität der Website. Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Die Server-Log-Dateien werden nach spätestens 30 Tagen automatisch gelöscht.'
+                    : language === 'ru'
+                    ? 'Обработка осуществляется для обеспечения безопасности и стабильности сайта. Сбор этих данных осуществляется на основании Art. 6 Abs. 1 lit. f DSGVO. Файлы журналов сервера автоматически удаляются не позднее чем через 30 дней.'
+                    : 'Обробка здійснюється для забезпечення безпеки та стабільності сайту. Збір цих даних здійснюється на підставі Art. 6 Abs. 1 lit. f DSGVO. Файли журналів сервера автоматично видаляються не пізніше ніж через 30 днів.'}
+                </p>
                 <p className="leading-relaxed">
                   {language === 'de'
-                    ? 'Die Verarbeitung erfolgt zur Gewährleistung der Sicherheit und Stabilität der Website. Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.'
+                    ? 'Diese Website wird als statische Website gehostet. Der Hosting-Provider erhebt und speichert automatisch Server-Log-Dateien. Es gelten die Datenschutzbestimmungen des jeweiligen Hosting-Providers.'
                     : language === 'ru'
-                    ? 'Обработка осуществляется для обеспечения безопасности и стабильности сайта. Сбор этих данных осуществляется на основании Art. 6 Abs. 1 lit. f GDPR.'
-                    : 'Обробка здійснюється для забезпечення безпеки та стабільності сайту. Збір цих даних здійснюється на підставі Art. 6 Abs. 1 lit. f GDPR.'}
+                    ? 'Этот веб-сайт размещается как статический сайт. Хостинг-провайдер автоматически собирает и сохраняет файлы журналов сервера. Применяются положения о защите данных соответствующего хостинг-провайдера.'
+                    : 'Цей веб-сайт розміщується як статичний сайт. Хостинг-провайдер автоматично збирає та зберігає файли журналів сервера. Застосовуються положення про захист даних відповідного хостинг-провайдера.'}
                 </p>
               </section>
 
@@ -319,10 +356,10 @@ const Datenschutz = () => {
                 </h3>
                 <p className="leading-relaxed mb-4">
                   {language === 'de'
-                    ? 'Technisch notwendige Cookies werden auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO gespeichert. Analyse-Cookies werden nur mit Ihrer ausdrücklichen Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO gesetzt.'
+                    ? 'Technisch notwendige Cookies werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bereitstellung der Website) i.V.m. § 25 Abs. 2 TDDDG gespeichert. Analyse-Cookies werden nur mit Ihrer ausdrücklichen Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO i.V.m. § 25 Abs. 1 TDDDG gesetzt.'
                     : language === 'ru'
-                    ? 'Технически необходимые Cookie сохраняются на основании Art. 6 Abs. 1 lit. c GDPR. Аналитические Cookie устанавливаются только с вашего явного согласия в соответствии с Art. 6 Abs. 1 lit. a GDPR.'
-                    : 'Технічно необхідні Cookie зберігаються на підставі Art. 6 Abs. 1 lit. c GDPR. Аналітичні Cookie встановлюються тільки з вашої явної згоди відповідно до Art. 6 Abs. 1 lit. a GDPR.'}
+                    ? 'Технически необходимые Cookie сохраняются на основании Art. 6 Abs. 1 lit. f DSGVO (законный интерес в предоставлении веб-сайта) в сочетании с § 25 Abs. 2 TDDDG. Аналитические Cookie устанавливаются только с вашего явного согласия в соответствии с Art. 6 Abs. 1 lit. a DSGVO в сочетании с § 25 Abs. 1 TDDDG.'
+                    : 'Технічно необхідні Cookie зберігаються на підставі Art. 6 Abs. 1 lit. f DSGVO (законний інтерес у наданні веб-сайту) в поєднанні з § 25 Abs. 2 TDDDG. Аналітичні Cookie встановлюються тільки з вашої явної згоди відповідно до Art. 6 Abs. 1 lit. a DSGVO в поєднанні з § 25 Abs. 1 TDDDG.'}
                 </p>
                 <p className="leading-relaxed mb-4">
                   {language === 'de'
@@ -422,12 +459,34 @@ const Datenschutz = () => {
                     ? 'Если вы отправляете нам запросы через контактную форму, ваша информация из формы запроса, включая указанные вами контактные данные, будет сохранена у нас для обработки запроса и на случай дополнительных вопросов.'
                     : 'Якщо ви надсилаєте нам запити через контактну форму, ваша інформація з форми запиту, включаючи вказані вами контактні дані, буде збережена у нас для обробки запиту та на випадок додаткових питань.'}
                 </p>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed mb-4">
                   {language === 'de'
                     ? 'Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).'
                     : language === 'ru'
-                    ? 'Мы не передаем эти данные без вашего согласия. Обработка этих данных осуществляется на основании Art. 6 Abs. 1 lit. b GDPR, если ваш запрос связан с выполнением контракта или необходим для выполнения предконтрактных мер. Во всех остальных случаях обработка основывается на вашем согласии (Art. 6 Abs. 1 lit. a GDPR).'
-                    : 'Ми не передаємо ці дані без вашої згоди. Обробка цих даних здійснюється на підставі Art. 6 Abs. 1 lit. b GDPR, якщо ваш запит пов\'язаний з виконанням контракту або необхідний для виконання передконтрактних заходів. У всіх інших випадках обробка базується на вашій згоді (Art. 6 Abs. 1 lit. a GDPR).'}
+                    ? 'Мы не передаем эти данные без вашего согласия. Обработка этих данных осуществляется на основании Art. 6 Abs. 1 lit. b DSGVO, если ваш запрос связан с выполнением контракта или необходим для выполнения предконтрактных мер. Во всех остальных случаях обработка основывается на вашем согласии (Art. 6 Abs. 1 lit. a DSGVO).'
+                    : 'Ми не передаємо ці дані без вашої згоди. Обробка цих даних здійснюється на підставі Art. 6 Abs. 1 lit. b DSGVO, якщо ваш запит пов\'язаний з виконанням контракту або необхідний для виконання передконтрактних заходів. У всіх інших випадках обробка базується на вашій згоді (Art. 6 Abs. 1 lit. a DSGVO).'}
+                </p>
+                <p className="leading-relaxed mb-4">
+                  {language === 'de'
+                    ? 'Für die Übermittlung des Kontaktformulars verwenden wir den Dienst Web3Forms. Dabei werden Ihre eingegebenen Daten an die Server von Web3Forms übermittelt und per E-Mail an uns weitergeleitet. Web3Forms speichert Ihre Daten nicht dauerhaft.'
+                    : language === 'ru'
+                    ? 'Для отправки контактной формы мы используем сервис Web3Forms. При этом введённые вами данные передаются на серверы Web3Forms и пересылаются нам по электронной почте. Web3Forms не хранит ваши данные постоянно.'
+                    : 'Для відправки контактної форми ми використовуємо сервіс Web3Forms. При цьому введені вами дані передаються на сервери Web3Forms і пересилаються нам електронною поштою. Web3Forms не зберігає ваші дані постійно.'}
+                </p>
+                <p className="leading-relaxed">
+                  {language === 'de'
+                    ? 'Weitere Informationen: '
+                    : language === 'ru'
+                    ? 'Дополнительная информация: '
+                    : 'Додаткова інформація: '}
+                  <a
+                    href="https://web3forms.com/privacy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-brand-gold hover:underline"
+                  >
+                    https://web3forms.com/privacy
+                  </a>
                 </p>
               </section>
 
@@ -450,12 +509,28 @@ const Datenschutz = () => {
                     ? 'Обработка данных осуществляется с целью управления и организации записей на основании Art. 6 Abs. 1 lit. b DSGVO (выполнение договора или предконтрактные меры).'
                     : 'Обробка даних здійснюється з метою управління та організації записів на підставі Art. 6 Abs. 1 lit. b DSGVO (виконання договору або передконтрактні заходи).'}
                 </p>
+                <div className="bg-red-50/50 border-l-4 border-red-500 p-4 rounded mb-4">
+                  <p className="font-semibold text-red-900 mb-2">
+                    {language === 'de'
+                      ? 'Hinweis zur Datenübermittlung in Drittstaaten:'
+                      : language === 'ru'
+                      ? 'Примечание о передаче данных в третьи страны:'
+                      : 'Примітка про передачу даних до третіх країн:'}
+                  </p>
+                  <p className="text-sm text-red-800 leading-relaxed">
+                    {language === 'de'
+                      ? 'DIKIDI ist ein Unternehmen mit Sitz in der Russischen Föderation (Drittland ohne Angemessenheitsbeschluss der EU). Bei der Nutzung des Buchungssystems kann es zur Übermittlung personenbezogener Daten in die Russische Föderation kommen. Die Übermittlung erfolgt auf Grundlage Ihrer ausdrücklichen Einwilligung gemäß Art. 49 Abs. 1 lit. a DSGVO, die Sie durch die aktive Nutzung des DIKIDI-Buchungssystems erteilen. Sie können Ihren Termin alternativ telefonisch, per E-Mail oder WhatsApp buchen, um eine Datenübermittlung nach Russland zu vermeiden.'
+                      : language === 'ru'
+                      ? 'DIKIDI — компания, зарегистрированная в Российской Федерации (третья страна без решения ЕС об адекватности защиты данных). При использовании системы бронирования может происходить передача персональных данных в Российскую Федерацию. Передача осуществляется на основании вашего явного согласия в соответствии с Art. 49 Abs. 1 lit. a DSGVO, которое вы даете при активном использовании системы бронирования DIKIDI. Вы можете записаться на прием по телефону, электронной почте или WhatsApp, чтобы избежать передачи данных в Россию.'
+                      : 'DIKIDI — компанія, зареєстрована в Російській Федерації (третя країна без рішення ЄС про адекватність захисту даних). При використанні системи бронювання може відбуватися передача персональних даних до Російської Федерації. Передача здійснюється на підставі вашої явної згоди відповідно до Art. 49 Abs. 1 lit. a DSGVO, яку ви надаєте при активному використанні системи бронювання DIKIDI. Ви можете записатися на прийом телефоном, електронною поштою або WhatsApp, щоб уникнути передачі даних до Росії.'}
+                  </p>
+                </div>
                 <p className="leading-relaxed">
                   {language === 'de'
-                    ? 'Die Datenverarbeitung im Rahmen der Online-Terminbuchung erfolgt in der Verantwortung des jeweiligen Anbieters. Es gelten die Datenschutzbestimmungen von DIKIDI: '
+                    ? 'Die Datenschutzbestimmungen von DIKIDI finden Sie hier: '
                     : language === 'ru'
-                    ? 'Обработка данных в рамках онлайн-записи осуществляется под ответственностью соответствующего поставщика. Применяются положения о защите данных DIKIDI: '
-                    : 'Обробка даних в рамках онлайн-запису здійснюється під відповідальністю відповідного постачальника. Застосовуються положення про захист даних DIKIDI: '}
+                    ? 'Положения о защите данных DIKIDI вы найдёте здесь: '
+                    : 'Положення про захист даних DIKIDI ви знайдете тут: '}
                   <a
                     href="https://support.dikidi.net/en/knowledge-bases/6/articles/648-privacy-policy"
                     target="_blank"
@@ -488,10 +563,111 @@ const Datenschutz = () => {
                 </p>
               </section>
 
+              {/* WhatsApp */}
+              <section>
+                <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
+                  {language === 'de' ? '10. Kommunikation über WhatsApp' : language === 'ru' ? '10. Коммуникация через WhatsApp' : '10. Комунікація через WhatsApp'}
+                </h2>
+                <p className="leading-relaxed mb-4">
+                  {language === 'de'
+                    ? 'Wir bieten Ihnen die Möglichkeit, uns über den Nachrichtendienst WhatsApp (WhatsApp Ireland Limited, 4 Grand Canal Square, Dublin 2, Irland) zu kontaktieren. Wenn Sie uns über WhatsApp kontaktieren, werden die von Ihnen übermittelten Daten (z.B. Telefonnummer, Name, Nachrichteninhalt) von WhatsApp verarbeitet.'
+                    : language === 'ru'
+                    ? 'Мы предоставляем вам возможность связаться с нами через мессенджер WhatsApp (WhatsApp Ireland Limited, 4 Grand Canal Square, Dublin 2, Ирландия). Если вы свяжетесь с нами через WhatsApp, переданные вами данные (например, номер телефона, имя, содержание сообщения) будут обработаны WhatsApp.'
+                    : 'Ми надаємо вам можливість зв\'язатися з нами через месенджер WhatsApp (WhatsApp Ireland Limited, 4 Grand Canal Square, Dublin 2, Ірландія). Якщо ви зв\'яжетесь з нами через WhatsApp, передані вами дані (наприклад, номер телефону, ім\'я, зміст повідомлення) будуть оброблені WhatsApp.'}
+                </p>
+                <p className="leading-relaxed mb-4">
+                  {language === 'de'
+                    ? 'WhatsApp gehört zur Meta Platforms Inc. (USA). Es kann zu einer Übermittlung Ihrer Daten in die USA kommen. Meta Platforms ist nach dem EU-U.S. Data Privacy Framework zertifiziert. Die Nutzung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO (Einwilligung durch aktive Kontaktaufnahme) bzw. Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen).'
+                    : language === 'ru'
+                    ? 'WhatsApp принадлежит Meta Platforms Inc. (США). Возможна передача ваших данных в США. Meta Platforms сертифицирована в соответствии с EU-U.S. Data Privacy Framework. Использование осуществляется на основании Art. 6 Abs. 1 lit. a DSGVO (согласие при активном обращении) или Art. 6 Abs. 1 lit. b DSGVO (предконтрактные меры).'
+                    : 'WhatsApp належить Meta Platforms Inc. (США). Можлива передача ваших даних до США. Meta Platforms сертифіковано відповідно до EU-U.S. Data Privacy Framework. Використання здійснюється на підставі Art. 6 Abs. 1 lit. a DSGVO (згода при активному зверненні) або Art. 6 Abs. 1 lit. b DSGVO (передконтрактні заходи).'}
+                </p>
+                <p className="leading-relaxed">
+                  {language === 'de'
+                    ? 'Weitere Informationen: '
+                    : language === 'ru'
+                    ? 'Дополнительная информация: '
+                    : 'Додаткова інформація: '}
+                  <a
+                    href="https://www.whatsapp.com/legal/privacy-policy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-brand-gold hover:underline"
+                  >
+                    https://www.whatsapp.com/legal/privacy-policy
+                  </a>
+                </p>
+              </section>
+
+              {/* Google Maps */}
+              <section>
+                <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
+                  {language === 'de' ? '11. Google Maps' : language === 'ru' ? '11. Google Maps' : '11. Google Maps'}
+                </h2>
+                <p className="leading-relaxed mb-4">
+                  {language === 'de'
+                    ? 'Wir binden auf unserer Website Karten des Dienstes Google Maps (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland) ein. Beim Laden der Karte wird eine Verbindung zu den Servern von Google hergestellt, wobei Ihre IP-Adresse und weitere technische Daten an Google übermittelt werden.'
+                    : language === 'ru'
+                    ? 'На нашем сайте мы используем карты сервиса Google Maps (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ирландия). При загрузке карты устанавливается соединение с серверами Google, при этом ваш IP-адрес и другие технические данные передаются Google.'
+                    : 'На нашому сайті ми використовуємо карти сервісу Google Maps (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ірландія). При завантаженні карти встановлюється з\'єднання з серверами Google, при цьому ваша IP-адреса та інші технічні дані передаються Google.'}
+                </p>
+                <p className="leading-relaxed mb-4">
+                  {language === 'de'
+                    ? 'Es kann hierbei zu einer Übertragung von Daten an Server von Google in den USA kommen. Google ist nach dem EU-U.S. Data Privacy Framework zertifiziert. Die Einbindung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Darstellung unseres Standorts).'
+                    : language === 'ru'
+                    ? 'При этом возможна передача данных на серверы Google в США. Google сертифицирован в соответствии с EU-U.S. Data Privacy Framework. Интеграция осуществляется на основании Art. 6 Abs. 1 lit. f DSGVO (законный интерес в отображении нашего местоположения).'
+                    : 'При цьому можлива передача даних на сервери Google в США. Google сертифіковано відповідно до EU-U.S. Data Privacy Framework. Інтеграція здійснюється на підставі Art. 6 Abs. 1 lit. f DSGVO (законний інтерес у відображенні нашого місцезнаходження).'}
+                </p>
+                <p className="leading-relaxed">
+                  {language === 'de'
+                    ? 'Weitere Informationen: '
+                    : language === 'ru'
+                    ? 'Дополнительная информация: '
+                    : 'Додаткова інформація: '}
+                  <a
+                    href="https://policies.google.com/privacy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-brand-gold hover:underline"
+                  >
+                    https://policies.google.com/privacy
+                  </a>
+                </p>
+              </section>
+
+              {/* Instagram */}
+              <section>
+                <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
+                  {language === 'de' ? '12. Instagram' : language === 'ru' ? '12. Instagram' : '12. Instagram'}
+                </h2>
+                <p className="leading-relaxed mb-4">
+                  {language === 'de'
+                    ? 'Unsere Website enthält Verweise (Links) auf unser Instagram-Profil (Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublin 2, Irland). Beim Klick auf den Instagram-Link verlassen Sie unsere Website. Es findet keine automatische Datenübermittlung an Instagram statt, solange Sie nicht aktiv auf den Link klicken.'
+                    : language === 'ru'
+                    ? 'Наш сайт содержит ссылки на наш профиль Instagram (Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublin 2, Ирландия). При нажатии на ссылку Instagram вы покидаете наш сайт. Автоматическая передача данных в Instagram не происходит, пока вы активно не нажмёте на ссылку.'
+                    : 'Наш сайт містить посилання на наш профіль Instagram (Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublin 2, Ірландія). При натисканні на посилання Instagram ви залишаєте наш сайт. Автоматична передача даних до Instagram не відбувається, доки ви активно не натиснете на посилання.'}
+                </p>
+                <p className="leading-relaxed">
+                  {language === 'de'
+                    ? 'Auf der Instagram-Plattform gelten die Datenschutzbestimmungen von Meta Platforms: '
+                    : language === 'ru'
+                    ? 'На платформе Instagram действуют положения о защите данных Meta Platforms: '
+                    : 'На платформі Instagram діють положення про захист даних Meta Platforms: '}
+                  <a
+                    href="https://privacycenter.instagram.com/policy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-brand-gold hover:underline"
+                  >
+                    https://privacycenter.instagram.com/policy
+                  </a>
+                </p>
+              </section>
+
               {/* SSL Encryption */}
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-                  {language === 'de' ? '10. SSL- bzw. TLS-Verschlüsselung' : language === 'ru' ? '10. SSL/TLS-шифрование' : '10. SSL/TLS-шифрування'}
+                  {language === 'de' ? '13. SSL- bzw. TLS-Verschlüsselung' : language === 'ru' ? '13. SSL/TLS-шифрование' : '13. SSL/TLS-шифрування'}
                 </h2>
                 <p className="leading-relaxed">
                   {language === 'de'
@@ -505,7 +681,7 @@ const Datenschutz = () => {
               {/* Data Deletion */}
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-                  {language === 'de' ? '11. Speicherdauer' : language === 'ru' ? '11. Срок хранения' : '11. Термін зберігання'}
+                  {language === 'de' ? '14. Speicherdauer' : language === 'ru' ? '14. Срок хранения' : '14. Термін зберігання'}
                 </h2>
                 <p className="leading-relaxed mb-4">
                   {language === 'de'
@@ -542,7 +718,7 @@ const Datenschutz = () => {
               {/* Contact for Questions */}
               <section className="bg-brand-gold/5 p-6 rounded-2xl">
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-                  {language === 'de' ? '12. Fragen zum Datenschutz?' : language === 'ru' ? '12. Вопросы о защите данных?' : '12. Питання про захист даних?'}
+                  {language === 'de' ? '15. Fragen zum Datenschutz?' : language === 'ru' ? '15. Вопросы о защите данных?' : '15. Питання про захист даних?'}
                 </h2>
                 <p className="leading-relaxed mb-4">
                   {language === 'de'
@@ -570,7 +746,7 @@ const Datenschutz = () => {
               {/* Last Updated */}
               <section className="text-sm text-brand-coffee/60 pt-4 border-t border-brand-gold/10">
                 <p>
-                  {language === 'de' ? 'Stand: Dezember 2024' : language === 'ru' ? 'Состояние: декабрь 2024 года' : 'Стан: грудень 2024 року'}
+                  {language === 'de' ? 'Stand: Februar 2026' : language === 'ru' ? 'Состояние: февраль 2026 года' : 'Стан: лютий 2026 року'}
                 </p>
               </section>
             </div>

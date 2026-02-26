@@ -4,6 +4,7 @@ import { Link } from '@/components/LinkAdapter'
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ProductCard } from '@/components/ProductCard';
 import Image from 'next/image';
+import { ProductLineSchema } from '@/components/ProductLineSchema';
 
 const Whitening = () => {
   const { language } = useLanguage();
@@ -13,9 +14,10 @@ const Whitening = () => {
     {
       id: "aha-bha-lotion",
       name: "AHA & BHA Lotion",
-      description: isGerman
+      description: language === 'de'
         ? "Aufhellende Lotion mit AHA- und BHA-Säuren. Entfernt abgestorbene Hautzellen, hellt Pigmentflecken auf und sorgt für einen ebenmäßigen Teint. Wirkstoffe: Glykolsäure, Salicylsäure, Arbutin."
-        : "Осветляющий лосьон с AHA и BHA кислотами. Удаляет омертвевшие клетки кожи, осветляет пигментные пятна и выравнивает тон кожи. Активные ингредиенты: гликолевая кислота, салициловая кислота, арбутин.",
+        : language === 'ru' ? "Осветляющий лосьон с AHA и BHA кислотами. Удаляет омертвевшие клетки кожи, осветляет пигментные пятна и выравнивает тон кожи. Активные ингредиенты: гликолевая кислота, салициловая кислота, арбутин."
+        : "Освітлювальний лосьйон з AHA та BHA кислотами. Видаляє омертвілі клітини шкіри, освітлює пігментні плями та вирівнює тон шкіри. Активні інгредієнти: гліколева кислота, саліцилова кислота, арбутин.",
       image: "/Renew/1.png",
       hoverImage: "/Renew/1.1.jpeg",
       variants: [
@@ -25,10 +27,11 @@ const Whitening = () => {
     },
     {
       id: "depigmenting-mask",
-      name: language === 'de' ? "Depigmentierende Maske" : language === 'ru' ? "Депигментирующая маска" : "Депигментирующая маска",
-      description: isGerman
+      name: language === 'de' ? "Depigmentierende Maske" : language === 'ru' ? "Депигментирующая маска" : "Депігментувальна маска",
+      description: language === 'de'
         ? "Intensive Maske mit Arbutin und Vitamin C. Reduziert Hyperpigmentierung und verleiht der Haut Ausstrahlung. Ideal bei Altersflecken, Melasma und ungleichmäßigem Teint."
-        : "Интенсивная маска с арбутином и витамином С. Уменьшает гиперпигментацию и придает коже сияние. Идеально при возрастных пятнах, мелазме и неровном тоне кожи.",
+        : language === 'ru' ? "Интенсивная маска с арбутином и витамином С. Уменьшает гиперпигментацию и придает коже сияние. Идеально при возрастных пятнах, мелазме и неровном тоне кожи."
+        : "Інтенсивна маска з арбутином та вітаміном С. Зменшує гіперпігментацію та надає шкірі сяйво. Ідеально при вікових плямах, мелазмі та нерівному тоні шкіри.",
       image: "/Renew/2.png",
       hoverImage: "/Renew/2.1.jpeg",
       variants: [
@@ -38,10 +41,11 @@ const Whitening = () => {
     },
     {
       id: "depigmenting-serum",
-      name: language === 'de' ? "Depigmentierendes Serum" : language === 'ru' ? "Депигментирующая сыворотка" : "Депигментирующая сыворотка",
-      description: isGerman
+      name: language === 'de' ? "Depigmentierendes Serum" : language === 'ru' ? "Депигментирующая сыворотка" : "Депігментувальна сироватка",
+      description: language === 'de'
         ? "Hochkonzentriertes Serum mit Kojisäure und Niacinamid. Hemmt die Melaninproduktion und hellt bestehende Pigmentflecken auf. Für sichtbare Ergebnisse in 4-6 Wochen."
-        : "Высококонцентрированная сыворотка с койевой кислотой и ниацинамидом. Подавляет выработку меланина и осветляет существующие пигментные пятна. Видимые результаты через 4-6 недель.",
+        : language === 'ru' ? "Высококонцентрированная сыворотка с койевой кислотой и ниацинамидом. Подавляет выработку меланина и осветляет существующие пигментные пятна. Видимые результаты через 4-6 недель."
+        : "Висококонцентрована сироватка з коєвою кислотою та ніацинамідом. Пригнічує вироблення меланіну та освітлює наявні пігментні плями. Видимі результати через 4-6 тижнів.",
       image: "/Renew/3.png",
       variants: [
         { volume: "30ml" }
@@ -49,10 +53,11 @@ const Whitening = () => {
     },
     {
       id: "depigmenting-cream",
-      name: language === 'de' ? "Depigmentierende Creme" : language === 'ru' ? "Депигментирующий крем" : "Депигментирующий крем",
-      description: isGerman
+      name: language === 'de' ? "Depigmentierende Creme" : language === 'ru' ? "Депигментирующий крем" : "Депігментувальний крем",
+      description: language === 'de'
         ? "Tägliche Pflegecreme mit aufhellenden Wirkstoffen. Schützt vor neuer Pigmentierung und pflegt die Haut intensiv. Mit Vitamin C, Arbutin und Süßholzwurzelextrakt."
-        : "Ежедневный крем с осветляющими компонентами. Защищает от новой пигментации и интенсивно ухаживает за кожей. С витамином С, арбутином и экстрактом корня солодки.",
+        : language === 'ru' ? "Ежедневный крем с осветляющими компонентами. Защищает от новой пигментации и интенсивно ухаживает за кожей. С витамином С, арбутином и экстрактом корня солодки."
+        : "Щоденний крем з освітлювальними компонентами. Захищає від нової пігментації та інтенсивно доглядає за шкірою. З вітаміном С, арбутином та екстрактом кореня солодки.",
       image: "/Renew/4.png",
       variants: [
         { volume: "50ml" }
@@ -62,6 +67,7 @@ const Whitening = () => {
 
   return (
     <div className="relative min-h-screen">
+      <ProductLineSchema lineName="Whitening" products={products.map(p => ({ name: p.name, image: p.image }))} />
       <div className="fixed inset-0 z-0">
         <Image
           src="/48.png"
@@ -78,15 +84,16 @@ const Whitening = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <Link to="/shop" className="text-brand-rose hover:text-brand-espresso transition-colors mb-4 inline-block">
-              ← {language === 'de' ? "Zurück zum Shop" : language === 'ru' ? "Назад в магазин" : "Назад в магазин"}
+              ← {language === 'de' ? "Zurück zum Shop" : language === 'ru' ? "Назад в магазин" : "Назад до магазину"}
             </Link>
             <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-4">
-              {language === 'de' ? "Aufhellung & Pigmentierung" : language === 'ru' ? "Осветление и пигментация" : "Осветление и пигментация"}
+              {language === 'de' ? "Aufhellung & Pigmentierung" : language === 'ru' ? "Осветление и пигментация" : "Освітлення та пігментація"}
             </h1>
             <p className="text-lg text-brand-coffee/80 max-w-3xl mx-auto leading-relaxed">
-              {isGerman
+              {language === 'de'
                 ? "RENEW Whitening - Professionelle Produkte gegen Pigmentflecken, Altersflecken und Hyperpigmentierung. Die Linie enthält hochwirksame aufhellende Wirkstoffe wie Arbutin, Kojisäure, Vitamin C und Niacinamid für einen ebenmäßigen, strahlenden Teint."
-                : "RENEW Whitening - Профессиональные средства против пигментных пятен, возрастных пятен и гиперпигментации. Линия содержит высокоэффективные осветляющие компоненты: арбутин, койевую кислоту, витамин С и ниацинамид для ровного сияющего тона кожи."}
+                : language === 'ru' ? "RENEW Whitening - Профессиональные средства против пигментных пятен, возрастных пятен и гиперпигментации. Линия содержит высокоэффективные осветляющие компоненты: арбутин, койевую кислоту, витамин С и ниацинамид для ровного сияющего тона кожи."
+                : "RENEW Whitening - Професійні засоби проти пігментних плям, вікових плям та гіперпігментації. Лінія містить високоефективні освітлювальні компоненти: арбутин, коєву кислоту, вітамін С та ніацинамід для рівного сяючого тону шкіри."}
             </p>
           </div>
 

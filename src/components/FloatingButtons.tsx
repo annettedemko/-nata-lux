@@ -2,29 +2,28 @@
 
 import { MessageCircle, Calendar } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import DikidiConsentDialog, { useDikidiConsent } from './DikidiConsentDialog';
 
 export const FloatingButtons = () => {
   const { language } = useLanguage();
   const whatsappNumber = '4917677267269';
-  const phoneNumber = '+4917677267269';
+  const { isDialogOpen, openDikidi, closeDialog } = useDikidiConsent();
 
   const handleWhatsApp = () => {
     const message = language === 'de'
       ? 'Hallo! Ich interessiere mich für Ihre Dienstleistungen.'
-      : 'Здравствуйте! Меня интересуют ваши услуги.';
+      : language === 'ru'
+      ? 'Здравствуйте! Меня интересуют ваши услуги.'
+      : 'Привіт! Мене цікавлять ваші послуги.';
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
-  };
-
-  const handleTermin = () => {
-    window.open('https://dikidi.ru/1904110', '_blank');
   };
 
   return (
     <>
       {/* Termin buchen button - Left side */}
       <button
-        onClick={handleTermin}
+        onClick={openDikidi}
         className="fixed bottom-6 left-4 z-50 md:hidden flex items-center gap-2 px-4 py-3 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 font-sans"
         style={{
           background: 'rgba(43, 31, 24, 0.65)',
@@ -34,7 +33,7 @@ export const FloatingButtons = () => {
       >
         <Calendar className="w-5 h-5 text-white flex-shrink-0" />
         <span className="text-white text-sm font-medium">
-          {language === 'de' ? 'Termin b...' : language === 'ru' ? 'Записать...' : 'Записатися...'}
+          {language === 'de' ? 'Termin buchen' : language === 'ru' ? 'Записаться' : 'Записатися'}
         </span>
       </button>
 
@@ -51,6 +50,9 @@ export const FloatingButtons = () => {
       >
         <MessageCircle className="w-5 h-5 text-white" />
       </button>
+
+      {/* DIKIDI Consent Dialog */}
+      <DikidiConsentDialog isOpen={isDialogOpen} onClose={closeDialog} />
     </>
   );
 };

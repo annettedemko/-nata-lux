@@ -6,11 +6,14 @@ import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import { LogoRebirth } from '@/components/LogoRebirth';
 import { SparkleContainer } from '@/components/Sparkle';
+import DikidiConsentDialog, { useDikidiConsent } from './DikidiConsentDialog';
 
 export const HeroSection = () => {
   const { t, language } = useLanguage();
+  const { isDialogOpen, openDikidi, closeDialog } = useDikidiConsent();
 
   return (
+    <>
     <section
       className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden z-10 font-sans"
     >
@@ -137,16 +140,14 @@ export const HeroSection = () => {
             className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-end items-center w-full sm:w-auto"
           >
             {/* Primary Button - Termin buchen */}
-            <motion.a
-              href="https://dikidi.ru/1904110"
-              target="_blank"
-              rel="noopener noreferrer"
+            <motion.div
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="inline-block w-full sm:w-auto"
             >
               <button
-                className="px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-medium transition-all duration-300 w-full sm:w-auto"
+                onClick={openDikidi}
+                className="px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-medium transition-all duration-300 w-full sm:w-auto cursor-pointer"
                 style={{
                   backgroundColor: '#C9A974',
                   color: '#FFFFFF',
@@ -169,7 +170,7 @@ export const HeroSection = () => {
               >
                 {t('hero.cta.book')}
               </button>
-            </motion.a>
+            </motion.div>
 
             {/* Secondary Button - WhatsApp */}
             <motion.a
@@ -281,5 +282,9 @@ export const HeroSection = () => {
         </div>
       </div>
     </section>
+
+    {/* DIKIDI Consent Dialog */}
+    <DikidiConsentDialog isOpen={isDialogOpen} onClose={closeDialog} />
+    </>
   );
 };

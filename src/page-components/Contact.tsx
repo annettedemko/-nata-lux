@@ -8,6 +8,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { MapPin, Phone, Mail, Clock, Car, Train, Instagram } from 'lucide-react';
 import { useState } from 'react';
 import Image from 'next/image';
+import { GoogleMapsEmbed } from '@/components/GoogleMapsEmbed';
 
 const Contact = () => {
   const { t, language } = useLanguage();
@@ -23,8 +24,15 @@ const Contact = () => {
 
     const formData = new FormData(e.currentTarget);
 
-    // Add Web3Forms access key
-    formData.append('access_key', '86bdc5ee-eb20-4a0c-a3fa-fb097077ac1e');
+    // Add Web3Forms access key from environment variable
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+    if (!accessKey) {
+      console.error('Web3Forms access key is not configured');
+      setSubmitStatus('error');
+      setIsSubmitting(false);
+      return;
+    }
+    formData.append('access_key', accessKey);
 
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
@@ -73,9 +81,11 @@ const Contact = () => {
             {t('contact.title')}
           </h1>
           <p className="text-lg text-brand-coffee/80 max-w-2xl mx-auto leading-relaxed">
-            {isGerman
+            {language === 'de'
               ? 'Haben Sie Fragen oder möchten einen Termin vereinbaren? Kontaktieren Sie uns – wir freuen uns auf Sie!'
-              : 'Есть вопросы или хотите записаться? Свяжитесь с нами – мы будем рады вам помочь!'}
+              : language === 'ru'
+              ? 'Есть вопросы или хотите записаться? Свяжитесь с нами – мы будем рады вам помочь!'
+              : 'Маєте запитання або хочете записатися? Зв\'яжіться з нами – ми будемо раді вам допомогти!'}
           </p>
         </div>
 
@@ -199,7 +209,7 @@ const Contact = () => {
                               className="hover:text-brand-gold transition-colors underline"
                             >
                               Parkhaus am Ostbahnhof
-                            </a> (6 Min. Fußweg)
+                            </a> ({language === 'de' ? '6 Min. Fußweg' : language === 'ru' ? '6 мин. пешком' : '6 хв. пішки'})
                         </li>
                         <li>
                           • <a
@@ -209,7 +219,7 @@ const Contact = () => {
                               className="hover:text-brand-gold transition-colors underline"
                             >
                               Motel One Parkplatz
-                            </a> (5 Min. Fußweg)
+                            </a> ({language === 'de' ? '5 Min. Fußweg' : language === 'ru' ? '5 мин. пешком' : '5 хв. пішки'})
                         </li>
                       </ul>
                     </div>
@@ -222,8 +232,8 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-brand-espresso mb-2">{language === 'de' ? 'ÖPNV' : language === 'ru' ? 'Общественный транспорт' : 'Громадський транспорт'}</h3>
                       <ul className="text-sm text-brand-coffee/70 space-y-1">
-                        <li>• S-Bahn München Ost (5–7 Min. Fußweg)</li>
-                        <li>• U5 Ostbahnhof (5–7 Min. Fußweg)</li>
+                        <li>• S-Bahn München Ost ({language === 'de' ? '5–7 Min. Fußweg' : language === 'ru' ? '5–7 мин. пешком' : '5–7 хв. пішки'})</li>
+                        <li>• U5 Ostbahnhof ({language === 'de' ? '5–7 Min. Fußweg' : language === 'ru' ? '5–7 мин. пешком' : '5–7 хв. пішки'})</li>
                         <li>• Tram/Bus Orleansplatz</li>
                       </ul>
                     </div>
@@ -232,44 +242,32 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Map - Clickable with Full Address & Transport Info */}
+            {/* Map with Consent + Address Card */}
             <div className="space-y-4">
-              <div className="glass rounded-2xl overflow-hidden h-64 md:h-80 relative group">
-                <a
-                  href="https://www.google.com/maps/dir/?api=1&destination=Elsässer+Straße+33+81667+München"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="absolute inset-0 z-10 cursor-pointer"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent flex items-end justify-center pb-6 opacity-100 group-hover:opacity-95 transition-opacity">
-                    <div className="bg-white/98 backdrop-blur-md px-6 py-4 rounded-xl shadow-2xl border-2 border-brand-gold/30">
-                      <p className="text-brand-espresso font-bold text-xl flex items-center gap-3 mb-2">
-                        <MapPin className="w-6 h-6 text-brand-gold" />
-                        NataLux Studio
-                      </p>
-                      <p className="text-brand-coffee/80 text-base font-medium">
-                        Elsässer Straße 33
-                      </p>
-                      <p className="text-brand-coffee/70 text-sm mb-3">
-                        81667 München-Haidhausen
-                      </p>
-                      <p className="text-brand-gold text-sm font-semibold flex items-center gap-2">
-                        {language === 'de' ? 'Route in Google Maps öffnen →' : language === 'ru' ? 'Открыть маршрут в Google Maps →' : 'Відкрити маршрут в Google Maps →'}
-                      </p>
-                    </div>
-                  </div>
-                </a>
-                <iframe
-                  src="https://www.google.com/maps?q=Elsässer+Straße+33,+81667+München&output=embed&z=17"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0, pointerEvents: 'none' }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="NataLux Studio - Elsässer Straße 33, 81667 München-Haidhausen"
-                ></iframe>
+              <div className="glass rounded-2xl overflow-hidden relative">
+                <GoogleMapsEmbed
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.8!2d11.603257!3d48.129653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ddf577d02e44d%3A0x4fae4d7ecba5e81e!2sEls%C3%A4sser%20Str.%2033%2C%2081667%20M%C3%BCnchen!5e0!3m2!1sde!2sde!4v1709000000000!5m2!1sde!2sde"
+                  className="rounded-xl"
+                  height="320"
+                />
               </div>
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=Elsässer+Straße+33+81667+München"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass rounded-2xl px-6 py-4 flex items-center justify-between group hover:border-brand-gold/30 border border-transparent transition-colors duration-300 block"
+              >
+                <div>
+                  <p className="text-brand-espresso font-bold text-lg flex items-center gap-2">
+                    <MapPin className="w-5 h-5 text-brand-gold" />
+                    NataLux Studio
+                  </p>
+                  <p className="text-brand-coffee/70 text-sm ml-7">Elsässer Straße 33, 81667 München-Haidhausen</p>
+                </div>
+                <p className="text-brand-gold text-sm font-semibold whitespace-nowrap">
+                  {language === 'de' ? 'Route →' : language === 'ru' ? 'Маршрут →' : 'Маршрут →'}
+                </p>
+              </a>
 
               {/* Quick Transport Info under Map */}
               <div className="glass rounded-2xl px-6 py-8">
@@ -277,20 +275,20 @@ const Contact = () => {
                   <div>
                     <div className="flex items-center gap-2 mb-2">
                       <Car className="w-4 h-4 text-brand-gold" />
-                      <span className="font-semibold text-brand-espresso">{language === 'de' ? 'Parkplätze:' : language === 'ru' ? 'Парковки:' : 'Парковки:'}</span>
+                      <span className="font-semibold text-brand-espresso">{language === 'de' ? 'Parkplätze:' : language === 'ru' ? 'Парковки:' : 'Паркування:'}</span>
                     </div>
                     <ul className="text-brand-coffee/70 space-y-1 ml-6">
-                      <li>• <a href="https://maps.app.goo.gl/aamBNHd7cQLSozwt7" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors underline">Parkhaus Ostbahnhof</a> (6 Min.)</li>
-                      <li>• <a href="https://maps.app.goo.gl/RkUPoRsZS3BNMPQy7" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors underline">Motel One</a> (5 Min.)</li>
+                      <li>• <a href="https://maps.app.goo.gl/aamBNHd7cQLSozwt7" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors underline">Parkhaus Ostbahnhof</a> ({language === 'de' ? '6 Min.' : language === 'ru' ? '6 мин.' : '6 хв.'})</li>
+                      <li>• <a href="https://maps.app.goo.gl/RkUPoRsZS3BNMPQy7" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors underline">Motel One</a> ({language === 'de' ? '5 Min.' : language === 'ru' ? '5 мин.' : '5 хв.'})</li>
                     </ul>
                   </div>
                   <div>
                     <div className="flex items-center gap-2 mb-2">
                       <Train className="w-4 h-4 text-brand-gold" />
-                      <span className="font-semibold text-brand-espresso">ÖPNV:</span>
+                      <span className="font-semibold text-brand-espresso">{language === 'de' ? 'ÖPNV:' : language === 'ru' ? 'Общественный транспорт:' : 'Громадський транспорт:'}</span>
                     </div>
                     <ul className="text-brand-coffee/70 space-y-1 ml-6">
-                      <li>• S-Bahn München Ost (5–7 Min.)</li>
+                      <li>• S-Bahn München Ost ({language === 'de' ? '5–7 Min.' : language === 'ru' ? '5–7 мин.' : '5–7 хв.'})</li>
                       <li>• U5 Ostbahnhof, Tram/Bus Orleansplatz</li>
                     </ul>
                   </div>

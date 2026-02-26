@@ -8,7 +8,6 @@ import { ServiceCard } from '@/components/ServiceCard';
 
 const Wimpernkranz = () => {
   const { language } = useLanguage();
-  const isGerman = language === 'de';
 
   const galleryImages = ['/56.jpg', '/68.jpg', '/69.jpg', '/114.jpg', '/150.jpeg', '/143.jpeg'];
 
@@ -20,26 +19,26 @@ const Wimpernkranz = () => {
   const RecommendedServices = () => (
     <div className="mt-12">
       <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-6 text-center">
-        {language === 'de' ? 'Weitere Behandlungen' : language === 'ru' ? 'Другие процедуры' : 'Другие процедуры'}
+        {language === 'de' ? 'Weitere Behandlungen' : language === 'ru' ? 'Другие процедуры' : 'Інші процедури'}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <ServiceCard
-          title="Powder Brows"
-          description={language === 'de' ? 'Pudertechnik für perfekte Augenbrauen' : language === 'ru' ? 'Пудровая техника для идеальных бровей' : 'Пудровая техника для идеальных бровей'}
+          title={language === 'de' ? 'Powder Brows' : language === 'ru' ? 'Пудровые брови' : 'Пудрові брови'}
+          description={language === 'de' ? 'Pudertechnik für perfekte Augenbrauen' : language === 'ru' ? 'Пудровая техника для идеальных бровей' : 'Пудрова техніка для ідеальних брів'}
           icon={Palette}
           href="/services/powder-brows"
           image="/65.jpg"
         />
         <ServiceCard
-          title="Aquarell Lips"
-          description={language === 'de' ? 'Natürliche Lippenpigmentierung' : language === 'ru' ? 'Естественная пигментация губ' : 'Естественная пигментация губ'}
+          title={language === 'de' ? 'Aquarell Lips' : language === 'ru' ? 'Акварельные губы' : 'Акварельні губи'}
+          description={language === 'de' ? 'Natürliche Lippenpigmentierung' : language === 'ru' ? 'Естественная пигментация губ' : 'Природна пігментація губ'}
           icon={Heart}
           href="/services/aquarell-lips"
           image="/138.jpeg"
         />
         <ServiceCard
-          title={language === 'de' ? 'Wimpernverlängerung' : language === 'ru' ? 'Наращивание ресниц' : 'Нарощування ресниц'}
-          description={language === 'de' ? 'Klassisch oder Volumentechnik' : language === 'ru' ? 'Классика или объём' : 'Класика или объём'}
+          title={language === 'de' ? 'Wimpernverlängerung' : language === 'ru' ? 'Наращивание ресниц' : 'Нарощування вій'}
+          description={language === 'de' ? 'Klassisch oder Volumentechnik' : language === 'ru' ? 'Классика или объём' : 'Класика або об\'єм'}
           icon={Sparkles}
           href="/services/wimpernverlaengerung"
           image="/43.png"
@@ -51,21 +50,27 @@ const Wimpernkranz = () => {
   return (
     <ServicePageLayout
       icon={Eye}
-      title={language === 'de' ? "Wimpernkranz (Eyeliner PMU)" : language === 'ru' ? "Межресничка (Eyeliner PMU)" : "Межресничка (Eyeliner PMU)"}
-      subtitle={isGerman
+      title={language === 'de' ? "Wimpernkranz (Eyeliner PMU)" : language === 'ru' ? "Межресничка (Eyeliner PMU)" : "Міжвійка (Eyeliner PMU)"}
+      subtitle={language === 'de'
         ? "Permanent Make-up Wimpernkranzverdichtung – klassisch oder intensiv"
-        : "Перманентный макияж межресничного пространства – классический или интенсивный"}
-      aboutTitle={language === 'de' ? "Was ist ein Wimpernkranz?" : language === 'ru' ? "Что такое межресничка?" : "Что такое межресничка?"}
-      aboutDescription={isGerman ? [
+        : language === 'ru'
+        ? "Перманентный макияж межресничного пространства – классический или интенсивный"
+        : "Перманентний макіяж міжвійкового простору – класичний або інтенсивний"}
+      aboutTitle={language === 'de' ? "Was ist ein Wimpernkranz?" : language === 'ru' ? "Что такое межресничка?" : "Що таке міжвійка?"}
+      aboutDescription={language === 'de' ? [
         'Der Wimpernkranz (auch Lid-Strich oder Eyeliner PMU genannt) ist eine Permanent Make-up Behandlung, bei der Pigmente direkt am Wimpernkranz eingearbeitet werden.',
         'Das Ergebnis ist eine optisch dichtere Wimpernlinie, die Ihre Augen ausdrucksstärker wirken lässt – ganz ohne tägliches Eyeliner auftragen.',
         'Sie haben die Wahl zwischen einem dezenten Wimpernkranz (nur zwischen den Wimpern) oder einem intensiveren Lid-Strich mit sichtbarer Linie. Perfekt für alle, die sich ein dauerhaft definiertes Auge wünschen.'
-      ] : [
+      ] : language === 'ru' ? [
         'Межресничка (также называемая татуаж века или Eyeliner PMU) – это процедура перманентного макияжа, при которой пигменты вводятся непосредственно в межресничное пространство.',
         'Результат – визуально более густая линия ресниц, которая делает ваши глаза более выразительными – без ежедневного нанесения подводки.',
         'Вы можете выбрать между деликатной межресничкой (только между ресницами) или более интенсивной стрелкой с видимой линией. Идеально для тех, кто хочет постоянно выразительный взгляд.'
+      ] : [
+        'Міжвійка (також називається татуаж повіки або Eyeliner PMU) — це процедура перманентного макіяжу, при якій пігменти вводяться безпосередньо у міжвійковий простір.',
+        'Результат — візуально більш густа лінія вій, яка робить ваші очі більш виразними — без щоденного нанесення підводки.',
+        'Ви можете обрати між делікатною міжвійкою (тільки між віями) або більш інтенсивною стрілкою з видимою лінією. Ідеально для тих, хто хоче постійно виразний погляд.'
       ]}
-      benefits={isGerman ? [
+      benefits={language === 'de' ? [
         'Optisch dichtere, vollere Wimpern',
         'Ausdrucksstarke Augen ohne Make-up',
         'Kein tägliches Eyeliner ziehen mehr',
@@ -74,7 +79,7 @@ const Wimpernkranz = () => {
         'Perfekt symmetrische Linie',
         'Langlebig: 2-4 Jahre haltbar',
         'Individuell anpassbar (dezent bis intensiv)'
-      ] : [
+      ] : language === 'ru' ? [
         'Визуально более густые, объёмные ресницы',
         'Выразительные глаза без макияжа',
         'Больше не нужно рисовать подводку каждый день',
@@ -83,8 +88,17 @@ const Wimpernkranz = () => {
         'Идеально симметричная линия',
         'Долговечность: 2-4 года',
         'Индивидуальная настройка (от деликатной до интенсивной)'
+      ] : [
+        'Візуально більш густі, об\'ємні вії',
+        'Виразні очі без макіяжу',
+        'Більше не потрібно малювати підводку щодня',
+        'Водостійкий та стійкий до розмазування',
+        'Економить час на макіяж',
+        'Ідеально симетрична лінія',
+        'Довговічність: 2-4 роки',
+        'Індивідуальне налаштування (від делікатної до інтенсивної)'
       ]}
-      steps={isGerman ? [
+      steps={language === 'de' ? [
         {
           title: 'Beratung & Vorzeichnung',
           description: 'Wir besprechen Ihre Wünsche: dezenter Wimpernkranz oder sichtbarer Lid-Strich.'
@@ -101,7 +115,7 @@ const Wimpernkranz = () => {
           title: 'Nachbehandlung',
           description: 'Nach 4-6 Wochen erfolgt die Nachbehandlung für optimale Deckkraft.'
         }
-      ] : [
+      ] : language === 'ru' ? [
         {
           title: 'Консультация и эскиз',
           description: 'Обсуждаем ваши пожелания: деликатная межресничка или видимая стрелка.'
@@ -118,6 +132,23 @@ const Wimpernkranz = () => {
           title: 'Коррекция',
           description: 'Через 4-6 недель проводится коррекция для оптимальной насыщенности.'
         }
+      ] : [
+        {
+          title: 'Консультація та ескіз',
+          description: 'Обговорюємо ваші побажання: делікатна міжвійка або видима стрілка.'
+        },
+        {
+          title: 'Вибір кольору',
+          description: 'Підбір відповідного кольору (зазвичай чорний або темно-коричневий).'
+        },
+        {
+          title: 'Пігментація',
+          description: 'Точне введення пігментів у міжвійковий простір або у вигляді стрілки.'
+        },
+        {
+          title: 'Корекція',
+          description: 'Через 4-6 тижнів проводиться корекція для оптимальної насиченості.'
+        }
       ]}
       additionalSections={
         <>
@@ -126,22 +157,29 @@ const Wimpernkranz = () => {
         </>
       }
       priceSection="pmu"
-      contraindications={isGerman ? [
+      contraindications={language === 'de' ? [
         'Schwangerschaft und Stillzeit',
         'Aktive Augeninfektionen',
         'Sehr empfindliche oder trockene Augen',
         'Einnahme von Blutverdünnern',
         'Chemotherapie oder Bestrahlung',
         'Neigung zu Keloiden'
-      ] : [
+      ] : language === 'ru' ? [
         'Беременность и период лактации',
         'Активные инфекции глаз',
         'Очень чувствительные или сухие глаза',
         'Приём препаратов, разжижающих кровь',
         'Химиотерапия или облучение',
         'Склонность к келоидным рубцам'
+      ] : [
+        'Вагітність та період лактації',
+        'Активні інфекції очей',
+        'Дуже чутливі або сухі очі',
+        'Прийом препаратів, що розріджують кров',
+        'Хіміотерапія або опромінення',
+        'Схильність до келоїдних рубців'
       ]}
-      faq={isGerman ? [
+      faq={language === 'de' ? [
         {
           q: 'Wie lange hält der Wimpernkranz?',
           a: '2-4 Jahre, abhängig von Hauttyp und Lebensstil. Eine Auffrischung ist nach 2-3 Jahren empfohlen.'
@@ -158,7 +196,7 @@ const Wimpernkranz = () => {
           q: 'Kann ich mit Kontaktlinsen zur Behandlung kommen?',
           a: 'Nein, bitte kommen Sie ohne Kontaktlinsen. Bringen Sie ggf. Ihre Brille mit.'
         }
-      ] : [
+      ] : language === 'ru' ? [
         {
           q: 'Как долго держится межресничка?',
           a: '2-4 года, в зависимости от типа кожи и образа жизни. Обновление рекомендуется через 2-3 года.'
@@ -175,11 +213,30 @@ const Wimpernkranz = () => {
           q: 'Можно ли прийти на процедуру в контактных линзах?',
           a: 'Нет, пожалуйста, приходите без контактных линз. При необходимости возьмите с собой очки.'
         }
+      ] : [
+        {
+          q: 'Як довго тримається міжвійка?',
+          a: '2-4 роки, залежно від типу шкіри та способу життя. Оновлення рекомендується через 2-3 роки.'
+        },
+        {
+          q: 'Чи боляче робити процедуру?',
+          a: 'Зі знеболюючим кремом процедура добре переноситься. Очі можуть трохи сльозитися, що цілком нормально.'
+        },
+        {
+          q: 'Яка різниця між міжвійкою та стрілкою?',
+          a: 'Міжвійка делікатна і видна тільки між віями. Стрілка — це видима лінія як підводка.'
+        },
+        {
+          q: 'Чи можна прийти на процедуру в контактних лінзах?',
+          a: 'Ні, будь ласка, приходьте без контактних лінз. За необхідності візьміть із собою окуляри.'
+        }
       ]}
-      ctaTitle={language === 'de' ? "Bereit für ausdrucksstarke Augen?" : language === 'ru' ? "Готовы к выразительному взгляду?" : "Готовы к выразительному взгляду?"}
-      ctaDescription={isGerman
+      ctaTitle={language === 'de' ? "Bereit für ausdrucksstarke Augen?" : language === 'ru' ? "Готовы к выразительному взгляду?" : "Готові до виразного погляду?"}
+      ctaDescription={language === 'de'
         ? "Buchen Sie jetzt Ihren Wimpernkranz Termin oder lassen Sie sich kostenlos beraten."
-        : "Запишитесь на процедуру межреснички или получите бесплатную консультацию."}
+        : language === 'ru'
+        ? "Запишитесь на процедуру межреснички или получите бесплатную консультацию."
+        : "Запишіться на процедуру міжвійки або отримайте безкоштовну консультацію."}
     />
   );
 };

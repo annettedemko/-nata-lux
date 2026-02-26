@@ -7,23 +7,24 @@ import { Button } from '@/components/ui/button';
 
 const Koerperbehandlungen = () => {
   const { t, language } = useLanguage();
-  const isGerman = language === 'de';
 
   const treatments = [
     {
       title: language === 'de' ? 'RF-Vakuum' : language === 'ru' ? 'RF-вакуум' : 'RF-вакуум',
-      description: isGerman
+      description: language === 'de'
         ? 'Radiofrequenz mit Vakuum für Straffung und Cellulite-Reduktion'
-        : 'Радиочастоты с вакуумом для подтяжки и уменьшения целлюлита',
+        : language === 'ru' ? 'Радиочастоты с вакуумом для подтяжки и уменьшения целлюлита'
+        : 'Радіочастоти з вакуумом для підтяжки та зменшення целюліту',
       icon: Star,
       href: '/services/koerperbehandlungen/rf-vakuum',
       image: '/83.jpg',
     },
     {
-      title: language === 'de' ? 'Kavitation' : language === 'ru' ? 'Кавитация' : 'Кавитация',
-      description: isGerman
+      title: language === 'de' ? 'Kavitation' : language === 'ru' ? 'Кавитация' : 'Кавітація',
+      description: language === 'de'
         ? 'Ultraschall-Kavitation für Fettreduktion an Bauch, Gesäß und Oberschenkeln'
-        : 'Ультразвуковая кавитация для уменьшения жировых отложений на животе, ягодицах и бёдрах',
+        : language === 'ru' ? 'Ультразвуковая кавитация для уменьшения жировых отложений на животе, ягодицах и бёдрах'
+        : 'Ультразвукова кавітація для зменшення жирових відкладень на животі, сідницях та стегнах',
       icon: Zap,
       href: '/services/koerperbehandlungen/kavitation',
       image: '/127.jpeg',
@@ -54,15 +55,16 @@ const Koerperbehandlungen = () => {
             <Star className="w-10 h-10 text-brand-gold" />
           </div>
           <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-6">
-            {language === 'de' ? 'Körperbehandlungen' : language === 'ru' ? 'Процедуры для тела' : 'Процедуры для тела'}
+            {language === 'de' ? 'Körperbehandlungen' : language === 'ru' ? 'Процедуры для тела' : 'Процедури для тіла'}
           </h1>
           <p className="text-xl text-brand-gold font-heading mb-4">
-            {language === 'de' ? 'RF-Vakuum und Kavitation für Body Contouring' : language === 'ru' ? 'RF-вакуум и кавитация для контурирования тела' : 'RF-вакуум и кавитация для контурирования тела'}
+            {language === 'de' ? 'RF-Vakuum und Kavitation für Body Contouring' : language === 'ru' ? 'RF-вакуум и кавитация для контурирования тела' : 'RF-вакуум та кавітація для контурування тіла'}
           </p>
           <p className="text-lg text-brand-coffee/80 max-w-2xl mx-auto leading-relaxed">
-            {isGerman
+            {language === 'de'
               ? 'Moderne Körperbehandlungen für Straffung, Cellulite-Reduktion und Fettabbau. Nicht-invasive Methoden für eine schönere Silhouette.'
-              : 'Современные процедуры для тела: подтяжка, уменьшение целлюлита и жировых отложений. Неинвазивные методы для красивого силуэта.'}
+              : language === 'ru' ? 'Современные процедуры для тела: подтяжка, уменьшение целлюлита и жировых отложений. Неинвазивные методы для красивого силуэта.'
+              : 'Сучасні процедури для тіла: підтяжка, зменшення целюліту та жирових відкладень. Неінвазивні методи для красивого силуету.'}
           </p>
         </div>
 
@@ -78,29 +80,32 @@ const Koerperbehandlungen = () => {
         {/* About Section */}
         <section className="glass rounded-2xl p-8 mb-12">
           <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-            {language === 'de' ? 'Was sind Körperbehandlungen?' : language === 'ru' ? 'Что такое процедуры для тела?' : 'Что такое процедуры для тела?'}
+            {language === 'de' ? 'Was sind Körperbehandlungen?' : language === 'ru' ? 'Что такое процедуры для тела?' : 'Що таке процедури для тіла?'}
           </h2>
           <p className="text-brand-coffee/80 leading-relaxed mb-4">
-            {isGerman
+            {language === 'de'
               ? 'Unsere Körperbehandlungen nutzen modernste Technologien wie RF-Vakuum und Kavitation, um gezielt Problemzonen am Körper zu behandeln – ganz ohne Operation oder lange Ausfallzeiten.'
-              : 'Наши процедуры используют современные технологии RF-вакуум и кавитация для целенаправленной работы с проблемными зонами тела — без операций и длительного восстановления.'}
+              : language === 'ru' ? 'Наши процедуры используют современные технологии RF-вакуум и кавитация для целенаправленной работы с проблемными зонами тела — без операций и длительного восстановления.'
+              : 'Наші процедури використовують сучасні технології RF-вакуум та кавітацію для цілеспрямованої роботи з проблемними зонами тіла — без операцій та тривалого відновлення.'}
           </p>
           <p className="text-brand-coffee/80 leading-relaxed">
-            {isGerman
+            {language === 'de'
               ? 'Ob Cellulite-Reduktion, Hautstraffung oder Fettabbau – wir bieten effektive Lösungen für eine schönere, straffere Silhouette an Bauch, Gesäß, Oberschenkeln und anderen Bereichen.'
-              : 'Уменьшение целлюлита, подтяжка кожи или сжигание жира — мы предлагаем эффективные решения для красивого, подтянутого силуэта на животе, ягодицах, бёдрах и других зонах.'}
+              : language === 'ru' ? 'Уменьшение целлюлита, подтяжка кожи или сжигание жира — мы предлагаем эффективные решения для красивого, подтянутого силуэта на животе, ягодицах, бёдрах и других зонах.'
+              : 'Зменшення целюліту, підтяжка шкіри або спалювання жиру — ми пропонуємо ефективні рішення для красивого, підтягнутого силуету на животі, сідницях, стегнах та інших зонах.'}
           </p>
         </section>
 
         {/* CTA */}
         <div className="bg-gold-gradient rounded-2xl p-8 text-center">
           <h2 className="text-2xl font-heading font-semibold text-white mb-4">
-            {language === 'de' ? 'Bereit für Ihre Traumfigur?' : language === 'ru' ? 'Готовы к фигуре мечты?' : 'Готовы к фигуре мечты?'}
+            {language === 'de' ? 'Bereit für Ihre Traumfigur?' : language === 'ru' ? 'Готовы к фигуре мечты?' : 'Готові до фігури мрії?'}
           </h2>
           <p className="text-white/90 mb-6">
-            {isGerman
+            {language === 'de'
               ? 'Buchen Sie eine kostenlose Beratung und starten Sie Ihre individuelle Body-Contouring-Reise.'
-              : 'Запишитесь на бесплатную консультацию и начните свой индивидуальный путь к идеальному телу.'}
+              : language === 'ru' ? 'Запишитесь на бесплатную консультацию и начните свой индивидуальный путь к идеальному телу.'
+              : 'Запишіться на безкоштовну консультацію та розпочніть свій індивідуальний шлях до ідеального тіла.'}
           </p>
           <Button
             size="lg"
@@ -108,7 +113,7 @@ const Koerperbehandlungen = () => {
             asChild
           >
             <a href="https://wa.me/4917677267269" target="_blank" rel="noopener noreferrer">
-              {language === 'de' ? 'Beratung anfragen' : language === 'ru' ? 'Запросить консультацию' : 'Запросить консультацию'}
+              {language === 'de' ? 'Beratung anfragen' : language === 'ru' ? 'Запросить консультацию' : 'Запросити консультацію'}
             </a>
           </Button>
         </div>

@@ -4,6 +4,7 @@ import { Link } from '@/components/LinkAdapter'
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ProductCard } from '@/components/ProductCard';
 import Image from 'next/image';
+import { ProductLineSchema } from '@/components/ProductLineSchema';
 
 const Peelings = () => {
   const { language } = useLanguage();
@@ -13,9 +14,11 @@ const Peelings = () => {
     {
       id: "cream-peeling-gommage",
       name: "Cream Peeling Gommage",
-      description: isGerman
+      description: language === 'de'
         ? "Cremiges Gommage-Peeling für sanfte Hauterneuerung. Mechanisches Peeling mit feinen Partikeln, das abgestorbene Hautzellen entfernt und die Haut glättet. Für alle Hauttypen geeignet."
-        : "Кремовый гоммаж-пилинг для мягкого обновления кожи. Механический пилинг с мелкими частицами, удаляет омертвевшие клетки и разглаживает кожу. Подходит для всех типов кожи.",
+        : language === 'ru'
+        ? "Кремовый гоммаж-пилинг для мягкого обновления кожи. Механический пилинг с мелкими частицами, удаляет омертвевшие клетки и разглаживает кожу. Подходит для всех типов кожи."
+        : "Кремовий гомаж-пілінг для м'якого оновлення шкіри. Механічний пілінг з дрібними частинками, видаляє омертвілі клітини та розгладжує шкіру. Підходить для всіх типів шкіри.",
       image: "/Renew/38.jpeg",
       hoverImage: "/Renew/38.1.jpeg",
       variants: [{ volume: "70ml" }, { volume: "250ml" }]
@@ -23,27 +26,33 @@ const Peelings = () => {
     {
       id: "azelaic-acid-peeling",
       name: "Azelaic Acid Peeling",
-      description: isGerman
+      description: language === 'de'
         ? "Peeling mit 15% Azelainsäure. Wirksam gegen Pigmentierung, Akne und Rosazea. Antibakteriell und entzündungshemmend, verfeinert die Hautstruktur."
-        : "Пилинг с 15% азелаиновой кислотой. Эффективен против пигментации, акне и розацеа. Антибактериальный и противовоспалительный, улучшает текстуру кожи.",
+        : language === 'ru'
+        ? "Пилинг с 15% азелаиновой кислотой. Эффективен против пигментации, акне и розацеа. Антибактериальный и противовоспалительный, улучшает текстуру кожи."
+        : "Пілінг з 15% азелаїновою кислотою. Ефективний проти пігментації, акне та розацеа. Антибактеріальний та протизапальний, покращує текстуру шкіри.",
       image: "/Renew/39.jpeg",
       variants: [{ volume: "150ml" }]
     },
     {
       id: "aha-bha-peeling",
       name: "AHA & BHA Peeling",
-      description: isGerman
+      description: language === 'de'
         ? "Kombiniertes Säurepeeling mit Glykolsäure und Salicylsäure. Tiefe Hauterneuerung, Porenreinigung und Verfeinerung der Hautstruktur in einem Produkt."
-        : "Комбинированный кислотный пилинг с гликолевой и салициловой кислотами. Глубокое обновление кожи, очищение пор и улучшение текстуры в одном продукте.",
+        : language === 'ru'
+        ? "Комбинированный кислотный пилинг с гликолевой и салициловой кислотами. Глубокое обновление кожи, очищение пор и улучшение текстуры в одном продукте."
+        : "Комбінований кислотний пілінг з гліколевою та саліциловою кислотами. Глибоке оновлення шкіри, очищення пор та покращення текстури в одному продукті.",
       image: "/Renew/40.jpeg",
       variants: [{ volume: "250ml" }]
     },
     {
       id: "aha-peeling",
       name: "AHA Peeling",
-      description: isGerman
+      description: language === 'de'
         ? "Fruchtsäurepeeling mit Glykolsäure. Glättet die Haut, verbessert die Textur und verleiht Ausstrahlung. Ideal bei fahlem Teint und feinen Linien."
-        : "Фруктовый кислотный пилинг с гликолевой кислотой. Разглаживает кожу, улучшает текстуру и придает сияние. Идеально при тусклом цвете лица и мелких морщинках.",
+        : language === 'ru'
+        ? "Фруктовый кислотный пилинг с гликолевой кислотой. Разглаживает кожу, улучшает текстуру и придает сияние. Идеально при тусклом цвете лица и мелких морщинках."
+        : "Фруктовий кислотний пілінг з гліколевою кислотою. Розгладжує шкіру, покращує текстуру та надає сяйво. Ідеально при тьмяному кольорі обличчя та дрібних зморшках.",
       image: "/Renew/41.jpeg",
       hoverImage: "/Renew/41.1.jpeg",
       variants: [
@@ -54,9 +63,11 @@ const Peelings = () => {
     {
       id: "aha-refreshing-exfoliator",
       name: "AHA Refreshing Exfoliator",
-      description: isGerman
+      description: language === 'de'
         ? "Erfrischendes AHA-Peeling für die tägliche Anwendung. Milde Konzentration für kontinuierliche Hauterneuerung ohne Irritation."
-        : "Освежающий AHA-эксфолиант для ежедневного применения. Мягкая концентрация для постоянного обновления кожи без раздражения.",
+        : language === 'ru'
+        ? "Освежающий AHA-эксфолиант для ежедневного применения. Мягкая концентрация для постоянного обновления кожи без раздражения."
+        : "Освіжальний AHA-ексфоліант для щоденного застосування. М'яка концентрація для постійного оновлення шкіри без подразнення.",
       image: "/Renew/42.jpeg",
       hoverImage: "/Renew/42.1.jpeg",
       variants: [
@@ -67,18 +78,22 @@ const Peelings = () => {
     {
       id: "intensive-repair-peel",
       name: "Intensive Repair Peel",
-      description: isGerman
+      description: language === 'de'
         ? "Intensives Reparatur-Peeling für beschädigte und sonnengeschädigte Haut. Regeneriert, glättet Narben und verbessert den Gesamtteint."
-        : "Интенсивный восстанавливающий пилинг для поврежденной и фотоповрежденной кожи. Регенерирует, разглаживает рубцы и улучшает общий тон.",
+        : language === 'ru'
+        ? "Интенсивный восстанавливающий пилинг для поврежденной и фотоповрежденной кожи. Регенерирует, разглаживает рубцы и улучшает общий тон."
+        : "Інтенсивний відновлювальний пілінг для пошкодженої та фотопошкодженої шкіри. Регенерує, розгладжує рубці та покращує загальний тон.",
       image: "/Renew/43.jpeg",
       variants: [{ volume: "30ml" }]
     },
     {
       id: "enzyme-exfoliator",
       name: "Enzyme Exfoliator",
-      description: isGerman
+      description: language === 'de'
         ? "Sanftes Enzympeeling mit Papain und Bromelain. Ideal für empfindliche Haut, löst abgestorbene Zellen ohne mechanische Reibung oder Säuren."
-        : "Мягкий энзимный пилинг с папаином и бромелаином. Идеален для чувствительной кожи, растворяет омертвевшие клетки без механического трения или кислот.",
+        : language === 'ru'
+        ? "Мягкий энзимный пилинг с папаином и бромелаином. Идеален для чувствительной кожи, растворяет омертвевшие клетки без механического трения или кислот."
+        : "М'який ензимний пілінг з папаїном та бромелаїном. Ідеальний для чутливої шкіри, розчиняє омертвілі клітини без механічного тертя або кислот.",
       image: "/Renew/44.jpeg",
       hoverImage: "/Renew/44.1.jpeg",
       variants: [
@@ -89,27 +104,33 @@ const Peelings = () => {
     {
       id: "pro-glow-foaming-peeling",
       name: "Pro Glow Foaming Peeling",
-      description: isGerman
+      description: language === 'de'
         ? "Schäumendes Peeling für professionellen Glow. Sofortige Ausstrahlung durch Kombination von Säuren und Sauerstoff-Technologie."
-        : "Пенящийся пилинг для профессионального сияния. Мгновенный эффект благодаря комбинации кислот и кислородной технологии.",
+        : language === 'ru'
+        ? "Пенящийся пилинг для профессионального сияния. Мгновенный эффект благодаря комбинации кислот и кислородной технологии."
+        : "Пінистий пілінг для професійного сяйва. Миттєвий ефект завдяки комбінації кислот та кисневої технології.",
       image: "/Renew/45.png",
       variants: [{ volume: "150ml" }]
     },
     {
       id: "bioenzyme-therapy",
       name: "Bioenzyme Therapy",
-      description: isGerman
+      description: language === 'de'
         ? "Bioenzym-Therapie mit Probiotika. Stärkt die Hautbarriere, erneuert sanft und fördert ein gesundes Hautmikrobiom."
-        : "Биоэнзимная терапия с пробиотиками. Укрепляет кожный барьер, мягко обновляет и способствует здоровому микробиому кожи.",
+        : language === 'ru'
+        ? "Биоэнзимная терапия с пробиотиками. Укрепляет кожный барьер, мягко обновляет и способствует здоровому микробиому кожи."
+        : "Біоензимна терапія з пробіотиками. Зміцнює шкірний бар'єр, м'яко оновлює та сприяє здоровому мікробіому шкіри.",
       image: "/Renew/46.png",
       variants: [{ volume: "70ml" }]
     },
     {
       id: "redness-gentle-peel",
       name: "Redness Gentle Peel",
-      description: isGerman
+      description: language === 'de'
         ? "Sanftes Peeling speziell für empfindliche Haut mit Rötungen und Couperose. Enthält beruhigende Wirkstoffe und milde Fruchtsäuren für schonende Hauterneuerung."
-        : "Мягкий пилинг специально для чувствительной кожи с покраснениями и куперозом. Содержит успокаивающие компоненты и мягкие фруктовые кислоты для бережного обновления кожи.",
+        : language === 'ru'
+        ? "Мягкий пилинг специально для чувствительной кожи с покраснениями и куперозом. Содержит успокаивающие компоненты и мягкие фруктовые кислоты для бережного обновления кожи."
+        : "М'який пілінг спеціально для чутливої шкіри з почервоніннями та куперозом. Містить заспокійливі компоненти та м'які фруктові кислоти для дбайливого оновлення шкіри.",
       image: "/Renew/58.jpg",
       variants: [{ volume: "50ml" }]
     }
@@ -117,6 +138,7 @@ const Peelings = () => {
 
   return (
     <div className="relative min-h-screen">
+      <ProductLineSchema lineName="Peelings" products={products.map(p => ({ name: p.name, image: p.image }))} />
       <div className="fixed inset-0 z-0">
         <Image
           src="/48.png"
@@ -133,15 +155,17 @@ const Peelings = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <Link to="/shop" className="text-brand-rose hover:text-brand-espresso transition-colors mb-4 inline-block">
-              ← {language === 'de' ? "Zurück zum Shop" : language === 'ru' ? "Назад в магазин" : "Назад в магазин"}
+              ← {language === 'de' ? "Zurück zum Shop" : language === 'ru' ? "Назад в магазин" : "Назад до магазину"}
             </Link>
             <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-4">
-              {language === 'de' ? "Peelings & Erneuerung" : language === 'ru' ? "Пилинги и обновление" : "Пилинги и обновление"}
+              {language === 'de' ? "Peelings & Erneuerung" : language === 'ru' ? "Пилинги и обновление" : "Пілінги та оновлення"}
             </h1>
             <p className="text-lg text-brand-coffee/80 max-w-3xl mx-auto leading-relaxed">
-              {isGerman
+              {language === 'de'
                 ? "Professionelle Peelings für alle Hautbedürfnisse: von sanften Enzympeelings für empfindliche Haut bis zu intensiven Säurepeelings für tiefe Hauterneuerung. Mit AHA, BHA, Azelainsäure und Bioenzym-Technologie für strahlende, erneuerte Haut."
-                : "Профессиональные пилинги для всех потребностей кожи: от мягких энзимных пилингов для чувствительной кожи до интенсивных кислотных пилингов для глубокого обновления. С AHA, BHA, азелаиновой кислотой и биоэнзимной технологией для сияющей обновленной кожи."}
+                : language === 'ru'
+                ? "Профессиональные пилинги для всех потребностей кожи: от мягких энзимных пилингов для чувствительной кожи до интенсивных кислотных пилингов для глубокого обновления. С AHA, BHA, азелаиновой кислотой и биоэнзимной технологией для сияющей обновленной кожи."
+                : "Професійні пілінги для всіх потреб шкіри: від м'яких ензимних пілінгів для чутливої шкіри до інтенсивних кислотних пілінгів для глибокого оновлення. З AHA, BHA, азелаїновою кислотою та біоензимною технологією для сяючої оновленої шкіри."}
             </p>
           </div>
 

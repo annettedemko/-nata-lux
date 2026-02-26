@@ -563,6 +563,12 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     }
   }, []);
 
+  // Update <html lang> attribute when language changes (WCAG 3.1.1)
+  useEffect(() => {
+    const htmlLang = language === 'ua' ? 'uk' : language; // ISO 639-1: Ukrainian = "uk"
+    document.documentElement.lang = htmlLang;
+  }, [language]);
+
   // Update language and save to localStorage
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);

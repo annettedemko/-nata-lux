@@ -8,7 +8,6 @@ import { ServiceCard } from '@/components/ServiceCard';
 
 const HautveraenderungenEntfernen = () => {
   const { language } = useLanguage();
-  const isGerman = language === 'de';
 
   const beforeAfterSection = (
     <section className="glass rounded-2xl p-8 mb-12 animate-slide-up" style={{ animationDelay: '250ms' }}>
@@ -48,26 +47,26 @@ const HautveraenderungenEntfernen = () => {
   const RecommendedServices = () => (
     <div className="mt-12">
       <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-6 text-center">
-        {language === 'de' ? 'Hautpflege nach der Behandlung' : language === 'ru' ? 'Уход за кожей после процедуры' : 'Догляд за кожей после процедуры'}
+        {language === 'de' ? 'Hautpflege nach der Behandlung' : language === 'ru' ? 'Уход за кожей после процедуры' : 'Догляд за шкірою після процедури'}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <ServiceCard
           title={language === 'de' ? 'Gesichtsreinigung' : language === 'ru' ? 'Чистка лица' : 'Чистка обличчя'}
-          description={language === 'de' ? 'Tiefenreinigung für reine Haut' : language === 'ru' ? 'Глубокое очищение для чистой кожи' : 'Глубокое очищение для чистой кожи'}
+          description={language === 'de' ? 'Tiefenreinigung für reine Haut' : language === 'ru' ? 'Глубокое очищение для чистой кожи' : 'Глибоке очищення для чистої шкіри'}
           icon={Droplet}
           href="/services/gesichtsreinigung"
           image="/51.jpg"
         />
         <ServiceCard
-          title={language === 'de' ? 'Lichttherapie' : language === 'ru' ? 'Светотерапия' : 'Светотерапия'}
-          description={language === 'de' ? 'LED-Licht für Regeneration' : language === 'ru' ? 'LED-свет для регенерации' : 'LED-свет для регенерации'}
+          title={language === 'de' ? 'Lichttherapie' : language === 'ru' ? 'Светотерапия' : 'Світлотерапія'}
+          description={language === 'de' ? 'LED-Licht für Regeneration' : language === 'ru' ? 'LED-свет для регенерации' : 'LED-світло для регенерації'}
           icon={Sun}
           href="/services/apparative-anti-aging/lichttherapie"
           image="/124.jpeg"
         />
         <ServiceCard
           title={language === 'de' ? 'Phonophorese' : language === 'ru' ? 'Фонофорез' : 'Фонофорез'}
-          description={language === 'de' ? 'Tiefenwirksame Hautpflege' : language === 'ru' ? 'Глубокий уход за кожей' : 'Глубокий уход за кожей'}
+          description={language === 'de' ? 'Tiefenwirksame Hautpflege' : language === 'ru' ? 'Глубокий уход за кожей' : 'Глибокий догляд за шкірою'}
           icon={Zap}
           href="/services/phonophorese"
           image="/128.jpeg"
@@ -79,21 +78,26 @@ const HautveraenderungenEntfernen = () => {
   return (
     <ServicePageLayout
       icon={Shield}
-      title={language === 'de' ? "Hautveränderungen entfernen" : language === 'ru' ? "Удаление новообразований кожи" : "Видалення новообразований кожи"}
-      subtitle={isGerman
+      title={language === 'de' ? "Hautveränderungen entfernen" : language === 'ru' ? "Удаление новообразований кожи" : "Видалення новоутворень шкіри"}
+      subtitle={language === 'de'
         ? "Sichere Entfernung von Papillomen und Warzen in Zusammenarbeit mit Dermatologen"
-        : "Безопасное удаление папиллом и бородавок в сотрудничестве с дерматологами"}
-      aboutTitle={language === 'de' ? "Was sind Hautveränderungen?" : language === 'ru' ? "Что такое новообразования кожи?" : "Что такое новообразования кожи?"}
-      aboutDescription={isGerman ? [
+        : language === 'ru' ? "Безопасное удаление папиллом и бородавок в сотрудничестве с дерматологами"
+        : "Безпечне видалення папілом та бородавок у співпраці з дерматологами"}
+      aboutTitle={language === 'de' ? "Was sind Hautveränderungen?" : language === 'ru' ? "Что такое новообразования кожи?" : "Що таке новоутворення шкіри?"}
+      aboutDescription={language === 'de' ? [
         'Hautveränderungen wie Papillome (Hautanhängsel, Fibrome), Warzen und andere gutartige Wucherungen sind häufig und meist harmlos, können aber kosmetisch störend sein.',
         'Wir bieten die professionelle Entfernung solcher Hautveränderungen in enger Zusammenarbeit mit erfahrenen Dermatologen an. Vor jeder Behandlung erfolgt eine dermatologische Untersuchung zur Abklärung.',
         'Die Entfernung erfolgt mittels modernster Methoden wie Elektrokoagulation oder Laser – schnell, präzise und mit minimaler Narbenbildung.'
-      ] : [
+      ] : language === 'ru' ? [
         'Новообразования кожи, такие как папилломы, фибромы, бородавки и другие доброкачественные образования, встречаются часто и обычно безвредны, но могут доставлять косметический дискомфорт.',
         'Мы предлагаем профессиональное удаление таких образований в тесном сотрудничестве с опытными дерматологами. Перед каждой процедурой проводится дерматологическое обследование.',
         'Удаление проводится современными методами, такими как электрокоагуляция или лазер — быстро, точно и с минимальным рубцеванием.'
+      ] : [
+        'Новоутворення шкіри, такі як папіломи, фіброми, бородавки та інші доброякісні утворення, зустрічаються часто і зазвичай нешкідливі, але можуть завдавати косметичного дискомфорту.',
+        'Ми пропонуємо професійне видалення таких утворень у тісній співпраці з досвідченими дерматологами. Перед кожною процедурою проводиться дерматологічне обстеження.',
+        'Видалення проводиться сучасними методами, такими як електрокоагуляція або лазер — швидко, точно та з мінімальним рубцюванням.'
       ]}
-      benefits={isGerman ? [
+      benefits={language === 'de' ? [
         'Professionelle Entfernung unter dermatologischer Aufsicht',
         'Schnelle, präzise Behandlung',
         'Minimale Narbenbildung',
@@ -102,7 +106,7 @@ const HautveraenderungenEntfernen = () => {
         'Sichere Methoden mit modernen Geräten',
         'Histologische Untersuchung bei Bedarf möglich',
         'Verbesserung des Hautbildes'
-      ] : [
+      ] : language === 'ru' ? [
         'Профессиональное удаление под наблюдением дерматолога',
         'Быстрая, точная процедура',
         'Минимальное рубцевание',
@@ -111,8 +115,17 @@ const HautveraenderungenEntfernen = () => {
         'Безопасные методы с современным оборудованием',
         'Возможность гистологического исследования',
         'Улучшение состояния кожи'
+      ] : [
+        'Професійне видалення під наглядом дерматолога',
+        'Швидка, точна процедура',
+        'Мінімальне рубцювання',
+        'Місцева анестезія для безболісної процедури',
+        'Миттєві результати',
+        'Безпечні методи із сучасним обладнанням',
+        'Можливість гістологічного дослідження',
+        'Покращення стану шкіри'
       ]}
-      steps={isGerman ? [
+      steps={language === 'de' ? [
         {
           title: 'Dermatologische Konsultation',
           description: 'Ein Dermatologe untersucht die Hautveränderung und stellt die Diagnose.'
@@ -129,7 +142,7 @@ const HautveraenderungenEntfernen = () => {
           title: 'Nachsorge',
           description: 'Pflegeanweisungen und bei Bedarf Kontrolltermin.'
         }
-      ] : [
+      ] : language === 'ru' ? [
         {
           title: 'Консультация дерматолога',
           description: 'Дерматолог осматривает образование и ставит диагноз.'
@@ -146,6 +159,23 @@ const HautveraenderungenEntfernen = () => {
           title: 'Уход после процедуры',
           description: 'Инструкции по уходу и при необходимости контрольный визит.'
         }
+      ] : [
+        {
+          title: 'Консультація дерматолога',
+          description: 'Дерматолог оглядає утворення та ставить діагноз.'
+        },
+        {
+          title: 'План лікування',
+          description: 'Разом визначаємо оптимальний метод видалення.'
+        },
+        {
+          title: 'Видалення',
+          description: 'Точне видалення електрокоагуляцією або лазером під місцевою анестезією.'
+        },
+        {
+          title: 'Догляд після процедури',
+          description: 'Інструкції з догляду та за потреби контрольний візит.'
+        }
       ]}
       additionalSections={
         <>
@@ -154,22 +184,29 @@ const HautveraenderungenEntfernen = () => {
         </>
       }
       priceSection="skin-changes"
-      contraindications={isGerman ? [
+      contraindications={language === 'de' ? [
         'Schwangerschaft (nur nach Rücksprache)',
         'Einnahme von Blutverdünnern (bitte vorab mitteilen)',
         'Herzschrittmacher bei Elektrokoagulation',
         'Verdacht auf maligne Veränderungen (erfordert Biopsie)',
         'Aktive Hautinfektionen im Behandlungsbereich',
         'Keloidneigung'
-      ] : [
+      ] : language === 'ru' ? [
         'Беременность (только после консультации)',
         'Приём препаратов, разжижающих кровь (сообщите заранее)',
         'Кардиостимулятор при электрокоагуляции',
         'Подозрение на злокачественные изменения (требует биопсии)',
         'Активные кожные инфекции в зоне обработки',
         'Склонность к образованию келоидных рубцов'
+      ] : [
+        'Вагітність (тільки після консультації)',
+        'Прийом препаратів, що розріджують кров (повідомте заздалегідь)',
+        'Кардіостимулятор при електрокоагуляції',
+        'Підозра на злоякісні зміни (потребує біопсії)',
+        'Активні шкірні інфекції в зоні обробки',
+        'Схильність до утворення келоїдних рубців'
       ]}
-      faq={isGerman ? [
+      faq={language === 'de' ? [
         {
           q: 'Ist die Entfernung schmerzhaft?',
           a: 'Nein, wir verwenden lokale Betäubung. Sie spüren nur einen kleinen Pieks beim Setzen der Betäubung, die Entfernung selbst ist schmerzfrei.'
@@ -190,7 +227,7 @@ const HautveraenderungenEntfernen = () => {
           q: 'Übernimmt die Krankenkasse die Kosten?',
           a: 'Nur bei medizinischer Indikation. Rein kosmetische Entfernungen sind Selbstzahlerleistungen.'
         }
-      ] : [
+      ] : language === 'ru' ? [
         {
           q: 'Болезненно ли удаление?',
           a: 'Нет, мы используем местную анестезию. Вы почувствуете только лёгкий укол при введении анестетика, само удаление безболезненно.'
@@ -211,11 +248,33 @@ const HautveraenderungenEntfernen = () => {
           q: 'Покрывает ли страховка расходы?',
           a: 'Только при медицинских показаниях. Чисто косметические удаления оплачиваются пациентом.'
         }
+      ] : [
+        {
+          q: 'Чи болісне видалення?',
+          a: 'Ні, ми використовуємо місцеву анестезію. Ви відчуєте лише легкий укол при введенні анестетика, саме видалення безболісне.'
+        },
+        {
+          q: 'Чи залишаються рубці?',
+          a: 'При професійному виконанні рубці мінімальні та часто практично непомітні. Загоєння триває близько 7-14 днів.'
+        },
+        {
+          q: 'Чи потрібно проходити огляд у дерматолога?',
+          a: 'Так, перед кожним видаленням необхідна дерматологічна діагностика, щоб переконатися, що утворення доброякісні.'
+        },
+        {
+          q: 'Чи можуть утворення з\'явитися знову?',
+          a: 'Після повного видалення на тому ж місці рідко, але нові папіломи або бородавки можуть з\'явитися в інших місцях.'
+        },
+        {
+          q: 'Чи покриває страховка витрати?',
+          a: 'Тільки при медичних показаннях. Суто косметичні видалення оплачуються пацієнтом.'
+        }
       ]}
-      ctaTitle={language === 'de' ? "Bereit für ein makelloses Hautbild?" : language === 'ru' ? "Готовы к безупречной коже?" : "Готовы к безупречной коже?"}
-      ctaDescription={isGerman
+      ctaTitle={language === 'de' ? "Bereit für ein makelloses Hautbild?" : language === 'ru' ? "Готовы к безупречной коже?" : "Готові до бездоганної шкіри?"}
+      ctaDescription={language === 'de'
         ? "Vereinbaren Sie jetzt eine dermatologische Beratung und lassen Sie Hautveränderungen professionell entfernen."
-        : "Запишитесь на дерматологическую консультацию и удалите образования профессионально."}
+        : language === 'ru' ? "Запишитесь на дерматологическую консультацию и удалите образования профессионально."
+        : "Запишіться на дерматологічну консультацію та видаліть утворення професійно."}
     />
   );
 };

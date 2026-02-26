@@ -190,7 +190,7 @@ export const Footer = () => {
               to="/shop"
               className="inline-flex items-center text-sm font-medium text-brand-gold hover:text-brand-gold/80 transition-colors"
             >
-              {language === 'de' ? 'Zum Shop' : language === 'ru' ? 'В магазин' : 'В магазин'}
+              {language === 'de' ? 'Zum Shop' : language === 'ru' ? 'В магазин' : 'До магазину'}
               <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -253,7 +253,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-brand-gold/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-brand-coffee/60 text-sm">
-            © 2025 NATA LUX. All rights reserved.
+            © {new Date().getFullYear()} NATA LUX. {language === 'de' ? 'Alle Rechte vorbehalten.' : language === 'ru' ? 'Все права защищены.' : 'Всі права захищені.'}
           </p>
           <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-sm">
             <Link
@@ -273,6 +273,12 @@ export const Footer = () => {
               className="text-brand-coffee/60 hover:text-brand-gold transition-colors"
             >
               {t('footer.terms')}
+            </Link>
+            <Link
+              to="/widerruf"
+              className="text-brand-coffee/60 hover:text-brand-gold transition-colors"
+            >
+              {language === 'de' ? 'Widerrufsbelehrung' : language === 'ru' ? 'Право на отзыв' : 'Право на відкликання'}
             </Link>
             <button
               onClick={() => setShowCookieSettings(true)}

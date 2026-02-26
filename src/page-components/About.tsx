@@ -4,6 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Train } from 'lucide-react';
+import { GoogleMapsEmbed } from '@/components/GoogleMapsEmbed';
 
 const About = () => {
   const { language } = useLanguage();
@@ -233,18 +234,11 @@ const About = () => {
                 boxShadow: '0 20px 60px rgba(58, 44, 34, 0.15)',
               }}
             >
-              <iframe
+              <GoogleMapsEmbed
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2663.1234567890!2d11.5234567!3d48.1234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDA3JzI0LjQiTiAxMcKwMzEnMjQuNCJF!5e0!3m2!1sen!2sde!4v1234567890123!5m2!1sen!2sde&q=Elsasser+Straße+33,+80687+München"
-                width="100%"
-                height="100%"
-                style={{
-                  border: 0,
-                  filter: 'grayscale(30%) sepia(20%) brightness(95%) contrast(90%)'
-                }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+                className="rounded-2xl md:rounded-3xl"
+                height="400"
+              />
             </div>
           </div>
         </motion.div>

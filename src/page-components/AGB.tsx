@@ -447,10 +447,28 @@ const AGB = () => {
                 </p>
               </section>
 
+              {/* Dispute Resolution -- § 36 VSBG */}
+              <section>
+                <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
+                  {language === 'de'
+                    ? '13. Streitbeilegung (§ 36 VSBG)'
+                    : language === 'ru'
+                    ? '13. Разрешение споров (§ 36 VSBG)'
+                    : '13. Вирішення спорів (§ 36 VSBG)'}
+                </h2>
+                <p className="leading-relaxed">
+                  {language === 'de'
+                    ? 'Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.'
+                    : language === 'ru'
+                    ? 'Мы не готовы и не обязаны участвовать в процедурах разрешения споров перед комиссией по урегулированию споров потребителей.'
+                    : 'Ми не готові і не зобов\'язані брати участь у процедурах вирішення спорів перед комісією з врегулювання спорів споживачів.'}
+                </p>
+              </section>
+
               {/* Contact */}
               <section className="bg-brand-gold/5 p-6 rounded-2xl">
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-                  {language === 'de' ? '13. Fragen zu den AGB?' : language === 'ru' ? '13. Вопросы об условиях?' : '13. Питання про умови?'}
+                  {language === 'de' ? '14. Fragen zu den AGB?' : language === 'ru' ? '14. Вопросы об условиях?' : '14. Питання про умови?'}
                 </h2>
                 <p className="leading-relaxed mb-4">
                   {language === 'de'
@@ -471,7 +489,7 @@ const AGB = () => {
               {/* Last Updated */}
               <section className="text-sm text-brand-coffee/60 pt-4 border-t border-brand-gold/10">
                 <p>
-                  {language === 'de' ? 'Stand: Dezember 2024' : language === 'ru' ? 'Состояние: декабрь 2024 года' : 'Стан: грудень 2024 року'}
+                  {language === 'de' ? 'Stand: Februar 2026' : language === 'ru' ? 'Состояние: февраль 2026 года' : 'Стан: лютий 2026 року'}
                 </p>
               </section>
             </div>

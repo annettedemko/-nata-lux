@@ -213,22 +213,14 @@ const Reviews = () => {
             {t('reviews.title')}
           </h1>
           
-          {/* Rating Summary */}
-          <div className="glass rounded-2xl p-8 max-w-md mx-auto mb-8">
-            <div className="flex justify-center mb-3">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-8 h-8 fill-brand-gold text-brand-gold" />
-              ))}
-            </div>
-            <div className="text-4xl font-heading font-semibold text-brand-gold mb-2">
-              {averageRating.toFixed(1)}
-            </div>
-            <p className="text-brand-coffee/70">
+          {/* Omnibus Directive Compliance Notice (§ 5b UWG) */}
+          <div className="max-w-2xl mx-auto mb-8">
+            <p className="text-sm text-brand-coffee/60 leading-relaxed">
               {language === 'de'
-                ? `Basierend auf ${totalReviews} Bewertungen`
+                ? 'Die folgenden Kundenstimmen sind eine Auswahl von Rückmeldungen unserer Kundinnen. Es handelt sich um persönliche Erfahrungsberichte, die nicht durch ein unabhängiges Verifizierungssystem überprüft wurden. Es findet keine systematische Prüfung statt, ob die Bewertungen von Personen stammen, die die Dienstleistung tatsächlich in Anspruch genommen haben.'
                 : language === 'ru'
-                ? `На основе ${totalReviews} отзывов`
-                : `На основі ${totalReviews} відгуків`}
+                ? 'Следующие отзывы клиентов являются подборкой обратной связи от наших клиенток. Это личные отчёты о впечатлениях, которые не были проверены независимой системой верификации. Систематическая проверка того, что отзывы оставлены лицами, действительно воспользовавшимися услугой, не проводится.'
+                : 'Наступні відгуки клієнтів є добіркою зворотного зв\'язку від наших клієнток. Це особисті звіти про враження, які не були перевірені незалежною системою верифікації. Систематична перевірка того, що відгуки залишені особами, які дійсно скористалися послугою, не проводиться.'}
             </p>
           </div>
         </div>

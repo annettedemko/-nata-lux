@@ -4,6 +4,7 @@ import { Link } from '@/components/LinkAdapter'
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ProductCard } from '@/components/ProductCard';
 import Image from 'next/image';
+import { ProductLineSchema } from '@/components/ProductLineSchema';
 
 const SunProtection = () => {
   const { language } = useLanguage();
@@ -13,27 +14,30 @@ const SunProtection = () => {
     {
       id: "sunscreen-spf30-demi-makeup",
       name: "Sunscreen SPF-30 Demi Make-Up",
-      description: isGerman
+      description: language === 'de'
         ? "Getönter Sonnenschutz mit SPF 30. Vereinheitlicht den Teint, schützt vor UVA/UVB-Strahlung und verleiht einen natürlichen, gepflegten Look. Ideal als Make-up-Basis."
-        : "Тонированный солнцезащитный крем с SPF 30. Выравнивает тон кожи, защищает от UVA/UVB-излучения и придает естественный ухоженный вид. Идеально как основа под макияж.",
+        : language === 'ru' ? "Тонированный солнцезащитный крем с SPF 30. Выравнивает тон кожи, защищает от UVA/UVB-излучения и придает естественный ухоженный вид. Идеально как основа под макияж."
+        : "Тонувальний сонцезахисний крем з SPF 30. Вирівнює тон шкіри, захищає від UVA/UVB-випромінювання та надає природний доглянутий вигляд. Ідеально як основа під макіяж.",
       image: "/Renew/54.jpeg",
       variants: [{ volume: "80ml" }]
     },
     {
       id: "sunscreen-spf50",
       name: "Sunscreen SPF-50",
-      description: isGerman
+      description: language === 'de'
         ? "Maximaler Sonnenschutz mit SPF 50 für empfindliche Haut und intensive Sonneneinstrahlung. Leichte Textur, wasserfest und nicht komedogen. Schützt vor Photoaging."
-        : "Максимальная защита от солнца с SPF 50 для чувствительной кожи и интенсивного солнечного излучения. Легкая текстура, водостойкий и некомедогенный. Защищает от фотостарения.",
+        : language === 'ru' ? "Максимальная защита от солнца с SPF 50 для чувствительной кожи и интенсивного солнечного излучения. Легкая текстура, водостойкий и некомедогенный. Защищает от фотостарения."
+        : "Максимальний захист від сонця з SPF 50 для чутливої шкіри та інтенсивного сонячного випромінювання. Легка текстура, водостійкий та некомедогенний. Захищає від фотостаріння.",
       image: "/Renew/55.jpeg",
       variants: [{ volume: "80ml" }]
     },
     {
       id: "sunscreen-spf30",
       name: "Sunscreen SPF-30",
-      description: isGerman
+      description: language === 'de'
         ? "Leichter täglicher Sonnenschutz mit SPF 30. Zieht schnell ein, hinterlässt keinen weißen Film und eignet sich für alle Hauttypen. Täglicher Schutz vor UV-Strahlung."
-        : "Легкий ежедневный солнцезащитный крем с SPF 30. Быстро впитывается, не оставляет белых следов и подходит для всех типов кожи. Ежедневная защита от УФ-излучения.",
+        : language === 'ru' ? "Легкий ежедневный солнцезащитный крем с SPF 30. Быстро впитывается, не оставляет белых следов и подходит для всех типов кожи. Ежедневная защита от УФ-излучения."
+        : "Легкий щоденний сонцезахисний крем з SPF 30. Швидко вбирається, не залишає білих слідів та підходить для всіх типів шкіри. Щоденний захист від УФ-випромінювання.",
       image: "/Renew/56.jpeg",
       variants: [{ volume: "80ml" }]
     }
@@ -41,6 +45,7 @@ const SunProtection = () => {
 
   return (
     <div className="relative min-h-screen">
+      <ProductLineSchema lineName="Sun Protection" products={products.map(p => ({ name: p.name, image: p.image }))} />
       <div className="fixed inset-0 z-0">
         <Image
           src="/48.png"
@@ -57,15 +62,16 @@ const SunProtection = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <Link to="/shop" className="text-brand-rose hover:text-brand-espresso transition-colors mb-4 inline-block">
-              ← {language === 'de' ? "Zurück zum Shop" : language === 'ru' ? "Назад в магазин" : "Назад в магазин"}
+              ← {language === 'de' ? "Zurück zum Shop" : language === 'ru' ? "Назад в магазин" : "Назад до магазину"}
             </Link>
             <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-4">
-              {language === 'de' ? "Sonnenschutz" : language === 'ru' ? "Защита от солнца" : "Защита от солнца"}
+              {language === 'de' ? "Sonnenschutz" : language === 'ru' ? "Защита от солнца" : "Захист від сонця"}
             </h1>
             <p className="text-lg text-brand-coffee/80 max-w-3xl mx-auto leading-relaxed">
-              {isGerman
+              {language === 'de'
                 ? "Professioneller Sonnenschutz gegen UV-Strahlung und Photoaging. SPF 30 bis SPF 50 für unterschiedliche Bedürfnisse - von leichtem täglichem Schutz bis zu maximaler Protektion. Schützt vor vorzeitiger Hautalterung, Pigmentflecken und Sonnenschäden."
-                : "Профессиональная защита от солнца против УФ-излучения и фотостарения. SPF 30 до SPF 50 для разных потребностей - от легкой ежедневной защиты до максимальной протекции. Защищает от преждевременного старения кожи, пигментных пятен и солнечных повреждений."}
+                : language === 'ru' ? "Профессиональная защита от солнца против УФ-излучения и фотостарения. SPF 30 до SPF 50 для разных потребностей - от легкой ежедневной защиты до максимальной протекции. Защищает от преждевременного старения кожи, пигментных пятен и солнечных повреждений."
+                : "Професійний захист від сонця проти УФ-випромінювання та фотостаріння. SPF 30 до SPF 50 для різних потреб - від легкого щоденного захисту до максимального протекції. Захищає від передчасного старіння шкіри, пігментних плям та сонячних пошкоджень."}
             </p>
           </div>
 

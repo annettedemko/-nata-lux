@@ -4,6 +4,7 @@ import { Link } from '@/components/LinkAdapter'
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ProductCard } from '@/components/ProductCard';
 import Image from 'next/image';
+import { ProductLineSchema } from '@/components/ProductLineSchema';
 
 const Professional = () => {
   const { language } = useLanguage();
@@ -13,9 +14,11 @@ const Professional = () => {
     {
       id: "hydrofresh-lotion",
       name: "Hydrofresh Lotion",
-      description: isGerman
+      description: language === 'de'
         ? "Erfrischende feuchtigkeitsspendende Lotion"
-        : "Освежающий увлажняющий лосьон",
+        : language === 'ru'
+        ? "Освежающий увлажняющий лосьон"
+        : "Освіжальний зволожувальний лосьйон",
       image: "/Renew/76.png",
       hoverImage: "/Renew/76.1.png",
       variants: [{ volume: "250ml" }, { volume: "500ml" }],
@@ -25,9 +28,11 @@ const Professional = () => {
     {
       id: "dermakey-cleanser",
       name: "Dermakey Cleanser",
-      description: isGerman
+      description: language === 'de'
         ? "Professionelles Reinigungsmittel für alle Hauttypen"
-        : "Профессиональное очищающее средство для всех типов кожи",
+        : language === 'ru'
+        ? "Профессиональное очищающее средство для всех типов кожи"
+        : "Професійний очищувальний засіб для всіх типів шкіри",
       image: "/Renew/77.webp",
       hoverImage: "/Renew/77.1.png",
       variants: [{ volume: "250ml" }, { volume: "500ml" }],
@@ -36,18 +41,22 @@ const Professional = () => {
     {
       id: "azelaic-acid-cream-20",
       name: "Azelaic Acid Cream 20%",
-      description: isGerman
+      description: language === 'de'
         ? "Hochkonzentrierte Azelainsäure-Creme für professionelle Anwendung"
-        : "Высококонцентрированный крем с азелаиновой кислотой для профессионального применения",
+        : language === 'ru'
+        ? "Высококонцентрированный крем с азелаиновой кислотой для профессионального применения"
+        : "Висококонцентрований крем з азелаїновою кислотою для професійного застосування",
       image: "/Renew/78.jpeg",
       variants: [{ volume: "50ml" }]
     },
     {
       id: "spot-local-gel",
       name: "Spot Local Gel",
-      description: isGerman
+      description: language === 'de'
         ? "Lokale Behandlung für punktuelle Anwendung"
-        : "Локальное средство для точечного применения",
+        : language === 'ru'
+        ? "Локальное средство для точечного применения"
+        : "Локальний засіб для точкового застосування",
       image: "/Renew/79.jpeg",
       variants: [{ volume: "30ml" }],
       fitContain: true
@@ -55,9 +64,11 @@ const Professional = () => {
     {
       id: "skin-recover-cream",
       name: "Skin Recover Cream",
-      description: isGerman
+      description: language === 'de'
         ? "Regenerierende Creme für geschädigte Haut"
-        : "Восстанавливающий крем для поврежденной кожи",
+        : language === 'ru'
+        ? "Восстанавливающий крем для поврежденной кожи"
+        : "Відновлювальний крем для пошкодженої шкіри",
       image: "/Renew/80.png",
       hoverImage: "/Renew/80.1.png",
       variants: [{ volume: "100ml" }, { volume: "250ml" }],
@@ -66,18 +77,22 @@ const Professional = () => {
     {
       id: "smart-matt-fluid",
       name: "Smart Matt Fluid",
-      description: isGerman
+      description: language === 'de'
         ? "Mattierendes Fluid für ölige Hautpartien"
-        : "Матирующий флюид для жирных участков кожи",
+        : language === 'ru'
+        ? "Матирующий флюид для жирных участков кожи"
+        : "Матувальний флюїд для жирних ділянок шкіри",
       image: "/Renew/81.jpeg",
       variants: [{ volume: "50ml" }]
     },
     {
       id: "aloevend-gel",
       name: "Aloevend Gel",
-      description: isGerman
+      description: language === 'de'
         ? "Beruhigendes Aloe Vera Gel für gereizte Haut"
-        : "Успокаивающий гель с алоэ вера для раздраженной кожи",
+        : language === 'ru'
+        ? "Успокаивающий гель с алоэ вера для раздраженной кожи"
+        : "Заспокійливий гель з алое вера для подразненої шкіри",
       image: "/Renew/82.webp",
       hoverImage: "/Renew/82.1.png",
       variants: [{ volume: "100ml" }, { volume: "250ml" }],
@@ -87,9 +102,11 @@ const Professional = () => {
     {
       id: "dew-drops-ha",
       name: "Dew Drops + HA",
-      description: isGerman
+      description: language === 'de'
         ? "Hyaluronsäure-Serum für intensive Feuchtigkeit"
-        : "Сыворотка с гиалуроновой кислотой для интенсивного увлажнения",
+        : language === 'ru'
+        ? "Сыворотка с гиалуроновой кислотой для интенсивного увлажнения"
+        : "Сироватка з гіалуроновою кислотою для інтенсивного зволоження",
       image: "/Renew/83.webp",
       hoverImage: "/Renew/83.1.jpeg",
       variants: [{ volume: "30ml" }, { volume: "100ml" }]
@@ -98,6 +115,7 @@ const Professional = () => {
 
   return (
     <div className="relative min-h-screen">
+      <ProductLineSchema lineName="Professional" products={products.map(p => ({ name: p.name, image: p.image }))} />
       <div className="fixed inset-0 z-0">
         <Image
           src="/48.png"
@@ -114,15 +132,17 @@ const Professional = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <Link to="/shop" className="text-brand-rose hover:text-brand-espresso transition-colors mb-4 inline-block">
-              ← {language === 'de' ? "Zurück zum Shop" : language === 'ru' ? "Назад в магазин" : "Назад в магазин"}
+              ← {language === 'de' ? "Zurück zum Shop" : language === 'ru' ? "Назад в магазин" : "Назад до магазину"}
             </Link>
             <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-4">
-              {language === 'de' ? "Professionelle Behandlungen" : language === 'ru' ? "Профессиональные процедуры" : "Профессиональные процедуры"}
+              {language === 'de' ? "Professionelle Behandlungen" : language === 'ru' ? "Профессиональные процедуры" : "Професійні процедури"}
             </h1>
             <p className="text-lg text-brand-coffee/80 max-w-2xl mx-auto">
-              {isGerman
+              {language === 'de'
                 ? "RENEW Dermakey - Spezielle Produkte für professionelle Anwendungen"
-                : "RENEW Dermakey - Специальные средства для профессиональных процедур"}
+                : language === 'ru'
+                ? "RENEW Dermakey - Специальные средства для профессиональных процедур"
+                : "RENEW Dermakey - Спеціальні засоби для професійних процедур"}
             </p>
           </div>
 

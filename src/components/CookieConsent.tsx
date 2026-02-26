@@ -17,9 +17,6 @@ export function CookieConsent() {
     if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
       (window as any).gtag('consent', 'update', {
         'analytics_storage': 'granted',
-        'ad_storage': 'granted',
-        'ad_user_data': 'granted',
-        'ad_personalization': 'granted'
       });
       console.log('✅ Google Analytics activated - consent granted (Consent Mode v2)')
     }
@@ -43,20 +40,22 @@ export function CookieConsent() {
   const handleAcceptAll = () => {
     localStorage.setItem('cookie-consent', 'accepted')
     localStorage.setItem('cookie-analytics', 'true')
+    localStorage.setItem('cookie-consent-timestamp', new Date().toISOString())
     setIsVisible(false)
-    // Initialize analytics here
     initializeAnalytics()
   }
 
   const handleRejectAll = () => {
     localStorage.setItem('cookie-consent', 'rejected')
     localStorage.setItem('cookie-analytics', 'false')
+    localStorage.setItem('cookie-consent-timestamp', new Date().toISOString())
     setIsVisible(false)
   }
 
   const handleAcceptNecessary = () => {
     localStorage.setItem('cookie-consent', 'necessary-only')
     localStorage.setItem('cookie-analytics', 'false')
+    localStorage.setItem('cookie-consent-timestamp', new Date().toISOString())
     setIsVisible(false)
   }
 
@@ -71,7 +70,11 @@ export function CookieConsent() {
 
   const handleCloseSettings = () => {
     setShowSettings(false)
-    setIsVisible(false)
+    // Keep banner visible if no consent was recorded yet
+    const consent = localStorage.getItem('cookie-consent')
+    if (consent) {
+      setIsVisible(false)
+    }
   }
 
   const content = {
@@ -95,7 +98,7 @@ export function CookieConsent() {
       settings: 'Настроить Cookie',
       privacy: 'Политика конфиденциальности',
     },
-    uk: {
+    ua: {
       title: 'Налаштування Cookie',
       description:
         'Ми використовуємо файли Cookie, щоб надати вам найкращий досвід на нашому сайті. Технічно необхідні Cookie потрібні для роботи сайту. З вашої згоди ми також використовуємо аналітичні Cookie (Google Analytics, Ahrefs) для покращення нашого сайту.',
@@ -130,23 +133,23 @@ export function CookieConsent() {
             </div>
           </div>
 
-          {/* Buttons */}
+          {/* Buttons -- DSGVO: all buttons must be equally prominent (VG Hannover 19.03.2025) */}
           <div className="flex flex-col sm:flex-row gap-3 mt-6">
             <button
               onClick={handleAcceptAll}
-              className="flex-1 px-6 py-3 bg-brand-gold text-white font-medium rounded-xl hover:bg-brand-gold/90 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+              className="flex-1 px-6 py-3 bg-brand-espresso text-white font-medium rounded-xl hover:bg-brand-espresso/90 transition-all duration-300"
             >
               {t.acceptAll}
             </button>
             <button
               onClick={handleAcceptNecessary}
-              className="flex-1 px-6 py-3 bg-brand-espresso/10 text-brand-espresso font-medium rounded-xl hover:bg-brand-espresso/20 transition-all duration-300"
+              className="flex-1 px-6 py-3 bg-brand-espresso text-white font-medium rounded-xl hover:bg-brand-espresso/90 transition-all duration-300"
             >
               {t.necessary}
             </button>
             <button
               onClick={handleRejectAll}
-              className="flex-1 px-6 py-3 bg-transparent border-2 border-brand-coffee/30 text-brand-coffee font-medium rounded-xl hover:bg-brand-coffee/5 transition-all duration-300"
+              className="flex-1 px-6 py-3 bg-brand-espresso text-white font-medium rounded-xl hover:bg-brand-espresso/90 transition-all duration-300"
             >
               {t.rejectAll}
             </button>

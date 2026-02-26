@@ -15,43 +15,43 @@ const Prices = () => {
     {
       id: 'lashes-brows',
       icon: Sparkles,
-      title: language === 'de' ? 'Wimpern & Augenbrauen' : language === 'ru' ? 'Ресницы и брови' : 'Війы и брови',
-      consultation: language === 'de' ? '🕊 Konsultation vor der Behandlung — kostenlos.' : language === 'ru' ? '🕊 Консультация перед процедурой — бесплатная.' : '🕊 Консультація перед процедурой — бесплатная.',
+      title: language === 'de' ? 'Wimpern & Augenbrauen' : language === 'ru' ? 'Ресницы и брови' : 'Вії та брови',
+      consultation: language === 'de' ? '🕊 Konsultation vor der Behandlung — kostenlos.' : language === 'ru' ? '🕊 Консультация перед процедурой — бесплатная.' : '🕊 Консультація перед процедурою — безкоштовна.',
       sections: [
         {
           name: language === 'de' ? 'Wimpernverlängerung' : language === 'ru' ? 'Наращивание ресниц' : 'Нарощування вій',
           items: [
-            { name: language === 'de' ? 'Klassik 1:1' : language === 'ru' ? 'Классика 1:1' : 'Классика 1:1', price: '80 €' },
+            { name: language === 'de' ? 'Klassik 1:1' : language === 'ru' ? 'Классика 1:1' : 'Класика 1:1', price: '80 €' },
             { name: '2D', price: '90 €' },
             { name: '3D', price: '100 €' },
-            { name: language === 'de' ? 'Mega-Volumen' : language === 'ru' ? 'Мегаобъём' : 'Мегаобъём', price: '120 €' },
-            { name: language === 'de' ? 'Mix-Technik' : language === 'ru' ? 'Микс-техника' : 'Микс-техника', price: language === 'de' ? 'Preis auf Anfrage' : language === 'ru' ? 'цена по запросу' : 'цена по запросу' },
-            { name: language === 'de' ? 'Strahlen / L-Curl / Untere Wimpern' : language === 'ru' ? 'Лучики / изгиб L / нижнее наращивание' : 'Лучики / изгиб L / нижнее наращивание', price: language === 'de' ? 'Preis auf Anfrage' : language === 'ru' ? 'цена по запросу' : 'цена по запросу' },
+            { name: language === 'de' ? 'Mega-Volumen' : language === 'ru' ? 'Мегаобъём' : 'Мегаоб\'єм', price: '120 €' },
+            { name: language === 'de' ? 'Mix-Technik' : language === 'ru' ? 'Микс-техника' : 'Мікс-техніка', price: language === 'de' ? 'Preis auf Anfrage' : language === 'ru' ? 'цена по запросу' : 'ціна за запитом' },
+            { name: language === 'de' ? 'Strahlen / L-Curl / Untere Wimpern' : language === 'ru' ? 'Лучики / изгиб L / нижнее наращивание' : 'Промінчики / вигин L / нижнє нарощування', price: language === 'de' ? 'Preis auf Anfrage' : language === 'ru' ? 'цена по запросу' : 'ціна за запитом' },
           ],
           additional: [
-            { name: language === 'de' ? 'Korrektur' : language === 'ru' ? 'Коррекция' : 'Корекція', price: language === 'de' ? 'ab 50 €' : language === 'ru' ? 'от 50 €' : 'от 50 €' },
-            { name: language === 'de' ? 'Entfernung (eigene Arbeit)' : language === 'ru' ? 'Снятие своей работы' : 'Снятие своей работы', price: language === 'de' ? 'kostenlos' : language === 'ru' ? 'бесплатно' : 'бесплатно' },
-            { name: language === 'de' ? 'Entfernung (fremde Arbeit)' : language === 'ru' ? 'Снятие чужой работы' : 'Снятие чужой работы', price: '15 €' },
+            { name: language === 'de' ? 'Korrektur' : language === 'ru' ? 'Коррекция' : 'Корекція', price: language === 'de' ? 'ab 50 €' : language === 'ru' ? 'от 50 €' : 'від 50 €' },
+            { name: language === 'de' ? 'Entfernung (eigene Arbeit)' : language === 'ru' ? 'Снятие своей работы' : 'Зняття своєї роботи', price: language === 'de' ? 'kostenlos' : language === 'ru' ? 'бесплатно' : 'безкоштовно' },
+            { name: language === 'de' ? 'Entfernung (fremde Arbeit)' : language === 'ru' ? 'Снятие чужой работы' : 'Зняття чужої роботи', price: '15 €' },
           ]
         },
         {
-          name: language === 'de' ? 'Wimpern-Laminierung (Lash Lifting)' : language === 'ru' ? 'Ламинирование ресниц' : 'Ламинирование вій',
+          name: language === 'de' ? 'Wimpern-Laminierung (Lash Lifting)' : language === 'ru' ? 'Ламинирование ресниц' : 'Ламінування вій',
           items: [
-            { name: language === 'de' ? 'Mit Färbung' : language === 'ru' ? 'С окрашиванием' : 'С окрашиванием', price: '55 €' },
-            { name: language === 'de' ? 'Mit Vitaminen, Ölen, Keratin' : language === 'ru' ? 'С витаминами, маслами, кератином' : 'С витаминами, маслами, кератином', price: '65 €' },
+            { name: language === 'de' ? 'Mit Färbung' : language === 'ru' ? 'С окрашиванием' : 'З фарбуванням', price: '55 €' },
+            { name: language === 'de' ? 'Mit Vitaminen, Ölen, Keratin' : language === 'ru' ? 'С витаминами, маслами, кератином' : 'З вітамінами, оліями, кератином', price: '65 €' },
           ]
         },
         {
-          name: language === 'de' ? 'Augenbrauen-Laminierung (Brow Lifting)' : language === 'ru' ? 'Ламинирование бровей' : 'Ламинирование брів',
+          name: language === 'de' ? 'Augenbrauen-Laminierung (Brow Lifting)' : language === 'ru' ? 'Ламинирование бровей' : 'Ламінування брів',
           items: [
-            { name: language === 'de' ? 'Mit Färbung' : language === 'ru' ? 'С окрашиванием' : 'С окрашиванием', price: '55 €' },
-            { name: language === 'de' ? 'Mit Vitaminen, Ölen, Keratin' : language === 'ru' ? 'С витаминами, маслами, кератином' : 'С витаминами, маслами, кератином', price: '65 €' },
+            { name: language === 'de' ? 'Mit Färbung' : language === 'ru' ? 'С окрашиванием' : 'З фарбуванням', price: '55 €' },
+            { name: language === 'de' ? 'Mit Vitaminen, Ölen, Keratin' : language === 'ru' ? 'С витаминами, маслами, кератином' : 'З вітамінами, оліями, кератином', price: '65 €' },
           ]
         },
         {
-          name: language === 'de' ? 'Augenbrauen Styling' : language === 'ru' ? 'Оформление бровей' : 'Оформление брів',
+          name: language === 'de' ? 'Augenbrauen Styling' : language === 'ru' ? 'Оформление бровей' : 'Оформлення брів',
           items: [
-            { name: language === 'de' ? 'Modellierung + Färbung' : language === 'ru' ? 'Моделирование формы + окрашивание краской' : 'Моделирование формы + окрашивание краской', price: '40 €' },
+            { name: language === 'de' ? 'Modellierung + Färbung' : language === 'ru' ? 'Моделирование формы + окрашивание краской' : 'Моделювання форми + фарбування фарбою', price: '40 €' },
           ]
         },
       ]
@@ -60,40 +60,42 @@ const Prices = () => {
     {
       id: 'pmu',
       icon: Heart,
-      title: language === 'de' ? 'Permanent Make-Up' : language === 'ru' ? 'Перманентный макияж' : 'Перманентный макияж',
-      consultation: language === 'de' ? '🕊 Konsultation vor der Behandlung — kostenlos.' : language === 'ru' ? '🕊 Консультация перед процедурой — бесплатная.' : '🕊 Консультація перед процедурой — бесплатная.',
+      title: language === 'de' ? 'Permanent Make-Up' : language === 'ru' ? 'Перманентный макияж' : 'Перманентний макіяж',
+      consultation: language === 'de' ? '🕊 Konsultation vor der Behandlung — kostenlos.' : language === 'ru' ? '🕊 Консультация перед процедурой — бесплатная.' : '🕊 Консультація перед процедурою — безкоштовна.',
       sections: [
         {
           name: language === 'de' ? 'Augenbrauen (Powder Brows)' : language === 'ru' ? 'Брови (Powder Brows)' : 'Брови (Powder Brows)',
           items: [
-            { name: language === 'de' ? 'Pudertechnik' : language === 'ru' ? 'Пудровая техника' : 'Пудровая техника', price: '350 €' },
+            { name: language === 'de' ? 'Pudertechnik' : language === 'ru' ? 'Пудровая техника' : 'Пудрова техніка', price: '350 €' },
             { name: language === 'de' ? 'Korrektur' : language === 'ru' ? 'Коррекция' : 'Корекція', price: '150 €' },
           ]
         },
         {
-          name: language === 'de' ? 'Lippen (Aquarell Lips)' : language === 'ru' ? 'Губы (Aquarell Lips)' : 'Губы (Aquarell Lips)',
+          name: language === 'de' ? 'Lippen (Aquarell Lips)' : language === 'ru' ? 'Губы (Aquarell Lips)' : 'Губи (Aquarell Lips)',
           items: [
-            { name: language === 'de' ? 'Aquarell / Velvet-Technik' : language === 'ru' ? 'Акварельная / Вельвет техника' : 'Акварельная / Вельвет техника', price: '350 €' },
+            { name: language === 'de' ? 'Aquarell / Velvet-Technik' : language === 'ru' ? 'Акварельная / Вельвет техника' : 'Акварельна / Вельвет техніка', price: '350 €' },
             { name: language === 'de' ? 'Korrektur' : language === 'ru' ? 'Коррекция' : 'Корекція', price: '150 €' },
           ]
         },
         {
-          name: language === 'de' ? 'Augen (Eyes)' : language === 'ru' ? 'Глаза (Eyes)' : 'Глаза (Eyes)',
+          name: language === 'de' ? 'Augen (Eyes)' : language === 'ru' ? 'Глаза (Eyes)' : 'Очі (Eyes)',
           items: [
-            { name: language === 'de' ? 'Wimpernkranzverdichtung' : language === 'ru' ? 'Межресничка' : 'Межресничка', price: '200 €' },
-            { name: language === 'de' ? 'Lidstrich' : language === 'ru' ? 'Стрелка' : 'Стрелка', price: '300 €' },
-            { name: language === 'de' ? 'Lidstrich mit Schattierung' : language === 'ru' ? 'Стрелка с растушевкой' : 'Стрелка с растушевкой', price: '350 €' },
+            { name: language === 'de' ? 'Wimpernkranzverdichtung' : language === 'ru' ? 'Межресничка' : 'Міжвійкова', price: '200 €' },
+            { name: language === 'de' ? 'Lidstrich' : language === 'ru' ? 'Стрелка' : 'Стрілка', price: '300 €' },
+            { name: language === 'de' ? 'Lidstrich mit Schattierung' : language === 'ru' ? 'Стрелка с растушевкой' : 'Стрілка з розтушовкою', price: '350 €' },
             { name: language === 'de' ? 'Korrektur' : language === 'ru' ? 'Коррекция' : 'Корекція', price: '100 €' },
           ]
         },
         {
-          name: language === 'de' ? 'PMU Entfernung (PMU Remover)' : language === 'ru' ? 'Удаление перманентного макияжа' : 'Видалення перманентного макияжа',
-          description: isGerman
+          name: language === 'de' ? 'PMU Entfernung (PMU Remover)' : language === 'ru' ? 'Удаление перманентного макияжа' : 'Видалення перманентного макіяжу',
+          description: language === 'de'
             ? 'Biochemische Zusammensetzung löst Pigment sanft auf, ohne die Haut zu schädigen.'
-            : 'Биохимический состав мягко растворяет пигмент, не повреждая кожу.',
+            : language === 'ru'
+            ? 'Биохимический состав мягко растворяет пигмент, не повреждая кожу.'
+            : 'Біохімічний склад м\'яко розчиняє пігмент, не пошкоджуючи шкіру.',
           items: [
-            { name: language === 'de' ? 'Salon + Heimpflege' : language === 'ru' ? 'Процедура в салоне + домашний уход' : 'Процедура в салоне + домашний уход', price: '95 € + 25 €' },
-            { name: language === 'de' ? 'Kurs (10 Behandlungen + Heimpflege)' : language === 'ru' ? 'Курс (10 процедур + домашний уход)' : 'Курс (10 процедур + домашний уход)', price: '700 €' },
+            { name: language === 'de' ? 'Salon + Heimpflege' : language === 'ru' ? 'Процедура в салоне + домашний уход' : 'Процедура в салоні + домашній догляд', price: '95 € + 25 €' },
+            { name: language === 'de' ? 'Kurs (10 Behandlungen + Heimpflege)' : language === 'ru' ? 'Курс (10 процедур + домашний уход)' : 'Курс (10 процедур + домашній догляд)', price: '700 €' },
           ]
         },
       ]
@@ -102,106 +104,106 @@ const Prices = () => {
     {
       id: 'laser',
       icon: Zap,
-      title: language === 'de' ? 'Laser Haarentfernung auf Dreiwellenlaser' : language === 'ru' ? 'Лазерная эпиляция на трёхволновом лазере' : 'Лазерная эпиляция на трёхволновом лазере',
-      subtitle: language === 'de' ? 'Alexandrit + Diode + Nd:YAG' : language === 'ru' ? 'Александрит + Диод + Nd:YAG' : 'Александрит + Диод + Nd:YAG',
+      title: language === 'de' ? 'Laser Haarentfernung auf Dreiwellenlaser' : language === 'ru' ? 'Лазерная эпиляция на трёхволновом лазере' : 'Лазерна епіляція на трихвильовому лазері',
+      subtitle: language === 'de' ? 'Alexandrit + Diode + Nd:YAG' : language === 'ru' ? 'Александрит + Диод + Nd:YAG' : 'Олександрит + Діод + Nd:YAG',
       consultation: language === 'de' ? 'Beratung inklusive' : language === 'ru' ? 'Консультация включена' : 'Консультація включена',
       isDualColumn: true,
       columns: [
         {
-          name: language === 'de' ? 'Damen' : language === 'ru' ? 'Женщины' : 'Женщины',
+          name: language === 'de' ? 'Damen' : language === 'ru' ? 'Женщины' : 'Жінки',
           sections: [
             {
-              name: language === 'de' ? 'Gesicht' : language === 'ru' ? 'Лицо' : 'Лицо',
+              name: language === 'de' ? 'Gesicht' : language === 'ru' ? 'Лицо' : 'Обличчя',
               items: [
-                { name: language === 'de' ? 'Kinn' : language === 'ru' ? 'Подбородок' : 'Подбородок', price: '29 €' },
-                { name: language === 'de' ? 'Oberlippe' : language === 'ru' ? 'Верхняя губа' : 'Верхняя губа', price: '25 €' },
-                { name: language === 'de' ? 'Wangen' : language === 'ru' ? 'Щёки' : 'Щёки', price: '34 €' },
-                { name: language === 'de' ? 'Gesicht komplett' : language === 'ru' ? 'Лицо полностью' : 'Лицо полностью', price: '64 €' },
+                { name: language === 'de' ? 'Kinn' : language === 'ru' ? 'Подбородок' : 'Підборіддя', price: '29 €' },
+                { name: language === 'de' ? 'Oberlippe' : language === 'ru' ? 'Верхняя губа' : 'Верхня губа', price: '25 €' },
+                { name: language === 'de' ? 'Wangen' : language === 'ru' ? 'Щёки' : 'Щоки', price: '34 €' },
+                { name: language === 'de' ? 'Gesicht komplett' : language === 'ru' ? 'Лицо полностью' : 'Обличчя повністю', price: '64 €' },
               ]
             },
             {
-              name: language === 'de' ? 'Oberkörper' : language === 'ru' ? 'Верхняя часть тела' : 'Верхняя часть тела',
+              name: language === 'de' ? 'Oberkörper' : language === 'ru' ? 'Верхняя часть тела' : 'Верхня частина тіла',
               items: [
-                { name: language === 'de' ? 'Achseln' : language === 'ru' ? 'Подмышки' : 'Подмышки', price: '49 €' },
-                { name: language === 'de' ? 'Oberarme' : language === 'ru' ? 'Плечи' : 'Плечи', price: '64 €' },
-                { name: language === 'de' ? 'Unterarme' : language === 'ru' ? 'Предплечья' : 'Предплечья', price: '64 €' },
-                { name: language === 'de' ? 'Arme komplett' : language === 'ru' ? 'Руки полностью' : 'Руки полностью', price: '99 €' },
-                { name: language === 'de' ? 'Bauchhaarlinie' : language === 'ru' ? 'Полоска на животе' : 'Полоска на животе', price: '35 €' },
+                { name: language === 'de' ? 'Achseln' : language === 'ru' ? 'Подмышки' : 'Пахви', price: '49 €' },
+                { name: language === 'de' ? 'Oberarme' : language === 'ru' ? 'Плечи' : 'Плечі', price: '64 €' },
+                { name: language === 'de' ? 'Unterarme' : language === 'ru' ? 'Предплечья' : 'Передпліччя', price: '64 €' },
+                { name: language === 'de' ? 'Arme komplett' : language === 'ru' ? 'Руки полностью' : 'Руки повністю', price: '99 €' },
+                { name: language === 'de' ? 'Bauchhaarlinie' : language === 'ru' ? 'Полоска на животе' : 'Смужка на животі', price: '35 €' },
               ]
             },
             {
-              name: language === 'de' ? 'Unterkörper & Po' : language === 'ru' ? 'Нижняя часть тела и ягодицы' : 'Нижняя часть тела и ягодицы',
+              name: language === 'de' ? 'Unterkörper & Po' : language === 'ru' ? 'Нижняя часть тела и ягодицы' : 'Нижня частина тіла та сідниці',
               items: [
-                { name: language === 'de' ? 'Pofalte' : language === 'ru' ? 'Складка ягодиц' : 'Складка ягодиц', price: '44 €' },
-                { name: language === 'de' ? 'Po' : language === 'ru' ? 'Ягодицы' : 'Ягодицы', price: '64 €' },
-                { name: language === 'de' ? 'Bikini' : language === 'ru' ? 'Бикини' : 'Бикини', price: '39 €' },
-                { name: language === 'de' ? 'Bikini & Intim' : language === 'ru' ? 'Бикини и интим' : 'Бикини и интим', price: '84 €' },
-                { name: language === 'de' ? 'Bikini & Intim & Po komplett' : language === 'ru' ? 'Бикини, интим и ягодицы' : 'Бикини, интим и ягодицы', price: '114 €' },
+                { name: language === 'de' ? 'Pofalte' : language === 'ru' ? 'Складка ягодиц' : 'Складка сідниць', price: '44 €' },
+                { name: language === 'de' ? 'Po' : language === 'ru' ? 'Ягодицы' : 'Сідниці', price: '64 €' },
+                { name: language === 'de' ? 'Bikini' : language === 'ru' ? 'Бикини' : 'Бікіні', price: '39 €' },
+                { name: language === 'de' ? 'Bikini & Intim' : language === 'ru' ? 'Бикини и интим' : 'Бікіні та інтим', price: '84 €' },
+                { name: language === 'de' ? 'Bikini & Intim & Po komplett' : language === 'ru' ? 'Бикини, интим и ягодицы' : 'Бікіні, інтим та сідниці', price: '114 €' },
               ]
             },
             {
-              name: language === 'de' ? 'Beine & Füße' : language === 'ru' ? 'Ноги и стопы' : 'Ноги и стопы',
+              name: language === 'de' ? 'Beine & Füße' : language === 'ru' ? 'Ноги и стопы' : 'Ноги та стопи',
               items: [
-                { name: language === 'de' ? 'Füße' : language === 'ru' ? 'Стопы' : 'Стопы', price: '34 €' },
-                { name: language === 'de' ? 'Oberschenkel' : language === 'ru' ? 'Бёдра' : 'Бёдра', price: '68 €' },
-                { name: language === 'de' ? 'Unterschenkel' : language === 'ru' ? 'Голени' : 'Голени', price: '68 €' },
-                { name: language === 'de' ? 'Komplett Beine' : language === 'ru' ? 'Ноги полностью' : 'Ноги полностью', price: '119 €' },
+                { name: language === 'de' ? 'Füße' : language === 'ru' ? 'Стопы' : 'Стопи', price: '34 €' },
+                { name: language === 'de' ? 'Oberschenkel' : language === 'ru' ? 'Бёдра' : 'Стегна', price: '68 €' },
+                { name: language === 'de' ? 'Unterschenkel' : language === 'ru' ? 'Голени' : 'Гомілки', price: '68 €' },
+                { name: language === 'de' ? 'Komplett Beine' : language === 'ru' ? 'Ноги полностью' : 'Ноги повністю', price: '119 €' },
               ]
             },
             {
-              name: language === 'de' ? 'Ganzkörper' : language === 'ru' ? 'Всё тело' : 'Всё тело',
+              name: language === 'de' ? 'Ganzkörper' : language === 'ru' ? 'Всё тело' : 'Все тіло',
               items: [
-                { name: language === 'de' ? 'Ganzkörper' : language === 'ru' ? 'Всё тело' : 'Всё тело', price: '289 €' },
+                { name: language === 'de' ? 'Ganzkörper' : language === 'ru' ? 'Всё тело' : 'Все тіло', price: '289 €' },
               ]
             },
           ]
         },
         {
-          name: language === 'de' ? 'Herren' : language === 'ru' ? 'Мужчины' : 'Мужчины',
+          name: language === 'de' ? 'Herren' : language === 'ru' ? 'Мужчины' : 'Чоловіки',
           sections: [
             {
-              name: language === 'de' ? 'Gesicht' : language === 'ru' ? 'Лицо' : 'Лицо',
+              name: language === 'de' ? 'Gesicht' : language === 'ru' ? 'Лицо' : 'Обличчя',
               items: [
-                { name: language === 'de' ? 'Kinn' : language === 'ru' ? 'Подбородок' : 'Подбородок', price: '35 €' },
-                { name: language === 'de' ? 'Oberlippe' : language === 'ru' ? 'Верхняя губа' : 'Верхняя губа', price: '35 €' },
-                { name: language === 'de' ? 'Koteletten' : language === 'ru' ? 'Бакенбарды' : 'Бакенбарды', price: '35 €' },
-                { name: language === 'de' ? 'Wangen' : language === 'ru' ? 'Щёки' : 'Щёки', price: '40 €' },
-                { name: language === 'de' ? 'Gesicht komplett' : language === 'ru' ? 'Лицо полностью' : 'Лицо полностью', price: '135 €' },
+                { name: language === 'de' ? 'Kinn' : language === 'ru' ? 'Подбородок' : 'Підборіддя', price: '35 €' },
+                { name: language === 'de' ? 'Oberlippe' : language === 'ru' ? 'Верхняя губа' : 'Верхня губа', price: '35 €' },
+                { name: language === 'de' ? 'Koteletten' : language === 'ru' ? 'Бакенбарды' : 'Бакенбарди', price: '35 €' },
+                { name: language === 'de' ? 'Wangen' : language === 'ru' ? 'Щёки' : 'Щоки', price: '40 €' },
+                { name: language === 'de' ? 'Gesicht komplett' : language === 'ru' ? 'Лицо полностью' : 'Обличчя повністю', price: '135 €' },
               ]
             },
             {
-              name: language === 'de' ? 'Oberkörper' : language === 'ru' ? 'Верхняя часть тела' : 'Верхняя часть тела',
+              name: language === 'de' ? 'Oberkörper' : language === 'ru' ? 'Верхняя часть тела' : 'Верхня частина тіла',
               items: [
                 { name: language === 'de' ? 'Brustwarzen' : language === 'ru' ? 'Соски' : 'Соски', price: '39 €' },
-                { name: language === 'de' ? 'Hals (ohne Nacken)' : language === 'ru' ? 'Шея (без затылка)' : 'Шея (без затылка)', price: '39 €' },
-                { name: language === 'de' ? 'Nacken' : language === 'ru' ? 'Затылок' : 'Затылок', price: '39 €' },
-                { name: language === 'de' ? 'Achseln' : language === 'ru' ? 'Подмышки' : 'Подмышки', price: '49 €' },
-                { name: language === 'de' ? 'Hände' : language === 'ru' ? 'Кисти рук' : 'Кисти рук', price: '39 €' },
-                { name: language === 'de' ? 'Schultern' : language === 'ru' ? 'Плечи' : 'Плечи', price: '56 €' },
-                { name: language === 'de' ? 'Oberarme' : language === 'ru' ? 'Верхняя часть рук' : 'Верхняя часть рук', price: '66 €' },
-                { name: language === 'de' ? 'Unterarme' : language === 'ru' ? 'Предплечья' : 'Предплечья', price: '66 €' },
-                { name: language === 'de' ? 'Bauch' : language === 'ru' ? 'Живот' : 'Живот', price: '66 €' },
-                { name: language === 'de' ? 'Brust' : language === 'ru' ? 'Грудь' : 'Грудь', price: '66 €' },
-                { name: language === 'de' ? 'Rücken oben' : language === 'ru' ? 'Верхняя часть спины' : 'Верхняя часть спины', price: '66 €' },
-                { name: language === 'de' ? 'Rücken unten' : language === 'ru' ? 'Нижняя часть спины' : 'Нижняя часть спины', price: '66 €' },
-                { name: language === 'de' ? 'Rücken komplett' : language === 'ru' ? 'Спина полностью' : 'Спина полностью', price: '118 €' },
+                { name: language === 'de' ? 'Hals (ohne Nacken)' : language === 'ru' ? 'Шея (без затылка)' : 'Шия (без потилиці)', price: '39 €' },
+                { name: language === 'de' ? 'Nacken' : language === 'ru' ? 'Затылок' : 'Потилиця', price: '39 €' },
+                { name: language === 'de' ? 'Achseln' : language === 'ru' ? 'Подмышки' : 'Пахви', price: '49 €' },
+                { name: language === 'de' ? 'Hände' : language === 'ru' ? 'Кисти рук' : 'Кисті рук', price: '39 €' },
+                { name: language === 'de' ? 'Schultern' : language === 'ru' ? 'Плечи' : 'Плечі', price: '56 €' },
+                { name: language === 'de' ? 'Oberarme' : language === 'ru' ? 'Верхняя часть рук' : 'Верхня частина рук', price: '66 €' },
+                { name: language === 'de' ? 'Unterarme' : language === 'ru' ? 'Предплечья' : 'Передпліччя', price: '66 €' },
+                { name: language === 'de' ? 'Bauch' : language === 'ru' ? 'Живот' : 'Живіт', price: '66 €' },
+                { name: language === 'de' ? 'Brust' : language === 'ru' ? 'Грудь' : 'Груди', price: '66 €' },
+                { name: language === 'de' ? 'Rücken oben' : language === 'ru' ? 'Верхняя часть спины' : 'Верхня частина спини', price: '66 €' },
+                { name: language === 'de' ? 'Rücken unten' : language === 'ru' ? 'Нижняя часть спины' : 'Нижня частина спини', price: '66 €' },
+                { name: language === 'de' ? 'Rücken komplett' : language === 'ru' ? 'Спина полностью' : 'Спина повністю', price: '118 €' },
               ]
             },
             {
-              name: language === 'de' ? 'Unterkörper & Po' : language === 'ru' ? 'Нижняя часть тела и ягодицы' : 'Нижняя часть тела и ягодицы',
+              name: language === 'de' ? 'Unterkörper & Po' : language === 'ru' ? 'Нижняя часть тела и ягодицы' : 'Нижня частина тіла та сідниці',
               items: [
-                { name: language === 'de' ? 'Pofalte' : language === 'ru' ? 'Складка ягодиц' : 'Складка ягодиц', price: '52 €' },
-                { name: language === 'de' ? 'Bikini' : language === 'ru' ? 'Бикини' : 'Бикини', price: '52 €' },
-                { name: language === 'de' ? 'Po komplett' : language === 'ru' ? 'Ягодицы полностью' : 'Ягодицы полностью', price: '79 €' },
+                { name: language === 'de' ? 'Pofalte' : language === 'ru' ? 'Складка ягодиц' : 'Складка сідниць', price: '52 €' },
+                { name: language === 'de' ? 'Bikini' : language === 'ru' ? 'Бикини' : 'Бікіні', price: '52 €' },
+                { name: language === 'de' ? 'Po komplett' : language === 'ru' ? 'Ягодицы полностью' : 'Сідниці повністю', price: '79 €' },
               ]
             },
             {
-              name: language === 'de' ? 'Beine & Füße' : language === 'ru' ? 'Ноги и стопы' : 'Ноги и стопы',
+              name: language === 'de' ? 'Beine & Füße' : language === 'ru' ? 'Ноги и стопы' : 'Ноги та стопи',
               items: [
-                { name: language === 'de' ? 'Füße' : language === 'ru' ? 'Стопы' : 'Стопы', price: '39 €' },
-                { name: language === 'de' ? 'Oberschenkel' : language === 'ru' ? 'Бёдра' : 'Бёдра', price: '80 €' },
-                { name: language === 'de' ? 'Unterschenkel' : language === 'ru' ? 'Голени' : 'Голени', price: '80 €' },
-                { name: language === 'de' ? 'Beine komplett' : language === 'ru' ? 'Ноги полностью' : 'Ноги полностью', price: '149 €' },
+                { name: language === 'de' ? 'Füße' : language === 'ru' ? 'Стопы' : 'Стопи', price: '39 €' },
+                { name: language === 'de' ? 'Oberschenkel' : language === 'ru' ? 'Бёдра' : 'Стегна', price: '80 €' },
+                { name: language === 'de' ? 'Unterschenkel' : language === 'ru' ? 'Голени' : 'Гомілки', price: '80 €' },
+                { name: language === 'de' ? 'Beine komplett' : language === 'ru' ? 'Ноги полностью' : 'Ноги повністю', price: '149 €' },
               ]
             },
           ]
@@ -212,32 +214,38 @@ const Prices = () => {
     {
       id: 'apparative-antiaging',
       icon: Activity,
-      title: language === 'de' ? 'Apparative Anti-Aging' : language === 'ru' ? 'Аппаратный Anti-Aging' : 'Аппаратный Anti-Aging',
-      consultation: language === 'de' ? '🕊 Konsultation vor der Behandlung — kostenlos.' : language === 'ru' ? '🕊 Консультация перед процедурой — бесплатная.' : '🕊 Консультація перед процедурой — бесплатная.',
+      title: language === 'de' ? 'Apparative Anti-Aging' : language === 'ru' ? 'Аппаратный Anti-Aging' : 'Апаратний Anti-Aging',
+      consultation: language === 'de' ? '🕊 Konsultation vor der Behandlung — kostenlos.' : language === 'ru' ? '🕊 Консультация перед процедурой — бесплатная.' : '🕊 Консультація перед процедурою — безкоштовна.',
       sections: [
         {
-          name: language === 'de' ? 'RF-Lifting (Radiofrequenz)' : language === 'ru' ? 'RF-лифтинг (радиочастотный)' : 'RF-лифтинг (радиочастотный)',
-          description: isGerman
+          name: language === 'de' ? 'RF-Lifting (Radiofrequenz)' : language === 'ru' ? 'RF-лифтинг (радиочастотный)' : 'RF-ліфтинг (радіочастотний)',
+          description: language === 'de'
             ? 'Dauer der Behandlung 1 Stunde (Reinigung, Tonisierung, Gerätenutzung 30 Min, Tonisierung, Massage mit Creme)'
-            : 'Длительность процедуры 1 час (очищение, тонизация, аппаратная часть 30 мин, тонизация, массаж с кремом)',
+            : language === 'ru'
+            ? 'Длительность процедуры 1 час (очищение, тонизация, аппаратная часть 30 мин, тонизация, массаж с кремом)'
+            : 'Тривалість процедури 1 година (очищення, тонізація, апаратна частина 30 хв, тонізація, масаж з кремом)',
           items: [
             { name: language === 'de' ? 'Behandlung' : language === 'ru' ? 'Процедура' : 'Процедура', price: '75 €' },
           ]
         },
         {
-          name: language === 'de' ? 'Lichttherapie (LED-Therapie)' : language === 'ru' ? 'Световая терапия (LED)' : 'Световая терапия (LED)',
-          description: isGerman
+          name: language === 'de' ? 'Lichttherapie (LED-Therapie)' : language === 'ru' ? 'Световая терапия (LED)' : 'Світлова терапія (LED)',
+          description: language === 'de'
             ? 'Dauer der Behandlung 1 Stunde (Reinigung, Tonisierung, Gerätenutzung 30 Min, Tonisierung, Massage mit Creme)'
-            : 'Длительность процедуры 1 час (очищение, тонизация, аппаратная часть 30 мин, тонизация, массаж с кремом)',
+            : language === 'ru'
+            ? 'Длительность процедуры 1 час (очищение, тонизация, аппаратная часть 30 мин, тонизация, массаж с кремом)'
+            : 'Тривалість процедури 1 година (очищення, тонізація, апаратна частина 30 хв, тонізація, масаж з кремом)',
           items: [
             { name: language === 'de' ? 'Behandlung' : language === 'ru' ? 'Процедура' : 'Процедура', price: '75 €' },
           ]
         },
         {
-          name: language === 'de' ? 'Biostrom (Mikrostrom-Therapie)' : language === 'ru' ? 'Биотоки (микротоковая терапия)' : 'Биотоки (микротоковая терапия)',
-          description: isGerman
+          name: language === 'de' ? 'Biostrom (Mikrostrom-Therapie)' : language === 'ru' ? 'Биотоки (микротоковая терапия)' : 'Біотоки (мікрострумова терапія)',
+          description: language === 'de'
             ? 'Dauer der Behandlung 1 Stunde (Reinigung, Tonisierung, Gerätenutzung 30 Min, Tonisierung, Massage mit Creme)'
-            : 'Длительность процедуры 1 час (очищение, тонизация, аппаратная часть 30 мин, тонизация, массаж с кремом)',
+            : language === 'ru'
+            ? 'Длительность процедуры 1 час (очищение, тонизация, аппаратная часть 30 мин, тонизация, массаж с кремом)'
+            : 'Тривалість процедури 1 година (очищення, тонізація, апаратна частина 30 хв, тонізація, масаж з кремом)',
           items: [
             { name: language === 'de' ? 'Behandlung' : language === 'ru' ? 'Процедура' : 'Процедура', price: '75 €' },
           ]
@@ -248,23 +256,27 @@ const Prices = () => {
     {
       id: 'body-treatments',
       icon: Dumbbell,
-      title: language === 'de' ? 'Körperbehandlungen' : language === 'ru' ? 'Процедуры для тела' : 'Процедуры для тела',
-      consultation: language === 'de' ? '🕊 Konsultation vor der Behandlung — kostenlos.' : language === 'ru' ? '🕊 Консультация перед процедурой — бесплатная.' : '🕊 Консультація перед процедурой — бесплатная.',
+      title: language === 'de' ? 'Körperbehandlungen' : language === 'ru' ? 'Процедуры для тела' : 'Процедури для тіла',
+      consultation: language === 'de' ? '🕊 Konsultation vor der Behandlung — kostenlos.' : language === 'ru' ? '🕊 Консультация перед процедурой — бесплатная.' : '🕊 Консультація перед процедурою — безкоштовна.',
       sections: [
         {
-          name: language === 'de' ? 'RF-Lifting + Vakuum-Massage + Infrarotlicht' : language === 'ru' ? 'RF лифтинг + вакуумный массаж тела + инфракрасный свет' : 'RF лифтинг + вакуумный массаж тела + инфракрасный свет',
-          description: isGerman
+          name: language === 'de' ? 'RF-Lifting + Vakuum-Massage + Infrarotlicht' : language === 'ru' ? 'RF лифтинг + вакуумный массаж тела + инфракрасный свет' : 'RF ліфтинг + вакуумний масаж тіла + інфрачервоне світло',
+          description: language === 'de'
             ? 'Dauer 30 Min'
-            : 'Длительность 30 мин',
+            : language === 'ru'
+            ? 'Длительность 30 мин'
+            : 'Тривалість 30 хв',
           items: [
             { name: language === 'de' ? 'Behandlung' : language === 'ru' ? 'Процедура' : 'Процедура', price: '75 €' },
           ]
         },
         {
-          name: language === 'de' ? 'Kavitation (Körper)' : language === 'ru' ? 'Кавитация (тело)' : 'Кавитация (тело)',
-          description: isGerman
+          name: language === 'de' ? 'Kavitation (Körper)' : language === 'ru' ? 'Кавитация (тело)' : 'Кавітація (тіло)',
+          description: language === 'de'
             ? 'Zonen: Po / Bauch / Hüften / Oberschenkel / über den Knien. Dauer 30 Min pro Zone. Intervall zwischen den Behandlungen 7-10 Tage.'
-            : 'Зоны: попа / живот / ушки / галифе / над коленями. Длительность 30 мин на зону. Интервал между процедурами 7-10 дней.',
+            : language === 'ru'
+            ? 'Зоны: попа / живот / ушки / галифе / над коленями. Длительность 30 мин на зону. Интервал между процедурами 7-10 дней.'
+            : 'Зони: сідниці / живіт / вушка / галіфе / над колінами. Тривалість 30 хв на зону. Інтервал між процедурами 7-10 днів.',
           items: [
             { name: language === 'de' ? '1 Zone' : language === 'ru' ? '1 зона' : '1 зона', price: '75 €' },
             { name: language === 'de' ? 'Kurs (10 Behandlungen)' : language === 'ru' ? 'Курс (Абонемент на 10 процедур)' : 'Курс (Абонемент на 10 процедур)', price: '650 €' },
@@ -276,16 +288,18 @@ const Prices = () => {
     {
       id: 'facial-care',
       icon: Droplets,
-      title: language === 'de' ? 'Gesichtspflege' : language === 'ru' ? 'Уход за лицом' : 'Уход за лицом',
-      consultation: language === 'de' ? '🕊 Konsultation vor der Behandlung — kostenlos.' : language === 'ru' ? '🕊 Консультация перед процедурой — бесплатная.' : '🕊 Консультація перед процедурой — бесплатная.',
+      title: language === 'de' ? 'Gesichtspflege' : language === 'ru' ? 'Уход за лицом' : 'Догляд за обличчям',
+      consultation: language === 'de' ? '🕊 Konsultation vor der Behandlung — kostenlos.' : language === 'ru' ? '🕊 Консультация перед процедурой — бесплатная.' : '🕊 Консультація перед процедурою — безкоштовна.',
       sections: [
         {
-          name: language === 'de' ? 'Gesichtsreinigung' : language === 'ru' ? 'Чистка лица' : 'Чистка лица',
-          description: isGerman
+          name: language === 'de' ? 'Gesichtsreinigung' : language === 'ru' ? 'Чистка лица' : 'Чистка обличчя',
+          description: language === 'de'
             ? 'Kombinierte Ultraschallreinigung — 90 Min (Reinigung, Tonisierung, Peeling, Maske zum Öffnen der Poren, Geräte- + mechanische Reinigung, Masken zum Schließen der Poren, Creme + SPF, Darsonval / Phonophorese falls notwendig). Arbeit mit TM Renew, Derma Series u.a.'
-            : 'Комбинированная ультразвуковая — 90 мин (очистка, тонизация, пилинг, маска открывающая поры, аппаратная + механическая, маски для закрытия пор, крем + SPF, дарсонваль / фонофорез если мастер считает необходимым). Работаю на косметике ТМ Renew, Derma Series и др.',
+            : language === 'ru'
+            ? 'Комбинированная ультразвуковая — 90 мин (очистка, тонизация, пилинг, маска открывающая поры, аппаратная + механическая, маски для закрытия пор, крем + SPF, дарсонваль / фонофорез если мастер считает необходимым). Работаю на косметике ТМ Renew, Derma Series и др.'
+            : 'Комбіноване ультразвукове — 90 хв (очищення, тонізація, пілінг, маска для відкриття пор, апаратне + механічне, маски для закриття пор, крем + SPF, дарсонваль / фонофорез якщо майстер вважає за необхідне). Працюю на косметиці ТМ Renew, Derma Series та ін.',
           items: [
-            { name: language === 'de' ? 'Komplett (90 Min)' : language === 'ru' ? 'Полная (90 мин)' : 'Полная (90 мин)', price: '90 €' },
+            { name: language === 'de' ? 'Komplett (90 Min)' : language === 'ru' ? 'Полная (90 мин)' : 'Повна (90 хв)', price: '90 €' },
           ]
         },
       ]
@@ -294,18 +308,20 @@ const Prices = () => {
     {
       id: 'microneedling',
       icon: Scissors,
-      title: language === 'de' ? 'Microneedling' : language === 'ru' ? 'Микронидлинг' : 'Микронидлинг',
-      consultation: language === 'de' ? '🕊 Konsultation vor der Behandlung — kostenlos.' : language === 'ru' ? '🕊 Консультация перед процедурой — бесплатная.' : '🕊 Консультація перед процедурой — бесплатная.',
+      title: language === 'de' ? 'Microneedling' : language === 'ru' ? 'Микронидлинг' : 'Мікронідлінг',
+      consultation: language === 'de' ? '🕊 Konsultation vor der Behandlung — kostenlos.' : language === 'ru' ? '🕊 Консультация перед процедурой — бесплатная.' : '🕊 Консультація перед процедурою — безкоштовна.',
       sections: [
         {
-          name: language === 'de' ? 'Microneedling-Behandlung' : language === 'ru' ? 'Процедура микронидлинг' : 'Процедура микронидлинг',
-          description: isGerman
+          name: language === 'de' ? 'Microneedling-Behandlung' : language === 'ru' ? 'Процедура микронидлинг' : 'Процедура мікронідлінг',
+          description: language === 'de'
             ? 'Behandlung inkl. Hautvorbereitung, Anästhetikum (bei Bedarf), Darsonval oder Peeling (falls nötig). Ampullen mit Exosomen, Vitaminen, Kollagen, Hyaluronsäure usw. gegen Aufpreis. Empfohlen: Wiederholung alle 2–3 Wochen je nach individuellen Zielen. Für Haarwuchsstimulation wird ein Behandlungskurs empfohlen.'
-            : 'Процедура включает подготовку кожи, анестетик (при необходимости), дарсонваль или пилинг (при необходимости). Ампула экзосомы, витамины, коллаген, гиалурон и т.д. за доп. плату. Рекомендовано повторять через 2-3 недели, в зависимости от индивидуальных целей. Например для стимуляция роста волос необходимо пройти курсом терапию.',
+            : language === 'ru'
+            ? 'Процедура включает подготовку кожи, анестетик (при необходимости), дарсонваль или пилинг (при необходимости). Ампула экзосомы, витамины, коллаген, гиалурон и т.д. за доп. плату. Рекомендовано повторять через 2-3 недели, в зависимости от индивидуальных целей. Например для стимуляция роста волос необходимо пройти курсом терапию.'
+            : 'Процедура включає підготовку шкіри, анестетик (за необхідності), дарсонваль або пілінг (за необхідності). Ампула екзосоми, вітаміни, колаген, гіалурон тощо за дод. плату. Рекомендовано повторювати через 2-3 тижні, залежно від індивідуальних цілей. Наприклад, для стимуляції росту волосся необхідно пройти курс терапії.',
           items: [
-            { name: language === 'de' ? 'Gesicht + Hals + Dekolleté' : language === 'ru' ? 'Лицо + шея + декольте' : 'Лицо + шея + декольте', price: '159 €' },
-            { name: language === 'de' ? 'Kopfhaut' : language === 'ru' ? 'Кожа головы' : 'Кожа головы', price: language === 'de' ? 'auf Anfrage' : language === 'ru' ? 'по запросу' : 'по запросу' },
-            { name: language === 'de' ? 'Hände, Knie, Dehnungsstreifen' : language === 'ru' ? 'Руки, колени, растяжки' : 'Руки, колени, растяжки', price: language === 'de' ? 'auf Anfrage' : language === 'ru' ? 'по запросу' : 'по запросу' },
+            { name: language === 'de' ? 'Gesicht + Hals + Dekolleté' : language === 'ru' ? 'Лицо + шея + декольте' : 'Обличчя + шия + декольте', price: '159 €' },
+            { name: language === 'de' ? 'Kopfhaut' : language === 'ru' ? 'Кожа головы' : 'Шкіра голови', price: language === 'de' ? 'auf Anfrage' : language === 'ru' ? 'по запросу' : 'за запитом' },
+            { name: language === 'de' ? 'Hände, Knie, Dehnungsstreifen' : language === 'ru' ? 'Руки, колени, растяжки' : 'Руки, коліна, розтяжки', price: language === 'de' ? 'auf Anfrage' : language === 'ru' ? 'по запросу' : 'за запитом' },
           ]
         },
       ]
@@ -314,13 +330,13 @@ const Prices = () => {
     {
       id: 'darsonval',
       icon: Wind,
-      title: language === 'de' ? 'Darsonval für Haare' : language === 'ru' ? 'Дарсонваль для волос' : 'Дарсонваль для волос',
-      consultation: language === 'de' ? '🕊 Konsultation vor der Behandlung — kostenlos.' : language === 'ru' ? '🕊 Консультация перед процедурой — бесплатная.' : '🕊 Консультація перед процедурой — бесплатная.',
+      title: language === 'de' ? 'Darsonval für Haare' : language === 'ru' ? 'Дарсонваль для волос' : 'Дарсонваль для волосся',
+      consultation: language === 'de' ? '🕊 Konsultation vor der Behandlung — kostenlos.' : language === 'ru' ? '🕊 Консультация перед процедурой — бесплатная.' : '🕊 Консультація перед процедурою — безкоштовна.',
       sections: [
         {
           name: language === 'de' ? 'Darsonval-Behandlung' : language === 'ru' ? 'Процедура дарсонваль' : 'Процедура дарсонваль',
           items: [
-            { name: language === 'de' ? 'Behandlung' : language === 'ru' ? 'Процедура' : 'Процедура', price: language === 'de' ? 'auf Anfrage' : language === 'ru' ? 'по запросу' : 'по запросу' },
+            { name: language === 'de' ? 'Behandlung' : language === 'ru' ? 'Процедура' : 'Процедура', price: language === 'de' ? 'auf Anfrage' : language === 'ru' ? 'по запросу' : 'за запитом' },
           ]
         },
       ]
@@ -329,16 +345,18 @@ const Prices = () => {
     {
       id: 'skin-changes',
       icon: AlertCircle,
-      title: language === 'de' ? 'Hautveränderungen entfernen' : language === 'ru' ? 'Удаление новообразований кожи' : 'Видалення новообразований кожи',
-      consultation: language === 'de' ? '🕊 Konsultation vor der Behandlung — kostenlos.' : language === 'ru' ? '🕊 Консультация перед процедурой — бесплатная.' : '🕊 Консультація перед процедурой — бесплатная.',
+      title: language === 'de' ? 'Hautveränderungen entfernen' : language === 'ru' ? 'Удаление новообразований кожи' : 'Видалення новоутворень шкіри',
+      consultation: language === 'de' ? '🕊 Konsultation vor der Behandlung — kostenlos.' : language === 'ru' ? '🕊 Консультация перед процедурой — бесплатная.' : '🕊 Консультація перед процедурою — безкоштовна.',
       sections: [
         {
-          name: language === 'de' ? 'Entfernung von Hautveränderungen' : language === 'ru' ? 'Удаление новообразований' : 'Видалення новообразований',
-          description: isGerman
+          name: language === 'de' ? 'Entfernung von Hautveränderungen' : language === 'ru' ? 'Удаление новообразований' : 'Видалення новоутворень',
+          description: language === 'de'
             ? '⚠️ Wichtig: Vor der Behandlung ist eine Konsultation mit einem Dermatologen (Histologie) erforderlich.'
-            : '⚠️ Важно: Необходимо перед процедурой проконсультироваться с дерматологом (гистология).',
+            : language === 'ru'
+            ? '⚠️ Важно: Необходимо перед процедурой проконсультироваться с дерматологом (гистология).'
+            : '⚠️ Важливо: Необхідно перед процедурою проконсультуватися з дерматологом (гістологія).',
           items: [
-            { name: language === 'de' ? 'Entfernung' : language === 'ru' ? 'Удаление' : 'Видалення', price: language === 'de' ? 'ab 10 €' : language === 'ru' ? 'от 10 €' : 'от 10 €' },
+            { name: language === 'de' ? 'Entfernung' : language === 'ru' ? 'Удаление' : 'Видалення', price: language === 'de' ? 'ab 10 €' : language === 'ru' ? 'от 10 €' : 'від 10 €' },
           ]
         },
       ]
@@ -378,7 +396,7 @@ const Prices = () => {
                 letterSpacing: '-0.02em',
               }}
             >
-              {language === 'de' ? 'PREISE' : language === 'ru' ? 'ЦЕНЫ' : 'ЦЕНЫ'}
+              {language === 'de' ? 'PREISE' : language === 'ru' ? 'ЦЕНЫ' : 'ЦІНИ'}
             </h1>
             <div className="w-32 h-0.5 bg-brand-gold mx-auto opacity-80 mb-6"></div>
             <p className="text-lg text-brand-espresso/60 font-light italic mb-4">
@@ -537,7 +555,7 @@ const Prices = () => {
                         {section.additional && (
                           <div className="mt-8 pt-6 border-t-2 border-brand-gold/20">
                             <p className="text-sm font-semibold uppercase tracking-wider text-brand-espresso/60 mb-5">
-                              {language === 'de' ? 'Zusätzlich' : language === 'ru' ? 'Дополнительно' : 'Дополнительно'}
+                              {language === 'de' ? 'Zusätzlich' : language === 'ru' ? 'Дополнительно' : 'Додатково'}
                             </p>
                             <div className="space-y-3">
                               {section.additional.map((item, idx) => (

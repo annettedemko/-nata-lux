@@ -4,63 +4,69 @@ import { Link } from '@/components/LinkAdapter'
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ProductCard } from '@/components/ProductCard';
 import Image from 'next/image';
+import { ProductLineSchema } from '@/components/ProductLineSchema';
 
 const BiorepairPro = () => {
   const { language } = useLanguage();
-  const isGerman = language === 'de';
 
   const products = [
     {
       id: "aczen",
       name: "Aczen",
-      description: isGerman
+      description: language === 'de'
         ? "Anti-Akne Konzentrat mit Azelainsäure und Salicylsäure. Reguliert Talgproduktion, bekämpft Entzündungen und verhindert neue Unreinheiten."
-        : "Концентрат против акне с азелаиновой и салициловой кислотами. Регулирует выработку кожного сала, борется с воспалениями и предотвращает новые высыпания.",
+        : language === 'ru' ? "Концентрат против акне с азелаиновой и салициловой кислотами. Регулирует выработку кожного сала, борется с воспалениями и предотвращает новые высыпания."
+        : "Концентрат проти акне з азелаїновою та саліциловою кислотами. Регулює вироблення шкірного сала, бореться із запаленнями та запобігає новим висипанням.",
       image: "/Renew/17.png",
       variants: [{ volume: "10ml" }]
     },
     {
       id: "biolumine",
       name: "Biolumine",
-      description: isGerman
+      description: language === 'de'
         ? "Aufhellendes Konzentrat mit Tranexamsäure. Hemmt Melaninbildung, reduziert Pigmentflecken und sorgt für strahlenden, ebenmäßigen Teint."
-        : "Осветляющий концентрат с транексамовой кислотой. Подавляет образование меланина, уменьшает пигментные пятна и придает сияющий ровный тон.",
+        : language === 'ru' ? "Осветляющий концентрат с транексамовой кислотой. Подавляет образование меланина, уменьшает пигментные пятна и придает сияющий ровный тон."
+        : "Освітлювальний концентрат з транексамовою кислотою. Пригнічує утворення меланіну, зменшує пігментні плями та надає сяючий рівний тон.",
       image: "/Renew/18.png",
       variants: [{ volume: "10ml" }]
     },
     {
       id: "bioreparant",
       name: "Bioreparant",
-      description: isGerman
+      description: language === 'de'
         ? "Regenerierendes Konzentrat mit Wachstumsfaktoren. Beschleunigt Wundheilung, fördert Hauterneuerung und repariert geschädigte Haut."
-        : "Регенерирующий концентрат с факторами роста. Ускоряет заживление, способствует обновлению кожи и восстанавливает поврежденную кожу.",
+        : language === 'ru' ? "Регенерирующий концентрат с факторами роста. Ускоряет заживление, способствует обновлению кожи и восстанавливает поврежденную кожу."
+        : "Регенерувальний концентрат з факторами росту. Прискорює загоєння, сприяє оновленню шкіри та відновлює пошкоджену шкіру.",
       image: "/Renew/19.jpeg",
       variants: [{ volume: "10ml" }]
     },
     {
       id: "botopeptide",
       name: "Botopeptide",
-      description: isGerman
+      description: language === 'de'
         ? "Peptid-Konzentrat mit Botox-ähnlicher Wirkung. Entspannt mimische Falten ohne Injektion, glättet Stirnfalten und Krähenfüße."
-        : "Пептидный концентрат с ботокс-подобным эффектом. Расслабляет мимические морщины без инъекций, разглаживает морщины на лбу и гусиные лапки.",
+        : language === 'ru' ? "Пептидный концентрат с ботокс-подобным эффектом. Расслабляет мимические морщины без инъекций, разглаживает морщины на лбу и гусиные лапки."
+        : "Пептидний концентрат з ботокс-подібним ефектом. Розслаблює мімічні зморшки без ін'єкцій, розгладжує зморшки на лобі та гусячі лапки.",
       image: "/Renew/20.png",
       variants: [{ volume: "10ml" }]
     },
     {
       id: "dermacell",
       name: "Dermacell",
-      description: isGerman
+      description: language === 'de'
         ? "Stammzellen-Konzentrat. Aktiviert hauteigene Regenerationsprozesse, verjüngt tiefgreifend und verbessert die Hautdichte."
-        : "Концентрат стволовых клеток. Активирует собственные регенерационные процессы кожи, глубоко омолаживает и улучшает плотность кожи.",
+        : language === 'ru' ? "Концентрат стволовых клеток. Активирует собственные регенерационные процессы кожи, глубоко омолаживает и улучшает плотность кожи."
+        : "Концентрат стовбурових клітин. Активує власні регенераційні процеси шкіри, глибоко омолоджує та покращує щільність шкіри.",
       image: "/Renew/21.png",
       variants: [{ volume: "10ml" }]
     },
     {
       id: "eyessence",
       name: "Eyessence",
-      description: isGerman
+      description: language === 'de'
         ? "Spezielles Augenkonzentrat mit Peptiden und Koffein. Reduziert Tränensäcke, dunkle Ringe und glättet feine Fältchen um die Augen."
-        : "Специальный концентрат для глаз с пептидами и кофеином. Уменьшает мешки под глазами, темные круги и разглаживает мелкие морщинки вокруг глаз.",
+        : language === 'ru' ? "Специальный концентрат для глаз с пептидами и кофеином. Уменьшает мешки под глазами, темные круги и разглаживает мелкие морщинки вокруг глаз."
+        : "Спеціальний концентрат для очей з пептидами та кофеїном. Зменшує мішки під очима, темні кола та розгладжує дрібні зморшки навколо очей.",
       image: "/Renew/22.png",
       variants: [{ volume: "10ml" }]
     }
@@ -68,6 +74,7 @@ const BiorepairPro = () => {
 
   return (
     <div className="relative min-h-screen">
+      <ProductLineSchema lineName="Biorepair Pro" products={products.map(p => ({ name: p.name, image: p.image }))} />
       <div className="fixed inset-0 z-0">
         <Image
           src="/48.png"
@@ -84,15 +91,16 @@ const BiorepairPro = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <Link to="/shop" className="text-brand-rose hover:text-brand-espresso transition-colors mb-4 inline-block">
-              ← {language === 'de' ? "Zurück zum Shop" : language === 'ru' ? "Назад в магазин" : "Назад в магазин"}
+              ← {language === 'de' ? "Zurück zum Shop" : language === 'ru' ? "Назад в магазин" : "Назад до магазину"}
             </Link>
             <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-4">
               Biorepair Pro
             </h1>
             <p className="text-lg text-brand-coffee/80 max-w-3xl mx-auto leading-relaxed">
-              {isGerman
+              {language === 'de'
                 ? "Professionelle Meso-Konzentrate für gezielte Behandlungen. Hochkonzentrierte Wirkstoffe für spezifische Hautprobleme: Anti-Akne, Aufhellung, Regeneration, Anti-Falten und Augenpflege."
-                : "Профессиональные мезо-концентраты для целевых процедур. Высококонцентрированные активные ингредиенты для специфических проблем кожи: анти-акне, осветление, регенерация, анти-морщины и уход за глазами."}
+                : language === 'ru' ? "Профессиональные мезо-концентраты для целевых процедур. Высококонцентрированные активные ингредиенты для специфических проблем кожи: анти-акне, осветление, регенерация, анти-морщины и уход за глазами."
+                : "Професійні мезо-концентрати для цільових процедур. Висококонцентровані активні інгредієнти для специфічних проблем шкіри: анти-акне, освітлення, регенерація, анти-зморшки та догляд за очима."}
             </p>
           </div>
 

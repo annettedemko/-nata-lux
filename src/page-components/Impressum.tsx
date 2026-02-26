@@ -41,7 +41,7 @@ const Impressum = () => {
               {/* Company Information */}
               <section>
                 <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-4">
-                  {language === 'de' ? 'Angaben gemäß § 5 TMG' : language === 'ru' ? 'Информация согласно § 5 TMG' : 'Інформація згідно § 5 TMG'}
+                  {language === 'de' ? 'Angaben gemäß § 5 DDG' : language === 'ru' ? 'Информация согласно § 5 DDG' : 'Інформація згідно § 5 DDG'}
                 </h2>
                 <div className="space-y-3">
                   <p className="text-lg font-medium text-brand-espresso">
@@ -187,10 +187,10 @@ const Impressum = () => {
                 </h3>
                 <p className="leading-relaxed">
                   {language === 'de'
-                    ? 'Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.'
+                    ? 'Als Diensteanbieter sind wir gemäß § 7 Abs.1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.'
                     : language === 'ru'
-                    ? 'Как поставщик услуг, мы несем ответственность за собственный контент на этих страницах в соответствии с § 7 абз. 1 TMG согласно общим законам. Однако согласно §§ 8-10 TMG мы, как поставщик услуг, не обязаны контролировать переданную или сохраненную стороннюю информацию или расследовать обстоятельства, указывающие на незаконную деятельность.'
-                    : 'Як постачальник послуг, ми несемо відповідальність за власний контент на цих сторінках відповідно до § 7 абз. 1 TMG згідно з загальними законами. Однак згідно §§ 8-10 TMG ми, як постачальник послуг, не зобов\'язані контролювати передану або збережену сторонню інформацію або розслідувати обставини, що вказують на незаконну діяльність.'}
+                    ? 'Как поставщик услуг, мы несем ответственность за собственный контент на этих страницах в соответствии с § 7 абз. 1 DDG согласно общим законам. Однако согласно §§ 8-10 DDG мы, как поставщик услуг, не обязаны контролировать переданную или сохраненную стороннюю информацию или расследовать обстоятельства, указывающие на незаконную деятельность.'
+                    : 'Як постачальник послуг, ми несемо відповідальність за власний контент на цих сторінках відповідно до § 7 абз. 1 DDG згідно з загальними законами. Однак згідно §§ 8-10 DDG ми, як постачальник послуг, не зобов\'язані контролювати передану або збережену сторонню інформацію або розслідувати обставини, що вказують на незаконну діяльність.'}
                 </p>
               </section>
 

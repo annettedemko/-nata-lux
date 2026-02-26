@@ -4,20 +4,21 @@ import { Link } from '@/components/LinkAdapter'
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ProductCard } from '@/components/ProductCard';
 import Image from 'next/image';
+import { ProductLineSchema } from '@/components/ProductLineSchema';
 
 const AntiAge = () => {
   const { language } = useLanguage();
-  const isGerman = language === 'de';
 
   const products = [
     // Anti Age Line
     {
       id: "anti-aging-firming-mask",
-      name: language === 'de' ? "Anti-Aging Straffende Maske" : language === 'ru' ? "Антивозрастная укрепляющая маска" : "Антивозрастная укрепляющая маска",
+      name: language === 'de' ? "Anti-Aging Straffende Maske" : language === 'ru' ? "Антивозрастная укрепляющая маска" : "Антивікова зміцнювальна маска",
       line: "Anti Age",
-      description: isGerman
+      description: language === 'de'
         ? "Straffende Maske mit Kollagen und Elastin. Sofortiger Lifting-Effekt und intensive Feuchtigkeitsversorgung. Ideal vor besonderen Anlässen."
-        : "Укрепляющая маска с коллагеном и эластином. Мгновенный лифтинг-эффект и интенсивное увлажнение. Идеально перед особыми мероприятиями.",
+        : language === 'ru' ? "Укрепляющая маска с коллагеном и эластином. Мгновенный лифтинг-эффект и интенсивное увлажнение. Идеально перед особыми мероприятиями."
+        : "Зміцнювальна маска з колагеном та еластином. Миттєвий ліфтинг-ефект та інтенсивне зволоження. Ідеально перед особливими заходами.",
       image: "/Renew/10.png",
       hoverImage: "/Renew/10.1.jpeg",
       variants: [{ volume: "50ml" }, { volume: "250ml" }]
@@ -26,19 +27,21 @@ const AntiAge = () => {
       id: "intense-skin-revitalizer",
       name: "Intense Skin Revitalizer",
       line: "Anti Age",
-      description: isGerman
+      description: language === 'de'
         ? "Intensivserum mit Stammzellen-Extrakt. Stimuliert die Zellerneuerung und verjüngt die Haut von innen. Sichtbare Ergebnisse nach 2 Wochen."
-        : "Интенсивная сыворотка с экстрактом стволовых клеток. Стимулирует обновление клеток и омолаживает кожу изнутри. Видимые результаты через 2 недели.",
+        : language === 'ru' ? "Интенсивная сыворотка с экстрактом стволовых клеток. Стимулирует обновление клеток и омолаживает кожу изнутри. Видимые результаты через 2 недели."
+        : "Інтенсивна сироватка з екстрактом стовбурових клітин. Стимулює оновлення клітин та омолоджує шкіру зсередини. Видимі результати через 2 тижні.",
       image: "/Renew/11.png",
       variants: [{ volume: "30ml" }]
     },
     {
       id: "restoring-eye-cream",
-      name: language === 'de' ? "Regenerierende Augencreme" : language === 'ru' ? "Восстанавливающий крем для глаз" : "Восстанавливающий крем для глаз",
+      name: language === 'de' ? "Regenerierende Augencreme" : language === 'ru' ? "Восстанавливающий крем для глаз" : "Відновлювальний крем для очей",
       line: "Anti Age",
-      description: isGerman
+      description: language === 'de'
         ? "Regenerierende Augencreme mit Peptiden. Glättet Fältchen, festigt die empfindliche Augenpartie und reduziert Anzeichen von Müdigkeit."
-        : "Восстанавливающий крем для глаз с пептидами. Разглаживает морщинки, укрепляет нежную кожу вокруг глаз и уменьшает признаки усталости.",
+        : language === 'ru' ? "Восстанавливающий крем для глаз с пептидами. Разглаживает морщинки, укрепляет нежную кожу вокруг глаз и уменьшает признаки усталости."
+        : "Відновлювальний крем для очей з пептидами. Розгладжує зморшки, зміцнює ніжну шкіру навколо очей та зменшує ознаки втоми.",
       image: "/Renew/12.png",
       hoverImage: "/Renew/12.1.jpeg",
       variants: [{ volume: "30ml" }, { volume: "250ml" }]
@@ -47,9 +50,10 @@ const AntiAge = () => {
       id: "aqua-vital-cream",
       name: "Aqua Vital Revitalizing Cream",
       line: "Anti Age",
-      description: isGerman
+      description: language === 'de'
         ? "Revitalisierende Creme mit Hyaluronsäure. Durchfeuchtet alle Hautschichten, polstert Falten auf und verleiht der Haut neue Vitalität."
-        : "Ревитализирующий крем с гиалуроновой кислотой. Увлажняет все слои кожи, заполняет морщины и придает коже новую жизненную силу.",
+        : language === 'ru' ? "Ревитализирующий крем с гиалуроновой кислотой. Увлажняет все слои кожи, заполняет морщины и придает коже новую жизненную силу."
+        : "Ревіталізувальний крем з гіалуроновою кислотою. Зволожує всі шари шкіри, заповнює зморшки та надає шкірі нову життєву силу.",
       image: "/Renew/13.png",
       hoverImage: "/Renew/13.1.jpeg",
       variants: [{ volume: "50ml" }, { volume: "250ml" }]
@@ -58,9 +62,10 @@ const AntiAge = () => {
       id: "energy-refill-cream",
       name: "Energy Refill Anti Aging Cream",
       line: "Anti Age",
-      description: isGerman
+      description: language === 'de'
         ? "Energiespendende Creme mit Coenzym Q10. Belebt müde Haut, schützt vor freien Radikalen und verleiht neue Energie und Ausstrahlung."
-        : "Энергетический крем с коэнзимом Q10. Оживляет уставшую кожу, защищает от свободных радикалов и придает новую энергию и сияние.",
+        : language === 'ru' ? "Энергетический крем с коэнзимом Q10. Оживляет уставшую кожу, защищает от свободных радикалов и придает новую энергию и сияние."
+        : "Енергетичний крем з коензимом Q10. Оживлює втомлену шкіру, захищає від вільних радикалів та надає нову енергію та сяйво.",
       image: "/Renew/14.png",
       hoverImage: "/Renew/14.1.jpeg",
       variants: [{ volume: "50ml" }, { volume: "250ml" }]
@@ -69,6 +74,7 @@ const AntiAge = () => {
 
   return (
     <div className="relative min-h-screen">
+      <ProductLineSchema lineName="Anti Age" products={products.map(p => ({ name: p.name, image: p.image }))} />
       <div className="fixed inset-0 z-0">
         <Image
           src="/48.png"
@@ -85,15 +91,16 @@ const AntiAge = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <Link to="/shop" className="text-brand-rose hover:text-brand-espresso transition-colors mb-4 inline-block">
-              ← {language === 'de' ? "Zurück zum Shop" : language === 'ru' ? "Назад в магазин" : "Назад в магазин"}
+              ← {language === 'de' ? "Zurück zum Shop" : language === 'ru' ? "Назад в магазин" : "Назад до магазину"}
             </Link>
             <h1 className="text-4xl md:text-5xl font-heading font-semibold text-brand-espresso mb-4">
               Anti Age
             </h1>
             <p className="text-lg text-brand-coffee/80 max-w-3xl mx-auto leading-relaxed">
-              {isGerman
+              {language === 'de'
                 ? "Verjüngung für erste Zeichen der Hautalterung 35+. Mit Kollagen, Elastin, Stammzellen-Extrakt und Coenzym Q10."
-                : "Омоложение для первых признаков старения 35+. С коллагеном, эластином, экстрактом стволовых клеток и коэнзимом Q10."}
+                : language === 'ru' ? "Омоложение для первых признаков старения 35+. С коллагеном, эластином, экстрактом стволовых клеток и коэнзимом Q10."
+                : "Омолодження для перших ознак старіння 35+. З колагеном, еластином, екстрактом стовбурових клітин та коензимом Q10."}
             </p>
           </div>
 

@@ -8,11 +8,13 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { useState } from 'react';
 import { ProcedureSchema } from '@/components/ProcedureSchema';
+import DikidiConsentDialog, { useDikidiConsent } from '@/components/DikidiConsentDialog';
 
 const Laser = () => {
   const { t, language } = useLanguage();
   const isGerman = language === 'de';
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const { isDialogOpen, openDikidi, closeDialog } = useDikidiConsent();
 
   const galleryImages = ['/70.PNG', '/41.jpg', '/42.jpg', '/75.jpg', '/76.jpg'];
 
@@ -780,11 +782,9 @@ const Laser = () => {
               <Button
                 size="lg"
                 className="bg-white hover:bg-brand-cream text-brand-espresso font-medium rounded-2xl text-lg px-10 py-7"
-                asChild
+                onClick={openDikidi}
               >
-                <a href="https://dikidi.ru/1904110" target="_blank" rel="noopener noreferrer">
-                  {language === 'de' ? 'Termin buchen' : language === 'ru' ? 'Записаться' : 'Записатися'}
-                </a>
+                {language === 'de' ? 'Termin buchen' : language === 'ru' ? 'Записаться' : 'Записатися'}
               </Button>
               <Button
                 size="lg"
@@ -810,6 +810,9 @@ const Laser = () => {
         </div>
       </section>
       </div>
+
+      {/* DIKIDI Consent Dialog */}
+      <DikidiConsentDialog isOpen={isDialogOpen} onClose={closeDialog} />
     </div>
   );
 };

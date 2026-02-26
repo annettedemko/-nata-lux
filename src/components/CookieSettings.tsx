@@ -26,9 +26,6 @@ export function CookieSettings({ isOpen, onClose }: CookieSettingsProps) {
     if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
       (window as any).gtag('consent', 'update', {
         'analytics_storage': 'granted',
-        'ad_storage': 'granted',
-        'ad_user_data': 'granted',
-        'ad_personalization': 'granted'
       });
       console.log('✅ Google Analytics activated - consent granted (Consent Mode v2)')
     }
@@ -39,9 +36,6 @@ export function CookieSettings({ isOpen, onClose }: CookieSettingsProps) {
     if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
       (window as any).gtag('consent', 'update', {
         'analytics_storage': 'denied',
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied'
       });
       console.log('❌ Google Analytics deactivated - consent revoked')
     }
@@ -50,6 +44,7 @@ export function CookieSettings({ isOpen, onClose }: CookieSettingsProps) {
   const handleSave = () => {
     localStorage.setItem('cookie-consent', 'custom')
     localStorage.setItem('cookie-analytics', analyticsEnabled ? 'true' : 'false')
+    localStorage.setItem('cookie-consent-timestamp', new Date().toISOString())
 
     if (analyticsEnabled) {
       initializeAnalytics()
@@ -64,6 +59,7 @@ export function CookieSettings({ isOpen, onClose }: CookieSettingsProps) {
     setAnalyticsEnabled(true)
     localStorage.setItem('cookie-consent', 'accepted')
     localStorage.setItem('cookie-analytics', 'true')
+    localStorage.setItem('cookie-consent-timestamp', new Date().toISOString())
     initializeAnalytics()
     onClose()
   }
@@ -72,6 +68,7 @@ export function CookieSettings({ isOpen, onClose }: CookieSettingsProps) {
     setAnalyticsEnabled(false)
     localStorage.setItem('cookie-consent', 'necessary-only')
     localStorage.setItem('cookie-analytics', 'false')
+    localStorage.setItem('cookie-consent-timestamp', new Date().toISOString())
     revokeAnalytics()
     onClose()
   }
@@ -121,7 +118,7 @@ export function CookieSettings({ isOpen, onClose }: CookieSettingsProps) {
       privacy: 'Дополнительную информацию можно найти в нашей',
       privacyLink: 'Политике конфиденциальности',
     },
-    uk: {
+    ua: {
       title: 'Налаштування Cookie',
       subtitle: 'Керуйте вашими уподобаннями Cookie',
       description:
@@ -161,7 +158,7 @@ export function CookieSettings({ isOpen, onClose }: CookieSettingsProps) {
           <button
             onClick={onClose}
             className="absolute top-4 right-4 p-2 text-brand-coffee/60 hover:text-brand-espresso transition-colors rounded-lg hover:bg-brand-espresso/5"
-            aria-label="Schließen"
+            aria-label={language === 'de' ? 'Schließen' : language === 'ru' ? 'Закрыть' : 'Закрити'}
           >
             <X className="w-5 h-5" />
           </button>
@@ -255,23 +252,23 @@ export function CookieSettings({ isOpen, onClose }: CookieSettingsProps) {
             </a>
           </p>
 
-          {/* Buttons - Equal Weight! */}
+          {/* Buttons -- DSGVO: all buttons equally prominent (VG Hannover 19.03.2025) */}
           <div className="flex flex-col sm:flex-row gap-3">
             <button
               onClick={handleAcceptAll}
-              className="flex-1 px-6 py-3 bg-brand-gold text-white font-medium rounded-xl hover:bg-brand-gold/90 transition-all duration-300 shadow-md hover:shadow-lg"
+              className="flex-1 px-6 py-3 bg-brand-espresso text-white font-medium rounded-xl hover:bg-brand-espresso/90 transition-all duration-300"
             >
               {t.acceptAll}
             </button>
             <button
               onClick={handleSave}
-              className="flex-1 px-6 py-3 bg-brand-espresso/10 text-brand-espresso font-medium rounded-xl hover:bg-brand-espresso/20 transition-all duration-300 border border-brand-espresso/20"
+              className="flex-1 px-6 py-3 bg-brand-espresso text-white font-medium rounded-xl hover:bg-brand-espresso/90 transition-all duration-300"
             >
               {t.save}
             </button>
             <button
               onClick={handleNecessaryOnly}
-              className="flex-1 px-6 py-3 bg-brand-gold text-white font-medium rounded-xl hover:bg-brand-gold/90 transition-all duration-300 shadow-md hover:shadow-lg"
+              className="flex-1 px-6 py-3 bg-brand-espresso text-white font-medium rounded-xl hover:bg-brand-espresso/90 transition-all duration-300"
             >
               {t.necessaryOnly}
             </button>

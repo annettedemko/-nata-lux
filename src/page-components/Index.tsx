@@ -31,6 +31,7 @@ import {
 ;
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
+import { GoogleMapsEmbed } from '@/components/GoogleMapsEmbed';
 
 const Index = () => {
   const { t, language } = useLanguage();
@@ -730,20 +731,11 @@ const Index = () => {
                 </div>
               </a>
 
-              {/* Google Maps Embed */}
-              <iframe
+              {/* Google Maps Embed - DSGVO two-click consent */}
+              <GoogleMapsEmbed
                 src="https://www.google.com/maps?q=Elsässer+Straße+33,+81667+München&output=embed&z=17"
-                width="100%"
-                height="100%"
-                style={{
-                  border: 0,
-                  filter: 'sepia(20%) saturate(80%) hue-rotate(10deg) brightness(105%)',
-                  pointerEvents: 'none',
-                }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="NataLux Studio - Elsässer Straße 33, 81667 München-Haidhausen"
+                className="rounded-xl"
+                height="400"
               />
             </div>
 

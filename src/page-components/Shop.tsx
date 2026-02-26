@@ -6,16 +6,16 @@ import Image from 'next/image';
 
 const Shop = () => {
   const { t, language } = useLanguage();
-  const isGerman = language === 'de';
 
   // RENEW Professional Cosmetics - Categories by skin concerns/goals
   const renewCategories = [
     {
       id: "whitening",
-      name: language === 'de' ? "Aufhellung & Pigmentierung" : language === 'ru' ? "Осветление и пигментация" : "Осветление и пигментация",
-      description: isGerman
+      name: language === 'de' ? "Aufhellung & Pigmentierung" : language === 'ru' ? "Осветление и пигментация" : "Освітлення та пігментація",
+      description: language === 'de'
         ? "Produkte gegen Pigmentflecken und für einen ebenmäßigen Teint"
-        : "Средства против пигментных пятен и для ровного тона кожи",
+        : language === 'ru' ? "Средства против пигментных пятен и для ровного тона кожи"
+        : "Засоби проти пігментних плям та для рівного тону шкіри",
       image: "/Renew/R1.1.jpeg",
       link: "/shop/renew/whitening",
       lines: ["Whitening"]
@@ -23,9 +23,10 @@ const Shop = () => {
     {
       id: "golden-age",
       name: "Golden Age",
-      description: isGerman
+      description: language === 'de'
         ? "Premium Anti-Aging mit Gold und Peptiden"
-        : "Премиум антивозрастной уход с золотом и пептидами",
+        : language === 'ru' ? "Премиум антивозрастной уход с золотом и пептидами"
+        : "Преміум антивіковий догляд із золотом та пептидами",
       image: "/Renew/R2.1.jpg",
       link: "/shop/renew/golden-age",
       lines: ["Golden Age"]
@@ -33,9 +34,10 @@ const Shop = () => {
     {
       id: "anti-age",
       name: "Anti Age",
-      description: isGerman
+      description: language === 'de'
         ? "Verjüngung und Faltenkorrektur"
-        : "Омоложение и коррекция морщин",
+        : language === 'ru' ? "Омоложение и коррекция морщин"
+        : "Омолодження та корекція зморшок",
       image: "/Renew/R2.jpeg",
       link: "/shop/renew/anti-age",
       lines: ["Anti Age"]
@@ -43,9 +45,10 @@ const Shop = () => {
     {
       id: "retinol",
       name: "Retinol",
-      description: isGerman
+      description: language === 'de'
         ? "Intensive Zellerneuerung"
-        : "Интенсивное обновление клеток",
+        : language === 'ru' ? "Интенсивное обновление клеток"
+        : "Інтенсивне оновлення клітин",
       image: "/Renew/R17.jpg",
       link: "/shop/renew/retinol",
       lines: ["Retinol"]
@@ -53,9 +56,10 @@ const Shop = () => {
     {
       id: "biorepair-pro",
       name: "Biorepair Pro",
-      description: isGerman
+      description: language === 'de'
         ? "Professionelle Meso-Konzentrate"
-        : "Профессиональные мезо-концентраты",
+        : language === 'ru' ? "Профессиональные мезо-концентраты"
+        : "Професійні мезо-концентрати",
       image: "/Renew/R16.1.jpg",
       link: "/shop/renew/biorepair-pro",
       lines: ["Biorepair Pro"]
@@ -63,9 +67,10 @@ const Shop = () => {
     {
       id: "dermo-control",
       name: "Dermo Control",
-      description: isGerman
+      description: language === 'de'
         ? "Regulierung der Talgproduktion und Mattierung für fettige Haut"
-        : "Регуляция себума и матирование для жирной кожи",
+        : language === 'ru' ? "Регуляция себума и матирование для жирной кожи"
+        : "Регуляція себуму та матування для жирної шкіри",
       image: "/Renew/R3.jpeg",
       link: "/shop/renew/dermo-control",
       lines: ["Dermo Control"]
@@ -73,59 +78,65 @@ const Shop = () => {
     {
       id: "propioguard",
       name: "Propioguard",
-      description: isGerman
+      description: language === 'de'
         ? "Aktive Bekämpfung von Akne und Entzündungen"
-        : "Активная борьба с акне и воспалениями",
+        : language === 'ru' ? "Активная борьба с акне и воспалениями"
+        : "Активна боротьба з акне та запаленнями",
       image: "/Renew/R4.jpeg",
       link: "/shop/renew/propioguard",
       lines: ["Propioguard"]
     },
     {
       id: "peelings",
-      name: language === 'de' ? "Peelings & Erneuerung" : language === 'ru' ? "Пилинги и обновление" : "Пилинги и обновление",
-      description: isGerman
+      name: language === 'de' ? "Peelings & Erneuerung" : language === 'ru' ? "Пилинги и обновление" : "Пілінги та оновлення",
+      description: language === 'de'
         ? "Professionelle Peelings für Hauterneuerung"
-        : "Профессиональные пилинги для обновления кожи",
+        : language === 'ru' ? "Профессиональные пилинги для обновления кожи"
+        : "Професійні пілінги для оновлення шкіри",
       image: "/Renew/R14.jpg",
       link: "/shop/renew/peelings",
       lines: ["Peelings"]
     },
     {
       id: "masks",
-      name: language === 'de' ? "Masken & Intensivpflege" : language === 'ru' ? "Маски и интенсивный уход" : "Маски и интенсивный уход",
-      description: isGerman
+      name: language === 'de' ? "Masken & Intensivpflege" : language === 'ru' ? "Маски и интенсивный уход" : "Маски та інтенсивний догляд",
+      description: language === 'de'
         ? "Intensive Masken für tiefe Pflege"
-        : "Интенсивные маски для глубокого ухода",
+        : language === 'ru' ? "Интенсивные маски для глубокого ухода"
+        : "Інтенсивні маски для глибокого догляду",
       image: "/Renew/R6.jpeg",
       link: "/shop/renew/masks",
       lines: ["Masks"]
     },
     {
       id: "basic-care",
-      name: language === 'de' ? "Basispflege" : language === 'ru' ? "Базовый уход" : "Базовый уход",
-      description: isGerman
+      name: language === 'de' ? "Basispflege" : language === 'ru' ? "Базовый уход" : "Базовий догляд",
+      description: language === 'de'
         ? "Gele und Cremes für die tägliche Pflege"
-        : "Гели и кремы для ежедневного ухода",
+        : language === 'ru' ? "Гели и кремы для ежедневного ухода"
+        : "Гелі та креми для щоденного догляду",
       image: "/Renew/R13.jpeg",
       link: "/shop/renew/basic-care",
       lines: ["Gels & Creams"]
     },
     {
       id: "sun-protection",
-      name: language === 'de' ? "Sonnenschutz" : language === 'ru' ? "Защита от солнца" : "Защита от солнца",
-      description: isGerman
+      name: language === 'de' ? "Sonnenschutz" : language === 'ru' ? "Защита от солнца" : "Захист від сонця",
+      description: language === 'de'
         ? "Schutz vor UV-Strahlung und Photoaging"
-        : "Защита от УФ-излучения и фотостарения",
+        : language === 'ru' ? "Защита от УФ-излучения и фотостарения"
+        : "Захист від УФ-випромінювання та фотостаріння",
       image: "/Renew/R9.webp",
       link: "/shop/renew/sun-protection",
       lines: ["Sunscreen"]
     },
     {
       id: "sensitive-skin",
-      name: language === 'de' ? "Empfindliche Haut & Couperose" : language === 'ru' ? "Чувствительная кожа и купероз" : "Чувствительная кожа и купероз",
-      description: isGerman
+      name: language === 'de' ? "Empfindliche Haut & Couperose" : language === 'ru' ? "Чувствительная кожа и купероз" : "Чутлива шкіра та купероз",
+      description: language === 'de'
         ? "Beruhigende Pflege für empfindliche Haut und Rötungen"
-        : "Успокаивающий уход для чувствительной кожи и покраснений",
+        : language === 'ru' ? "Успокаивающий уход для чувствительной кожи и покраснений"
+        : "Заспокійливий догляд для чутливої шкіри та почервонінь",
       image: "/Renew/R10.jpg",
       link: "/shop/renew/sensitive-skin",
       lines: ["Redness"]
@@ -133,9 +144,10 @@ const Shop = () => {
     {
       id: "aqualia",
       name: "Aqualia",
-      description: isGerman
+      description: language === 'de'
         ? "Intensive Feuchtigkeit für jeden Hauttyp"
-        : "Интенсивное увлажнение для любого типа кожи",
+        : language === 'ru' ? "Интенсивное увлажнение для любого типа кожи"
+        : "Інтенсивне зволоження для будь-якого типу шкіри",
       image: "/Renew/R7.webp",
       link: "/shop/renew/aqualia",
       lines: ["Aqualia"]
@@ -143,19 +155,21 @@ const Shop = () => {
     {
       id: "vitamin-c",
       name: "Vitamin C",
-      description: isGerman
+      description: language === 'de'
         ? "Antioxidativer Schutz und strahlende Haut"
-        : "Антиоксидантная защита и сияние кожи",
+        : language === 'ru' ? "Антиоксидантная защита и сияние кожи"
+        : "Антиоксидантний захист та сяйво шкіри",
       image: "/Renew/R8.1.jpg",
       link: "/shop/renew/vitamin-c",
       lines: ["Vitamin C"]
     },
     {
       id: "professional",
-      name: language === 'de' ? "Professionelle Behandlungen" : language === 'ru' ? "Профессиональные процедуры" : "Профессиональные процедуры",
-      description: isGerman
+      name: language === 'de' ? "Professionelle Behandlungen" : language === 'ru' ? "Профессиональные процедуры" : "Професійні процедури",
+      description: language === 'de'
         ? "Spezielle Produkte für professionelle Anwendungen"
-        : "Специальные средства для профессиональных процедур",
+        : language === 'ru' ? "Специальные средства для профессиональных процедур"
+        : "Спеціальні засоби для професійних процедур",
       image: "/Renew/R11.webp",
       link: "/shop/renew/professional",
       lines: ["Dermakey"]
@@ -196,15 +210,17 @@ const Shop = () => {
                 {language === 'de' ? "Kosmetik-Shop" : language === 'ru' ? "Магазин косметики" : "Магазин косметики"}
               </h2>
               <p className="text-brand-coffee/70 mb-3">
-                {isGerman
+                {language === 'de'
                   ? "Premium-Produkte für zu Hause und professionelle Anwendung. Wählen Sie eine Kategorie nach Ihrem Hautproblem."
-                  : "Премиум-продукты для дома и профессионального использования. Выберите категорию по вашей проблеме кожи."}
+                  : language === 'ru' ? "Премиум-продукты для дома и профессионального использования. Выберите категорию по вашей проблеме кожи."
+                  : "Преміум-продукти для дому та професійного використання. Оберіть категорію за вашою проблемою шкіри."}
               </p>
               <div className="inline-block bg-brand-gold/10 border border-brand-gold/20 rounded-lg px-4 py-2">
                 <p className="text-sm font-medium text-brand-espresso">
-                  {isGerman
+                  {language === 'de'
                     ? "✨ Für Privatpersonen, Kosmetologen und B2B"
-                    : "✨ Для частных лиц, косметологов и B2B"}
+                    : language === 'ru' ? "✨ Для частных лиц, косметологов и B2B"
+                    : "✨ Для приватних осіб, косметологів та B2B"}
                 </p>
               </div>
             </div>
