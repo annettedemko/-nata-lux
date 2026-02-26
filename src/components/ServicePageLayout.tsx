@@ -6,6 +6,8 @@ import { CheckCircle2, LucideIcon, Sparkles } from 'lucide-react';
 import { ReactNode } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion } from 'framer-motion';
+import DikidiConsentDialog, { useDikidiConsent } from './DikidiConsentDialog';
+import { FAQSchema } from './FAQSchema';
 
 export interface ServicePageProps {
   // Hero section
@@ -74,9 +76,11 @@ export const ServicePageLayout = ({
 }: ServicePageProps) => {
   const { language } = useLanguage();
   const isGerman = language === 'de';
+  const { isDialogOpen, openDikidi, closeDialog } = useDikidiConsent();
 
   return (
     <div className="relative w-full overflow-x-hidden">
+      {faq && faq.length > 0 && <FAQSchema faqs={faq} />}
       {/* Background */}
       <div className="fixed inset-0 z-0 w-full">
         <div
@@ -145,7 +149,7 @@ export const ServicePageLayout = ({
               className="flex items-center justify-center gap-2 text-brand-gold/40 mt-4"
             >
               <Sparkles className="w-4 h-4" />
-              <span className="text-xs tracking-[0.3em] uppercase font-medium">Premium Quality</span>
+              <span className="text-xs tracking-[0.3em] uppercase font-medium">{language === 'de' ? 'Premium Qualität' : language === 'ru' ? 'Премиум качество' : 'Преміум якість'}</span>
               <Sparkles className="w-4 h-4" />
             </motion.div>
           </motion.div>
@@ -164,7 +168,7 @@ export const ServicePageLayout = ({
         >
           <div className="absolute top-0 left-0 right-0 flex justify-center -translate-y-1/2">
             <div className="px-4 py-1 bg-brand-cream rounded-full border border-brand-gold/20 text-xs text-brand-gold tracking-widest uppercase">
-              {language === 'de' ? 'Über die Behandlung' : language === 'ru' ? 'О процедуре' : 'О процедуре'}
+              {language === 'de' ? 'Über die Behandlung' : language === 'ru' ? 'О процедуре' : 'Про процедуру'}
             </div>
           </div>
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-6 mt-2 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', wordWrap: 'break-word' }}>
@@ -199,7 +203,7 @@ export const ServicePageLayout = ({
           className="relative glass rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 mb-12 border border-brand-gold/10 shadow-xl shadow-brand-gold/5"
         >
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-8 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', wordWrap: 'break-word' }}>
-            {language === 'de' ? 'Ihre Vorteile' : language === 'ru' ? 'Ваши преимущества' : 'Ваши преимущества'}
+            {language === 'de' ? 'Ihre Vorteile' : language === 'ru' ? 'Ваши преимущества' : 'Ваші переваги'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
             {benefits.map((benefit, index) => (
@@ -230,7 +234,7 @@ export const ServicePageLayout = ({
             className="relative glass rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 mb-12 border border-brand-gold/10 shadow-xl shadow-brand-gold/5"
           >
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-8 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', wordWrap: 'break-word' }}>
-              {language === 'de' ? 'Wie läuft die Behandlung ab?' : language === 'ru' ? 'Как проходит процедура?' : 'Как проходит процедура?'}
+              {language === 'de' ? 'Wie läuft die Behandlung ab?' : language === 'ru' ? 'Как проходит процедура?' : 'Як проходить процедура?'}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               {steps.map((step, index) => (
@@ -274,19 +278,21 @@ export const ServicePageLayout = ({
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(212,175,55,0.1),transparent_50%)]" />
             <div className="relative">
               <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-white mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', wordWrap: 'break-word' }}>
-                {language === 'de' ? 'Preise & Dauer' : language === 'ru' ? 'Цены и длительность' : 'Ціни и длительность'}
+                {language === 'de' ? 'Preise & Dauer' : language === 'ru' ? 'Цены и длительность' : 'Ціни та тривалість'}
               </h2>
               <p className="text-white/70 mb-8 max-w-md mx-auto">
-                {isGerman
+                {language === 'de'
                   ? 'Alle Preise und Behandlungsdauern finden Sie auf unserer Preisseite.'
-                  : 'Все цены и длительность процедур вы найдёте на нашей странице цен.'}
+                  : language === 'ru'
+                  ? 'Все цены и длительность процедур вы найдёте на нашей странице цен.'
+                  : 'Усі ціни та тривалість процедур ви знайдете на нашій сторінці цін.'}
               </p>
               <Link to={`/prices#${priceSection}`}>
                 <Button
                   size="lg"
                   className="bg-brand-gold hover:bg-brand-gold/90 text-white font-medium rounded-2xl px-6 py-4 md:px-8 md:py-6 text-base md:text-lg min-h-11 shadow-lg shadow-brand-gold/30 hover:shadow-brand-gold/50 transition-all duration-300"
                 >
-                  {language === 'de' ? 'Zu den Preisen' : language === 'ru' ? 'К ценам' : 'К ценам'}
+                  {language === 'de' ? 'Zu den Preisen' : language === 'ru' ? 'К ценам' : 'До цін'}
                 </Button>
               </Link>
             </div>
@@ -303,12 +309,14 @@ export const ServicePageLayout = ({
             className="relative glass rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 mb-12 mt-6 md:mt-0 border border-brand-gold/10 shadow-xl shadow-brand-gold/5"
           >
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', wordWrap: 'break-word' }}>
-              {language === 'de' ? 'Kontraindikationen' : language === 'ru' ? 'Противопоказания' : 'Противопоказания'}
+              {language === 'de' ? 'Kontraindikationen' : language === 'ru' ? 'Противопоказания' : 'Протипоказання'}
             </h2>
             <p className="text-brand-coffee/70 mb-6 leading-relaxed">
-              {isGerman
+              {language === 'de'
                 ? 'In folgenden Fällen raten wir von dieser Behandlung ab:'
-                : 'В следующих случаях мы не рекомендуем эту процедуру:'}
+                : language === 'ru'
+                ? 'В следующих случаях мы не рекомендуем эту процедуру:'
+                : 'У наступних випадках ми не рекомендуємо цю процедуру:'}
             </p>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {contraindications.map((item, index) => (
@@ -330,7 +338,7 @@ export const ServicePageLayout = ({
             className="mb-12"
           >
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-8 text-center max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', wordWrap: 'break-word' }}>
-              {language === 'de' ? 'Häufige Fragen' : language === 'ru' ? 'Частые вопросы' : 'Частые вопросы'}
+              {language === 'de' ? 'Häufige Fragen' : language === 'ru' ? 'Частые вопросы' : 'Часті питання'}
             </h2>
             <div className="space-y-4">
               {faq.map((item, index) => (
@@ -379,11 +387,9 @@ export const ServicePageLayout = ({
               <Button
                 size="lg"
                 className="bg-white hover:bg-brand-cream text-brand-espresso font-semibold rounded-2xl px-6 py-4 md:px-8 md:py-6 text-base md:text-lg min-h-11 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
-                asChild
+                onClick={openDikidi}
               >
-                <a href="https://dikidi.ru/1904110" target="_blank" rel="noopener noreferrer">
-                  {language === 'de' ? 'Termin buchen' : language === 'ru' ? 'Записаться' : 'Записатися'}
-                </a>
+                {language === 'de' ? 'Termin buchen' : language === 'ru' ? 'Записаться' : 'Записатися'}
               </Button>
               <Link to="/contact">
                 <Button
@@ -391,7 +397,7 @@ export const ServicePageLayout = ({
                   variant="outline"
                   className="border-2 border-white text-white hover:bg-white/10 font-semibold rounded-2xl px-6 py-4 md:px-8 md:py-6 text-base md:text-lg min-h-11 transition-all duration-300 hover:-translate-y-0.5"
                 >
-                  {language === 'de' ? 'Beratung anfragen' : language === 'ru' ? 'Запросить консультацию' : 'Запросить консультацию'}
+                  {language === 'de' ? 'Beratung anfragen' : language === 'ru' ? 'Запросить консультацию' : 'Запросити консультацію'}
                 </Button>
               </Link>
             </div>
@@ -399,6 +405,9 @@ export const ServicePageLayout = ({
         </motion.div>
       </div>
       </div>
+
+      {/* DIKIDI Consent Dialog */}
+      <DikidiConsentDialog isOpen={isDialogOpen} onClose={closeDialog} />
     </div>
   );
 };

@@ -14,6 +14,13 @@ import { GoldenCursor } from "@/components/GoldenCursor"
 import { ScrollToTop } from "@/components/ScrollToTop"
 import { CookieConsent } from "@/components/CookieConsent"
 import { Providers } from './providers'
+import { usePageTitle } from '@/hooks/usePageTitle'
+import { BreadcrumbInjector } from '@/components/BreadcrumbInjector'
+
+function PageTitleUpdater() {
+  usePageTitle()
+  return null
+}
 
 export function ClientLayout({ children }: { children: ReactNode }) {
   return (
@@ -22,6 +29,8 @@ export function ClientLayout({ children }: { children: ReactNode }) {
         <Toaster />
         <Sonner />
         <LanguageProvider>
+          <PageTitleUpdater />
+          <BreadcrumbInjector />
           <ScrollToTop />
           <PageParallaxBackground>
             <div className="flex flex-col min-h-screen m-0 p-0">
