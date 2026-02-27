@@ -246,13 +246,13 @@ const Contact = () => {
             <div className="space-y-4">
               <div className="glass rounded-2xl overflow-hidden relative">
                 <GoogleMapsEmbed
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.8!2d11.603257!3d48.129653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ddf577d02e44d%3A0x4fae4d7ecba5e81e!2sEls%C3%A4sser%20Str.%2033%2C%2081667%20M%C3%BCnchen!5e0!3m2!1sde!2sde!4v1709000000000!5m2!1sde!2sde"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.8!2d11.603257!3d48.129653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e7534ffb1bdb1%3A0x751e036a37717a9f!2s%E2%80%9ENataLux%E2%80%9C%20Permanent%20Make%20Up%20Studio!5e0!3m2!1sde!2sde!4v1709000000000!5m2!1sde!2sde"
                   className="rounded-xl"
                   height="320"
                 />
               </div>
               <a
-                href="https://www.google.com/maps/dir/?api=1&destination=Elsässer+Straße+33+81667+München"
+                href="https://www.google.com/maps/dir/?api=1&destination=NataLux+Permanent+Make+Up+Studio+Elsässer+Straße+33+81667+München"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="glass rounded-2xl px-6 py-4 flex items-center justify-between group hover:border-brand-gold/30 border border-transparent transition-colors duration-300 block"

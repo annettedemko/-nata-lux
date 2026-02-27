@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ExternalLink, AlertTriangle } from 'lucide-react';
 
@@ -13,8 +14,13 @@ interface DikidiConsentDialogProps {
 
 const DikidiConsentDialog = ({ isOpen, onClose }: DikidiConsentDialogProps) => {
   const { language } = useLanguage();
+  const [mounted, setMounted] = useState(false);
 
-  if (!isOpen) return null;
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!isOpen || !mounted) return null;
 
   const handleAccept = () => {
     localStorage.setItem('dikidi-consent', 'accepted');
@@ -64,7 +70,11 @@ const DikidiConsentDialog = ({ isOpen, onClose }: DikidiConsentDialogProps) => {
 
   const t = content[language];
 
-  return (
+  // Use portal to render dialog in document.body.
+  // This avoids CSS stacking context issues when the dialog is inside
+  // a parent with CSS transform (e.g. motion.header from Framer Motion),
+  // which breaks position:fixed positioning.
+  return createPortal(
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4" onClick={onClose}>
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
       <div
@@ -113,7 +123,8 @@ const DikidiConsentDialog = ({ isOpen, onClose }: DikidiConsentDialogProps) => {
           </button>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };
 
