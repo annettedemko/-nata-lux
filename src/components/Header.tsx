@@ -7,11 +7,13 @@ import { Menu, X, Phone } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
+import DikidiConsentDialog, { useDikidiConsent } from './DikidiConsentDialog';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
   const pathname = usePathname();
+  const { isDialogOpen, openDikidi, closeDialog } = useDikidiConsent();
 
   const navigation = [
     { name: t('nav.services'), href: '/services' },
@@ -111,7 +113,7 @@ export const Header = () => {
 
             {/* CTA Button */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button className="bg-brand-gold hover:bg-brand-gold/90 text-white font-medium rounded-2xl shadow-soft">
+              <Button onClick={openDikidi} className="bg-brand-gold hover:bg-brand-gold/90 text-white font-medium rounded-2xl shadow-soft cursor-pointer">
                 {t('common.book')}
               </Button>
             </motion.div>
@@ -192,7 +194,7 @@ export const Header = () => {
                 </div>
               </div>
               
-              <Button className="w-full bg-brand-gold hover:bg-brand-gold/90 text-white font-medium rounded-xl">
+              <Button onClick={openDikidi} className="w-full bg-brand-gold hover:bg-brand-gold/90 text-white font-medium rounded-xl cursor-pointer">
                 {t('common.book')}
               </Button>
             </div>
@@ -200,6 +202,7 @@ export const Header = () => {
           </motion.div>
         )}
       </AnimatePresence>
+      <DikidiConsentDialog isOpen={isDialogOpen} onClose={closeDialog} />
     </motion.header>
   );
 };

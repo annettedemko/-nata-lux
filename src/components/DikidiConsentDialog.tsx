@@ -19,7 +19,10 @@ const DikidiConsentDialog = ({ isOpen, onClose }: DikidiConsentDialogProps) => {
   const handleAccept = () => {
     localStorage.setItem('dikidi-consent', 'accepted');
     localStorage.setItem('dikidi-consent-timestamp', new Date().toISOString());
-    window.open(DIKIDI_URL, '_blank');
+    const win = window.open(DIKIDI_URL, '_blank');
+    if (!win) {
+      window.location.href = DIKIDI_URL;
+    }
     onClose();
   };
 
@@ -125,7 +128,10 @@ export const useDikidiConsent = () => {
   const openDikidi = useCallback(() => {
     const consent = localStorage.getItem('dikidi-consent');
     if (consent === 'accepted') {
-      window.open(DIKIDI_URL, '_blank');
+      const win = window.open(DIKIDI_URL, '_blank');
+      if (!win) {
+        window.location.href = DIKIDI_URL;
+      }
     } else {
       setIsDialogOpen(true);
     }
