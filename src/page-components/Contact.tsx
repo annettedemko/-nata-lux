@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
-import { MapPin, Phone, Mail, Clock, Car, Train, Instagram } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Car, Train, Instagram, Star, Navigation, ExternalLink } from 'lucide-react';
 import { useState } from 'react';
 import Image from 'next/image';
 import { GoogleMapsEmbed } from '@/components/GoogleMapsEmbed';
@@ -246,28 +246,56 @@ const Contact = () => {
             <div className="space-y-4">
               <div className="glass rounded-2xl overflow-hidden relative">
                 <GoogleMapsEmbed
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.8!2d11.603257!3d48.129653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e7534ffb1bdb1%3A0x751e036a37717a9f!2s%E2%80%9ENataLux%E2%80%9C%20Permanent%20Make%20Up%20Studio!5e0!3m2!1sde!2sde!4v1709000000000!5m2!1sde!2sde"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2662.8!2d11.603257!3d48.129653!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e7534ffb1bdb1%3A0x751e036a37717a9f!2s%E2%80%9ENataLux%E2%80%9C%20Permanent%20Make%20Up%20Studio!5e0!3m2!1sde!2sde"
                   className="rounded-xl"
                   height="320"
                 />
               </div>
-              <a
-                href="https://www.google.com/maps/dir/?api=1&destination=NataLux+Permanent+Make+Up+Studio+Elsässer+Straße+33+81667+München"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="glass rounded-2xl px-6 py-4 flex items-center justify-between group hover:border-brand-gold/30 border border-transparent transition-colors duration-300 block"
-              >
-                <div>
-                  <p className="text-brand-espresso font-bold text-lg flex items-center gap-2">
-                    <MapPin className="w-5 h-5 text-brand-gold" />
-                    NataLux Studio
-                  </p>
-                  <p className="text-brand-coffee/70 text-sm ml-7">Elsässer Straße 33, 81667 München-Haidhausen</p>
+
+              {/* Business Profile Card */}
+              <div className="glass rounded-2xl px-6 py-5 border border-brand-gold/10">
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex-1">
+                    <a
+                      href="https://maps.app.goo.gl/7Pwt3QCEfy5zUHsS7"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group"
+                    >
+                      <p className="text-brand-espresso font-bold text-lg flex items-center gap-2 group-hover:text-brand-gold transition-colors">
+                        <MapPin className="w-5 h-5 text-brand-gold flex-shrink-0" />
+                        {language === 'de' ? '„NataLux" Permanent Make Up Studio' : language === 'ru' ? '„NataLux" Permanent Make Up Studio' : '„NataLux" Permanent Make Up Studio'}
+                      </p>
+                    </a>
+                    <p className="text-brand-coffee/70 text-sm ml-7 mt-1">Elsässer Straße 33, 81667 München-Haidhausen</p>
+                    <div className="flex items-center gap-2 ml-7 mt-2">
+                      <span className="text-brand-espresso font-semibold text-sm">5.0</span>
+                      <div className="flex items-center gap-0.5">
+                        {[1, 2, 3, 4, 5].map((i) => (
+                          <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                        ))}
+                      </div>
+                      <a
+                        href="https://maps.app.goo.gl/7Pwt3QCEfy5zUHsS7"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-brand-coffee/50 text-xs hover:text-brand-gold transition-colors underline"
+                      >
+                        Google Reviews
+                      </a>
+                    </div>
+                  </div>
+                  <a
+                    href="https://www.google.com/maps/dir/?api=1&destination=NataLux+Permanent+Make+Up+Studio+Elsässer+Straße+33+81667+München"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 bg-brand-gold text-white text-sm font-medium rounded-xl hover:bg-brand-gold/90 transition-all duration-300 whitespace-nowrap flex-shrink-0"
+                  >
+                    <Navigation className="w-4 h-4" />
+                    {language === 'de' ? 'Route' : language === 'ru' ? 'Маршрут' : 'Маршрут'}
+                  </a>
                 </div>
-                <p className="text-brand-gold text-sm font-semibold whitespace-nowrap">
-                  {language === 'de' ? 'Route →' : language === 'ru' ? 'Маршрут →' : 'Маршрут →'}
-                </p>
-              </a>
+              </div>
 
               {/* Quick Transport Info under Map */}
               <div className="glass rounded-2xl px-6 py-8">
