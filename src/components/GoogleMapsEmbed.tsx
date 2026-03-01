@@ -1,8 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { MapPin } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
+import Link from 'next/link'
 
 interface GoogleMapsEmbedProps {
   src: string
@@ -10,31 +11,52 @@ interface GoogleMapsEmbedProps {
   height?: string
 }
 
-export function GoogleMapsEmbed({ src, className = '', height = '300' }: GoogleMapsEmbedProps) {
+export function GoogleMapsEmbed({ src, className = '', height = '320' }: GoogleMapsEmbedProps) {
   const { language } = useLanguage()
-  const [consented, setConsented] = useState(false)
+  const [showMap, setShowMap] = useState(false)
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  useEffect(() => {
+    // If user already accepted cookies via banner, load map directly
+    const consent = localStorage.getItem('cookie-consent')
+    if (consent === 'accepted') {
+      setShowMap(true)
+    }
+    setIsLoaded(true)
+  }, [])
 
   const text = {
     de: {
-      title: 'Google Maps',
-      description: 'Beim Laden der Karte werden Daten an Google übertragen. Weitere Informationen finden Sie in unserer Datenschutzerklärung.',
-      button: 'Karte laden',
+      button: 'Interaktive Karte laden',
+      privacy: 'Beim Laden werden Daten an Google übertragen.',
+      privacyLink: 'Datenschutzerklärung',
     },
     ru: {
-      title: 'Google Maps',
-      description: 'При загрузке карты данные передаются Google. Дополнительную информацию вы найдёте в нашей Политике конфиденциальности.',
       button: 'Загрузить карту',
+      privacy: 'При загрузке данные передаются Google.',
+      privacyLink: 'Политика конфиденциальности',
     },
     ua: {
-      title: 'Google Maps',
-      description: 'При завантаженні карти дані передаються Google. Додаткову інформацію ви знайдете в нашій Політиці конфіденційності.',
       button: 'Завантажити карту',
+      privacy: 'При завантаженні дані передаються Google.',
+      privacyLink: 'Політика конфіденційності',
     },
   }
 
   const t = text[language as keyof typeof text] || text.de
 
-  if (consented) {
+  // SSR / loading: empty placeholder to prevent layout shift
+  if (!isLoaded) {
+    return (
+      <div
+        className={`bg-brand-latte/30 rounded-xl ${className}`}
+        style={{ minHeight: `${height}px`, width: '100%' }}
+      />
+    )
+  }
+
+  // Cookie consent accepted → load Google Maps directly
+  if (showMap) {
     return (
       <iframe
         src={src}
@@ -49,20 +71,52 @@ export function GoogleMapsEmbed({ src, className = '', height = '300' }: GoogleM
     )
   }
 
+  // Beautiful 2-click fallback with static map preview
   return (
     <div
-      className={`flex flex-col items-center justify-center bg-brand-latte/50 border border-brand-gold/20 rounded-xl text-center p-8 ${className}`}
+      className={`relative overflow-hidden rounded-xl group cursor-pointer ${className}`}
       style={{ minHeight: `${height}px` }}
+      onClick={() => setShowMap(true)}
     >
-      <MapPin className="w-10 h-10 text-brand-gold mb-3" />
-      <p className="font-heading font-semibold text-brand-espresso mb-2">{t.title}</p>
-      <p className="text-sm text-brand-coffee/70 mb-4 max-w-sm leading-relaxed">{t.description}</p>
-      <button
-        onClick={() => setConsented(true)}
-        className="px-6 py-2 bg-brand-espresso text-white font-medium rounded-xl hover:bg-brand-espresso/90 transition-all duration-300 text-sm"
+      {/* Static map preview (OpenStreetMap, no data transfer) */}
+      <div
+        className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+        style={{ backgroundImage: 'url(/map-preview.jpg)' }}
+      />
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-brand-espresso/60 via-brand-espresso/30 to-brand-espresso/10 transition-opacity duration-300" />
+
+      {/* Pin marker */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[130%]">
+        <div className="relative">
+          <MapPin className="w-10 h-10 text-red-500 drop-shadow-lg" fill="currentColor" strokeWidth={1.5} stroke="white" />
+          <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-3 h-1 bg-black/20 rounded-full blur-sm" />
+        </div>
+      </div>
+
+      {/* Load button */}
+      <div
+        className="relative z-10 flex flex-col items-center justify-end h-full p-6 pb-8"
+        style={{ minHeight: `${height}px` }}
       >
-        {t.button}
-      </button>
+        <button
+          onClick={(e) => {
+            e.stopPropagation()
+            setShowMap(true)
+          }}
+          className="px-6 py-3 bg-white/95 backdrop-blur-sm text-brand-espresso font-medium rounded-xl hover:bg-white transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 flex items-center gap-2"
+        >
+          <MapPin className="w-4 h-4 text-brand-gold" />
+          {t.button}
+        </button>
+        <p className="text-white/70 text-xs mt-3 max-w-xs text-center">
+          {t.privacy}{' '}
+          <Link href="/datenschutz" className="underline hover:text-white transition-colors">
+            {t.privacyLink}
+          </Link>
+        </p>
+      </div>
     </div>
   )
 }
