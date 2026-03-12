@@ -3,7 +3,7 @@
 import { Link } from '@/components/LinkAdapter'
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { Heart, Zap, Star, Waves, Activity, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Heart, Zap, Star, Waves, Activity, Sparkles, CheckCircle2, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import DikidiConsentDialog, { useDikidiConsent } from '@/components/DikidiConsentDialog';
 import { PremiumGallery } from '@/components/PremiumGallery';
@@ -22,6 +22,8 @@ const Massagen = () => {
         ? 'Аппаратный лимфодренаж против отёков и задержки воды. Стимулирует лимфоток и выводит токсины.'
         : 'Апаратний лімфодренаж проти набряків та затримки води. Стимулює лімфотік та виводить токсини.',
       keywords: language === 'de' ? 'Lymphdrainage Behandlung München · Apparative Lymphdrainage' : '',
+      href: '/services/rf-vakuum',
+      linkText: language === 'de' ? 'Mehr über RF-Vakuum' : language === 'ru' ? 'Подробнее о RF-вакууме' : 'Детальніше про RF-вакуум',
     },
     {
       icon: Activity,
@@ -32,6 +34,8 @@ const Massagen = () => {
         ? 'Целенаправленная процедура против целлюлита с RF-технологией и вакуумом. Видимые результаты уже после первого сеанса.'
         : 'Цілеспрямована процедура проти целюліту з RF-технологією та вакуумом. Видимі результати вже після першого сеансу.',
       keywords: language === 'de' ? 'Anti Cellulite Massage München · Cellulite Behandlung' : '',
+      href: '/services/rf-vakuum',
+      linkText: language === 'de' ? 'Mehr über RF-Vakuum' : language === 'ru' ? 'Подробнее о RF-вакууме' : 'Детальніше про RF-вакуум',
     },
     {
       icon: Zap,
@@ -42,6 +46,8 @@ const Massagen = () => {
         ? 'Аппаратный массаж для жиросжигания и формирования фигуры. Уменьшает объёмы на животе, бёдрах и ногах.'
         : 'Апаратний масаж для жироспалювання та формування фігури. Зменшує об\'єми на животі, стегнах та ногах.',
       keywords: language === 'de' ? 'Bodyforming München · Massage zur Fettverbrennung' : '',
+      href: '/services/kavitation',
+      linkText: language === 'de' ? 'Mehr über Kavitation' : language === 'ru' ? 'Подробнее о кавитации' : 'Детальніше про кавітацію',
     },
     {
       icon: Sparkles,
@@ -52,6 +58,8 @@ const Massagen = () => {
         ? 'Anti-Aging массаж с радиочастотами для подтяжки кожи и стимуляции коллагена. Заметно улучшает структуру кожи.'
         : 'Anti-Aging масаж з радіочастотами для підтяжки шкіри та стимуляції колагену. Помітно покращує структуру шкіри.',
       keywords: language === 'de' ? 'Hautstraffung München · Anti Aging Massage' : '',
+      href: '/services/rf-lifting',
+      linkText: language === 'de' ? 'Mehr über RF-Lifting' : language === 'ru' ? 'Подробнее о RF-лифтинге' : 'Детальніше про RF-ліфтинг',
     },
   ];
 
@@ -149,9 +157,16 @@ const Massagen = () => {
                       {massage.title}
                     </h2>
                   </div>
-                  <p className="text-brand-coffee/80 leading-relaxed">
+                  <p className="text-brand-coffee/80 leading-relaxed mb-4">
                     {massage.description}
                   </p>
+                  <Link
+                    href={massage.href}
+                    className="inline-flex items-center gap-2 text-brand-gold hover:text-brand-espresso font-medium transition-colors duration-300 group/link"
+                  >
+                    {massage.linkText}
+                    <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300" />
+                  </Link>
                 </motion.div>
               );
             })}
@@ -251,6 +266,65 @@ const Massagen = () => {
                 ? 'Процедура длится 30 минут и безболезненна. Для оптимальных результатов рекомендуется курс из 10 процедур.'
                 : 'Процедура триває 30 хвилин і безболісна. Для оптимальних результатів рекомендується курс із 10 процедур.'}
             </p>
+          </motion.section>
+
+          {/* Technologies Section */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mb-12"
+          >
+            <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-6 text-center">
+              {language === 'de' ? 'Unsere Technologien' : language === 'ru' ? 'Наши технологии' : 'Наші технології'}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {[
+                {
+                  href: '/services/rf-vakuum',
+                  title: language === 'de' ? 'RF-Vakuum Massage' : language === 'ru' ? 'RF-Вакуумный массаж' : 'RF-Вакуумний масаж',
+                  desc: language === 'de'
+                    ? 'Radiofrequenz + Vakuum für Lymphdrainage und Anti-Cellulite'
+                    : language === 'ru'
+                    ? 'Радиочастоты + вакуум для лимфодренажа и борьбы с целлюлитом'
+                    : 'Радіочастоти + вакуум для лімфодренажу та боротьби з целюлітом',
+                },
+                {
+                  href: '/services/kavitation',
+                  title: language === 'de' ? 'Kavitation' : language === 'ru' ? 'Кавитация' : 'Кавітація',
+                  desc: language === 'de'
+                    ? 'Ultraschall-Kavitation für Fettreduktion und Bodyforming'
+                    : language === 'ru'
+                    ? 'Ультразвуковая кавитация для жиросжигания и бодиформинга'
+                    : 'Ультразвукова кавітація для жироспалювання та бодіформінгу',
+                },
+                {
+                  href: '/services/rf-lifting',
+                  title: 'RF-Lifting',
+                  desc: language === 'de'
+                    ? 'Radiofrequenz-Lifting für Hautstraffung und Kollagenstimulation'
+                    : language === 'ru'
+                    ? 'RF-лифтинг для подтяжки кожи и стимуляции коллагена'
+                    : 'RF-ліфтинг для підтяжки шкіри та стимуляції колагену',
+                },
+              ].map((tech) => (
+                <Link
+                  key={tech.href}
+                  href={tech.href}
+                  className="glass-strong rounded-2xl p-6 hover-glow group block transition-all duration-300"
+                >
+                  <h3 className="text-lg font-heading font-semibold text-brand-espresso mb-2 group-hover:text-brand-gold transition-colors">
+                    {tech.title}
+                  </h3>
+                  <p className="text-sm text-brand-coffee/70 mb-3">{tech.desc}</p>
+                  <span className="inline-flex items-center gap-1 text-brand-gold text-sm font-medium">
+                    {language === 'de' ? 'Mehr erfahren' : language === 'ru' ? 'Подробнее' : 'Детальніше'}
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  </span>
+                </Link>
+              ))}
+            </div>
           </motion.section>
 
           {/* Gallery */}
