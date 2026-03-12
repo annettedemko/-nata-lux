@@ -67,6 +67,13 @@ const Index = () => {
       image: '/32.png',
     },
     {
+      title: t('categories.massagen'),
+      description: t('categories.massagen.desc'),
+      icon: Heart,
+      href: '/massagen',
+      image: '/IMG_8633.PNG',
+    },
+    {
       title: t('categories.training'),
       description: t('categories.training.desc'),
       icon: GraduationCap,
@@ -345,8 +352,10 @@ const Index = () => {
             </h2>
             <p className="text-base md:text-lg text-brand-coffee/70 max-w-2xl mx-auto leading-relaxed px-4">
               {language === 'de'
-                ? 'Entdecken Sie unser komplettes Serviceangebot — von Wimpern und Permanent Make-up bis Anti-Aging und Laser Behandlungen'
-                : 'Откройте для себя наш полный спектр услуг — от ресниц и перманента до anti-aging и лазера'}
+                ? 'Entdecken Sie unser komplettes Serviceangebot — von Lash&Brow und Permanent Make-up bis Anti-Aging, Massagen und Laser'
+                : language === 'ru'
+                ? 'Откройте для себя наш полный спектр услуг — от Lash&Brow и перманента до anti-aging, массажей и лазера'
+                : 'Відкрийте для себе наш повний спектр послуг — від Lash&Brow і перманенту до anti-aging, масажів та лазера'}
             </p>
           </motion.div>
 

@@ -15,7 +15,7 @@ const Prices = () => {
     {
       id: 'lashes-brows',
       icon: Sparkles,
-      title: language === 'de' ? 'Wimpern & Augenbrauen' : language === 'ru' ? 'Ресницы и брови' : 'Вії та брови',
+      title: 'Lash & Brow',
       consultation: language === 'de' ? '🕊 Konsultation vor der Behandlung — kostenlos.' : language === 'ru' ? '🕊 Консультация перед процедурой — бесплатная.' : '🕊 Консультація перед процедурою — безкоштовна.',
       sections: [
         {
@@ -284,7 +284,28 @@ const Prices = () => {
         },
       ]
     },
-    // 6. Gesichtspflege
+    // 6. Massagen
+    {
+      id: 'massagen',
+      icon: Heart,
+      title: language === 'de' ? 'Apparative Massagen' : language === 'ru' ? 'Аппаратные массажи' : 'Апаратні масажі',
+      consultation: language === 'de' ? '🕊 Konsultation vor der Behandlung — kostenlos.' : language === 'ru' ? '🕊 Консультация перед процедурой — бесплатная.' : '🕊 Консультація перед процедурою — безкоштовна.',
+      sections: [
+        {
+          name: language === 'de' ? 'Apparative Massage (30 Min)' : language === 'ru' ? 'Аппаратный массаж (30 мин)' : 'Апаратний масаж (30 хв)',
+          description: language === 'de'
+            ? 'Lymphdrainage · Anti-Cellulite · Bodyforming · Hautstraffung · Fettverbrennung. RF + Vakuum + Infrarot.'
+            : language === 'ru'
+            ? 'Лимфодренаж · Антицеллюлитный · Бодиформинг · Подтяжка кожи · Жиросжигание. RF + вакуум + инфракрасный свет.'
+            : 'Лімфодренаж · Антицелюлітний · Бодіформінг · Підтяжка шкіри · Жироспалювання. RF + вакуум + інфрачервоне світло.',
+          items: [
+            { name: language === 'de' ? 'Einzelbehandlung' : language === 'ru' ? 'Разовая процедура' : 'Разова процедура', price: '75 €' },
+            { name: language === 'de' ? 'Kurs (10 Behandlungen)' : language === 'ru' ? 'Курс (10 процедур)' : 'Курс (10 процедур)', price: '650 €' },
+          ]
+        },
+      ]
+    },
+    // 7. Gesichtspflege
     {
       id: 'facial-care',
       icon: Droplets,

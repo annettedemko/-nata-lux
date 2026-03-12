@@ -28,7 +28,7 @@ const translations = {
     // Hero
     'hero.title': 'Aesthetic Studio München – NATA LUX',
     'hero.subtitle': 'Premium Beauty Studio in München – Hochwertige Behandlungen für natürliche Schönheit',
-    'hero.services': 'Wimpern · Permanent Make-up · Laser · Anti-Aging',
+    'hero.services': 'Lash&Brow · Permanent Make-up · Laser · Anti-Aging · Massagen',
     'hero.subtitle1': 'Moderne Ästhetik mit natürlichen Ergebnissen.',
     'hero.subtitle2': 'Beratung inklusive.',
     'hero.cta.book': 'Termin buchen',
@@ -114,7 +114,7 @@ const translations = {
 
     // Service Categories (Main)
     'categories.title': 'Unsere Dienstleistungen',
-    'categories.lashesbrows': 'Lashes & Brows',
+    'categories.lashesbrows': 'Lash & Brow',
     'categories.lashesbrows.desc': 'Wimpernverlängerung, Laminierung, Augenbrauen-Styling',
     'categories.pmu': 'Permanent Make-up',
     'categories.pmu.desc': 'Augenbrauen, Lippen, Wimpernlinie. Natürlich & langanhaltend',
@@ -122,13 +122,15 @@ const translations = {
     'categories.laser.desc': 'Dauerhafte Haarentfernung mit modernsten Lasern',
     'categories.antiaging': 'Anti-Aging & Kosmetologie',
     'categories.antiaging.desc': 'Apparative Behandlungen für Gesicht und Körper',
+    'categories.massagen': 'Massagen',
+    'categories.massagen.desc': 'Apparative Massagen: Lymphdrainage, Anti-Cellulite, Bodyforming',
     'categories.training': 'Schulungen',
     'categories.training.desc': 'Professionelle Ausbildung in der Beauty-Branche',
     'categories.shop': 'Kosmetik-Shop',
     'categories.shop.desc': 'Premium-Produkte für zu Hause und professionelle Anwendung',
 
     // Lashes & Brows subcategories
-    'lashesbrows.title': 'Lashes & Brows',
+    'lashesbrows.title': 'Lash & Brow',
     'lashesbrows.subtitle': 'Perfekte Wimpern und Augenbrauen',
     'lashesbrows.extensions': 'Wimpernverlängerung',
     'lashesbrows.extensions.desc': 'Klassik, 2D, 3D, Strahlen, L-Curl, untere Wimpern',
@@ -207,7 +209,7 @@ const translations = {
     // Hero
     'hero.title': 'Aesthetic Studio München – NATA LUX',
     'hero.subtitle': 'Премиум beauty-студия в Мюнхене – качественные процедуры для естественной красоты',
-    'hero.services': 'Ресницы · Перманент · Лазер · Anti-Aging',
+    'hero.services': 'Lash&Brow · Перманент · Лазер · Anti-Aging · Массажи',
     'hero.subtitle1': 'Современная эстетика с естественными результатами.',
     'hero.subtitle2': 'Консультация включена.',
     'hero.cta.book': 'Записаться',
@@ -293,7 +295,7 @@ const translations = {
 
     // Service Categories (Main)
     'categories.title': 'Наши услуги',
-    'categories.lashesbrows': 'Брови и ресницы',
+    'categories.lashesbrows': 'Lash & Brow',
     'categories.lashesbrows.desc': 'Наращивание, ламинирование, оформление бровей',
     'categories.pmu': 'Перманентный макияж',
     'categories.pmu.desc': 'Брови, губы, межресничка. Натурально и долговечно',
@@ -301,13 +303,15 @@ const translations = {
     'categories.laser.desc': 'Удаление волос навсегда с современными лазерами',
     'categories.antiaging': 'Anti-Aging и косметология',
     'categories.antiaging.desc': 'Аппаратные процедуры для лица и тела',
+    'categories.massagen': 'Массажи',
+    'categories.massagen.desc': 'Аппаратные массажи: лимфодренаж, антицеллюлитный, бодиформинг',
     'categories.training': 'Обучение',
     'categories.training.desc': 'Профессиональное обучение в бьюти-индустрии',
     'categories.shop': 'Магазин косметики',
     'categories.shop.desc': 'Премиум-продукты для дома и профессионального использования',
 
     // Lashes & Brows subcategories
-    'lashesbrows.title': 'Брови и ресницы',
+    'lashesbrows.title': 'Lash & Brow',
     'lashesbrows.subtitle': 'Идеальные ресницы и брови',
     'lashesbrows.extensions': 'Наращивание ресниц',
     'lashesbrows.extensions.desc': 'Классика, 2D, 3D, лучики, изгиб L, нижние ресницы',
@@ -386,7 +390,7 @@ const translations = {
     // Hero
     'hero.title': 'Aesthetic Studio München – NATA LUX',
     'hero.subtitle': 'Преміум beauty-студія в Мюнхені – якісні процедури для природної краси',
-    'hero.services': 'Вії · Перманент · Лазер · Anti-Aging',
+    'hero.services': 'Lash&Brow · Перманент · Лазер · Anti-Aging · Масажі',
     'hero.subtitle1': 'Сучасна естетика з природними результатами.',
     'hero.subtitle2': 'Консультація включена.',
     'hero.cta.book': 'Записатися',
@@ -472,7 +476,7 @@ const translations = {
 
     // Service Categories (Main)
     'categories.title': 'Наші послуги',
-    'categories.lashesbrows': 'Брови та вії',
+    'categories.lashesbrows': 'Lash & Brow',
     'categories.lashesbrows.desc': 'Нарощування, ламінування, оформлення брів',
     'categories.pmu': 'Перманентний макіяж',
     'categories.pmu.desc': 'Брови, губи, міжвійка. Природно і довговічно',
@@ -480,13 +484,15 @@ const translations = {
     'categories.laser.desc': 'Видалення волосся назавжди із сучасними лазерами',
     'categories.antiaging': 'Anti-Aging та косметологія',
     'categories.antiaging.desc': 'Апаратні процедури для обличчя та тіла',
+    'categories.massagen': 'Масажі',
+    'categories.massagen.desc': 'Апаратні масажі: лімфодренаж, антицелюлітний, бодіформінг',
     'categories.training': 'Навчання',
     'categories.training.desc': 'Професійне навчання в б\'юті-індустрії',
     'categories.shop': 'Магазин косметики',
     'categories.shop.desc': 'Преміум-продукти для дому та професійного використання',
 
     // Lashes & Brows subcategories
-    'lashesbrows.title': 'Брови та вії',
+    'lashesbrows.title': 'Lash & Brow',
     'lashesbrows.subtitle': 'Ідеальні вії та брови',
     'lashesbrows.extensions': 'Нарощування вій',
     'lashesbrows.extensions.desc': 'Класика, 2D, 3D, промінці, вигин L, нижні вії',

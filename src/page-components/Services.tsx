@@ -12,7 +12,7 @@ import {
   Scissors,
   Shield,
   Eye,
-  Palette
+  Palette,
 } from 'lucide-react';
 
 const Services = () => {
@@ -138,6 +138,20 @@ const Services = () => {
     },
   ];
 
+  // Категория 5: Массажи
+  const massagenServices = [
+    {
+      title: language === 'de' ? 'Apparative Massagen' : language === 'ru' ? 'Аппаратные массажи' : 'Апаратні масажі',
+      description: language === 'de'
+        ? 'Lymphdrainage, Anti-Cellulite, Bodyforming, Hautstraffung — RF-Vakuum mit Infrarot'
+        : language === 'ru' ? 'Лимфодренаж, антицеллюлитный, бодиформинг, подтяжка кожи — RF-вакуум с инфракрасным светом'
+        : 'Лімфодренаж, антицелюлітний, бодіформінг, підтяжка шкіри — RF-вакуум з інфрачервоним світлом',
+      icon: Heart,
+      href: '/massagen',
+      image: '/83.jpg',
+    },
+  ];
+
   return (
     <div className="relative min-h-screen">
       {/* ЧИСТЫЙ ВИДИМЫЙ ФОН */}
@@ -251,7 +265,7 @@ const Services = () => {
           </div>
 
           {/* Категория 4 */}
-          <div id="anti-aging" className="mb-24 scroll-mt-24">
+          <div id="anti-aging" className="mb-16 md:mb-24 lg:mb-32 scroll-mt-24">
             <div className="flex items-end mb-8 md:mb-12 border-b border-brand-espresso/10 pb-4 md:pb-6">
               <div className="flex items-center gap-2 md:gap-4">
                 <div
@@ -270,6 +284,31 @@ const Services = () => {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 gap-4 md:gap-6 lg:gap-8">
               {antiagingServices.map((service) => (
+                <ServiceCard key={service.title} {...service} />
+              ))}
+            </div>
+          </div>
+
+          {/* Категория 5: Массажи */}
+          <div id="massagen" className="mb-24 scroll-mt-24">
+            <div className="flex items-end mb-8 md:mb-12 border-b border-brand-espresso/10 pb-4 md:pb-6">
+              <div className="flex items-center gap-2 md:gap-4">
+                <div
+                  className="w-0.5 md:w-1 h-12 md:h-16 bg-brand-gold"
+                  style={{ boxShadow: '0 0 20px hsla(38, 70%, 70%, 0.5)' }}
+                ></div>
+                <div>
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-brand-espresso tracking-tight mb-1 break-words" style={{ wordWrap: 'break-word', overflowWrap: 'break-word', hyphens: 'none' }}>
+                    {language === 'de' ? 'Massagen' : language === 'ru' ? 'Массажи' : 'Масажі'}
+                  </h2>
+                  <p className="text-brand-espresso/60 text-sm md:text-base lg:text-lg font-light italic">
+                    {language === 'de' ? 'Apparative Massagen für Körper und Silhouette' : language === 'ru' ? 'Аппаратные массажи для тела и силуэта' : 'Апаратні масажі для тіла та силуету'}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 gap-4 md:gap-6 lg:gap-8">
+              {massagenServices.map((service) => (
                 <ServiceCard key={service.title} {...service} />
               ))}
             </div>

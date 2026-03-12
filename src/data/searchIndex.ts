@@ -23,7 +23,7 @@ export const searchIndex: SearchItem[] = [
   // Categories
   {
     id: 'lashes-brows',
-    title: { de: 'Lashes & Brows', ru: 'Брови и ресницы' },
+    title: { de: 'Lash & Brow', ru: 'Lash & Brow' },
     description: {
       de: 'Wimpernverlängerung, Laminierung, Augenbrauen-Styling',
       ru: 'Наращивание, ламинирование, оформление бровей'
@@ -78,6 +78,20 @@ export const searchIndex: SearchItem[] = [
     }
   },
   {
+    id: 'massagen',
+    title: { de: 'Massagen', ru: 'Массажи' },
+    description: {
+      de: 'Apparative Massagen: Lymphdrainage, Anti-Cellulite, Bodyforming, Vakuum Massage',
+      ru: 'Аппаратные массажи: лимфодренаж, антицеллюлитный, бодиформинг, вакуумный массаж'
+    },
+    category: { de: 'Kategorie', ru: 'Категория' },
+    path: '/massagen',
+    keywords: {
+      de: ['massage', 'massagen', 'lymphdrainage', 'anti-cellulite', 'cellulite', 'bodyforming', 'vakuum', 'fettverbrennung', 'abnehmen', 'figurformung', 'hautstraffung', 'straffend'],
+      ru: ['массаж', 'массажи', 'лимфодренаж', 'антицеллюлитный', 'целлюлит', 'бодиформинг', 'вакуумный', 'похудение', 'жиросжигание']
+    }
+  },
+  {
     id: 'training',
     title: { de: 'Schulungen', ru: 'Обучение' },
     description: {
@@ -114,7 +128,7 @@ export const searchIndex: SearchItem[] = [
       de: 'Klassik, 2D, 3D, Strahlen, L-Curl, untere Wimpern',
       ru: 'Классика, 2D, 3D, лучики, изгиб L, нижние ресницы'
     },
-    category: { de: 'Lashes & Brows', ru: 'Брови и ресницы' },
+    category: { de: 'Lash & Brow', ru: 'Lash & Brow' },
     path: '/services/wimpernverlaengerung',
     keywords: {
       de: ['wimpernverlängerung', 'lash extensions', '2d', '3d', 'volume'],
@@ -128,7 +142,7 @@ export const searchIndex: SearchItem[] = [
       de: 'Natürlicher Curl und gepflegte Form',
       ru: 'Натуральный изгиб и ухоженная форма'
     },
-    category: { de: 'Lashes & Brows', ru: 'Брови и ресницы' },
+    category: { de: 'Lash & Brow', ru: 'Lash & Brow' },
     path: '/services/wimpern-augenbrauen-laminierung',
     keywords: {
       de: ['lash lifting', 'brow lifting', 'laminierung', 'curl', 'wimpern', 'augenbrauen', 'form'],

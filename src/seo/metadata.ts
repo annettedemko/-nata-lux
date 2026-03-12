@@ -115,6 +115,18 @@ export const PAGE_SEO: Record<string, PageSeoData> = {
       ua: 'Магазин косметики RENEW – Nata Lux Мюнхен',
     },
   },
+  '/massagen': {
+    metadata: createPageMeta(
+      '/massagen',
+      'Apparative Massagen München – Lymphdrainage, Anti-Cellulite, Bodyforming | Nata Lux',
+      'Professionelle apparative Massagen in München: Lymphdrainage, Anti-Cellulite Massage, Bodyforming, Vakuum Massage, RF Massage, Hautstraffung. Ab 75€. Jetzt Termin buchen!'
+    ),
+    titles: {
+      de: 'Apparative Massagen München – Nata Lux',
+      ru: 'Аппаратные массажи Мюнхен – Nata Lux',
+      ua: 'Апаратні масажі Мюнхен – Nata Lux',
+    },
+  },
   '/laser': {
     metadata: createPageMeta(
       '/laser',
@@ -166,13 +178,13 @@ export const PAGE_SEO: Record<string, PageSeoData> = {
   '/lashes-brows': {
     metadata: createPageMeta(
       '/lashes-brows',
-      'Wimpern & Augenbrauen München – Verlängerung, Laminierung | Nata Lux',
+      'Lash & Brow München – Wimpernverlängerung, Laminierung | Nata Lux',
       'Wimpernverlängerung, Wimpern- und Augenbrauen-Laminierung in München. Natürliche Fülle und perfekte Form. Jetzt Termin buchen!'
     ),
     titles: {
-      de: 'Wimpern & Augenbrauen – Nata Lux München',
-      ru: 'Ресницы и брови – Nata Lux Мюнхен',
-      ua: 'Вії та брови – Nata Lux Мюнхен',
+      de: 'Lash & Brow – Nata Lux München',
+      ru: 'Lash & Brow – Nata Lux Мюнхен',
+      ua: 'Lash & Brow – Nata Lux Мюнхен',
     },
   },
 
