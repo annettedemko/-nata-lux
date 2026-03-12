@@ -3,7 +3,7 @@
 import { Link } from '@/components/LinkAdapter'
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { Heart, Zap, Waves, Activity, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Heart, Zap, Waves, Activity, Sparkles, TrendingDown, CheckCircle2, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import DikidiConsentDialog, { useDikidiConsent } from '@/components/DikidiConsentDialog';
 import { PremiumGallery } from '@/components/PremiumGallery';
@@ -15,37 +15,56 @@ const Massagen = () => {
   const massageTypes = [
     {
       icon: Waves,
-      title: language === 'de' ? 'Lymphdrainage' : language === 'ru' ? 'Лимфодренажный массаж' : 'Лімфодренажний масаж',
+      title: language === 'de' ? 'Lymphdrainage Behandlung' : language === 'ru' ? 'Лимфодренажный аппаратный массаж' : 'Лімфодренажний апаратний масаж',
       description: language === 'de'
-        ? 'Apparative Lymphdrainage gegen Schwellungen und Wassereinlagerungen. Fördert den Lymphfluss und entgiftet den Körper.'
+        ? 'Apparative Lymphdrainage München gegen Schwellungen und Wassereinlagerungen. Fördert den Lymphfluss, entgiftet den Körper und reduziert Ödeme. Lymphdrainage gegen Schwellungen — effektiv und schmerzfrei.'
         : language === 'ru'
-        ? 'Аппаратный лимфодренаж против отёков и задержки воды. Стимулирует лимфоток и выводит токсины.'
-        : 'Апаратний лімфодренаж проти набряків та затримки води. Стимулює лімфотік та виводить токсини.',
-      keywords: language === 'de' ? 'Lymphdrainage Behandlung München · Apparative Lymphdrainage' : '',
+        ? 'Аппаратный лимфодренаж против отёков и задержки воды. Стимулирует лимфоток, выводит токсины и уменьшает отёчность. Эффективно и безболезненно.'
+        : 'Апаратний лімфодренаж проти набряків та затримки води. Стимулює лімфотік, виводить токсини та зменшує набряклість. Ефективно та безболісно.',
       href: '/services/rf-vakuum',
       linkText: language === 'de' ? 'Mehr über RF-Vakuum' : language === 'ru' ? 'Подробнее о RF-вакууме' : 'Детальніше про RF-вакуум',
     },
     {
       icon: Activity,
-      title: language === 'de' ? 'Anti-Cellulite Massage' : language === 'ru' ? 'Антицеллюлитный массаж' : 'Антицелюлітний масаж',
+      title: language === 'de' ? 'Anti-Cellulite Massage' : language === 'ru' ? 'Антицеллюлитный аппаратный массаж' : 'Антицелюлітний апаратний масаж',
       description: language === 'de'
-        ? 'Gezielte Behandlung gegen Cellulite mit RF-Technologie und Vakuum. Sichtbare Ergebnisse ab der ersten Sitzung möglich.'
+        ? 'Cellulite Behandlung München mit RF-Technologie und Vakuum. Gezielte Cellulite Massage zur Reduzierung von Orangenhaut. Cellulite reduzieren — sichtbare Ergebnisse ab der ersten Sitzung möglich.'
         : language === 'ru'
-        ? 'Целенаправленная процедура против целлюлита с RF-технологией и вакуумом. Видимые результаты уже после первого сеанса.'
-        : 'Цілеспрямована процедура проти целюліту з RF-технологією та вакуумом. Видимі результати вже після першого сеансу.',
-      keywords: language === 'de' ? 'Anti Cellulite Massage München · Cellulite Behandlung' : '',
+        ? 'Целенаправленная процедура против целлюлита с RF-технологией и вакуумом. Уменьшение «апельсиновой корки». Видимые результаты уже после первого сеанса.'
+        : 'Цілеспрямована процедура проти целюліту з RF-технологією та вакуумом. Зменшення «апельсинової кірки». Видимі результати вже після першого сеансу.',
       href: '/services/rf-vakuum',
       linkText: language === 'de' ? 'Mehr über RF-Vakuum' : language === 'ru' ? 'Подробнее о RF-вакууме' : 'Детальніше про RF-вакуум',
     },
     {
       icon: Zap,
-      title: language === 'de' ? 'Bodyforming Massage' : language === 'ru' ? 'Массаж для похудения' : 'Масаж для схуднення',
+      title: language === 'de' ? 'Bodyforming Massage' : language === 'ru' ? 'Аппаратный массаж для похудения' : 'Апаратний масаж для схуднення',
       description: language === 'de'
-        ? 'Apparative Massage zur Fettverbrennung und Figurformung. Reduziert Umfänge an Bauch, Hüften und Oberschenkeln.'
+        ? 'Bodyforming Behandlung München — apparative Massage zur Fettverbrennung und Figurformung. Abnehmen Behandlung mit Kavitation und Vakuum. Reduziert Umfänge an Bauch, Hüften und Oberschenkeln.'
         : language === 'ru'
-        ? 'Аппаратный массаж для жиросжигания и формирования фигуры. Уменьшает объёмы на животе, бёдрах и ногах.'
-        : 'Апаратний масаж для жироспалювання та формування фігури. Зменшує об\'єми на животі, стегнах та ногах.',
-      keywords: language === 'de' ? 'Bodyforming München · Massage zur Fettverbrennung' : '',
+        ? 'Аппаратный массаж для жиросжигания и формирования фигуры. Кавитация и вакуум для похудения. Уменьшает объёмы на животе, бёдрах и ногах.'
+        : 'Апаратний масаж для жироспалювання та формування фігури. Кавітація та вакуум для схуднення. Зменшує об\'єми на животі, стегнах та ногах.',
+      href: '/services/kavitation',
+      linkText: language === 'de' ? 'Mehr über Kavitation' : language === 'ru' ? 'Подробнее о кавитации' : 'Детальніше про кавітацію',
+    },
+    {
+      icon: Sparkles,
+      title: language === 'de' ? 'Straffende Massage' : language === 'ru' ? 'Аппаратный массаж для омоложения кожи' : 'Апаратний масаж для омолодження шкіри',
+      description: language === 'de'
+        ? 'Hautstraffung Behandlung München mit Radiofrequenz. Anti-Aging Massage für den ganzen Körper — kollagen stimulierende Behandlung für straffere, jüngere Haut. Straffende Massage München mit sichtbarem Ergebnis.'
+        : language === 'ru'
+        ? 'Подтяжка кожи тела с помощью радиочастот. Anti-Aging массаж для всего тела — стимуляция коллагена для упругой, молодой кожи. Видимый результат уже после первых сеансов.'
+        : 'Підтяжка шкіри тіла за допомогою радіочастот. Anti-Aging масаж для всього тіла — стимуляція колагену для пружної, молодої шкіри. Видимий результат вже після перших сеансів.',
+      href: '/services/rf-vakuum',
+      linkText: language === 'de' ? 'Mehr über RF-Vakuum' : language === 'ru' ? 'Подробнее о RF-вакууме' : 'Детальніше про RF-вакуум',
+    },
+    {
+      icon: TrendingDown,
+      title: language === 'de' ? 'Umfänge reduzieren' : language === 'ru' ? 'Массаж убирает объёмы' : 'Масаж прибирає об\'єми',
+      description: language === 'de'
+        ? 'Figurformung Behandlung München — die apparative Massage reduziert gezielt Körperumfänge. Kombination aus RF-Radiofrequenz Massage, Vakuum Massage und Kavitation für messbare Ergebnisse an Bauch, Taille und Hüften.'
+        : language === 'ru'
+        ? 'Аппаратный массаж целенаправленно убирает объёмы тела. Комбинация RF-радиочастот, вакуумного массажа и кавитации для измеримых результатов на животе, талии и бёдрах.'
+        : 'Апаратний масаж цілеспрямовано прибирає об\'єми тіла. Комбінація RF-радіочастот, вакуумного масажу та кавітації для вимірюваних результатів на животі, талії та стегнах.',
       href: '/services/kavitation',
       linkText: language === 'de' ? 'Mehr über Kavitation' : language === 'ru' ? 'Подробнее о кавитации' : 'Детальніше про кавітацію',
     },
@@ -55,7 +74,7 @@ const Massagen = () => {
     'Lymphdrainage und Entschlackung',
     'Cellulite-Reduktion',
     'Umfänge reduzieren',
-    'Straffung der Körperhaut',
+    'Hautstraffung und Kollagenstimulation',
     'Fettverbrennung und Bodyforming',
     'Verbesserung der Durchblutung',
     'Entspannung und Wohlbefinden',
@@ -64,7 +83,7 @@ const Massagen = () => {
     'Лимфодренаж и детоксикация',
     'Уменьшение целлюлита',
     'Уменьшение объёмов',
-    'Подтяжка кожи тела',
+    'Подтяжка кожи и стимуляция коллагена',
     'Жиросжигание и бодиформинг',
     'Улучшение кровообращения',
     'Расслабление и хорошее самочувствие',
@@ -73,7 +92,7 @@ const Massagen = () => {
     'Лімфодренаж та детоксикація',
     'Зменшення целюліту',
     'Зменшення об\'ємів',
-    'Підтяжка шкіри тіла',
+    'Підтяжка шкіри та стимуляція колагену',
     'Жироспалювання та бодіформінг',
     'Покращення кровообігу',
     'Розслаблення та гарне самопочуття',
@@ -113,7 +132,7 @@ const Massagen = () => {
               {language === 'de' ? 'Apparative Massagen München' : language === 'ru' ? 'Аппаратные массажи в Мюнхене' : 'Апаратні масажі в Мюнхені'}
             </h1>
             <p className="text-xl text-brand-gold font-heading mb-4">
-              {language === 'de' ? 'Lymphdrainage · Anti-Cellulite · Bodyforming · Figurformung' : language === 'ru' ? 'Лимфодренаж · Антицеллюлитный · Бодиформинг · Формирование фигуры' : 'Лімфодренаж · Антицелюлітний · Бодіформінг · Формування фігури'}
+              {language === 'de' ? 'Lymphdrainage · Anti-Cellulite · Bodyforming · Hautstraffung · Figurformung' : language === 'ru' ? 'Лимфодренаж · Антицеллюлитный · Похудение · Омоложение кожи · Убирает объёмы' : 'Лімфодренаж · Антицелюлітний · Схуднення · Омолодження шкіри · Прибирає об\'єми'}
             </p>
             <p className="text-lg text-brand-coffee/80 max-w-3xl mx-auto leading-relaxed">
               {language === 'de'
@@ -320,6 +339,39 @@ const Massagen = () => {
             ]}
             title={language === 'de' ? 'Unsere Behandlungen' : language === 'ru' ? 'Наши процедуры' : 'Наші процедури'}
           />
+
+          {/* SEO Keywords Section */}
+          {language === 'de' && (
+            <motion.section
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="glass-strong rounded-2xl p-8 mb-12"
+            >
+              <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-6">
+                Apparative Massage München — Alle Behandlungen
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-brand-coffee/70 text-sm leading-relaxed">
+                <div>
+                  <h3 className="font-semibold text-brand-espresso text-base mb-2">Lymphdrainage München</h3>
+                  <p>Lymphdrainage Behandlung München — apparative Lymphdrainage gegen Schwellungen, Wassereinlagerungen und Ödeme. Professionelle Lymphdrainage gegen Schwellungen München in unserem Studio in Haidhausen.</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-brand-espresso text-base mb-2">Anti-Cellulite München</h3>
+                  <p>Anti Cellulite Massage München — effektive Cellulite Behandlung mit RF und Vakuum. Cellulite Massage München für sichtbare Ergebnisse. Cellulite reduzieren Behandlung München.</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-brand-espresso text-base mb-2">Bodyforming & Figurformung</h3>
+                  <p>Bodyforming Massage München und Bodyforming Behandlung München. Massage zur Fettverbrennung München, Abnehmen Behandlung München. Figurformung Behandlung München mit modernster Technologie.</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-brand-espresso text-base mb-2">Straffende & Anti-Aging Massage</h3>
+                  <p>Straffende Massage München — Hautstraffung Behandlung München mit Radiofrequenz. Anti Aging Massage München, kollagen stimulierende Behandlung München. RF Radiofrequenz Massage und Vakuum Massage München.</p>
+                </div>
+              </div>
+            </motion.section>
+          )}
 
           {/* CTA */}
           <motion.div
