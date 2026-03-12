@@ -400,6 +400,68 @@ const Index = () => {
               />
             ))}
           </div>
+
+          {/* Massagen Promo Banner */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="mt-8 md:mt-12 max-w-4xl mx-auto"
+          >
+            <Link href="/massagen" className="block group">
+              <div className="relative overflow-hidden rounded-2xl bg-gold-gradient p-6 md:p-8 transition-all duration-300 group-hover:shadow-2xl group-hover:scale-[1.01]">
+                <div className="relative z-10 flex flex-col md:flex-row items-center gap-4 md:gap-8">
+                  <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/20 flex items-center justify-center">
+                    <Heart className="w-8 h-8 md:w-10 md:h-10 text-white" />
+                  </div>
+                  <div className="flex-grow text-center md:text-left">
+                    <h3 className="text-xl md:text-2xl font-heading font-semibold text-white mb-2">
+                      {language === 'de' ? 'Apparative Massagen — NEU!' : language === 'ru' ? 'Аппаратные массажи — НОВИНКА!' : 'Апаратні масажі — НОВИНКА!'}
+                    </h3>
+                    <p className="text-white/90 text-sm md:text-base mb-3">
+                      {language === 'de'
+                        ? 'Lymphdrainage · Anti-Cellulite · Bodyforming · Hautstraffung · Figurformung'
+                        : language === 'ru'
+                        ? 'Лимфодренаж · Антицеллюлитный · Похудение · Омоложение кожи · Убирает объёмы'
+                        : 'Лімфодренаж · Антицелюлітний · Схуднення · Омолодження шкіри · Прибирає об\'єми'}
+                    </p>
+                    <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6">
+                      <span className="text-white font-heading font-bold text-2xl md:text-3xl">
+                        75 €
+                        <span className="text-white/70 text-sm font-normal ml-1">
+                          {language === 'de' ? '/ Behandlung' : language === 'ru' ? '/ процедура' : '/ процедура'}
+                        </span>
+                      </span>
+                      <span className="bg-white/20 backdrop-blur-sm text-white text-xs md:text-sm font-medium px-4 py-1.5 rounded-full border border-white/30">
+                        {language === 'de'
+                          ? '10 Sitzungen = 650 € (100 € Rabatt!)'
+                          : language === 'ru'
+                          ? '10 сеансов = 650 € (скидка 100 €!)'
+                          : '10 сеансів = 650 € (знижка 100 €!)'}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex-shrink-0 hidden md:block">
+                    <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                      <ChevronRight className="w-5 h-5 text-white group-hover:translate-x-0.5 transition-transform" />
+                    </div>
+                  </div>
+                </div>
+                <p className="relative z-10 text-center text-white/80 text-xs md:text-sm mt-3 font-medium">
+                  {language === 'de'
+                    ? '⚡ Anzahl der Angebote begrenzt! Beeilen Sie sich!'
+                    : language === 'ru'
+                    ? '⚡ Количество предложений ограничено! Поторопитесь!'
+                    : '⚡ Кількість пропозицій обмежена! Поспішайте!'}
+                </p>
+                {/* Decorative circles */}
+                <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/5 rounded-full" />
+                <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-white/5 rounded-full" />
+              </div>
+            </Link>
+          </motion.div>
+
         </div>
       </section>
 

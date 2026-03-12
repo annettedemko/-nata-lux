@@ -14,6 +14,7 @@ export const SearchBar = () => {
   const { language, t } = useLanguage();
   const router = useRouter();
   const searchRef = useRef<HTMLDivElement>(null);
+  const searchLang = (language === 'ua' ? 'ru' : language) as 'de' | 'ru';
 
   // Search function - searches across both languages
   const performSearch = (searchQuery: string) => {
@@ -66,8 +67,7 @@ export const SearchBar = () => {
   }, []);
 
   const handleResultClick = (path: string) => {
-    const fullPath = language === 'ru' ? `/ru${path}` : path;
-    router.push(fullPath);
+    router.push(path);
     setQuery('');
     setResults([]);
     setIsOpen(false);
@@ -175,10 +175,10 @@ export const SearchBar = () => {
                   </div>
                   <div className="flex-grow min-w-0">
                     <div className="font-semibold text-brand-espresso mb-1.5 group-hover:text-brand-gold transition-colors">
-                      {item.title[language]}
+                      {item.title[searchLang]}
                     </div>
                     <div className="text-sm text-brand-coffee/70 line-clamp-1 mb-2">
-                      {item.description[language]}
+                      {item.description[searchLang]}
                     </div>
                     <div className="inline-block text-xs font-medium px-3 py-1 rounded-full"
                       style={{
@@ -186,7 +186,7 @@ export const SearchBar = () => {
                         color: '#9C7438',
                       }}
                     >
-                      {item.category[language]}
+                      {item.category[searchLang]}
                     </div>
                   </div>
                 </div>

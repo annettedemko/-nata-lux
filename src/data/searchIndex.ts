@@ -81,14 +81,35 @@ export const searchIndex: SearchItem[] = [
     id: 'massagen',
     title: { de: 'Massagen', ru: 'Массажи' },
     description: {
-      de: 'Apparative Massagen: Lymphdrainage, Anti-Cellulite, Bodyforming, Vakuum Massage',
+      de: 'Apparative Massagen: Lymphdrainage, Anti-Cellulite, Bodyforming, Vakuum Massage München',
       ru: 'Аппаратные массажи: лимфодренаж, антицеллюлитный, бодиформинг, вакуумный массаж'
     },
     category: { de: 'Kategorie', ru: 'Категория' },
     path: '/massagen',
     keywords: {
-      de: ['massage', 'massagen', 'lymphdrainage', 'anti-cellulite', 'cellulite', 'bodyforming', 'vakuum', 'fettverbrennung', 'abnehmen', 'figurformung', 'hautstraffung', 'straffend'],
-      ru: ['массаж', 'массажи', 'лимфодренаж', 'антицеллюлитный', 'целлюлит', 'бодиформинг', 'вакуумный', 'похудение', 'жиросжигание']
+      de: [
+        'massage', 'massagen', 'apparative massage',
+        'lymphdrainage', 'lymphdrainage behandlung', 'apparative lymphdrainage', 'lymphdrainage gegen schwellungen',
+        'anti cellulite massage', 'anti-cellulite', 'cellulite behandlung', 'cellulite massage', 'cellulite reduzieren behandlung', 'cellulite',
+        'apparative massage münchen', 'rf', 'radiofrequenz massage', 'vakuum massage', 'vakuum',
+        'bodyforming massage', 'bodyforming behandlung', 'bodyforming',
+        'massage zur fettverbrennung', 'fettverbrennung', 'abnehmen behandlung', 'abnehmen',
+        'figurformung behandlung', 'figurformung',
+        'straffende massage', 'hautstraffung behandlung', 'hautstraffung', 'straffend',
+        'anti aging massage', 'anti-aging massage',
+        'kollagen stimulierende behandlung', 'kollagen',
+        'umfänge reduzieren', 'körperbehandlung',
+      ],
+      ru: [
+        'массаж', 'массажи', 'аппаратный массаж',
+        'лимфодренажный аппаратный массаж', 'лимфодренажный массаж', 'лимфодренаж',
+        'антицеллюлитный аппаратный массаж', 'антицеллюлитный массаж', 'антицеллюлитный', 'целлюлит',
+        'аппаратный массаж для похудения', 'похудение', 'жиросжигание',
+        'аппаратный массаж для омоложения кожи', 'аппаратный массаж для омолаживания кожи', 'омоложение', 'омолаживание',
+        'массаж убирает объёмы', 'убирает объёмы', 'объёмы', 'объемы',
+        'бодиформинг', 'вакуумный массаж', 'вакуумный', 'радиочастотный',
+        'формирование фигуры', 'подтяжка кожи тела',
+      ]
     }
   },
   {

@@ -74,16 +74,34 @@ export const HeroSection = () => {
               lineHeight: 1.6,
             }}
           >
-            {t('hero.services').split('·').map((service, index, arr) => (
-              <span key={index}>
-                <span style={{ color: '#8E8072' }}>
-                  {service.trim()}
+            {(() => {
+              const serviceLinks: Record<string, string> = {
+                'Lash&Brow': '/services#lashes-brows',
+                'Lash & Brow': '/services#lashes-brows',
+                'Permanent Make-up': '/permanent-makeup',
+                'Перманент': '/permanent-makeup',
+                'Laser': '/laser',
+                'Лазер': '/laser',
+                'Anti-Aging': '/anti-aging',
+                'Massagen': '/massagen',
+                'Массажи': '/massagen',
+                'Масажі': '/massagen',
+              };
+              return t('hero.services').split('·').map((service, index, arr) => (
+                <span key={index}>
+                  <Link
+                    href={serviceLinks[service.trim()] || '/services'}
+                    style={{ color: '#8E8072', textDecoration: 'none', transition: 'color 0.2s' }}
+                    className="hover:!text-brand-gold"
+                  >
+                    {service.trim()}
+                  </Link>
+                  {index < arr.length - 1 && (
+                    <span style={{ color: '#D8C7A2', margin: '0 0.5rem' }}>·</span>
+                  )}
                 </span>
-                {index < arr.length - 1 && (
-                  <span style={{ color: '#D8C7A2', margin: '0 0.5rem' }}>·</span>
-                )}
-              </span>
-            ))}
+              ));
+            })()}
           </motion.div>
 
           {/* Subtitle Line 1 - Inter, semi-bold, dark taupe */}
