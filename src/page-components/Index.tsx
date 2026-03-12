@@ -71,7 +71,7 @@ const Index = () => {
       description: t('categories.massagen.desc'),
       icon: Heart,
       href: '/massagen',
-      image: '/IMG_8633.PNG',
+      image: '/101.png',
     },
     {
       title: t('categories.training'),
