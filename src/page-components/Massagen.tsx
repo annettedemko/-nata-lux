@@ -1,6 +1,7 @@
 'use client'
 
 import { Link } from '@/components/LinkAdapter'
+import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Heart, Zap, Waves, Activity, Sparkles, TrendingDown, CheckCircle2, ArrowRight } from 'lucide-react';
@@ -151,9 +152,8 @@ const Massagen = () => {
                 <motion.div
                   key={massage.title}
                   initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.3 + index * 0.08 }}
                   className="glass-strong rounded-2xl p-6 md:p-8 hover-glow"
                 >
                   <div className="flex items-center gap-4 mb-4">
@@ -290,6 +290,7 @@ const Massagen = () => {
               {[
                 {
                   href: '/services/rf-vakuum',
+                  image: '/78.PNG',
                   title: language === 'de' ? 'RF-Vakuum Massage' : language === 'ru' ? 'RF-Вакуумный массаж' : 'RF-Вакуумний масаж',
                   desc: language === 'de'
                     ? 'Radiofrequenz + Vakuum für Lymphdrainage, Anti-Cellulite und Hautstraffung am Körper'
@@ -299,6 +300,7 @@ const Massagen = () => {
                 },
                 {
                   href: '/services/kavitation',
+                  image: '/173.jpeg',
                   title: language === 'de' ? 'Kavitation' : language === 'ru' ? 'Кавитация' : 'Кавітація',
                   desc: language === 'de'
                     ? 'Ultraschall-Kavitation für Fettreduktion und Bodyforming'
@@ -310,16 +312,28 @@ const Massagen = () => {
                 <Link
                   key={tech.href}
                   href={tech.href}
-                  className="glass-strong rounded-2xl p-6 hover-glow group block transition-all duration-300"
+                  className="glass-strong rounded-2xl overflow-hidden hover-glow group block transition-all duration-300"
                 >
-                  <h3 className="text-lg font-heading font-semibold text-brand-espresso mb-2 group-hover:text-brand-gold transition-colors">
-                    {tech.title}
-                  </h3>
-                  <p className="text-sm text-brand-coffee/70 mb-3">{tech.desc}</p>
-                  <span className="inline-flex items-center gap-1 text-brand-gold text-sm font-medium">
-                    {language === 'de' ? 'Mehr erfahren' : language === 'ru' ? 'Подробнее' : 'Детальніше'}
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                  </span>
+                  <div className="relative h-48 md:h-56 overflow-hidden">
+                    <Image
+                      src={tech.image}
+                      alt={tech.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-lg font-heading font-semibold text-brand-espresso mb-2 group-hover:text-brand-gold transition-colors">
+                      {tech.title}
+                    </h3>
+                    <p className="text-sm text-brand-coffee/70 mb-3">{tech.desc}</p>
+                    <span className="inline-flex items-center gap-1 text-brand-gold text-sm font-medium">
+                      {language === 'de' ? 'Mehr erfahren' : language === 'ru' ? 'Подробнее' : 'Детальніше'}
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    </span>
+                  </div>
                 </Link>
               ))}
             </div>

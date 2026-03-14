@@ -410,30 +410,35 @@ const Index = () => {
             className="mt-8 md:mt-12 max-w-4xl mx-auto"
           >
             <Link href="/massagen" className="block group">
-              <div className="relative overflow-hidden rounded-2xl bg-gold-gradient p-6 md:p-8 transition-all duration-300 group-hover:shadow-2xl group-hover:scale-[1.01]">
+              <div className="relative overflow-hidden rounded-2xl glass-strong border border-brand-gold/20 p-6 md:p-8 transition-all duration-300 group-hover:border-brand-gold/40 group-hover:shadow-xl group-hover:scale-[1.01]">
                 <div className="relative z-10 flex flex-col md:flex-row items-center gap-4 md:gap-8">
-                  <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/20 flex items-center justify-center">
-                    <Heart className="w-8 h-8 md:w-10 md:h-10 text-white" />
+                  <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full bg-brand-gold/10 flex items-center justify-center group-hover:bg-brand-gold/20 transition-colors">
+                    <Heart className="w-8 h-8 md:w-10 md:h-10 text-brand-gold" />
                   </div>
                   <div className="flex-grow text-center md:text-left">
-                    <h3 className="text-xl md:text-2xl font-heading font-semibold text-white mb-2">
-                      {language === 'de' ? 'Apparative Massagen — NEU!' : language === 'ru' ? 'Аппаратные массажи — НОВИНКА!' : 'Апаратні масажі — НОВИНКА!'}
-                    </h3>
-                    <p className="text-white/90 text-sm md:text-base mb-3">
+                    <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
+                      <h3 className="text-xl md:text-2xl font-heading font-semibold text-brand-espresso">
+                        {language === 'de' ? 'Apparative Massagen' : language === 'ru' ? 'Аппаратные массажи' : 'Апаратні масажі'}
+                      </h3>
+                      <span className="bg-brand-gold/15 text-brand-gold text-xs font-semibold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                        {language === 'de' ? 'Neu' : language === 'ru' ? 'Новинка' : 'Новинка'}
+                      </span>
+                    </div>
+                    <p className="text-brand-coffee/60 text-sm md:text-base mb-3">
                       {language === 'de'
                         ? 'Lymphdrainage · Anti-Cellulite · Bodyforming · Hautstraffung · Figurformung'
                         : language === 'ru'
                         ? 'Лимфодренаж · Антицеллюлитный · Похудение · Омоложение кожи · Убирает объёмы'
                         : 'Лімфодренаж · Антицелюлітний · Схуднення · Омолодження шкіри · Прибирає об\'єми'}
                     </p>
-                    <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6">
-                      <span className="text-white font-heading font-bold text-2xl md:text-3xl">
+                    <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+                      <span className="text-brand-gold font-heading font-bold text-2xl md:text-3xl">
                         75 €
-                        <span className="text-white/70 text-sm font-normal ml-1">
+                        <span className="text-brand-coffee/50 text-sm font-normal ml-1">
                           {language === 'de' ? '/ Behandlung' : language === 'ru' ? '/ процедура' : '/ процедура'}
                         </span>
                       </span>
-                      <span className="bg-white/20 backdrop-blur-sm text-white text-xs md:text-sm font-medium px-4 py-1.5 rounded-full border border-white/30">
+                      <span className="bg-brand-gold/10 text-brand-espresso text-xs md:text-sm font-medium px-4 py-1.5 rounded-full border border-brand-gold/20">
                         {language === 'de'
                           ? '10 Sitzungen = 650 € (100 € Rabatt!)'
                           : language === 'ru'
@@ -443,21 +448,18 @@ const Index = () => {
                     </div>
                   </div>
                   <div className="flex-shrink-0 hidden md:block">
-                    <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
-                      <ChevronRight className="w-5 h-5 text-white group-hover:translate-x-0.5 transition-transform" />
+                    <div className="w-10 h-10 rounded-full bg-brand-gold/10 flex items-center justify-center group-hover:bg-brand-gold/20 transition-colors">
+                      <ChevronRight className="w-5 h-5 text-brand-gold group-hover:translate-x-0.5 transition-transform" />
                     </div>
                   </div>
                 </div>
-                <p className="relative z-10 text-center text-white/80 text-xs md:text-sm mt-3 font-medium">
+                <p className="relative z-10 text-center text-brand-gold/70 text-xs md:text-sm mt-3 font-medium">
                   {language === 'de'
-                    ? '⚡ Anzahl der Angebote begrenzt! Beeilen Sie sich!'
+                    ? 'Anzahl der Angebote begrenzt! Beeilen Sie sich!'
                     : language === 'ru'
-                    ? '⚡ Количество предложений ограничено! Поторопитесь!'
-                    : '⚡ Кількість пропозицій обмежена! Поспішайте!'}
+                    ? 'Количество предложений ограничено! Поторопитесь!'
+                    : 'Кількість пропозицій обмежена! Поспішайте!'}
                 </p>
-                {/* Decorative circles */}
-                <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/5 rounded-full" />
-                <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-white/5 rounded-full" />
               </div>
             </Link>
           </motion.div>
