@@ -25,6 +25,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  verification: {
+    google: '1f4c5d6c83b5b4f6',
+  },
   title: 'Nata Lux - Beauty Studio München',
   description: 'Professionelles Beauty Studio in München – Wimpernverlängerung, Permanent Make-up, Laserbehandlungen, Anti-Aging und Kosmetik. Jetzt Termin buchen!',
   keywords: 'beauty studio München, Wimpernverlängerung München, Permanent Make-up München, Anti-Aging München, Kosmetikstudio München, Laserbehandlungen München',
