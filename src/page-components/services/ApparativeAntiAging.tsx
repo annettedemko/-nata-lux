@@ -16,7 +16,7 @@ const ApparativeAntiAging = () => {
         : 'Радіочастоти для підтяжки та вироблення колагену',
       icon: Zap,
       href: '/services/apparative-anti-aging/rf-lifting',
-      image: '/162.jpeg',
+      image: '/rf-lifting-behandlung-muenchen.jpeg',
     },
     {
       title: language === 'de' ? 'Lichttherapie' : language === 'ru' ? 'Световая терапия' : 'Світлова терапія',
@@ -26,7 +26,7 @@ const ApparativeAntiAging = () => {
         : 'LED та IPL для омолодження та регенерації шкіри',
       icon: Sun,
       href: '/services/apparative-anti-aging/lichttherapie',
-      image: '/124.jpeg',
+      image: '/biostrom-behandlung-muenchen.jpeg',
     },
     {
       title: language === 'de' ? 'Biostrom' : language === 'ru' ? 'Биотоки' : 'Біоструми',
@@ -36,7 +36,7 @@ const ApparativeAntiAging = () => {
         : 'Мікроструми для стимуляції м\'язів та ліфтингу',
       icon: Activity,
       href: '/services/apparative-anti-aging/biostrom',
-      image: '/125.webp',
+      image: '/apparative-anti-aging-geraet-muenchen.webp',
     },
     {
       title: language === 'de' ? 'Ultraschall' : language === 'ru' ? 'Ультразвук' : 'Ультразвук',
@@ -46,7 +46,7 @@ const ApparativeAntiAging = () => {
         : 'Глибокий догляд за шкірою та підтяжка',
       icon: Star,
       href: '/services/apparative-anti-aging/ultraschall',
-      image: '/126.jpeg',
+      image: '/kavitation-behandlung-muenchen.jpeg',
     },
   ];
 
@@ -57,7 +57,7 @@ const ApparativeAntiAging = () => {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url(/45.webp)',
+            backgroundImage: 'url(/nata-lux-beauty-studio-muenchen.webp)',
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',

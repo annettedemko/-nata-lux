@@ -13,7 +13,7 @@ const RFLifting = () => {
   const SchemaSection = () => (
     <ProcedureSchema
       germanImages={['/181 1.jpg']}
-      russianImages={['/181.jpg']}
+      russianImages={['/rf-lifting-gesicht.jpg']}
       altTextGerman="RF-Lifting Gesicht Schema"
       altTextRussian="Схема RF-лифтинга лица"
       scale={0.67}
@@ -120,7 +120,7 @@ const RFLifting = () => {
 
       {/* Gallery */}
       <PremiumGallery
-        images={['/162.jpeg', '/183.jpg', '/184.jpg']}
+        images={['/rf-lifting-behandlung-muenchen.jpeg', '/rf-lifting-ergebnis.jpg', '/rf-lifting-vorher-nachher.jpg']}
         title={language === 'de' ? 'Vorher-Nachher Ergebnisse' : language === 'ru' ? 'Результаты до и после' : 'Результати до та після'}
       />
 
@@ -135,21 +135,21 @@ const RFLifting = () => {
             description={language === 'de' ? 'Ultraschall für tiefe Wirkstoffeinschleusung' : language === 'ru' ? 'Ультразвук для глубокого введения активных веществ' : 'Ультразвук для глибокого введення активних речовин'}
             icon={Droplet}
             href="/services/phonophorese"
-            image="/128.jpeg"
+            image="/ultraschall-gesichtsbehandlung-muenchen.jpeg"
           />
           <ServiceCard
             title={language === 'de' ? 'RF-Vakuum (Körper)' : language === 'ru' ? 'RF-вакуум (тело)' : 'RF-вакуум (тіло)'}
             description={language === 'de' ? 'Radiofrequenz mit Vakuum für Körperstraffung' : language === 'ru' ? 'Радиочастоты с вакуумом для подтяжки тела' : 'Радіочастоти з вакуумом для підтяжки тіла'}
             icon={Star}
             href="/services/koerperbehandlungen/rf-vakuum"
-            image="/83.jpg"
+            image="/rf-vakuum-koerperbehandlung-muenchen.jpg"
           />
           <ServiceCard
             title={language === 'de' ? 'Biostrom' : language === 'ru' ? 'Биотоки' : 'Біоструми'}
             description={language === 'de' ? 'Mikrostrom für Muskelstimulation und Lifting' : language === 'ru' ? 'Микротоки для стимуляции мышц и лифтинга' : 'Мікроструми для стимуляції м\'язів та ліфтингу'}
             icon={Activity}
             href="/services/apparative-anti-aging/biostrom"
-            image="/125.webp"
+            image="/apparative-anti-aging-geraet-muenchen.webp"
           />
         </div>
       </div>

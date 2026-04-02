@@ -139,7 +139,7 @@ export const LogoRebirth = () => {
         }}
       >
         <motion.img
-          src="/112.png"
+          src="/nata-lux-logo.png"
           alt="Nata Lux Logo"
           className="w-full h-full object-contain"
           style={{

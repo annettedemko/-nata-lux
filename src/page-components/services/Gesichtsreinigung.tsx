@@ -11,7 +11,7 @@ const Gesichtsreinigung = () => {
   const { language } = useLanguage();
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
-  const galleryImages = ['/51.jpg', '/101.jpg', '/100.jpg', '/99.jpg', '/142.jpeg'];
+  const galleryImages = ['/gesichtsbehandlung-apparativ.jpg', '/gesichtsreinigung-behandlung.jpg', '/gesichtsreinigung-ergebnis.jpg', '/gesichtsreinigung-muenchen.jpg', '/gesichtsreinigung-vorher-nachher.jpeg'];
 
   const openLightbox = (index: number) => setSelectedImage(index);
   const closeLightbox = () => setSelectedImage(null);
@@ -25,7 +25,7 @@ const Gesichtsreinigung = () => {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url(/45.webp)',
+            backgroundImage: 'url(/nata-lux-beauty-studio-muenchen.webp)',
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',

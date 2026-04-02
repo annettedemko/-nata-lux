@@ -41,7 +41,7 @@ export const ParallaxBackground = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat transform-gpu"
           style={{
-            backgroundImage: 'url(/16.png)',
+            backgroundImage: 'url(/beauty-studio-hintergrund.webp)',
             filter: 'brightness(1.08) contrast(0.92) saturate(0.98)',
             imageRendering: 'crisp-edges',
           }}

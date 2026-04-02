@@ -13,8 +13,8 @@ const Kavitation = () => {
   // Schema section with 2 images
   const SchemaSection = () => (
     <ProcedureSchema
-      germanImages={['/188.jpg', '/189 1.jpg']}
-      russianImages={['/188 1.jpg', '/189.jpg']}
+      germanImages={['/kavitation-behandlung.jpg', '/189 1.jpg']}
+      russianImages={['/188 1.jpg', '/kavitation-vorher-nachher.jpg']}
       altTextGerman="Kavitation Schema"
       altTextRussian="Схема кавитации"
       scale={0.25}
@@ -25,7 +25,7 @@ const Kavitation = () => {
   const AdditionalSections = () => (
     <>
       <PremiumGallery
-        images={['/173.jpeg', '/171.jpeg', '/172.jpeg']}
+        images={['/ultraschall-kavitation-muenchen.jpeg', '/kavitation-fettreduktion.jpeg', '/kavitation-ergebnis.jpeg']}
         title={language === 'de' ? 'Unsere Arbeiten' : language === 'ru' ? 'Наши работы' : 'Наші роботи'}
       />
       <div className="mt-12">
@@ -38,21 +38,21 @@ const Kavitation = () => {
             description={language === 'de' ? 'Radiofrequenz mit Vakuum für Cellulite-Reduktion' : language === 'ru' ? 'Радиочастоты с вакуумом для уменьшения целлюлита' : 'Радіочастоти з вакуумом для зменшення целюліту'}
             icon={Star}
             href="/services/koerperbehandlungen/rf-vakuum"
-            image="/83.jpg"
+            image="/rf-vakuum-koerperbehandlung-muenchen.jpg"
           />
           <ServiceCard
             title="RF-Lifting"
             description={language === 'de' ? 'Radiofrequenz für Hautstraffung' : language === 'ru' ? 'Радиочастоты для подтяжки кожи' : 'Радіочастоти для підтяжки шкіри'}
             icon={Zap}
             href="/services/apparative-anti-aging/rf-lifting"
-            image="/162.jpeg"
+            image="/rf-lifting-behandlung-muenchen.jpeg"
           />
           <ServiceCard
             title={language === 'de' ? 'Ultraschall' : language === 'ru' ? 'Ультразвук' : 'Ультразвук'}
             description={language === 'de' ? 'Tiefenwirksame Hautpflege' : language === 'ru' ? 'Глубокий уход за кожей' : 'Глибокий догляд за шкірою'}
             icon={Droplet}
             href="/services/apparative-anti-aging/ultraschall"
-            image="/126.jpeg"
+            image="/kavitation-behandlung-muenchen.jpeg"
           />
         </div>
       </div>

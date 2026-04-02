@@ -26,7 +26,7 @@ const Services = () => {
       description: t('lashesbrows.extensions.desc'),
       icon: Sparkles,
       href: '/services/wimpernverlaengerung',
-      image: '/43.webp',
+      image: '/wimpernverlaengerung-ergebnis-muenchen.webp',
       imagePosition: 'center 60%',
     },
     {
@@ -34,7 +34,7 @@ const Services = () => {
       description: t('lashesbrows.lashlifting.desc') + ' & ' + t('lashesbrows.browlifting.desc'),
       icon: Layers,
       href: '/services/wimpern-augenbrauen-laminierung',
-      image: '/131.jpeg',
+      image: '/wimpernverlaengerung-behandlung.jpeg',
     },
   ];
 
@@ -45,7 +45,7 @@ const Services = () => {
       description: t('pmu.brows.desc'),
       icon: Palette,
       href: '/services/powder-brows',
-      image: '/65.jpg',
+      image: '/powder-brows-permanent-makeup-muenchen.jpg',
       imageScale: 1.7,
       imagePosition: 'center 20%',
     },
@@ -54,21 +54,21 @@ const Services = () => {
       description: t('pmu.lips.desc'),
       icon: Heart,
       href: '/services/aquarell-lips',
-      image: '/191.jpeg',
+      image: '/apparative-massage-muenchen.jpeg',
     },
     {
       title: t('pmu.eyeliner'),
       description: t('pmu.eyeliner.desc'),
       icon: Eye,
       href: '/services/wimpernkranz',
-      image: '/114.jpg',
+      image: '/permanent-makeup-ergebnis-muenchen.jpg',
     },
     {
       title: t('pmu.removal'),
       description: t('pmu.removal.desc'),
       icon: Shield,
       href: '/services/pmu-remover',
-      image: '/103.jpg',
+      image: '/pmu-remover-behandlung.jpg',
       imagePosition: 'center 80%',
     },
   ];
@@ -80,7 +80,7 @@ const Services = () => {
       description: t('laser.triwave.desc'),
       icon: Zap,
       href: '/laser',
-      image: '/41.jpg',
+      image: '/laser-haarentfernung-muenchen.jpg',
     },
   ];
 
@@ -91,21 +91,21 @@ const Services = () => {
       description: t('antiaging.devices.desc'),
       icon: Star,
       href: '/services/apparative-anti-aging',
-      image: '/125.webp',
+      image: '/apparative-anti-aging-geraet-muenchen.webp',
     },
     {
       title: t('antiaging.body'),
       description: t('antiaging.body.desc'),
       icon: Star,
       href: '/services/koerperbehandlungen',
-      image: '/83.jpg',
+      image: '/rf-vakuum-koerperbehandlung-muenchen.jpg',
     },
     {
       title: t('antiaging.facial'),
       description: t('antiaging.facial.desc'),
       icon: Droplet,
       href: '/services/gesichtsreinigung',
-      image: '/71.jpg',
+      image: '/apparative-kosmetik-behandlung.jpg',
       imagePosition: 'center 60%',
     },
     {
@@ -113,28 +113,28 @@ const Services = () => {
       description: t('antiaging.phonophoresis.desc'),
       icon: Droplet,
       href: '/services/phonophorese',
-      image: '/128.jpeg',
+      image: '/ultraschall-gesichtsbehandlung-muenchen.jpeg',
     },
     {
       title: t('antiaging.microneedling'),
       description: t('antiaging.microneedling.desc'),
       icon: Scissors,
       href: '/services/microneedling',
-      image: '/44.png',
+      image: '/apparative-kosmetik-muenchen.png',
     },
     {
       title: t('antiaging.darsonval'),
       description: t('antiaging.darsonval.desc'),
       icon: Zap,
       href: '/services/darsonval-haare',
-      image: '/129.webp',
+      image: '/anti-aging-ergebnis.webp',
     },
     {
       title: t('antiaging.removal'),
       description: t('antiaging.removal.desc'),
       icon: Shield,
       href: '/services/hautveraenderungen-entfernen',
-      image: '/130.jpeg',
+      image: '/anti-aging-behandlung.jpeg',
     },
   ];
 
@@ -148,7 +148,7 @@ const Services = () => {
         : 'Лімфодренаж, антицелюлітний, бодіформінг, підтяжка шкіри — RF-вакуум з інфрачервоним світлом',
       icon: Heart,
       href: '/massagen',
-      image: '/83.jpg',
+      image: '/rf-vakuum-koerperbehandlung-muenchen.jpg',
     },
   ];
 
@@ -159,7 +159,7 @@ const Services = () => {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url(/28.png)',
+            backgroundImage: 'url(/beauty-behandlung-hintergrund.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',
@@ -181,7 +181,7 @@ const Services = () => {
                 letterSpacing: '-0.02em'
               }}
             >
-              {language === 'de' ? 'LEISTUNGEN' : language === 'ru' ? 'УСЛУГИ' : 'ПОСЛУГИ'}
+              {language === 'de' ? 'Beauty-Behandlungen in München' : language === 'ru' ? 'Косметологические услуги в Мюнхене' : 'Косметологічні послуги в Мюнхені'}
             </h1>
             <div className="w-12 md:w-16 h-0.5 bg-brand-gold mx-auto opacity-60"></div>
           </div>

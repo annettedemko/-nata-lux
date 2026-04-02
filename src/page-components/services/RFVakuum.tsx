@@ -14,7 +14,7 @@ const RFVakuum = () => {
   const SchemaSection = () => (
     <ProcedureSchema
       germanImages={['/187 1.jpg']}
-      russianImages={['/187.jpg']}
+      russianImages={['/rf-vakuum-ergebnis.jpg']}
       altTextGerman="RF-Vakuum Schema"
       altTextRussian="Схема RF-вакуум"
       scale={0.5}
@@ -25,7 +25,7 @@ const RFVakuum = () => {
   const AdditionalSections = () => (
     <>
       <PremiumGallery
-        images={['/78.PNG', '/77.PNG', '/81.webp', '/82.webp', '/83.webp', '/84.webp', '/85.webp', '/86.webp']}
+        images={['/78.PNG', '/77.PNG', '/renew-rf-vakuum-vorher.webp', '/renew-professional-konzentrat.webp', '/renew-rf-vakuum-ergebnis.webp', '/renew-rf-vakuum-nachher.webp', '/renew-rf-vakuum-detail.webp', '/renew-rf-vakuum-behandlung.webp']}
         title={language === 'de' ? 'Unsere Arbeiten' : language === 'ru' ? 'Наши работы' : 'Наші роботи'}
       />
       <div className="mt-12">
@@ -38,21 +38,21 @@ const RFVakuum = () => {
             description={language === 'de' ? 'Ultraschall für Fettreduktion' : language === 'ru' ? 'Ультразвук для уменьшения жира' : 'Ультразвук для зменшення жиру'}
             icon={Waves}
             href="/services/koerperbehandlungen/kavitation"
-            image="/83.jpg"
+            image="/rf-vakuum-koerperbehandlung-muenchen.jpg"
           />
           <ServiceCard
             title="RF-Lifting"
             description={language === 'de' ? 'Radiofrequenz für Gesichtsstraffung' : language === 'ru' ? 'Радиочастоты для подтяжки лица' : 'Радіочастоти для підтяжки обличчя'}
             icon={Zap}
             href="/services/apparative-anti-aging/rf-lifting"
-            image="/162.jpeg"
+            image="/rf-lifting-behandlung-muenchen.jpeg"
           />
           <ServiceCard
             title={language === 'de' ? 'Biostrom' : language === 'ru' ? 'Биотоки' : 'Біотоки'}
             description={language === 'de' ? 'Mikrostrom für Lifting-Effekt' : language === 'ru' ? 'Микротоки для лифтинг-эффекта' : 'Мікрострум для ліфтинг-ефекту'}
             icon={Activity}
             href="/services/apparative-anti-aging/biostrom"
-            image="/125.webp"
+            image="/apparative-anti-aging-geraet-muenchen.webp"
           />
         </div>
       </div>

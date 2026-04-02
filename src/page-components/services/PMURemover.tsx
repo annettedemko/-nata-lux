@@ -9,7 +9,7 @@ import { ServiceCard } from '@/components/ServiceCard';
 const PMURemover = () => {
   const { language } = useLanguage();
 
-  const galleryImages = ['/103.jpg', '/111.jpg', '/115.jpg', '/109.jpg', '/110.jpg'];
+  const galleryImages = ['/pmu-remover-behandlung.jpg', '/pmu-remover-ergebnis.jpg', '/pmu-remover-resultat.jpg', '/pmu-remover-vorher.jpg', '/pmu-remover-nachher.jpg'];
 
   const photoGallery = (
     <PremiumGallery images={galleryImages} />
@@ -27,21 +27,21 @@ const PMURemover = () => {
           description={language === 'de' ? 'Moderne Pudertechnik für natürliche Augenbrauen' : language === 'ru' ? 'Современная пудровая техника для естественных бровей' : 'Сучасна пудрова техніка для природних брів'}
           icon={Palette}
           href="/services/powder-brows"
-          image="/65.jpg"
+          image="/powder-brows-permanent-makeup-muenchen.jpg"
         />
         <ServiceCard
           title={language === 'de' ? 'Aquarell Lips' : language === 'ru' ? 'Акварельные губы' : 'Акварельні губи'}
           description={language === 'de' ? 'Natürliche Lippenpigmentierung' : language === 'ru' ? 'Естественная пигментация губ' : 'Природна пігментація губ'}
           icon={Heart}
           href="/services/aquarell-lips"
-          image="/138.jpeg"
+          image="/permanent-makeup-behandlung.jpeg"
         />
         <ServiceCard
           title={language === 'de' ? 'Wimpernkranz' : language === 'ru' ? 'Межресничка' : 'Міжвійка'}
           description={language === 'de' ? 'Permanent Make-up Wimpernkranz' : language === 'ru' ? 'Перманентный макияж межресничного пространства' : 'Перманентний макіяж міжвійкового простору'}
           icon={Eye}
           href="/services/wimpernkranz"
-          image="/114.jpg"
+          image="/permanent-makeup-ergebnis-muenchen.jpg"
         />
       </div>
     </div>

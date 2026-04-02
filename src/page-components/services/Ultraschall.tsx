@@ -23,7 +23,7 @@ const Ultraschall = () => {
             : 'Глибоке введення активних речовин ультразвуком'}
           icon={Droplet}
           href="/services/phonophorese"
-          image="/128.jpeg"
+          image="/ultraschall-gesichtsbehandlung-muenchen.jpeg"
         />
         <ServiceCard
           title={language === 'de' ? 'Kavitation' : language === 'ru' ? 'Кавитация' : 'Кавитация'}
@@ -33,7 +33,7 @@ const Ultraschall = () => {
             : 'Неінвазивна корекція фігури та ліполіз'}
           icon={Zap}
           href="/services/koerperbehandlungen/kavitation"
-          image="/173.jpeg"
+          image="/ultraschall-kavitation-muenchen.jpeg"
         />
         <ServiceCard
           title={language === 'de' ? 'Gesichtsreinigung' : language === 'ru' ? 'Чистка лица' : 'Чистка обличчя'}
@@ -43,7 +43,7 @@ const Ultraschall = () => {
             : 'М\'яке глибоке очищення ультразвуком'}
           icon={Sparkles}
           href="/services/gesichtsreinigung"
-          image="/51.jpg"
+          image="/gesichtsbehandlung-apparativ.jpg"
         />
       </div>
 

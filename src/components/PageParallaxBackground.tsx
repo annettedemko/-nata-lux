@@ -9,7 +9,7 @@ export const PageParallaxBackground = ({ children }: { children: React.ReactNode
   const isServicesPage = pathname === '/services' || pathname === '/services/'
 
   // Выбираем картинку фона в зависимости от страницы
-  const backgroundImage = isServicesPage ? 'url(/26.png)' : 'url(/16.png)'
+  const backgroundImage = isServicesPage ? 'url(/beauty-services-hintergrund.webp)' : 'url(/beauty-studio-hintergrund.webp)'
 
   useEffect(() => {
     console.log('PageParallaxBackground - pathname:', pathname)

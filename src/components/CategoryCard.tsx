@@ -61,9 +61,9 @@ export const CategoryCard = ({
               <div className={`absolute inset-0 bg-gradient-to-br from-brand-espresso/70 via-brand-espresso/60 to-black/70 flex items-center justify-center transition-opacity duration-500 ${
                 isHovered ? 'opacity-100' : 'opacity-0'
               }`}>
-                <h3 className="text-xl md:text-2xl lg:text-3xl font-heading font-medium text-white text-center px-4 md:px-6 transform transition-all duration-500 tracking-wide break-words">
+                <span aria-hidden="true" className="text-xl md:text-2xl lg:text-3xl font-heading font-medium text-white text-center px-4 md:px-6 transform transition-all duration-500 tracking-wide break-words">
                   {title}
-                </h3>
+                </span>
               </div>
 
               {/* Default gradient overlay */}

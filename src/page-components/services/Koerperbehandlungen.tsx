@@ -17,7 +17,7 @@ const Koerperbehandlungen = () => {
         : 'Радіочастоти з вакуумом для підтяжки та зменшення целюліту',
       icon: Star,
       href: '/services/koerperbehandlungen/rf-vakuum',
-      image: '/83.jpg',
+      image: '/rf-vakuum-koerperbehandlung-muenchen.jpg',
     },
     {
       title: language === 'de' ? 'Kavitation' : language === 'ru' ? 'Кавитация' : 'Кавітація',
@@ -27,7 +27,7 @@ const Koerperbehandlungen = () => {
         : 'Ультразвукова кавітація для зменшення жирових відкладень на животі, сідницях та стегнах',
       icon: Zap,
       href: '/services/koerperbehandlungen/kavitation',
-      image: '/127.jpeg',
+      image: '/koerperbehandlung-muenchen.jpeg',
     },
   ];
 
@@ -38,7 +38,7 @@ const Koerperbehandlungen = () => {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url(/45.webp)',
+            backgroundImage: 'url(/nata-lux-beauty-studio-muenchen.webp)',
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',

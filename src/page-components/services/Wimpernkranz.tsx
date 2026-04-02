@@ -9,7 +9,7 @@ import { ServiceCard } from '@/components/ServiceCard';
 const Wimpernkranz = () => {
   const { language } = useLanguage();
 
-  const galleryImages = ['/56.jpg', '/68.jpg', '/69.jpg', '/114.jpg', '/150.jpeg', '/143.jpeg'];
+  const galleryImages = ['/wimpernkranz-behandlung.jpg', '/wimpernkranz-detail.jpg', '/wimpernkranz-resultat.jpg', '/permanent-makeup-ergebnis-muenchen.jpg', '/wimpernkranz-vorher-nachher.jpeg', '/wimpernkranz-ergebnis.jpeg'];
 
   const photoGallery = (
     <PremiumGallery images={galleryImages} />
@@ -27,21 +27,21 @@ const Wimpernkranz = () => {
           description={language === 'de' ? 'Pudertechnik für perfekte Augenbrauen' : language === 'ru' ? 'Пудровая техника для идеальных бровей' : 'Пудрова техніка для ідеальних брів'}
           icon={Palette}
           href="/services/powder-brows"
-          image="/65.jpg"
+          image="/powder-brows-permanent-makeup-muenchen.jpg"
         />
         <ServiceCard
           title={language === 'de' ? 'Aquarell Lips' : language === 'ru' ? 'Акварельные губы' : 'Акварельні губи'}
           description={language === 'de' ? 'Natürliche Lippenpigmentierung' : language === 'ru' ? 'Естественная пигментация губ' : 'Природна пігментація губ'}
           icon={Heart}
           href="/services/aquarell-lips"
-          image="/138.jpeg"
+          image="/permanent-makeup-behandlung.jpeg"
         />
         <ServiceCard
           title={language === 'de' ? 'Wimpernverlängerung' : language === 'ru' ? 'Наращивание ресниц' : 'Нарощування вій'}
           description={language === 'de' ? 'Klassisch oder Volumentechnik' : language === 'ru' ? 'Классика или объём' : 'Класика або об\'єм'}
           icon={Sparkles}
           href="/services/wimpernverlaengerung"
-          image="/43.png"
+          image="/wimpernverlaengerung-ergebnis-muenchen.png"
         />
       </div>
     </div>

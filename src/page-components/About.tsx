@@ -17,7 +17,7 @@ const About = () => {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url(/20.png)',
+            backgroundImage: 'url(/renew-biorepair-pro-maske.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',
@@ -131,7 +131,7 @@ const About = () => {
           >
             <div className="relative h-[400px] md:h-[500px] overflow-hidden rounded-2xl">
               <Image
-                src="/5.jpeg"
+                src="/natalia-koziukevych-kosmetikerin-muenchen.jpeg"
                 alt="Natalia"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"
@@ -140,7 +140,7 @@ const About = () => {
             </div>
             <div className="relative h-[400px] md:h-[500px] overflow-hidden rounded-2xl">
               <Image
-                src="/6.jpeg"
+                src="/natalia-koziukevych-behandlung.jpeg"
                 alt="Natalia - Professional"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"
@@ -149,7 +149,7 @@ const About = () => {
             </div>
             <div className="relative h-[400px] md:h-[500px] overflow-hidden rounded-2xl">
               <Image
-                src="/117.PNG"
+                src="/natalia-studio-arbeit.png"
                 alt="Natalia - Studio work"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"
@@ -158,7 +158,7 @@ const About = () => {
             </div>
             <div className="relative h-[400px] md:h-[500px] overflow-hidden rounded-2xl">
               <Image
-                src="/122.PNG"
+                src="/natalia-kosmetik-behandlung.png"
                 alt="Natalia - Treatment"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"
@@ -191,8 +191,8 @@ const About = () => {
                   {language === 'de' ? 'Adresse' : language === 'ru' ? 'Адрес' : 'Адреса'}
                 </h3>
                 <p className="text-sm md:text-base text-brand-espresso/70 leading-relaxed">
-                  Elsasser Straße 33<br />
-                  80687 München
+                  Elsässer Straße 33<br />
+                  81667 München
                 </p>
               </div>
 
@@ -220,9 +220,9 @@ const About = () => {
                   {language === 'de' ? 'Anfahrt' : language === 'ru' ? 'Как добраться' : 'Как добраться'}
                 </h3>
                 <p className="text-sm md:text-base text-brand-espresso/70 leading-relaxed">
-                  {language === 'de' ? 'U-Bahn: U4, U5' : language === 'ru' ? 'Метро: U4, U5' : 'Метро: U4, U5'}<br />
-                  {language === 'de' ? 'Heimeranplatz' : language === 'ru' ? 'Станция Heimeranplatz' : 'Станция Heimeranplatz'}<br />
-                  {language === 'de' ? '5 Min zu Fuß' : language === 'ru' ? '5 мин пешком' : '5 мин пешком'}
+                  {language === 'de' ? 'S-Bahn / U5: Ostbahnhof' : language === 'ru' ? 'S-Bahn / U5: Ostbahnhof' : 'S-Bahn / U5: Ostbahnhof'}<br />
+                  {language === 'de' ? 'Tram/Bus: Orleansplatz' : language === 'ru' ? 'Трамвай/автобус: Orleansplatz' : 'Трамвай/автобус: Orleansplatz'}<br />
+                  {language === 'de' ? '5–7 Min zu Fuß' : language === 'ru' ? '5–7 мин пешком' : '5–7 хв пішки'}
                 </p>
               </div>
             </div>
@@ -235,7 +235,7 @@ const About = () => {
               }}
             >
               <GoogleMapsEmbed
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2663.1234567890!2d11.5234567!3d48.1234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDA3JzI0LjQiTiAxMcKwMzEnMjQuNCJF!5e0!3m2!1sen!2sde!4v1234567890123!5m2!1sen!2sde&q=Elsasser+Straße+33,+80687+München"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2662.8!2d11.603257!3d48.129653!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e7534ffb1bdb1%3A0x751e036a37717a9f!2s%E2%80%9ENataLux%E2%80%9C%20Permanent%20Make%20Up%20Studio!5e0!3m2!1sde!2sde"
                 className="rounded-2xl md:rounded-3xl"
                 height="400"
               />

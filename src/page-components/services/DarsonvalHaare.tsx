@@ -11,7 +11,7 @@ const DarsonvalHaare = () => {
   // Schema section
   const SchemaSection = () => (
     <ProcedureSchema
-      germanImages={['/190.jpg']}
+      germanImages={['/darsonval-haarbehandlung.jpg']}
       russianImages={['/190 1.jpg']}
       altTextGerman="Darsonval Schema"
       altTextRussian="Схема дарсонваль"

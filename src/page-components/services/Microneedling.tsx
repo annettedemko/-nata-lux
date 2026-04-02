@@ -9,14 +9,14 @@ import { ProcedureSchema } from '@/components/ProcedureSchema';
 const Microneedling = () => {
   const { language } = useLanguage();
 
-  const galleryImages = ['/87.jpg', '/88.jpg', '/89.jpg', '/90.jpg', '/91.jpg'];
+  const galleryImages = ['/microneedling-gesicht-muenchen.jpg', '/microneedling-behandlung.jpg', '/microneedling-ergebnis.jpg', '/microneedling-vorher-nachher.jpg', '/microneedling-resultat.jpg'];
 
   // Schema section
   const schemaSection = (
     <ProcedureSchema
       germanImages={['/194 1.png']}
-      russianImages={['/194.jpg']}
-      ukrainianImages={['/194.jpg']}
+      russianImages={['/microneedling-detail.jpg']}
+      ukrainianImages={['/microneedling-detail.jpg']}
       altTextGerman="Microneedling Schema"
       altTextRussian="Схема микронидлинга"
       altTextUkrainian="Схема мікронідлінгу"

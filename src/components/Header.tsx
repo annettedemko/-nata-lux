@@ -38,7 +38,7 @@ export const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <motion.img
-              src="/112.png"
+              src="/nata-lux-logo.png"
               alt="Nata Lux"
               className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
               whileHover={{ rotate: 5, scale: 1.05 }}

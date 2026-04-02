@@ -18,7 +18,7 @@ const HautveraenderungenEntfernen = () => {
         <div className="text-center">
           <div className="relative aspect-square rounded-xl overflow-hidden mb-2">
             <Image
-              src="/66.jpeg"
+              src="/hautveraenderungen-entfernen-vorher.jpeg"
               alt={language === 'de' ? 'Vorher' : language === 'ru' ? 'До' : 'До'}
               fill
               className="object-cover"
@@ -30,7 +30,7 @@ const HautveraenderungenEntfernen = () => {
         <div className="text-center">
           <div className="relative aspect-square rounded-xl overflow-hidden mb-2">
             <Image
-              src="/67.jpeg"
+              src="/hautveraenderungen-entfernen-nachher.jpeg"
               alt={language === 'de' ? 'Nachher' : language === 'ru' ? 'После' : 'После'}
               fill
               className="object-cover"
@@ -55,21 +55,21 @@ const HautveraenderungenEntfernen = () => {
           description={language === 'de' ? 'Tiefenreinigung für reine Haut' : language === 'ru' ? 'Глубокое очищение для чистой кожи' : 'Глибоке очищення для чистої шкіри'}
           icon={Droplet}
           href="/services/gesichtsreinigung"
-          image="/51.jpg"
+          image="/gesichtsbehandlung-apparativ.jpg"
         />
         <ServiceCard
           title={language === 'de' ? 'Lichttherapie' : language === 'ru' ? 'Светотерапия' : 'Світлотерапія'}
           description={language === 'de' ? 'LED-Licht für Regeneration' : language === 'ru' ? 'LED-свет для регенерации' : 'LED-світло для регенерації'}
           icon={Sun}
           href="/services/apparative-anti-aging/lichttherapie"
-          image="/124.jpeg"
+          image="/biostrom-behandlung-muenchen.jpeg"
         />
         <ServiceCard
           title={language === 'de' ? 'Phonophorese' : language === 'ru' ? 'Фонофорез' : 'Фонофорез'}
           description={language === 'de' ? 'Tiefenwirksame Hautpflege' : language === 'ru' ? 'Глубокий уход за кожей' : 'Глибокий догляд за шкірою'}
           icon={Zap}
           href="/services/phonophorese"
-          image="/128.jpeg"
+          image="/ultraschall-gesichtsbehandlung-muenchen.jpeg"
         />
       </div>
     </div>

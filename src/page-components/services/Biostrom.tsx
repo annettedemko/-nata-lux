@@ -12,7 +12,7 @@ const Biostrom = () => {
   const SchemaSection = () => (
     <ProcedureSchema
       germanImages={['/182 1.jpg']}
-      russianImages={['/182.jpg']}
+      russianImages={['/biostrom-lichttherapie.jpg']}
       altTextGerman="Mikrostromtherapie Schema"
       altTextRussian="Схема микротоковой терапии"
       scale={0.67}
@@ -31,21 +31,21 @@ const Biostrom = () => {
           description={language === 'de' ? 'Ultraschall für Wirkstoffeinschleusung' : language === 'ru' ? 'Ультразвук для введения активных веществ' : 'Ультразвук для введення активних речовин'}
           icon={Droplet}
           href="/services/phonophorese"
-          image="/128.jpeg"
+          image="/ultraschall-gesichtsbehandlung-muenchen.jpeg"
         />
         <ServiceCard
           title={language === 'de' ? 'Lichttherapie' : language === 'ru' ? 'Светотерапия' : 'Світлотерапія'}
           description={language === 'de' ? 'LED-Licht für Beruhigung und Kollagenstimulation' : language === 'ru' ? 'LED-свет для успокоения и стимуляции коллагена' : 'LED-світло для заспокоєння та стимуляції колагену'}
           icon={Sun}
           href="/services/apparative-anti-aging/lichttherapie"
-          image="/124.jpeg"
+          image="/biostrom-behandlung-muenchen.jpeg"
         />
         <ServiceCard
           title="RF-Lifting"
           description={language === 'de' ? 'Radiofrequenz für intensive Straffung' : language === 'ru' ? 'Радиочастоты для интенсивной подтяжки' : 'Радіочастоти для інтенсивної підтяжки'}
           icon={Zap}
           href="/services/apparative-anti-aging/rf-lifting"
-          image="/162.jpeg"
+          image="/rf-lifting-behandlung-muenchen.jpeg"
         />
       </div>
     </div>

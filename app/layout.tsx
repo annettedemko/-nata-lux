@@ -71,11 +71,7 @@ export default function RootLayout({
   return (
     <html lang="de">
       <head>
-        {/* hreflang tags for multilingual SEO */}
-        <link rel="alternate" hrefLang="de" href="https://munich-beauty.de/" />
-        <link rel="alternate" hrefLang="ru" href="https://munich-beauty.de/?lang=ru" />
-        <link rel="alternate" hrefLang="uk" href="https://munich-beauty.de/?lang=ua" />
-        <link rel="alternate" hrefLang="x-default" href="https://munich-beauty.de/" />
+        {/* hreflang tags injected dynamically by HreflangTags client component */}
 
         {/* LocalBusiness / BeautySalon JSON-LD Schema */}
         <script
@@ -117,7 +113,7 @@ export default function RootLayout({
                 }
               ],
               "priceRange": "€€",
-              "image": "https://munich-beauty.de/logo.png",
+              "image": "https://munich-beauty.de/og-image.jpg",
               "description": "Professionelles Beauty Studio in München-Haidhausen – Wimpernverlängerung, Permanent Make-up, Laserbehandlungen, Anti-Aging und Kosmetik.",
               "areaServed": {
                 "@type": "City",

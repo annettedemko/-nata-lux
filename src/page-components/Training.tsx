@@ -23,7 +23,7 @@ const Training = () => {
   const isGerman = language === 'de';
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
-  const galleryImages = ['/154.jpg', '/155.jpg', '/156.jpg', '/157.jpg', '/158.jpeg', '/159.jpg', '/160.jpeg', '/161.jpeg'];
+  const galleryImages = ['/wimpernverlaengerung-kurs-muenchen.jpg', '/beauty-schulung-teilnehmer.jpg', '/pmu-kurs-muenchen.jpg', '/beauty-schulung-praxis-uebung.jpg', '/beauty-kurs-material.jpeg', '/beauty-schulung-ergebnis.jpg', '/beauty-kurs-zertifikat.jpeg', '/beauty-schulung-abschluss.jpeg'];
 
   const openLightbox = (index: number) => setSelectedImage(index);
   const closeLightbox = () => setSelectedImage(null);
@@ -35,7 +35,7 @@ const Training = () => {
       title: t('training.lashes'),
       description: t('training.lashes.desc'),
       icon: GraduationCap,
-      image: '/136.png',
+      image: '/beauty-schulung-praxis.png',
       includes: language === 'de'
         ? ['Theorie und Praxis', 'Zertifikat']
         : language === 'ru'
@@ -47,7 +47,7 @@ const Training = () => {
       title: t('training.pmu'),
       description: t('training.pmu.desc'),
       icon: Award,
-      image: '/135.png',
+      image: '/beauty-kurs-zertifikat-muenchen.png',
       includes: language === 'de'
         ? ['Theorie und Praxis', 'Zertifikat']
         : language === 'ru'
@@ -59,7 +59,7 @@ const Training = () => {
       title: t('training.advanced'),
       description: t('training.advanced.desc'),
       icon: FileText,
-      image: '/117.PNG',
+      image: '/natalia-studio-arbeit.png',
       imagePosition: 'center 20%',
       includes: language === 'de'
         ? ['Theorie und Praxis', 'Zertifikat']
@@ -72,7 +72,7 @@ const Training = () => {
       title: t('training.consulting'),
       description: t('training.consulting.desc'),
       icon: Users,
-      image: '/134.jpeg',
+      image: '/beauty-schulung-wimpern-muenchen.jpeg',
       imagePosition: 'center 20%',
       includes: language === 'de'
         ? ['Rechtliche Grundlagen', 'Geschäftsformen', 'Preisgestaltung', 'Marketing-Tipps', 'Checklisten']
@@ -90,7 +90,7 @@ const Training = () => {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url(/45.webp)',
+            backgroundImage: 'url(/nata-lux-beauty-studio-muenchen.webp)',
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',

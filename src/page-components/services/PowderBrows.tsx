@@ -9,7 +9,7 @@ import { ServiceCard } from '@/components/ServiceCard';
 const PowderBrows = () => {
   const { language } = useLanguage();
 
-  const galleryImages = ['/147.jpeg', '/149.jpeg', '/65.jpg', '/43.png', '/137.jpeg', '/141.jpeg', '/148.jpeg', '/151.jpeg', '/152.jpeg', '/153.jpeg'];
+  const galleryImages = ['/powder-brows-detail.jpeg', '/powder-brows-ergebnis-nah.jpeg', '/powder-brows-permanent-makeup-muenchen.jpg', '/wimpernverlaengerung-ergebnis-muenchen.png', '/powder-brows-vorher-nachher.jpeg', '/powder-brows-arbeit.jpeg', '/powder-brows-resultat.jpeg', '/powder-brows-vorher.jpeg', '/powder-brows-nachher.jpeg', '/powder-brows-fertig.jpeg'];
 
   const photoGallery = (
     <PremiumGallery images={galleryImages} />
@@ -27,21 +27,21 @@ const PowderBrows = () => {
           description={language === 'de' ? 'Natürliche Lippenpigmentierung' : language === 'ru' ? 'Естественная пигментация губ' : 'Природна пігментація губ'}
           icon={Heart}
           href="/services/aquarell-lips"
-          image="/138.jpeg"
+          image="/permanent-makeup-behandlung.jpeg"
         />
         <ServiceCard
           title={language === 'de' ? 'Wimpernkranz' : language === 'ru' ? 'Межресничка' : 'Міжвійка'}
           description={language === 'de' ? 'Permanent Make-up Wimpernkranz' : language === 'ru' ? 'Перманентный макияж межресничного пространства' : 'Перманентний макіяж міжвійкового простору'}
           icon={Eye}
           href="/services/wimpernkranz"
-          image="/114.jpg"
+          image="/permanent-makeup-ergebnis-muenchen.jpg"
         />
         <ServiceCard
           title={language === 'de' ? 'Wimpernlaminierung' : language === 'ru' ? 'Ламинирование ресниц' : 'Ламінування вій'}
           description={language === 'de' ? 'Lash Lift für natürlich geschwungene Wimpern' : language === 'ru' ? 'Lash Lift для естественно изогнутых ресниц' : 'Lash Lift для природно підкручених вій'}
           icon={Sparkles}
           href="/services/wimpern-augenbrauen-laminierung"
-          image="/131.jpeg"
+          image="/wimpernverlaengerung-behandlung.jpeg"
         />
       </div>
     </div>

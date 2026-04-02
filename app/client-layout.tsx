@@ -16,6 +16,7 @@ import { CookieConsent } from "@/components/CookieConsent"
 import { Providers } from './providers'
 import { usePageTitle } from '@/hooks/usePageTitle'
 import { BreadcrumbInjector } from '@/components/BreadcrumbInjector'
+import { HreflangTags } from '@/components/HreflangTags'
 
 function PageTitleUpdater() {
   usePageTitle()
@@ -30,6 +31,7 @@ export function ClientLayout({ children }: { children: ReactNode }) {
         <Sonner />
         <LanguageProvider>
           <PageTitleUpdater />
+          <HreflangTags />
           <BreadcrumbInjector />
           <ScrollToTop />
           <PageParallaxBackground>

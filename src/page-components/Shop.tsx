@@ -183,7 +183,7 @@ const Shop = () => {
       {/* Background Image */}
       <div className="fixed inset-0 z-0">
         <Image
-          src="/48.png"
+          src="/renew-kosmetik-shop-hintergrund.png"
           alt="Background"
           fill
           priority
@@ -207,7 +207,7 @@ const Shop = () => {
             {/* Shop Section */}
             <div className="glass rounded-2xl p-6 max-w-3xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-heading font-semibold text-brand-espresso mb-3">
-                {language === 'de' ? "Kosmetik-Shop" : language === 'ru' ? "Магазин косметики" : "Магазин косметики"}
+                {language === 'de' ? "RENEW — Professionelle Hautpflege" : language === 'ru' ? "RENEW — Профессиональный уход за кожей" : "RENEW — Професійний догляд за шкірою"}
               </h2>
               <p className="text-brand-coffee/70 mb-3">
                 {language === 'de'

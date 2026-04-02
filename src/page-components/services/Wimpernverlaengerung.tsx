@@ -12,7 +12,7 @@ import { PremiumGallery } from '@/components/PremiumGallery';
 const Wimpernverlaengerung = () => {
   const { language } = useLanguage();
 
-  const galleryImages = ['/43.png', '/59.jpg', '/61.jpg', '/63.jpg', '/64.jpg', '/72.jpg', '/113.jpg', '/116.jpg', '/139.jpeg', '/140.jpeg', '/144.jpeg', '/145.jpeg', '/146.jpeg'];
+  const galleryImages = ['/wimpernverlaengerung-ergebnis-muenchen.png', '/wimpernverlaengerung-vorher-nachher.jpg', '/wimpernverlaengerung-volume-muenchen.jpg', '/wimpernverlaengerung-classic-muenchen.jpg', '/wimpernverlaengerung-mega-volume.jpg', '/wimpernverlaengerung-natural-look.jpg', '/wimpernverlaengerung-3d-volume.jpg', '/wimpernverlaengerung-ergebnis-nah.jpg', '/wimpernverlaengerung-arbeit.jpeg', '/wimpernverlaengerung-resultat.jpeg', '/wimpernverlaengerung-detail.jpeg', '/wimpernverlaengerung-vorher.jpeg', '/wimpernverlaengerung-nachher.jpeg'];
 
   return (
     <div className="relative min-h-screen">
@@ -21,7 +21,7 @@ const Wimpernverlaengerung = () => {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url(/45.webp)',
+            backgroundImage: 'url(/nata-lux-beauty-studio-muenchen.webp)',
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',
@@ -820,21 +820,21 @@ const Wimpernverlaengerung = () => {
                   description={language === 'de' ? 'Permanent Make-up für perfekte Augenbrauen' : language === 'ru' ? 'Перманентный макияж для идеальных бровей' : 'Перманентний макіяж для ідеальних брів'}
                   icon={Palette}
                   href="/services/powder-brows"
-                  image="/65.jpg"
+                  image="/powder-brows-permanent-makeup-muenchen.jpg"
                 />
                 <ServiceCard
                   title={language === 'de' ? 'Wimpern- & Augenbrauenlaminierung' : language === 'ru' ? 'Ламинирование ресниц и бровей' : 'Ламінування вій та брів'}
                   description={language === 'de' ? 'Lash Lift & Brow Lift' : language === 'ru' ? 'Lash Lift и Brow Lift' : 'Lash Lift та Brow Lift'}
                   icon={Layers}
                   href="/services/wimpern-augenbrauen-laminierung"
-                  image="/131.jpeg"
+                  image="/wimpernverlaengerung-behandlung.jpeg"
                 />
                 <ServiceCard
                   title={language === 'de' ? 'Wimpernkranz' : language === 'ru' ? 'Межресничка' : 'Міжвійковий простір'}
                   description={language === 'de' ? 'Permanent Make-up Wimpernkranz' : language === 'ru' ? 'Перманентный макияж межресничного пространства' : 'Перманентний макіяж міжвійкового простору'}
                   icon={Eye}
                   href="/services/wimpernkranz"
-                  image="/114.jpg"
+                  image="/permanent-makeup-ergebnis-muenchen.jpg"
                 />
               </div>
             </div>

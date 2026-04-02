@@ -69,7 +69,7 @@ export const BackgroundVideo = () => {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url(/25.png)',
+            backgroundImage: 'url(/hautpflege-behandlung.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -97,7 +97,7 @@ export const BackgroundVideo = () => {
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: 'url(/25.png)',
+          backgroundImage: 'url(/hautpflege-behandlung.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

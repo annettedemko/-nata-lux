@@ -64,7 +64,7 @@ const Contact = () => {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url(/17.png)',
+            backgroundImage: 'url(/kosmetik-behandlung-preise.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',
@@ -269,7 +269,7 @@ const Contact = () => {
                     </a>
                     <p className="text-brand-coffee/70 text-sm ml-7 mt-1">Elsässer Straße 33, 81667 München-Haidhausen</p>
                     <div className="flex items-center gap-2 ml-7 mt-2">
-                      <span className="text-brand-espresso font-semibold text-sm">5.0</span>
+                      <span className="text-brand-espresso font-semibold text-sm">4.9</span>
                       <div className="flex items-center gap-0.5">
                         {[1, 2, 3, 4, 5].map((i) => (
                           <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
@@ -297,31 +297,6 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Quick Transport Info under Map */}
-              <div className="glass rounded-2xl px-6 py-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
-                  <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <Car className="w-4 h-4 text-brand-gold" />
-                      <span className="font-semibold text-brand-espresso">{language === 'de' ? 'Parkplätze:' : language === 'ru' ? 'Парковки:' : 'Паркування:'}</span>
-                    </div>
-                    <ul className="text-brand-coffee/70 space-y-1 ml-6">
-                      <li>• <a href="https://maps.app.goo.gl/aamBNHd7cQLSozwt7" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors underline">Parkhaus Ostbahnhof</a> ({language === 'de' ? '6 Min.' : language === 'ru' ? '6 мин.' : '6 хв.'})</li>
-                      <li>• <a href="https://maps.app.goo.gl/RkUPoRsZS3BNMPQy7" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors underline">Motel One</a> ({language === 'de' ? '5 Min.' : language === 'ru' ? '5 мин.' : '5 хв.'})</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <Train className="w-4 h-4 text-brand-gold" />
-                      <span className="font-semibold text-brand-espresso">{language === 'de' ? 'ÖPNV:' : language === 'ru' ? 'Общественный транспорт:' : 'Громадський транспорт:'}</span>
-                    </div>
-                    <ul className="text-brand-coffee/70 space-y-1 ml-6">
-                      <li>• S-Bahn München Ost ({language === 'de' ? '5–7 Min.' : language === 'ru' ? '5–7 мин.' : '5–7 хв.'})</li>
-                      <li>• U5 Ostbahnhof, Tram/Bus Orleansplatz</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -427,7 +402,7 @@ const Contact = () => {
             {/* Studio Photo */}
             <div className="mt-6 rounded-xl overflow-hidden">
               <Image
-                src="/193.jpeg"
+                src="/nata-lux-studio-innenansicht.jpeg"
                 alt="NataLux Studio"
                 width={800}
                 height={600}

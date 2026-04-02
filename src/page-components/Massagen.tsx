@@ -107,7 +107,7 @@ const Massagen = () => {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url(/45.webp)',
+            backgroundImage: 'url(/nata-lux-beauty-studio-muenchen.webp)',
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',
@@ -300,7 +300,7 @@ const Massagen = () => {
                 },
                 {
                   href: '/services/kavitation',
-                  image: '/173.jpeg',
+                  image: '/ultraschall-kavitation-muenchen.jpeg',
                   title: language === 'de' ? 'Kavitation' : language === 'ru' ? 'Кавитация' : 'Кавітація',
                   desc: language === 'de'
                     ? 'Ultraschall-Kavitation für Fettreduktion und Bodyforming'

@@ -43,49 +43,49 @@ const Index = () => {
       description: t('categories.lashesbrows.desc'),
       icon: Sparkles,
       href: '/services#lashes-brows',
-      image: '/30.png',
+      image: '/wimpernverlaengerung-kategorie-muenchen.png',
     },
     {
       title: t('categories.pmu'),
       description: t('categories.pmu.desc'),
       icon: Palette,
       href: '/services#pmu',
-      image: '/35.png',
+      image: '/permanent-makeup-kategorie-muenchen.png',
     },
     {
       title: t('categories.laser'),
       description: t('categories.laser.desc'),
       icon: Zap,
       href: '/laser',
-      image: '/36.png',
+      image: '/laser-haarentfernung-kategorie-muenchen.png',
     },
     {
       title: t('categories.antiaging'),
       description: t('categories.antiaging.desc'),
       icon: Star,
       href: '/services#anti-aging',
-      image: '/32.png',
+      image: '/anti-aging-behandlung-kategorie-muenchen.png',
     },
     {
       title: t('categories.massagen'),
       description: t('categories.massagen.desc'),
       icon: Heart,
       href: '/massagen',
-      image: '/101.png',
+      image: '/apparative-massage-kategorie-muenchen.png',
     },
     {
       title: t('categories.training'),
       description: t('categories.training.desc'),
       icon: GraduationCap,
       href: '/training',
-      image: '/33.png',
+      image: '/beauty-schulung-kategorie-muenchen.png',
     },
     {
       title: t('categories.shop'),
       description: t('categories.shop.desc'),
       icon: ShoppingBag,
       href: '/shop',
-      image: '/38.jpeg',
+      image: '/kosmetik-shop-kategorie-muenchen.jpeg',
     },
   ];
 
@@ -99,7 +99,7 @@ const Index = () => {
         : 'Природне ущільнення вій для виразного погляду',
       icon: Sparkles,
       href: '/services/wimpernverlaengerung',
-      image: '/43.png',
+      image: '/wimpernverlaengerung-ergebnis-muenchen.png',
     },
     {
       title: language === 'de' ? 'Diodenlaser-Haarentfernung' : language === 'ru' ? 'Диодный лазер (удаление волос)' : 'Діодний лазер (видалення волосся)',
@@ -110,7 +110,7 @@ const Index = () => {
         : 'Перманентне видалення волосся за допомогою сучасної діодної лазерної технології',
       icon: Zap,
       href: '/laser',
-      image: '/41.jpg',
+      image: '/laser-haarentfernung-muenchen.jpg',
     },
     {
       title: language === 'de' ? 'RF-Lifting für den Körper' : language === 'ru' ? 'РФ лифтинг для тела' : 'РФ ліфтинг для тіла',
@@ -121,7 +121,7 @@ const Index = () => {
         : 'Підтяжка та контурування тіла за допомогою радіочастотної технології',
       icon: Star,
       href: '/services/koerperbehandlungen/rf-vakuum',
-      image: '/39.jpeg',
+      image: '/anti-aging-gesichtsbehandlung-muenchen.jpeg',
     },
     {
       title: language === 'de' ? 'Microneedling' : language === 'ru' ? 'Микронидлинг' : 'Мікронідлінг',
@@ -132,7 +132,7 @@ const Index = () => {
         : 'Інноваційна процедура для вироблення колагену та регенерації шкіри',
       icon: Star,
       href: '/services/microneedling',
-      image: '/44.png',
+      image: '/apparative-kosmetik-muenchen.png',
     },
   ];
 

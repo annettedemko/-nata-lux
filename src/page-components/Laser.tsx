@@ -16,7 +16,7 @@ const Laser = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const { isDialogOpen, openDikidi, closeDialog } = useDikidiConsent();
 
-  const galleryImages = ['/70.PNG', '/41.jpg', '/42.jpg', '/75.jpg', '/76.jpg'];
+  const galleryImages = ['/70.PNG', '/laser-haarentfernung-muenchen.jpg', '/dioden-laser-behandlung-muenchen.jpg', '/alexandrit-laser-muenchen.jpg', '/laser-haarentfernung-beine-muenchen.jpg'];
 
   const openLightbox = (index: number) => setSelectedImage(index);
   const closeLightbox = () => setSelectedImage(null);
@@ -325,7 +325,7 @@ const Laser = () => {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url(/45.webp)',
+            backgroundImage: 'url(/nata-lux-beauty-studio-muenchen.webp)',
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',
@@ -572,8 +572,8 @@ const Laser = () => {
           </motion.div>
           <ProcedureSchema
             germanImages={['/193 1.png']}
-            russianImages={['/193.png']}
-            ukrainianImages={['/193.png']}
+            russianImages={['/laser-behandlungsraum-muenchen.png']}
+            ukrainianImages={['/laser-behandlungsraum-muenchen.png']}
             altTextGerman="Laser-Haarentfernung Behandlungsablauf"
             altTextRussian="Схема лазерной эпиляции"
             altTextUkrainian="Схема лазерної епіляції"

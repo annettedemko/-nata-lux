@@ -125,7 +125,7 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
                 }}
               >
                 <motion.img
-                  src="/112.png"
+                  src="/nata-lux-logo.png"
                   alt="Nata Lux"
                   className="w-full h-full object-contain"
                   animate={{

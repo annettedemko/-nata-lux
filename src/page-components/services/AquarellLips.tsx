@@ -11,12 +11,12 @@ const AquarellLips = () => {
 
   const galleryImages = [
     '/1.webm',
-    '/52.jpg',
-    '/53.jpg',
-    '/54.jpg',
-    '/55.jpg',
-    '/93.jpg',
-    '/96.jpg',
+    '/aquarell-lips-permanent-makeup.jpg',
+    '/aquarell-lips-ergebnis.jpg',
+    '/aquarell-lips-vorher-nachher.jpg',
+    '/aquarell-lips-detail.jpg',
+    '/aquarell-lips-behandlung.jpg',
+    '/aquarell-lips-resultat.jpg',
   ];
 
   const photoGallery = (
@@ -35,21 +35,21 @@ const AquarellLips = () => {
           description={language === 'de' ? 'Pudertechnik für perfekte Augenbrauen' : language === 'ru' ? 'Пудровая техника для идеальных бровей' : 'Пудрова техніка для ідеальних брів'}
           icon={Palette}
           href="/services/powder-brows"
-          image="/65.jpg"
+          image="/powder-brows-permanent-makeup-muenchen.jpg"
         />
         <ServiceCard
           title={language === 'de' ? 'Wimpernkranz' : language === 'ru' ? 'Межресничка' : 'Міжвійка'}
           description={language === 'de' ? 'Permanent Make-up Wimpernkranz' : language === 'ru' ? 'Перманентный макияж межресничного пространства' : 'Перманентний макіяж міжвійкового простору'}
           icon={Eye}
           href="/services/wimpernkranz"
-          image="/114.jpg"
+          image="/permanent-makeup-ergebnis-muenchen.jpg"
         />
         <ServiceCard
           title={language === 'de' ? 'Wimpernverlängerung' : language === 'ru' ? 'Наращивание ресниц' : 'Нарощування вій'}
           description={language === 'de' ? 'Klassisch oder Volumentechnik' : language === 'ru' ? 'Классика или объём' : 'Класика або об\'єм'}
           icon={Sparkles}
           href="/services/wimpernverlaengerung"
-          image="/43.png"
+          image="/wimpernverlaengerung-ergebnis-muenchen.png"
         />
       </div>
     </div>

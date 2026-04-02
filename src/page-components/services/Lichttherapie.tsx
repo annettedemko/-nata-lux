@@ -12,7 +12,7 @@ const Lichttherapie = () => {
   const SchemaSection = () => (
     <ProcedureSchema
       germanImages={['/182%201.jpg', '/166%201.jpg']}
-      russianImages={['/182.jpg', '/166.jpeg']}
+      russianImages={['/biostrom-lichttherapie.jpg', '/lichttherapie-led-muenchen.jpeg']}
       altTextGerman="LED-Lichttherapie Schema"
       altTextRussian="Схема LED-светотерапии"
       scale={0.5}
@@ -31,21 +31,21 @@ const Lichttherapie = () => {
           description={language === 'de' ? 'Mikrostrom für zusätzlichen Lifting-Effekt' : language === 'ru' ? 'Микротоки для дополнительного лифтинг-эффекта' : 'Мікроструми для додаткового ліфтинг-ефекту'}
           icon={Activity}
           href="/services/apparative-anti-aging/biostrom"
-          image="/125.webp"
+          image="/apparative-anti-aging-geraet-muenchen.webp"
         />
         <ServiceCard
           title={language === 'de' ? 'Phonophorese' : language === 'ru' ? 'Фонофорез' : 'Фонофорез'}
           description={language === 'de' ? 'Ultraschall für tiefe Wirkstoffeinschleusung' : language === 'ru' ? 'Ультразвук для глубокого введения активных веществ' : 'Ультразвук для глибокого введення активних речовин'}
           icon={Droplet}
           href="/services/phonophorese"
-          image="/128.jpeg"
+          image="/ultraschall-gesichtsbehandlung-muenchen.jpeg"
         />
         <ServiceCard
           title="RF-Lifting"
           description={language === 'de' ? 'Radiofrequenz für intensive Straffung' : language === 'ru' ? 'Радиочастоты для интенсивной подтяжки' : 'Радіочастоти для інтенсивної підтяжки'}
           icon={Zap}
           href="/services/apparative-anti-aging/rf-lifting"
-          image="/162.jpeg"
+          image="/rf-lifting-behandlung-muenchen.jpeg"
         />
       </div>
     </div>

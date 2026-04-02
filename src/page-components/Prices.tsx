@@ -389,7 +389,7 @@ const Prices = () => {
       {/* Background Image */}
       <div className="fixed inset-0 z-0">
         <Image
-          src="/17.png"
+          src="/kosmetik-behandlung-preise.png"
           alt="Background"
           fill
           priority

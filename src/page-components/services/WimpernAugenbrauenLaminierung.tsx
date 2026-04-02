@@ -9,7 +9,7 @@ import { ServiceCard } from '@/components/ServiceCard';
 const WimpernAugenbrauenLaminierung = () => {
   const { language } = useLanguage();
 
-  const galleryImages = ['/60.jpg', '/61.jpg', '/62.jpg', '/74.jpg'];
+  const galleryImages = ['/wimpern-laminierung-muenchen.jpg', '/wimpernverlaengerung-volume-muenchen.jpg', '/augenbrauen-laminierung-muenchen.jpg', '/wimpern-laminierung-ergebnis.jpg'];
 
   const photoGallery = (
     <PremiumGallery images={galleryImages} />
@@ -27,21 +27,21 @@ const WimpernAugenbrauenLaminierung = () => {
           description={language === 'de' ? 'Klassisch oder Volumentechnik' : language === 'ru' ? 'Классика или объём' : 'Класика або об\'єм'}
           icon={Sparkles}
           href="/services/wimpernverlaengerung"
-          image="/43.png"
+          image="/wimpernverlaengerung-ergebnis-muenchen.png"
         />
         <ServiceCard
           title="Powder Brows"
           description={language === 'de' ? 'Permanent Make-up für perfekte Augenbrauen' : language === 'ru' ? 'Перманентный макияж для идеальных бровей' : 'Перманентний макіяж для ідеальних брів'}
           icon={Palette}
           href="/services/powder-brows"
-          image="/65.jpg"
+          image="/powder-brows-permanent-makeup-muenchen.jpg"
         />
         <ServiceCard
           title={language === 'de' ? 'Wimpernkranz' : language === 'ru' ? 'Межресничка' : 'Міжвійковий простір'}
           description={language === 'de' ? 'Permanent Make-up Wimpernkranz' : language === 'ru' ? 'Перманентный макияж межресничного пространства' : 'Перманентний макіяж міжвійкового простору'}
           icon={Eye}
           href="/services/wimpernkranz"
-          image="/114.jpg"
+          image="/permanent-makeup-ergebnis-muenchen.jpg"
         />
       </div>
     </div>

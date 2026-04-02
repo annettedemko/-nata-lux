@@ -60,7 +60,7 @@ const translations = {
     'about.equipment.desc': 'Modernste deutsche Geräte für beste Ergebnisse.',
 
     // Training
-    'training.title': 'Schulung',
+    'training.title': 'Beauty-Schulungen München — Wimpern, PMU & Zertifikat',
     'training.subtitle': 'Werden Sie ein Profi in der Beauty-Branche',
     'training.lashes': 'Wimpernverlängerung Kurs',
     'training.lashes.desc': 'Umfassendes Training von Grund auf. Zertifikat inklusive.',
@@ -188,7 +188,7 @@ const translations = {
     'training.business.description': 'Schritt-für-Schritt-Anleitung für Beauty-Business in Deutschland',
 
     // Shop subcategories
-    'shop.title': 'Kosmetik-Shop',
+    'shop.title': 'Professionelle Kosmetik kaufen — RENEW München',
     'shop.subtitle': 'Premium-Produkte für zu Hause und professionelle Anwendung',
     'shop.brands': 'Unsere Marken',
     'shop.renew': 'RENEW',
@@ -241,7 +241,7 @@ const translations = {
     'about.equipment.desc': 'Новейшее немецкое оборудование для лучших результатов.',
 
     // Training
-    'training.title': 'Обучение',
+    'training.title': 'Курсы красоты в Мюнхене — Ресницы, PMU и сертификат',
     'training.subtitle': 'Станьте профи в бьюти-индустрии',
     'training.lashes': 'Курс наращивания ресниц',
     'training.lashes.desc': 'Полное обучение с нуля. Сертификат включён.',
@@ -369,7 +369,7 @@ const translations = {
     'training.business.description': 'Пошаговая инструкция по открытию бьюти-бизнеса в Германии',
 
     // Shop subcategories
-    'shop.title': 'Магазин косметики',
+    'shop.title': 'Профессиональная косметика RENEW — купить в Мюнхене',
     'shop.subtitle': 'Премиум-продукты для дома и профессионального использования',
     'shop.brands': 'Наши бренды',
     'shop.renew': 'RENEW',
@@ -422,7 +422,7 @@ const translations = {
     'about.equipment.desc': 'Найновіше німецьке обладнання для найкращих результатів.',
 
     // Training
-    'training.title': 'Навчання',
+    'training.title': 'Курси краси в Мюнхені — Вії, PMU та сертифікат',
     'training.subtitle': 'Стань професіоналом в б\'юті-індустрії',
     'training.lashes': 'Курс нарощування вій',
     'training.lashes.desc': 'Повне навчання з нуля. Сертифікат включений.',
@@ -550,7 +550,7 @@ const translations = {
     'training.business.description': 'Покрокова інструкція з відкриття б\'юті-бізнесу в Німеччині',
 
     // Shop subcategories
-    'shop.title': 'Магазин косметики',
+    'shop.title': 'Професійна косметика RENEW — купити в Мюнхені',
     'shop.subtitle': 'Преміум-продукти для дому та професійного використання',
     'shop.brands': 'Наші бренди',
     'shop.renew': 'RENEW',

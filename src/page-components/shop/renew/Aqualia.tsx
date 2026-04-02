@@ -104,7 +104,7 @@ const Aqualia = () => {
       <ProductLineSchema lineName="Aqualia" products={products.map(p => ({ name: p.name, image: p.image }))} />
       <div className="fixed inset-0 z-0">
         <Image
-          src="/48.png"
+          src="/renew-kosmetik-shop-hintergrund.png"
           alt="Background"
           fill
           priority
