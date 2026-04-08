@@ -17,7 +17,7 @@ const BiorepairPro = () => {
         ? "Anti-Akne Konzentrat mit Azelainsäure und Salicylsäure. Reguliert Talgproduktion, bekämpft Entzündungen und verhindert neue Unreinheiten."
         : language === 'ru' ? "Концентрат против акне с азелаиновой и салициловой кислотами. Регулирует выработку кожного сала, борется с воспалениями и предотвращает новые высыпания."
         : "Концентрат проти акне з азелаїновою та саліциловою кислотами. Регулює вироблення шкірного сала, бореться із запаленнями та запобігає новим висипанням.",
-      image: "/Renew/17.png",
+      image: "/Renew/renew-anti-aging-produkt-13.png",
       variants: [{ volume: "10ml" }]
     },
     {
@@ -27,7 +27,7 @@ const BiorepairPro = () => {
         ? "Aufhellendes Konzentrat mit Tranexamsäure. Hemmt Melaninbildung, reduziert Pigmentflecken und sorgt für strahlenden, ebenmäßigen Teint."
         : language === 'ru' ? "Осветляющий концентрат с транексамовой кислотой. Подавляет образование меланина, уменьшает пигментные пятна и придает сияющий ровный тон."
         : "Освітлювальний концентрат з транексамовою кислотою. Пригнічує утворення меланіну, зменшує пігментні плями та надає сяючий рівний тон.",
-      image: "/Renew/18.png",
+      image: "/Renew/renew-anti-aging-produkt-14.png",
       variants: [{ volume: "10ml" }]
     },
     {
@@ -37,7 +37,7 @@ const BiorepairPro = () => {
         ? "Regenerierendes Konzentrat mit Wachstumsfaktoren. Beschleunigt Wundheilung, fördert Hauterneuerung und repariert geschädigte Haut."
         : language === 'ru' ? "Регенерирующий концентрат с факторами роста. Ускоряет заживление, способствует обновлению кожи и восстанавливает поврежденную кожу."
         : "Регенерувальний концентрат з факторами росту. Прискорює загоєння, сприяє оновленню шкіри та відновлює пошкоджену шкіру.",
-      image: "/Renew/19.jpeg",
+      image: "/Renew/renew-anti-aging-produkt-15.jpeg",
       variants: [{ volume: "10ml" }]
     },
     {
@@ -47,7 +47,7 @@ const BiorepairPro = () => {
         ? "Peptid-Konzentrat mit Botox-ähnlicher Wirkung. Entspannt mimische Falten ohne Injektion, glättet Stirnfalten und Krähenfüße."
         : language === 'ru' ? "Пептидный концентрат с ботокс-подобным эффектом. Расслабляет мимические морщины без инъекций, разглаживает морщины на лбу и гусиные лапки."
         : "Пептидний концентрат з ботокс-подібним ефектом. Розслаблює мімічні зморшки без ін'єкцій, розгладжує зморшки на лобі та гусячі лапки.",
-      image: "/Renew/20.png",
+      image: "/Renew/renew-anti-aging-produkt-16.png",
       variants: [{ volume: "10ml" }]
     },
     {
@@ -57,7 +57,7 @@ const BiorepairPro = () => {
         ? "Stammzellen-Konzentrat. Aktiviert hauteigene Regenerationsprozesse, verjüngt tiefgreifend und verbessert die Hautdichte."
         : language === 'ru' ? "Концентрат стволовых клеток. Активирует собственные регенерационные процессы кожи, глубоко омолаживает и улучшает плотность кожи."
         : "Концентрат стовбурових клітин. Активує власні регенераційні процеси шкіри, глибоко омолоджує та покращує щільність шкіри.",
-      image: "/Renew/21.png",
+      image: "/Renew/renew-anti-aging-produkt-17.png",
       variants: [{ volume: "10ml" }]
     },
     {
@@ -67,7 +67,7 @@ const BiorepairPro = () => {
         ? "Spezielles Augenkonzentrat mit Peptiden und Koffein. Reduziert Tränensäcke, dunkle Ringe und glättet feine Fältchen um die Augen."
         : language === 'ru' ? "Специальный концентрат для глаз с пептидами и кофеином. Уменьшает мешки под глазами, темные круги и разглаживает мелкие морщинки вокруг глаз."
         : "Спеціальний концентрат для очей з пептидами та кофеїном. Зменшує мішки під очима, темні кола та розгладжує дрібні зморшки навколо очей.",
-      image: "/Renew/22.png",
+      image: "/Renew/renew-anti-aging-produkt-18.png",
       variants: [{ volume: "10ml" }]
     }
   ];

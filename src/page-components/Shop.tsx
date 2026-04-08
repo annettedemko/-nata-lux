@@ -16,7 +16,7 @@ const Shop = () => {
         ? "Produkte gegen Pigmentflecken und für einen ebenmäßigen Teint"
         : language === 'ru' ? "Средства против пигментных пятен и для ровного тона кожи"
         : "Засоби проти пігментних плям та для рівного тону шкіри",
-      image: "/Renew/R1.1.jpeg",
+      image: "/Renew/renew-shop-whitening-vorschau.jpeg",
       link: "/shop/renew/whitening",
       lines: ["Whitening"]
     },
@@ -27,7 +27,7 @@ const Shop = () => {
         ? "Premium Anti-Aging mit Gold und Peptiden"
         : language === 'ru' ? "Премиум антивозрастной уход с золотом и пептидами"
         : "Преміум антивіковий догляд із золотом та пептидами",
-      image: "/Renew/R2.1.jpg",
+      image: "/Renew/renew-shop-golden-age-vorschau.jpg",
       link: "/shop/renew/golden-age",
       lines: ["Golden Age"]
     },
@@ -38,7 +38,7 @@ const Shop = () => {
         ? "Verjüngung und Faltenkorrektur"
         : language === 'ru' ? "Омоложение и коррекция морщин"
         : "Омолодження та корекція зморшок",
-      image: "/Renew/R2.jpeg",
+      image: "/Renew/renew-shop-anti-age-vorschau.jpeg",
       link: "/shop/renew/anti-age",
       lines: ["Anti Age"]
     },
@@ -49,7 +49,7 @@ const Shop = () => {
         ? "Intensive Zellerneuerung"
         : language === 'ru' ? "Интенсивное обновление клеток"
         : "Інтенсивне оновлення клітин",
-      image: "/Renew/R17.jpg",
+      image: "/Renew/renew-shop-retinol-vorschau.jpg",
       link: "/shop/renew/retinol",
       lines: ["Retinol"]
     },
@@ -60,7 +60,7 @@ const Shop = () => {
         ? "Professionelle Meso-Konzentrate"
         : language === 'ru' ? "Профессиональные мезо-концентраты"
         : "Професійні мезо-концентрати",
-      image: "/Renew/R16.1.jpg",
+      image: "/Renew/renew-shop-biorepair-pro-vorschau.jpg",
       link: "/shop/renew/biorepair-pro",
       lines: ["Biorepair Pro"]
     },
@@ -71,7 +71,7 @@ const Shop = () => {
         ? "Regulierung der Talgproduktion und Mattierung für fettige Haut"
         : language === 'ru' ? "Регуляция себума и матирование для жирной кожи"
         : "Регуляція себуму та матування для жирної шкіри",
-      image: "/Renew/R3.jpeg",
+      image: "/Renew/renew-shop-dermo-control-vorschau.jpeg",
       link: "/shop/renew/dermo-control",
       lines: ["Dermo Control"]
     },
@@ -82,7 +82,7 @@ const Shop = () => {
         ? "Aktive Bekämpfung von Akne und Entzündungen"
         : language === 'ru' ? "Активная борьба с акне и воспалениями"
         : "Активна боротьба з акне та запаленнями",
-      image: "/Renew/R4.jpeg",
+      image: "/Renew/renew-shop-propioguard-vorschau.jpeg",
       link: "/shop/renew/propioguard",
       lines: ["Propioguard"]
     },
@@ -93,7 +93,7 @@ const Shop = () => {
         ? "Professionelle Peelings für Hauterneuerung"
         : language === 'ru' ? "Профессиональные пилинги для обновления кожи"
         : "Професійні пілінги для оновлення шкіри",
-      image: "/Renew/R14.jpg",
+      image: "/Renew/renew-shop-masken-vorschau.jpg",
       link: "/shop/renew/peelings",
       lines: ["Peelings"]
     },
@@ -104,7 +104,7 @@ const Shop = () => {
         ? "Intensive Masken für tiefe Pflege"
         : language === 'ru' ? "Интенсивные маски для глубокого ухода"
         : "Інтенсивні маски для глибокого догляду",
-      image: "/Renew/R6.jpeg",
+      image: "/Renew/renew-shop-peelings-vorschau.jpeg",
       link: "/shop/renew/masks",
       lines: ["Masks"]
     },
@@ -115,7 +115,7 @@ const Shop = () => {
         ? "Gele und Cremes für die tägliche Pflege"
         : language === 'ru' ? "Гели и кремы для ежедневного ухода"
         : "Гелі та креми для щоденного догляду",
-      image: "/Renew/R13.jpeg",
+      image: "/Renew/renew-shop-sensitive-skin-vorschau.jpeg",
       link: "/shop/renew/basic-care",
       lines: ["Gels & Creams"]
     },
@@ -126,7 +126,7 @@ const Shop = () => {
         ? "Schutz vor UV-Strahlung und Photoaging"
         : language === 'ru' ? "Защита от УФ-излучения и фотостарения"
         : "Захист від УФ-випромінювання та фотостаріння",
-      image: "/Renew/R9.webp",
+      image: "/Renew/renew-shop-professional-vorschau.webp",
       link: "/shop/renew/sun-protection",
       lines: ["Sunscreen"]
     },
@@ -137,7 +137,7 @@ const Shop = () => {
         ? "Beruhigende Pflege für empfindliche Haut und Rötungen"
         : language === 'ru' ? "Успокаивающий уход для чувствительной кожи и покраснений"
         : "Заспокійливий догляд для чутливої шкіри та почервонінь",
-      image: "/Renew/R10.jpg",
+      image: "/Renew/renew-shop-basic-care-vorschau.jpg",
       link: "/shop/renew/sensitive-skin",
       lines: ["Redness"]
     },
@@ -148,7 +148,7 @@ const Shop = () => {
         ? "Intensive Feuchtigkeit für jeden Hauttyp"
         : language === 'ru' ? "Интенсивное увлажнение для любого типа кожи"
         : "Інтенсивне зволоження для будь-якого типу шкіри",
-      image: "/Renew/R7.webp",
+      image: "/Renew/renew-shop-aqualia-vorschau.webp",
       link: "/shop/renew/aqualia",
       lines: ["Aqualia"]
     },
@@ -159,7 +159,7 @@ const Shop = () => {
         ? "Antioxidativer Schutz und strahlende Haut"
         : language === 'ru' ? "Антиоксидантная защита и сияние кожи"
         : "Антиоксидантний захист та сяйво шкіри",
-      image: "/Renew/R8.1.jpg",
+      image: "/Renew/renew-shop-vitamin-c-vorschau.jpg",
       link: "/shop/renew/vitamin-c",
       lines: ["Vitamin C"]
     },
@@ -170,7 +170,7 @@ const Shop = () => {
         ? "Spezielle Produkte für professionelle Anwendungen"
         : language === 'ru' ? "Специальные средства для профессиональных процедур"
         : "Спеціальні засоби для професійних процедур",
-      image: "/Renew/R11.webp",
+      image: "/Renew/renew-shop-sonnenschutz-vorschau.webp",
       link: "/shop/renew/professional",
       lines: ["Dermakey"]
     }

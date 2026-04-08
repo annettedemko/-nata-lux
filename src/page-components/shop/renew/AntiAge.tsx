@@ -19,8 +19,8 @@ const AntiAge = () => {
         ? "Straffende Maske mit Kollagen und Elastin. Sofortiger Lifting-Effekt und intensive Feuchtigkeitsversorgung. Ideal vor besonderen Anlässen."
         : language === 'ru' ? "Укрепляющая маска с коллагеном и эластином. Мгновенный лифтинг-эффект и интенсивное увлажнение. Идеально перед особыми мероприятиями."
         : "Зміцнювальна маска з колагеном та еластином. Миттєвий ліфтинг-ефект та інтенсивне зволоження. Ідеально перед особливими заходами.",
-      image: "/Renew/10.png",
-      hoverImage: "/Renew/10.1.jpeg",
+      image: "/Renew/renew-anti-age-produkt-1.png",
+      hoverImage: "/Renew/renew-anti-age-produkt-1-detail.jpeg",
       variants: [{ volume: "50ml" }, { volume: "250ml" }]
     },
     {
@@ -31,7 +31,7 @@ const AntiAge = () => {
         ? "Intensivserum mit Stammzellen-Extrakt. Stimuliert die Zellerneuerung und verjüngt die Haut von innen. Sichtbare Ergebnisse nach 2 Wochen."
         : language === 'ru' ? "Интенсивная сыворотка с экстрактом стволовых клеток. Стимулирует обновление клеток и омолаживает кожу изнутри. Видимые результаты через 2 недели."
         : "Інтенсивна сироватка з екстрактом стовбурових клітин. Стимулює оновлення клітин та омолоджує шкіру зсередини. Видимі результати через 2 тижні.",
-      image: "/Renew/11.png",
+      image: "/Renew/renew-anti-age-produkt-2.png",
       variants: [{ volume: "30ml" }]
     },
     {
@@ -42,8 +42,8 @@ const AntiAge = () => {
         ? "Regenerierende Augencreme mit Peptiden. Glättet Fältchen, festigt die empfindliche Augenpartie und reduziert Anzeichen von Müdigkeit."
         : language === 'ru' ? "Восстанавливающий крем для глаз с пептидами. Разглаживает морщинки, укрепляет нежную кожу вокруг глаз и уменьшает признаки усталости."
         : "Відновлювальний крем для очей з пептидами. Розгладжує зморшки, зміцнює ніжну шкіру навколо очей та зменшує ознаки втоми.",
-      image: "/Renew/12.png",
-      hoverImage: "/Renew/12.1.jpeg",
+      image: "/Renew/renew-anti-age-produkt-3.png",
+      hoverImage: "/Renew/renew-anti-age-produkt-3-detail.jpeg",
       variants: [{ volume: "30ml" }, { volume: "250ml" }]
     },
     {
@@ -54,8 +54,8 @@ const AntiAge = () => {
         ? "Revitalisierende Creme mit Hyaluronsäure. Durchfeuchtet alle Hautschichten, polstert Falten auf und verleiht der Haut neue Vitalität."
         : language === 'ru' ? "Ревитализирующий крем с гиалуроновой кислотой. Увлажняет все слои кожи, заполняет морщины и придает коже новую жизненную силу."
         : "Ревіталізувальний крем з гіалуроновою кислотою. Зволожує всі шари шкіри, заповнює зморшки та надає шкірі нову життєву силу.",
-      image: "/Renew/13.png",
-      hoverImage: "/Renew/13.1.jpeg",
+      image: "/Renew/renew-anti-age-produkt-4.png",
+      hoverImage: "/Renew/renew-anti-age-produkt-4-detail.jpeg",
       variants: [{ volume: "50ml" }, { volume: "250ml" }]
     },
     {
@@ -66,8 +66,8 @@ const AntiAge = () => {
         ? "Energiespendende Creme mit Coenzym Q10. Belebt müde Haut, schützt vor freien Radikalen und verleiht neue Energie und Ausstrahlung."
         : language === 'ru' ? "Энергетический крем с коэнзимом Q10. Оживляет уставшую кожу, защищает от свободных радикалов и придает новую энергию и сияние."
         : "Енергетичний крем з коензимом Q10. Оживлює втомлену шкіру, захищає від вільних радикалів та надає нову енергію та сяйво.",
-      image: "/Renew/14.png",
-      hoverImage: "/Renew/14.1.jpeg",
+      image: "/Renew/renew-anti-age-produkt-5.png",
+      hoverImage: "/Renew/renew-anti-age-produkt-5-detail.jpeg",
       variants: [{ volume: "50ml" }, { volume: "250ml" }]
     },
   ];

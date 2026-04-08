@@ -17,8 +17,8 @@ const BasicCare = () => {
         ? "Nährende Creme mit Sheabutter und Jojobaöl für intensive Feuchtigkeit. Ideal für trockene und normale Haut. Stärkt die Hautbarriere und hinterlässt die Haut weich und geschmeidig."
         : language === 'ru' ? "Питательный крем с маслом ши и жожоба для интенсивного увлажнения. Идеально для сухой и нормальной кожи. Укрепляет кожный барьер и оставляет кожу мягкой и эластичной."
         : "Поживний крем з олією ши та жожоба для інтенсивного зволоження. Ідеально для сухої та нормальної шкіри. Зміцнює шкірний бар'єр та залишає шкіру м'якою та еластичною.",
-      image: "/Renew/49.png",
-      hoverImage: "/Renew/49.1.jpeg",
+      image: "/Renew/renew-basic-care-produkt-1.png",
+      hoverImage: "/Renew/renew-basic-care-produkt-1-detail.jpeg",
       variants: [{ volume: "50ml" }, { volume: "250ml" }]
     },
     {
@@ -28,7 +28,7 @@ const BasicCare = () => {
         ? "Reparierende Pflege mit Fruchtsäuren. Glättet raue Haut, verbessert die Textur und fördert die Zellerneuerung. Für ein ebenmäßiges, strahlendes Hautbild."
         : language === 'ru' ? "Восстанавливающий уход с фруктовыми кислотами. Разглаживает грубую кожу, улучшает текстуру и способствует обновлению клеток. Для ровного сияющего цвета лица."
         : "Відновлювальний догляд з фруктовими кислотами. Розгладжує грубу шкіру, покращує текстуру та сприяє оновленню клітин. Для рівного сяючого кольору обличчя.",
-      image: "/Renew/50.png",
+      image: "/Renew/renew-basic-care-produkt-2.png",
       variants: [{ volume: "50ml" }]
     },
     {
@@ -38,8 +38,8 @@ const BasicCare = () => {
         ? "Spezielle Pflege für Hals und Dekolleté mit Peptiden und Vitamin E. Strafft erschlaffte Haut, reduziert Falten und verbessert die Hautelastizität in diesen empfindlichen Bereichen."
         : language === 'ru' ? "Специальный уход за шеей и декольте с пептидами и витамином Е. Подтягивает дряблую кожу, уменьшает морщины и улучшает эластичность в этих деликатных зонах."
         : "Спеціальний догляд за шиєю та декольте з пептидами та вітаміном Е. Підтягує в'ялу шкіру, зменшує зморшки та покращує еластичність у цих делікатних зонах.",
-      image: "/Renew/51.png",
-      hoverImage: "/Renew/51.1.jpeg",
+      image: "/Renew/renew-basic-care-produkt-3.png",
+      hoverImage: "/Renew/renew-basic-care-produkt-3-detail.jpeg",
       variants: [{ volume: "50ml" }, { volume: "250ml" }]
     },
     {
@@ -49,8 +49,8 @@ const BasicCare = () => {
         ? "Creme mit Ceramiden zur Wiederherstellung der Hautstruktur. Stärkt die Hautbarriere, repariert geschädigte Haut und schützt vor Feuchtigkeitsverlust."
         : language === 'ru' ? "Крем с церамидами для восстановления структуры кожи. Укрепляет кожный барьер, восстанавливает поврежденную кожу и защищает от потери влаги."
         : "Крем з церамідами для відновлення структури шкіри. Зміцнює шкірний бар'єр, відновлює пошкоджену шкіру та захищає від втрати вологи.",
-      image: "/Renew/52.jpeg",
-      hoverImage: "/Renew/52.1.jpeg",
+      image: "/Renew/renew-basic-care-produkt-4.jpeg",
+      hoverImage: "/Renew/renew-basic-care-produkt-4-detail.jpeg",
       variants: [{ volume: "50ml" }, { volume: "250ml" }]
     },
     {
@@ -60,8 +60,8 @@ const BasicCare = () => {
         ? "Peelingseife mit Mehrfachfruchtsäuren für die tägliche sanfte Hauterneuerung. Reinigt, peelt und verfeinert die Haut bei jeder Anwendung ohne zu reizen."
         : language === 'ru' ? "Пилинг-мыло с мультифруктовыми кислотами для ежедневного мягкого обновления кожи. Очищает, отшелушивает и улучшает кожу при каждом применении без раздражения."
         : "Пілінг-мило з мультифруктовими кислотами для щоденного м'якого оновлення шкіри. Очищує, відлущує та покращує шкіру при кожному застосуванні без подразнення.",
-      image: "/Renew/53.jpeg",
-      hoverImage: "/Renew/53.1.jpeg",
+      image: "/Renew/renew-basic-care-produkt-5.jpeg",
+      hoverImage: "/Renew/renew-basic-care-produkt-5-detail.jpeg",
       variants: [{ volume: "250ml" }, { volume: "500ml" }]
     }
   ];

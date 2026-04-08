@@ -17,8 +17,8 @@ const DermoControl = () => {
         ? "Reinigungsgel mit Salicylsäure und Teebaumöl. Entfernt überschüssigen Talg ohne auszutrocknen, reinigt die Poren und beugt Unreinheiten vor."
         : language === 'ru' ? "Очищающий гель с салициловой кислотой и маслом чайного дерева. Удаляет избыток кожного сала не пересушивая, очищает поры и предотвращает высыпания."
         : "Очищувальний гель із саліциловою кислотою та олією чайного дерева. Видаляє надлишок шкірного сала не пересушуючи, очищує пори та запобігає висипанням.",
-      image: "/Renew/23.png",
-      hoverImage: "/Renew/23.1.jpeg",
+      image: "/Renew/renew-dermo-control-produkt-1.png",
+      hoverImage: "/Renew/renew-dermo-control-produkt-1-detail.jpeg",
       variants: [
         { volume: "250ml" },
         { volume: "500ml" }
@@ -31,7 +31,7 @@ const DermoControl = () => {
         ? "Leichtes Feuchtigkeitsgel ohne Öl. Mattiert die Haut und spendet Feuchtigkeit ohne zu fetten. Ideal für fettige und Mischhaut."
         : language === 'ru' ? "Легкий увлажняющий гель без масла. Матирует кожу и увлажняет без жирности. Идеально для жирной и комбинированной кожи."
         : "Легкий зволожувальний гель без олії. Матує шкіру та зволожує без жирності. Ідеально для жирної та комбінованої шкіри.",
-      image: "/Renew/24.jpeg",
+      image: "/Renew/renew-dermo-control-produkt-2.jpeg",
       variants: [{ volume: "250ml" }]
     },
     {
@@ -41,8 +41,8 @@ const DermoControl = () => {
         ? "Reinigende Maske mit Kaolin und Zink. Absorbiert überschüssigen Talg, verfeinert die Poren und beruhigt entzündete Haut."
         : language === 'ru' ? "Очищающая маска с каолином и цинком. Абсорбирует избыток кожного сала, сужает поры и успокаивает воспаленную кожу."
         : "Очищувальна маска з каоліном та цинком. Абсорбує надлишок шкірного сала, звужує пори та заспокоює запалену шкіру.",
-      image: "/Renew/25.png",
-      hoverImage: "/Renew/25.1.jpeg",
+      image: "/Renew/renew-dermo-control-produkt-3.png",
+      hoverImage: "/Renew/renew-dermo-control-produkt-3-detail.jpeg",
       variants: [
         { volume: "70ml" },
         { volume: "250ml" }
@@ -55,8 +55,8 @@ const DermoControl = () => {
         ? "Ausgleichende Lotion mit BHA. Klärt die Haut, reguliert die Talgproduktion und beugt Unreinheiten vor. Täglich nach der Reinigung anwenden."
         : language === 'ru' ? "Балансирующий лосьон с BHA. Очищает кожу, регулирует выработку себума и предотвращает высыпания. Применять ежедневно после очищения."
         : "Балансувальний лосьйон з BHA. Очищує шкіру, регулює вироблення себуму та запобігає висипанням. Застосовувати щоденно після очищення.",
-      image: "/Renew/26.png",
-      hoverImage: "/Renew/26.1.jpeg",
+      image: "/Renew/renew-dermo-control-produkt-4.png",
+      hoverImage: "/Renew/renew-dermo-control-produkt-4-detail.jpeg",
       variants: [
         { volume: "250ml" },
         { volume: "500ml" }
@@ -69,7 +69,7 @@ const DermoControl = () => {
         ? "Sanftes Enzympeeling zur Wiederherstellung des Hautgleichgewichts. Entfernt Verhornungen und reguliert die Talgproduktion ohne zu reizen."
         : language === 'ru' ? "Мягкий энзимный пилинг для восстановления баланса кожи. Удаляет ороговевшие клетки и регулирует выработку себума без раздражения."
         : "М'який ензимний пілінг для відновлення балансу шкіри. Видаляє зроговілі клітини та регулює вироблення себуму без подразнення.",
-      image: "/Renew/27.jpeg",
+      image: "/Renew/renew-dermo-control-produkt-5.jpeg",
       variants: [{ volume: "70ml" }]
     },
     {
@@ -79,8 +79,8 @@ const DermoControl = () => {
         ? "Leichte Tagescreme mit Sonnenschutz für fettige Haut. Mattiert, schützt vor UV-Strahlung und spendet Feuchtigkeit ohne zu glänzen."
         : language === 'ru' ? "Легкий дневной крем с защитой от солнца для жирной кожи. Матирует, защищает от УФ-излучения и увлажняет без жирного блеска."
         : "Легкий денний крем із захистом від сонця для жирної шкіри. Матує, захищає від УФ-випромінювання та зволожує без жирного блиску.",
-      image: "/Renew/28.png",
-      hoverImage: "/Renew/28.1.jpeg",
+      image: "/Renew/renew-dermo-control-produkt-6.png",
+      hoverImage: "/Renew/renew-dermo-control-produkt-6-detail.jpeg",
       variants: [
         { volume: "70ml" },
         { volume: "250ml" }
@@ -93,8 +93,8 @@ const DermoControl = () => {
         ? "Ölfreie Feuchtigkeitscreme für fettige Haut. Versorgt mit Feuchtigkeit ohne zu fetten und hinterlässt ein mattes Finish."
         : language === 'ru' ? "Безмасляный увлажняющий крем для жирной кожи. Увлажняет без жирности и оставляет матовый финиш."
         : "Безолійний зволожувальний крем для жирної шкіри. Зволожує без жирності та залишає матовий фініш.",
-      image: "/Renew/29.png",
-      hoverImage: "/Renew/29.1.jpeg",
+      image: "/Renew/renew-dermo-control-produkt-7.png",
+      hoverImage: "/Renew/renew-dermo-control-produkt-7-detail.jpeg",
       variants: [
         { volume: "70ml" },
         { volume: "250ml" }
@@ -107,7 +107,7 @@ const DermoControl = () => {
         ? "Pflanzliches Konzentrat mit Teebaumöl und Salbei. Beruhigt Entzündungen, klärt Unreinheiten und reguliert die Talgproduktion."
         : language === 'ru' ? "Растительный концентрат с маслом чайного дерева и шалфеем. Успокаивает воспаления, очищает несовершенства и регулирует выработку себума."
         : "Рослинний концентрат з олією чайного дерева та шавлією. Заспокоює запалення, очищує недосконалості та регулює вироблення себуму.",
-      image: "/Renew/30.jpeg",
+      image: "/Renew/renew-dermo-control-produkt-8.jpeg",
       variants: [{ volume: "30ml" }]
     },
     {
@@ -117,7 +117,7 @@ const DermoControl = () => {
         ? "Lokale SOS-Behandlung zum Austrocknen von Unreinheiten. Punktgenau auf Pickel auftragen für schnelle Reduzierung von Rötungen und Schwellungen."
         : language === 'ru' ? "Локальное SOS-средство для подсушивания воспалений. Точечно наносить на прыщи для быстрого уменьшения покраснений и отечности."
         : "Локальний SOS-засіб для підсушування запалень. Точково наносити на прищі для швидкого зменшення почервонінь та набряклості.",
-      image: "/Renew/31.jpeg",
+      image: "/Renew/renew-dermo-control-produkt-9.jpeg",
       variants: [{ volume: "30ml" }]
     }
   ];

@@ -19,7 +19,7 @@ const Propioguard = () => {
         : language === 'ru'
         ? "Глубоко очищающая пена с прополисом и цинком. Борется с бактериями акне, успокаивает кожу и предотвращает новые воспаления."
         : "Глибоко очищувальна піна з прополісом та цинком. Бореться з бактеріями акне, заспокоює шкіру та запобігає новим запаленням.",
-      image: "/Renew/32.png",
+      image: "/Renew/renew-problemhaut-produkt-10.png",
       variants: [{ volume: "250ml" }]
     },
     {
@@ -30,7 +30,7 @@ const Propioguard = () => {
         : language === 'ru'
         ? "Тонирующий лечебный крем с антибактериальным действием. Маскирует несовершенства, ухаживает и лечит проблемную кожу одновременно."
         : "Тонувальний лікувальний крем з антибактеріальною дією. Маскує недосконалості, доглядає та лікує проблемну шкіру одночасно.",
-      image: "/Renew/33.png",
+      image: "/Renew/renew-problemhaut-produkt-11.png",
       variants: [{ volume: "50ml" }]
     },
     {
@@ -41,7 +41,7 @@ const Propioguard = () => {
         : language === 'ru'
         ? "Комплексный пилинг с миндальной и салициловой кислотами. Открывает закупоренные поры, борется с акне и предотвращает новые высыпания."
         : "Комплексний пілінг з мигдальною та саліциловою кислотами. Відкриває закупорені пори, бореться з акне та запобігає новим висипанням.",
-      image: "/Renew/34.png",
+      image: "/Renew/renew-problemhaut-produkt-12.png",
       variants: [{ volume: "250ml" }]
     },
     {
@@ -52,8 +52,8 @@ const Propioguard = () => {
         : language === 'ru'
         ? "Тройной активный дневной крем с SPF. Защищает от УФ-излучения, матирует жирную кожу и лечит акне одновременно."
         : "Потрійний активний денний крем з SPF. Захищає від УФ-випромінювання, матує жирну шкіру та лікує акне одночасно.",
-      image: "/Renew/35.png",
-      hoverImage: "/Renew/35.1.jpeg",
+      image: "/Renew/renew-problemhaut-produkt-13.png",
+      hoverImage: "/Renew/renew-problemhaut-produkt-13-detail.jpeg",
       variants: [{ volume: "50ml" }]
     },
     {
@@ -64,8 +64,8 @@ const Propioguard = () => {
         : language === 'ru'
         ? "Глубоко очищающая маска с активированным углем. Детоксифицирует кожу, абсорбирует загрязнения и успокаивает воспаления."
         : "Глибоко очищувальна маска з активованим вугіллям. Детоксифікує шкіру, абсорбує забруднення та заспокоює запалення.",
-      image: "/Renew/36.png",
-      hoverImage: "/Renew/36.1.jpeg",
+      image: "/Renew/renew-problemhaut-produkt-14.png",
+      hoverImage: "/Renew/renew-problemhaut-produkt-14-detail.jpeg",
       variants: [{ volume: "70ml" }]
     },
     {
@@ -76,8 +76,8 @@ const Propioguard = () => {
         : language === 'ru'
         ? "Мультифункциональный крем для ускорения регенерации кожи. Предотвращает образование рубцов и ускоряет заживление акне."
         : "Мультифункціональний крем для прискорення регенерації шкіри. Запобігає утворенню рубців та прискорює загоєння акне.",
-      image: "/Renew/37.png",
-      hoverImage: "/Renew/37.1.jpeg",
+      image: "/Renew/renew-problemhaut-produkt-15.png",
+      hoverImage: "/Renew/renew-problemhaut-produkt-15-detail.jpeg",
       variants: [
         { volume: "50ml" },
         { volume: "250ml" }

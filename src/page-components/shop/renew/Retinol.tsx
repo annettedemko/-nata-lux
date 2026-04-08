@@ -18,8 +18,8 @@ const Retinol = () => {
         ? "Hochdosiertes Retinol-Serum. Beschleunigt die Zellerneuerung, glättet Falten und verfeinert die Poren. Abends auf die gereinigte Haut auftragen."
         : language === 'ru' ? "Высокодозированная сыворотка с ретинолом. Ускоряет обновление клеток, разглаживает морщины и сужает поры. Наносить вечером на очищенную кожу."
         : "Високодозована сироватка з ретинолом. Прискорює оновлення клітин, розгладжує зморшки та звужує пори. Наносити ввечері на очищену шкіру.",
-      image: "/Renew/15.jpeg",
-      hoverImage: "/Renew/15.1.jpeg",
+      image: "/Renew/renew-anti-aging-produkt-11.jpeg",
+      hoverImage: "/Renew/renew-anti-aging-produkt-11-detail.jpeg",
       variants: [{ volume: "30ml" }, { volume: "50ml" }]
     },
     {
@@ -29,8 +29,8 @@ const Retinol = () => {
         ? "Retinol-Creme für die Nacht. Mildert Pigmentflecken, verbessert die Hautstruktur und reduziert feine Linien. Mit Vitamin E für zusätzliche Pflege."
         : language === 'ru' ? "Ночной крем с ретинолом. Осветляет пигментные пятна, улучшает текстуру кожи и уменьшает мелкие морщинки. С витамином Е для дополнительного ухода."
         : "Нічний крем з ретинолом. Освітлює пігментні плями, покращує текстуру шкіри та зменшує дрібні зморшки. З вітаміном Е для додаткового догляду.",
-      image: "/Renew/16.jpeg",
-      hoverImage: "/Renew/16.1.jpeg",
+      image: "/Renew/renew-anti-aging-produkt-12.jpeg",
+      hoverImage: "/Renew/renew-anti-aging-produkt-12-detail.jpeg",
       variants: [{ volume: "50ml" }]
     }
   ];

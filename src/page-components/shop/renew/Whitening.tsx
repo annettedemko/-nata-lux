@@ -18,8 +18,8 @@ const Whitening = () => {
         ? "Aufhellende Lotion mit AHA- und BHA-Säuren. Entfernt abgestorbene Hautzellen, hellt Pigmentflecken auf und sorgt für einen ebenmäßigen Teint. Wirkstoffe: Glykolsäure, Salicylsäure, Arbutin."
         : language === 'ru' ? "Осветляющий лосьон с AHA и BHA кислотами. Удаляет омертвевшие клетки кожи, осветляет пигментные пятна и выравнивает тон кожи. Активные ингредиенты: гликолевая кислота, салициловая кислота, арбутин."
         : "Освітлювальний лосьйон з AHA та BHA кислотами. Видаляє омертвілі клітини шкіри, освітлює пігментні плями та вирівнює тон шкіри. Активні інгредієнти: гліколева кислота, саліцилова кислота, арбутин.",
-      image: "/Renew/1.png",
-      hoverImage: "/Renew/1.1.jpeg",
+      image: "/Renew/renew-whitening-produkt-1.png",
+      hoverImage: "/Renew/renew-whitening-produkt-1-detail.jpeg",
       variants: [
         { volume: "250ml" },
         { volume: "500ml" }
@@ -32,8 +32,8 @@ const Whitening = () => {
         ? "Intensive Maske mit Arbutin und Vitamin C. Reduziert Hyperpigmentierung und verleiht der Haut Ausstrahlung. Ideal bei Altersflecken, Melasma und ungleichmäßigem Teint."
         : language === 'ru' ? "Интенсивная маска с арбутином и витамином С. Уменьшает гиперпигментацию и придает коже сияние. Идеально при возрастных пятнах, мелазме и неровном тоне кожи."
         : "Інтенсивна маска з арбутином та вітаміном С. Зменшує гіперпігментацію та надає шкірі сяйво. Ідеально при вікових плямах, мелазмі та нерівному тоні шкіри.",
-      image: "/Renew/2.png",
-      hoverImage: "/Renew/2.1.jpeg",
+      image: "/Renew/renew-whitening-produkt-2.png",
+      hoverImage: "/Renew/renew-whitening-produkt-2-detail.jpeg",
       variants: [
         { volume: "70ml" },
         { volume: "250ml" }
@@ -46,7 +46,7 @@ const Whitening = () => {
         ? "Hochkonzentriertes Serum mit Kojisäure und Niacinamid. Hemmt die Melaninproduktion und hellt bestehende Pigmentflecken auf. Für sichtbare Ergebnisse in 4-6 Wochen."
         : language === 'ru' ? "Высококонцентрированная сыворотка с койевой кислотой и ниацинамидом. Подавляет выработку меланина и осветляет существующие пигментные пятна. Видимые результаты через 4-6 недель."
         : "Висококонцентрована сироватка з коєвою кислотою та ніацинамідом. Пригнічує вироблення меланіну та освітлює наявні пігментні плями. Видимі результати через 4-6 тижнів.",
-      image: "/Renew/3.png",
+      image: "/Renew/renew-whitening-produkt-3.png",
       variants: [
         { volume: "30ml" }
       ]
@@ -58,7 +58,7 @@ const Whitening = () => {
         ? "Tägliche Pflegecreme mit aufhellenden Wirkstoffen. Schützt vor neuer Pigmentierung und pflegt die Haut intensiv. Mit Vitamin C, Arbutin und Süßholzwurzelextrakt."
         : language === 'ru' ? "Ежедневный крем с осветляющими компонентами. Защищает от новой пигментации и интенсивно ухаживает за кожей. С витамином С, арбутином и экстрактом корня солодки."
         : "Щоденний крем з освітлювальними компонентами. Захищає від нової пігментації та інтенсивно доглядає за шкірою. З вітаміном С, арбутином та екстрактом кореня солодки.",
-      image: "/Renew/4.png",
+      image: "/Renew/renew-whitening-produkt-4.png",
       variants: [
         { volume: "50ml" }
       ]

@@ -18,7 +18,7 @@ const SunProtection = () => {
         ? "Getönter Sonnenschutz mit SPF 30. Vereinheitlicht den Teint, schützt vor UVA/UVB-Strahlung und verleiht einen natürlichen, gepflegten Look. Ideal als Make-up-Basis."
         : language === 'ru' ? "Тонированный солнцезащитный крем с SPF 30. Выравнивает тон кожи, защищает от UVA/UVB-излучения и придает естественный ухоженный вид. Идеально как основа под макияж."
         : "Тонувальний сонцезахисний крем з SPF 30. Вирівнює тон шкіри, захищає від UVA/UVB-випромінювання та надає природний доглянутий вигляд. Ідеально як основа під макіяж.",
-      image: "/Renew/54.jpeg",
+      image: "/Renew/renew-sonnenschutz-produkt-1.jpeg",
       variants: [{ volume: "80ml" }]
     },
     {
@@ -28,7 +28,7 @@ const SunProtection = () => {
         ? "Maximaler Sonnenschutz mit SPF 50 für empfindliche Haut und intensive Sonneneinstrahlung. Leichte Textur, wasserfest und nicht komedogen. Schützt vor Photoaging."
         : language === 'ru' ? "Максимальная защита от солнца с SPF 50 для чувствительной кожи и интенсивного солнечного излучения. Легкая текстура, водостойкий и некомедогенный. Защищает от фотостарения."
         : "Максимальний захист від сонця з SPF 50 для чутливої шкіри та інтенсивного сонячного випромінювання. Легка текстура, водостійкий та некомедогенний. Захищає від фотостаріння.",
-      image: "/Renew/55.jpeg",
+      image: "/Renew/renew-sonnenschutz-produkt-2.jpeg",
       variants: [{ volume: "80ml" }]
     },
     {
@@ -38,7 +38,7 @@ const SunProtection = () => {
         ? "Leichter täglicher Sonnenschutz mit SPF 30. Zieht schnell ein, hinterlässt keinen weißen Film und eignet sich für alle Hauttypen. Täglicher Schutz vor UV-Strahlung."
         : language === 'ru' ? "Легкий ежедневный солнцезащитный крем с SPF 30. Быстро впитывается, не оставляет белых следов и подходит для всех типов кожи. Ежедневная защита от УФ-излучения."
         : "Легкий щоденний сонцезахисний крем з SPF 30. Швидко вбирається, не залишає білих слідів та підходить для всіх типів шкіри. Щоденний захист від УФ-випромінювання.",
-      image: "/Renew/56.jpeg",
+      image: "/Renew/renew-sonnenschutz-produkt-3.jpeg",
       variants: [{ volume: "80ml" }]
     }
   ];

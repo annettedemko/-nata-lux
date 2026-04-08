@@ -18,7 +18,7 @@ const VitaminC = () => {
         ? "Zarter Schaum ideal zur Reinigung jeden Hauttyps. Reinigt sanft und effektiv, entfernt Make-up ohne die Haut auszutrocknen oder zu reizen. Enthält 3-O-Ethyl-Ascorbinsäure"
         : language === 'ru' ? "Деликатная пенка идеально подходит для умывания кожи любого типа. Мягко и эффективно очищает, снимает макияж, не пересушивая и не раздражая кожу. Содержит 3-О-Ethyl аскорбиновую кислоту"
         : "Делікатна пінка ідеально підходить для вмивання шкіри будь-якого типу. М'яко та ефективно очищує, знімає макіяж, не пересушуючи та не подразнюючи шкіру. Містить 3-О-Ethyl аскорбінову кислоту",
-      image: "/Renew/69.jpeg",
+      image: "/Renew/renew-hydration-produkt-9.jpeg",
       variants: [{ volume: "220ml" }]
     },
     {
@@ -28,8 +28,8 @@ const VitaminC = () => {
         ? "Lotion mit pH 3,5 und 4% AHA-Säuren, 2% Salicylsäure zur effektiven Gesichtsreinigung und Vorbereitung auf weitere Produkte. Peelt sanft abgestorbene Hautzellen"
         : language === 'ru' ? "Лосьон с рН 3,5 и содержанием АНА кислот 4%, салициловой кислоты 2% для эффективного очищения кожи лица и подготовки её к нанесению других препаратов. Мягко отшелушивает мертвые клетки"
         : "Лосьйон з рН 3,5 та вмістом АНА кислот 4%, саліцилової кислоти 2% для ефективного очищення шкіри обличчя та підготовки її до нанесення інших засобів. М'яко відлущує мертві клітини",
-      image: "/Renew/70.jpeg",
-      hoverImage: "/Renew/70.1.jpeg",
+      image: "/Renew/renew-hydration-produkt-10.jpeg",
+      hoverImage: "/Renew/renew-hydration-produkt-10-detail.jpeg",
       variants: [{ volume: "250ml" }, { volume: "500ml" }]
     },
     {
@@ -39,8 +39,8 @@ const VitaminC = () => {
         ? "Cremige Maske mit hoher Konzentration an stabilem Vitamin C in Kombination mit Silizium für normale Kollagensynthese und Schutz vor schädlichen Umwelteinflüssen"
         : language === 'ru' ? "Маска приятной кремообразной текстуры с высокой концентрацией витамина С в стабильной форме в сочетании с кремнием для нормального синтеза коллагена и защиты от вредного воздействия"
         : "Маска приємної кремоподібної текстури з високою концентрацією вітаміну С у стабільній формі в поєднанні з кремнієм для нормального синтезу колагену та захисту від шкідливого впливу",
-      image: "/Renew/71.webp",
-      hoverImage: "/Renew/71.1.jpeg",
+      image: "/Renew/renew-hydration-produkt-11.webp",
+      hoverImage: "/Renew/renew-hydration-produkt-11-detail.jpeg",
       variants: [{ volume: "70ml" }, { volume: "250ml" }]
     },
     {
@@ -50,8 +50,8 @@ const VitaminC = () => {
         ? "Reichhaltiger Komplex natürlicher Extrakte und Öle mit reinem Vitamin C. Schützt die Haut vor schädlichen Umwelteinflüssen, neutralisiert freie Radikale, fördert die Kollagenproduktion"
         : language === 'ru' ? "Богатый комплекс натуральных экстрактов и масел, содержащих чистый витамин С. Защищает кожу от вредного воздействия окружающей среды, нейтрализует свободные радикалы, способствует выработке коллагена"
         : "Багатий комплекс натуральних екстрактів та олій, що містять чистий вітамін С. Захищає шкіру від шкідливого впливу навколишнього середовища, нейтралізує вільні радикали, сприяє виробленню колагену",
-      image: "/Renew/72.jpeg",
-      hoverImage: "/Renew/72.1.jpeg",
+      image: "/Renew/renew-hydration-produkt-12.jpeg",
+      hoverImage: "/Renew/renew-hydration-produkt-12-detail.jpeg",
       variants: [{ volume: "30ml" }, { volume: "100ml" }]
     },
     {
@@ -61,8 +61,8 @@ const VitaminC = () => {
         ? "Nährende Creme mit Vitamin C enthält einzigartige Kombination aktiver Inhaltsstoffe zur schnellen Regeneration und Pflege ohne komedogene Wirkung. Erneuert die Haut, gleicht Ton und Relief aus"
         : language === 'ru' ? "Питательный крем с витамином С содержит уникальную композицию активных ингредиентов, способных быстро восстанавливать кожу и питать её без комедогенного воздействия. Обновляет кожу, выравнивает тон и рельеф"
         : "Поживний крем з вітаміном С містить унікальну композицію активних інгредієнтів, здатних швидко відновлювати шкіру та живити її без комедогенного впливу. Оновлює шкіру, вирівнює тон та рельєф",
-      image: "/Renew/73.jpeg",
-      hoverImage: "/Renew/73.1.jpeg",
+      image: "/Renew/renew-hydration-produkt-13.jpeg",
+      hoverImage: "/Renew/renew-hydration-produkt-13-detail.jpeg",
       variants: [{ volume: "50ml" }, { volume: "250ml" }]
     },
     {
@@ -72,8 +72,8 @@ const VitaminC = () => {
         ? "Einzigartige Formel mit ausgewogener Zusammensetzung und idealer Textur. Leichte Textur hinterlässt keine Spuren, perfekte Make-up-Grundlage. Enthält stabiles fettlösliches Vitamin C und Peptidkomplex"
         : language === 'ru' ? "Уникальная формула крема имеет сбалансированный состав и идеальную текстуру. Легкая текстура не оставляет следа после нанесения, отличная основа под макияж. Содержит витамин С в стабильной жирорастворимой форме и комплекс пептидов"
         : "Унікальна формула крему має збалансований склад та ідеальну текстуру. Легка текстура не залишає слідів після нанесення, чудова основа під макіяж. Містить вітамін С у стабільній жиророзчинній формі та комплекс пептидів",
-      image: "/Renew/74.jpeg",
-      hoverImage: "/Renew/74.1.jpeg",
+      image: "/Renew/renew-hydration-produkt-14.jpeg",
+      hoverImage: "/Renew/renew-hydration-produkt-14-detail.jpeg",
       hoverImagePosition: "center 25%",
       variants: [{ volume: "30ml" }, { volume: "150ml" }]
     },
@@ -84,8 +84,8 @@ const VitaminC = () => {
         ? "Zarte Feuchtigkeitscreme mit angenehmem Zitrusduft zieht schnell ein ohne Fettgefühl. Hohe Konzentration an stabilem fettlöslichem Vitamin C als starkes Antioxidans. SPF-25"
         : language === 'ru' ? "Нежный увлажняющий крем с приятным цитрусовым ароматом быстро впитывается, не оставляя ощущения жирности. Высокая концентрация витамина С в стабильной жирорастворимой форме как мощный антиоксидант. SPF-25"
         : "Ніжний зволожувальний крем з приємним цитрусовим ароматом швидко вбирається, не залишаючи відчуття жирності. Висока концентрація вітаміну С у стабільній жиророзчинній формі як потужний антиоксидант. SPF-25",
-      image: "/Renew/75.png",
-      hoverImage: "/Renew/75.1.jpeg",
+      image: "/Renew/renew-hydration-produkt-15.png",
+      hoverImage: "/Renew/renew-hydration-produkt-15-detail.jpeg",
       variants: [{ volume: "50ml" }, { volume: "250ml" }]
     }
   ];

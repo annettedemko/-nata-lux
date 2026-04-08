@@ -20,8 +20,8 @@ const ProblemSkin = () => {
         : language === 'ru'
         ? "Очищающий гель с салициловой кислотой и маслом чайного дерева. Удаляет избыток кожного сала не пересушивая, очищает поры и предотвращает высыпания."
         : "Очищувальний гель із саліциловою кислотою та олією чайного дерева. Видаляє надлишок шкірного сала не пересушуючи, очищує пори та запобігає висипанням.",
-      image: "/Renew/23.png",
-      hoverImage: "/Renew/23.1.jpeg",
+      image: "/Renew/renew-dermo-control-produkt-1.png",
+      hoverImage: "/Renew/renew-dermo-control-produkt-1-detail.jpeg",
       variants: [{ volume: "250ml" }]
     },
     {
@@ -33,7 +33,7 @@ const ProblemSkin = () => {
         : language === 'ru'
         ? "Легкий увлажняющий гель без масла. Матирует кожу и увлажняет без жирности. Идеально для жирной и комбинированной кожи."
         : "Легкий зволожувальний гель без олії. Матує шкіру та зволожує без жирності. Ідеально для жирної та комбінованої шкіри.",
-      image: "/Renew/24.jpeg",
+      image: "/Renew/renew-dermo-control-produkt-2.jpeg",
       variants: [{ volume: "250ml" }]
     },
     {
@@ -45,8 +45,8 @@ const ProblemSkin = () => {
         : language === 'ru'
         ? "Очищающая маска с каолином и цинком. Абсорбирует избыток кожного сала, сужает поры и успокаивает воспаленную кожу."
         : "Очищувальна маска з каоліном та цинком. Абсорбує надлишок шкірного сала, звужує пори та заспокоює запалену шкіру.",
-      image: "/Renew/25.png",
-      hoverImage: "/Renew/25.1.jpeg",
+      image: "/Renew/renew-dermo-control-produkt-3.png",
+      hoverImage: "/Renew/renew-dermo-control-produkt-3-detail.jpeg",
       variants: [{ volume: "70ml" }]
     },
     {
@@ -58,8 +58,8 @@ const ProblemSkin = () => {
         : language === 'ru'
         ? "Балансирующий лосьон с BHA. Очищает кожу, регулирует выработку себума и предотвращает высыпания. Применять ежедневно после очищения."
         : "Балансувальний лосьйон з BHA. Очищує шкіру, регулює вироблення себуму та запобігає висипанням. Застосовувати щоденно після очищення.",
-      image: "/Renew/26.png",
-      hoverImage: "/Renew/26.1.jpeg",
+      image: "/Renew/renew-dermo-control-produkt-4.png",
+      hoverImage: "/Renew/renew-dermo-control-produkt-4-detail.jpeg",
       variants: [{ volume: "250ml" }]
     },
     {
@@ -71,7 +71,7 @@ const ProblemSkin = () => {
         : language === 'ru'
         ? "Мягкий энзимный пилинг для восстановления баланса кожи. Удаляет ороговевшие клетки и регулирует выработку себума без раздражения."
         : "М'який ензимний пілінг для відновлення балансу шкіри. Видаляє зроговілі клітини та регулює вироблення себуму без подразнення.",
-      image: "/Renew/27.jpeg",
+      image: "/Renew/renew-dermo-control-produkt-5.jpeg",
       variants: [{ volume: "70ml" }]
     },
     {
@@ -83,8 +83,8 @@ const ProblemSkin = () => {
         : language === 'ru'
         ? "Легкий дневной крем с защитой от солнца для жирной кожи. Матирует, защищает от УФ-излучения и увлажняет без жирного блеска."
         : "Легкий денний крем із захистом від сонця для жирної шкіри. Матує, захищає від УФ-випромінювання та зволожує без жирного блиску.",
-      image: "/Renew/28.png",
-      hoverImage: "/Renew/28.1.jpeg",
+      image: "/Renew/renew-dermo-control-produkt-6.png",
+      hoverImage: "/Renew/renew-dermo-control-produkt-6-detail.jpeg",
       variants: [{ volume: "50ml" }]
     },
     {
@@ -96,8 +96,8 @@ const ProblemSkin = () => {
         : language === 'ru'
         ? "Безмасляный увлажняющий крем для жирной кожи. Увлажняет без жирности и оставляет матовый финиш."
         : "Безолійний зволожувальний крем для жирної шкіри. Зволожує без жирності та залишає матовий фініш.",
-      image: "/Renew/29.png",
-      hoverImage: "/Renew/29.1.jpeg",
+      image: "/Renew/renew-dermo-control-produkt-7.png",
+      hoverImage: "/Renew/renew-dermo-control-produkt-7-detail.jpeg",
       variants: [{ volume: "50ml" }]
     },
     {
@@ -109,7 +109,7 @@ const ProblemSkin = () => {
         : language === 'ru'
         ? "Растительный концентрат с маслом чайного дерева и шалфеем. Успокаивает воспаления, очищает несовершенства и регулирует выработку себума."
         : "Рослинний концентрат з олією чайного дерева та шавлією. Заспокоює запалення, очищує недосконалості та регулює вироблення себуму.",
-      image: "/Renew/30.jpeg",
+      image: "/Renew/renew-dermo-control-produkt-8.jpeg",
       variants: [{ volume: "30ml" }]
     },
     {
@@ -121,7 +121,7 @@ const ProblemSkin = () => {
         : language === 'ru'
         ? "Локальное SOS-средство для подсушивания воспалений. Точечно наносить на прыщи для быстрого уменьшения покраснений и отечности."
         : "Локальний SOS-засіб для підсушування запалень. Точково наносити на прищі для швидкого зменшення почервонінь та набряклості.",
-      image: "/Renew/31.jpeg",
+      image: "/Renew/renew-dermo-control-produkt-9.jpeg",
       variants: [{ volume: "30ml" }]
     },
     // Propioguard Line
@@ -134,7 +134,7 @@ const ProblemSkin = () => {
         : language === 'ru'
         ? "Глубоко очищающая пена с прополисом и цинком. Борется с бактериями акне, успокаивает кожу и предотвращает новые воспаления."
         : "Глибоко очищувальна піна з прополісом та цинком. Бореться з бактеріями акне, заспокоює шкіру та запобігає новим запаленням.",
-      image: "/Renew/32.png",
+      image: "/Renew/renew-problemhaut-produkt-10.png",
       variants: [{ volume: "200ml" }]
     },
     {
@@ -146,7 +146,7 @@ const ProblemSkin = () => {
         : language === 'ru'
         ? "Тонирующий лечебный крем с антибактериальным действием. Маскирует несовершенства, ухаживает и лечит проблемную кожу одновременно."
         : "Тонувальний лікувальний крем з антибактеріальною дією. Маскує недосконалості, доглядає та лікує проблемну шкіру одночасно.",
-      image: "/Renew/33.png",
+      image: "/Renew/renew-problemhaut-produkt-11.png",
       variants: [{ volume: "50ml" }]
     },
     {
@@ -158,7 +158,7 @@ const ProblemSkin = () => {
         : language === 'ru'
         ? "Комплексный пилинг с миндальной и салициловой кислотами. Открывает закупоренные поры, борется с акне и предотвращает новые высыпания."
         : "Комплексний пілінг з мигдальною та саліциловою кислотами. Відкриває закупорені пори, бореться з акне та запобігає новим висипанням.",
-      image: "/Renew/34.png",
+      image: "/Renew/renew-problemhaut-produkt-12.png",
       variants: [{ volume: "70ml" }]
     },
     {
@@ -170,8 +170,8 @@ const ProblemSkin = () => {
         : language === 'ru'
         ? "Тройной активный дневной крем с SPF. Защищает от УФ-излучения, матирует жирную кожу и лечит акне одновременно."
         : "Потрійний активний денний крем з SPF. Захищає від УФ-випромінювання, матує жирну шкіру та лікує акне одночасно.",
-      image: "/Renew/35.png",
-      hoverImage: "/Renew/35.1.jpeg",
+      image: "/Renew/renew-problemhaut-produkt-13.png",
+      hoverImage: "/Renew/renew-problemhaut-produkt-13-detail.jpeg",
       variants: [{ volume: "50ml" }]
     },
     {
@@ -183,8 +183,8 @@ const ProblemSkin = () => {
         : language === 'ru'
         ? "Глубоко очищающая маска с активированным углем. Детоксифицирует кожу, абсорбирует загрязнения и успокаивает воспаления."
         : "Глибоко очищувальна маска з активованим вугіллям. Детоксифікує шкіру, абсорбує забруднення та заспокоює запалення.",
-      image: "/Renew/36.png",
-      hoverImage: "/Renew/36.1.jpeg",
+      image: "/Renew/renew-problemhaut-produkt-14.png",
+      hoverImage: "/Renew/renew-problemhaut-produkt-14-detail.jpeg",
       variants: [{ volume: "70ml" }]
     },
     {
@@ -196,8 +196,8 @@ const ProblemSkin = () => {
         : language === 'ru'
         ? "Мультифункциональный крем для ускорения регенерации кожи. Предотвращает образование рубцов и ускоряет заживление акне."
         : "Мультифункціональний крем для прискорення регенерації шкіри. Запобігає утворенню рубців та прискорює загоєння акне.",
-      image: "/Renew/37.png",
-      hoverImage: "/Renew/37.1.jpeg",
+      image: "/Renew/renew-problemhaut-produkt-15.png",
+      hoverImage: "/Renew/renew-problemhaut-produkt-15-detail.jpeg",
       variants: [{ volume: "50ml" }]
     }
   ];

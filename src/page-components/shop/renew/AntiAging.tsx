@@ -18,7 +18,7 @@ const AntiAging = () => {
         ? "Reichhaltiges Massageserum mit Vitaminen A, C, E. Nährt die Haut während der Massage und fördert die Durchblutung. Ideal für Anti-Aging Gesichtsmassagen."
         : language === 'ru' ? "Богатая массажная сыворотка с витаминами A, C, E. Питает кожу во время массажа и улучшает кровообращение. Идеально для антивозрастного массажа лица."
         : "Багата масажна сироватка з вітамінами A, C, E. Живить шкіру під час масажу та покращує кровообіг. Ідеально для антивікового масажу обличчя.",
-      image: "/Renew/5.jpeg",
+      image: "/Renew/renew-anti-aging-produkt-1.jpeg",
       variants: [{ volume: "250ml" }]
     },
     {
@@ -29,7 +29,7 @@ const AntiAging = () => {
         ? "Konzentriertes Anti-Aging Serum mit Multivitaminkomplex. Strafft die Haut, reduziert Falten und verbessert die Hautelastizität. Für reife Haut 50+."
         : language === 'ru' ? "Концентрированная антивозрастная сыворотка с мультивитаминным комплексом. Подтягивает кожу, уменьшает морщины и улучшает эластичность. Для зрелой кожи 50+."
         : "Концентрована антивікова сироватка з мультивітамінним комплексом. Підтягує шкіру, зменшує зморшки та покращує еластичність. Для зрілої шкіри 50+.",
-      image: "/Renew/6.png",
+      image: "/Renew/renew-anti-aging-produkt-2.png",
       variants: [{ volume: "30ml" }]
     },
     {
@@ -40,8 +40,8 @@ const AntiAging = () => {
         ? "Spezielle Augenpflege mit Peptiden und Hyaluronsäure. Reduziert Schwellungen, dunkle Augenringe und Krähenfüße. Strafft die empfindliche Augenpartie."
         : language === 'ru' ? "Специальный уход за глазами с пептидами и гиалуроновой кислотой. Уменьшает отечность, темные круги и гусиные лапки. Подтягивает нежную кожу вокруг глаз."
         : "Спеціальний догляд за очима з пептидами та гіалуроновою кислотою. Зменшує набряклість, темні кола та гусячі лапки. Підтягує ніжну шкіру навколо очей.",
-      image: "/Renew/7.png",
-      hoverImage: "/Renew/7.1.jpeg",
+      image: "/Renew/renew-anti-aging-produkt-3.png",
+      hoverImage: "/Renew/renew-anti-aging-produkt-3-detail.jpeg",
       variants: [{ volume: "30ml" }]
     },
     {
@@ -52,8 +52,8 @@ const AntiAging = () => {
         ? "Intensive Nachtcreme mit Retinol und Kollagen. Regeneriert die Haut während des Schlafs, glättet Falten und verbessert die Hautstruktur."
         : language === 'ru' ? "Интенсивный ночной крем с ретинолом и коллагеном. Восстанавливает кожу во время сна, разглаживает морщины и улучшает текстуру кожи."
         : "Інтенсивний нічний крем з ретинолом та колагеном. Відновлює шкіру під час сну, розгладжує зморшки та покращує текстуру шкіри.",
-      image: "/Renew/8.png",
-      hoverImage: "/Renew/8.1.jpeg",
+      image: "/Renew/renew-anti-aging-produkt-4.png",
+      hoverImage: "/Renew/renew-anti-aging-produkt-4-detail.jpeg",
       variants: [{ volume: "50ml" }]
     },
     {
@@ -64,8 +64,8 @@ const AntiAging = () => {
         ? "Tagescreme mit sofortigem Lifting-Effekt. Spendet Feuchtigkeit, strafft die Gesichtskonturen und schützt vor Umwelteinflüssen."
         : language === 'ru' ? "Дневной крем с мгновенным лифтинг-эффектом. Увлажняет, подтягивает контуры лица и защищает от воздействия окружающей среды."
         : "Денний крем з миттєвим ліфтинг-ефектом. Зволожує, підтягує контури обличчя та захищає від впливу навколишнього середовища.",
-      image: "/Renew/9.png",
-      hoverImage: "/Renew/9.1.jpeg",
+      image: "/Renew/renew-anti-aging-produkt-5.png",
+      hoverImage: "/Renew/renew-anti-aging-produkt-5-detail.jpeg",
       variants: [{ volume: "50ml" }]
     },
     // Anti Age Line
@@ -77,8 +77,8 @@ const AntiAging = () => {
         ? "Straffende Maske mit Kollagen und Elastin. Sofortiger Lifting-Effekt und intensive Feuchtigkeitsversorgung. Ideal vor besonderen Anlässen."
         : language === 'ru' ? "Укрепляющая маска с коллагеном и эластином. Мгновенный лифтинг-эффект и интенсивное увлажнение. Идеально перед особыми мероприятиями."
         : "Зміцнювальна маска з колагеном та еластином. Миттєвий ліфтинг-ефект та інтенсивне зволоження. Ідеально перед особливими заходами.",
-      image: "/Renew/10.png",
-      hoverImage: "/Renew/10.1.jpeg",
+      image: "/Renew/renew-anti-age-produkt-1.png",
+      hoverImage: "/Renew/renew-anti-age-produkt-1-detail.jpeg",
       variants: [{ volume: "250ml" }, { volume: "70ml" }]
     },
     {
@@ -89,7 +89,7 @@ const AntiAging = () => {
         ? "Intensivserum mit Stammzellen-Extrakt. Stimuliert die Zellerneuerung und verjüngt die Haut von innen. Sichtbare Ergebnisse nach 2 Wochen."
         : language === 'ru' ? "Интенсивная сыворотка с экстрактом стволовых клеток. Стимулирует обновление клеток и омолаживает кожу изнутри. Видимые результаты через 2 недели."
         : "Інтенсивна сироватка з екстрактом стовбурових клітин. Стимулює оновлення клітин та омолоджує шкіру зсередини. Видимі результати через 2 тижні.",
-      image: "/Renew/11.png",
+      image: "/Renew/renew-anti-age-produkt-2.png",
       variants: [{ volume: "30ml" }]
     },
     {
@@ -100,8 +100,8 @@ const AntiAging = () => {
         ? "Regenerierende Augencreme mit Peptiden. Glättet Fältchen, festigt die empfindliche Augenpartie und reduziert Anzeichen von Müdigkeit."
         : language === 'ru' ? "Восстанавливающий крем для глаз с пептидами. Разглаживает морщинки, укрепляет нежную кожу вокруг глаз и уменьшает признаки усталости."
         : "Відновлювальний крем для очей з пептидами. Розгладжує зморшки, зміцнює ніжну шкіру навколо очей та зменшує ознаки втоми.",
-      image: "/Renew/12.png",
-      hoverImage: "/Renew/12.1.jpeg",
+      image: "/Renew/renew-anti-age-produkt-3.png",
+      hoverImage: "/Renew/renew-anti-age-produkt-3-detail.jpeg",
       variants: [{ volume: "30ml" }]
     },
     {
@@ -112,8 +112,8 @@ const AntiAging = () => {
         ? "Revitalisierende Creme mit Hyaluronsäure. Durchfeuchtet alle Hautschichten, polstert Falten auf und verleiht der Haut neue Vitalität."
         : language === 'ru' ? "Ревитализирующий крем с гиалуроновой кислотой. Увлажняет все слои кожи, заполняет морщины и придает коже новую жизненную силу."
         : "Ревіталізувальний крем з гіалуроновою кислотою. Зволожує всі шари шкіри, заповнює зморшки та надає шкірі нову життєву силу.",
-      image: "/Renew/13.png",
-      hoverImage: "/Renew/13.1.jpeg",
+      image: "/Renew/renew-anti-age-produkt-4.png",
+      hoverImage: "/Renew/renew-anti-age-produkt-4-detail.jpeg",
       variants: [{ volume: "50ml" }]
     },
     {
@@ -124,8 +124,8 @@ const AntiAging = () => {
         ? "Energiespendende Creme mit Coenzym Q10. Belebt müde Haut, schützt vor freien Radikalen und verleiht neue Energie und Ausstrahlung."
         : language === 'ru' ? "Энергетический крем с коэнзимом Q10. Оживляет уставшую кожу, защищает от свободных радикалов и придает новую энергию и сияние."
         : "Енергетичний крем з коензимом Q10. Оживлює втомлену шкіру, захищає від вільних радикалів та надає нову енергію та сяйво.",
-      image: "/Renew/14.png",
-      hoverImage: "/Renew/14.1.jpeg",
+      image: "/Renew/renew-anti-age-produkt-5.png",
+      hoverImage: "/Renew/renew-anti-age-produkt-5-detail.jpeg",
       variants: [{ volume: "50ml" }]
     },
     // Retinol Line
@@ -137,8 +137,8 @@ const AntiAging = () => {
         ? "Hochdosiertes Retinol-Serum. Beschleunigt die Zellerneuerung, glättet Falten und verfeinert die Poren. Abends auf die gereinigte Haut auftragen."
         : language === 'ru' ? "Высокодозированная сыворотка с ретинолом. Ускоряет обновление клеток, разглаживает морщины и сужает поры. Наносить вечером на очищенную кожу."
         : "Високодозована сироватка з ретинолом. Прискорює оновлення клітин, розгладжує зморшки та звужує пори. Наносити ввечері на очищену шкіру.",
-      image: "/Renew/15.jpeg",
-      hoverImage: "/Renew/15.1.jpeg",
+      image: "/Renew/renew-anti-aging-produkt-11.jpeg",
+      hoverImage: "/Renew/renew-anti-aging-produkt-11-detail.jpeg",
       variants: [{ volume: "30ml" }]
     },
     {
@@ -149,8 +149,8 @@ const AntiAging = () => {
         ? "Retinol-Creme für die Nacht. Mildert Pigmentflecken, verbessert die Hautstruktur und reduziert feine Linien. Mit Vitamin E für zusätzliche Pflege."
         : language === 'ru' ? "Ночной крем с ретинолом. Осветляет пигментные пятна, улучшает текстуру кожи и уменьшает мелкие морщинки. С витамином Е для дополнительного ухода."
         : "Нічний крем з ретинолом. Освітлює пігментні плями, покращує текстуру шкіри та зменшує дрібні зморшки. З вітаміном Е для додаткового догляду.",
-      image: "/Renew/16.jpeg",
-      hoverImage: "/Renew/16.1.jpeg",
+      image: "/Renew/renew-anti-aging-produkt-12.jpeg",
+      hoverImage: "/Renew/renew-anti-aging-produkt-12-detail.jpeg",
       variants: [{ volume: "50ml" }]
     },
     // Biorepair Pro Line
@@ -162,7 +162,7 @@ const AntiAging = () => {
         ? "Anti-Akne Konzentrat mit Azelainsäure und Salicylsäure. Reguliert Talgproduktion, bekämpft Entzündungen und verhindert neue Unreinheiten."
         : language === 'ru' ? "Концентрат против акне с азелаиновой и салициловой кислотами. Регулирует выработку кожного сала, борется с воспалениями и предотвращает новые высыпания."
         : "Концентрат проти акне з азелаїновою та саліциловою кислотами. Регулює вироблення шкірного сала, бореться із запаленнями та запобігає новим висипанням.",
-      image: "/Renew/17.png",
+      image: "/Renew/renew-anti-aging-produkt-13.png",
       variants: [{ volume: "10ml" }]
     },
     {
@@ -173,7 +173,7 @@ const AntiAging = () => {
         ? "Aufhellendes Konzentrat mit Tranexamsäure. Hemmt Melaninbildung, reduziert Pigmentflecken und sorgt für strahlenden, ebenmäßigen Teint."
         : language === 'ru' ? "Осветляющий концентрат с транексамовой кислотой. Подавляет образование меланина, уменьшает пигментные пятна и придает сияющий ровный тон."
         : "Освітлювальний концентрат з транексамовою кислотою. Пригнічує утворення меланіну, зменшує пігментні плями та надає сяючий рівний тон.",
-      image: "/Renew/18.png",
+      image: "/Renew/renew-anti-aging-produkt-14.png",
       variants: [{ volume: "10ml" }]
     },
     {
@@ -184,7 +184,7 @@ const AntiAging = () => {
         ? "Regenerierendes Konzentrat mit Wachstumsfaktoren. Beschleunigt Wundheilung, fördert Hauterneuerung und repariert geschädigte Haut."
         : language === 'ru' ? "Регенерирующий концентрат с факторами роста. Ускоряет заживление, способствует обновлению кожи и восстанавливает поврежденную кожу."
         : "Регенерувальний концентрат з факторами росту. Прискорює загоєння, сприяє оновленню шкіри та відновлює пошкоджену шкіру.",
-      image: "/Renew/19.jpeg",
+      image: "/Renew/renew-anti-aging-produkt-15.jpeg",
       variants: [{ volume: "10ml" }]
     },
     {
@@ -195,7 +195,7 @@ const AntiAging = () => {
         ? "Peptid-Konzentrat mit Botox-ähnlicher Wirkung. Entspannt mimische Falten ohne Injektion, glättet Stirnfalten und Krähenfüße."
         : language === 'ru' ? "Пептидный концентрат с ботокс-подобным эффектом. Расслабляет мимические морщины без инъекций, разглаживает морщины на лбу и гусиные лапки."
         : "Пептидний концентрат з ботокс-подібним ефектом. Розслаблює мімічні зморшки без ін'єкцій, розгладжує зморшки на лобі та гусячі лапки.",
-      image: "/Renew/20.png",
+      image: "/Renew/renew-anti-aging-produkt-16.png",
       variants: [{ volume: "10ml" }]
     },
     {
@@ -206,7 +206,7 @@ const AntiAging = () => {
         ? "Stammzellen-Konzentrat. Aktiviert hauteigene Regenerationsprozesse, verjüngt tiefgreifend und verbessert die Hautdichte."
         : language === 'ru' ? "Концентрат стволовых клеток. Активирует собственные регенерационные процессы кожи, глубоко омолаживает и улучшает плотность кожи."
         : "Концентрат стовбурових клітин. Активує власні регенераційні процеси шкіри, глибоко омолоджує та покращує щільність шкіри.",
-      image: "/Renew/21.png",
+      image: "/Renew/renew-anti-aging-produkt-17.png",
       variants: [{ volume: "10ml" }]
     },
     {
@@ -217,7 +217,7 @@ const AntiAging = () => {
         ? "Spezielles Augenkonzentrat mit Peptiden und Koffein. Reduziert Tränensäcke, dunkle Ringe und glättet feine Fältchen um die Augen."
         : language === 'ru' ? "Специальный концентрат для глаз с пептидами и кофеином. Уменьшает мешки под глазами, темные круги и разглаживает мелкие морщинки вокруг глаз."
         : "Спеціальний концентрат для очей з пептидами та кофеїном. Зменшує мішки під очима, темні кола та розгладжує дрібні зморшки навколо очей.",
-      image: "/Renew/22.png",
+      image: "/Renew/renew-anti-aging-produkt-18.png",
       variants: [{ volume: "10ml" }]
     }
   ];

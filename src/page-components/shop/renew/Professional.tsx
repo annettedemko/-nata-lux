@@ -19,8 +19,8 @@ const Professional = () => {
         : language === 'ru'
         ? "Освежающий увлажняющий лосьон"
         : "Освіжальний зволожувальний лосьйон",
-      image: "/Renew/76.png",
-      hoverImage: "/Renew/76.1.png",
+      image: "/Renew/renew-professional-hydrofresh-lotion.png",
+      hoverImage: "/Renew/renew-professional-hydrofresh-lotion-detail.png",
       variants: [{ volume: "250ml" }, { volume: "500ml" }],
       fitContain: true,
       hoverFitContain: true
@@ -33,8 +33,8 @@ const Professional = () => {
         : language === 'ru'
         ? "Профессиональное очищающее средство для всех типов кожи"
         : "Професійний очищувальний засіб для всіх типів шкіри",
-      image: "/Renew/77.webp",
-      hoverImage: "/Renew/77.1.png",
+      image: "/Renew/renew-professional-dermakey-cleanser.webp",
+      hoverImage: "/Renew/renew-professional-dermakey-cleanser-detail.png",
       variants: [{ volume: "250ml" }, { volume: "500ml" }],
       hoverFitContain: true
     },
@@ -46,7 +46,7 @@ const Professional = () => {
         : language === 'ru'
         ? "Высококонцентрированный крем с азелаиновой кислотой для профессионального применения"
         : "Висококонцентрований крем з азелаїновою кислотою для професійного застосування",
-      image: "/Renew/78.jpeg",
+      image: "/Renew/renew-professional-azelaic-acid-cream-20.jpeg",
       variants: [{ volume: "50ml" }]
     },
     {
@@ -57,7 +57,7 @@ const Professional = () => {
         : language === 'ru'
         ? "Локальное средство для точечного применения"
         : "Локальний засіб для точкового застосування",
-      image: "/Renew/79.jpeg",
+      image: "/Renew/renew-professional-spot-local-gel.jpeg",
       variants: [{ volume: "30ml" }],
       fitContain: true
     },
@@ -69,8 +69,8 @@ const Professional = () => {
         : language === 'ru'
         ? "Восстанавливающий крем для поврежденной кожи"
         : "Відновлювальний крем для пошкодженої шкіри",
-      image: "/Renew/80.png",
-      hoverImage: "/Renew/80.1.png",
+      image: "/Renew/renew-professional-skin-recover-cream.png",
+      hoverImage: "/Renew/renew-professional-skin-recover-cream-detail.png",
       variants: [{ volume: "100ml" }, { volume: "250ml" }],
       fitContain: true
     },
@@ -82,7 +82,7 @@ const Professional = () => {
         : language === 'ru'
         ? "Матирующий флюид для жирных участков кожи"
         : "Матувальний флюїд для жирних ділянок шкіри",
-      image: "/Renew/81.jpeg",
+      image: "/Renew/renew-professional-smart-matt-fluid.jpeg",
       variants: [{ volume: "50ml" }]
     },
     {
@@ -93,8 +93,8 @@ const Professional = () => {
         : language === 'ru'
         ? "Успокаивающий гель с алоэ вера для раздраженной кожи"
         : "Заспокійливий гель з алое вера для подразненої шкіри",
-      image: "/Renew/82.webp",
-      hoverImage: "/Renew/82.1.png",
+      image: "/Renew/renew-professional-aloevend-gel.webp",
+      hoverImage: "/Renew/renew-professional-aloevend-gel-detail.png",
       variants: [{ volume: "100ml" }, { volume: "250ml" }],
       fitContain: true,
       hoverFitContain: true
@@ -107,8 +107,8 @@ const Professional = () => {
         : language === 'ru'
         ? "Сыворотка с гиалуроновой кислотой для интенсивного увлажнения"
         : "Сироватка з гіалуроновою кислотою для інтенсивного зволоження",
-      image: "/Renew/83.webp",
-      hoverImage: "/Renew/83.1.jpeg",
+      image: "/Renew/renew-professional-dew-drops-ha.webp",
+      hoverImage: "/Renew/renew-professional-dew-drops-ha-detail.jpeg",
       variants: [{ volume: "30ml" }, { volume: "100ml" }]
     }
   ];

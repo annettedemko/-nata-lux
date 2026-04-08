@@ -18,8 +18,8 @@ const SensitiveSkin = () => {
         ? "Konzentrat mit Vitamin K und Arnika. Stärkt die Kapillarwände, reduziert Rötungen und Couperose. Verbessert sichtbar das Erscheinungsbild von erweiterten Äderchen."
         : language === 'ru' ? "Концентрат с витамином К и арникой. Укрепляет стенки капилляров, уменьшает покраснения и купероз. Заметно улучшает вид расширенных сосудов."
         : "Концентрат з вітаміном К та арнікою. Зміцнює стінки капілярів, зменшує почервоніння та купероз. Помітно покращує вигляд розширених судин.",
-      image: "/Renew/57.png",
-      hoverImage: "/Renew/57.1.jpeg",
+      image: "/Renew/renew-sensitive-skin-produkt-1.png",
+      hoverImage: "/Renew/renew-sensitive-skin-produkt-1-detail.jpeg",
       variants: [{ volume: "30ml" }]
     },
     {
@@ -29,7 +29,7 @@ const SensitiveSkin = () => {
         ? "Extra sanftes Peeling speziell für empfindliche Haut mit Rötungen. Mit beruhigenden Wirkstoffen wie Bisabolol und Allantoin. Erneuert die Haut ohne Irritation."
         : language === 'ru' ? "Экстра мягкий пилинг специально для чувствительной кожи с покраснениями. С успокаивающими компонентами: бисабололом и аллантоином. Обновляет кожу без раздражения."
         : "Екстра м'який пілінг спеціально для чутливої шкіри з почервоніннями. З заспокійливими компонентами: бісабололом та алантоїном. Оновлює шкіру без подразнення.",
-      image: "/Renew/58.jpg",
+      image: "/Renew/renew-peeling-produkt-10.jpg",
       variants: [{ volume: "50ml" }]
     },
     {
@@ -39,8 +39,8 @@ const SensitiveSkin = () => {
         ? "Beruhigender Balsam mit Centella Asiatica für gerötete und irritierte Haut. Lindert Irritationen, stärkt die Hautbarriere und reduziert Empfindlichkeit langfristig."
         : language === 'ru' ? "Успокаивающий бальзам с центеллой азиатской для покрасневшей и раздраженной кожи. Снимает раздражение, укрепляет кожный барьер и долгосрочно уменьшает чувствительность."
         : "Заспокійливий бальзам з центелою азіатською для почервонілої та подразненої шкіри. Знімає подразнення, зміцнює шкірний бар'єр та довгостроково зменшує чутливість.",
-      image: "/Renew/59.jpg",
-      hoverImage: "/Renew/59.png",
+      image: "/Renew/renew-sensitive-skin-produkt-3.jpg",
+      hoverImage: "/Renew/renew-sensitive-skin-produkt-3-detail.png",
       hoverFitContain: true,
       variants: [{ volume: "50ml" }]
     },
@@ -51,8 +51,8 @@ const SensitiveSkin = () => {
         ? "Kühlende Maske mit Aloe und Kamille. Sofortige Beruhigung bei Rötungen, Reizungen und Sonnenbrand. Spendet Feuchtigkeit und lindert Spannungsgefühl."
         : language === 'ru' ? "Охлаждающая маска с алоэ и ромашкой. Мгновенное успокоение при покраснениях, раздражениях и солнечных ожогах. Увлажняет и снимает чувство стянутости."
         : "Охолоджувальна маска з алое та ромашкою. Миттєве заспокоєння при почервоніннях, подразненнях та сонячних опіках. Зволожує та знімає відчуття стягнутості.",
-      image: "/Renew/60.png",
-      hoverImage: "/Renew/60.1.jpeg",
+      image: "/Renew/renew-sensitive-skin-produkt-4.png",
+      hoverImage: "/Renew/renew-sensitive-skin-produkt-4-detail.jpeg",
       variants: [{ volume: "70ml" }, { volume: "250ml" }]
     }
   ];
