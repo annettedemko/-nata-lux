@@ -13,7 +13,7 @@ const Phonophorese = () => {
   const SchemaSection = () => (
     <ProcedureSchema
       germanImages={['/phonophorese-behandlung.jpg']}
-      russianImages={['/186 1.jpg']}
+      russianImages={['/phonophorese-zertifikat-muenchen.jpg']}
       altTextGerman="Ultraschall-Phonophorese Schema"
       altTextRussian="Схема ультразвукового фонофореза"
       scale={0.5}

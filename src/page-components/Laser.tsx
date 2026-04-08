@@ -16,7 +16,7 @@ const Laser = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const { isDialogOpen, openDikidi, closeDialog } = useDikidiConsent();
 
-  const galleryImages = ['/70.PNG', '/laser-haarentfernung-muenchen.jpg', '/dioden-laser-behandlung-muenchen.jpg', '/alexandrit-laser-muenchen.jpg', '/laser-haarentfernung-beine-muenchen.jpg'];
+  const galleryImages = ['/laser-galerie-muenchen.png', '/laser-haarentfernung-muenchen.jpg', '/dioden-laser-behandlung-muenchen.jpg', '/alexandrit-laser-muenchen.jpg', '/laser-haarentfernung-beine-muenchen.jpg'];
 
   const openLightbox = (index: number) => setSelectedImage(index);
   const closeLightbox = () => setSelectedImage(null);
@@ -571,7 +571,7 @@ const Laser = () => {
             </h2>
           </motion.div>
           <ProcedureSchema
-            germanImages={['/193 1.png']}
+            germanImages={['/laser-zertifikat-muenchen.png']}
             russianImages={['/laser-behandlungsraum-muenchen.png']}
             ukrainianImages={['/laser-behandlungsraum-muenchen.png']}
             altTextGerman="Laser-Haarentfernung Behandlungsablauf"

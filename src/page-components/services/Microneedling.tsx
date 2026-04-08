@@ -14,7 +14,7 @@ const Microneedling = () => {
   // Schema section
   const schemaSection = (
     <ProcedureSchema
-      germanImages={['/194 1.png']}
+      germanImages={['/microneedling-zertifikat-muenchen.png']}
       russianImages={['/microneedling-detail.jpg']}
       ukrainianImages={['/microneedling-detail.jpg']}
       altTextGerman="Microneedling Schema"

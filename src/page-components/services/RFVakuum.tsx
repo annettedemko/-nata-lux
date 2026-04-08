@@ -13,7 +13,7 @@ const RFVakuum = () => {
   // Schema section
   const SchemaSection = () => (
     <ProcedureSchema
-      germanImages={['/187 1.jpg']}
+      germanImages={['/rf-vakuum-zertifikat-muenchen.jpg']}
       russianImages={['/rf-vakuum-ergebnis.jpg']}
       altTextGerman="RF-Vakuum Schema"
       altTextRussian="Схема RF-вакуум"
@@ -25,7 +25,7 @@ const RFVakuum = () => {
   const AdditionalSections = () => (
     <>
       <PremiumGallery
-        images={['/78.PNG', '/77.PNG', '/renew-rf-vakuum-vorher.webp', '/renew-professional-konzentrat.webp', '/renew-rf-vakuum-ergebnis.webp', '/renew-rf-vakuum-nachher.webp', '/renew-rf-vakuum-detail.webp', '/renew-rf-vakuum-behandlung.webp']}
+        images={['/apparative-massage-geraet.png', '/rf-vakuum-geraet-muenchen.png', '/renew-rf-vakuum-vorher.webp', '/renew-professional-konzentrat.webp', '/renew-rf-vakuum-ergebnis.webp', '/renew-rf-vakuum-nachher.webp', '/renew-rf-vakuum-detail.webp', '/renew-rf-vakuum-behandlung.webp']}
         title={language === 'de' ? 'Unsere Arbeiten' : language === 'ru' ? 'Наши работы' : 'Наші роботи'}
       />
       <div className="mt-12">

@@ -290,7 +290,7 @@ const Massagen = () => {
               {[
                 {
                   href: '/services/rf-vakuum',
-                  image: '/78.PNG',
+                  image: '/apparative-massage-geraet.png',
                   title: language === 'de' ? 'RF-Vakuum Massage' : language === 'ru' ? 'RF-Вакуумный массаж' : 'RF-Вакуумний масаж',
                   desc: language === 'de'
                     ? 'Radiofrequenz + Vakuum für Lymphdrainage, Anti-Cellulite und Hautstraffung am Körper'
@@ -342,14 +342,14 @@ const Massagen = () => {
           {/* Gallery */}
           <PremiumGallery
             images={[
-              '/IMG_8633.PNG',
-              '/IMG_7530.JPG',
-              '/IMG_7537.JPG',
-              '/IMG_7547.JPG',
-              '/IMG_5430.JPG',
-              '/IMG_3183.JPG',
-              '/IMG_4399.JPG',
-              '/IMG_9928.PNG',
+              '/massage-behandlung-1.png',
+              '/massage-behandlung-2.jpg',
+              '/massage-behandlung-3.jpg',
+              '/massage-behandlung-4.jpg',
+              '/massage-behandlung-5.jpg',
+              '/massage-behandlung-6.jpg',
+              '/massage-behandlung-7.jpg',
+              '/massage-ergebnis.png',
             ]}
             title={language === 'de' ? 'Unsere Behandlungen' : language === 'ru' ? 'Наши процедуры' : 'Наші процедури'}
           />

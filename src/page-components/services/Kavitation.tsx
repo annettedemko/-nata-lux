@@ -14,7 +14,7 @@ const Kavitation = () => {
   const SchemaSection = () => (
     <ProcedureSchema
       germanImages={['/kavitation-behandlung.jpg', '/189 1.jpg']}
-      russianImages={['/188 1.jpg', '/kavitation-vorher-nachher.jpg']}
+      russianImages={['/kavitation-zertifikat-muenchen.jpg', '/kavitation-vorher-nachher.jpg']}
       altTextGerman="Kavitation Schema"
       altTextRussian="Схема кавитации"
       scale={0.25}

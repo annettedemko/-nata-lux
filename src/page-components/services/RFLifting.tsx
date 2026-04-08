@@ -12,7 +12,7 @@ const RFLifting = () => {
   // Schema section
   const SchemaSection = () => (
     <ProcedureSchema
-      germanImages={['/181 1.jpg']}
+      germanImages={['/rf-lifting-zertifikat-muenchen.jpg']}
       russianImages={['/rf-lifting-gesicht.jpg']}
       altTextGerman="RF-Lifting Gesicht Schema"
       altTextRussian="Схема RF-лифтинга лица"

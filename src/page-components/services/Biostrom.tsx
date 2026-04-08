@@ -11,7 +11,7 @@ const Biostrom = () => {
   // Schema section
   const SchemaSection = () => (
     <ProcedureSchema
-      germanImages={['/182 1.jpg']}
+      germanImages={['/biostrom-zertifikat-muenchen.jpg']}
       russianImages={['/biostrom-lichttherapie.jpg']}
       altTextGerman="Mikrostromtherapie Schema"
       altTextRussian="Схема микротоковой терапии"
