@@ -220,10 +220,10 @@ export const Footer = () => {
               <li className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-brand-gold flex-shrink-0" />
                 <a
-                  href="mailto:natali.lux@web.de"
+                  href="mailto:natalux878@gmail.com"
                   className="text-brand-coffee/70 hover:text-brand-gold transition-colors"
                 >
-                  natali.lux@web.de
+                  natalux878@gmail.com
                 </a>
               </li>
             </ul>

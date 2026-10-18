@@ -7,9 +7,7 @@ const Impressum = () => {
   const { language } = useLanguage();
 
   const handleEmailClick = () => {
-    const email = 'natali.lux@web.de';
-    const cc = 'natalux878@gmail.com';
-    window.location.href = `mailto:${email}?cc=${cc}`;
+    window.location.href = 'mailto:natalux878@gmail.com';
   };
 
   return (
@@ -93,7 +91,7 @@ const Impressum = () => {
                       onClick={handleEmailClick}
                       className="hover:text-brand-gold transition-colors text-left"
                     >
-                      natali.lux@web.de
+                      natalux878@gmail.com
                     </button>
                   </p>
                 </div>

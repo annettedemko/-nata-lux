@@ -88,7 +88,7 @@ export default function RootLayout({
               "alternateName": "NataLux",
               "url": "https://munich-beauty.de",
               "telephone": "+4917677267269",
-              "email": "natali.lux@web.de",
+              "email": "natalux878@gmail.com",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Elsässer Straße 33",

@@ -66,7 +66,7 @@ const Widerruf = () => {
                 <div className="bg-brand-gold/10 p-4 rounded-xl mb-4">
                   <p className="font-semibold text-brand-espresso">NataLux – Nataliia Koziukevych</p>
                   <p className="text-sm">Rosenheimerstraße 159, 81671 München</p>
-                  <p className="text-sm">E-Mail: natali.lux@web.de</p>
+                  <p className="text-sm">E-Mail: natalux878@gmail.com</p>
                   <p className="text-sm">Telefon: +49 176 77267269</p>
                 </div>
                 <p className="leading-relaxed mb-4">
@@ -181,7 +181,7 @@ const Widerruf = () => {
                   <p className="text-sm">
                     NataLux – Nataliia Koziukevych<br />
                     Rosenheimerstraße 159, 81671 München<br />
-                    E-Mail: natali.lux@web.de
+                    E-Mail: natalux878@gmail.com
                   </p>
                   <div className="border-t border-brand-gold/10 pt-3 space-y-2 text-sm">
                     <p>
@@ -252,8 +252,8 @@ const Widerruf = () => {
                     : 'З питань права на відкликання звертайтеся до нас:'}
                 </p>
                 <div className="flex flex-col gap-2">
-                  <a href="mailto:natali.lux@web.de" className="text-brand-gold hover:underline">
-                    natali.lux@web.de
+                  <a href="mailto:natalux878@gmail.com" className="text-brand-gold hover:underline">
+                    natalux878@gmail.com
                   </a>
                   <a href="tel:+4917677267269" className="text-brand-gold hover:underline">
                     +49 176 77267269

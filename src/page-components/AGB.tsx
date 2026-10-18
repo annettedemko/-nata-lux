@@ -481,7 +481,7 @@ const AGB = () => {
                   <p className="font-medium">
                     {language === 'de' ? 'Nataliia Koziukevych' : language === 'ru' ? 'Наталия Козюкевич' : 'Наталія Козюкевич'}
                   </p>
-                  <p className="text-sm">natali.lux@web.de</p>
+                  <p className="text-sm">natalux878@gmail.com</p>
                   <p className="text-sm">+49 176 77267269</p>
                 </div>
               </section>
