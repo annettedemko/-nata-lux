@@ -72,7 +72,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/shop/renew/professional',
     '/shop/renew/hydration',
     '/shop/renew/problem-skin',
-    '/shop/renew-bio-repair-pro',
   ].map((url) => ({
     url,
     priority: 0.6,
