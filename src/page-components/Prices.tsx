@@ -9,6 +9,7 @@ const Prices = () => {
   const { language } = useLanguage();
 
   const isGerman = language === 'de';
+  const tr = (de: string, ru: string, ua: string) => (language === 'de' ? de : language === 'ru' ? ru : ua);
 
   const priceCategories = [
     // 1. Wimpern & Augenbrauen
@@ -21,31 +22,32 @@ const Prices = () => {
         {
           name: language === 'de' ? 'Wimpernverlängerung' : language === 'ru' ? 'Наращивание ресниц' : 'Нарощування вій',
           items: [
-            { name: language === 'de' ? 'Klassik 1:1' : language === 'ru' ? 'Классика 1:1' : 'Класика 1:1', price: '80 €' },
-            { name: '2D', price: '90 €' },
-            { name: '3D', price: '100 €' },
-            { name: language === 'de' ? 'Mega-Volumen' : language === 'ru' ? 'Мегаобъём' : 'Мегаоб\'єм', price: '120 €' },
+            { name: language === 'de' ? 'Klassik 1:1' : language === 'ru' ? 'Классика 1:1' : 'Класика 1:1', price: '90 €' },
+            { name: '2D', price: '100 €' },
+            { name: '3D', price: '120 €' },
+            { name: language === 'de' ? 'Mega-Volumen' : language === 'ru' ? 'Мегаобъём' : 'Мегаоб\'єм', price: '130 €' },
             { name: language === 'de' ? 'Mix-Technik' : language === 'ru' ? 'Микс-техника' : 'Мікс-техніка', price: language === 'de' ? 'Preis auf Anfrage' : language === 'ru' ? 'цена по запросу' : 'ціна за запитом' },
             { name: language === 'de' ? 'Strahlen / L-Curl / Untere Wimpern' : language === 'ru' ? 'Лучики / изгиб L / нижнее наращивание' : 'Промінчики / вигин L / нижнє нарощування', price: language === 'de' ? 'Preis auf Anfrage' : language === 'ru' ? 'цена по запросу' : 'ціна за запитом' },
           ],
           additional: [
             { name: language === 'de' ? 'Korrektur' : language === 'ru' ? 'Коррекция' : 'Корекція', price: language === 'de' ? 'ab 50 €' : language === 'ru' ? 'от 50 €' : 'від 50 €' },
             { name: language === 'de' ? 'Entfernung (eigene Arbeit)' : language === 'ru' ? 'Снятие своей работы' : 'Зняття своєї роботи', price: language === 'de' ? 'kostenlos' : language === 'ru' ? 'бесплатно' : 'безкоштовно' },
-            { name: language === 'de' ? 'Entfernung (fremde Arbeit)' : language === 'ru' ? 'Снятие чужой работы' : 'Зняття чужої роботи', price: '15 €' },
+            { name: language === 'de' ? 'Entfernung (fremde Arbeit)' : language === 'ru' ? 'Снятие чужой работы' : 'Зняття чужої роботи', price: '20 €' },
           ]
         },
         {
           name: language === 'de' ? 'Wimpern-Laminierung (Lash Lifting)' : language === 'ru' ? 'Ламинирование ресниц' : 'Ламінування вій',
+          description: tr('Dauer ca. 1 Std. · auch als Wimpernwelle bekannt', 'Длительность около 1 часа · также известно как «волна ресниц»', 'Тривалість близько 1 години · також відоме як «хвиля вій»'),
           items: [
-            { name: language === 'de' ? 'Mit Färbung' : language === 'ru' ? 'С окрашиванием' : 'З фарбуванням', price: '55 €' },
-            { name: language === 'de' ? 'Mit Vitaminen, Ölen, Keratin' : language === 'ru' ? 'С витаминами, маслами, кератином' : 'З вітамінами, оліями, кератином', price: '65 €' },
+            { name: language === 'de' ? 'Mit Färbung' : language === 'ru' ? 'С окрашиванием' : 'З фарбуванням', price: '65 €' },
+            { name: language === 'de' ? 'Mit Vitaminen, Ölen, Keratin' : language === 'ru' ? 'С витаминами, маслами, кератином' : 'З вітамінами, оліями, кератином', price: '75 €' },
           ]
         },
         {
           name: language === 'de' ? 'Augenbrauen-Laminierung (Brow Lifting)' : language === 'ru' ? 'Ламинирование бровей' : 'Ламінування брів',
           items: [
-            { name: language === 'de' ? 'Mit Färbung' : language === 'ru' ? 'С окрашиванием' : 'З фарбуванням', price: '55 €' },
-            { name: language === 'de' ? 'Mit Vitaminen, Ölen, Keratin' : language === 'ru' ? 'С витаминами, маслами, кератином' : 'З вітамінами, оліями, кератином', price: '65 €' },
+            { name: language === 'de' ? 'Mit Färbung' : language === 'ru' ? 'С окрашиванием' : 'З фарбуванням', price: '65 €' },
+            { name: language === 'de' ? 'Mit Vitaminen, Ölen, Keratin' : language === 'ru' ? 'С витаминами, маслами, кератином' : 'З вітамінами, оліями, кератином', price: '75 €' },
           ]
         },
         {
@@ -225,7 +227,7 @@ const Prices = () => {
             ? 'Длительность процедуры 1 час (очищение, тонизация, аппаратная часть 30 мин, тонизация, массаж с кремом)'
             : 'Тривалість процедури 1 година (очищення, тонізація, апаратна частина 30 хв, тонізація, масаж з кремом)',
           items: [
-            { name: language === 'de' ? 'Behandlung' : language === 'ru' ? 'Процедура' : 'Процедура', price: '75 €' },
+            { name: language === 'de' ? 'Behandlung' : language === 'ru' ? 'Процедура' : 'Процедура', price: '99 €' },
           ]
         },
         {
@@ -236,7 +238,9 @@ const Prices = () => {
             ? 'Длительность процедуры 1 час (очищение, тонизация, аппаратная часть 30 мин, тонизация, массаж с кремом)'
             : 'Тривалість процедури 1 година (очищення, тонізація, апаратна частина 30 хв, тонізація, масаж з кремом)',
           items: [
-            { name: language === 'de' ? 'Behandlung' : language === 'ru' ? 'Процедура' : 'Процедура', price: '75 €' },
+            { name: tr('Mit AHA+PHA-Maske', 'С маской AHA+PHA', 'З маскою AHA+PHA'), price: '79 €' },
+            { name: tr('Mit Hyaluronsäure', 'С гиалуроновой кислотой', 'З гіалуроновою кислотою'), price: '79 €' },
+            { name: tr('Mit Niacinamid (Vitamin B3)', 'С ниацинамидом (витамин B3)', 'З ніацинамідом (вітамін B3)'), price: '79 €' },
           ]
         },
         {
@@ -267,7 +271,8 @@ const Prices = () => {
             ? 'Длительность 30 мин'
             : 'Тривалість 30 хв',
           items: [
-            { name: language === 'de' ? 'Behandlung' : language === 'ru' ? 'Процедура' : 'Процедура', price: '75 €' },
+            { name: language === 'de' ? 'Behandlung' : language === 'ru' ? 'Процедура' : 'Процедура', price: '79 €' },
+            { name: tr('Kurs (10 Behandlungen)', 'Курс (10 процедур)', 'Курс (10 процедур)'), price: '699 €' },
           ]
         },
         {
@@ -278,8 +283,8 @@ const Prices = () => {
             ? 'Зоны: попа / живот / ушки / галифе / над коленями. Длительность 30 мин на зону. Интервал между процедурами 7-10 дней.'
             : 'Зони: сідниці / живіт / вушка / галіфе / над колінами. Тривалість 30 хв на зону. Інтервал між процедурами 7-10 днів.',
           items: [
-            { name: language === 'de' ? '1 Zone' : language === 'ru' ? '1 зона' : '1 зона', price: '75 €' },
-            { name: language === 'de' ? 'Kurs (10 Behandlungen)' : language === 'ru' ? 'Курс (Абонемент на 10 процедур)' : 'Курс (Абонемент на 10 процедур)', price: '650 €' },
+            { name: language === 'de' ? '1 Zone' : language === 'ru' ? '1 зона' : '1 зона', price: '79 €' },
+            { name: language === 'de' ? 'Kurs (10 Behandlungen)' : language === 'ru' ? 'Курс (Абонемент на 10 процедур)' : 'Курс (Абонемент на 10 процедур)', price: '699 €' },
           ]
         },
       ]
@@ -299,8 +304,8 @@ const Prices = () => {
             ? 'Лимфодренаж · Антицеллюлитный · Бодиформинг · Подтяжка кожи · Жиросжигание. RF + вакуум + инфракрасный свет.'
             : 'Лімфодренаж · Антицелюлітний · Бодіформінг · Підтяжка шкіри · Жироспалювання. RF + вакуум + інфрачервоне світло.',
           items: [
-            { name: language === 'de' ? 'Einzelbehandlung' : language === 'ru' ? 'Разовая процедура' : 'Разова процедура', price: '75 €' },
-            { name: language === 'de' ? 'Kurs (10 Behandlungen)' : language === 'ru' ? 'Курс (10 процедур)' : 'Курс (10 процедур)', price: '650 €' },
+            { name: language === 'de' ? 'Einzelbehandlung' : language === 'ru' ? 'Разовая процедура' : 'Разова процедура', price: '79 €' },
+            { name: language === 'de' ? 'Kurs (10 Behandlungen)' : language === 'ru' ? 'Курс (10 процедур)' : 'Курс (10 процедур)', price: '699 €' },
           ]
         },
       ]
@@ -313,14 +318,58 @@ const Prices = () => {
       consultation: language === 'de' ? '🕊 Konsultation vor der Behandlung — kostenlos.' : language === 'ru' ? '🕊 Консультация перед процедурой — бесплатная.' : '🕊 Консультація перед процедурою — безкоштовна.',
       sections: [
         {
-          name: language === 'de' ? 'Gesichtsreinigung' : language === 'ru' ? 'Чистка лица' : 'Чистка обличчя',
-          description: language === 'de'
-            ? 'Kombinierte Ultraschallreinigung — 90 Min (Reinigung, Tonisierung, Peeling, Maske zum Öffnen der Poren, Geräte- + mechanische Reinigung, Masken zum Schließen der Poren, Creme + SPF, Darsonval / Phonophorese falls notwendig). Arbeit mit TM Renew, Derma Series u.a.'
-            : language === 'ru'
-            ? 'Комбинированная ультразвуковая — 90 мин (очистка, тонизация, пилинг, маска открывающая поры, аппаратная + механическая, маски для закрытия пор, крем + SPF, дарсонваль / фонофорез если мастер считает необходимым). Работаю на косметике ТМ Renew, Derma Series и др.'
-            : 'Комбіноване ультразвукове — 90 хв (очищення, тонізація, пілінг, маска для відкриття пор, апаратне + механічне, маски для закриття пор, крем + SPF, дарсонваль / фонофорез якщо майстер вважає за необхідне). Працюю на косметиці ТМ Renew, Derma Series та ін.',
+          name: tr('Gesichtsreinigung', 'Чистка лица', 'Чистка обличчя'),
+          description: tr('Arbeit mit Kosmetik von TM Renew, Derma Series u.a.', 'Работаю на косметике ТМ Renew, Derma Series и др.', 'Працюю на косметиці ТМ Renew, Derma Series та ін.'),
           items: [
-            { name: language === 'de' ? 'Komplett (90 Min)' : language === 'ru' ? 'Полная (90 мин)' : 'Повна (90 хв)', price: '90 €' },
+            { name: tr('Reinigung mit Ultraschall · 45 Min', 'Ультразвуковая чистка · 45 мин', 'Ультразвукова чистка · 45 хв'), price: '79 €' },
+            { name: tr('Ultraschall + manuelle Reinigung · 1 Std. 15 Min', 'Ультразвуковая + механическая чистка · 1 ч 15 мин', 'Ультразвукова + механічна чистка · 1 год 15 хв'), price: '99 €' },
+            { name: tr('Tiefenreinigung mit Maske · 1 Std. 30 Min', 'Глубокая чистка с маской · 1 ч 30 мин', 'Глибока чистка з маскою · 1 год 30 хв'), price: '139 €' },
+          ]
+        },
+        {
+          name: tr('Gesichtsbehandlungen', 'Уходовые процедуры для лица', 'Доглядові процедури для обличчя'),
+          items: [
+            { name: tr('BioEnzyme Therapy · 90 Min', 'BioEnzyme Therapy · 90 мин', 'BioEnzyme Therapy · 90 хв'), price: '129 €' },
+            { name: tr('Anti-Aging-Gesichtsbehandlung · 1 Std.', 'Anti-Age уход · 1 ч', 'Anti-Age догляд · 1 год'), price: '79 €' },
+            { name: tr('Feuchtigkeitsbehandlung · 45 Min', 'Увлажняющий уход · 45 мин', 'Зволожувальний догляд · 45 хв'), price: '79 €' },
+            { name: tr('Anti-Wrinkle Algenmaske · 45 Min', 'Маска с водорослями Anti-Wrinkle · 45 мин', 'Маска з водоростями Anti-Wrinkle · 45 хв'), price: '75 €' },
+            { name: tr('Express-Behandlung · 30 Min', 'Экспресс-уход · 30 мин', 'Експрес-догляд · 30 хв'), price: '55 €' },
+          ]
+        },
+        {
+          name: tr('Ultraschall-Gesichtsbehandlung', 'Ультразвуковой уход за лицом', 'Ультразвуковий догляд за обличчям'),
+          items: [
+            { name: tr('Ultraschall mit Maske und LED-Lampe · 1 Std.', 'Ультразвук с маской и LED-лампой · 1 ч', 'Ультразвук з маскою та LED-лампою · 1 год'), price: '100 €' },
+            { name: tr('Ultraschall mit Maske, LED-Lampe und Peeling · 1 Std.', 'Ультразвук с маской, LED-лампой и пилингом · 1 ч', 'Ультразвук з маскою, LED-лампою та пілінгом · 1 год'), price: '110 €' },
+          ]
+        },
+        {
+          name: tr('Gesichtsmassage', 'Массаж лица', 'Масаж обличчя'),
+          items: [
+            { name: tr('Spa-Facelift-Massage · 1 Std.', 'Spa Facelift массаж · 1 ч', 'Spa Facelift масаж · 1 год'), price: '110 €' },
+            { name: tr('Lymphdrainage-Gesichtsmassage · 1 Std.', 'Лимфодренажный массаж лица · 1 ч', 'Лімфодренажний масаж обличчя · 1 год'), price: '99 €' },
+            { name: tr('Facelift-Massage (Straffung des Gesichtsovals) · 1 Std.', 'Массаж Facelift (подтяжка овала лица) · 1 ч', 'Масаж Facelift (підтяжка овалу обличчя) · 1 год'), price: '99 €' },
+          ]
+        },
+        {
+          name: tr('Peeling ENZYME PURE SKIN (RENEW Enzyme Exfoliator)', 'Пилинг ENZYME PURE SKIN (RENEW Enzyme Exfoliator)', 'Пілінг ENZYME PURE SKIN (RENEW Enzyme Exfoliator)'),
+          description: tr('Geeignet für normale, Misch-, fettige, reife und fahle Haut; verdickte Hornschicht und unebene Hautstruktur; verstopfte, vergrößerte Poren und Mitesser; raue Haut und fahler Teint.', 'Показания: нормальная, комбинированная, жирная, зрелая и тусклая кожа; кожа с повышенным ороговением и неровным рельефом; загрязнённые/расширенные поры и комедоны; шероховатость и тусклый цвет лица.', 'Показання: нормальна, комбінована, жирна, зріла та тьмяна шкіра; шкіра з підвищеним зроговінням і нерівним рельєфом; забруднені/розширені пори та комедони; шорсткість і тьмяний колір обличчя.'),
+          items: [
+            { name: tr('Enzym- + sanftes mechanisches Peeling · 45 Min', 'Ферментативное + мягкое механическое отшелушивание · 45 мин', 'Ферментативне + м’яке механічне відлущування · 45 хв'), price: '95 €' },
+          ]
+        },
+        {
+          name: tr('Peeling AHA FRESH GLOW (RENEW AHA Refreshing Exfoliator)', 'Пилинг AHA FRESH GLOW (RENEW AHA Refreshing Exfoliator)', 'Пілінг AHA FRESH GLOW (RENEW AHA Refreshing Exfoliator)'),
+          description: tr('Geeignet für normale, trockene, Misch-, fettige und reife Haut mit intakter Hautbarriere; fahler Teint und fehlende Ausstrahlung; oberflächliche Verhornung und raue Haut; ungleichmäßiger Hautton und erste Zeichen der Hautalterung.', 'Показания: нормальная, сухая, комбинированная, жирная и зрелая кожа при сохранённом барьере; тусклый цвет лица и недостаток сияния; поверхностный гиперкератоз и шероховатость; неровный тон и лёгкие возрастные изменения.', 'Показання: нормальна, суха, комбінована, жирна та зріла шкіра за збереженого бар’єру; тьмяний колір обличчя та брак сяйва; поверхневий гіперкератоз і шорсткість; нерівний тон і легкі вікові зміни.'),
+          items: [
+            { name: tr('Sanfte oberflächliche Säurepflege · 45 Min', 'Мягкий поверхностный кислотный уход · 45 мин', 'М’який поверхневий кислотний догляд · 45 хв'), price: '89 €' },
+          ]
+        },
+        {
+          name: tr('Peeling PRO GLOW MULTI-ACID (RENEW Pro Glow Foaming Peeling)', 'Пилинг PRO GLOW MULTI-ACID (RENEW Pro Glow Foaming Peeling)', 'Пілінг PRO GLOW MULTI-ACID (RENEW Pro Glow Foaming Peeling)'),
+          description: tr('Geeignet für normale, Misch- und fettige Haut mit intakter Hautbarriere; lichtbedingte Hautveränderungen und ungleichmäßiger Hautton; Pigmentflecken; vergrößerte Poren und unebene Hautstruktur.', 'Показания: нормальная, комбинированная и жирная кожа при сохранённом барьере; фотоповреждение и неровный тон; гиперпигментация и поствоспалительная пигментация; расширенные поры и неровная текстура.', 'Показання: нормальна, комбінована та жирна шкіра за збереженого бар’єру; фотопошкодження та нерівний тон; гіперпігментація та післязапальна пігментація; розширені пори та нерівна текстура.'),
+          items: [
+            { name: tr('Aktives Multi-Säure-Peeling · 1 Std.', 'Активный мультикислотный пилинг · 1 ч', 'Активний мультикислотний пілінг · 1 год'), price: '129 €' },
           ]
         },
       ]
@@ -340,8 +389,9 @@ const Prices = () => {
             ? 'Процедура включает подготовку кожи, анестетик (при необходимости), дарсонваль или пилинг (при необходимости). Ампула экзосомы, витамины, коллаген, гиалурон и т.д. за доп. плату. Рекомендовано повторять через 2-3 недели, в зависимости от индивидуальных целей. Например для стимуляция роста волос необходимо пройти курсом терапию.'
             : 'Процедура включає підготовку шкіри, анестетик (за необхідності), дарсонваль або пілінг (за необхідності). Ампула екзосоми, вітаміни, колаген, гіалурон тощо за дод. плату. Рекомендовано повторювати через 2-3 тижні, залежно від індивідуальних цілей. Наприклад, для стимуляції росту волосся необхідно пройти курс терапії.',
           items: [
-            { name: language === 'de' ? 'Gesicht + Hals + Dekolleté' : language === 'ru' ? 'Лицо + шея + декольте' : 'Обличчя + шия + декольте', price: '159 €' },
-            { name: language === 'de' ? 'Kopfhaut' : language === 'ru' ? 'Кожа головы' : 'Шкіра голови', price: language === 'de' ? 'auf Anfrage' : language === 'ru' ? 'по запросу' : 'за запитом' },
+            { name: tr('Gesicht · 1 Std.', 'Лицо · 1 ч', 'Обличчя · 1 год'), price: '159 €' },
+            { name: tr('Gesicht + Hals + Dekolleté · 1 Std. 30 Min', 'Лицо + шея + декольте · 1 ч 30 мин', 'Обличчя + шия + декольте · 1 год 30 хв'), price: '249 €' },
+            { name: tr('Kopfhaut', 'Кожа головы', 'Шкіра голови'), price: tr('100 € zzgl. Ampulle 30–59 €', '100 € + ампула 30–59 €', '100 € + ампула 30–59 €') },
             { name: language === 'de' ? 'Hände, Knie, Dehnungsstreifen' : language === 'ru' ? 'Руки, колени, растяжки' : 'Руки, коліна, розтяжки', price: language === 'de' ? 'auf Anfrage' : language === 'ru' ? 'по запросу' : 'за запитом' },
           ]
         },
@@ -351,13 +401,20 @@ const Prices = () => {
     {
       id: 'darsonval',
       icon: Wind,
-      title: language === 'de' ? 'Darsonval für Haare' : language === 'ru' ? 'Дарсонваль для волос' : 'Дарсонваль для волосся',
+      title: tr('Kopfhaut & Haare', 'Кожа головы и волосы', 'Шкіра голови та волосся'),
       consultation: language === 'de' ? '🕊 Konsultation vor der Behandlung — kostenlos.' : language === 'ru' ? '🕊 Консультация перед процедурой — бесплатная.' : '🕊 Консультація перед процедурою — безкоштовна.',
       sections: [
         {
           name: language === 'de' ? 'Darsonval-Behandlung' : language === 'ru' ? 'Процедура дарсонваль' : 'Процедура дарсонваль',
           items: [
             { name: language === 'de' ? 'Behandlung' : language === 'ru' ? 'Процедура' : 'Процедура', price: language === 'de' ? 'auf Anfrage' : language === 'ru' ? 'по запросу' : 'за запитом' },
+          ]
+        },
+        {
+          name: tr('Kopfhaut-Kombibehandlung', 'Комплексная процедура для кожи головы', 'Комплексна процедура для шкіри голови'),
+          items: [
+            { name: tr('Darsonval + Microneedling + ENHAIR BioRepair Pro · 1 Std.', 'Дарсонваль + микронидлинг + ENHAIR BioRepair Pro · 1 ч', 'Дарсонваль + мікронідлінг + ENHAIR BioRepair Pro · 1 год'), price: '249 €' },
+            { name: tr('Kopfmassage · 20 Min', 'Массаж головы · 20 мин', 'Масаж голови · 20 хв'), price: '25 €' },
           ]
         },
       ]

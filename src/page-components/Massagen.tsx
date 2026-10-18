@@ -216,7 +216,7 @@ const Massagen = () => {
                 <span className="text-brand-espresso text-lg">
                   {language === 'de' ? 'Einzelbehandlung (30 Min)' : language === 'ru' ? 'Разовая процедура (30 мин)' : 'Разова процедура (30 хв)'}
                 </span>
-                <span className="text-brand-gold font-heading font-semibold text-2xl">75 €</span>
+                <span className="text-brand-gold font-heading font-semibold text-2xl">79 €</span>
               </div>
               <div className="flex items-center justify-between py-3 border-b border-brand-gold/10">
                 <div>
@@ -224,10 +224,10 @@ const Massagen = () => {
                     {language === 'de' ? 'Kurs — 10 Behandlungen' : language === 'ru' ? 'Курс — 10 процедур' : 'Курс — 10 процедур'}
                   </span>
                   <span className="ml-2 text-sm text-brand-gold font-medium">
-                    {language === 'de' ? '(Ersparnis 100 €!)' : language === 'ru' ? '(экономия 100 €!)' : '(економія 100 €!)'}
+                    {language === 'de' ? '(Ersparnis 91 €!)' : language === 'ru' ? '(экономия 91 €!)' : '(економія 91 €!)'}
                   </span>
                 </div>
-                <span className="text-brand-gold font-heading font-semibold text-2xl">650 €</span>
+                <span className="text-brand-gold font-heading font-semibold text-2xl">699 €</span>
               </div>
             </div>
             <div className="mt-6 p-4 bg-brand-gold/10 rounded-xl border border-brand-gold/20">

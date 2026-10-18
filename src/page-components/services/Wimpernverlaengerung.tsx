@@ -240,9 +240,9 @@ const Wimpernverlaengerung = () => {
                     titleDE: 'Entfernung (fremde Arbeit)',
                     titleRU: 'Снятие чужой работы',
                     titleUA: 'Зняття чужої роботи',
-                    valueDE: '15€',
-                    valueRU: '15€',
-                    valueUA: '15€'
+                    valueDE: '20€',
+                    valueRU: '20€',
+                    valueUA: '20€'
                   },
                 ].map((item, index) => (
                   <div key={index} className="text-center p-6 bg-brand-gold/5 rounded-2xl">

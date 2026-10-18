@@ -119,7 +119,7 @@ export const PAGE_SEO: Record<string, PageSeoData> = {
     metadata: createPageMeta(
       '/massagen',
       'Apparative Massagen München – Lymphdrainage, Anti-Cellulite, Bodyforming | Nata Lux',
-      'Professionelle apparative Massagen in München: Lymphdrainage, Anti-Cellulite Massage, Bodyforming, Vakuum Massage, RF Massage, Hautstraffung. Ab 75€. Jetzt Termin buchen!'
+      'Professionelle apparative Massagen in München: Lymphdrainage, Anti-Cellulite Massage, Bodyforming, Vakuum Massage, RF Massage, Hautstraffung. Ab 79€. Jetzt Termin buchen!'
     ),
     titles: {
       de: 'Apparative Massagen München – Nata Lux',

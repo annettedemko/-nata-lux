@@ -433,17 +433,17 @@ const Index = () => {
                     </p>
                     <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
                       <span className="text-brand-gold font-heading font-bold text-2xl md:text-3xl">
-                        75 €
+                        79 €
                         <span className="text-brand-coffee/50 text-sm font-normal ml-1">
                           {language === 'de' ? '/ Behandlung' : language === 'ru' ? '/ процедура' : '/ процедура'}
                         </span>
                       </span>
                       <span className="bg-brand-gold/10 text-brand-espresso text-xs md:text-sm font-medium px-4 py-1.5 rounded-full border border-brand-gold/20">
                         {language === 'de'
-                          ? '10 Sitzungen = 650 € (100 € Rabatt!)'
+                          ? '10 Sitzungen = 699 € (91 € Rabatt!)'
                           : language === 'ru'
-                          ? '10 сеансов = 650 € (скидка 100 €!)'
-                          : '10 сеансів = 650 € (знижка 100 €!)'}
+                          ? '10 сеансов = 699 € (скидка 91 €!)'
+                          : '10 сеансів = 699 € (знижка 91 €!)'}
                       </span>
                     </div>
                   </div>
