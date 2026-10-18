@@ -559,6 +559,28 @@ const Datenschutz = () => {
                     ? 'Обработка этих данных осуществляется на основании Art. 6 Abs. 1 lit. b GDPR (обработка вашего запроса) или Art. 6 Abs. 1 lit. a GDPR (согласие).'
                     : 'Обробка цих даних здійснюється на підставі Art. 6 Abs. 1 lit. b GDPR (обробка вашого запиту) або Art. 6 Abs. 1 lit. a GDPR (згода).'}
                 </p>
+                <p className="leading-relaxed mt-4 mb-4">
+                  {language === 'de'
+                    ? 'Für unsere E-Mail-Kommunikation nutzen wir den Dienst Gmail der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. E-Mails, die Sie uns senden – einschließlich Anfragen über das Kontaktformular, die per E-Mail an uns weitergeleitet werden –, werden daher auf Servern von Google gespeichert. Dabei kann es zu einer Übermittlung von Daten an die Google LLC in den USA kommen. Google ist nach dem EU-U.S. Data Privacy Framework zertifiziert; die Übermittlung stützt sich auf den Angemessenheitsbeschluss der EU-Kommission (Art. 45 DSGVO). Die Nutzung erfolgt auf Grundlage unseres berechtigten Interesses an einer zuverlässigen und sicheren E-Mail-Kommunikation (Art. 6 Abs. 1 lit. f DSGVO).'
+                    : language === 'ru'
+                    ? 'Для переписки по электронной почте мы используем сервис Gmail компании Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ирландия. Поэтому письма, которые вы нам отправляете (включая запросы через контактную форму, пересылаемые нам по электронной почте), хранятся на серверах Google. При этом возможна передача данных компании Google LLC в США. Google сертифицирована в соответствии с EU-U.S. Data Privacy Framework; передача основывается на решении Еврокомиссии об адекватности защиты данных (Art. 45 DSGVO). Использование сервиса основано на нашем законном интересе в надёжной и безопасной переписке по электронной почте (Art. 6 Abs. 1 lit. f DSGVO).'
+                    : 'Для листування електронною поштою ми використовуємо сервіс Gmail компанії Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ірландія. Тому листи, які ви нам надсилаєте (зокрема запити через контактну форму, що пересилаються нам електронною поштою), зберігаються на серверах Google. При цьому можлива передача даних компанії Google LLC у США. Google сертифіковано відповідно до EU-U.S. Data Privacy Framework; передача ґрунтується на рішенні Єврокомісії про адекватність захисту даних (Art. 45 DSGVO). Використання сервісу ґрунтується на нашому законному інтересі в надійному та безпечному листуванні електронною поштою (Art. 6 Abs. 1 lit. f DSGVO).'}
+                </p>
+                <p className="leading-relaxed">
+                  {language === 'de'
+                    ? 'Weitere Informationen: '
+                    : language === 'ru'
+                    ? 'Дополнительная информация: '
+                    : 'Додаткова інформація: '}
+                  <a
+                    href="https://policies.google.com/privacy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-brand-gold hover:underline"
+                  >
+                    https://policies.google.com/privacy
+                  </a>
+                </p>
               </section>
 
               {/* WhatsApp */}
@@ -744,7 +766,7 @@ const Datenschutz = () => {
               {/* Last Updated */}
               <section className="text-sm text-brand-coffee/60 pt-4 border-t border-brand-gold/10">
                 <p>
-                  {language === 'de' ? 'Stand: Februar 2026' : language === 'ru' ? 'Состояние: февраль 2026 года' : 'Стан: лютий 2026 року'}
+                  {language === 'de' ? 'Stand: Oktober 2026' : language === 'ru' ? 'Состояние: октябрь 2026 года' : 'Стан: жовтень 2026 року'}
                 </p>
               </section>
             </div>
