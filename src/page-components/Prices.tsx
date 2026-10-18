@@ -2,7 +2,7 @@
 
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion } from 'framer-motion';
-import { Sparkles, Heart, Zap, Star, Info, Activity, Dumbbell, Droplets, Wind, AlertCircle, Scissors } from 'lucide-react';
+import { Sparkles, Heart, Zap, Star, Info, Activity, Dumbbell, Droplets, Wind, Scissors } from 'lucide-react';
 import Image from 'next/image';
 
 const Prices = () => {
@@ -358,26 +358,6 @@ const Prices = () => {
           name: language === 'de' ? 'Darsonval-Behandlung' : language === 'ru' ? 'Процедура дарсонваль' : 'Процедура дарсонваль',
           items: [
             { name: language === 'de' ? 'Behandlung' : language === 'ru' ? 'Процедура' : 'Процедура', price: language === 'de' ? 'auf Anfrage' : language === 'ru' ? 'по запросу' : 'за запитом' },
-          ]
-        },
-      ]
-    },
-    // 9. Hautveränderungen entfernen
-    {
-      id: 'skin-changes',
-      icon: AlertCircle,
-      title: language === 'de' ? 'Hautveränderungen entfernen' : language === 'ru' ? 'Удаление новообразований кожи' : 'Видалення новоутворень шкіри',
-      consultation: language === 'de' ? '🕊 Konsultation vor der Behandlung — kostenlos.' : language === 'ru' ? '🕊 Консультация перед процедурой — бесплатная.' : '🕊 Консультація перед процедурою — безкоштовна.',
-      sections: [
-        {
-          name: language === 'de' ? 'Entfernung von Hautveränderungen' : language === 'ru' ? 'Удаление новообразований' : 'Видалення новоутворень',
-          description: language === 'de'
-            ? '⚠️ Wichtig: Vor der Behandlung ist eine Konsultation mit einem Dermatologen (Histologie) erforderlich.'
-            : language === 'ru'
-            ? '⚠️ Важно: Необходимо перед процедурой проконсультироваться с дерматологом (гистология).'
-            : '⚠️ Важливо: Необхідно перед процедурою проконсультуватися з дерматологом (гістологія).',
-          items: [
-            { name: language === 'de' ? 'Entfernung' : language === 'ru' ? 'Удаление' : 'Видалення', price: language === 'de' ? 'ab 10 €' : language === 'ru' ? 'от 10 €' : 'від 10 €' },
           ]
         },
       ]

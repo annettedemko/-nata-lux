@@ -314,20 +314,6 @@ export const searchIndex: SearchItem[] = [
       ru: ['дарсонваль', 'волосы', 'рост волос', 'выпадение', 'кожа головы', 'луковицы']
     }
   },
-  {
-    id: 'hautveraenderungen-entfernen',
-    title: { de: 'Hautveränderungen entfernen', ru: 'Удаление новообразований' },
-    description: {
-      de: 'Papillome, Warzen (mit Dermatologe)',
-      ru: 'Папилломы, бородавки (с дерматологом)'
-    },
-    category: { de: 'Anti-Aging & Kosmetologie', ru: 'Anti-Aging и косметология' },
-    path: '/services/hautveraenderungen-entfernen',
-    keywords: {
-      de: ['hautveränderungen', 'entfernen', 'papillome', 'warzen', 'neoplasie', 'dermatologe'],
-      ru: ['удаление', 'новообразования', 'папилломы', 'бородавки', 'дерматолог', 'образования']
-    }
-  },
 
   // Other Pages
   {
@@ -370,48 +356,6 @@ export const searchIndex: SearchItem[] = [
     keywords: {
       de: ['kontakt', 'termin', 'buchen', 'anrufen', 'whatsapp'],
       ru: ['контакты', 'запись', 'записаться', 'позвонить', 'whatsapp']
-    }
-  },
-  {
-    id: 'portfolio',
-    title: { de: 'Portfolio', ru: 'Работы' },
-    description: {
-      de: 'Unsere Arbeiten und Ergebnisse',
-      ru: 'Наши работы и результаты'
-    },
-    category: { de: 'Information', ru: 'Информация' },
-    path: '/portfolio',
-    keywords: {
-      de: ['portfolio', 'arbeiten', 'ergebnisse', 'bilder', 'galerie'],
-      ru: ['портфолио', 'работы', 'результаты', 'фото', 'галерея']
-    }
-  },
-  {
-    id: 'reviews',
-    title: { de: 'Bewertungen', ru: 'Отзывы' },
-    description: {
-      de: 'Was unsere Kunden sagen',
-      ru: 'Что говорят наши клиенты'
-    },
-    category: { de: 'Information', ru: 'Информация' },
-    path: '/reviews',
-    keywords: {
-      de: ['bewertungen', 'rezensionen', 'kunden', 'feedback', 'meinungen'],
-      ru: ['отзывы', 'рецензии', 'клиенты', 'мнения', 'feedback']
-    }
-  },
-  {
-    id: 'faq',
-    title: { de: 'FAQ', ru: 'Частые вопросы' },
-    description: {
-      de: 'Häufig gestellte Fragen',
-      ru: 'Часто задаваемые вопросы'
-    },
-    category: { de: 'Information', ru: 'Информация' },
-    path: '/faq',
-    keywords: {
-      de: ['faq', 'fragen', 'antworten', 'hilfe', 'info'],
-      ru: ['faq', 'вопросы', 'ответы', 'помощь', 'инфо']
     }
   },
 ];

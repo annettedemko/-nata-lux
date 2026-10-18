@@ -129,13 +129,6 @@ const Services = () => {
       href: '/services/darsonval-haare',
       image: '/anti-aging-ergebnis.webp',
     },
-    {
-      title: t('antiaging.removal'),
-      description: t('antiaging.removal.desc'),
-      icon: Shield,
-      href: '/services/hautveraenderungen-entfernen',
-      image: '/anti-aging-behandlung.jpeg',
-    },
   ];
 
   // Категория 5: Массажи

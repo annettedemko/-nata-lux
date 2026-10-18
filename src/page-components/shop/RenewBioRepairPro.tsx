@@ -11,7 +11,7 @@ const RenewBioRepairPro = () => {
   return (
     <div className="w-full" style={{ height: "calc(100vh - 80px)", minHeight: "600px" }}>
       <iframe
-        src="/renew-bio-repair-pro-framer.html"
+        src="/renew-bio-repair-pro-framer/"
         className="w-full h-full border-0"
         title="Renew Bio Repair Pro"
         style={{

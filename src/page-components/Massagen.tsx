@@ -22,7 +22,7 @@ const Massagen = () => {
         : language === 'ru'
         ? 'Аппаратный лимфодренаж против отёков и задержки воды. Стимулирует лимфоток, выводит токсины и уменьшает отёчность. Эффективно и безболезненно.'
         : 'Апаратний лімфодренаж проти набряків та затримки води. Стимулює лімфотік, виводить токсини та зменшує набряклість. Ефективно та безболісно.',
-      href: '/services/rf-vakuum',
+      href: '/services/koerperbehandlungen/rf-vakuum',
       linkText: language === 'de' ? 'Mehr über RF-Vakuum' : language === 'ru' ? 'Подробнее о RF-вакууме' : 'Детальніше про RF-вакуум',
     },
     {
@@ -33,7 +33,7 @@ const Massagen = () => {
         : language === 'ru'
         ? 'Целенаправленная процедура против целлюлита с RF-технологией и вакуумом. Уменьшение «апельсиновой корки». Видимые результаты уже после первого сеанса.'
         : 'Цілеспрямована процедура проти целюліту з RF-технологією та вакуумом. Зменшення «апельсинової кірки». Видимі результати вже після першого сеансу.',
-      href: '/services/rf-vakuum',
+      href: '/services/koerperbehandlungen/rf-vakuum',
       linkText: language === 'de' ? 'Mehr über RF-Vakuum' : language === 'ru' ? 'Подробнее о RF-вакууме' : 'Детальніше про RF-вакуум',
     },
     {
@@ -44,7 +44,7 @@ const Massagen = () => {
         : language === 'ru'
         ? 'Аппаратный массаж для жиросжигания и формирования фигуры. Кавитация и вакуум для похудения. Уменьшает объёмы на животе, бёдрах и ногах.'
         : 'Апаратний масаж для жироспалювання та формування фігури. Кавітація та вакуум для схуднення. Зменшує об\'єми на животі, стегнах та ногах.',
-      href: '/services/kavitation',
+      href: '/services/koerperbehandlungen/kavitation',
       linkText: language === 'de' ? 'Mehr über Kavitation' : language === 'ru' ? 'Подробнее о кавитации' : 'Детальніше про кавітацію',
     },
     {
@@ -55,7 +55,7 @@ const Massagen = () => {
         : language === 'ru'
         ? 'Подтяжка кожи тела с помощью радиочастот. Anti-Aging массаж для всего тела — стимуляция коллагена для упругой, молодой кожи. Видимый результат уже после первых сеансов.'
         : 'Підтяжка шкіри тіла за допомогою радіочастот. Anti-Aging масаж для всього тіла — стимуляція колагену для пружної, молодої шкіри. Видимий результат вже після перших сеансів.',
-      href: '/services/rf-vakuum',
+      href: '/services/koerperbehandlungen/rf-vakuum',
       linkText: language === 'de' ? 'Mehr über RF-Vakuum' : language === 'ru' ? 'Подробнее о RF-вакууме' : 'Детальніше про RF-вакуум',
     },
     {
@@ -66,7 +66,7 @@ const Massagen = () => {
         : language === 'ru'
         ? 'Аппаратный массаж целенаправленно убирает объёмы тела. Комбинация RF-радиочастот, вакуумного массажа и кавитации для измеримых результатов на животе, талии и бёдрах.'
         : 'Апаратний масаж цілеспрямовано прибирає об\'єми тіла. Комбінація RF-радіочастот, вакуумного масажу та кавітації для вимірюваних результатів на животі, талії та стегнах.',
-      href: '/services/kavitation',
+      href: '/services/koerperbehandlungen/kavitation',
       linkText: language === 'de' ? 'Mehr über Kavitation' : language === 'ru' ? 'Подробнее о кавитации' : 'Детальніше про кавітацію',
     },
   ];
@@ -289,7 +289,7 @@ const Massagen = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
                 {
-                  href: '/services/rf-vakuum',
+                  href: '/services/koerperbehandlungen/rf-vakuum',
                   image: '/apparative-massage-geraet.png',
                   title: language === 'de' ? 'RF-Vakuum Massage' : language === 'ru' ? 'RF-Вакуумный массаж' : 'RF-Вакуумний масаж',
                   desc: language === 'de'
@@ -299,7 +299,7 @@ const Massagen = () => {
                     : 'Радіочастоти + вакуум для лімфодренажу, боротьби з целюлітом та підтяжки шкіри тіла',
                 },
                 {
-                  href: '/services/kavitation',
+                  href: '/services/koerperbehandlungen/kavitation',
                   image: '/ultraschall-kavitation-muenchen.jpeg',
                   title: language === 'de' ? 'Kavitation' : language === 'ru' ? 'Кавитация' : 'Кавітація',
                   desc: language === 'de'

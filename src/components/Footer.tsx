@@ -134,14 +134,6 @@ export const Footer = () => {
                   {t('antiaging.darsonval')}
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/services/hautveraenderungen-entfernen"
-                  className="text-brand-coffee/70 hover:text-brand-gold transition-colors"
-                >
-                  {t('antiaging.removal')}
-                </Link>
-              </li>
             </ul>
           </div>
 

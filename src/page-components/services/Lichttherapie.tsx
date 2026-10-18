@@ -11,7 +11,7 @@ const Lichttherapie = () => {
   // Schema section with 2 images
   const SchemaSection = () => (
     <ProcedureSchema
-      germanImages={['/182%201.jpg', '/166%201.jpg']}
+      germanImages={['/biostrom-zertifikat-muenchen.jpg', '/lichttherapie-zertifikat-muenchen.jpg']}
       russianImages={['/biostrom-lichttherapie.jpg', '/lichttherapie-led-muenchen.jpeg']}
       altTextGerman="LED-Lichttherapie Schema"
       altTextRussian="Схема LED-светотерапии"

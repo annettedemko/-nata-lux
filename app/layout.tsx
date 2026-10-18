@@ -32,6 +32,10 @@ export const metadata: Metadata = {
   description: 'Professionelles Beauty Studio in München – Wimpernverlängerung, Permanent Make-up, Laserbehandlungen, Anti-Aging und Kosmetik. Jetzt Termin buchen!',
   keywords: 'beauty studio München, Wimpernverlängerung München, Permanent Make-up München, Anti-Aging München, Kosmetikstudio München, Laserbehandlungen München',
   metadataBase: new URL('https://munich-beauty.de'),
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
   alternates: {
     canonical: '/',
   },

@@ -3,7 +3,7 @@
 import { Link } from '@/components/LinkAdapter'
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ServiceCard } from '@/components/ServiceCard';
-import { Star, Zap, Droplet, Waves, Scissors, Sparkles, Eraser } from 'lucide-react';
+import { Star, Zap, Droplet, Waves, Scissors, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 ;
@@ -17,50 +17,43 @@ const AntiAging = () => {
       title: t('antiaging.devices'),
       description: t('antiaging.devices.desc'),
       icon: Star,
-      href: '/services/anti-aging-devices',
-      image: '/images/services/anti-aging-devices.jpg',
+      href: '/services/apparative-anti-aging',
+      image: '/apparative-anti-aging-geraet-muenchen.webp',
     },
     {
       title: t('antiaging.body'),
       description: t('antiaging.body.desc'),
       icon: Zap,
-      href: '/services/body-treatments',
-      image: '/images/services/body-treatments.jpg',
+      href: '/services/koerperbehandlungen',
+      image: '/rf-vakuum-koerperbehandlung-muenchen.jpg',
     },
     {
       title: t('antiaging.facial'),
       description: t('antiaging.facial.desc'),
       icon: Droplet,
-      href: '/services/facial-cleaning',
-      image: '/images/services/facial-cleaning.jpg',
+      href: '/services/gesichtsreinigung',
+      image: '/gesichtsreinigung-muenchen.jpg',
     },
     {
       title: t('antiaging.phonophoresis'),
       description: t('antiaging.phonophoresis.desc'),
       icon: Waves,
-      href: '/services/phonophoresis',
-      image: '/images/services/phonophoresis.jpg',
+      href: '/services/phonophorese',
+      image: '/ultraschall-gesichtsbehandlung-muenchen.jpeg',
     },
     {
       title: t('antiaging.microneedling'),
       description: t('antiaging.microneedling.desc'),
       icon: Scissors,
       href: '/services/microneedling',
-      image: '/images/services/microneedling.jpg',
+      image: '/microneedling-gesicht-muenchen.jpg',
     },
     {
       title: t('antiaging.darsonval'),
       description: t('antiaging.darsonval.desc'),
       icon: Sparkles,
-      href: '/services/darsonval-hair',
-      image: '/images/services/darsonval-hair.jpg',
-    },
-    {
-      title: t('antiaging.removal'),
-      description: t('antiaging.removal.desc'),
-      icon: Eraser,
-      href: '/services/skin-removal',
-      image: '/images/services/skin-removal.jpg',
+      href: '/services/darsonval-haare',
+      image: '/darsonval-haarbehandlung.jpg',
     },
   ];
 
