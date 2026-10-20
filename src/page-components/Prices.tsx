@@ -411,6 +411,13 @@ const Prices = () => {
           ]
         },
         {
+          name: tr('Ganzheitliche Kopfhaut- & Haarpflege', 'Комплексный уход за кожей головы и волосами', 'Комплексний догляд за шкірою голови та волоссям'),
+          description: tr('Individuell abgestimmtes Pflegekonzept für Kopfhaut und Haar, das das Haarwachstum unterstützen kann.', 'Индивидуально подобранная программа ухода за кожей головы и волосами, которая может поддержать рост волос.', 'Індивідуально підібрана програма догляду за шкірою голови та волоссям, яка може підтримати ріст волосся.'),
+          items: [
+            { name: tr('Individuelles Konzept', 'Индивидуальная программа', 'Індивідуальна програма'), price: tr('ab 100 €', 'от 100 €', 'від 100 €') },
+          ]
+        },
+        {
           name: tr('Kopfhaut-Kombibehandlung', 'Комплексная процедура для кожи головы', 'Комплексна процедура для шкіри голови'),
           items: [
             { name: tr('Darsonval + Microneedling + ENHAIR BioRepair Pro · 1 Std.', 'Дарсонваль + микронидлинг + ENHAIR BioRepair Pro · 1 ч', 'Дарсонваль + мікронідлінг + ENHAIR BioRepair Pro · 1 год'), price: '249 €' },
@@ -477,6 +484,8 @@ const Prices = () => {
             return (
               <motion.div
                 key={category.id}
+                id={category.id}
+                style={{ scrollMarginTop: '6rem' }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}

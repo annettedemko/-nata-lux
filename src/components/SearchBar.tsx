@@ -4,7 +4,8 @@ import { useState, useEffect, useRef } from 'react';
 import { Search, X } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { searchIndex, SearchItem } from '@/data/searchIndex';
+import { searchIndex, SearchItem, Lang } from '@/data/searchIndex';
+import { searchSite } from '@/lib/search';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export const SearchBar = () => {
@@ -14,40 +15,10 @@ export const SearchBar = () => {
   const { language, t } = useLanguage();
   const router = useRouter();
   const searchRef = useRef<HTMLDivElement>(null);
-  const searchLang = (language === 'ua' ? 'ru' : language) as 'de' | 'ru';
+  const searchLang = language as Lang;
 
-  // Search function - searches across both languages
   const performSearch = (searchQuery: string) => {
-    if (!searchQuery.trim()) {
-      setResults([]);
-      return;
-    }
-
-    const lowerQuery = searchQuery.toLowerCase();
-    const filtered = searchIndex.filter((item) => {
-      // Search in both German and Russian regardless of selected language
-      const titleDe = item.title.de.toLowerCase();
-      const titleRu = item.title.ru.toLowerCase();
-      const descriptionDe = item.description.de.toLowerCase();
-      const descriptionRu = item.description.ru.toLowerCase();
-      const keywordsDe = item.keywords.de.join(' ').toLowerCase();
-      const keywordsRu = item.keywords.ru.join(' ').toLowerCase();
-      const categoryDe = item.category.de.toLowerCase();
-      const categoryRu = item.category.ru.toLowerCase();
-
-      return (
-        titleDe.includes(lowerQuery) ||
-        titleRu.includes(lowerQuery) ||
-        descriptionDe.includes(lowerQuery) ||
-        descriptionRu.includes(lowerQuery) ||
-        keywordsDe.includes(lowerQuery) ||
-        keywordsRu.includes(lowerQuery) ||
-        categoryDe.includes(lowerQuery) ||
-        categoryRu.includes(lowerQuery)
-      );
-    });
-
-    setResults(filtered.slice(0, 8)); // Limit to 8 results
+    setResults(searchSite(searchQuery, searchIndex, 8));
   };
 
   useEffect(() => {
