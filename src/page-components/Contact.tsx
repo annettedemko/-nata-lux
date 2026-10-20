@@ -22,7 +22,9 @@ const Contact = () => {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
-    const formData = new FormData(e.currentTarget);
+    // Keep a reference: e.currentTarget is null after the await below
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
     // Add Web3Forms access key from environment variable
     const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
@@ -44,7 +46,7 @@ const Contact = () => {
 
       if (data.success) {
         setSubmitStatus('success');
-        e.currentTarget.reset();
+        form.reset();
         setAgreed(false);
       } else {
         setSubmitStatus('error');
