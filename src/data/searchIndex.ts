@@ -166,8 +166,8 @@ export const searchIndex: SearchItem[] = [
     category: { de: 'Lash & Brow', ru: 'Lash & Brow' },
     path: '/services/wimpern-augenbrauen-laminierung',
     keywords: {
-      de: ['lash lifting', 'brow lifting', 'laminierung', 'curl', 'wimpern', 'augenbrauen', 'form'],
-      ru: ['ламинирование', 'лифтинг', 'изгиб', 'ресницы', 'брови', 'форма', 'укладка']
+      de: ['lash lifting', 'brow lifting', 'laminierung', 'curl', 'wimpern', 'augenbrauen', 'form', 'lash botox', 'wimpernwelle'],
+      ru: ['ламинирование', 'лифтинг', 'изгиб', 'ресницы', 'брови', 'форма', 'укладка', 'ботокс', 'ботокс для ресниц']
     }
   },
 

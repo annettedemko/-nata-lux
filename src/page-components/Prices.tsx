@@ -40,7 +40,7 @@ const Prices = () => {
           description: tr('Dauer ca. 1 Std. · auch als Wimpernwelle bekannt', 'Длительность около 1 часа · также известно как «волна ресниц»', 'Тривалість близько 1 години · також відоме як «хвиля вій»'),
           items: [
             { name: language === 'de' ? 'Mit Färbung' : language === 'ru' ? 'С окрашиванием' : 'З фарбуванням', price: '65 €' },
-            { name: language === 'de' ? 'Mit Vitaminen, Ölen, Keratin' : language === 'ru' ? 'С витаминами, маслами, кератином' : 'З вітамінами, оліями, кератином', price: '75 €' },
+            { name: language === 'de' ? 'Mit Vitaminen, Ölen, Keratin („Lash Botox“, ohne Botulinumtoxin)' : language === 'ru' ? 'С витаминами, маслами, кератином («ботокс для ресниц», без ботулотоксина)' : 'З вітамінами, оліями, кератином («ботокс для вій», без ботулотоксину)', price: '75 €' },
           ]
         },
         {
