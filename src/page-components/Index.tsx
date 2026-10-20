@@ -459,10 +459,10 @@ const Index = () => {
                 </div>
                 <p className="relative z-10 text-center text-brand-gold/70 text-xs md:text-sm mt-3 font-medium">
                   {language === 'de'
-                    ? 'Anzahl der Angebote begrenzt! Beeilen Sie sich!'
+                    ? 'Sparen Sie 91 € mit dem 10er-Kurs!'
                     : language === 'ru'
-                    ? 'Количество предложений ограничено! Поторопитесь!'
-                    : 'Кількість пропозицій обмежена! Поспішайте!'}
+                    ? 'Сэкономьте 91 € с курсом из 10 процедур!'
+                    : 'Заощадьте 91 € з курсом із 10 процедур!'}
                 </p>
               </div>
             </Link>

@@ -233,10 +233,10 @@ const Massagen = () => {
             <div className="mt-6 p-4 bg-brand-gold/10 rounded-xl border border-brand-gold/20">
               <p className="text-brand-espresso font-medium text-center">
                 {language === 'de'
-                  ? '⚡ Anzahl der Angebote begrenzt! Beeilen Sie sich!'
+                  ? 'Sparen Sie 91 € mit dem 10er-Kurs!'
                   : language === 'ru'
-                  ? '⚡ Количество предложений ограничено! Поторопитесь!'
-                  : '⚡ Кількість пропозицій обмежена! Поспішайте!'}
+                  ? 'Сэкономьте 91 € с курсом из 10 процедур!'
+                  : 'Заощадьте 91 € з курсом із 10 процедур!'}
               </p>
             </div>
             <p className="text-sm text-brand-coffee/60 mt-4 text-center">
