@@ -263,12 +263,18 @@ const Datenschutz = () => {
                     ? 'Обработка осуществляется для обеспечения безопасности и стабильности сайта. Сбор этих данных осуществляется на основании Art. 6 Abs. 1 lit. f DSGVO. Файлы журналов сервера автоматически удаляются не позднее чем через 30 дней.'
                     : 'Обробка здійснюється для забезпечення безпеки та стабільності сайту. Збір цих даних здійснюється на підставі Art. 6 Abs. 1 lit. f DSGVO. Файли журналів сервера автоматично видаляються не пізніше ніж через 30 днів.'}
                 </p>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed mb-4">
                   {language === 'de'
-                    ? 'Diese Website wird als statische Website gehostet. Der Hosting-Provider erhebt und speichert automatisch Server-Log-Dateien. Es gelten die Datenschutzbestimmungen des jeweiligen Hosting-Providers.'
+                    ? 'Hosting: Diese Website wird bei Vercel Inc., 650 California Street, San Francisco, CA 94108, USA, gehostet. Vercel liefert die Website über ein weltweites Servernetz (Content Delivery Network) aus; dabei verarbeitet Vercel die oben genannten Server-Log-Daten einschließlich Ihrer IP-Adresse. Eine Übermittlung in die USA ist möglich. Vercel ist nach dem EU-U.S. Data Privacy Framework zertifiziert; die Übermittlung stützt sich auf den Angemessenheitsbeschluss der EU-Kommission (Art. 45 DSGVO) sowie ergänzend auf Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO). Mit Vercel besteht ein Vertrag zur Auftragsverarbeitung (Art. 28 DSGVO). Die Nutzung erfolgt auf Grundlage unseres berechtigten Interesses an einer sicheren, schnellen und zuverlässigen Bereitstellung der Website (Art. 6 Abs. 1 lit. f DSGVO).'
                     : language === 'ru'
-                    ? 'Этот веб-сайт размещается как статический сайт. Хостинг-провайдер автоматически собирает и сохраняет файлы журналов сервера. Применяются положения о защите данных соответствующего хостинг-провайдера.'
-                    : 'Цей веб-сайт розміщується як статичний сайт. Хостинг-провайдер автоматично збирає та зберігає файли журналів сервера. Застосовуються положення про захист даних відповідного хостинг-провайдера.'}
+                    ? 'Хостинг: этот сайт размещён у Vercel Inc., 650 California Street, San Francisco, CA 94108, США. Vercel доставляет сайт через всемирную сеть серверов (Content Delivery Network) и при этом обрабатывает указанные выше данные журналов сервера, включая ваш IP-адрес. Возможна передача данных в США. Vercel сертифицирована в соответствии с EU-U.S. Data Privacy Framework; передача основывается на решении Еврокомиссии об адекватности защиты данных (Art. 45 DSGVO), а также дополнительно на стандартных договорных положениях (Art. 46 Abs. 2 lit. c DSGVO). С Vercel заключён договор об обработке данных по поручению (Art. 28 DSGVO). Использование основано на нашем законном интересе в безопасной, быстрой и надёжной работе сайта (Art. 6 Abs. 1 lit. f DSGVO).'
+                    : 'Хостинг: цей сайт розміщено у Vercel Inc., 650 California Street, San Francisco, CA 94108, США. Vercel доставляє сайт через всесвітню мережу серверів (Content Delivery Network) і при цьому обробляє зазначені вище дані журналів сервера, зокрема вашу IP-адресу. Можлива передача даних до США. Vercel сертифіковано відповідно до EU-U.S. Data Privacy Framework; передача ґрунтується на рішенні Єврокомісії про адекватність захисту даних (Art. 45 DSGVO), а також додатково на стандартних договірних положеннях (Art. 46 Abs. 2 lit. c DSGVO). З Vercel укладено договір про обробку даних за дорученням (Art. 28 DSGVO). Використання ґрунтується на нашому законному інтересі в безпечній, швидкій і надійній роботі сайту (Art. 6 Abs. 1 lit. f DSGVO).'}
+                </p>
+                <p className="leading-relaxed">
+                  {language === 'de' ? 'Weitere Informationen: ' : language === 'ru' ? 'Дополнительная информация: ' : 'Додаткова інформація: '}
+                  <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-brand-gold hover:underline">
+                    https://vercel.com/legal/privacy-policy
+                  </a>
                 </p>
               </section>
 
