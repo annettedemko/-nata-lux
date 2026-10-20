@@ -24,54 +24,54 @@ const DarsonvalHaare = () => {
       icon={Zap}
       title={language === 'de' ? "Darsonval für Haare" : language === 'ru' ? "Дарсонваль для волос" : "Дарсонваль для волосся"}
       subtitle={language === 'de'
-        ? "Wachstumsstimulation und Wurzelstärkung mit Hochfrequenzstrom"
+        ? "Pflege für Kopfhaut und Haarwurzeln mit Hochfrequenzstrom"
         : language === 'ru'
-          ? "Стимуляция роста и укрепление корней высокочастотным током"
-          : "Стимуляція росту та зміцнення коренів високочастотним струмом"}
+          ? "Уход за кожей головы и корнями волос с помощью высокочастотного тока"
+          : "Догляд за шкірою голови та корінням волосся за допомогою високочастотного струму"}
       aboutTitle={language === 'de' ? "Was ist Darsonval für Haare?" : language === 'ru' ? "Что такое дарсонваль для волос?" : "Що таке дарсонваль для волосся?"}
       aboutDescription={language === 'de' ? [
-        'Darsonval ist eine bewährte elektrotherapeutische Behandlung mit Hochfrequenzstrom, die die Kopfhaut stimuliert und das Haarwachstum anregt.',
-        'Durch die sanften elektrischen Impulse werden die Durchblutung der Kopfhaut verbessert, die Haarfollikel gestärkt und die Nährstoffversorgung optimiert. Dies führt zu kräftigerem Haarwachstum und kann Haarausfall vorbeugen.',
-        'Die Behandlung ist völlig schmerzfrei, angenehm und besonders effektiv in Kombination mit pflegenden Seren oder als Kur über mehrere Wochen.'
+        'Darsonval ist eine bewährte kosmetische Behandlung mit Hochfrequenzstrom, die die Kopfhaut belebt und das Haarwachstum unterstützen kann.',
+        'Die sanften elektrischen Impulse fördern die Mikrozirkulation der Kopfhaut und unterstützen so die Versorgung der Haarwurzeln. Das Haar kann dadurch kräftiger und vitaler wirken.',
+        'Die Behandlung ist angenehm, gut verträglich und besonders empfehlenswert in Kombination mit pflegenden Seren oder als Kur über mehrere Wochen.'
       ] : language === 'ru' ? [
-        'Дарсонваль — это проверенная электротерапевтическая процедура с высокочастотным током, которая стимулирует кожу головы и активизирует рост волос.',
-        'Благодаря мягким электрическим импульсам улучшается кровообращение кожи головы, укрепляются волосяные фолликулы и оптимизируется питание. Это приводит к более крепкому росту волос и может предотвратить выпадение.',
-        'Процедура полностью безболезненна, приятна и особенно эффективна в сочетании с питательными сыворотками или курсом в течение нескольких недель.'
+        'Дарсонваль — это проверенная косметическая процедура с высокочастотным током, которая тонизирует кожу головы и может поддержать рост волос.',
+        'Мягкие электрические импульсы улучшают микроциркуляцию кожи головы и тем самым поддерживают питание корней волос. Волосы могут выглядеть более крепкими и живыми.',
+        'Процедура комфортна, хорошо переносится и особенно рекомендуется в сочетании с питательными сыворотками или курсом в течение нескольких недель.'
       ] : [
-        'Дарсонваль — це перевірена електротерапевтична процедура з високочастотним струмом, яка стимулює шкіру голови та активізує ріст волосся.',
-        'Завдяки м\'яким електричним імпульсам покращується кровообіг шкіри голови, зміцнюються волосяні фолікули та оптимізується живлення. Це призводить до більш міцного росту волосся та може запобігти випаданню.',
-        'Процедура повністю безболісна, приємна та особливо ефективна у поєднанні з живильними сироватками або курсом протягом кількох тижнів.'
+        'Дарсонваль — це перевірена косметична процедура з високочастотним струмом, яка тонізує шкіру голови та може підтримати ріст волосся.',
+        'М’які електричні імпульси покращують мікроциркуляцію шкіри голови і тим самим підтримують живлення коренів волосся. Волосся може виглядати міцнішим та живішим.',
+        'Процедура комфортна, добре переноситься та особливо рекомендується у поєднанні з живильними сироватками або курсом протягом кількох тижнів.'
       ]}
       benefits={language === 'de' ? [
-        'Stimulation des Haarwachstums',
-        'Stärkung der Haarwurzeln',
-        'Verbesserte Durchblutung der Kopfhaut',
-        'Vorbeugung von Haarausfall',
-        'Kräftigeres, gesünderes Haar',
-        'Reduzierung von Schuppen',
-        'Regulierung der Talgproduktion',
-        'Antibakterielle Wirkung auf die Kopfhaut',
-        'Schmerzfrei und entspannend'
+        'Kann das Haarwachstum unterstützen',
+        'Pflege für die Haarwurzeln',
+        'Fördert die Mikrozirkulation der Kopfhaut',
+        'Für eine gepflegte, vital wirkende Kopfhaut',
+        'Kräftiger und gepflegter wirkendes Haar',
+        'Kann Schuppenbildung mildern',
+        'Für eine ausgeglichene Kopfhaut bei fettigem Ansatz',
+        'Klärende Wirkung auf die Kopfhaut',
+        'Angenehm und entspannend'
       ] : language === 'ru' ? [
-        'Стимуляция роста волос',
-        'Укрепление корней волос',
-        'Улучшение кровообращения кожи головы',
-        'Профилактика выпадения волос',
-        'Более крепкие, здоровые волосы',
-        'Уменьшение перхоти',
-        'Регуляция выработки кожного сала',
-        'Антибактериальное действие на кожу головы',
-        'Безболезненно и расслабляюще'
+        'Может поддержать рост волос',
+        'Уход за корнями волос',
+        'Улучшение микроциркуляции кожи головы',
+        'Для ухоженной, здоровой на вид кожи головы',
+        'Волосы выглядят более крепкими и ухоженными',
+        'Может уменьшить шелушение',
+        'Помогает сбалансировать жирность кожи головы',
+        'Очищающее действие на кожу головы',
+        'Комфортно и расслабляюще'
       ] : [
-        'Стимуляція росту волосся',
-        'Зміцнення коренів волосся',
-        'Покращення кровообігу шкіри голови',
-        'Профілактика випадання волосся',
-        'Більш міцне, здорове волосся',
-        'Зменшення лупи',
-        'Регуляція виділення шкірного сала',
-        'Антибактеріальна дія на шкіру голови',
-        'Безболісно та розслаблююче'
+        'Може підтримати ріст волосся',
+        'Догляд за корінням волосся',
+        'Покращення мікроциркуляції шкіри голови',
+        'Для доглянутої, здорової на вигляд шкіри голови',
+        'Волосся виглядає міцнішим та доглянутішим',
+        'Може зменшити лущення',
+        'Допомагає збалансувати жирність шкіри голови',
+        'Очищувальна дія на шкіру голови',
+        'Комфортно та розслаблююче'
       ]}
       steps={language === 'de' ? [
         {
@@ -154,57 +154,57 @@ const DarsonvalHaare = () => {
       faq={language === 'de' ? [
         {
           q: 'Wie oft sollte ich Darsonval machen?',
-          a: 'Für optimale Ergebnisse empfehlen wir eine Kur von 10-15 Sitzungen, 2-3x pro Woche. Danach als Erhaltung 1-2x monatlich.'
+          a: 'Wir empfehlen in der Regel eine Kur von 10-15 Sitzungen, 2-3x pro Woche. Danach als Erhaltung 1-2x monatlich.'
         },
         {
           q: 'Wann sehe ich erste Ergebnisse?',
-          a: 'Nach 4-6 Wochen regelmäßiger Anwendung werden die Haare kräftiger und das Wachstum wird angeregt. Geduld ist wichtig!'
+          a: 'Viele Kunden bemerken nach 4-6 Wochen regelmäßiger Anwendung, dass das Haar kräftiger und gepflegter wirkt. Ergebnisse sind individuell verschieden – Geduld ist wichtig!'
         },
         {
           q: 'Spürt man etwas bei der Behandlung?',
-          a: 'Sie spüren ein leichtes Kribbeln oder Prickeln, das angenehm und entspannend ist. Die Behandlung ist völlig schmerzfrei.'
+          a: 'Sie spüren ein leichtes Kribbeln oder Prickeln, das angenehm und entspannend ist. Die Behandlung ist gut verträglich.'
         },
         {
-          q: 'Hilft Darsonval bei Haarausfall?',
-          a: 'Ja, Darsonval kann bei hormonell oder stressbedingtem Haarausfall helfen, indem es die Haarfollikel stimuliert. Bei schweren Formen empfehlen wir zusätzlich einen Dermatologen zu konsultieren.'
+          q: 'Kann Darsonval bei Haarausfall helfen?',
+          a: 'Darsonval ist eine kosmetische Pflegebehandlung und ersetzt keine ärztliche Behandlung. Sie belebt die Kopfhaut und kann das Haarwachstum unterstützen. Bei starkem oder anhaltendem Haarausfall empfehlen wir, die Ursache dermatologisch abklären zu lassen.'
         }
       ] : language === 'ru' ? [
         {
           q: 'Как часто нужно делать дарсонваль?',
-          a: 'Для оптимальных результатов рекомендуем курс из 10-15 сеансов, 2-3 раза в неделю. Затем для поддержания 1-2 раза в месяц.'
+          a: 'Обычно рекомендуем курс из 10-15 сеансов, 2-3 раза в неделю. Затем для поддержания 1-2 раза в месяц.'
         },
         {
           q: 'Когда я увижу первые результаты?',
-          a: 'После 4-6 недель регулярного применения волосы становятся крепче и рост активизируется. Терпение важно!'
+          a: 'Многие клиенты замечают через 4-6 недель регулярного применения, что волосы выглядят крепче и ухоженнее. Результаты индивидуальны — важно терпение!'
         },
         {
           q: 'Что ощущается во время процедуры?',
-          a: 'Вы ощущаете лёгкое покалывание или пощипывание, которое приятно и расслабляет. Процедура полностью безболезненна.'
+          a: 'Вы ощущаете лёгкое покалывание или пощипывание, которое приятно и расслабляет. Процедура хорошо переносится.'
         },
         {
-          q: 'Помогает ли дарсонваль при выпадении волос?',
-          a: 'Да, дарсонваль может помочь при гормональном или стрессовом выпадении волос, стимулируя волосяные фолликулы. При тяжёлых формах рекомендуем также проконсультироваться с дерматологом.'
+          q: 'Может ли дарсонваль помочь при выпадении волос?',
+          a: 'Дарсонваль — это косметическая ухаживающая процедура, которая не заменяет лечение у врача. Она тонизирует кожу головы и может поддержать рост волос. При сильном или длительном выпадении волос рекомендуем выяснить причину у врача-дерматолога.'
         }
       ] : [
         {
           q: 'Як часто потрібно робити дарсонваль?',
-          a: 'Для оптимальних результатів рекомендуємо курс із 10-15 сеансів, 2-3 рази на тиждень. Потім для підтримки 1-2 рази на місяць.'
+          a: 'Зазвичай рекомендуємо курс із 10-15 сеансів, 2-3 рази на тиждень. Потім для підтримки 1-2 рази на місяць.'
         },
         {
           q: 'Коли я побачу перші результати?',
-          a: 'Після 4-6 тижнів регулярного застосування волосся стає міцнішим та ріст активізується. Терпіння важливе!'
+          a: 'Багато клієнтів помічають через 4-6 тижнів регулярного застосування, що волосся виглядає міцнішим та доглянутішим. Результати індивідуальні — важливе терпіння!'
         },
         {
           q: 'Що відчувається під час процедури?',
-          a: 'Ви відчуваєте легке поколювання або пощипування, яке приємне та розслаблює. Процедура повністю безболісна.'
+          a: 'Ви відчуваєте легке поколювання або пощипування, яке приємне та розслаблює. Процедура добре переноситься.'
         },
         {
-          q: 'Чи допомагає дарсонваль при випаданні волосся?',
-          a: 'Так, дарсонваль може допомогти при гормональному або стресовому випаданні волосся, стимулюючи волосяні фолікули. При тяжких формах рекомендуємо також проконсультуватися з дерматологом.'
+          q: 'Чи може дарсонваль допомогти при випаданні волосся?',
+          a: 'Дарсонваль — це косметична доглядова процедура, яка не замінює лікування в лікаря. Вона тонізує шкіру голови та може підтримати ріст волосся. При сильному або тривалому випаданні волосся рекомендуємо з’ясувати причину в лікаря-дерматолога.'
         }
       ]}
       procedureSchema={<SchemaSection />}
-      ctaTitle={language === 'de' ? "Bereit für kräftigeres, gesünderes Haar?" : language === 'ru' ? "Готовы к более крепким, здоровым волосам?" : "Готові до більш міцного, здорового волосся?"}
+      ctaTitle={language === 'de' ? "Bereit für kräftiger wirkendes, gepflegtes Haar?" : language === 'ru' ? "Готовы к более крепким на вид, ухоженным волосам?" : "Готові до міцнішого на вигляд, доглянутого волосся?"}
       ctaDescription={language === 'de'
         ? "Buchen Sie jetzt Ihre Darsonval-Behandlung und starten Sie Ihre Haar-Kur."
         : language === 'ru'

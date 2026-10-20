@@ -167,7 +167,7 @@ export const PAGE_SEO: Record<string, PageSeoData> = {
     metadata: createPageMeta(
       '/anti-aging',
       'Anti-Aging Behandlungen München – RF-Lifting, Ultraschall | Nata Lux',
-      'Apparative Anti-Aging-Behandlungen in München: RF-Lifting, Ultraschall, Lichttherapie, Biostrom. Hautverjüngung ohne OP.'
+      'Apparative Anti-Aging-Behandlungen in München: RF-Lifting, Ultraschall, Lichttherapie, Biostrom. Für ein frischeres, strafferes Hautbild ohne OP.'
     ),
     titles: {
       de: 'Anti-Aging – Nata Lux München',
@@ -255,7 +255,7 @@ export const PAGE_SEO: Record<string, PageSeoData> = {
     metadata: createPageMeta(
       '/services/wimpern-augenbrauen-laminierung',
       'Wimpern- & Augenbrauen-Laminierung München | Nata Lux',
-      'Wimpern- und Augenbrauen-Laminierung in München. Natürlicher Lifting-Effekt, mehr Volumen und perfekte Form. Hält 6-8 Wochen.'
+      'Wimpern- und Augenbrauen-Laminierung in München. Natürlicher Lifting-Effekt, mehr Volumen und perfekte Form. Hält in der Regel 6-8 Wochen.'
     ),
     titles: {
       de: 'Wimpern- & Augenbrauen-Laminierung – Nata Lux München',
@@ -329,7 +329,7 @@ export const PAGE_SEO: Record<string, PageSeoData> = {
     metadata: createPageMeta(
       '/services/microneedling',
       'Microneedling München – Hautverfeinerung & Anti-Aging | Nata Lux',
-      'Microneedling in München: Kollagenstimulation, Narbenbehandlung, Hautverjüngung. Professionelle Behandlung mit sterilen Mikronadeln.'
+      'Microneedling in München: Anregung der Kollagenbildung, ebenmäßigeres Hautbild, frischere Ausstrahlung. Professionelle Behandlung mit sterilen Mikronadeln.'
     ),
     titles: {
       de: 'Microneedling – Nata Lux München',
@@ -352,8 +352,8 @@ export const PAGE_SEO: Record<string, PageSeoData> = {
   '/services/darsonval-haare': {
     metadata: createPageMeta(
       '/services/darsonval-haare',
-      'Darsonval Haaretherapie München – Gegen Haarausfall | Nata Lux',
-      'Darsonval-Behandlung für die Haare in München: Stimulation der Kopfhaut, Förderung des Haarwachstums, Verbesserung der Durchblutung.'
+      'Darsonval für Kopfhaut & Haare München – Kopfhautpflege | Nata Lux',
+      'Darsonval-Behandlung für die Haare in München: Stimulation der Kopfhaut, kann das Haarwachstum unterstützen und die Durchblutung der Kopfhaut anregen.'
     ),
     titles: {
       de: 'Darsonval Haare – Nata Lux München',
@@ -367,7 +367,7 @@ export const PAGE_SEO: Record<string, PageSeoData> = {
     metadata: createPageMeta(
       '/services/apparative-anti-aging',
       'Apparative Anti-Aging München – RF, Ultraschall, Licht | Nata Lux',
-      'Apparative Anti-Aging-Behandlungen in München: RF-Lifting, Ultraschall, Lichttherapie und Biostrom. Nicht-invasive Hautverjüngung.'
+      'Apparative Anti-Aging-Behandlungen in München: RF-Lifting, Ultraschall, Lichttherapie und Biostrom. Nicht-invasiv für ein frischeres Hautbild.'
     ),
     titles: {
       de: 'Apparative Anti-Aging – Nata Lux München',
@@ -379,7 +379,7 @@ export const PAGE_SEO: Record<string, PageSeoData> = {
     metadata: createPageMeta(
       '/services/apparative-anti-aging/rf-lifting',
       'RF-Lifting München – Radiofrequenz-Hautstraffung | Nata Lux',
-      'RF-Lifting in München: Radiofrequenz-Behandlung für straffe Haut. Kollagenstimulation, Faltenreduktion, sofort sichtbare Ergebnisse.'
+      'RF-Lifting in München: Radiofrequenz-Behandlung für ein strafferes Hautbild. Anregung der Kollagenbildung, kann feine Linien mildern, sichtbarer Frische-Effekt.'
     ),
     titles: {
       de: 'RF-Lifting – Nata Lux München',
@@ -391,7 +391,7 @@ export const PAGE_SEO: Record<string, PageSeoData> = {
     metadata: createPageMeta(
       '/services/apparative-anti-aging/lichttherapie',
       'Lichttherapie München – LED-Hautbehandlung | Nata Lux',
-      'LED-Lichttherapie in München: Photobiomodulation für Hautverjüngung, Akne-Behandlung und Entzündungshemmung. Schmerzfrei und effektiv.'
+      'LED-Lichttherapie in München: Sanfte Lichtanwendung für ein frischeres Hautbild, zur Pflege unreiner Haut und zur Beruhigung gereizter Haut. Angenehm und gut verträglich.'
     ),
     titles: {
       de: 'Lichttherapie – Nata Lux München',
@@ -403,7 +403,7 @@ export const PAGE_SEO: Record<string, PageSeoData> = {
     metadata: createPageMeta(
       '/services/apparative-anti-aging/biostrom',
       'Biostrom München – Mikrostrom-Gesichtsbehandlung | Nata Lux',
-      'Biostrom-Behandlung in München: Mikrostrom-Therapie für Gesichtsstraffung, Muskeltonus und Hautregeneration. Non-invasives Anti-Aging.'
+      'Biostrom-Behandlung in München: Mikrostrom-Anwendung für ein strafferes Gesichtsbild, kann Muskeltonus und Hauterneuerung unterstützen. Non-invasives Anti-Aging.'
     ),
     titles: {
       de: 'Biostrom – Nata Lux München',
@@ -415,7 +415,7 @@ export const PAGE_SEO: Record<string, PageSeoData> = {
     metadata: createPageMeta(
       '/services/apparative-anti-aging/ultraschall',
       'Ultraschall-Gesichtsbehandlung München | Nata Lux',
-      'Ultraschall-Behandlung in München: Tiefenreinigung, Wirkstoffeinschleusung und Hautverjüngung. Sanft und effektiv für alle Hauttypen.'
+      'Ultraschall-Behandlung in München: Tiefenreinigung, Wirkstoffeinschleusung und ein frischeres Hautbild. Sanft und für alle Hauttypen geeignet.'
     ),
     titles: {
       de: 'Ultraschall – Nata Lux München',
@@ -441,7 +441,7 @@ export const PAGE_SEO: Record<string, PageSeoData> = {
     metadata: createPageMeta(
       '/services/koerperbehandlungen/rf-vakuum',
       'RF-Vakuum München – Anti-Cellulite & Bodyforming | Nata Lux',
-      'RF-Vakuum-Behandlung in München: Kombination aus Radiofrequenz und Vakuum-Massage. Effektiv gegen Cellulite und für Körperformung.'
+      'RF-Vakuum-Behandlung in München: Kombination aus Radiofrequenz und Vakuum-Massage. Für ein glatteres Hautbild bei Cellulite und zur Unterstützung der Körperformung.'
     ),
     titles: {
       de: 'RF-Vakuum – Nata Lux München',
@@ -452,8 +452,8 @@ export const PAGE_SEO: Record<string, PageSeoData> = {
   '/services/koerperbehandlungen/kavitation': {
     metadata: createPageMeta(
       '/services/koerperbehandlungen/kavitation',
-      'Kavitation München – Ultraschall-Fettreduktion | Nata Lux',
-      'Kavitation in München: Ultraschallbasierte Fettreduktion und Körperformung. Non-invasiv, schmerzfrei, sichtbare Ergebnisse.'
+      'Kavitation München – Ultraschall-Bodyforming | Nata Lux',
+      'Kavitation in München: Ultraschallbasierte Behandlung zur Unterstützung der Körperformung. Non-invasiv und in der Regel schmerzfrei.'
     ),
     titles: {
       de: 'Kavitation – Nata Lux München',
@@ -467,7 +467,7 @@ export const PAGE_SEO: Record<string, PageSeoData> = {
     metadata: createPageMeta(
       '/shop/renew/whitening',
       'RENEW Whitening – Aufhellende Kosmetik | Nata Lux München',
-      'RENEW Whitening Kollektion: Professionelle aufhellende Kosmetikprodukte aus Israel. Serum, Creme, Maske gegen Pigmentflecken.'
+      'RENEW Whitening Kollektion: Professionelle aufhellende Kosmetikprodukte aus Israel. Serum, Creme, Maske für einen ebenmäßigeren Teint bei Pigmentflecken.'
     ),
     titles: {
       de: 'RENEW Whitening – Nata Lux München',
@@ -490,7 +490,7 @@ export const PAGE_SEO: Record<string, PageSeoData> = {
   '/shop/renew/anti-age': {
     metadata: createPageMeta(
       '/shop/renew/anti-age',
-      'RENEW Anti Age – Hautverjüngung | Nata Lux München',
+      'RENEW Anti Age – Anti-Aging-Pflege | Nata Lux München',
       'RENEW Anti Age Serie: Wirkungsvolle Anti-Aging-Produkte mit Peptiden und Hyaluronsäure. Für glattere, straffere Haut.'
     ),
     titles: {
@@ -502,8 +502,8 @@ export const PAGE_SEO: Record<string, PageSeoData> = {
   '/shop/renew/anti-aging': {
     metadata: createPageMeta(
       '/shop/renew/anti-aging',
-      'RENEW Anti-Aging – Hautverjüngungspflege | Nata Lux München',
-      'RENEW Anti-Aging Kollektion: Professionelle Hautverjüngung mit modernen Wirkstoffen. Faltenreduktion und Hautstraffung.'
+      'RENEW Anti-Aging – Anti-Aging-Pflege | Nata Lux München',
+      'RENEW Anti-Aging Kollektion: Professionelle Anti-Aging-Pflege mit modernen Wirkstoffen. Kann Fältchen mildern und die Haut straffer wirken lassen.'
     ),
     titles: {
       de: 'RENEW Anti-Aging – Nata Lux München',
@@ -515,7 +515,7 @@ export const PAGE_SEO: Record<string, PageSeoData> = {
     metadata: createPageMeta(
       '/shop/renew/retinol',
       'RENEW Retinol – Vitamin-A-Pflege | Nata Lux München',
-      'RENEW Retinol Serie: Professionelle Retinol-Kosmetik für Hauterneuerung, Faltenreduktion und ebenmäßigen Teint.'
+      'RENEW Retinol Serie: Professionelle Retinol-Kosmetik für ein erneuert wirkendes Hautbild, gemilderte Fältchen und einen ebenmäßigen Teint.'
     ),
     titles: {
       de: 'RENEW Retinol – Nata Lux München',
@@ -538,8 +538,8 @@ export const PAGE_SEO: Record<string, PageSeoData> = {
   '/shop/renew/dermo-control': {
     metadata: createPageMeta(
       '/shop/renew/dermo-control',
-      'RENEW Dermo Control – Fettige Haut & Akne | Nata Lux München',
-      'RENEW Dermo Control Serie: Professionelle Pflege für fettige und zu Akne neigende Haut. Reguliert Talg, verfeinert Poren.'
+      'RENEW Dermo Control – Fettige & unreine Haut | Nata Lux München',
+      'RENEW Dermo Control Serie: Professionelle Pflege für fettige und zu Unreinheiten neigende Haut. Hilft, überschüssigen Talg zu regulieren, und lässt Poren feiner wirken.'
     ),
     titles: {
       de: 'RENEW Dermo Control – Nata Lux München',
@@ -550,8 +550,8 @@ export const PAGE_SEO: Record<string, PageSeoData> = {
   '/shop/renew/propioguard': {
     metadata: createPageMeta(
       '/shop/renew/propioguard',
-      'RENEW Propioguard – Anti-Akne Pflege | Nata Lux München',
-      'RENEW Propioguard: Spezielle Anti-Akne-Kosmetik mit antibakteriellen Wirkstoffen. Professionelle Problemhaut-Pflege.'
+      'RENEW Propioguard – Pflege für unreine Haut | Nata Lux München',
+      'RENEW Propioguard: Spezielle Kosmetik für zu Unreinheiten neigende Haut mit klärenden Wirkstoffen. Professionelle Problemhaut-Pflege.'
     ),
     titles: {
       de: 'RENEW Propioguard – Nata Lux München',
@@ -671,7 +671,7 @@ export const PAGE_SEO: Record<string, PageSeoData> = {
     metadata: createPageMeta(
       '/shop/renew/problem-skin',
       'RENEW Problem Skin – Problemhaut Pflege | Nata Lux München',
-      'RENEW Problem Skin: Professionelle Pflege für Problemhaut. Gegen Akne, Unreinheiten und Entzündungen.'
+      'RENEW Problem Skin: Professionelle Pflege für Problemhaut. Klärend und beruhigend bei Unreinheiten und gereizter Haut.'
     ),
     titles: {
       de: 'RENEW Problem Skin – Nata Lux München',

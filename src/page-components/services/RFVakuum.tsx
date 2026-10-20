@@ -35,7 +35,7 @@ const RFVakuum = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <ServiceCard
             title={language === 'de' ? 'Kavitation' : language === 'ru' ? 'Кавитация' : 'Кавітація'}
-            description={language === 'de' ? 'Ultraschall für Fettreduktion' : language === 'ru' ? 'Ультразвук для уменьшения жира' : 'Ультразвук для зменшення жиру'}
+            description={language === 'de' ? 'Ultraschall zur Unterstützung der Körperformung' : language === 'ru' ? 'Ультразвук для моделирования фигуры' : 'Ультразвук для моделювання фігури'}
             icon={Waves}
             href="/services/koerperbehandlungen/kavitation"
             image="/rf-vakuum-koerperbehandlung-muenchen.jpg"
@@ -64,54 +64,54 @@ const RFVakuum = () => {
       icon={Star}
       title={language === 'de' ? "RF-Vakuum" : language === 'ru' ? "RF-вакуум" : "RF-вакуум"}
       subtitle={language === 'de'
-        ? "Radiofrequenz mit Vakuum für Straffung und Cellulite-Reduktion"
+        ? "Radiofrequenz mit Vakuum für ein strafferes, glatteres Hautbild"
         : language === 'ru'
-          ? "Радиочастоты с вакуумом для подтяжки и уменьшения целлюлита"
-          : "Радіочастоти з вакуумом для підтяжки та зменшення целюліту"}
+          ? "Радиочастоты с вакуумом для более подтянутой и гладкой кожи"
+          : "Радіочастоти з вакуумом для більш підтягнутої та гладкої шкіри"}
       aboutTitle={language === 'de' ? "Was ist RF-Vakuum?" : language === 'ru' ? "Что такое RF-вакуум?" : "Що таке RF-вакуум?"}
       aboutDescription={language === 'de' ? [
-        'RF-Vakuum kombiniert zwei hochwirksame Technologien: Radiofrequenz-Wellen zur Hautstraffung und Vakuum-Massage zur Cellulite-Reduktion und Lymphdrainage.',
-        'Die Radiofrequenz erwärmt die tiefen Hautschichten und regt die Kollagenproduktion an, während die Vakuum-Massage die Durchblutung fördert, Fettgewebe mobilisiert und Cellulite sichtbar reduziert.',
-        'Perfekt für Problemzonen wie Bauch, Gesäß, Oberschenkel und Arme. Die Kombination beider Technologien liefert schnelle, sichtbare Ergebnisse!'
+        'RF-Vakuum kombiniert zwei bewährte Technologien: Radiofrequenz-Wellen für ein strafferes Hautgefühl und Vakuum-Massage, die das Erscheinungsbild von Cellulite mildern und den Lymphfluss anregen kann.',
+        'Die Radiofrequenz erwärmt die tiefen Hautschichten und kann die Kollagenbildung anregen, während die Vakuum-Massage die Durchblutung fördert, das Gewebe mobilisiert und das Hautbild bei Cellulite sichtbar glätten kann.',
+        'Geeignet für Problemzonen wie Bauch, Gesäß, Oberschenkel und Arme. Die Kombination beider Technologien kann bereits nach wenigen Sitzungen sichtbare Ergebnisse ermöglichen.'
       ] : language === 'ru' ? [
-        'RF-вакуум сочетает две высокоэффективные технологии: радиочастотные волны для подтяжки кожи и вакуумный массаж для уменьшения целлюлита и лимфодренажа.',
-        'Радиочастоты нагревают глубокие слои кожи и стимулируют выработку коллагена, а вакуумный массаж улучшает кровообращение, мобилизует жировую ткань и заметно уменьшает целлюлит.',
-        'Идеально для проблемных зон: живот, ягодицы, бёдра и руки. Комбинация обеих технологий даёт быстрые, видимые результаты!'
+        'RF-вакуум сочетает две проверенные технологии: радиочастотные волны для более подтянутой кожи и вакуумный массаж, который может сделать проявления целлюлита менее заметными и стимулировать лимфоток.',
+        'Радиочастоты прогревают глубокие слои кожи и могут стимулировать выработку коллагена, а вакуумный массаж улучшает кровообращение, мобилизует ткани и может заметно выровнять рельеф кожи при целлюлите.',
+        'Подходит для проблемных зон: живот, ягодицы, бёдра и руки. Сочетание обеих технологий может дать видимый результат уже после нескольких сеансов.'
       ] : [
-        'RF-вакуум поєднує дві високоефективні технології: радіочастотні хвилі для підтяжки шкіри та вакуумний масаж для зменшення целюліту та лімфодренажу.',
-        'Радіочастоти нагрівають глибокі шари шкіри та стимулюють вироблення колагену, а вакуумний масаж покращує кровообіг, мобілізує жирову тканину та помітно зменшує целюліт.',
-        'Ідеально для проблемних зон: живіт, сідниці, стегна та руки. Поєднання обох технологій дає швидкі, видимі результати!'
+        'RF-вакуум поєднує дві перевірені технології: радіочастотні хвилі для більш підтягнутої шкіри та вакуумний масаж, який може зробити прояви целюліту менш помітними та стимулювати лімфотік.',
+        'Радіочастоти прогрівають глибокі шари шкіри та можуть стимулювати вироблення колагену, а вакуумний масаж покращує кровообіг, мобілізує тканини та може помітно вирівняти рельєф шкіри при целюліті.',
+        'Підходить для проблемних зон: живіт, сідниці, стегна та руки. Поєднання обох технологій може дати видимий результат уже після кількох сеансів.'
       ]}
       benefits={language === 'de' ? [
-        'Sichtbare Cellulite-Reduktion',
+        'Kann das Erscheinungsbild von Cellulite sichtbar mildern',
         'Hautstraffung und Konturierung',
-        'Lymphdrainage und Entgiftung',
+        'Anregung des Lymphflusses',
         'Verbesserung der Durchblutung',
-        'Mobilisierung von Fettgewebe',
+        'Mobilisierung des Gewebes',
         'Glattere, festere Haut',
-        'Reduzierung von Umfang',
+        'Kann die Konturen sichtbar modellieren',
         'Keine Ausfallzeit',
-        'Schmerzfreie Behandlung'
+        'In der Regel schmerzfreie Behandlung'
       ] : language === 'ru' ? [
-        'Видимое уменьшение целлюлита',
+        'Может заметно сгладить проявления целлюлита',
         'Подтяжка и контурирование кожи',
-        'Лимфодренаж и детоксикация',
+        'Стимуляция лимфотока',
         'Улучшение кровообращения',
-        'Мобилизация жировой ткани',
+        'Мобилизация тканей',
         'Более гладкая, упругая кожа',
-        'Уменьшение объёмов',
+        'Может заметно смоделировать контуры',
         'Без периода восстановления',
-        'Безболезненная процедура'
+        'Как правило, безболезненная процедура'
       ] : [
-        'Видиме зменшення целюліту',
+        'Може помітно згладити прояви целюліту',
         'Підтяжка та контурування шкіри',
-        'Лімфодренаж та детоксикація',
+        'Стимуляція лімфотоку',
         'Покращення кровообігу',
-        'Мобілізація жирової тканини',
+        'Мобілізація тканин',
         'Більш гладка, пружна шкіра',
-        'Зменшення об\'ємів',
+        'Може помітно змоделювати контури',
         'Без періоду відновлення',
-        'Безболісна процедура'
+        'Як правило, безболісна процедура'
       ]}
       steps={language === 'de' ? [
         {
@@ -196,7 +196,7 @@ const RFVakuum = () => {
       faq={language === 'de' ? [
         {
           q: 'Wie viele Sitzungen brauche ich?',
-          a: 'Für sichtbare Ergebnisse empfehlen wir 10-15 Sitzungen, 2x pro Woche. Die Ergebnisse sind kumulativ.'
+          a: 'Für sichtbare Ergebnisse empfehlen wir 10-15 Sitzungen, 2x pro Woche. Die Effekte bauen sich über die Kur hinweg auf; das Ergebnis ist individuell unterschiedlich.'
         },
         {
           q: 'Ist die Behandlung schmerzhaft?',
@@ -204,11 +204,11 @@ const RFVakuum = () => {
         },
         {
           q: 'Wann sehe ich Ergebnisse?',
-          a: 'Nach 3-4 Sitzungen werden erste Verbesserungen sichtbar. Die volle Wirkung zeigt sich nach 10-12 Sitzungen.'
+          a: 'Erste Verbesserungen sind oft nach 3-4 Sitzungen sichtbar. Die volle Wirkung zeigt sich in der Regel nach 10-12 Sitzungen.'
         },
         {
           q: 'Kann ich damit abnehmen?',
-          a: 'RF-Vakuum unterstützt die Fettreduktion, ersetzt aber keine gesunde Ernährung und Bewegung. Es konturiert und strafft Problemzonen.'
+          a: 'RF-Vakuum ist keine Methode zur Gewichtsreduktion und ersetzt keine gesunde Ernährung und Bewegung. Es kann jedoch helfen, Problemzonen sichtbar zu konturieren und das Hautbild zu straffen.'
         },
         {
           q: 'Gibt es Ausfallzeiten?',
@@ -217,7 +217,7 @@ const RFVakuum = () => {
       ] : language === 'ru' ? [
         {
           q: 'Сколько сеансов мне нужно?',
-          a: 'Для видимых результатов рекомендуем 10-15 сеансов, 2 раза в неделю. Результаты накапливаются.'
+          a: 'Для видимых результатов рекомендуем 10-15 сеансов, 2 раза в неделю. Эффект накапливается в течение курса; результат индивидуален.'
         },
         {
           q: 'Болезненна ли процедура?',
@@ -225,11 +225,11 @@ const RFVakuum = () => {
         },
         {
           q: 'Когда я увижу результаты?',
-          a: 'После 3-4 сеансов заметны первые улучшения. Полный эффект проявляется после 10-12 сеансов.'
+          a: 'Первые улучшения часто заметны после 3-4 сеансов. Полный эффект, как правило, проявляется после 10-12 сеансов.'
         },
         {
           q: 'Могу ли я похудеть с этим?',
-          a: 'RF-вакуум поддерживает уменьшение жира, но не заменяет здоровое питание и движение. Он контурирует и подтягивает проблемные зоны.'
+          a: 'RF-вакуум не является методом снижения веса и не заменяет здоровое питание и движение. Однако он может помочь заметно смоделировать контуры проблемных зон и подтянуть кожу.'
         },
         {
           q: 'Есть ли период восстановления?',
@@ -238,7 +238,7 @@ const RFVakuum = () => {
       ] : [
         {
           q: 'Скільки сеансів мені потрібно?',
-          a: 'Для видимих результатів рекомендуємо 10-15 сеансів, 2 рази на тиждень. Результати накопичуються.'
+          a: 'Для видимих результатів рекомендуємо 10-15 сеансів, 2 рази на тиждень. Ефект накопичується протягом курсу; результат індивідуальний.'
         },
         {
           q: 'Чи болісна процедура?',
@@ -246,11 +246,11 @@ const RFVakuum = () => {
         },
         {
           q: 'Коли я побачу результати?',
-          a: 'Після 3-4 сеансів помітні перші покращення. Повний ефект проявляється після 10-12 сеансів.'
+          a: 'Перші покращення часто помітні після 3-4 сеансів. Повний ефект, як правило, проявляється після 10-12 сеансів.'
         },
         {
           q: 'Чи можу я схуднути з цим?',
-          a: 'RF-вакуум підтримує зменшення жиру, але не замінює здорове харчування та рух. Він контурує та підтягує проблемні зони.'
+          a: 'RF-вакуум не є методом зниження ваги і не замінює здорове харчування та рух. Однак він може допомогти помітно змоделювати контури проблемних зон і підтягнути шкіру.'
         },
         {
           q: 'Чи є період відновлення?',
@@ -259,10 +259,10 @@ const RFVakuum = () => {
       ]}
       ctaTitle={language === 'de' ? "Bereit für straffere, glattere Haut?" : language === 'ru' ? "Готовы к более упругой, гладкой коже?" : "Готові до більш пружної, гладкої шкіри?"}
       ctaDescription={language === 'de'
-        ? "Buchen Sie jetzt Ihre RF-Vakuum Behandlung und verabschieden Sie sich von Cellulite!"
+        ? "Buchen Sie jetzt Ihre RF-Vakuum Behandlung für ein sichtbar glatteres Hautbild!"
         : language === 'ru'
-          ? "Запишитесь на процедуру RF-вакуум и попрощайтесь с целлюлитом!"
-          : "Запишіться на процедуру RF-вакуум та попрощайтеся з целюлітом!"}
+          ? "Запишитесь на процедуру RF-вакуум для заметно более гладкой кожи!"
+          : "Запишіться на процедуру RF-вакуум для помітно більш гладкої шкіри!"}
     />
   );
 };

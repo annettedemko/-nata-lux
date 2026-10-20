@@ -68,40 +68,40 @@ const AquarellLips = () => {
       aboutDescription={language === 'de' ? [
         'Aquarell Lips ist eine sanfte Permanent Make-up Technik für die Lippen, die einen natürlichen, zarten Farbton verleiht – wie ein Hauch von Farbe, der Ihre natürliche Lippenfarbe betont.',
         'Die Aquarell-Technik erzeugt einen weichen, transparenten Effekt, während die Velvet-Technik für etwas mehr Deckkraft sorgt. Beide Techniken verleihen Ihren Lippen eine schöne Definition und optisch mehr Volumen.',
-        'Das Ergebnis ist absolut natürlich, hält 1-3 Jahre und spart Ihnen das tägliche Nachziehen der Lippen.'
+        'Das Ergebnis wirkt natürlich, hält in der Regel 1-3 Jahre und spart Ihnen das tägliche Nachziehen der Lippen.'
       ] : language === 'ru' ? [
         'Aquarell Lips — это мягкая техника перманентного макияжа губ, которая придаёт естественный, нежный оттенок — как лёгкий намёк цвета, подчёркивающий вашу натуральную окраску губ.',
         'Техника Aquarell создаёт мягкий, прозрачный эффект, тогда как техника Velvet обеспечивает большую насыщенность. Обе техники придают губам красивую чёткость и визуально больший объём.',
-        'Результат абсолютно естественный, держится 1-3 года и избавляет от необходимости ежедневно подкрашивать губы.'
+        'Результат выглядит естественно, держится, как правило, 1-3 года и избавляет от необходимости ежедневно подкрашивать губы.'
       ] : [
         'Aquarell Lips — це м\'яка техніка перманентного макіяжу губ, яка надає природний, ніжний відтінок — як легкий натяк кольору, що підкреслює вашу натуральну барву губ.',
         'Техніка Aquarell створює м\'який, прозорий ефект, тоді як техніка Velvet забезпечує більшу насиченість. Обидві техніки надають губам красиву чіткість та візуально більший об\'єм.',
-        'Результат абсолютно природний, тримається 1-3 роки та позбавляє від необхідності щодня підфарбовувати губи.'
+        'Результат виглядає природно, тримається, як правило, 1-3 роки та позбавляє від необхідності щодня підфарбовувати губи.'
       ]}
       benefits={language === 'de' ? [
         'Natürlicher, zarter Farbton',
         'Optisch vollere, definierte Lippen',
-        'Korrektur von Asymmetrien',
+        'Optischer Ausgleich leichter Asymmetrien',
         'Langlebig: 1-3 Jahre haltbar',
-        'Kein Lippenstift mehr nötig',
+        'Lippenstift oft nicht mehr nötig',
         'Wasserfest und wischfest',
         'Perfekt für jeden Alltag',
         'Kaschiert blasse oder ungleichmäßige Lippenfarbe'
       ] : language === 'ru' ? [
         'Естественный, нежный оттенок',
         'Визуально более полные, очерченные губы',
-        'Коррекция асимметрии',
+        'Визуальная коррекция небольшой асимметрии',
         'Долговечность: 1-3 года',
-        'Не нужна помада',
+        'Помада часто не нужна',
         'Водостойкость и устойчивость к смазыванию',
         'Идеально для повседневной жизни',
         'Скрывает бледный или неровный цвет губ'
       ] : [
         'Природний, ніжний відтінок',
         'Візуально більш повні, окреслені губи',
-        'Корекція асиметрії',
+        'Візуальна корекція невеликої асиметрії',
         'Довговічність: 1-3 роки',
-        'Не потрібна помада',
+        'Помада часто не потрібна',
         'Водостійкість та стійкість до розмазування',
         'Ідеально для повсякденного життя',
         'Приховує блідий або нерівний колір губ'
@@ -202,7 +202,7 @@ const AquarellLips = () => {
         },
         {
           q: 'Was muss ich bei Herpes beachten?',
-          a: 'Bei Neigung zu Lippenherpes empfehlen wir eine prophylaktische Einnahme von Aciclovir 3 Tage vor bis 5 Tage nach der Behandlung.'
+          a: 'Bei Neigung zu Lippenherpes sprechen Sie bitte vorab mit Ihrem Arzt über eine mögliche Prophylaxe (z. B. mit Aciclovir) vor und nach der Behandlung.'
         }
       ] : language === 'ru' ? [
         {
@@ -219,7 +219,7 @@ const AquarellLips = () => {
         },
         {
           q: 'Что нужно учитывать при герпесе?',
-          a: 'При склонности к герпесу на губах рекомендуем профилактический приём Ацикловира за 3 дня до и 5 дней после процедуры.'
+          a: 'При склонности к герпесу на губах заранее обсудите с врачом возможную профилактику (например, Ацикловиром) до и после процедуры.'
         }
       ] : [
         {
@@ -236,7 +236,7 @@ const AquarellLips = () => {
         },
         {
           q: 'Що потрібно враховувати при герпесі?',
-          a: 'При схильності до герпесу на губах рекомендуємо профілактичний прийом Ацикловіру за 3 дні до та 5 днів після процедури.'
+          a: 'При схильності до герпесу на губах заздалегідь обговоріть з лікарем можливу профілактику (наприклад, Ацикловіром) до та після процедури.'
         }
       ]}
       ctaTitle={language === 'de' ? "Bereit für natürlich schöne Lippen?" : language === 'ru' ? "Готовы к естественно красивым губам?" : "Готові до природно красивих губ?"}

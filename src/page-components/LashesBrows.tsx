@@ -145,9 +145,10 @@ const LashesBrows = () => {
                   : 'Каждая процедура начинается с бесплатной консультации, где мастер подберет оптимальную форму, изгиб и длину с учетом ваших особенностей.'}
               </p>
               <p>
-                {isGerman
-                  ? 'Wir garantieren die Sterilität aller Instrumente und die Einhaltung höchster Hygienestandards.'
-                  : 'Гарантируем стерильность всех инструментов и соблюдение высоких стандартов гигиены.'}
+                {language === 'de'
+                  ? 'Alle Instrumente werden sorgfältig sterilisiert, und wir halten strenge Hygienestandards ein.'
+                  : language === 'ru' ? 'Все инструменты тщательно стерилизуются, и мы соблюдаем строгие стандарты гигиены.'
+                  : 'Усі інструменти ретельно стерилізуються, і ми дотримуємося суворих стандартів гігієни.'}
               </p>
             </div>
           </motion.div>

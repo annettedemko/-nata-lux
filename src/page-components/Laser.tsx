@@ -29,24 +29,24 @@ const Laser = () => {
       icon: Sun,
       color: 'from-red-400 to-red-600',
       skinTypes: 'Hauttyp I-III',
-      description: 'Goldstandard für helle Haut. Höchste Absorption von Melanin, extrem effektiv bei feinen und hellen Haaren. Schnellste Behandlung großer Flächen.',
-      benefits: ['Ideal für helle Haut', 'Effektiv bei feinen Haaren', 'Schnelle Behandlung', 'Höchste Melanin-Absorption']
+      description: 'Bewährter Standard für helle Haut. Hohe Melanin-Absorption, besonders gut geeignet für feinere Haare. Zügige Behandlung großer Flächen.',
+      benefits: ['Ideal für helle Haut', 'Geeignet für feinere Haare', 'Zügige Behandlung', 'Hohe Melanin-Absorption']
     },
     {
       name: 'Diode (808 nm)',
       icon: Target,
       color: 'from-amber-400 to-amber-600',
       skinTypes: 'Hauttyp I-V',
-      description: 'Der vielseitigste Laser. Dringt tiefer in die Haut ein und erreicht auch tiefliegende Haarfollikel. Geeignet für fast alle Haut- und Haartypen.',
-      benefits: ['Universell einsetzbar', 'Tiefe Penetration', 'Für alle Haartypen', 'Sichere Anwendung']
+      description: 'Der vielseitigste Laser. Dringt tiefer in die Haut ein und erreicht auch tiefliegende Haarfollikel. Geeignet für viele Haut- und Haartypen.',
+      benefits: ['Vielseitig einsetzbar', 'Tiefe Penetration', 'Für viele Haartypen', 'Kontrollierte Anwendung']
     },
     {
       name: 'Nd:YAG (1064 nm)',
       icon: Moon,
       color: 'from-violet-400 to-violet-600',
       skinTypes: 'Hauttyp IV-VI',
-      description: 'Speziell für dunkle und gebräunte Haut. Die längste Wellenlänge minimiert das Risiko von Pigmentstörungen und ist sicher auch bei Sonnenbräune.',
-      benefits: ['Sicher für dunkle Haut', 'Auch bei Bräune möglich', 'Minimales Pigmentrisiko', 'Tiefste Penetration']
+      description: 'Speziell für dunkle und gebräunte Haut. Die längste Wellenlänge verringert das Risiko von Pigmentveränderungen und kann nach individueller Prüfung auch bei leichter Bräune eingesetzt werden.',
+      benefits: ['Geeignet für dunkle Haut', 'Bei leichter Bräune möglich', 'Geringeres Pigmentrisiko', 'Tiefste Penetration']
     }
   ] : language === 'ru' ? [
     {
@@ -54,24 +54,24 @@ const Laser = () => {
       icon: Sun,
       color: 'from-red-400 to-red-600',
       skinTypes: 'Фототип I-III',
-      description: 'Золотой стандарт для светлой кожи. Максимальное поглощение меланина, крайне эффективен для тонких и светлых волос. Самая быстрая обработка больших зон.',
-      benefits: ['Идеален для светлой кожи', 'Эффективен для тонких волос', 'Быстрая процедура', 'Максимум поглощения меланина']
+      description: 'Проверенный стандарт для светлой кожи. Высокое поглощение меланина, особенно хорошо подходит для более тонких волос. Быстрая обработка больших зон.',
+      benefits: ['Идеален для светлой кожи', 'Подходит для тонких волос', 'Быстрая процедура', 'Высокое поглощение меланина']
     },
     {
       name: 'Диод (808 нм)',
       icon: Target,
       color: 'from-amber-400 to-amber-600',
       skinTypes: 'Фототип I-V',
-      description: 'Самый универсальный лазер. Глубже проникает в кожу и достигает глубоко расположенных фолликулов. Подходит практически для всех типов кожи и волос.',
-      benefits: ['Универсальное применение', 'Глубокое проникновение', 'Для всех типов волос', 'Безопасное воздействие']
+      description: 'Самый универсальный лазер. Глубже проникает в кожу и достигает глубоко расположенных фолликулов. Подходит для многих типов кожи и волос.',
+      benefits: ['Универсальное применение', 'Глубокое проникновение', 'Для многих типов волос', 'Контролируемое воздействие']
     },
     {
       name: 'Nd:YAG (1064 нм)',
       icon: Moon,
       color: 'from-violet-400 to-violet-600',
       skinTypes: 'Фототип IV-VI',
-      description: 'Специально для тёмной и загорелой кожи. Самая длинная волна минимизирует риск пигментации и безопасна даже при загаре.',
-      benefits: ['Безопасен для тёмной кожи', 'Можно при загаре', 'Минимальный риск пигментации', 'Самое глубокое проникновение']
+      description: 'Специально для тёмной и загорелой кожи. Самая длинная волна снижает риск пигментных изменений и после индивидуальной оценки может применяться даже при лёгком загаре.',
+      benefits: ['Подходит для тёмной кожи', 'Возможен при лёгком загаре', 'Сниженный риск пигментации', 'Самое глубокое проникновение']
     }
   ] : [
     {
@@ -79,24 +79,24 @@ const Laser = () => {
       icon: Sun,
       color: 'from-red-400 to-red-600',
       skinTypes: 'Фототип I-III',
-      description: 'Золотий стандарт для світлої шкіри. Максимальне поглинання меланіну, надзвичайно ефективний для тонкого та світлого волосся. Найшвидша обробка великих зон.',
-      benefits: ['Ідеальний для світлої шкіри', 'Ефективний для тонкого волосся', 'Швидка процедура', 'Максимум поглинання меланіну']
+      description: 'Перевірений стандарт для світлої шкіри. Високе поглинання меланіну, особливо добре підходить для тоншого волосся. Швидка обробка великих зон.',
+      benefits: ['Ідеальний для світлої шкіри', 'Підходить для тонкого волосся', 'Швидка процедура', 'Високе поглинання меланіну']
     },
     {
       name: 'Діод (808 нм)',
       icon: Target,
       color: 'from-amber-400 to-amber-600',
       skinTypes: 'Фототип I-V',
-      description: 'Найуніверсальніший лазер. Глибше проникає в шкіру і досягає глибоко розташованих фолікулів. Підходить практично для всіх типів шкіри та волосся.',
-      benefits: ['Універсальне застосування', 'Глибоке проникнення', 'Для всіх типів волосся', 'Безпечний вплив']
+      description: 'Найуніверсальніший лазер. Глибше проникає в шкіру і досягає глибоко розташованих фолікулів. Підходить для багатьох типів шкіри та волосся.',
+      benefits: ['Універсальне застосування', 'Глибоке проникнення', 'Для багатьох типів волосся', 'Контрольований вплив']
     },
     {
       name: 'Nd:YAG (1064 нм)',
       icon: Moon,
       color: 'from-violet-400 to-violet-600',
       skinTypes: 'Фототип IV-VI',
-      description: 'Спеціально для темної та засмаглої шкіри. Найдовша хвиля мінімізує ризик пігментації та безпечна навіть при засмазі.',
-      benefits: ['Безпечний для темної шкіри', 'Можна при засмазі', 'Мінімальний ризик пігментації', 'Найглибше проникнення']
+      description: 'Спеціально для темної та засмаглої шкіри. Найдовша хвиля знижує ризик пігментних змін і після індивідуальної оцінки може застосовуватися навіть при легкій засмазі.',
+      benefits: ['Підходить для темної шкіри', 'Можливо при легкій засмазі', 'Знижений ризик пігментації', 'Найглибше проникнення']
     }
   ];
 
@@ -109,12 +109,12 @@ const Laser = () => {
     {
       icon: Shield,
       title: 'Integriertes Kühlsystem',
-      description: 'Schmerzfreie Behandlung durch Kontaktkühlung auf -4°C'
+      description: 'Angenehmere Behandlung durch Kontaktkühlung auf -4°C'
     },
     {
       icon: Clock,
-      title: 'Schnelle Ergebnisse',
-      description: '80-90% dauerhafte Haarreduktion nach 6-8 Sitzungen'
+      title: 'Spürbare Ergebnisse',
+      description: 'Deutliche, langanhaltende Haarreduktion in der Regel nach 6-8 Sitzungen'
     },
     {
       icon: Sparkles,
@@ -130,12 +130,12 @@ const Laser = () => {
     {
       icon: Shield,
       title: 'Встроенная система охлаждения',
-      description: 'Безболезненная процедура благодаря контактному охлаждению до -4°C'
+      description: 'Более комфортная процедура благодаря контактному охлаждению до -4°C'
     },
     {
       icon: Clock,
-      title: 'Быстрые результаты',
-      description: '80-90% стойкое удаление волос после 6-8 сеансов'
+      title: 'Ощутимые результаты',
+      description: 'Заметное и длительное сокращение роста волос, как правило, после 6-8 сеансов'
     },
     {
       icon: Sparkles,
@@ -151,12 +151,12 @@ const Laser = () => {
     {
       icon: Shield,
       title: 'Вбудована система охолодження',
-      description: 'Безболісна процедура завдяки контактному охолодженню до -4°C'
+      description: 'Комфортніша процедура завдяки контактному охолодженню до -4°C'
     },
     {
       icon: Clock,
-      title: 'Швидкі результати',
-      description: '80-90% стійке видалення волосся після 6-8 сеансів'
+      title: 'Відчутні результати',
+      description: 'Помітне й тривале зменшення росту волосся, як правило, після 6-8 сеансів'
     },
     {
       icon: Sparkles,
@@ -255,20 +255,20 @@ const Laser = () => {
 
   const faqs = language === 'de' ? [
     {
-      q: 'Warum ist ein Dreiwellenlaser besser als ein einzelner Laser?',
-      a: 'Ein Dreiwellenlaser kombiniert die Vorteile aller drei Technologien: Alexandrit für helle Haut und feine Haare, Diode für universelle Anwendung, Nd:YAG für dunkle Haut. Der Spezialist kann die optimale Wellenlänge für Ihren Hauttyp wählen oder sogar kombinieren – für maximale Effektivität und Sicherheit.'
+      q: 'Welche Vorteile bietet ein Dreiwellenlaser?',
+      a: 'Ein Dreiwellenlaser kombiniert die Vorteile aller drei Technologien: Alexandrit für helle Haut und feine Haare, Diode für universelle Anwendung, Nd:YAG für dunkle Haut. Der Spezialist kann die passende Wellenlänge für Ihren Hauttyp wählen oder sogar kombinieren – für eine wirksame und zugleich schonende Behandlung.'
     },
     {
       q: 'Ist die Behandlung schmerzhaft?',
-      a: 'Dank des integrierten Kühlsystems (bis -4°C) ist die Behandlung nahezu schmerzfrei. Die meisten Kunden beschreiben ein leichtes Kribbeln oder Wärmegefühl. Empfindliche Zonen wie Bikini können etwas intensiver sein, bleiben aber gut tolerierbar.'
+      a: 'Dank des integrierten Kühlsystems (bis -4°C) wird die Behandlung meist als gut verträglich empfunden. Die meisten Kunden beschreiben ein leichtes Kribbeln oder Wärmegefühl. Empfindliche Zonen wie Bikini können etwas intensiver sein, bleiben aber gut tolerierbar.'
     },
     {
       q: 'Wie viele Sitzungen brauche ich?',
-      a: 'Für 80-90% dauerhafte Haarreduktion sind 6-8 Sitzungen im Abstand von 4-6 Wochen erforderlich. Die genaue Anzahl hängt von Ihrem Haartyp, der Zone und dem Hormonhaushalt ab. Bei hormonellen Erkrankungen können mehr Sitzungen nötig sein.'
+      a: 'Für eine deutliche, langanhaltende Haarreduktion sind in der Regel 6-8 Sitzungen im Abstand von 4-6 Wochen erforderlich. Die genaue Anzahl und das Ergebnis hängen individuell von Ihrem Haartyp, der Zone und dem Hormonhaushalt ab. Bei hormonellen Erkrankungen können mehr Sitzungen nötig sein.'
     },
     {
       q: 'Kann ich mich im Sommer behandeln lassen?',
-      a: 'Ja! Der Nd:YAG-Laser ist auch bei leichter Bräune sicher. Allerdings sollten Sie 2 Wochen vor und nach der Behandlung direkte Sonneneinstrahlung meiden. Wir beraten Sie individuell zur optimalen Wellenlänge für Ihre aktuelle Hautfarbe.'
+      a: 'Ja. Der Nd:YAG-Laser kann nach individueller Prüfung auch bei leichter Bräune eingesetzt werden. Allerdings sollten Sie 2 Wochen vor und nach der Behandlung direkte Sonneneinstrahlung meiden. Wir beraten Sie individuell zur optimalen Wellenlänge für Ihre aktuelle Hautfarbe.'
     },
     {
       q: 'Für wen ist Laser-Haarentfernung nicht geeignet?',
@@ -276,20 +276,20 @@ const Laser = () => {
     }
   ] : language === 'ru' ? [
     {
-      q: 'Почему трёхволновой лазер лучше обычного?',
-      a: 'Трёхволновой лазер объединяет преимущества всех технологий: Александрит для светлой кожи и тонких волос, Диод для универсального применения, Nd:YAG для тёмной кожи. Мастер подбирает оптимальную длину волны для вашего фототипа или комбинирует их — для максимальной эффективности и безопасности.'
+      q: 'Какие преимущества у трёхволнового лазера?',
+      a: 'Трёхволновой лазер объединяет преимущества всех технологий: Александрит для светлой кожи и тонких волос, Диод для универсального применения, Nd:YAG для тёмной кожи. Мастер подбирает подходящую длину волны для вашего фототипа или комбинирует их — для эффективной и при этом бережной процедуры.'
     },
     {
       q: 'Это больно?',
-      a: 'Благодаря встроенной системе охлаждения (до -4°C) процедура практически безболезненна. Большинство клиентов описывают лёгкое покалывание или ощущение тепла. Чувствительные зоны вроде бикини могут ощущаться интенсивнее, но вполне терпимо.'
+      a: 'Благодаря встроенной системе охлаждения (до -4°C) процедура, как правило, хорошо переносится. Большинство клиентов описывают лёгкое покалывание или ощущение тепла. Чувствительные зоны вроде бикини могут ощущаться интенсивнее, но вполне терпимо.'
     },
     {
       q: 'Сколько сеансов нужно?',
-      a: 'Для 80-90% стойкого удаления волос требуется 6-8 сеансов с интервалом 4-6 недель. Точное количество зависит от типа волос, зоны и гормонального фона. При гормональных нарушениях может потребоваться больше сеансов.'
+      a: 'Для заметного и длительного сокращения роста волос, как правило, требуется 6-8 сеансов с интервалом 4-6 недель. Точное количество и результат индивидуальны и зависят от типа волос, зоны и гормонального фона. При гормональных нарушениях может потребоваться больше сеансов.'
     },
     {
       q: 'Можно ли делать летом?',
-      a: 'Да! Nd:YAG лазер безопасен даже при лёгком загаре. Однако следует избегать прямых солнечных лучей 2 недели до и после процедуры. Мы индивидуально подберём оптимальную длину волны для вашего текущего оттенка кожи.'
+      a: 'Да. Nd:YAG лазер после индивидуальной оценки может применяться даже при лёгком загаре. Однако следует избегать прямых солнечных лучей 2 недели до и после процедуры. Мы индивидуально подберём оптимальную длину волны для вашего текущего оттенка кожи.'
     },
     {
       q: 'Кому не подходит лазерная эпиляция?',
@@ -297,20 +297,20 @@ const Laser = () => {
     }
   ] : [
     {
-      q: 'Чому трихвильовий лазер кращий за звичайний?',
-      a: 'Трихвильовий лазер об\'єднує переваги всіх технологій: Олександрит для світлої шкіри та тонкого волосся, Діод для універсального застосування, Nd:YAG для темної шкіри. Майстер підбирає оптимальну довжину хвилі для вашого фототипу або комбінує їх — для максимальної ефективності та безпеки.'
+      q: 'Які переваги трихвильового лазера?',
+      a: 'Трихвильовий лазер об\'єднує переваги всіх технологій: Олександрит для світлої шкіри та тонкого волосся, Діод для універсального застосування, Nd:YAG для темної шкіри. Майстер підбирає відповідну довжину хвилі для вашого фототипу або комбінує їх — для ефективної і водночас дбайливої процедури.'
     },
     {
       q: 'Це боляче?',
-      a: 'Завдяки вбудованій системі охолодження (до -4°C) процедура практично безболісна. Більшість клієнтів описують легке поколювання або відчуття тепла. Чутливі зони на кшталт бікіні можуть відчуватися інтенсивніше, але цілком терпимо.'
+      a: 'Завдяки вбудованій системі охолодження (до -4°C) процедура, як правило, добре переноситься. Більшість клієнтів описують легке поколювання або відчуття тепла. Чутливі зони на кшталт бікіні можуть відчуватися інтенсивніше, але цілком терпимо.'
     },
     {
       q: 'Скільки сеансів потрібно?',
-      a: 'Для 80-90% стійкого видалення волосся потрібно 6-8 сеансів з інтервалом 4-6 тижнів. Точна кількість залежить від типу волосся, зони та гормонального фону. При гормональних порушеннях може знадобитися більше сеансів.'
+      a: 'Для помітного й тривалого зменшення росту волосся, як правило, потрібно 6-8 сеансів з інтервалом 4-6 тижнів. Точна кількість і результат індивідуальні та залежать від типу волосся, зони та гормонального фону. При гормональних порушеннях може знадобитися більше сеансів.'
     },
     {
       q: 'Чи можна робити влітку?',
-      a: 'Так! Nd:YAG лазер безпечний навіть при легкій засмазі. Однак слід уникати прямих сонячних променів 2 тижні до та після процедури. Ми індивідуально підберемо оптимальну довжину хвилі для вашого поточного відтінку шкіри.'
+      a: 'Так. Nd:YAG лазер після індивідуальної оцінки може застосовуватися навіть при легкій засмазі. Однак слід уникати прямих сонячних променів 2 тижні до та після процедури. Ми індивідуально підберемо оптимальну довжину хвилі для вашого поточного відтінку шкіри.'
     },
     {
       q: 'Кому не підходить лазерна епіляція?',
@@ -367,10 +367,10 @@ const Laser = () => {
 
             <p className="text-lg md:text-xl text-brand-coffee/80 leading-relaxed mb-10 max-w-3xl mx-auto">
               {language === 'de'
-                ? 'Modernste Technologie für alle Hauttypen. Schmerzfrei dank Kühlung bis -4°C. Dauerhafte Haarreduktion in München-Haidhausen.'
+                ? 'Moderne Technologie für viele Hauttypen. Gut verträglich dank Kühlung bis -4°C. Langanhaltende Haarreduktion in München-Haidhausen.'
                 : language === 'ru'
-                ? 'Новейшая технология для всех типов кожи. Безболезненно благодаря охлаждению до -4°C. Стойкое удаление волос в Мюнхене.'
-                : 'Найновіша технологія для всіх типів шкіри. Безболісно завдяки охолодженню до -4°C. Стійке видалення волосся в Мюнхені.'}
+                ? 'Современная технология для разных типов кожи. Комфортно благодаря охлаждению до -4°C. Длительное сокращение роста волос в Мюнхене.'
+                : 'Сучасна технологія для різних типів шкіри. Комфортно завдяки охолодженню до -4°C. Тривале зменшення росту волосся в Мюнхені.'}
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center">
@@ -412,10 +412,10 @@ const Laser = () => {
             </h2>
             <p className="text-brand-coffee/70 max-w-3xl mx-auto text-lg">
               {language === 'de'
-                ? 'Ein Gerät – drei Wellenlängen – optimale Ergebnisse für jeden Hauttyp'
+                ? 'Ein Gerät – drei Wellenlängen – individuell abgestimmt auf Ihren Hauttyp'
                 : language === 'ru'
-                ? 'Один аппарат — три длины волны — оптимальные результаты для любого типа кожи'
-                : 'Один апарат — три довжини хвилі — оптимальні результати для будь-якого типу шкіри'}
+                ? 'Один аппарат — три длины волны — индивидуальный подбор под ваш фототип'
+                : 'Один апарат — три довжини хвилі — індивідуальний підбір під ваш фототип'}
             </p>
           </motion.div>
 
@@ -769,7 +769,7 @@ const Laser = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl font-heading font-bold text-white mb-6 max-w-full" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
-              {language === 'de' ? 'Glatte Haut – dauerhaft' : language === 'ru' ? 'Гладкая кожа — надолго' : 'Гладенька шкіра — надовго'}
+              {language === 'de' ? 'Glatte Haut – langanhaltend' : language === 'ru' ? 'Гладкая кожа — надолго' : 'Гладенька шкіра — надовго'}
             </h2>
             <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
               {language === 'de'

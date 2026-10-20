@@ -33,70 +33,70 @@ const Microneedling = () => {
       icon={Scissors}
       title="Microneedling"
       subtitle={language === 'de'
-        ? "Kollagen-Induktionstherapie für Hautverjüngung, Narbenbehandlung und Haarwuchsstimulation"
-        : language === 'ru' ? "Коллаген-индукционная терапия для омоложения кожи, лечения рубцов и стимуляции роста волос"
-        : "Колаген-індукційна терапія для омолодження шкіри, лікування рубців та стимуляції росту волосся"}
+        ? "Kollagen-Induktion für ein frischeres Hautbild, eine ebenmäßigere Hautstruktur und gepflegte Kopfhaut"
+        : language === 'ru' ? "Коллаген-индукция для более свежего вида кожи, выравнивания рельефа и ухода за кожей головы"
+        : "Колаген-індукція для свіжішого вигляду шкіри, вирівнювання рельєфу та догляду за шкірою голови"}
       aboutTitle={language === 'de' ? "Was ist Microneedling?" : language === 'ru' ? "Что такое микронидлинг?" : "Що таке мікронідлінг?"}
       aboutDescription={language === 'de' ? [
-        'Microneedling (auch Kollagen-Induktionstherapie genannt) ist eine innovative Behandlung zur Hautverjüngung und Regeneration. Mit einem speziellen Gerät werden feine Mikrokanäle in die Haut erzeugt, die die natürliche Kollagen- und Elastinproduktion anregen.',
-        'Diese kontrollierte Verletzung aktiviert die Selbstheilungskräfte der Haut und fördert die Aufnahme von Wirkstoffen wie Hyaluronsäure, Vitaminen und Exosomen – für sichtbar straffere, glattere und jugendlichere Haut.',
-        'Microneedling eignet sich hervorragend zur Behandlung von feinen Linien, Falten, Aknenarben, Pigmentflecken, vergrößerten Poren und Dehnungsstreifen. Auch zur Stimulation des Haarwuchses bei beginnendem Haarausfall wird es erfolgreich eingesetzt.',
+        'Microneedling (auch Kollagen-Induktionstherapie genannt) ist eine moderne kosmetische Behandlung für ein frischeres, ebenmäßigeres Hautbild. Mit einem speziellen Gerät werden feine Mikrokanäle in der Haut erzeugt, die die hauteigene Kollagen- und Elastinbildung anregen können.',
+        'Dieser gezielte Reiz aktiviert die natürlichen Erneuerungsprozesse der Haut und verbessert die Aufnahme von Pflegewirkstoffen wie Hyaluronsäure, Vitaminen und Exosomen – die Haut kann dadurch straffer, glatter und frischer wirken.',
+        'Microneedling eignet sich sehr gut, um das Erscheinungsbild von feinen Linien, Fältchen, Aknenarben, Pigmentflecken, vergrößerten Poren und Dehnungsstreifen zu mildern. An der Kopfhaut wird es als pflegende Behandlung eingesetzt, die das Haarwachstum unterstützen kann.',
         'Die Behandlung ist für Gesicht, Hals, Dekolleté, Kopfhaut und andere Körperzonen geeignet und kann je nach Hautzustand und Behandlungsziel individuell angepasst werden.'
       ] : language === 'ru' ? [
-        'Микронидлинг (также называемый коллаген-индукционной терапией) — инновационная процедура для омоложения и регенерации кожи. С помощью специального аппарата создаются тонкие микроканалы в коже, которые стимулируют естественную выработку коллагена и эластина.',
-        'Это контролируемое повреждение активирует механизмы самовосстановления кожи и способствует проникновению активных веществ — гиалуроновой кислоты, витаминов и экзосом — для заметно более упругой, гладкой и молодой кожи.',
-        'Микронидлинг отлично подходит для лечения мелких морщин, рубцов постакне, пигментных пятен, расширенных пор и растяжек. Также успешно применяется для стимуляции роста волос при начинающемся выпадении.',
-        'Процедура подходит для лица, шеи, декольте, кожи головы и других зон тела и может быть индивидуально адаптирована в зависимости от состояния кожи и целей лечения.'
+        'Микронидлинг (также называемый коллаген-индукционной терапией) — современная косметическая процедура для более свежего и ровного вида кожи. С помощью специального аппарата в коже создаются тонкие микроканалы, которые могут стимулировать естественную выработку коллагена и эластина.',
+        'Этот направленный стимул активирует естественные процессы обновления кожи и улучшает проникновение ухаживающих активных веществ — гиалуроновой кислоты, витаминов и экзосом. Кожа может выглядеть более упругой, гладкой и свежей.',
+        'Микронидлинг хорошо подходит для того, чтобы смягчить внешний вид мелких морщин, следов постакне, пигментных пятен, расширенных пор и растяжек. На коже головы процедура применяется как ухаживающая и может поддержать рост волос.',
+        'Процедура подходит для лица, шеи, декольте, кожи головы и других зон тела и может быть индивидуально адаптирована в зависимости от состояния кожи и целей процедуры.'
       ] : [
-        'Мікронідлінг (також відомий як колаген-індукційна терапія) — інноваційна процедура для омолодження та регенерації шкіри. За допомогою спеціального апарату створюються тонкі мікроканали у шкірі, які стимулюють природне вироблення колагену та еластину.',
-        'Це контрольоване пошкодження активує механізми самовідновлення шкіри та сприяє проникненню активних речовин — гіалуронової кислоти, вітамінів та екзосом — для помітно пружнішої, гладшої та молодшої шкіри.',
-        'Мікронідлінг чудово підходить для лікування дрібних зморшок, рубців постакне, пігментних плям, розширених пор та розтяжок. Також успішно застосовується для стимуляції росту волосся при початковому випадінні.',
-        'Процедура підходить для обличчя, шиї, декольте, шкіри голови та інших зон тіла і може бути індивідуально адаптована залежно від стану шкіри та цілей лікування.'
+        'Мікронідлінг (також відомий як колаген-індукційна терапія) — сучасна косметична процедура для свіжішого та рівнішого вигляду шкіри. За допомогою спеціального апарату у шкірі створюються тонкі мікроканали, які можуть стимулювати природне вироблення колагену та еластину.',
+        'Цей спрямований стимул активує природні процеси оновлення шкіри та покращує проникнення доглядових активних речовин — гіалуронової кислоти, вітамінів та екзосом. Шкіра може виглядати пружнішою, гладшою та свіжішою.',
+        'Мікронідлінг добре підходить для того, щоб пом’якшити вигляд дрібних зморшок, слідів постакне, пігментних плям, розширених пор та розтяжок. На шкірі голови процедура застосовується як доглядова і може підтримати ріст волосся.',
+        'Процедура підходить для обличчя, шиї, декольте, шкіри голови та інших зон тіла і може бути індивідуально адаптована залежно від стану шкіри та цілей процедури.'
       ]}
       benefits={language === 'de' ? [
-        'Stimuliert natürliche Kollagen- und Elastinproduktion',
-        'Reduziert feine Linien und Falten',
-        'Verbessert Aknenarben und Narbengewebe',
-        'Minimiert vergrößerte Poren',
-        'Korrigiert Pigmentflecken und ungleichmäßigen Hautton',
-        'Strafft und festigt die Haut',
-        'Fördert Haarwachstum bei Haarausfall',
-        'Verbessert Aufnahme von Wirkstoffen um bis zu 300%',
-        'Behandelt Dehnungsstreifen',
-        'Für alle Hauttypen geeignet',
-        'Minimale Ausfallzeit',
+        'Kann die hauteigene Kollagen- und Elastinbildung anregen',
+        'Kann feine Linien und Fältchen mildern',
+        'Kann das Erscheinungsbild von Aknenarben mildern',
+        'Poren können feiner wirken',
+        'Für einen ebenmäßigeren Hautton',
+        'Für ein strafferes, festeres Hautgefühl',
+        'Kann das Haarwachstum unterstützen',
+        'Verbessert die Aufnahme von Pflegewirkstoffen',
+        'Kann Dehnungsstreifen optisch mildern',
+        'Für viele Hauttypen geeignet',
+        'Geringe Ausfallzeit',
         'Natürliche Ergebnisse ohne Füllstoffe'
       ] : language === 'ru' ? [
-        'Стимулирует естественную выработку коллагена и эластина',
-        'Уменьшает мелкие морщины и складки',
-        'Улучшает рубцы постакне и рубцовую ткань',
-        'Минимизирует расширенные поры',
-        'Корректирует пигментные пятна и неровный тон кожи',
-        'Подтягивает и укрепляет кожу',
-        'Стимулирует рост волос при выпадении',
-        'Улучшает впитывание активных веществ до 300%',
-        'Лечит растяжки',
-        'Подходит для всех типов кожи',
+        'Может стимулировать естественную выработку коллагена и эластина',
+        'Может смягчить мелкие морщины',
+        'Может сделать следы постакне менее заметными',
+        'Поры могут выглядеть менее заметными',
+        'Для более ровного тона кожи',
+        'Для ощущения более упругой и подтянутой кожи',
+        'Может поддержать рост волос',
+        'Улучшает проникновение ухаживающих веществ',
+        'Может визуально смягчить растяжки',
+        'Подходит для многих типов кожи',
         'Минимальный период восстановления',
         'Естественные результаты без филлеров'
       ] : [
-        'Стимулює природне вироблення колагену та еластину',
-        'Зменшує дрібні зморшки та складки',
-        'Покращує рубці постакне та рубцеву тканину',
-        'Мінімізує розширені пори',
-        'Коригує пігментні плями та нерівний тон шкіри',
-        'Підтягує та зміцнює шкіру',
-        'Стимулює ріст волосся при випадінні',
-        'Покращує всмоктування активних речовин до 300%',
-        'Лікує розтяжки',
-        'Підходить для всіх типів шкіри',
+        'Може стимулювати природне вироблення колагену та еластину',
+        'Може пом’якшити дрібні зморшки',
+        'Може зробити сліди постакне менш помітними',
+        'Пори можуть виглядати менш помітними',
+        'Для рівнішого тону шкіри',
+        'Для відчуття пружнішої та підтягнутої шкіри',
+        'Може підтримати ріст волосся',
+        'Покращує проникнення доглядових речовин',
+        'Може візуально пом’якшити розтяжки',
+        'Підходить для багатьох типів шкіри',
         'Мінімальний період відновлення',
         'Природні результати без філерів'
       ]}
       steps={language === 'de' ? [
         {
           title: 'Hautvorbereitung',
-          description: 'Gründliche Reinigung und Desinfektion. Bei Bedarf Auftragen einer betäubenden Creme für maximalen Komfort.'
+          description: 'Gründliche Reinigung und Desinfektion. Bei Bedarf Auftragen einer betäubenden Creme für mehr Komfort.'
         },
         {
           title: 'Microneedling-Behandlung',
@@ -104,7 +104,7 @@ const Microneedling = () => {
         },
         {
           title: 'Wirkstoff-Infusion',
-          description: 'Auftragen von Seren mit Exosomen, Hyaluronsäure, Vitaminen oder Kollagen für optimale Ergebnisse.'
+          description: 'Auftragen von Seren mit Exosomen, Hyaluronsäure, Vitaminen oder Kollagen – abgestimmt auf Ihr Behandlungsziel.'
         },
         {
           title: 'Abschluss & Pflege',
@@ -113,7 +113,7 @@ const Microneedling = () => {
       ] : language === 'ru' ? [
         {
           title: 'Подготовка кожи',
-          description: 'Тщательное очищение и дезинфекция. При необходимости нанесение анестезирующего крема для максимального комфорта.'
+          description: 'Тщательное очищение и дезинфекция. При необходимости нанесение анестезирующего крема для большего комфорта.'
         },
         {
           title: 'Процедура микронидлинг',
@@ -121,7 +121,7 @@ const Microneedling = () => {
         },
         {
           title: 'Инфузия активных веществ',
-          description: 'Нанесение сывороток с экзосомами, гиалуроновой кислотой, витаминами или коллагеном для оптимальных результатов.'
+          description: 'Нанесение сывороток с экзосомами, гиалуроновой кислотой, витаминами или коллагеном — с учётом ваших целей.'
         },
         {
           title: 'Завершение и уход',
@@ -130,7 +130,7 @@ const Microneedling = () => {
       ] : [
         {
           title: 'Підготовка шкіри',
-          description: 'Ретельне очищення та дезінфекція. За потреби нанесення знеболювального крему для максимального комфорту.'
+          description: 'Ретельне очищення та дезінфекція. За потреби нанесення знеболювального крему для більшого комфорту.'
         },
         {
           title: 'Процедура мікронідлінг',
@@ -138,7 +138,7 @@ const Microneedling = () => {
         },
         {
           title: 'Інфузія активних речовин',
-          description: 'Нанесення сироваток з екзосомами, гіалуроновою кислотою, вітамінами або колагеном для оптимальних результатів.'
+          description: 'Нанесення сироваток з екзосомами, гіалуроновою кислотою, вітамінами або колагеном — з урахуванням ваших цілей.'
         },
         {
           title: 'Завершення та догляд',
@@ -186,19 +186,19 @@ const Microneedling = () => {
         },
         {
           q: 'Wie viele Behandlungen brauche ich?',
-          a: 'Für optimale Ergebnisse empfehlen wir 3-6 Sitzungen im Abstand von 2-4 Wochen. Bei Haarwuchsstimulation ist eine Kur über mehrere Monate sinnvoll.'
+          a: 'Je nach Ziel empfehlen wir in der Regel 3-6 Sitzungen im Abstand von 2-4 Wochen. Bei der Kopfhautbehandlung ist eine Kur über mehrere Monate sinnvoll.'
         },
         {
-          q: 'Wie lange dauert die Heilung?',
-          a: 'Die Haut ist 1-3 Tage gerötet (wie leichter Sonnenbrand). Nach 5-7 Tagen ist die Haut vollständig regeneriert. Make-up ist nach 24h möglich.'
+          q: 'Wie lange dauert die Erholungsphase?',
+          a: 'Die Haut ist 1-3 Tage gerötet (wie leichter Sonnenbrand). Nach 5-7 Tagen hat sich die Haut in der Regel wieder vollständig beruhigt. Make-up ist nach 24h möglich.'
         },
         {
           q: 'Wann sehe ich Ergebnisse?',
-          a: 'Erste Verbesserungen nach 1-2 Wochen, optimale Ergebnisse nach 4-6 Wochen, wenn die Kollagenproduktion ihren Höhepunkt erreicht.'
+          a: 'Erste sichtbare Veränderungen zeigen sich häufig nach 1-2 Wochen, das volle Ergebnis meist nach 4-6 Wochen. Ergebnisse sind individuell verschieden.'
         },
         {
           q: 'Was sind Exosome und warum werden sie verwendet?',
-          a: 'Exosome sind winzige Zellbotenstoffe, die Regeneration und Heilung beschleunigen. Sie dringen tief in die Haut ein und verstärken die Wirkung des Microneedlings erheblich.'
+          a: 'Exosome sind winzige Botenstoff-Bläschen, die in der Kosmetik als Pflegewirkstoff eingesetzt werden. Sie sollen die natürliche Erneuerung der Haut unterstützen und ergänzen die Microneedling-Behandlung ideal.'
         }
       ] : language === 'ru' ? [
         {
@@ -207,19 +207,19 @@ const Microneedling = () => {
         },
         {
           q: 'Сколько процедур мне нужно?',
-          a: 'Для оптимальных результатов рекомендуем 3-6 сеансов с интервалом 2-4 недели. Для стимуляции роста волос целесообразен курс в течение нескольких месяцев.'
+          a: 'В зависимости от цели обычно рекомендуем 3-6 сеансов с интервалом 2-4 недели. Для процедур на коже головы целесообразен курс в течение нескольких месяцев.'
         },
         {
           q: 'Как долго длится восстановление?',
-          a: 'Кожа покрасневшая 1-3 дня (как лёгкий загар). Через 5-7 дней кожа полностью восстановлена. Макияж возможен через 24 часа.'
+          a: 'Кожа покрасневшая 1-3 дня (как лёгкий загар). Через 5-7 дней кожа, как правило, полностью успокаивается. Макияж возможен через 24 часа.'
         },
         {
           q: 'Когда я увижу результаты?',
-          a: 'Первые улучшения через 1-2 недели, оптимальные результаты через 4-6 недель, когда выработка коллагена достигает пика.'
+          a: 'Первые заметные изменения часто видны через 1-2 недели, полный результат — обычно через 4-6 недель. Результаты индивидуальны.'
         },
         {
           q: 'Что такое экзосомы и зачем они используются?',
-          a: 'Экзосомы — крошечные клеточные мессенджеры, ускоряющие регенерацию и заживление. Они глубоко проникают в кожу и значительно усиливают эффект микронидлинга.'
+          a: 'Экзосомы — крошечные везикулы-мессенджеры, которые используются в косметологии как ухаживающий компонент. Они призваны поддерживать естественное обновление кожи и отлично дополняют микронидлинг.'
         }
       ] : [
         {
@@ -228,22 +228,22 @@ const Microneedling = () => {
         },
         {
           q: 'Скільки процедур мені потрібно?',
-          a: 'Для оптимальних результатів рекомендуємо 3-6 сеансів з інтервалом 2-4 тижні. Для стимуляції росту волосся доцільний курс протягом кількох місяців.'
+          a: 'Залежно від мети зазвичай рекомендуємо 3-6 сеансів з інтервалом 2-4 тижні. Для процедур на шкірі голови доцільний курс протягом кількох місяців.'
         },
         {
           q: 'Як довго триває відновлення?',
-          a: 'Шкіра почервоніла 1-3 дні (як легка засмага). Через 5-7 днів шкіра повністю відновлена. Макіяж можливий через 24 години.'
+          a: 'Шкіра почервоніла 1-3 дні (як легка засмага). Через 5-7 днів шкіра, як правило, повністю заспокоюється. Макіяж можливий через 24 години.'
         },
         {
           q: 'Коли я побачу результати?',
-          a: 'Перші покращення через 1-2 тижні, оптимальні результати через 4-6 тижнів, коли вироблення колагену досягає піку.'
+          a: 'Перші помітні зміни часто видно через 1-2 тижні, повний результат — зазвичай через 4-6 тижнів. Результати індивідуальні.'
         },
         {
           q: 'Що таке екзосоми і навіщо вони використовуються?',
-          a: 'Екзосоми — крихітні клітинні месенджери, що прискорюють регенерацію та загоєння. Вони глибоко проникають у шкіру та значно підсилюють ефект мікронідлінгу.'
+          a: 'Екзосоми — крихітні везикули-месенджери, які використовуються в косметології як доглядовий компонент. Вони покликані підтримувати природне оновлення шкіри та чудово доповнюють мікронідлінг.'
         }
       ]}
-      ctaTitle={language === 'de' ? "Bereit für strahlende, verjüngte Haut?" : language === 'ru' ? "Готовы к сияющей, помолодевшей коже?" : "Готові до сяючої, помолодшілої шкіри?"}
+      ctaTitle={language === 'de' ? "Bereit für ein strahlendes, frisches Hautbild?" : language === 'ru' ? "Готовы к сияющей, свежей коже?" : "Готові до сяючої, свіжої шкіри?"}
       ctaDescription={language === 'de'
         ? "Buchen Sie jetzt Ihre Microneedling-Behandlung oder vereinbaren Sie eine kostenlose Beratung."
         : language === 'ru' ? "Запишитесь на процедуру микронидлинг или договоритесь о бесплатной консультации."

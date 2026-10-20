@@ -135,19 +135,22 @@ const PermanentMakeup = () => {
             </h3>
             <div className="space-y-3 md:space-y-4 text-sm md:text-base text-brand-coffee/80 leading-relaxed">
               <p>
-                {isGerman
-                  ? 'Permanent Make-up ist das Einbringen von natürlichen Pigmenten in die oberen Hautschichten. Das Ergebnis hält 1-3 Jahre, je nach Hauttyp und Pflege.'
-                  : 'Перманентный макияж — это введение натуральных пигментов в верхние слои кожи. Результат держится 1-3 года в зависимости от типа кожи и ухода.'}
+                {language === 'de'
+                  ? 'Permanent Make-up ist das Einbringen von hochwertigen Pigmenten in die oberen Hautschichten. Das Ergebnis hält in der Regel 1-3 Jahre, je nach Hauttyp und Pflege.'
+                  : language === 'ru' ? 'Перманентный макияж — это введение качественных пигментов в верхние слои кожи. Результат держится, как правило, 1-3 года в зависимости от типа кожи и ухода.'
+                  : 'Перманентний макіяж — це введення якісних пігментів у верхні шари шкіри. Результат тримається, як правило, 1-3 роки залежно від типу шкіри та догляду.'}
               </p>
               <p>
-                {isGerman
-                  ? 'Wir verwenden deutsche und Schweizer Pigmente, die ihre Farbe nicht verändern und auf natürliche Weise abgebaut werden.'
-                  : 'Мы используем немецкие и швейцарские пигменты, которые не меняют цвет и постепенно выводятся естественным путем.'}
+                {language === 'de'
+                  ? 'Wir verwenden deutsche und Schweizer Pigmente, die ihre Farbe weitgehend stabil halten und mit der Zeit auf natürliche Weise verblassen.'
+                  : language === 'ru' ? 'Мы используем немецкие и швейцарские пигменты, которые в целом сохраняют стабильный цвет и со временем естественно бледнеют.'
+                  : 'Ми використовуємо німецькі та швейцарські пігменти, які загалом зберігають стабільний колір і з часом природно бліднуть.'}
               </p>
               <p>
-                {isGerman
-                  ? 'Die Behandlung wird unter örtlicher Betäubung durchgeführt. Die Heilungszeit beträgt 7-10 Tage. Nach 4-6 Wochen erfolgt eine kostenlose Nachbesserung.'
-                  : 'Процедура проходит с применением местной анестезии. Время заживления — 7-10 дней. Через 4-6 недель проводится бесплатная коррекция.'}
+                {language === 'de'
+                  ? 'Die Behandlung wird mit einer betäubenden Creme durchgeführt. Die Abheilung dauert etwa 7-10 Tage. Nach 4-6 Wochen erfolgt eine kostenlose Nachbesserung.'
+                  : language === 'ru' ? 'Процедура проводится с применением обезболивающего крема. Заживление занимает около 7-10 дней. Через 4-6 недель проводится бесплатная коррекция.'
+                  : 'Процедура проводиться із застосуванням знеболюючого крему. Загоєння триває близько 7-10 днів. Через 4-6 тижнів проводиться безкоштовна корекція.'}
               </p>
               <p className="font-semibold text-brand-espresso">
                 {isGerman

@@ -42,9 +42,9 @@ const translations = {
     'services.pmu.title': 'Permanent Make-up',
     'services.pmu.desc': 'Augenbrauen, Lippen, Wimpernlinie. Natürlicher Look, 1-3 Jahre haltbar.',
     'services.laser.title': 'Laser Haarentfernung',
-    'services.laser.desc': 'Alexandrit/Diode. Schnell & schonend. Dauerhafte Ergebnisse.',
+    'services.laser.desc': 'Alexandrit/Diode. Schnell & schonend. Langanhaltende Ergebnisse.',
     'services.antiaging.title': 'Anti-Aging',
-    'services.antiaging.desc': 'RF, Licht, Biostrom, Ultraschall. Lifting ohne Injektionen.',
+    'services.antiaging.desc': 'RF, Licht, Biostrom, Ultraschall. Lifting-Effekt ohne Injektionen.',
     'services.browlamination.title': 'Augenbrauen-Laminierung',
     'services.browlamination.desc': 'Gepflegte Form, natürlicher Glanz. Bis zu 6 Wochen.',
     'services.facial.title': 'Gesichtspflege',
@@ -57,7 +57,7 @@ const translations = {
     'about.sterility': 'Sterilität und Hygiene',
     'about.sterility.desc': 'Deutsche Standards für Sauberkeit und Sicherheit.',
     'about.equipment': 'Premium-Ausrüstung',
-    'about.equipment.desc': 'Modernste deutsche Geräte für beste Ergebnisse.',
+    'about.equipment.desc': 'Moderne deutsche Geräte für hochwertige Ergebnisse.',
 
     // Training
     'training.title': 'Beauty-Schulungen München — Wimpern, PMU & Zertifikat',
@@ -65,7 +65,7 @@ const translations = {
     'training.lashes': 'Wimpernverlängerung Kurs',
     'training.lashes.desc': 'Umfassendes Training von Grund auf. Zertifikat inklusive.',
     'training.pmu': 'PMU Remover Kurs',
-    'training.pmu.desc': 'Sichere Entfernungstechniken. Praktische Übungen.',
+    'training.pmu.desc': 'Schonende Entfernungstechniken. Praktische Übungen.',
     'training.advanced': 'Weiterbildung',
     'training.advanced.desc': 'Fortgeschrittene Techniken und neue Trends.',
     'training.consulting': 'Business Consulting',
@@ -119,7 +119,7 @@ const translations = {
     'categories.pmu': 'Permanent Make-up',
     'categories.pmu.desc': 'Augenbrauen, Lippen, Wimpernlinie. Natürlich & langanhaltend',
     'categories.laser': 'Laser Haarentfernung',
-    'categories.laser.desc': 'Dauerhafte Haarentfernung mit modernsten Lasern',
+    'categories.laser.desc': 'Langanhaltende Haarreduktion mit modernen Lasern',
     'categories.antiaging': 'Anti-Aging & Kosmetologie',
     'categories.antiaging.desc': 'Apparative Behandlungen für Gesicht und Körper',
     'categories.massagen': 'Massagen',
@@ -155,7 +155,7 @@ const translations = {
 
     // Laser subcategories
     'laser.title': 'Laser Haarentfernung',
-    'laser.subtitle': 'Dauerhafte Ergebnisse',
+    'laser.subtitle': 'Langanhaltende Ergebnisse',
     'laser.triwave': 'Laser-Haarentfernung mit Dreiwellenlaser',
     'laser.triwave.desc': 'Alexandrit + Diode + Nd:YAG. Für alle Haut- und Haartypen',
     'laser.areas': 'Behandlungsbereiche',
@@ -163,7 +163,7 @@ const translations = {
 
     // Anti-Aging subcategories
     'antiaging.title': 'Anti-Aging & Kosmetologie',
-    'antiaging.subtitle': 'Natürliche Verjüngung ohne Injektionen',
+    'antiaging.subtitle': 'Für ein frischeres Hautbild – ohne Injektionen',
     'antiaging.devices': 'Apparative Anti-Aging',
     'antiaging.devices.desc': 'RF-Lifting, Lichttherapie, Biostrom, Ultraschall',
     'antiaging.body': 'Körperbehandlungen',
@@ -175,7 +175,7 @@ const translations = {
     'antiaging.microneedling': 'Microneedling',
     'antiaging.microneedling.desc': 'Gesicht, Hals, Dekolleté, Kopfhaut',
     'antiaging.darsonval': 'Darsonval für Haare',
-    'antiaging.darsonval.desc': 'Wachstumsstimulation, Wurzelstärkung',
+    'antiaging.darsonval.desc': 'Kopfhautpflege, Unterstützung der Haarwurzeln',
     'antiaging.removal': 'Hautveränderungen entfernen',
     'antiaging.removal.desc': 'Papillome, Warzen (mit Dermatologe)',
 
@@ -223,9 +223,9 @@ const translations = {
     'services.pmu.title': 'Перманентный макияж',
     'services.pmu.desc': 'Брови, губы, межресничка. Натуральный вид, держится 1-3 года.',
     'services.laser.title': 'Лазерная эпиляция',
-    'services.laser.desc': 'Александрит/диод. Быстро и безболезненно. Навсегда.',
+    'services.laser.desc': 'Александрит/диод. Быстро и комфортно. Долговременный результат.',
     'services.antiaging.title': 'Anti-Aging',
-    'services.antiaging.desc': 'RF, свет, биотоки, УЗ. Лифтинг без инъекций.',
+    'services.antiaging.desc': 'RF, свет, биотоки, УЗ. Лифтинг-эффект без инъекций.',
     'services.browlamination.title': 'Ламинирование бровей',
     'services.browlamination.desc': 'Ухоженная форма, естественный блеск. До 6 недель.',
     'services.facial.title': 'Уход за лицом',
@@ -238,7 +238,7 @@ const translations = {
     'about.sterility': 'Стерильность и гигиена',
     'about.sterility.desc': 'Немецкие стандарты чистоты и безопасности.',
     'about.equipment': 'Премиум-оборудование',
-    'about.equipment.desc': 'Новейшее немецкое оборудование для лучших результатов.',
+    'about.equipment.desc': 'Современное немецкое оборудование для качественных результатов.',
 
     // Training
     'training.title': 'Курсы красоты в Мюнхене — Ресницы, PMU и сертификат',
@@ -246,7 +246,7 @@ const translations = {
     'training.lashes': 'Курс наращивания ресниц',
     'training.lashes.desc': 'Полное обучение с нуля. Сертификат включён.',
     'training.pmu': 'Курс удаления ПМ',
-    'training.pmu.desc': 'Безопасные техники удаления. Практика.',
+    'training.pmu.desc': 'Бережные техники удаления. Практика.',
     'training.advanced': 'Повышение квалификации',
     'training.advanced.desc': 'Продвинутые техники и новые тренды.',
     'training.consulting': 'Бизнес-консалтинг',
@@ -300,7 +300,7 @@ const translations = {
     'categories.pmu': 'Перманентный макияж',
     'categories.pmu.desc': 'Брови, губы, межресничка. Натурально и долговечно',
     'categories.laser': 'Лазерная эпиляция',
-    'categories.laser.desc': 'Удаление волос навсегда с современными лазерами',
+    'categories.laser.desc': 'Долговременное удаление волос современными лазерами',
     'categories.antiaging': 'Anti-Aging и косметология',
     'categories.antiaging.desc': 'Аппаратные процедуры для лица и тела',
     'categories.massagen': 'Массажи',
@@ -344,7 +344,7 @@ const translations = {
 
     // Anti-Aging subcategories
     'antiaging.title': 'Anti-Aging и косметология',
-    'antiaging.subtitle': 'Естественное омоложение без инъекций',
+    'antiaging.subtitle': 'Для более свежего вида кожи — без инъекций',
     'antiaging.devices': 'Аппаратный Anti-Aging',
     'antiaging.devices.desc': 'RF-лифтинг, световая терапия, биотоки, УЗ',
     'antiaging.body': 'Процедуры для тела',
@@ -356,7 +356,7 @@ const translations = {
     'antiaging.microneedling': 'Микронидлинг',
     'antiaging.microneedling.desc': 'Лицо, шея, декольте, кожа головы',
     'antiaging.darsonval': 'Дарсонваль для волос',
-    'antiaging.darsonval.desc': 'Стимуляция роста, укрепление луковиц',
+    'antiaging.darsonval.desc': 'Уход за кожей головы, поддержка волосяных луковиц',
     'antiaging.removal': 'Удаление новообразований',
     'antiaging.removal.desc': 'Папилломы, бородавки (с дерматологом)',
 
@@ -404,9 +404,9 @@ const translations = {
     'services.pmu.title': 'Перманентний макіяж',
     'services.pmu.desc': 'Брови, губи, міжвійка. Природний вигляд, тримається 1-3 роки.',
     'services.laser.title': 'Лазерна епіляція',
-    'services.laser.desc': 'Александрит/діод. Швидко і безболісно. Назавжди.',
+    'services.laser.desc': 'Александрит/діод. Швидко і комфортно. Довготривалий результат.',
     'services.antiaging.title': 'Anti-Aging',
-    'services.antiaging.desc': 'RF, світло, біострум, УЗ. Ліфтинг без ін\'єкцій.',
+    'services.antiaging.desc': 'RF, світло, біострум, УЗ. Ліфтинг-ефект без ін\'єкцій.',
     'services.browlamination.title': 'Ламінування брів',
     'services.browlamination.desc': 'Доглянута форма, природний блиск. До 6 тижнів.',
     'services.facial.title': 'Догляд за обличчям',
@@ -419,7 +419,7 @@ const translations = {
     'about.sterility': 'Стерильність та гігієна',
     'about.sterility.desc': 'Німецькі стандарти чистоти та безпеки.',
     'about.equipment': 'Преміум-обладнання',
-    'about.equipment.desc': 'Найновіше німецьке обладнання для найкращих результатів.',
+    'about.equipment.desc': 'Сучасне німецьке обладнання для якісних результатів.',
 
     // Training
     'training.title': 'Курси краси в Мюнхені — Вії, PMU та сертифікат',
@@ -427,7 +427,7 @@ const translations = {
     'training.lashes': 'Курс нарощування вій',
     'training.lashes.desc': 'Повне навчання з нуля. Сертифікат включений.',
     'training.pmu': 'Курс видалення ПМ',
-    'training.pmu.desc': 'Безпечні техніки видалення. Практика.',
+    'training.pmu.desc': 'Дбайливі техніки видалення. Практика.',
     'training.advanced': 'Підвищення кваліфікації',
     'training.advanced.desc': 'Просунуті техніки та нові тренди.',
     'training.consulting': 'Бізнес-консалтинг',
@@ -481,7 +481,7 @@ const translations = {
     'categories.pmu': 'Перманентний макіяж',
     'categories.pmu.desc': 'Брови, губи, міжвійка. Природно і довговічно',
     'categories.laser': 'Лазерна епіляція',
-    'categories.laser.desc': 'Видалення волосся назавжди із сучасними лазерами',
+    'categories.laser.desc': 'Довготривале видалення волосся сучасними лазерами',
     'categories.antiaging': 'Anti-Aging та косметологія',
     'categories.antiaging.desc': 'Апаратні процедури для обличчя та тіла',
     'categories.massagen': 'Масажі',
@@ -525,7 +525,7 @@ const translations = {
 
     // Anti-Aging subcategories
     'antiaging.title': 'Anti-Aging та косметологія',
-    'antiaging.subtitle': 'Природне омолодження без ін\'єкцій',
+    'antiaging.subtitle': 'Для свіжішого вигляду шкіри — без ін\'єкцій',
     'antiaging.devices': 'Апаратний Anti-Aging',
     'antiaging.devices.desc': 'RF-ліфтинг, світлова терапія, біострум, УЗ',
     'antiaging.body': 'Процедури для тіла',
@@ -537,7 +537,7 @@ const translations = {
     'antiaging.microneedling': 'Мікронідлінг',
     'antiaging.microneedling.desc': 'Обличчя, шия, декольте, шкіра голови',
     'antiaging.darsonval': 'Дарсонваль для волосся',
-    'antiaging.darsonval.desc': 'Стимуляція росту, зміцнення цибулин',
+    'antiaging.darsonval.desc': 'Догляд за шкірою голови, підтримка волосяних цибулин',
     'antiaging.removal': 'Видалення новоутворень',
     'antiaging.removal.desc': 'Папіломи, бородавки (з дерматологом)',
 

@@ -91,10 +91,10 @@ const Prices = () => {
         {
           name: language === 'de' ? 'PMU Entfernung (PMU Remover)' : language === 'ru' ? 'Удаление перманентного макияжа' : 'Видалення перманентного макіяжу',
           description: language === 'de'
-            ? 'Biochemische Zusammensetzung löst Pigment sanft auf, ohne die Haut zu schädigen.'
+            ? 'Biochemische Zusammensetzung, die Pigment sanft und hautschonend lösen kann.'
             : language === 'ru'
-            ? 'Биохимический состав мягко растворяет пигмент, не повреждая кожу.'
-            : 'Біохімічний склад м\'яко розчиняє пігмент, не пошкоджуючи шкіру.',
+            ? 'Биохимический состав, который может мягко и бережно для кожи растворять пигмент.'
+            : 'Біохімічний склад, який може м\'яко та дбайливо для шкіри розчиняти пігмент.',
           items: [
             { name: language === 'de' ? 'Salon + Heimpflege' : language === 'ru' ? 'Процедура в салоне + домашний уход' : 'Процедура в салоні + домашній догляд', price: '95 € + 25 €' },
             { name: language === 'de' ? 'Kurs (10 Behandlungen + Heimpflege)' : language === 'ru' ? 'Курс (10 процедур + домашний уход)' : 'Курс (10 процедур + домашній догляд)', price: '700 €' },
@@ -299,10 +299,10 @@ const Prices = () => {
         {
           name: language === 'de' ? 'Apparative Massage (30 Min)' : language === 'ru' ? 'Аппаратный массаж (30 мин)' : 'Апаратний масаж (30 хв)',
           description: language === 'de'
-            ? 'Lymphdrainage · Anti-Cellulite · Bodyforming · Hautstraffung · Fettverbrennung. RF + Vakuum + Infrarot.'
+            ? 'Lymphdrainage · Anti-Cellulite · Bodyforming · Hautstraffung · Figurformung. RF + Vakuum + Infrarot.'
             : language === 'ru'
-            ? 'Лимфодренаж · Антицеллюлитный · Бодиформинг · Подтяжка кожи · Жиросжигание. RF + вакуум + инфракрасный свет.'
-            : 'Лімфодренаж · Антицелюлітний · Бодіформінг · Підтяжка шкіри · Жироспалювання. RF + вакуум + інфрачервоне світло.',
+            ? 'Лимфодренаж · Антицеллюлитный · Бодиформинг · Подтяжка кожи · Моделирование фигуры. RF + вакуум + инфракрасный свет.'
+            : 'Лімфодренаж · Антицелюлітний · Бодіформінг · Підтяжка шкіри · Моделювання фігури. RF + вакуум + інфрачервоне світло.',
           items: [
             { name: language === 'de' ? 'Einzelbehandlung' : language === 'ru' ? 'Разовая процедура' : 'Разова процедура', price: '79 €' },
             { name: language === 'de' ? 'Kurs (10 Behandlungen)' : language === 'ru' ? 'Курс (10 процедур)' : 'Курс (10 процедур)', price: '699 €' },
@@ -353,21 +353,21 @@ const Prices = () => {
         },
         {
           name: tr('Peeling ENZYME PURE SKIN (RENEW Enzyme Exfoliator)', 'Пилинг ENZYME PURE SKIN (RENEW Enzyme Exfoliator)', 'Пілінг ENZYME PURE SKIN (RENEW Enzyme Exfoliator)'),
-          description: tr('Geeignet für normale, Misch-, fettige, reife und fahle Haut; verdickte Hornschicht und unebene Hautstruktur; verstopfte, vergrößerte Poren und Mitesser; raue Haut und fahler Teint.', 'Показания: нормальная, комбинированная, жирная, зрелая и тусклая кожа; кожа с повышенным ороговением и неровным рельефом; загрязнённые/расширенные поры и комедоны; шероховатость и тусклый цвет лица.', 'Показання: нормальна, комбінована, жирна, зріла та тьмяна шкіра; шкіра з підвищеним зроговінням і нерівним рельєфом; забруднені/розширені пори та комедони; шорсткість і тьмяний колір обличчя.'),
+          description: tr('Geeignet für normale, Misch-, fettige, reife und fahle Haut; verdickte Hornschicht und unebene Hautstruktur; verstopfte, vergrößerte Poren und Mitesser; raue Haut und fahler Teint.', 'Подходит для: нормальной, комбинированной, жирной, зрелой и тусклой кожи; кожа с повышенным ороговением и неровным рельефом; загрязнённые/расширенные поры и комедоны; шероховатость и тусклый цвет лица.', 'Підходить для: нормальної, комбінованої, жирної, зрілої та тьмяної шкіри; шкіра з підвищеним зроговінням і нерівним рельєфом; забруднені/розширені пори та комедони; шорсткість і тьмяний колір обличчя.'),
           items: [
             { name: tr('Enzym- + sanftes mechanisches Peeling · 45 Min', 'Ферментативное + мягкое механическое отшелушивание · 45 мин', 'Ферментативне + м’яке механічне відлущування · 45 хв'), price: '95 €' },
           ]
         },
         {
           name: tr('Peeling AHA FRESH GLOW (RENEW AHA Refreshing Exfoliator)', 'Пилинг AHA FRESH GLOW (RENEW AHA Refreshing Exfoliator)', 'Пілінг AHA FRESH GLOW (RENEW AHA Refreshing Exfoliator)'),
-          description: tr('Geeignet für normale, trockene, Misch-, fettige und reife Haut mit intakter Hautbarriere; fahler Teint und fehlende Ausstrahlung; oberflächliche Verhornung und raue Haut; ungleichmäßiger Hautton und erste Zeichen der Hautalterung.', 'Показания: нормальная, сухая, комбинированная, жирная и зрелая кожа при сохранённом барьере; тусклый цвет лица и недостаток сияния; поверхностный гиперкератоз и шероховатость; неровный тон и лёгкие возрастные изменения.', 'Показання: нормальна, суха, комбінована, жирна та зріла шкіра за збереженого бар’єру; тьмяний колір обличчя та брак сяйва; поверхневий гіперкератоз і шорсткість; нерівний тон і легкі вікові зміни.'),
+          description: tr('Geeignet für normale, trockene, Misch-, fettige und reife Haut mit intakter Hautbarriere; fahler Teint und fehlende Ausstrahlung; oberflächliche Verhornung und raue Haut; ungleichmäßiger Hautton und erste Zeichen der Hautalterung.', 'Подходит для: нормальной, сухой, комбинированной, жирной и зрелой кожи при сохранённом барьере; тусклый цвет лица и недостаток сияния; поверхностное ороговение и шероховатость; неровный тон и лёгкие возрастные изменения.', 'Підходить для: нормальної, сухої, комбінованої, жирної та зрілої шкіри за збереженого бар’єру; тьмяний колір обличчя та брак сяйва; поверхневе зроговіння і шорсткість; нерівний тон і легкі вікові зміни.'),
           items: [
             { name: tr('Sanfte oberflächliche Säurepflege · 45 Min', 'Мягкий поверхностный кислотный уход · 45 мин', 'М’який поверхневий кислотний догляд · 45 хв'), price: '89 €' },
           ]
         },
         {
           name: tr('Peeling PRO GLOW MULTI-ACID (RENEW Pro Glow Foaming Peeling)', 'Пилинг PRO GLOW MULTI-ACID (RENEW Pro Glow Foaming Peeling)', 'Пілінг PRO GLOW MULTI-ACID (RENEW Pro Glow Foaming Peeling)'),
-          description: tr('Geeignet für normale, Misch- und fettige Haut mit intakter Hautbarriere; lichtbedingte Hautveränderungen und ungleichmäßiger Hautton; Pigmentflecken; vergrößerte Poren und unebene Hautstruktur.', 'Показания: нормальная, комбинированная и жирная кожа при сохранённом барьере; фотоповреждение и неровный тон; гиперпигментация и поствоспалительная пигментация; расширенные поры и неровная текстура.', 'Показання: нормальна, комбінована та жирна шкіра за збереженого бар’єру; фотопошкодження та нерівний тон; гіперпігментація та післязапальна пігментація; розширені пори та нерівна текстура.'),
+          description: tr('Geeignet für normale, Misch- und fettige Haut mit intakter Hautbarriere; lichtbedingte Hautveränderungen und ungleichmäßiger Hautton; Pigmentflecken; vergrößerte Poren und unebene Hautstruktur.', 'Подходит для: нормальной, комбинированной и жирной кожи при сохранённом барьере; изменения кожи, вызванные солнцем, и неровный тон; пигментные пятна; расширенные поры и неровная текстура.', 'Підходить для: нормальної, комбінованої та жирної шкіри за збереженого бар’єру; зміни шкіри, спричинені сонцем, і нерівний тон; пігментні плями; розширені пори та нерівна текстура.'),
           items: [
             { name: tr('Aktives Multi-Säure-Peeling · 1 Std.', 'Активный мультикислотный пилинг · 1 ч', 'Активний мультикислотний пілінг · 1 год'), price: '129 €' },
           ]
@@ -386,8 +386,8 @@ const Prices = () => {
           description: language === 'de'
             ? 'Behandlung inkl. Hautvorbereitung, Anästhetikum (bei Bedarf), Darsonval oder Peeling (falls nötig). Ampullen mit Exosomen, Vitaminen, Kollagen, Hyaluronsäure usw. gegen Aufpreis. Empfohlen: Wiederholung alle 2–3 Wochen je nach individuellen Zielen. Für Haarwuchsstimulation wird ein Behandlungskurs empfohlen.'
             : language === 'ru'
-            ? 'Процедура включает подготовку кожи, анестетик (при необходимости), дарсонваль или пилинг (при необходимости). Ампула экзосомы, витамины, коллаген, гиалурон и т.д. за доп. плату. Рекомендовано повторять через 2-3 недели, в зависимости от индивидуальных целей. Например для стимуляция роста волос необходимо пройти курсом терапию.'
-            : 'Процедура включає підготовку шкіри, анестетик (за необхідності), дарсонваль або пілінг (за необхідності). Ампула екзосоми, вітаміни, колаген, гіалурон тощо за дод. плату. Рекомендовано повторювати через 2-3 тижні, залежно від індивідуальних цілей. Наприклад, для стимуляції росту волосся необхідно пройти курс терапії.',
+            ? 'Процедура включает подготовку кожи, анестетик (при необходимости), дарсонваль или пилинг (при необходимости). Ампула экзосомы, витамины, коллаген, гиалурон и т.д. за доп. плату. Рекомендовано повторять через 2-3 недели, в зависимости от индивидуальных целей. Например, для стимуляции роста волос рекомендуется курс процедур.'
+            : 'Процедура включає підготовку шкіри, анестетик (за необхідності), дарсонваль або пілінг (за необхідності). Ампула екзосоми, вітаміни, колаген, гіалурон тощо за дод. плату. Рекомендовано повторювати через 2-3 тижні, залежно від індивідуальних цілей. Наприклад, для стимуляції росту волосся рекомендується курс процедур.',
           items: [
             { name: tr('Gesicht · 1 Std.', 'Лицо · 1 ч', 'Обличчя · 1 год'), price: '159 €' },
             { name: tr('Gesicht + Hals + Dekolleté · 1 Std. 30 Min', 'Лицо + шея + декольте · 1 ч 30 мин', 'Обличчя + шия + декольте · 1 год 30 хв'), price: '249 €' },

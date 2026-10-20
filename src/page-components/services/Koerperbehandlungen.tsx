@@ -12,9 +12,9 @@ const Koerperbehandlungen = () => {
     {
       title: language === 'de' ? 'RF-Vakuum' : language === 'ru' ? 'RF-вакуум' : 'RF-вакуум',
       description: language === 'de'
-        ? 'Radiofrequenz mit Vakuum für Straffung und Cellulite-Reduktion'
-        : language === 'ru' ? 'Радиочастоты с вакуумом для подтяжки и уменьшения целлюлита'
-        : 'Радіочастоти з вакуумом для підтяжки та зменшення целюліту',
+        ? 'Radiofrequenz mit Vakuum für ein strafferes, glatteres Hautbild'
+        : language === 'ru' ? 'Радиочастоты с вакуумом для более подтянутой и гладкой кожи'
+        : 'Радіочастоти з вакуумом для більш підтягнутої та гладкої шкіри',
       icon: Star,
       href: '/services/koerperbehandlungen/rf-vakuum',
       image: '/rf-vakuum-koerperbehandlung-muenchen.jpg',
@@ -22,9 +22,9 @@ const Koerperbehandlungen = () => {
     {
       title: language === 'de' ? 'Kavitation' : language === 'ru' ? 'Кавитация' : 'Кавітація',
       description: language === 'de'
-        ? 'Ultraschall-Kavitation für Fettreduktion an Bauch, Gesäß und Oberschenkeln'
-        : language === 'ru' ? 'Ультразвуковая кавитация для уменьшения жировых отложений на животе, ягодицах и бёдрах'
-        : 'Ультразвукова кавітація для зменшення жирових відкладень на животі, сідницях та стегнах',
+        ? 'Ultraschall-Kavitation zur Unterstützung der Körperformung an Bauch, Gesäß und Oberschenkeln'
+        : language === 'ru' ? 'Ультразвуковая кавитация для моделирования фигуры в области живота, ягодиц и бёдер'
+        : 'Ультразвукова кавітація для моделювання фігури в ділянці живота, сідниць та стегон',
       icon: Zap,
       href: '/services/koerperbehandlungen/kavitation',
       image: '/koerperbehandlung-muenchen.jpeg',
@@ -62,9 +62,9 @@ const Koerperbehandlungen = () => {
           </p>
           <p className="text-lg text-brand-coffee/80 max-w-2xl mx-auto leading-relaxed">
             {language === 'de'
-              ? 'Moderne Körperbehandlungen für Straffung, Cellulite-Reduktion und Fettabbau. Nicht-invasive Methoden für eine schönere Silhouette.'
-              : language === 'ru' ? 'Современные процедуры для тела: подтяжка, уменьшение целлюлита и жировых отложений. Неинвазивные методы для красивого силуэта.'
-              : 'Сучасні процедури для тіла: підтяжка, зменшення целюліту та жирових відкладень. Неінвазивні методи для красивого силуету.'}
+              ? 'Moderne Körperbehandlungen für ein strafferes Hautbild, eine glattere Hautoberfläche bei Cellulite und die Unterstützung der Figurformung. Nicht-invasive Methoden für eine schönere Silhouette.'
+              : language === 'ru' ? 'Современные процедуры для тела: подтяжка кожи, более гладкий рельеф при целлюлите и поддержка моделирования фигуры. Неинвазивные методы для красивого силуэта.'
+              : 'Сучасні процедури для тіла: підтяжка шкіри, більш гладкий рельєф при целюліті та підтримка моделювання фігури. Неінвазивні методи для красивого силуету.'}
           </p>
         </div>
 
@@ -90,22 +90,22 @@ const Koerperbehandlungen = () => {
           </p>
           <p className="text-brand-coffee/80 leading-relaxed">
             {language === 'de'
-              ? 'Ob Cellulite-Reduktion, Hautstraffung oder Fettabbau – wir bieten effektive Lösungen für eine schönere, straffere Silhouette an Bauch, Gesäß, Oberschenkeln und anderen Bereichen.'
-              : language === 'ru' ? 'Уменьшение целлюлита, подтяжка кожи или сжигание жира — мы предлагаем эффективные решения для красивого, подтянутого силуэта на животе, ягодицах, бёдрах и других зонах.'
-              : 'Зменшення целюліту, підтяжка шкіри або спалювання жиру — ми пропонуємо ефективні рішення для красивого, підтягнутого силуету на животі, сідницях, стегнах та інших зонах.'}
+              ? 'Ob glatteres Hautbild bei Cellulite, Hautstraffung oder Figurformung – unsere Behandlungen können Sie auf dem Weg zu einer schöneren, strafferen Silhouette an Bauch, Gesäß, Oberschenkeln und anderen Bereichen unterstützen.'
+              : language === 'ru' ? 'Более гладкая кожа при целлюлите, подтяжка или моделирование фигуры — наши процедуры могут помочь вам на пути к красивому, подтянутому силуэту на животе, ягодицах, бёдрах и других зонах.'
+              : 'Більш гладка шкіра при целюліті, підтяжка або моделювання фігури — наші процедури можуть допомогти вам на шляху до красивого, підтягнутого силуету на животі, сідницях, стегнах та інших зонах.'}
           </p>
         </section>
 
         {/* CTA */}
         <div className="bg-gold-gradient rounded-2xl p-8 text-center">
           <h2 className="text-2xl font-heading font-semibold text-white mb-4">
-            {language === 'de' ? 'Bereit für Ihre Traumfigur?' : language === 'ru' ? 'Готовы к фигуре мечты?' : 'Готові до фігури мрії?'}
+            {language === 'de' ? 'Bereit für eine straffere Silhouette?' : language === 'ru' ? 'Готовы к более подтянутому силуэту?' : 'Готові до більш підтягнутого силуету?'}
           </h2>
           <p className="text-white/90 mb-6">
             {language === 'de'
               ? 'Buchen Sie eine kostenlose Beratung und starten Sie Ihre individuelle Body-Contouring-Reise.'
-              : language === 'ru' ? 'Запишитесь на бесплатную консультацию и начните свой индивидуальный путь к идеальному телу.'
-              : 'Запишіться на безкоштовну консультацію та розпочніть свій індивідуальний шлях до ідеального тіла.'}
+              : language === 'ru' ? 'Запишитесь на бесплатную консультацию и начните свой индивидуальный путь body-contouring.'
+              : 'Запишіться на безкоштовну консультацію та розпочніть свій індивідуальний шлях body-contouring.'}
           </p>
           <Button
             size="lg"

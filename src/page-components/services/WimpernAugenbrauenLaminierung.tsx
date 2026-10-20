@@ -81,11 +81,11 @@ const WimpernAugenbrauenLaminierung = () => {
         'Offener, wacher Blick durch angehobene Wimpern',
         'Gebändigte, perfekt geformte Augenbrauen',
         'Voller "Soap Brows"-Look für dünne Augenbrauen',
-        'Korrektur von Wuchsrichtung und Asymmetrien',
+        'Optische Korrektur von Wuchsrichtung und leichten Asymmetrien',
         'Wasserfest, schweißresistent und langanhaltend (6-8 Wochen)',
         'Keine tägliche Styling-Zeit mehr nötig',
-        'Schonend für natürliche Härchen – keine Schädigung',
-        'Keratin- und Pflegestoffe stärken die Härchen',
+        'Schonend für natürliche Härchen bei fachgerechter Anwendung',
+        'Keratin- und Pflegestoffe pflegen die Härchen',
         'Perfekt kombinierbar: Wimpern + Augenbrauen zusammen',
         'Optional mit Färbung für intensiveren Effekt',
         'Ideal vor Urlaub, Hochzeit oder besonderen Anlässen',
@@ -96,11 +96,11 @@ const WimpernAugenbrauenLaminierung = () => {
         'Открытый, бодрый взгляд благодаря приподнятым ресницам',
         'Укрощённые, идеально оформленные брови',
         'Объёмный эффект "Soap Brows" для тонких бровей',
-        'Коррекция направления роста и асимметрии',
+        'Визуальная коррекция направления роста и небольшой асимметрии',
         'Водостойкость, устойчивость к поту и долговременность (6-8 недель)',
         'Больше не нужно время на ежедневную укладку',
-        'Бережное отношение к натуральным волоскам — без повреждений',
-        'Кератин и ухаживающие вещества укрепляют волоски',
+        'Бережно к натуральным волоскам при профессиональном применении',
+        'Кератин и ухаживающие вещества ухаживают за волосками',
         'Идеально комбинируется: ресницы + брови вместе',
         'Опционально с окрашиванием для более интенсивного эффекта',
         'Идеально перед отпуском, свадьбой или особыми случаями',
@@ -111,11 +111,11 @@ const WimpernAugenbrauenLaminierung = () => {
         'Відкритий, бадьорий погляд завдяки піднятим віям',
         'Приборкані, ідеально оформлені брови',
         'Об\'ємний ефект "Soap Brows" для тонких брів',
-        'Корекція напрямку росту та асиметрії',
+        'Візуальна корекція напрямку росту та невеликої асиметрії',
         'Водостійкість, стійкість до поту та довготривалість (6-8 тижнів)',
         'Більше не потрібен час на щоденне укладання',
-        'Дбайливе ставлення до натуральних волосинок — без пошкоджень',
-        'Кератин та доглядові речовини зміцнюють волосинки',
+        'Дбайливо до натуральних волосинок при професійному застосуванні',
+        'Кератин та доглядові речовини доглядають за волосинками',
         'Ідеально комбінується: вії + брови разом',
         'За бажанням з фарбуванням для інтенсивнішого ефекту',
         'Ідеально перед відпусткою, весіллям або особливими подіями',
@@ -225,7 +225,7 @@ const WimpernAugenbrauenLaminierung = () => {
         },
         {
           q: 'Ist Laminierung schädlich für meine natürlichen Härchen?',
-          a: 'Nein, bei professioneller Anwendung ist die Laminierung schonend. Wir verwenden hochwertige Produkte mit Keratin und Pflegestoffen, die Ihre Härchen sogar stärken und pflegen.'
+          a: 'Bei professioneller Anwendung gilt die Laminierung als schonend. Wir verwenden hochwertige Produkte mit Keratin und Pflegestoffen, die Ihre Härchen zusätzlich pflegen.'
         },
         {
           q: 'Kann ich nach der Laminierung schwimmen und Sport treiben?',
@@ -258,7 +258,7 @@ const WimpernAugenbrauenLaminierung = () => {
         },
         {
           q: 'Вредно ли ламинирование для натуральных волосков?',
-          a: 'Нет, при профессиональном применении ламинирование бережное. Мы используем качественные продукты с кератином и ухаживающими веществами, которые даже укрепляют и питают ваши волоски.'
+          a: 'При профессиональном применении ламинирование считается бережной процедурой. Мы используем качественные продукты с кератином и ухаживающими веществами, которые дополнительно ухаживают за вашими волосками.'
         },
         {
           q: 'Можно ли после ламинирования плавать и заниматься спортом?',
@@ -291,7 +291,7 @@ const WimpernAugenbrauenLaminierung = () => {
         },
         {
           q: 'Чи шкідливе ламінування для натуральних волосинок?',
-          a: 'Ні, при професійному застосуванні ламінування дбайливе. Ми використовуємо якісні продукти з кератином та доглядовими речовинами, які навіть зміцнюють та живлять ваші волосинки.'
+          a: 'При професійному застосуванні ламінування вважається дбайливою процедурою. Ми використовуємо якісні продукти з кератином та доглядовими речовинами, які додатково доглядають за вашими волосинками.'
         },
         {
           q: 'Чи можна після ламінування плавати та займатися спортом?',

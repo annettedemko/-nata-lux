@@ -111,10 +111,10 @@ const Training = () => {
           </p>
           <p className="text-lg text-brand-coffee/80 leading-relaxed">
             {language === 'de'
-              ? 'Wir bieten professionelle Schulungen für angehende Beauty-Profis. Individuell oder in Mini-Gruppen, mit Zertifikat und lebenslanger Unterstützung.'
+              ? 'Wir bieten professionelle Schulungen für angehende Beauty-Profis. Individuell oder in Mini-Gruppen, mit Zertifikat und langfristiger Unterstützung.'
               : language === 'ru'
-              ? 'Мы предлагаем профессиональное обучение для начинающих бьюти-мастеров. Индивидуально или в мини-группах, с сертификатом и пожизненной поддержкой.'
-              : 'Ми пропонуємо професійне навчання для початківців б\'юті-майстрів. Індивідуально або в міні-групах, з сертифікатом та довічною підтримкою.'}
+              ? 'Мы предлагаем профессиональное обучение для начинающих бьюти-мастеров. Индивидуально или в мини-группах, с сертификатом и долгосрочной поддержкой.'
+              : 'Ми пропонуємо професійне навчання для початківців б\'юті-майстрів. Індивідуально або в міні-групах, з сертифікатом та довгостроковою підтримкою.'}
           </p>
         </div>
 
@@ -221,7 +221,7 @@ const Training = () => {
                 {language === 'de' ? 'Zertifiziert' : language === 'ru' ? 'Сертификат' : 'Сертифіковано'}
               </h3>
               <p className="text-brand-coffee/70 text-sm">
-                {language === 'de' ? 'Offizielles Zertifikat nach Abschluss' : language === 'ru' ? 'Официальный сертификат по окончании' : 'Офіційний сертифікат після закінчення'}
+                {language === 'de' ? 'Zertifikat von Nata Lux nach Abschluss' : language === 'ru' ? 'Сертификат Nata Lux по окончании' : 'Сертифікат Nata Lux після закінчення'}
               </p>
             </div>
             <div>
@@ -232,7 +232,7 @@ const Training = () => {
                 {language === 'de' ? 'Kleine Gruppen' : language === 'ru' ? 'Малые группы' : 'Малі групи'}
               </h3>
               <p className="text-brand-coffee/70 text-sm">
-                {language === 'de' ? 'Individuelle Betreuung garantiert' : language === 'ru' ? 'Гарантированное индивидуальное внимание' : 'Гарантована індивідуальна увага'}
+                {language === 'de' ? 'Viel Raum für individuelle Betreuung' : language === 'ru' ? 'Много индивидуального внимания' : 'Багато індивідуальної уваги'}
               </p>
             </div>
             <div>
@@ -243,7 +243,7 @@ const Training = () => {
                 {language === 'de' ? 'Support' : language === 'ru' ? 'Поддержка' : 'Підтримка'}
               </h3>
               <p className="text-brand-coffee/70 text-sm">
-                {language === 'de' ? 'Lebenslange Unterstützung nach dem Kurs' : language === 'ru' ? 'Пожизненная поддержка после курса' : 'Довічна підтримка після курсу'}
+                {language === 'de' ? 'Langfristige Unterstützung nach dem Kurs' : language === 'ru' ? 'Долгосрочная поддержка после курса' : 'Довгострокова підтримка після курсу'}
               </p>
             </div>
           </div>

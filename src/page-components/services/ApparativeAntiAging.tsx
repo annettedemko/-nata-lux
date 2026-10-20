@@ -21,9 +21,9 @@ const ApparativeAntiAging = () => {
     {
       title: language === 'de' ? 'Lichttherapie' : language === 'ru' ? 'Световая терапия' : 'Світлова терапія',
       description: language === 'de'
-        ? 'LED und IPL für Anti-Aging und Hautregeneration'
-        : language === 'ru' ? 'LED и IPL для омоложения и регенерации кожи'
-        : 'LED та IPL для омолодження та регенерації шкіри',
+        ? 'LED-Licht für Anti-Aging-Pflege und ein frisches Hautbild'
+        : language === 'ru' ? 'LED-свет для anti-age ухода и свежего вида кожи'
+        : 'LED-світло для anti-age догляду та свіжого вигляду шкіри',
       icon: Sun,
       href: '/services/apparative-anti-aging/lichttherapie',
       image: '/biostrom-behandlung-muenchen.jpeg',
@@ -81,9 +81,9 @@ const ApparativeAntiAging = () => {
           </p>
           <p className="text-lg text-brand-coffee/80 max-w-2xl mx-auto leading-relaxed">
             {language === 'de'
-              ? 'Moderne Geräte-Behandlungen für natürliche Verjüngung ohne Injektionen. Wählen Sie die passende Behandlung für Ihre individuellen Bedürfnisse.'
-              : language === 'ru' ? 'Современные аппаратные процедуры для естественного омоложения без инъекций. Выберите подходящую процедуру для ваших индивидуальных потребностей.'
-              : 'Сучасні апаратні процедури для природного омолодження без ін\'єкцій. Оберіть відповідну процедуру для ваших індивідуальних потреб.'}
+              ? 'Moderne Geräte-Behandlungen für ein natürlich frisches, jugendliches Hautbild ohne Injektionen. Wählen Sie die passende Behandlung für Ihre individuellen Bedürfnisse.'
+              : language === 'ru' ? 'Современные аппаратные процедуры для естественно свежего, молодого вида кожи без инъекций. Выберите подходящую процедуру для ваших индивидуальных потребностей.'
+              : 'Сучасні апаратні процедури для природно свіжого, молодого вигляду шкіри без ін’єкцій. Оберіть відповідну процедуру для ваших індивідуальних потреб.'}
           </p>
         </div>
 
@@ -103,9 +103,9 @@ const ApparativeAntiAging = () => {
           </h2>
           <p className="text-brand-coffee/80 leading-relaxed mb-4">
             {language === 'de'
-              ? 'Apparative Anti-Aging-Behandlungen nutzen modernste Technologien, um die Haut auf natürliche Weise zu verjüngen, zu straffen und zu regenerieren – ganz ohne Nadeln oder Skalpell.'
-              : language === 'ru' ? 'Аппаратные anti-age процедуры используют современные технологии для естественного омоложения, подтяжки и регенерации кожи — без игл и скальпеля.'
-              : 'Апаратні anti-age процедури використовують сучасні технології для природного омолодження, підтяжки та регенерації шкіри — без голок та скальпеля.'}
+              ? 'Apparative Anti-Aging-Behandlungen nutzen moderne Technologien, um die Haut auf natürliche Weise frischer, straffer und jugendlicher wirken zu lassen – ganz ohne Nadeln oder Skalpell.'
+              : language === 'ru' ? 'Аппаратные anti-age процедуры используют современные технологии, чтобы кожа естественным образом выглядела свежее, подтянутее и моложе — без игл и скальпеля.'
+              : 'Апаратні anti-age процедури використовують сучасні технології, щоб шкіра природним чином виглядала свіжішою, підтягнутішою та молодшою — без голок та скальпеля.'}
           </p>
           <p className="text-brand-coffee/80 leading-relaxed">
             {language === 'de'

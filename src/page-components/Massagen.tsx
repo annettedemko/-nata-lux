@@ -18,10 +18,10 @@ const Massagen = () => {
       icon: Waves,
       title: language === 'de' ? 'Lymphdrainage Behandlung' : language === 'ru' ? 'Лимфодренажный аппаратный массаж' : 'Лімфодренажний апаратний масаж',
       description: language === 'de'
-        ? 'Apparative Lymphdrainage München gegen Schwellungen und Wassereinlagerungen. Fördert den Lymphfluss, entgiftet den Körper und reduziert Ödeme. Lymphdrainage gegen Schwellungen — effektiv und schmerzfrei.'
+        ? 'Apparative Lymphdrainage München für ein leichteres Körpergefühl bei Schwellungen und Wassereinlagerungen. Regt den Lymphfluss an und kann zum Wohlbefinden beitragen. Lymphdrainage bei geschwollenem Gewebe — wohltuend und in der Regel schmerzfrei.'
         : language === 'ru'
-        ? 'Аппаратный лимфодренаж против отёков и задержки воды. Стимулирует лимфоток, выводит токсины и уменьшает отёчность. Эффективно и безболезненно.'
-        : 'Апаратний лімфодренаж проти набряків та затримки води. Стимулює лімфотік, виводить токсини та зменшує набряклість. Ефективно та безболісно.',
+        ? 'Аппаратный лимфодренаж для ощущения лёгкости при отёчности и задержке воды. Стимулирует лимфоток и может способствовать хорошему самочувствию. Приятно и безболезненно.'
+        : 'Апаратний лімфодренаж для відчуття легкості при набряклості та затримці води. Стимулює лімфотік і може сприяти гарному самопочуттю. Приємно та безболісно.',
       href: '/services/koerperbehandlungen/rf-vakuum',
       linkText: language === 'de' ? 'Mehr über RF-Vakuum' : language === 'ru' ? 'Подробнее о RF-вакууме' : 'Детальніше про RF-вакуум',
     },
@@ -29,75 +29,75 @@ const Massagen = () => {
       icon: Activity,
       title: language === 'de' ? 'Anti-Cellulite Massage' : language === 'ru' ? 'Антицеллюлитный аппаратный массаж' : 'Антицелюлітний апаратний масаж',
       description: language === 'de'
-        ? 'Cellulite Behandlung München mit RF-Technologie und Vakuum. Gezielte Cellulite Massage zur Reduzierung von Orangenhaut. Cellulite reduzieren — sichtbare Ergebnisse ab der ersten Sitzung möglich.'
+        ? 'Cellulite Behandlung München mit RF-Technologie und Vakuum. Gezielte Cellulite Massage, die das Erscheinungsbild von Orangenhaut mildern kann. Für ein glatteres Hautbild — erste sichtbare Veränderungen können sich bereits nach wenigen Sitzungen zeigen.'
         : language === 'ru'
-        ? 'Целенаправленная процедура против целлюлита с RF-технологией и вакуумом. Уменьшение «апельсиновой корки». Видимые результаты уже после первого сеанса.'
-        : 'Цілеспрямована процедура проти целюліту з RF-технологією та вакуумом. Зменшення «апельсинової кірки». Видимі результати вже після першого сеансу.',
+        ? 'Целенаправленная антицеллюлитная процедура с RF-технологией и вакуумом. Может сделать «апельсиновую корку» менее заметной. Первые видимые изменения возможны уже после нескольких сеансов.'
+        : 'Цілеспрямована антицелюлітна процедура з RF-технологією та вакуумом. Може зробити «апельсинову кірку» менш помітною. Перші видимі зміни можливі вже після кількох сеансів.',
       href: '/services/koerperbehandlungen/rf-vakuum',
       linkText: language === 'de' ? 'Mehr über RF-Vakuum' : language === 'ru' ? 'Подробнее о RF-вакууме' : 'Детальніше про RF-вакуум',
     },
     {
       icon: Zap,
-      title: language === 'de' ? 'Bodyforming Massage' : language === 'ru' ? 'Аппаратный массаж для похудения' : 'Апаратний масаж для схуднення',
+      title: language === 'de' ? 'Bodyforming Massage' : language === 'ru' ? 'Аппаратный массаж для коррекции фигуры' : 'Апаратний масаж для корекції фігури',
       description: language === 'de'
-        ? 'Bodyforming Behandlung München — apparative Massage zur Fettverbrennung und Figurformung. Abnehmen Behandlung mit Kavitation und Vakuum. Reduziert Umfänge an Bauch, Hüften und Oberschenkeln.'
+        ? 'Bodyforming Behandlung München — apparative Massage zur Unterstützung der Figurformung. Body-Contouring mit Kavitation und Vakuum, das helfen kann, die Silhouette an Bauch, Hüften und Oberschenkeln zu modellieren.'
         : language === 'ru'
-        ? 'Аппаратный массаж для жиросжигания и формирования фигуры. Кавитация и вакуум для похудения. Уменьшает объёмы на животе, бёдрах и ногах.'
-        : 'Апаратний масаж для жироспалювання та формування фігури. Кавітація та вакуум для схуднення. Зменшує об\'єми на животі, стегнах та ногах.',
+        ? 'Аппаратный массаж для поддержки моделирования фигуры. Коррекция контуров с помощью кавитации и вакуума, которая может помочь смоделировать силуэт на животе, бёдрах и ногах.'
+        : 'Апаратний масаж для підтримки моделювання фігури. Корекція контурів за допомогою кавітації та вакууму, яка може допомогти змоделювати силует на животі, стегнах та ногах.',
       href: '/services/koerperbehandlungen/kavitation',
       linkText: language === 'de' ? 'Mehr über Kavitation' : language === 'ru' ? 'Подробнее о кавитации' : 'Детальніше про кавітацію',
     },
     {
       icon: Sparkles,
-      title: language === 'de' ? 'Straffende Massage' : language === 'ru' ? 'Аппаратный массаж для омоложения кожи' : 'Апаратний масаж для омолодження шкіри',
+      title: language === 'de' ? 'Straffende Massage' : language === 'ru' ? 'Аппаратный подтягивающий массаж' : 'Апаратний підтягуючий масаж',
       description: language === 'de'
-        ? 'Hautstraffung Behandlung München mit Radiofrequenz. Anti-Aging Massage für den ganzen Körper — kollagen stimulierende Behandlung für straffere, jüngere Haut. Straffende Massage München mit sichtbarem Ergebnis.'
+        ? 'Hautstraffung Behandlung München mit Radiofrequenz. Anti-Aging Massage für den ganzen Körper — Behandlung, die die Kollagenbildung anregen kann, für ein strafferes, frischeres Hautbild. Straffende Massage München mit sichtbarer Wirkung auf das Hautbild.'
         : language === 'ru'
-        ? 'Подтяжка кожи тела с помощью радиочастот. Anti-Aging массаж для всего тела — стимуляция коллагена для упругой, молодой кожи. Видимый результат уже после первых сеансов.'
-        : 'Підтяжка шкіри тіла за допомогою радіочастот. Anti-Aging масаж для всього тіла — стимуляція колагену для пружної, молодої шкіри. Видимий результат вже після перших сеансів.',
+        ? 'Подтяжка кожи тела с помощью радиочастот. Anti-Aging массаж для всего тела — может стимулировать выработку коллагена для более упругой и свежей на вид кожи. Первые видимые изменения возможны уже после нескольких сеансов.'
+        : 'Підтяжка шкіри тіла за допомогою радіочастот. Anti-Aging масаж для всього тіла — може стимулювати вироблення колагену для більш пружної та свіжої на вигляд шкіри. Перші видимі зміни можливі вже після кількох сеансів.',
       href: '/services/koerperbehandlungen/rf-vakuum',
       linkText: language === 'de' ? 'Mehr über RF-Vakuum' : language === 'ru' ? 'Подробнее о RF-вакууме' : 'Детальніше про RF-вакуум',
     },
     {
       icon: TrendingDown,
-      title: language === 'de' ? 'Umfänge reduzieren' : language === 'ru' ? 'Массаж убирает объёмы' : 'Масаж прибирає об\'єми',
+      title: language === 'de' ? 'Silhouette modellieren' : language === 'ru' ? 'Массаж для моделирования силуэта' : 'Масаж для моделювання силуету',
       description: language === 'de'
-        ? 'Figurformung Behandlung München — die apparative Massage reduziert gezielt Körperumfänge. Kombination aus RF-Radiofrequenz Massage, Vakuum Massage und Kavitation für messbare Ergebnisse an Bauch, Taille und Hüften.'
+        ? 'Figurformung Behandlung München — die apparative Massage kann helfen, die Körperkonturen gezielt zu modellieren. Kombination aus RF-Radiofrequenz Massage, Vakuum Massage und Kavitation zur Unterstützung der Figurformung an Bauch, Taille und Hüften.'
         : language === 'ru'
-        ? 'Аппаратный массаж целенаправленно убирает объёмы тела. Комбинация RF-радиочастот, вакуумного массажа и кавитации для измеримых результатов на животе, талии и бёдрах.'
-        : 'Апаратний масаж цілеспрямовано прибирає об\'єми тіла. Комбінація RF-радіочастот, вакуумного масажу та кавітації для вимірюваних результатів на животі, талії та стегнах.',
+        ? 'Аппаратный массаж может помочь целенаправленно смоделировать контуры тела. Комбинация RF-радиочастот, вакуумного массажа и кавитации для поддержки моделирования фигуры на животе, талии и бёдрах.'
+        : 'Апаратний масаж може допомогти цілеспрямовано змоделювати контури тіла. Комбінація RF-радіочастот, вакуумного масажу та кавітації для підтримки моделювання фігури на животі, талії та стегнах.',
       href: '/services/koerperbehandlungen/kavitation',
       linkText: language === 'de' ? 'Mehr über Kavitation' : language === 'ru' ? 'Подробнее о кавитации' : 'Детальніше про кавітацію',
     },
   ];
 
   const benefits = language === 'de' ? [
-    'Lymphdrainage und Entschlackung',
-    'Cellulite-Reduktion',
-    'Umfänge reduzieren',
+    'Lymphdrainage und leichteres Körpergefühl',
+    'Kann das Erscheinungsbild von Cellulite mildern',
+    'Unterstützung der Figurformung',
     'Hautstraffung und Kollagenstimulation',
-    'Fettverbrennung und Bodyforming',
+    'Bodyforming und Konturierung',
     'Verbesserung der Durchblutung',
     'Entspannung und Wohlbefinden',
-    'Sichtbare Ergebnisse ab der ersten Sitzung möglich',
+    'Erste sichtbare Veränderungen nach wenigen Sitzungen möglich',
   ] : language === 'ru' ? [
-    'Лимфодренаж и детоксикация',
-    'Уменьшение целлюлита',
-    'Уменьшение объёмов',
+    'Лимфодренаж и ощущение лёгкости',
+    'Может сделать целлюлит менее заметным',
+    'Поддержка моделирования фигуры',
     'Подтяжка кожи и стимуляция коллагена',
-    'Жиросжигание и бодиформинг',
+    'Бодиформинг и контурирование',
     'Улучшение кровообращения',
     'Расслабление и хорошее самочувствие',
-    'Видимые результаты уже после первого сеанса',
+    'Первые видимые изменения возможны уже после нескольких сеансов',
   ] : [
-    'Лімфодренаж та детоксикація',
-    'Зменшення целюліту',
-    'Зменшення об\'ємів',
+    'Лімфодренаж та відчуття легкості',
+    'Може зробити целюліт менш помітним',
+    'Підтримка моделювання фігури',
     'Підтяжка шкіри та стимуляція колагену',
-    'Жироспалювання та бодіформінг',
+    'Бодіформінг та контурування',
     'Покращення кровообігу',
     'Розслаблення та гарне самопочуття',
-    'Видимі результати вже після першого сеансу',
+    'Перші видимі зміни можливі вже після кількох сеансів',
   ];
 
   return (
@@ -133,14 +133,14 @@ const Massagen = () => {
               {language === 'de' ? 'Apparative Massagen München' : language === 'ru' ? 'Аппаратные массажи в Мюнхене' : 'Апаратні масажі в Мюнхені'}
             </h1>
             <p className="text-xl text-brand-gold font-heading mb-4">
-              {language === 'de' ? 'Lymphdrainage · Anti-Cellulite · Bodyforming · Hautstraffung · Figurformung' : language === 'ru' ? 'Лимфодренаж · Антицеллюлитный · Похудение · Омоложение кожи · Убирает объёмы' : 'Лімфодренаж · Антицелюлітний · Схуднення · Омолодження шкіри · Прибирає об\'єми'}
+              {language === 'de' ? 'Lymphdrainage · Anti-Cellulite · Bodyforming · Hautstraffung · Figurformung' : language === 'ru' ? 'Лимфодренаж · Антицеллюлитный · Бодиформинг · Подтяжка кожи · Моделирование фигуры' : 'Лімфодренаж · Антицелюлітний · Бодіформінг · Підтяжка шкіри · Моделювання фігури'}
             </p>
             <p className="text-lg text-brand-coffee/80 max-w-3xl mx-auto leading-relaxed">
               {language === 'de'
-                ? 'Professionelle apparative Massagen mit RF-Technologie, Vakuum und Infrarot. Effektive Behandlungen für Lymphdrainage, Cellulite-Reduktion, Figurformung und Hautverjüngung.'
+                ? 'Professionelle apparative Massagen mit RF-Technologie, Vakuum und Infrarot. Wohltuende Behandlungen für Lymphdrainage, ein glatteres Hautbild bei Cellulite, Figurformung und ein frischeres Hautbild.'
                 : language === 'ru'
-                ? 'Профессиональные аппаратные массажи с RF-технологией, вакуумом и инфракрасным светом. Эффективные процедуры для лимфодренажа, борьбы с целлюлитом, формирования фигуры и омоложения кожи.'
-                : 'Професійні апаратні масажі з RF-технологією, вакуумом та інфрачервоним світлом. Ефективні процедури для лімфодренажу, боротьби з целюлітом, формування фігури та омолодження шкіри.'}
+                ? 'Профессиональные аппаратные массажи с RF-технологией, вакуумом и инфракрасным светом. Процедуры для лимфодренажа, более гладкой кожи при целлюлите, моделирования фигуры и более свежего вида кожи.'
+                : 'Професійні апаратні масажі з RF-технологією, вакуумом та інфрачервоним світлом. Процедури для лімфодренажу, більш гладкої шкіри при целюліті, моделювання фігури та свіжішого вигляду шкіри.'}
             </p>
           </motion.div>
 
@@ -261,17 +261,17 @@ const Massagen = () => {
             </h2>
             <p className="text-brand-coffee/80 leading-relaxed mb-4">
               {language === 'de'
-                ? 'Unsere apparativen Massagen kombinieren drei Technologien: Radiofrequenz (RF), Vakuum-Massage und Infrarotlicht. Diese Kombination ermöglicht eine tiefe Einwirkung auf das Gewebe — für effektive Lymphdrainage, Fettverbrennung und Hautstraffung.'
+                ? 'Unsere apparativen Massagen kombinieren drei Technologien: Radiofrequenz (RF), Vakuum-Massage und Infrarotlicht. Diese Kombination ermöglicht eine tiefe Einwirkung auf das Gewebe — zur Anregung des Lymphflusses, Unterstützung der Figurformung und für ein strafferes Hautbild.'
                 : language === 'ru'
-                ? 'Наши аппаратные массажи сочетают три технологии: радиочастоты (RF), вакуумный массаж и инфракрасный свет. Эта комбинация обеспечивает глубокое воздействие на ткани — для эффективного лимфодренажа, жиросжигания и подтяжки кожи.'
-                : 'Наші апаратні масажі поєднують три технології: радіочастоти (RF), вакуумний масаж та інфрачервоне світло. Ця комбінація забезпечує глибокий вплив на тканини — для ефективного лімфодренажу, жироспалювання та підтяжки шкіри.'}
+                ? 'Наши аппаратные массажи сочетают три технологии: радиочастоты (RF), вакуумный массаж и инфракрасный свет. Эта комбинация обеспечивает глубокое воздействие на ткани — для стимуляции лимфотока, поддержки моделирования фигуры и более подтянутого вида кожи.'
+                : 'Наші апаратні масажі поєднують три технології: радіочастоти (RF), вакуумний масаж та інфрачервоне світло. Ця комбінація забезпечує глибокий вплив на тканини — для стимуляції лімфотоку, підтримки моделювання фігури та більш підтягнутого вигляду шкіри.'}
             </p>
             <p className="text-brand-coffee/80 leading-relaxed">
               {language === 'de'
-                ? 'Die Behandlung dauert 30 Minuten und ist schmerzfrei. Ein Kurs von 10 Behandlungen wird für optimale Ergebnisse empfohlen.'
+                ? 'Die Behandlung dauert 30 Minuten und ist in der Regel schmerzfrei. Ein Kurs von 10 Behandlungen wird für bestmögliche Ergebnisse empfohlen.'
                 : language === 'ru'
-                ? 'Процедура длится 30 минут и безболезненна. Для оптимальных результатов рекомендуется курс из 10 процедур.'
-                : 'Процедура триває 30 хвилин і безболісна. Для оптимальних результатів рекомендується курс із 10 процедур.'}
+                ? 'Процедура длится 30 минут и, как правило, безболезненна. Для наилучших результатов рекомендуется курс из 10 процедур.'
+                : 'Процедура триває 30 хвилин і, як правило, безболісна. Для найкращих результатів рекомендується курс із 10 процедур.'}
             </p>
           </motion.section>
 
@@ -293,20 +293,20 @@ const Massagen = () => {
                   image: '/apparative-massage-geraet.png',
                   title: language === 'de' ? 'RF-Vakuum Massage' : language === 'ru' ? 'RF-Вакуумный массаж' : 'RF-Вакуумний масаж',
                   desc: language === 'de'
-                    ? 'Radiofrequenz + Vakuum für Lymphdrainage, Anti-Cellulite und Hautstraffung am Körper'
+                    ? 'Radiofrequenz + Vakuum für Lymphdrainage, ein glatteres Hautbild bei Cellulite und Hautstraffung am Körper'
                     : language === 'ru'
-                    ? 'Радиочастоты + вакуум для лимфодренажа, борьбы с целлюлитом и подтяжки кожи тела'
-                    : 'Радіочастоти + вакуум для лімфодренажу, боротьби з целюлітом та підтяжки шкіри тіла',
+                    ? 'Радиочастоты + вакуум для лимфодренажа, более гладкой кожи при целлюлите и подтяжки кожи тела'
+                    : 'Радіочастоти + вакуум для лімфодренажу, більш гладкої шкіри при целюліті та підтяжки шкіри тіла',
                 },
                 {
                   href: '/services/koerperbehandlungen/kavitation',
                   image: '/ultraschall-kavitation-muenchen.jpeg',
                   title: language === 'de' ? 'Kavitation' : language === 'ru' ? 'Кавитация' : 'Кавітація',
                   desc: language === 'de'
-                    ? 'Ultraschall-Kavitation für Fettreduktion und Bodyforming'
+                    ? 'Ultraschall-Kavitation zur Unterstützung von Figurformung und Bodyforming'
                     : language === 'ru'
-                    ? 'Ультразвуковая кавитация для жиросжигания и бодиформинга'
-                    : 'Ультразвукова кавітація для жироспалювання та бодіформінгу',
+                    ? 'Ультразвуковая кавитация для моделирования фигуры и бодиформинга'
+                    : 'Ультразвукова кавітація для моделювання фігури та бодіформінгу',
                 },
               ].map((tech) => (
                 <Link
@@ -369,15 +369,15 @@ const Massagen = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-brand-coffee/70 text-sm leading-relaxed">
                 <div>
                   <h3 className="font-semibold text-brand-espresso text-base mb-2">Lymphdrainage München</h3>
-                  <p>Lymphdrainage Behandlung München — apparative Lymphdrainage gegen Schwellungen, Wassereinlagerungen und Ödeme. Professionelle Lymphdrainage gegen Schwellungen München in unserem Studio in Haidhausen.</p>
+                  <p>Lymphdrainage Behandlung München — apparative Lymphdrainage für ein leichteres Körpergefühl bei Schwellungen und Wassereinlagerungen. Professionelle Lymphdrainage München in unserem Studio in Haidhausen.</p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-brand-espresso text-base mb-2">Anti-Cellulite München</h3>
-                  <p>Anti Cellulite Massage München — effektive Cellulite Behandlung mit RF und Vakuum. Cellulite Massage München für sichtbare Ergebnisse. Cellulite reduzieren Behandlung München.</p>
+                  <p>Anti Cellulite Massage München — Cellulite Behandlung mit RF und Vakuum. Cellulite Massage München für ein sichtbar glatteres Hautbild. Das Erscheinungsbild von Cellulite mildern — Behandlung in München.</p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-brand-espresso text-base mb-2">Bodyforming & Figurformung</h3>
-                  <p>Bodyforming Massage München und Bodyforming Behandlung München. Massage zur Fettverbrennung München, Abnehmen Behandlung München. Figurformung Behandlung München mit modernster Technologie.</p>
+                  <p>Bodyforming Massage München und Bodyforming Behandlung München. Massage zur Unterstützung der Figurformung München, Body-Contouring Behandlung München. Figurformung Behandlung München mit modernster Technologie.</p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-brand-espresso text-base mb-2">Straffende & Anti-Aging Massage</h3>
@@ -400,10 +400,10 @@ const Massagen = () => {
             </h2>
             <p className="text-white/90 mb-6 max-w-2xl mx-auto">
               {language === 'de'
-                ? 'Kostenlose Beratung inklusive. Erleben Sie die Wirkung der apparativen Massage — für eine schlankere Silhouette und straffere Haut.'
+                ? 'Kostenlose Beratung inklusive. Erleben Sie die Wirkung der apparativen Massage — für eine definiertere Silhouette und ein strafferes Hautbild.'
                 : language === 'ru'
-                ? 'Бесплатная консультация включена. Ощутите эффект аппаратного массажа — для стройного силуэта и упругой кожи.'
-                : 'Безкоштовна консультація включена. Відчуйте ефект апаратного масажу — для стрункого силуету та пружної шкіри.'}
+                ? 'Бесплатная консультация включена. Ощутите эффект аппаратного массажа — для более очерченного силуэта и подтянутой на вид кожи.'
+                : 'Безкоштовна консультація включена. Відчуйте ефект апаратного масажу — для більш окресленого силуету та підтягнутої на вигляд шкіри.'}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button

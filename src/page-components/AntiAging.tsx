@@ -157,15 +157,15 @@ const AntiAging = () => {
               <ul className="space-y-3 text-brand-coffee/80">
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>{language === 'de' ? 'RF-Lifting — Straffung ohne OP' : language === 'ru' ? 'RF-лифтинг — подтяжка без операции' : 'RF-лифтинг — подтяжка без операции'}</span>
+                  <span>{language === 'de' ? 'RF-Lifting — straffender Effekt ohne OP' : language === 'ru' ? 'RF-лифтинг — эффект подтяжки без операции' : 'RF-ліфтинг — ефект підтяжки без операції'}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>{language === 'de' ? 'Lichttherapie — Verjüngung und Tonus' : language === 'ru' ? 'Световая терапия — омоложение и тонус' : 'Световая терапия — омоложение и тонус'}</span>
+                  <span>{language === 'de' ? 'Lichttherapie — frischeres Hautbild und Tonus' : language === 'ru' ? 'Световая терапия — более свежий вид кожи и тонус' : 'Світлова терапія — свіжіший вигляд шкіри та тонус'}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>{language === 'de' ? 'Biostrom — Lymphdrainage und Muskelstraffung' : language === 'ru' ? 'Биотоки — лимфодренаж и укрепление мышц' : 'Биотоки — лимфодренаж и укрепление мышц'}</span>
+                  <span>{language === 'de' ? 'Biostrom — lymphdrainierender Effekt und Tonisierung' : language === 'ru' ? 'Биотоки — лимфодренажный эффект и тонизирование' : 'Біострум — лімфодренажний ефект та тонізування'}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
@@ -177,7 +177,7 @@ const AntiAging = () => {
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>{language === 'de' ? 'Microneedling — Hautregeneration' : language === 'ru' ? 'Микронидлинг — регенерация кожи' : 'Микронидлинг — регенерация кожи'}</span>
+                  <span>{language === 'de' ? 'Microneedling — unterstützt die Hauterneuerung' : language === 'ru' ? 'Микронидлинг — поддержка обновления кожи' : 'Мікронідлінг — підтримка оновлення шкіри'}</span>
                 </li>
               </ul>
             </motion.div>
@@ -196,11 +196,11 @@ const AntiAging = () => {
               <ul className="space-y-3 text-brand-coffee/80">
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>{language === 'de' ? 'RF-Vakuum-Lifting — Anti-Cellulite' : language === 'ru' ? 'RF-вакуумный лифтинг — антицеллюлит' : 'RF-вакуумный лифтинг — антицеллюлит'}</span>
+                  <span>{language === 'de' ? 'RF-Vakuum-Lifting — für ein glatteres Hautbild bei Cellulite' : language === 'ru' ? 'RF-вакуумный лифтинг — для более гладкой кожи при целлюлите' : 'RF-вакуумний ліфтинг — для більш гладкої шкіри при целюліті'}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>{language === 'de' ? 'Kavitation — Volumenreduktion' : language === 'ru' ? 'Кавитация — уменьшение объемов' : 'Кавитация — уменьшение объемов'}</span>
+                  <span>{language === 'de' ? 'Kavitation — kann die Körperkonturierung unterstützen' : language === 'ru' ? 'Кавитация — может способствовать коррекции контуров тела' : 'Кавітація — може сприяти корекції контурів тіла'}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
@@ -217,11 +217,7 @@ const AntiAging = () => {
                 <ul className="space-y-2 text-brand-coffee/80">
                   <li className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                    <span>{language === 'de' ? 'Darsonval für Haare' : language === 'ru' ? 'Дарсонваль для волос' : 'Дарсонваль для волос'}</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                    <span>{language === 'de' ? 'Entfernung von Papillomen (mit Dermatologe)' : language === 'ru' ? 'Удаление папиллом (с дерматологом)' : 'Видалення папиллом (с дерматологом)'}</span>
+                    <span>{language === 'de' ? 'Darsonval für Haare' : language === 'ru' ? 'Дарсонваль для волос' : 'Дарсонваль для волосся'}</span>
                   </li>
                 </ul>
               </div>
@@ -241,19 +237,22 @@ const AntiAging = () => {
             </h3>
             <div className="space-y-3 md:space-y-4 text-sm md:text-base text-brand-coffee/80 leading-relaxed">
               <p>
-                {isGerman
-                  ? 'Sichtbare Ergebnisse bereits nach der ersten Behandlung, für stabile Resultate empfehlen wir einen Kurs von 5-10 Sitzungen.'
-                  : 'Видимый эффект заметен уже после первой процедуры, но для стабильного результата рекомендуется курс из 5-10 сеансов.'}
+                {language === 'de'
+                  ? 'Erste sichtbare Veränderungen sind oft schon nach der ersten Behandlung möglich; für ein nachhaltigeres Ergebnis empfehlen wir einen Kurs von 5-10 Sitzungen. Ergebnisse können individuell variieren.'
+                  : language === 'ru' ? 'Первые видимые изменения часто возможны уже после первой процедуры; для более стойкого результата рекомендуется курс из 5-10 сеансов. Результаты индивидуальны.'
+                  : 'Перші видимі зміни часто можливі вже після першої процедури; для стійкішого результату рекомендується курс з 5-10 сеансів. Результати індивідуальні.'}
               </p>
               <p>
-                {isGerman
-                  ? 'Alle Behandlungen sind schmerzfrei und erfordern keine Erholungszeit. Sie können sofort in Ihren Alltag zurückkehren.'
-                  : 'Все процедуры безболезненны и не требуют восстановительного периода. Вы можете сразу вернуться к обычной жизни.'}
+                {language === 'de'
+                  ? 'Die meisten Behandlungen sind schmerzarm und erfordern in der Regel keine oder nur eine kurze Erholungszeit. Meist können Sie direkt in Ihren Alltag zurückkehren.'
+                  : language === 'ru' ? 'Большинство процедур малоболезненны и, как правило, не требуют восстановительного периода или он очень короткий. Обычно вы можете сразу вернуться к привычной жизни.'
+                  : 'Більшість процедур малоболісні та, як правило, не потребують відновлювального періоду або він дуже короткий. Зазвичай ви можете одразу повернутися до звичного життя.'}
               </p>
               <p className="font-semibold text-brand-espresso">
-                {isGerman
-                  ? 'Vor Kursbeginn führen wir eine kostenlose Hautdiagnose durch und erstellen ein optimales Behandlungsprogramm.'
-                  : 'Перед началом курса проводится бесплатная диагностика кожи и подбор оптимальной программы процедур.'}
+                {language === 'de'
+                  ? 'Vor Kursbeginn führen wir eine kostenlose Hautanalyse durch und erstellen ein individuelles Behandlungsprogramm.'
+                  : language === 'ru' ? 'Перед началом курса проводится бесплатный анализ кожи и подбор индивидуальной программы процедур.'
+                  : 'Перед початком курсу проводиться безкоштовний аналіз шкіри та підбір індивідуальної програми процедур.'}
               </p>
             </div>
           </motion.div>
@@ -270,12 +269,13 @@ const AntiAging = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-white mb-4 md:mb-6 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
-              {language === 'de' ? 'Beginnen Sie Ihren Weg zur Jugend' : language === 'ru' ? 'Начните путь к молодости' : 'Начните путь к молодости'}
+              {language === 'de' ? 'Beginnen Sie Ihren Weg zu einem frischeren Hautbild' : language === 'ru' ? 'Начните путь к более свежему виду кожи' : 'Почніть шлях до свіжішого вигляду шкіри'}
             </h2>
             <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-              {isGerman
+              {language === 'de'
                 ? 'Vereinbaren Sie einen Beratungstermin und erhalten Sie ein individuelles Anti-Aging-Programm'
-                : 'Запишитесь на диагностику и получите индивидуальную программу anti-age процедур'}
+                : language === 'ru' ? 'Запишитесь на консультацию и получите индивидуальную программу anti-age процедур'
+                : 'Запишіться на консультацію та отримайте індивідуальну програму anti-age процедур'}
             </p>
             <Link to="/contact">
               <Button

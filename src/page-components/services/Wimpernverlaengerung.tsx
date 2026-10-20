@@ -49,9 +49,9 @@ const Wimpernverlaengerung = () => {
             <div className="w-32 h-0.5 bg-brand-gold mx-auto mb-8"></div>
             <p className="text-xl text-brand-espresso/70 leading-relaxed max-w-3xl mx-auto">
               {language === 'de'
-                ? 'Schöner, ausdrucksstarker Blick ohne Schaden für Ihre natürlichen Wimpern'
-                : language === 'ru' ? 'Красивый, выразительный взгляд без вреда натуральным ресницам'
-                : 'Гарний, виразний погляд без шкоди натуральним віям'}
+                ? 'Schöner, ausdrucksstarker Blick – schonend für Ihre natürlichen Wimpern'
+                : language === 'ru' ? 'Красивый, выразительный взгляд — бережно к натуральным ресницам'
+                : 'Гарний, виразний погляд — дбайливо до натуральних вій'}
             </p>
           </motion.div>
 
@@ -77,7 +77,7 @@ const Wimpernverlaengerung = () => {
                       <strong>Wimpernverlängerung</strong> ist eine professionelle Technik, bei der einzelne Kunstwimpern präzise auf Ihre natürlichen Wimpern aufgetragen werden. Das Ergebnis betont Ihre natürliche Schönheit, verleiht Ihrem Blick mehr Tiefe und Ausdruck – ganz ohne künstlichen Look.
                     </p>
                     <p>
-                      Diese <strong>sichere und schonende Methode</strong> eignet sich für jede Frau, die von volleren, längeren Wimpern träumt. Jede Behandlung wird individuell angepasst – an Ihre Augenform, Ihren Wimperntyp und Ihren persönlichen Stil.
+                      Diese <strong>bewährte und schonende Methode</strong> eignet sich für die meisten Frauen, die von volleren, längeren Wimpern träumt. Jede Behandlung wird individuell angepasst – an Ihre Augenform, Ihren Wimperntyp und Ihren persönlichen Stil.
                     </p>
                     <p>
                       Ob natürlicher Look für den Alltag oder dramatischer Effekt für besondere Anlässe – mit der richtigen Technik und hochwertigen Materialien erreichen wir genau das Ergebnis, das zu Ihnen passt.
@@ -89,7 +89,7 @@ const Wimpernverlaengerung = () => {
                       <strong>Наращивание ресниц</strong> — это профессиональная техника, при которой искусственные ресницы точно наклеиваются на ваши натуральные. Результат подчеркивает вашу естественную красоту, придает взгляду глубину и выразительность — без искусственного вида.
                     </p>
                     <p>
-                      Этот <strong>безопасный и бережный метод</strong> подходит каждой женщине, мечтающей о более густых и длинных ресницах. Каждая процедура подбирается индивидуально — с учетом формы глаз, типа ресниц и вашего личного стиля.
+                      Этот <strong>проверенный и бережный метод</strong> подходит большинству женщин, мечтающей о более густых и длинных ресницах. Каждая процедура подбирается индивидуально — с учетом формы глаз, типа ресниц и вашего личного стиля.
                     </p>
                     <p>
                       Натуральный образ для повседневной жизни или драматичный эффект для особых случаев — с правильной техникой и качественными материалами мы достигнем именно того результата, который вам подходит.
@@ -101,7 +101,7 @@ const Wimpernverlaengerung = () => {
                       <strong>Нарощування вій</strong> — це професійна техніка, при якій штучні вії точно наклеюються на ваші натуральні. Результат підкреслює вашу природну красу, надає погляду глибину та виразність — без штучного вигляду.
                     </p>
                     <p>
-                      Цей <strong>безпечний та дбайливий метод</strong> підходить кожній жінці, яка мріє про густіші та довші вії. Кожна процедура підбирається індивідуально — з урахуванням форми очей, типу вій та вашого особистого стилю.
+                      Цей <strong>перевірений та дбайливий метод</strong> підходить більшості жінок, яка мріє про густіші та довші вії. Кожна процедура підбирається індивідуально — з урахуванням форми очей, типу вій та вашого особистого стилю.
                     </p>
                     <p>
                       Природний образ для повсякденного життя або драматичний ефект для особливих подій — з правильною технікою та якісними матеріалами ми досягнемо саме того результату, який вам підходить.
@@ -150,18 +150,18 @@ const Wimpernverlaengerung = () => {
                     titleDE: 'Schonende Technik',
                     titleRU: 'Бережная техника',
                     titleUA: 'Дбайлива техніка',
-                    textDE: 'Ich arbeite mit professionellen Methoden, die Ihre natürlichen Wimpern schützen und pflegen.',
-                    textRU: 'Я работаю профессиональными методами, которые защищают и ухаживают за вашими натуральными ресницами.',
-                    textUA: 'Я працюю професійними методами, які захищають та доглядають за вашими натуральними віями.'
+                    textDE: 'Ich arbeite mit professionellen Methoden, die Ihre natürlichen Wimpern so weit wie möglich schonen.',
+                    textRU: 'Я работаю профессиональными методами, которые максимально бережны к вашим натуральным ресницам.',
+                    textUA: 'Я працюю професійними методами, які максимально дбайливі до ваших натуральних вій.'
                   },
                   {
                     icon: CheckCircle2,
                     titleDE: 'Gesundheit der Wimpern',
                     titleRU: 'Здоровье ресниц',
                     titleUA: 'Здоров\'я вій',
-                    textDE: 'Oberste Priorität hat die Gesundheit Ihrer natürlichen Wimpern – ohne Schädigung oder Überlastung.',
-                    textRU: 'Главный приоритет — здоровье ваших натуральных ресниц, без повреждений или перегрузки.',
-                    textUA: 'Головний пріоритет — здоров\'я ваших натуральних вій, без пошкоджень або перевантаження.'
+                    textDE: 'Oberste Priorität hat die Gesundheit Ihrer natürlichen Wimpern – ich achte darauf, sie nicht zu schädigen oder zu überlasten.',
+                    textRU: 'Главный приоритет — здоровье ваших натуральных ресниц: я слежу за тем, чтобы не повредить и не перегрузить их.',
+                    textUA: 'Головний пріоритет — здоров\'я ваших натуральних вій: я стежу за тим, щоб не пошкодити та не перевантажити їх.'
                   },
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-4">
@@ -439,7 +439,7 @@ const Wimpernverlaengerung = () => {
                       Mein Ansatz basiert nicht auf Massenproduktion, sondern auf <strong>individueller Beratung, präziser Analyse und schonender Technik</strong>. Ich nehme mir Zeit, Ihre Wünsche zu verstehen, Ihre natürlichen Wimpern zu beurteilen und gemeinsam mit Ihnen das beste Ergebnis zu planen.
                     </p>
                     <p>
-                      Ich verwende ausschließlich <strong>hochwertige, hypoallergene Materialien</strong>, die sanft zu Ihren natürlichen Wimpern sind und langanhaltende, natürliche Ergebnisse garantieren.
+                      Ich verwende ausschließlich <strong>hochwertige, hypoallergene Materialien</strong>, die sanft zu Ihren natürlichen Wimpern sind und zu langanhaltenden, natürlichen Ergebnissen beitragen.
                     </p>
                     <p className="font-semibold text-brand-espresso text-xl italic">
                       Mein Ziel ist nicht nur schöne Wimpern – sondern Ihr Wohlbefinden, Ihre Gesundheit und ein Ergebnis, das Sie jeden Tag lieben werden.
@@ -454,7 +454,7 @@ const Wimpernverlaengerung = () => {
                       Мой подход основан не на массовом производстве, а на <strong>индивидуальной консультации, точном анализе и бережной технике</strong>. Я уделяю время, чтобы понять ваши желания, оценить ваши натуральные ресницы и вместе с вами спланировать лучший результат.
                     </p>
                     <p>
-                      Я использую исключительно <strong>высококачественные, гипоаллергенные материалы</strong>, которые бережно относятся к вашим натуральным ресницам и гарантируют долговечные, естественные результаты.
+                      Я использую исключительно <strong>высококачественные, гипоаллергенные материалы</strong>, которые бережно относятся к вашим натуральным ресницам и способствуют долговечному, естественному результату.
                     </p>
                     <p className="font-semibold text-brand-espresso text-xl italic">
                       Моя цель — не просто красивые ресницы, а ваше благополучие, здоровье и результат, который вы будете любить каждый день.
@@ -469,7 +469,7 @@ const Wimpernverlaengerung = () => {
                       Мій підхід базується не на масовому виробництві, а на <strong>індивідуальній консультації, точному аналізі та дбайливій техніці</strong>. Я приділяю час, щоб зрозуміти ваші бажання, оцінити ваші натуральні вії та разом з вами спланувати найкращий результат.
                     </p>
                     <p>
-                      Я використовую виключно <strong>високоякісні, гіпоалергенні матеріали</strong>, які дбайливо ставляться до ваших натуральних вій та гарантують довготривалі, природні результати.
+                      Я використовую виключно <strong>високоякісні, гіпоалергенні матеріали</strong>, які дбайливо ставляться до ваших натуральних вій та сприяють довготривалому, природному результату.
                     </p>
                     <p className="font-semibold text-brand-espresso text-xl italic">
                       Моя мета — не просто гарні вії, а ваш добробут, здоров&#39;я та результат, який ви будете любити кожен день.
@@ -719,9 +719,9 @@ const Wimpernverlaengerung = () => {
                     titleDE: '✨ Über 10 Jahre Erfahrung',
                     titleRU: '✨ Более 10 лет опыта',
                     titleUA: '✨ Понад 10 років досвіду',
-                    textDE: 'Jahrelange Praxis und kontinuierliche Weiterbildung garantieren höchste Qualität und Sicherheit.',
-                    textRU: 'Многолетняя практика и постоянное обучение гарантируют высочайшее качество и безопасность.',
-                    textUA: 'Багаторічна практика та постійне навчання гарантують найвищу якість та безпеку.'
+                    textDE: 'Jahrelange Praxis und kontinuierliche Weiterbildung stehen für hohe Qualität und sorgfältiges Arbeiten.',
+                    textRU: 'Многолетняя практика и постоянное обучение — основа высокого качества и аккуратной работы.',
+                    textUA: 'Багаторічна практика та постійне навчання — основа високої якості та акуратної роботи.'
                   },
                   {
                     titleDE: '🎯 Individuelle Beratung',
@@ -735,9 +735,9 @@ const Wimpernverlaengerung = () => {
                     titleDE: '💎 Premium-Materialien',
                     titleRU: '💎 Премиум-материалы',
                     titleUA: '💎 Преміум-матеріали',
-                    textDE: 'Ich verwende ausschließlich hochwertige, hypoallergene Produkte von führenden Herstellern.',
-                    textRU: 'Я использую только высококачественные, гипоаллергенные продукты от ведущих производителей.',
-                    textUA: 'Я використовую тільки високоякісні, гіпоалергенні продукти від провідних виробників.'
+                    textDE: 'Ich verwende ausschließlich hochwertige, hypoallergene Produkte renommierter Hersteller.',
+                    textRU: 'Я использую только высококачественные, гипоаллергенные продукты известных производителей.',
+                    textUA: 'Я використовую тільки високоякісні, гіпоалергенні продукти відомих виробників.'
                   },
                   {
                     titleDE: '🌿 Schonende Methoden',

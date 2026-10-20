@@ -60,15 +60,15 @@ const Wimpernkranz = () => {
       aboutDescription={language === 'de' ? [
         'Der Wimpernkranz (auch Lid-Strich oder Eyeliner PMU genannt) ist eine Permanent Make-up Behandlung, bei der Pigmente direkt am Wimpernkranz eingearbeitet werden.',
         'Das Ergebnis ist eine optisch dichtere Wimpernlinie, die Ihre Augen ausdrucksstärker wirken lässt – ganz ohne tägliches Eyeliner auftragen.',
-        'Sie haben die Wahl zwischen einem dezenten Wimpernkranz (nur zwischen den Wimpern) oder einem intensiveren Lid-Strich mit sichtbarer Linie. Perfekt für alle, die sich ein dauerhaft definiertes Auge wünschen.'
+        'Sie haben die Wahl zwischen einem dezenten Wimpernkranz (nur zwischen den Wimpern) oder einem intensiveren Lid-Strich mit sichtbarer Linie. Perfekt für alle, die sich ein langanhaltend definiertes Auge wünschen.'
       ] : language === 'ru' ? [
         'Межресничка (также называемая татуаж века или Eyeliner PMU) – это процедура перманентного макияжа, при которой пигменты вводятся непосредственно в межресничное пространство.',
         'Результат – визуально более густая линия ресниц, которая делает ваши глаза более выразительными – без ежедневного нанесения подводки.',
-        'Вы можете выбрать между деликатной межресничкой (только между ресницами) или более интенсивной стрелкой с видимой линией. Идеально для тех, кто хочет постоянно выразительный взгляд.'
+        'Вы можете выбрать между деликатной межресничкой (только между ресницами) или более интенсивной стрелкой с видимой линией. Идеально для тех, кто хочет надолго выразительный взгляд.'
       ] : [
         'Міжвійка (також називається татуаж повіки або Eyeliner PMU) — це процедура перманентного макіяжу, при якій пігменти вводяться безпосередньо у міжвійковий простір.',
         'Результат — візуально більш густа лінія вій, яка робить ваші очі більш виразними — без щоденного нанесення підводки.',
-        'Ви можете обрати між делікатною міжвійкою (тільки між віями) або більш інтенсивною стрілкою з видимою лінією. Ідеально для тих, хто хоче постійно виразний погляд.'
+        'Ви можете обрати між делікатною міжвійкою (тільки між віями) або більш інтенсивною стрілкою з видимою лінією. Ідеально для тих, хто хоче надовго виразний погляд.'
       ]}
       benefits={language === 'de' ? [
         'Optisch dichtere, vollere Wimpern',
@@ -76,7 +76,7 @@ const Wimpernkranz = () => {
         'Kein tägliches Eyeliner ziehen mehr',
         'Wasserfest und wischfest',
         'Spart Zeit beim Schminken',
-        'Perfekt symmetrische Linie',
+        'Präzise, symmetrisch gezeichnete Linie',
         'Langlebig: 2-4 Jahre haltbar',
         'Individuell anpassbar (dezent bis intensiv)'
       ] : language === 'ru' ? [
@@ -85,7 +85,7 @@ const Wimpernkranz = () => {
         'Больше не нужно рисовать подводку каждый день',
         'Водостойкий и стойкий к смазыванию',
         'Экономит время на макияж',
-        'Идеально симметричная линия',
+        'Аккуратная, симметричная линия',
         'Долговечность: 2-4 года',
         'Индивидуальная настройка (от деликатной до интенсивной)'
       ] : [
@@ -94,7 +94,7 @@ const Wimpernkranz = () => {
         'Більше не потрібно малювати підводку щодня',
         'Водостійкий та стійкий до розмазування',
         'Економить час на макіяж',
-        'Ідеально симетрична лінія',
+        'Акуратна, симетрична лінія',
         'Довговічність: 2-4 роки',
         'Індивідуальне налаштування (від делікатної до інтенсивної)'
       ]}

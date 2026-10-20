@@ -25,7 +25,7 @@ const RFLifting = () => {
     <div className="space-y-6 mb-12">
       <div className="glass rounded-2xl p-8">
         <h2 className="text-2xl font-heading font-semibold text-brand-espresso mb-6">
-          {language === 'de' ? 'Was gibt RF-Lifting Gesicht' : language === 'ru' ? 'Что даёт RF-лифтинг лица' : 'Что даёт RF-лифтинг обличчя'}
+          {language === 'de' ? 'Was gibt RF-Lifting Gesicht' : language === 'ru' ? 'Что даёт RF-лифтинг лица' : 'Що дає RF-ліфтинг обличчя'}
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -36,15 +36,15 @@ const RFLifting = () => {
             <ul className="space-y-2">
               <li className="flex items-start gap-2 text-brand-espresso/80">
                 <span className="text-brand-gold mt-1">✓</span>
-                <span>{language === 'de' ? 'Straffung des Gesichtsovals' : language === 'ru' ? 'Подтяжка овала лица' : 'Подтяжка овала обличчя'}</span>
+                <span>{language === 'de' ? 'Ein strafferes Gesichtsoval' : language === 'ru' ? 'Более подтянутый овал лица' : 'Підтягнутіший овал обличчя'}</span>
               </li>
               <li className="flex items-start gap-2 text-brand-espresso/80">
                 <span className="text-brand-gold mt-1">✓</span>
-                <span>{language === 'de' ? 'Reduzierung des Doppelkinns' : language === 'ru' ? 'Уменьшение второго подбородка' : 'Зменшення другого підборіддя'}</span>
+                <span>{language === 'de' ? 'Das Doppelkinn kann weniger ausgeprägt wirken' : language === 'ru' ? 'Второй подбородок может стать менее выраженным' : 'Друге підборіддя може стати менш вираженим'}</span>
               </li>
               <li className="flex items-start gap-2 text-brand-espresso/80">
                 <span className="text-brand-gold mt-1">✓</span>
-                <span>{language === 'de' ? 'Glättung von Falten und Linien' : language === 'ru' ? 'Разглаживание морщин' : 'Розгладження зморшок'}</span>
+                <span>{language === 'de' ? 'Optisch geglättete Fältchen und Linien' : language === 'ru' ? 'Визуальное разглаживание морщин' : 'Візуальне розгладження зморшок'}</span>
               </li>
               <li className="flex items-start gap-2 text-brand-espresso/80">
                 <span className="text-brand-gold mt-1">✓</span>
@@ -52,7 +52,7 @@ const RFLifting = () => {
               </li>
               <li className="flex items-start gap-2 text-brand-espresso/80">
                 <span className="text-brand-gold mt-1">✓</span>
-                <span>{language === 'de' ? 'Effekt eines erholten Gesichts' : language === 'ru' ? 'Эффект отдохнувшего лица' : 'Эффект отдохнувшего обличчя'}</span>
+                <span>{language === 'de' ? 'Effekt eines erholten Gesichts' : language === 'ru' ? 'Эффект отдохнувшего лица' : 'Ефект відпочилого обличчя'}</span>
               </li>
             </ul>
           </div>
@@ -64,11 +64,11 @@ const RFLifting = () => {
             <ul className="space-y-2">
               <li className="flex items-start gap-2 text-brand-espresso/80">
                 <span className="text-brand-gold">→</span>
-                <span>{language === 'de' ? 'Sichtbarer Effekt nach 1 Behandlung' : language === 'ru' ? 'Видимый эффект после 1 процедуры' : 'Видимий ефект після 1 процедури'}</span>
+                <span>{language === 'de' ? 'Oft schon nach der 1. Behandlung sichtbar' : language === 'ru' ? 'Эффект часто заметен уже после 1 процедуры' : 'Ефект часто помітний уже після 1 процедури'}</span>
               </li>
               <li className="flex items-start gap-2 text-brand-espresso/80">
                 <span className="text-brand-gold">→</span>
-                <span>{language === 'de' ? 'Ohne Schmerzen und Injektionen' : language === 'ru' ? 'Без боли и инъекций' : 'Без болю та ін\'єкцій'}</span>
+                <span>{language === 'de' ? 'Angenehm und ohne Injektionen' : language === 'ru' ? 'Комфортно и без инъекций' : 'Комфортно та без ін’єкцій'}</span>
               </li>
               <li className="flex items-start gap-2 text-brand-espresso/80">
                 <span className="text-brand-gold">→</span>
@@ -159,27 +159,27 @@ const RFLifting = () => {
   return (
     <ServicePageLayout
       icon={Zap}
-      title={language === 'de' ? "RF-Lifting Gesicht in München — Hautverjüngung und Straffung ohne Operation" : language === 'ru' ? "RF-лифтинг лица в Мюнхене — омоложение и подтяжка без операции" : "RF-ліфтинг обличчя у Мюнхені — омолодження та підтяжка без операції"}
-      subtitle={language === 'de' ? "Radiofrequenztherapie für natürliches Gesichts-Lifting in München-Haidhausen" : language === 'ru' ? "Радиочастотная терапия для натурального лифтинга лица в Мюнхене-Хайдхаузен" : "Радіочастотна терапія для натурального ліфтингу обличчя у Мюнхені-Хайдхаузен"}
+      title={language === 'de' ? "RF-Lifting Gesicht in München — Straffere, frischere Haut ohne Operation" : language === 'ru' ? "RF-лифтинг лица в Мюнхене — более подтянутая и свежая кожа без операции" : "RF-ліфтинг обличчя у Мюнхені — підтягнутіша та свіжіша шкіра без операції"}
+      subtitle={language === 'de' ? "Radiofrequenz-Behandlung für einen natürlichen Lifting-Effekt im Gesicht in München-Haidhausen" : language === 'ru' ? "Радиочастотная процедура для натурального лифтинг-эффекта лица в Мюнхене-Хайдхаузен" : "Радіочастотна процедура для натурального ліфтинг-ефекту обличчя у Мюнхені-Хайдхаузен"}
       aboutTitle={language === 'de' ? "Was ist RF-Lifting (Radiofrequenz-Lifting)?" : language === 'ru' ? "Что такое RF-лифтинг" : "Що таке RF-ліфтинг"}
       aboutDescription={[
         language === 'de'
-          ? 'RF-Lifting Gesicht ist eine nicht-invasive Anti-Aging-Behandlung mit Radiofrequenz-Technologie. Die Radiowellen erwärmen die tieferen Hautschichten kontrolliert auf 40–45°C, wodurch Kollagen- und Elastinfasern sofort gestrafft werden und die Neubildung angeregt wird.'
-          : language === 'ru' ? 'RF-лифтинг лица — это неинвазивная anti-age процедура с использованием радиочастотной технологии. Радиоволны контролируемо прогревают глубокие слои кожи до 40–45°C, что мгновенно подтягивает коллагеновые и эластиновые волокна и стимулирует их обновление.'
-          : 'RF-ліфтинг обличчя — це неінвазивна anti-age процедура з використанням радіочастотної технології. Радіохвилі контрольовано прогрівають глибокі шари шкіри до 40–45°C, що миттєво підтягує колагенові та еластинові волокна і стимулює їх оновлення.',
+          ? 'RF-Lifting Gesicht ist eine nicht-invasive Anti-Aging-Behandlung mit Radiofrequenz-Technologie. Die Radiowellen erwärmen die tieferen Hautschichten kontrolliert auf 40–45°C, wodurch sich Kollagenfasern zusammenziehen und die hauteigene Kollagenbildung angeregt werden kann.'
+          : language === 'ru' ? 'RF-лифтинг лица — это неинвазивная anti-age процедура с использованием радиочастотной технологии. Радиоволны контролируемо прогревают глубокие слои кожи до 40–45°C, благодаря чему коллагеновые волокна могут сокращаться, а естественная выработка коллагена — стимулироваться.'
+          : 'RF-ліфтинг обличчя — це неінвазивна anti-age процедура з використанням радіочастотної технології. Радіохвилі контрольовано прогрівають глибокі шари шкіри до 40–45°C, завдяки чому колагенові волокна можуть скорочуватися, а природне вироблення колагену — стимулюватися.',
 
         language === 'de'
-          ? 'Anders als Botox oder Filler arbeitet RF-Lifting von innen — ohne Nadeln, ohne Ausfallzeiten, völlig schmerzfrei. Ideal für Gesicht, Hals und Dekolleté.'
-          : language === 'ru' ? 'В отличие от ботокса или филлеров, RF-лифтинг работает изнутри — без игл, без реабилитации, абсолютно безболезненно. Идеально для лица, шеи и декольте.'
-          : 'На відміну від ботоксу або філерів, RF-ліфтинг працює зсередини — без голок, без реабілітації, абсолютно безболісно. Ідеально для обличчя, шиї та декольте.'
+          ? 'Anders als Botox oder Filler kommt RF-Lifting ganz ohne Nadeln aus — ohne Ausfallzeiten und mit angenehmem Wärmegefühl. Ideal für Gesicht, Hals und Dekolleté.'
+          : language === 'ru' ? 'В отличие от ботокса или филлеров, RF-лифтинг обходится без игл — без реабилитации и с приятным ощущением тепла. Идеально для лица, шеи и декольте.'
+          : 'На відміну від ботоксу або філерів, RF-ліфтинг обходиться без голок — без реабілітації та з приємним відчуттям тепла. Ідеально для обличчя, шиї та декольте.'
       ]}
       benefits={[
-        language === 'de' ? 'Sofortige Straffung nach der ersten Behandlung' : language === 'ru' ? 'Моментальная подтяжка после первой процедуры' : 'Миттєва підтяжка після першої процедури',
-        language === 'de' ? 'Kollagen-Neubildung für langfristige Verjüngung' : language === 'ru' ? 'Стимуляция коллагена для долгосрочного омоложения' : 'Стимуляція колагену для довготривалого омолодження',
+        language === 'de' ? 'Spürbarer Straffungseffekt oft schon nach der ersten Behandlung' : language === 'ru' ? 'Ощутимый эффект подтяжки часто уже после первой процедуры' : 'Відчутний ефект підтяжки часто вже після першої процедури',
+        language === 'de' ? 'Kann die Kollagenbildung anregen – für ein länger anhaltend frisches Hautbild' : language === 'ru' ? 'Может стимулировать выработку коллагена — для более продолжительного эффекта свежей кожи' : 'Може стимулювати вироблення колагену — для тривалішого ефекту свіжої шкіри',
         language === 'de' ? 'Ohne Injektionen, ohne OP, ohne Ausfallzeiten' : language === 'ru' ? 'Без инъекций, без операции, без реабилитации' : 'Без ін\'єкцій, без операції, без реабілітації',
-        language === 'de' ? 'Straffung Gesichtsoval, Doppelkinn, Falten' : language === 'ru' ? 'Подтяжка овала, второго подбородка, морщин' : 'Підтяжка овалу, другого підборіддя, зморшок',
-        language === 'de' ? 'Schmerzfrei — nur angenehme Wärme' : language === 'ru' ? 'Безболезненно — только приятное тепло' : 'Безболісно — лише приємне тепло',
-        language === 'de' ? 'Für alle Hauttypen ab 25 Jahren' : language === 'ru' ? 'Для всех типов кожи от 25 лет' : 'Для всіх типів шкіри від 25 років'
+        language === 'de' ? 'Für ein strafferes Gesichtsoval, eine definiertere Kinnpartie und glattere Haut' : language === 'ru' ? 'Для более подтянутого овала, чёткой линии подбородка и более гладкой кожи' : 'Для підтягнутішого овалу, чіткої лінії підборіддя та гладшої шкіри',
+        language === 'de' ? 'Angenehm — nur ein wohliges Wärmegefühl' : language === 'ru' ? 'Комфортно — лишь приятное тепло' : 'Комфортно — лише приємне тепло',
+        language === 'de' ? 'Für viele Hauttypen ab 25 Jahren' : language === 'ru' ? 'Для многих типов кожи от 25 лет' : 'Для багатьох типів шкіри від 25 років'
       ]}
       steps={[
         {
@@ -231,16 +231,16 @@ const RFLifting = () => {
         {
           q: language === 'de' ? 'Wie viele Behandlungen brauche ich?' : language === 'ru' ? 'Сколько процедур нужно?' : 'Скільки процедур потрібно?',
           a: language === 'de'
-            ? '8–12 Behandlungen, 1–2× pro Woche. Erste Straffung sofort sichtbar, voller Effekt nach 2–3 Monaten. Ergebnis hält 6–12 Monate. Erhaltung: 1× monatlich.'
-            : language === 'ru' ? '8–12 процедур, 1–2× в неделю. Первая подтяжка видна сразу, полный эффект через 2–3 месяца. Результат держится 6–12 месяцев. Поддержание: 1× в месяц.'
-            : '8–12 процедур, 1–2× на тиждень. Перша підтяжка видна одразу, повний ефект через 2–3 місяці. Результат тримається 6–12 місяців. Підтримка: 1× на місяць.'
+            ? '8–12 Behandlungen, 1–2× pro Woche. Ein erster Straffungseffekt ist oft sofort sichtbar, das volle Ergebnis meist nach 2–3 Monaten. Das Ergebnis hält erfahrungsgemäß mehrere Monate an und ist individuell verschieden. Erhaltung: 1× monatlich.'
+            : language === 'ru' ? '8–12 процедур, 1–2× в неделю. Первый эффект подтяжки часто виден сразу, полный результат — обычно через 2–3 месяца. Результат, как правило, сохраняется несколько месяцев и индивидуален. Поддержание: 1× в месяц.'
+            : '8–12 процедур, 1–2× на тиждень. Перший ефект підтяжки часто видно одразу, повний результат — зазвичай через 2–3 місяці. Результат, як правило, зберігається кілька місяців та є індивідуальним. Підтримка: 1× на місяць.'
         },
         {
           q: language === 'de' ? 'Ist RF-Lifting schmerzhaft?' : language === 'ru' ? 'Это болезненно?' : 'Це болісно?',
           a: language === 'de'
-            ? 'Nein, völlig schmerzfrei. Sie spüren nur angenehme Wärme — viele Kunden entspannen sich so sehr, dass sie einschlafen.'
-            : language === 'ru' ? 'Нет, абсолютно безболезненно. Вы чувствуете только приятное тепло — многие клиенты расслабляются так, что засыпают.'
-            : 'Ні, абсолютно безболісно. Ви відчуваєте лише приємне тепло — багато клієнтів розслабляються так, що засинають.'
+            ? 'Nein, die Behandlung ist sehr angenehm. Sie spüren nur eine wohlige Wärme — viele Kunden entspannen sich so sehr, dass sie einschlafen.'
+            : language === 'ru' ? 'Нет, процедура очень комфортна. Вы чувствуете только приятное тепло — многие клиенты расслабляются так, что засыпают.'
+            : 'Ні, процедура дуже комфортна. Ви відчуваєте лише приємне тепло — багато клієнтів розслабляються так, що засинають.'
         },
         {
           q: language === 'de' ? 'Gibt es Ausfallzeiten?' : language === 'ru' ? 'Нужна реабилитация?' : 'Потрібна реабілітація?',
@@ -252,16 +252,16 @@ const RFLifting = () => {
         {
           q: language === 'de' ? 'Für wen ist RF-Lifting geeignet?' : language === 'ru' ? 'Для кого подходит?' : 'Для кого підходить?',
           a: language === 'de'
-            ? 'Für alle Hauttypen ab 25 Jahren. Ideal bei Doppelkinn, erschlafften Wangen, Falten, müder Haut. Für Frauen und Männer.'
-            : language === 'ru' ? 'Для всех типов кожи от 25 лет. Идеально при втором подбородке, обвисших щеках, морщинах, усталой коже. Для женщин и мужчин.'
-            : 'Для всіх типів шкіри від 25 років. Ідеально при другому підборідді, обвислих щоках, зморшках, втомленій шкірі. Для жінок та чоловіків.'
+            ? 'Für viele Hauttypen ab 25 Jahren. Ideal bei nachlassender Spannkraft, weicher Kinnpartie, Fältchen und müde wirkender Haut. Für Frauen und Männer.'
+            : language === 'ru' ? 'Для многих типов кожи от 25 лет. Идеально при снижении упругости, нечётком контуре подбородка, мелких морщинах и усталом виде кожи. Для женщин и мужчин.'
+            : 'Для багатьох типів шкіри від 25 років. Ідеально при зниженні пружності, нечіткому контурі підборіддя, дрібних зморшках та втомленому вигляді шкіри. Для жінок та чоловіків.'
         },
       ]}
       ctaTitle={language === 'de' ? "Bereit für natürliches Gesichts-Lifting in München?" : language === 'ru' ? "Готовы к натуральному лифтингу лица в Мюнхене?" : "Готові до натурального ліфтингу обличчя у Мюнхені?"}
       ctaDescription={language === 'de'
-        ? "Buchen Sie jetzt Ihre RF-Lifting Gesicht Behandlung in München-Haidhausen — straffe, jugendliche Haut ohne Operation und ohne Schmerzen. Kostenlose Beratung inklusive!"
-        : language === 'ru' ? "Запишитесь на RF-лифтинг лица в Мюнхене-Хайдхаузен — упругая, молодая кожа без операции и без боли. Бесплатная консультация включена!"
-        : "Запишіться на RF-ліфтинг обличчя у Мюнхені-Хайдхаузен — пружна, молода шкіра без операції та без болю. Безкоштовна консультація включена!"
+        ? "Buchen Sie jetzt Ihre RF-Lifting Gesicht Behandlung in München-Haidhausen — für ein strafferes, frisches Hautbild ohne Operation und mit angenehmem Wärmegefühl. Kostenlose Beratung inklusive!"
+        : language === 'ru' ? "Запишитесь на RF-лифтинг лица в Мюнхене-Хайдхаузен — для более упругой, свежей кожи без операции и с приятным ощущением тепла. Бесплатная консультация включена!"
+        : "Запишіться на RF-ліфтинг обличчя у Мюнхені-Хайдхаузен — для пружнішої, свіжої шкіри без операції та з приємним відчуттям тепла. Безкоштовна консультація включена!"
       }
     />
   );

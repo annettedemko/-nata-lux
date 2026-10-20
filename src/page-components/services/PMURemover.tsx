@@ -52,50 +52,50 @@ const PMURemover = () => {
       icon={Shield}
       title={language === 'de' ? "PMU Remover" : language === 'ru' ? "Удаление ПМ" : "Видалення ПМ"}
       subtitle={language === 'de'
-        ? "Sichere Entfernung von Permanent Make-up – Professionell und schonend"
+        ? "Aufhellung und Entfernung von Permanent Make-up – Professionell und schonend"
         : language === 'ru'
-        ? "Безопасное удаление перманентного макияжа – Профессионально и щадяще"
-        : "Безпечне видалення перманентного макіяжу – Професійно та щадно"}
+        ? "Осветление и удаление перманентного макияжа – Профессионально и щадяще"
+        : "Освітлення та видалення перманентного макіяжу – Професійно та щадно"}
       aboutTitle={language === 'de' ? "Was ist PMU Remover?" : language === 'ru' ? "Что такое PMU Remover?" : "Що таке PMU Remover?"}
       aboutDescription={language === 'de' ? [
-        'PMU Remover ist eine professionelle Methode zur Entfernung von unerwünschtem oder veraltetem Permanent Make-up. Anders als Laserbehandlungen arbeitet der Remover mit speziellen Lösungen, die die Pigmente schonend aus der Haut lösen.',
-        'Diese Methode ist besonders effektiv bei Fremdarbeiten, verblassten Farben oder wenn Sie einfach einen Neuanfang wünschen. Der Remover kann für Augenbrauen, Lippen und Eyeliner eingesetzt werden.',
-        'Die Behandlung erfolgt in 2 Schritten: erst im Salon, dann mit Heimpflege für optimale Ergebnisse. Je nach Pigmentierung sind 1-3 Sitzungen nötig.'
+        'PMU Remover ist eine professionelle Methode zur Entfernung von unerwünschtem oder veraltetem Permanent Make-up. Anders als Laserbehandlungen arbeitet der Remover mit speziellen Lösungen, die die Pigmente schonend und schrittweise aus der Haut lösen können.',
+        'Diese Methode eignet sich besonders bei Fremdarbeiten, verblassten Farben oder wenn Sie einfach einen Neuanfang wünschen. Der Remover kann für Augenbrauen, Lippen und Eyeliner eingesetzt werden.',
+        'Die Behandlung erfolgt in 2 Schritten: erst im Salon, dann mit Heimpflege. Die Anzahl der Sitzungen ist individuell – je nach Pigmentierung in der Regel 1-3.'
       ] : language === 'ru' ? [
-        'PMU Remover — это профессиональный метод удаления нежелательного или устаревшего перманентного макияжа. В отличие от лазерных процедур, ремувер работает со специальными растворами, которые мягко выводят пигменты из кожи.',
-        'Этот метод особенно эффективен при неудачных работах, выцветших цветах или когда вы просто хотите начать заново. Ремувер можно использовать для бровей, губ и стрелок.',
-        'Процедура проходит в 2 этапа: сначала в салоне, затем домашний уход для оптимальных результатов. В зависимости от пигментации требуется 1-3 сеанса.'
+        'PMU Remover — это профессиональный метод удаления нежелательного или устаревшего перманентного макияжа. В отличие от лазерных процедур, ремувер работает со специальными растворами, которые могут мягко и постепенно выводить пигменты из кожи.',
+        'Этот метод особенно подходит при неудачных работах, выцветших цветах или когда вы просто хотите начать заново. Ремувер можно использовать для бровей, губ и стрелок.',
+        'Процедура проходит в 2 этапа: сначала в салоне, затем домашний уход. Количество сеансов индивидуально — в зависимости от пигментации обычно 1-3.'
       ] : [
-        'PMU Remover — це професійний метод видалення небажаного або застарілого перманентного макіяжу. На відміну від лазерних процедур, ремувер працює зі спеціальними розчинами, які м\'яко виводять пігменти зі шкіри.',
-        'Цей метод особливо ефективний при невдалих роботах, вицвілих кольорах або коли ви просто хочете почати заново. Ремувер можна використовувати для брів, губ та стрілок.',
-        'Процедура проходить у 2 етапи: спочатку в салоні, потім домашній догляд для оптимальних результатів. Залежно від пігментації потрібно 1-3 сеанси.'
+        'PMU Remover — це професійний метод видалення небажаного або застарілого перманентного макіяжу. На відміну від лазерних процедур, ремувер працює зі спеціальними розчинами, які можуть м\'яко та поступово виводити пігменти зі шкіри.',
+        'Цей метод особливо підходить при невдалих роботах, вицвілих кольорах або коли ви просто хочете почати заново. Ремувер можна використовувати для брів, губ та стрілок.',
+        'Процедура проходить у 2 етапи: спочатку в салоні, потім домашній догляд. Кількість сеансів індивідуальна — залежно від пігментації зазвичай 1-3.'
       ]}
       benefits={language === 'de' ? [
-        'Schonender als Laserbehandlung',
-        'Funktioniert bei allen Farben (auch bei hellen Pigmenten)',
-        'Keine Narbenbildung',
-        'Präzise Entfernung möglich',
+        'In vielen Fällen schonender als Laserbehandlung',
+        'Für verschiedene Farben geeignet (auch für helle Pigmente)',
+        'Geringes Narbenrisiko bei fachgerechter Anwendung',
+        'Präzise, punktuelle Behandlung möglich',
         'Kombinierbar mit Nachkorrektur',
-        '2-Stufen-Verfahren für beste Ergebnisse',
-        'Auch für empfindliche Haut geeignet',
+        'Durchdachtes 2-Stufen-Verfahren',
+        'Nach Absprache auch bei empfindlicher Haut möglich',
         'Professionelle Betreuung während des gesamten Prozesses'
       ] : language === 'ru' ? [
-        'Более щадящий, чем лазерная процедура',
-        'Работает со всеми цветами (включая светлые пигменты)',
-        'Без образования рубцов',
-        'Возможно точечное удаление',
+        'Во многих случаях более щадящий, чем лазерная процедура',
+        'Подходит для разных цветов (включая светлые пигменты)',
+        'Низкий риск рубцов при профессиональном применении',
+        'Возможна точечная обработка',
         'Совместим с последующей коррекцией',
-        '2-этапная процедура для лучших результатов',
-        'Подходит для чувствительной кожи',
+        'Продуманная 2-этапная процедура',
+        'После консультации возможно и при чувствительной коже',
         'Профессиональное сопровождение на протяжении всего процесса'
       ] : [
-        'Більш щадний, ніж лазерна процедура',
-        'Працює з усіма кольорами (включаючи світлі пігменти)',
-        'Без утворення рубців',
-        'Можливе точкове видалення',
+        'У багатьох випадках більш щадний, ніж лазерна процедура',
+        'Підходить для різних кольорів (включаючи світлі пігменти)',
+        'Низький ризик рубців при професійному застосуванні',
+        'Можлива точкова обробка',
         'Сумісний з подальшою корекцією',
-        '2-етапна процедура для кращих результатів',
-        'Підходить для чутливої шкіри',
+        'Продумана 2-етапна процедура',
+        'Після консультації можливо і при чутливій шкірі',
         'Професійний супровід протягом усього процесу'
       ]}
       steps={language === 'de' ? [
@@ -193,8 +193,8 @@ const PMURemover = () => {
           a: 'Ja, nach vollständiger Abheilung (ca. 8-12 Wochen nach der letzten Sitzung) kann neues PMU aufgetragen werden.'
         },
         {
-          q: 'Warum ist Remover besser als Laser?',
-          a: 'Der Remover funktioniert bei allen Farben (auch Rot, Orange, Weiß), während Laser nur dunkle Pigmente entfernt. Zudem ist er schonender zur Haut.'
+          q: 'Worin unterscheidet sich der Remover vom Laser?',
+          a: 'Der Remover kann bei allen Farben eingesetzt werden (auch Rot, Orange, Weiß), während Laser vor allem bei dunklen Pigmenten wirkt. Zudem gilt er als hautschonender. Das individuelle Ergebnis hängt von Pigment und Haut ab.'
         }
       ] : language === 'ru' ? [
         {
@@ -210,8 +210,8 @@ const PMURemover = () => {
           a: 'Да, после полного заживления (примерно 8-12 недель после последнего сеанса) можно нанести новый перманентный макияж.'
         },
         {
-          q: 'Почему ремувер лучше лазера?',
-          a: 'Ремувер работает со всеми цветами (включая красный, оранжевый, белый), тогда как лазер удаляет только тёмные пигменты. К тому же он более щадящий для кожи.'
+          q: 'Чем ремувер отличается от лазера?',
+          a: 'Ремувер можно применять при любых цветах (включая красный, оранжевый, белый), тогда как лазер действует в основном на тёмные пигменты. Кроме того, он считается более щадящим для кожи. Индивидуальный результат зависит от пигмента и кожи.'
         }
       ] : [
         {
@@ -227,8 +227,8 @@ const PMURemover = () => {
           a: 'Так, після повного загоєння (приблизно 8-12 тижнів після останнього сеансу) можна нанести новий перманентний макіяж.'
         },
         {
-          q: 'Чому ремувер кращий за лазер?',
-          a: 'Ремувер працює з усіма кольорами (включаючи червоний, оранжевий, білий), тоді як лазер видаляє лише темні пігменти. До того ж він більш щадний для шкіри.'
+          q: 'Чим ремувер відрізняється від лазера?',
+          a: 'Ремувер можна застосовувати за будь-яких кольорів (включаючи червоний, оранжевий, білий), тоді як лазер діє переважно на темні пігменти. Крім того, він вважається більш щадним для шкіри. Індивідуальний результат залежить від пігменту та шкіри.'
         }
       ]}
       ctaTitle={language === 'de' ? "Bereit für einen Neuanfang?" : language === 'ru' ? "Готовы к новому началу?" : "Готові до нового початку?"}

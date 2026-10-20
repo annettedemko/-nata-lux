@@ -52,48 +52,48 @@ const PowderBrows = () => {
       icon={Palette}
       title={language === 'de' ? "Powder Brows" : language === 'ru' ? "Пудровые брови" : "Пудрові брови"}
       subtitle={language === 'de'
-        ? "Pudertechnik für natürliche, perfekt definierte Augenbrauen"
+        ? "Pudertechnik für natürliche, klar definierte Augenbrauen"
         : language === 'ru'
-        ? "Пудровая техника для естественных, идеально очерченных бровей"
-        : "Пудрова техніка для природних, ідеально окреслених брів"}
+        ? "Пудровая техника для естественных, чётко очерченных бровей"
+        : "Пудрова техніка для природних, чітко окреслених брів"}
       aboutTitle={language === 'de' ? "Was sind Powder Brows?" : language === 'ru' ? "Что такое Powder Brows?" : "Що таке Powder Brows?"}
       aboutDescription={language === 'de' ? [
         'Powder Brows sind eine moderne Permanent Make-up Technik, die Ihren Augenbrauen einen soften, pudrigen Look verleiht – ähnlich wie mit Augenbrauenpuder geschminkt.',
         'Anders als bei der Microblading-Technik werden hier keine Härchen nachgezeichnet, sondern die Farbe wird in feinen Punkten eingebracht. Das Ergebnis ist ein natürlicher, weicher Verlauf mit mehr Intensität im hinteren Bereich der Braue.',
-        'Powder Brows sind besonders langlebig und halten 1-3 Jahre. Sie eignen sich perfekt für alle Hauttypen, auch für ölige Haut.'
+        'Powder Brows sind besonders langlebig und halten in der Regel 1-3 Jahre. Sie eignen sich für nahezu alle Hauttypen, auch für ölige Haut.'
       ] : language === 'ru' ? [
         'Powder Brows — это современная техника перманентного макияжа, которая придаёт бровям мягкий, пудровый вид — как будто подкрашенные тенями для бровей.',
         'В отличие от микроблейдинга, здесь не прорисовываются отдельные волоски, а цвет наносится мелкими точками. Результат — естественный, мягкий переход с большей интенсивностью в задней части брови.',
-        'Powder Brows особенно долговечны и держатся 1-3 года. Они идеально подходят для всех типов кожи, в том числе для жирной.'
+        'Powder Brows особенно долговечны и держатся, как правило, 1-3 года. Они подходят практически для всех типов кожи, в том числе для жирной.'
       ] : [
         'Powder Brows — це сучасна техніка перманентного макіяжу, яка надає бровам м\'який, пудровий вигляд — ніби підфарбовані тінями для брів.',
         'На відміну від мікроблейдингу, тут не промальовуються окремі волоски, а колір наноситься дрібними крапками. Результат — природний, м\'який перехід з більшою інтенсивністю у задній частині брови.',
-        'Powder Brows особливо довговічні та тримаються 1-3 роки. Вони ідеально підходять для всіх типів шкіри, у тому числі для жирної.'
+        'Powder Brows особливо довговічні та тримаються, як правило, 1-3 роки. Вони підходять практично для всіх типів шкіри, у тому числі для жирної.'
       ]}
       benefits={language === 'de' ? [
         'Natürlicher, weicher Puder-Effekt',
         'Langlebig: 1-3 Jahre haltbar',
-        'Für alle Hauttypen geeignet (auch ölige Haut)',
+        'Für nahezu alle Hauttypen geeignet (auch ölige Haut)',
         'Wasserfest und wischfest',
         'Kein tägliches Nachschminken nötig',
         'Individuell angepasste Form und Farbe',
-        'Schonender als Microblading'
+        'In der Regel schonender als Microblading'
       ] : language === 'ru' ? [
         'Естественный, мягкий пудровый эффект',
         'Долговечность: 1-3 года',
-        'Подходит для всех типов кожи (включая жирную)',
+        'Подходит практически для всех типов кожи (включая жирную)',
         'Водостойкость и устойчивость к смазыванию',
         'Не нужно ежедневно подкрашивать',
         'Индивидуально подобранная форма и цвет',
-        'Более щадящий метод, чем микроблейдинг'
+        'Как правило, более щадящий метод, чем микроблейдинг'
       ] : [
         'Природний, м\'який пудровий ефект',
         'Довговічність: 1-3 роки',
-        'Підходить для всіх типів шкіри (включаючи жирну)',
+        'Підходить практично для всіх типів шкіри (включаючи жирну)',
         'Водостійкість та стійкість до розмазування',
         'Не потрібно щодня підфарбовувати',
         'Індивідуально підібрана форма та колір',
-        'Більш щадний метод, ніж мікроблейдинг'
+        'Як правило, більш щадний метод, ніж мікроблейдинг'
       ]}
       steps={language === 'de' ? [
         {
@@ -183,7 +183,7 @@ const PowderBrows = () => {
         },
         {
           q: 'Ist die Behandlung schmerzhaft?',
-          a: 'Die Behandlung ist mit einer betäubenden Creme nahezu schmerzfrei. Die meisten Kunden empfinden nur ein leichtes Kratzen.'
+          a: 'Die Behandlung ist mit einer betäubenden Creme in der Regel gut erträglich. Die meisten Kunden empfinden nur ein leichtes Kratzen.'
         },
         {
           q: 'Wie lange dauert die Heilung?',
@@ -200,7 +200,7 @@ const PowderBrows = () => {
         },
         {
           q: 'Болезненна ли процедура?',
-          a: 'Процедура почти безболезненна благодаря анестезирующему крему. Большинство клиентов ощущают лишь лёгкое покалывание.'
+          a: 'Благодаря анестезирующему крему процедура, как правило, хорошо переносится. Большинство клиентов ощущают лишь лёгкое покалывание.'
         },
         {
           q: 'Как долго длится заживление?',
@@ -217,7 +217,7 @@ const PowderBrows = () => {
         },
         {
           q: 'Чи болісна процедура?',
-          a: 'Процедура майже безболісна завдяки знеболюючому крему. Більшість клієнтів відчувають лише легке поколювання.'
+          a: 'Завдяки знеболюючому крему процедура, як правило, добре переноситься. Більшість клієнтів відчувають лише легке поколювання.'
         },
         {
           q: 'Як довго триває загоєння?',

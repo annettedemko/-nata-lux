@@ -104,10 +104,10 @@ const Index = () => {
     {
       title: language === 'de' ? 'Diodenlaser-Haarentfernung' : language === 'ru' ? 'Диодный лазер (удаление волос)' : 'Діодний лазер (видалення волосся)',
       description: language === 'de'
-        ? 'Dauerhafte Haarentfernung mit modernster Diodenlaser-Technologie'
+        ? 'Langanhaltende Haarreduktion mit modernster Diodenlaser-Technologie'
         : language === 'ru'
-        ? 'Перманентное удаление волос с помощью современной диодной лазерной технологии'
-        : 'Перманентне видалення волосся за допомогою сучасної діодної лазерної технології',
+        ? 'Длительное уменьшение роста волос с помощью современной диодной лазерной технологии'
+        : 'Тривале зменшення росту волосся за допомогою сучасної діодної лазерної технології',
       icon: Zap,
       href: '/laser',
       image: '/laser-haarentfernung-muenchen.jpg',
@@ -126,10 +126,10 @@ const Index = () => {
     {
       title: language === 'de' ? 'Microneedling' : language === 'ru' ? 'Микронидлинг' : 'Мікронідлінг',
       description: language === 'de'
-        ? 'Innovative Hautbehandlung für Kollagenbildung und Hautregeneration'
+        ? 'Innovative Hautbehandlung, die die Kollagenbildung anregen und die Hauterneuerung unterstützen kann'
         : language === 'ru'
-        ? 'Инновационная процедура для выработки коллагена и регенерации кожи'
-        : 'Інноваційна процедура для вироблення колагену та регенерації шкіри',
+        ? 'Инновационная процедура, которая может стимулировать выработку коллагена и поддерживать обновление кожи'
+        : 'Інноваційна процедура, яка може стимулювати вироблення колагену та підтримувати оновлення шкіри',
       icon: Star,
       href: '/services/microneedling',
       image: '/apparative-kosmetik-muenchen.png',
@@ -428,8 +428,8 @@ const Index = () => {
                       {language === 'de'
                         ? 'Lymphdrainage · Anti-Cellulite · Bodyforming · Hautstraffung · Figurformung'
                         : language === 'ru'
-                        ? 'Лимфодренаж · Антицеллюлитный · Похудение · Омоложение кожи · Убирает объёмы'
-                        : 'Лімфодренаж · Антицелюлітний · Схуднення · Омолодження шкіри · Прибирає об\'єми'}
+                        ? 'Лимфодренаж · Антицеллюлитный · Бодиформинг · Подтяжка кожи · Моделирование фигуры'
+                        : 'Лімфодренаж · Антицелюлітний · Бодіформінг · Підтяжка шкіри · Моделювання фігури'}
                     </p>
                     <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
                       <span className="text-brand-gold font-heading font-bold text-2xl md:text-3xl">

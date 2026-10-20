@@ -86,10 +86,10 @@ const Gesichtsreinigung = () => {
                       Unsere <strong>professionelle Gesichtsreinigung</strong> ist eine umfassende 90-minütige Behandlung, die Ihre Haut tiefenwirksam reinigt, pflegt und revitalisiert. Wir kombinieren <strong>Ultraschall- und manuelle Reinigung</strong> für optimale Ergebnisse.
                     </p>
                     <p>
-                      Diese Behandlung ist ideal für alle Hauttypen und hilft, Mitesser zu entfernen, Poren zu verfeinern und Ihrer Haut einen strahlenden, frischen Teint zu verleihen.
+                      Diese Behandlung ist ideal für die meisten Hauttypen und hilft, Mitesser zu entfernen, Poren zu verfeinern und Ihrer Haut einen strahlenden, frischen Teint zu verleihen.
                     </p>
                     <p>
-                      Als regelmäßige Pflegeroutine alle 4-6 Wochen empfohlen – für dauerhaft reine und gesunde Haut.
+                      Als regelmäßige Pflegeroutine alle 4-6 Wochen empfohlen – für ein dauerhaft reines, gepflegtes Hautbild.
                     </p>
                   </>
                 ) : language === 'ru' ? (
@@ -98,10 +98,10 @@ const Gesichtsreinigung = () => {
                       Наша <strong>профессиональная чистка лица</strong> — это комплексная 90-минутная процедура, которая глубоко очищает, ухаживает и обновляет вашу кожу. Мы комбинируем <strong>ультразвуковую и механическую чистку</strong> для оптимальных результатов.
                     </p>
                     <p>
-                      Эта процедура идеальна для всех типов кожи и помогает удалить черные точки, сузить поры и придать коже сияющий, свежий вид.
+                      Эта процедура идеальна для большинства типов кожи и помогает удалить черные точки, визуально сузить поры и придать коже сияющий, свежий вид.
                     </p>
                     <p>
-                      Рекомендуется как регулярный уход каждые 4-6 недель — для постоянно чистой и здоровой кожи.
+                      Рекомендуется как регулярный уход каждые 4-6 недель — для неизменно чистой и ухоженной кожи.
                     </p>
                   </>
                 ) : (
@@ -110,10 +110,10 @@ const Gesichtsreinigung = () => {
                       Наша <strong>професійна чистка обличчя</strong> — це комплексна 90-хвилинна процедура, яка глибоко очищує, доглядає та оновлює вашу шкіру. Ми поєднуємо <strong>ультразвукову та механічну чистку</strong> для оптимальних результатів.
                     </p>
                     <p>
-                      Ця процедура ідеальна для всіх типів шкіри та допомагає видалити чорні цятки, звузити пори та надати шкірі сяючий, свіжий вигляд.
+                      Ця процедура ідеальна для більшості типів шкіри та допомагає видалити чорні цятки, візуально звузити пори та надати шкірі сяючий, свіжий вигляд.
                     </p>
                     <p>
-                      Рекомендується як регулярний догляд кожні 4-6 тижнів — для постійно чистої та здорової шкіри.
+                      Рекомендується як регулярний догляд кожні 4-6 тижнів — для незмінно чистої та доглянутої шкіри.
                     </p>
                   </>
                 )}
@@ -168,12 +168,12 @@ const Gesichtsreinigung = () => {
                     descUA: 'Глибоке очищення.'
                   },
                   {
-                    titleDE: '5. Porenschließende Masken',
+                    titleDE: '5. Porenverfeinernde Masken',
                     titleRU: '5. Успокаивающие маски',
                     titleUA: '5. Заспокійливі маски',
-                    descDE: 'Beruhigung und Schließen der Poren.',
-                    descRU: 'Успокоение и закрытие пор.',
-                    descUA: 'Заспокоєння та закриття пор.'
+                    descDE: 'Beruhigung und optische Verfeinerung der Poren.',
+                    descRU: 'Успокоение и визуальное сужение пор.',
+                    descUA: 'Заспокоєння та візуальне звуження пор.'
                   },
                   {
                     titleDE: '6. Abschlusspflege mit SPF',
@@ -238,11 +238,11 @@ const Gesichtsreinigung = () => {
                 {[
                   { de: 'Tiefenwirksame Reinigung der Poren', ru: 'Глубокое очищение пор', ua: 'Глибоке очищення пор' },
                   { de: 'Entfernung von Mitessern und Unreinheiten', ru: 'Удаление черных точек и загрязнений', ua: 'Видалення чорних цяток та забруднень' },
-                  { de: 'Verfeinerte und geschlossene Poren', ru: 'Суженные и закрытые поры', ua: 'Звужені та закриті пори' },
+                  { de: 'Optisch verfeinerte Poren', ru: 'Визуально суженные поры', ua: 'Візуально звужені пори' },
                   { de: 'Strahlender, frischer Teint', ru: 'Сияющий, свежий цвет лица', ua: 'Сяючий, свіжий колір обличчя' },
                   { de: 'Verbesserung der Hautstruktur', ru: 'Улучшение структуры кожи', ua: 'Покращення структури шкіри' },
                   { de: 'Bessere Aufnahme von Pflegeprodukten', ru: 'Лучшее усвоение уходовых средств', ua: 'Краще засвоєння доглядових засобів' },
-                  { de: 'Vorbeugung von Unreinheiten und Akne', ru: 'Профилактика загрязнений и акне', ua: 'Профілактика забруднень та акне' },
+                  { de: 'Kann neuen Unreinheiten vorbeugen', ru: 'Помогает предотвратить появление новых несовершенств', ua: 'Допомагає запобігти появі нових недосконалостей' },
                   { de: 'Entspannung und Wohlbefinden', ru: 'Расслабление и хорошее самочувствие', ua: 'Розслаблення та гарне самопочуття' },
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-3">
