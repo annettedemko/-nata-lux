@@ -367,6 +367,14 @@ const Laser = () => {
                 : 'Олександрит + Діод + Nd:YAG'}
             </p>
 
+            <p className="text-sm md:text-base text-brand-coffee/70 font-medium mb-6">
+              {language === 'de'
+                ? '✓ Behandlung mit NiSV-Fachkundenachweis'
+                : language === 'ru'
+                ? '✓ Процедуры проводятся с сертификатом NiSV (подтверждённая квалификация)'
+                : '✓ Процедури проводяться із сертифікатом NiSV (підтверджена кваліфікація)'}
+            </p>
+
             <p className="text-lg md:text-xl text-brand-coffee/80 leading-relaxed mb-10 max-w-3xl mx-auto">
               {language === 'de'
                 ? 'Moderne Technologie für viele Hauttypen. Gut verträglich dank Kühlung bis -4°C. Langanhaltende Haarreduktion in München-Haidhausen.'
