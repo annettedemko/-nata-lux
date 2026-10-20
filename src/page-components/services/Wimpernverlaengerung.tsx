@@ -216,17 +216,17 @@ const Wimpernverlaengerung = () => {
                     titleDE: 'Haltbarkeit',
                     titleRU: 'Срок носки',
                     titleUA: 'Термін носіння',
-                    valueDE: '4–8 Wochen',
-                    valueRU: '4–8 недель',
-                    valueUA: '4–8 тижнів'
+                    valueDE: '3–4 Wochen',
+                    valueRU: '3–4 недели',
+                    valueUA: '3–4 тижні'
                   },
                   {
                     titleDE: 'Auffüllung',
                     titleRU: 'Коррекция',
                     titleUA: 'Корекція',
-                    valueDE: 'alle 3–4 Wochen',
-                    valueRU: 'каждые 3–4 недели',
-                    valueUA: 'кожні 3–4 тижні'
+                    valueDE: 'alle 2–3 Wochen',
+                    valueRU: 'каждые 2–3 недели',
+                    valueUA: 'кожні 2–3 тижні'
                   },
                   {
                     titleDE: 'Entfernung (eigene Arbeit)',
@@ -590,7 +590,7 @@ const Wimpernverlaengerung = () => {
                       <li><strong>Lebensweise:</strong> Schwimmen, Sauna oder häufiges Berühren kann die Haltbarkeit verringern.</li>
                     </ul>
                     <p className="font-semibold text-brand-gold">
-                      Im Durchschnitt hält eine Wimpernverlängerung 4–8 Wochen. Für ein durchgehend perfektes Ergebnis empfehle ich eine Auffüllung alle 3–4 Wochen.
+                      Im Durchschnitt hält eine Wimpernverlängerung 3–4 Wochen. Für ein durchgehend schönes Ergebnis empfehle ich eine Auffüllung alle 2–3 Wochen.
                     </p>
                   </>
                 ) : language === 'ru' ? (
@@ -605,7 +605,7 @@ const Wimpernverlaengerung = () => {
                       <li><strong>Образ жизни:</strong> Плавание, сауна или частые прикосновения могут сократить срок носки.</li>
                     </ul>
                     <p className="font-semibold text-brand-gold">
-                      В среднем наращивание держится 4–8 недель. Для постоянно идеального результата рекомендую коррекцию каждые 3–4 недели.
+                      В среднем наращивание держится 3–4 недели. Чтобы ресницы всё время выглядели красиво, рекомендую коррекцию каждые 2–3 недели.
                     </p>
                   </>
                 ) : (
@@ -620,7 +620,7 @@ const Wimpernverlaengerung = () => {
                       <li><strong>Спосіб життя:</strong> Плавання, сауна або часті дотики можуть скоротити термін носіння.</li>
                     </ul>
                     <p className="font-semibold text-brand-gold">
-                      В середньому нарощування тримається 4–8 тижнів. Для постійно ідеального результату рекомендую корекцію кожні 3–4 тижні.
+                      В середньому нарощування тримається 3–4 тижні. Щоб вії весь час виглядали гарно, рекомендую корекцію кожні 2–3 тижні.
                     </p>
                   </>
                 )}

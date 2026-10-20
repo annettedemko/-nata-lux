@@ -33,6 +33,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { GoogleMapsEmbed } from '@/components/GoogleMapsEmbed';
 
+const GOOGLE_REVIEWS_URL = 'https://maps.app.goo.gl/epXhkG6bmGwP8VPo7';
+
 const Index = () => {
   const { t, language } = useLanguage();
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
@@ -314,7 +316,9 @@ const Index = () => {
               <p className="text-brand-coffee/80 mb-6 md:mb-8 leading-relaxed text-base md:text-lg px-2">
                 {language === 'de'
                   ? 'Durchsuchen Sie unser gesamtes Angebot an Beauty-Dienstleistungen'
-                  : 'Поиск по всему нашему ассортименту бьюти-услуг'}
+                  : language === 'ru'
+                ? 'Поиск по всему нашему ассортименту бьюти-услуг'
+                : 'Пошук по всьому нашому асортименту б’юті-послуг'}
               </p>
               <div className="max-w-xl mx-auto mb-6 md:mb-8">
                 <SearchBar />
@@ -630,7 +634,7 @@ const Index = () => {
                 </svg>
                 <div className="flex flex-col items-start">
                   <div className="flex items-center gap-1">
-                    <span className="text-2xl font-bold text-brand-espresso">4.9</span>
+                    <span className="text-2xl font-bold text-brand-espresso">4,9</span>
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (
                         <svg key={i} className="w-4 h-4 fill-yellow-400" viewBox="0 0 24 24">
@@ -639,7 +643,7 @@ const Index = () => {
                       ))}
                     </div>
                   </div>
-                  <span className="text-xs text-brand-coffee/60 font-medium">{language === 'de' ? 'Google Bewertungen' : language === 'ru' ? 'Отзывы Google' : 'Відгуки Google'}</span>
+                  <span className="text-xs text-brand-coffee/60 font-medium">{language === 'de' ? '59 Google-Bewertungen' : language === 'ru' ? '59 отзывов в Google' : '59 відгуків у Google'}</span>
                 </div>
               </div>
             </motion.div>
@@ -707,6 +711,15 @@ const Index = () => {
               </AnimatePresence>
             </div>
 
+            {/* Review source note (§ 5b Abs. 3 UWG) */}
+            <p className="text-center text-xs md:text-sm text-brand-coffee/60 mt-6 max-w-2xl mx-auto px-4">
+              {language === 'de'
+                ? 'Auswahl aus unseren Google-Bewertungen (Stand: Oktober 2026). Die Bewertungen stammen von Google-Nutzern; wir prüfen nicht, ob die Verfasser unsere Leistungen tatsächlich in Anspruch genommen haben.'
+                : language === 'ru'
+                ? 'Подборка отзывов из Google (на октябрь 2026 г.), переведены с оригинала. Отзывы оставлены пользователями Google; мы не проверяем, действительно ли авторы пользовались нашими услугами.'
+                : 'Добірка відгуків із Google (станом на жовтень 2026 р.), перекладені з оригіналу. Відгуки залишили користувачі Google; ми не перевіряємо, чи справді автори користувалися нашими послугами.'}
+            </p>
+
             {/* Google Reviews Link */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -716,12 +729,12 @@ const Index = () => {
               className="text-center mt-8"
             >
               <a
-                href="https://www.google.com/maps/dir/?api=1&destination=Elsässer+Straße+33+81667+München"
+                href={GOOGLE_REVIEWS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 glass-strong hover:scale-105"
               >
-                <span className="text-brand-espresso">{language === 'de' ? 'Mehr auf Google Maps' : language === 'ru' ? 'Больше на Google Maps' : 'Більше на Google Maps'}</span>
+                <span className="text-brand-espresso">{language === 'de' ? 'Alle Bewertungen auf Google' : language === 'ru' ? 'Все отзывы в Google' : 'Усі відгуки в Google'}</span>
                 <svg className="w-5 h-5 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -749,7 +762,9 @@ const Index = () => {
             <p className="text-base md:text-lg text-brand-coffee/70 max-w-2xl mx-auto px-4">
               {language === 'de'
                 ? 'Wir freuen uns auf Ihren Besuch in unserem Studio'
-                : 'Мы будем рады видеть вас в нашей студии'}
+                : language === 'ru'
+                ? 'Мы будем рады видеть вас в нашей студии'
+                : 'Ми будемо раді бачити вас у нашій студії'}
             </p>
           </motion.div>
 

@@ -362,7 +362,9 @@ const Laser = () => {
             <p className="text-xl md:text-2xl text-brand-gold font-heading font-medium mb-4">
               {language === 'de'
                 ? 'Alexandrit + Diode + Nd:YAG'
-                : 'Александрит + Диод + Nd:YAG'}
+                : language === 'ru'
+                ? 'Александрит + Диод + Nd:YAG'
+                : 'Олександрит + Діод + Nd:YAG'}
             </p>
 
             <p className="text-lg md:text-xl text-brand-coffee/80 leading-relaxed mb-10 max-w-3xl mx-auto">

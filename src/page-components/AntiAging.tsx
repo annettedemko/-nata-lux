@@ -114,12 +114,14 @@ const AntiAging = () => {
             className="text-center mb-12"
           >
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
-              {language === 'de' ? 'Unsere Behandlungen' : language === 'ru' ? 'Наши процедуры' : 'Наши процедуры'}
+              {language === 'de' ? 'Unsere Behandlungen' : language === 'ru' ? 'Наши процедуры' : 'Наші процедури'}
             </h2>
             <p className="text-brand-coffee/70 max-w-2xl mx-auto">
-              {isGerman
-                ? 'Moderne apparative Methoden für Gesicht und Körper ohne OP und Injektionen'
-                : 'Современные аппаратные методики для лица и тела без операций и инъекций'}
+              {language === 'de'
+                  ? 'Moderne apparative Methoden für Gesicht und Körper ohne OP und Injektionen'
+                  : language === 'ru'
+                  ? 'Современные аппаратные методики для лица и тела без операций и инъекций'
+                  : 'Сучасні апаратні методики для обличчя та тіла без операцій та ін’єкцій'}
             </p>
           </motion.div>
 
@@ -169,11 +171,11 @@ const AntiAging = () => {
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>{language === 'de' ? 'Ultraschall + Phonophorese — Tiefenpflege' : language === 'ru' ? 'Ультразвук + фонофорез — глубокое питание' : 'Ультразвук + фонофорез — глубокое питание'}</span>
+                  <span>{language === 'de' ? 'Ultraschall + Phonophorese — Tiefenpflege' : language === 'ru' ? 'Ультразвук + фонофорез — глубокое питание' : 'Ультразвук + фонофорез — глибоке живлення'}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>{language === 'de' ? 'Komplexe Reinigung 90 Min.' : language === 'ru' ? 'Комплексная чистка 90 мин' : 'Комплексная чистка 90 мин'}</span>
+                  <span>{language === 'de' ? 'Gesichtsreinigung: Ultraschall, manuell oder Tiefenreinigung' : language === 'ru' ? 'Чистка лица: ультразвуковая, механическая или глубокая' : 'Чистка обличчя: ультразвукова, механічна або глибока'}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
@@ -191,7 +193,7 @@ const AntiAging = () => {
               className="glass rounded-3xl p-8"
             >
               <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
-                {language === 'de' ? 'Für den Körper' : language === 'ru' ? 'Для тела' : 'Для тела'}
+                {language === 'de' ? 'Für den Körper' : language === 'ru' ? 'Для тела' : 'Для тіла'}
               </h3>
               <ul className="space-y-3 text-brand-coffee/80">
                 <li className="flex items-start gap-3">
@@ -204,16 +206,16 @@ const AntiAging = () => {
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>{language === 'de' ? 'Zonen: Bauch, Gesäß, Oberschenkel, Arme' : language === 'ru' ? 'Зоны: живот, ягодицы, бёдра, руки' : 'Зоны: живот, ягодицы, бёдра, руки'}</span>
+                  <span>{language === 'de' ? 'Zonen: Bauch, Gesäß, Oberschenkel, Arme' : language === 'ru' ? 'Зоны: живот, ягодицы, бёдра, руки' : 'Зони: живіт, сідниці, стегна, руки'}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
-                  <span>{language === 'de' ? 'Kurse: 5 oder 10 Behandlungen mit Rabatt' : language === 'ru' ? 'Курсы: 5 или 10 процедур со скидкой' : 'Курсы: 5 или 10 процедур со скидкой'}</span>
+                  <span>{language === 'de' ? 'Kurs: 10 Behandlungen zum Vorteilspreis' : language === 'ru' ? 'Курс: 10 процедур по выгодной цене' : 'Курс: 10 процедур за вигідною ціною'}</span>
                 </li>
               </ul>
 
               <div className="mt-6 pt-6 border-t border-brand-gold/20">
-                <h4 className="font-semibold text-brand-espresso mb-3">{language === 'de' ? 'Zusätzlich' : language === 'ru' ? 'Дополнительно' : 'Дополнительно'}</h4>
+                <h4 className="font-semibold text-brand-espresso mb-3">{language === 'de' ? 'Zusätzlich' : language === 'ru' ? 'Дополнительно' : 'Додатково'}</h4>
                 <ul className="space-y-2 text-brand-coffee/80">
                   <li className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-2 flex-shrink-0" />
@@ -233,7 +235,7 @@ const AntiAging = () => {
             className="glass rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 mt-8 max-w-4xl mx-auto"
           >
             <h3 className="text-sm sm:text-base md:text-xl lg:text-2xl font-heading font-semibold text-brand-espresso mb-6 text-center max-w-full" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
-              {language === 'de' ? 'Ergebnisse' : language === 'ru' ? 'Результаты' : 'Результаты'}
+              {language === 'de' ? 'Ergebnisse' : language === 'ru' ? 'Результаты' : 'Результати'}
             </h3>
             <div className="space-y-3 md:space-y-4 text-sm md:text-base text-brand-coffee/80 leading-relaxed">
               <p>

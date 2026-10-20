@@ -34,6 +34,7 @@ export const ProcedureSchema = ({
   const altText = language === 'de' ? altTextGerman : language === 'ru' ? altTextRussian : (altTextUkrainian || altTextRussian);
 
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const showsResults = images.some((src) => /vorher|nachher|ergebnis|resultat|result/i.test(src));
   const [isDesktop, setIsDesktop] = useState(false);
 
   // Detect screen size
@@ -145,6 +146,11 @@ export const ProcedureSchema = ({
           </motion.div>
         ))}
         </div>
+        {showsResults && (
+          <p className="mt-3 text-center text-xs md:text-sm text-brand-coffee/60 italic px-4">
+            {language === 'de' ? 'Ergebnisse können individuell variieren.' : language === 'ru' ? 'Результаты индивидуальны и могут отличаться.' : 'Результати індивідуальні та можуть відрізнятися.'}
+          </p>
+        )}
       </div>
 
       {/* Lightbox */}

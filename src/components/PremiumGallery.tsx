@@ -31,6 +31,7 @@ export const PremiumGallery = ({ images, title }: PremiumGalleryProps) => {
   const { language } = useLanguage();
   const isGerman = language === 'de';
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const showsResults = images.some((item) => /vorher|nachher|ergebnis|resultat|result/i.test(getSrc(item)));
 
   const openLightbox = (index: number) => setSelectedImage(index);
   const closeLightbox = useCallback(() => setSelectedImage(null), []);
@@ -169,6 +170,17 @@ export const PremiumGallery = ({ images, title }: PremiumGalleryProps) => {
           ))}
         </div>
 
+        {/* Required note for before/after and result photos (UWG / HWG) */}
+        {showsResults && (
+          <p className="mt-4 text-center text-xs md:text-sm text-brand-coffee/60 italic px-4">
+            {language === 'de'
+              ? 'Ergebnisse können individuell variieren.'
+              : language === 'ru'
+              ? 'Результаты индивидуальны и могут отличаться.'
+              : 'Результати індивідуальні та можуть відрізнятися.'}
+          </p>
+        )}
+
         {/* Decorative Elements */}
         <div className="absolute -top-10 -right-10 w-40 h-40 bg-brand-gold/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-brand-gold/5 rounded-full blur-3xl pointer-events-none" />
@@ -232,7 +244,7 @@ export const PremiumGallery = ({ images, title }: PremiumGalleryProps) => {
             ) : (
               <Image
                 src={getSrc(images[selectedImage])}
-                alt={`${language === 'de' ? 'Arbeit' : language === 'ru' ? 'Работа' : 'Работа'} ${selectedImage + 1}`}
+                alt={`${language === 'de' ? 'Arbeit' : language === 'ru' ? 'Работа' : 'Робота'} ${selectedImage + 1}`}
                 fill
                 className="object-contain"
                 sizes="90vw"

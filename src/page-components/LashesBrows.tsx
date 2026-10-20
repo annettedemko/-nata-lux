@@ -100,7 +100,7 @@ const LashesBrows = () => {
             className="text-center mb-8 md:mb-12"
           >
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-3 md:mb-4 px-2 sm:px-4 max-w-full break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
-              {language === 'de' ? 'Unsere Leistungen' : language === 'ru' ? 'Наши услуги' : 'Наши услуги'}
+              {language === 'de' ? 'Unsere Leistungen' : language === 'ru' ? 'Наши услуги' : 'Наші послуги'}
             </h2>
           </motion.div>
 
@@ -131,18 +131,22 @@ const LashesBrows = () => {
             className="glass rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12"
           >
             <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
-              {language === 'de' ? 'Warum uns wählen?' : language === 'ru' ? 'Почему выбирают нас?' : 'Почему выбирают нас?'}
+              {language === 'de' ? 'Warum uns wählen?' : language === 'ru' ? 'Почему выбирают нас?' : 'Чому обирають нас?'}
             </h3>
             <div className="space-y-3 md:space-y-4 text-sm md:text-base text-brand-coffee/80 leading-relaxed">
               <p>
-                {isGerman
+                {language === 'de'
                   ? 'Unsere Stylisten sind zertifiziert und haben langjährige Erfahrung mit Wimpern und Augenbrauen. Wir verwenden nur Premium-Materialien aus Deutschland und Korea.'
-                  : 'Наши мастера имеют сертификаты и многолетний опыт работы с ресницами и бровями. Мы используем только премиум-материалы из Германии и Кореи.'}
+                  : language === 'ru'
+                  ? 'Наши мастера имеют сертификаты и многолетний опыт работы с ресницами и бровями. Мы используем только премиум-материалы из Германии и Кореи.'
+                  : 'Наші майстри мають сертифікати та багаторічний досвід роботи з віями й бровами. Ми використовуємо лише преміум-матеріали з Німеччини та Кореї.'}
               </p>
               <p>
-                {isGerman
+                {language === 'de'
                   ? 'Jede Behandlung beginnt mit einer kostenlosen Beratung, bei der der Stylist die optimale Form, Biegung und Länge für Sie auswählt.'
-                  : 'Каждая процедура начинается с бесплатной консультации, где мастер подберет оптимальную форму, изгиб и длину с учетом ваших особенностей.'}
+                  : language === 'ru'
+                  ? 'Каждая процедура начинается с бесплатной консультации, где мастер подберет оптимальную форму, изгиб и длину с учетом ваших особенностей.'
+                  : 'Кожна процедура починається з безкоштовної консультації, на якій майстер підбере оптимальну форму, вигин і довжину з урахуванням ваших особливостей.'}
               </p>
               <p>
                 {language === 'de'
@@ -165,12 +169,14 @@ const LashesBrows = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl font-heading font-semibold text-white mb-4 md:mb-6 px-4 max-w-full" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
-              {language === 'de' ? 'Bereit für Ihre Verwandlung?' : language === 'ru' ? 'Готовы к преображению?' : 'Готовы к преображению?'}
+              {language === 'de' ? 'Bereit für Ihre Verwandlung?' : language === 'ru' ? 'Готовы к преображению?' : 'Готові до перевтілення?'}
             </h2>
             <p className="text-white/90 text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto px-4">
-              {isGerman
-                ? 'Buchen Sie eine kostenlose Beratung und erhalten Sie eine individuelle Empfehlung von unseren Stylisten'
-                : 'Запишитесь на бесплатную консультацию и получите индивидуальную рекомендацию от наших мастеров'}
+              {language === 'de'
+                  ? 'Buchen Sie eine kostenlose Beratung und erhalten Sie eine individuelle Empfehlung von unseren Stylisten'
+                  : language === 'ru'
+                  ? 'Запишитесь на бесплатную консультацию и получите индивидуальную рекомендацию от наших мастеров'
+                  : 'Запишіться на безкоштовну консультацію та отримайте індивідуальну рекомендацію від наших майстрів'}
             </p>
             <Link to="/contact">
               <Button

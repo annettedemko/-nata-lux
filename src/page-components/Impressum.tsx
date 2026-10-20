@@ -79,7 +79,9 @@ const Impressum = () => {
                 <div className="space-y-2">
                   <p className="flex items-center gap-2">
                     <Phone className="w-4 h-4 text-brand-gold" />
-                    <span className="font-medium">{language === 'de' ? 'Telefon:' : 'Телефон:'}</span>
+                    <span className="font-medium">{language === 'de' ? 'Telefon:' : language === 'ru'
+                ? 'Телефон:'
+                : 'Телефон:'}</span>
                     <a href="tel:+4917677267269" className="hover:text-brand-gold transition-colors">
                       +49 176 77267269
                     </a>

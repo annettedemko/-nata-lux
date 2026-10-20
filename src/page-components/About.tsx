@@ -55,14 +55,14 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="space-y-4 md:space-y-6 text-brand-espresso leading-relaxed text-sm md:text-base">
-              {isGerman ? (
+              {language === 'de' ? (
                 <>
                   <p>
-                    Ich bin Kosmetikerin und Expertin für systemische Hautverjüngung – eine Spezialistin, die medizinisches Wissen über die Haut mit modernen, wissenschaftlich fundierten Beauty-Behandlungen verbindet. Meine Arbeit basiert auf einem tiefen Verständnis der Hautphysiologie, der altersbedingten Veränderungen und der individuellen Bedürfnisse jedes einzelnen Menschen.
+                    Ich bin Kosmetikerin mit Schwerpunkt auf ganzheitlicher Hautpflege und Anti-Aging – eine Spezialistin, die fundiertes Fachwissen über die Haut mit modernen Beauty-Behandlungen verbindet. Meine Arbeit basiert auf einem tiefen Verständnis der Hautphysiologie, der altersbedingten Veränderungen und der individuellen Bedürfnisse jedes einzelnen Menschen.
                   </p>
                   <p>
                     Durch viele Jahre Erfahrung mit unterschiedlichen Kunden und vielfältigen Hautsituationen bin ich zu einer klaren Erkenntnis gekommen:<br />
-                    <strong className="text-brand-gold">Man kann in jedem Alter – und mit jedem Budget – jung, gesund und gepflegt aussehen.</strong><br />
+                    <strong className="text-brand-gold">Man kann in jedem Alter – und mit jedem Budget – frisch und gepflegt aussehen.</strong><br />
                     Der Schlüssel liegt nicht in Wundern, sondern in einem strukturierten, ganzheitlichen Ansatz und dem Verständnis dafür, wie unser Körper funktioniert.
                   </p>
                   <p>
@@ -76,8 +76,8 @@ const About = () => {
                     in professionellen Händen wirkt es sehr natürlich, unterstreicht Ihre eigenen Gesichtszüge und verleiht Ihnen jeden Tag ein gepflegtes, frisches Aussehen.
                   </p>
                   <p>
-                    Hautverjüngung ist kein Zauberstab-Effekt.<br />
-                    Es ist ein anspruchsvoller, kontinuierlicher Prozess – eine langfristige Investition in Ihre Gesundheit, Ausstrahlung und Ihr Wohlbefinden.
+                    Schöne Haut ist kein Zauberstab-Effekt.<br />
+                    Es ist ein anspruchsvoller, kontinuierlicher Prozess – eine langfristige Investition in Ihre Ausstrahlung und Ihr Wohlbefinden.
                   </p>
                   <p className="text-brand-gold font-semibold text-lg italic">
                     Ich lade Sie ein, in die Welt meiner Erfahrungen und Expertise einzutauchen.<br />
@@ -85,14 +85,14 @@ const About = () => {
                     Willkommen in einem Raum, in dem Ihre natürliche Schönheit aufblüht.
                   </p>
                 </>
-              ) : (
+              ) : language === 'ru' ? (
                 <>
                   <p>
-                    Я — мастер-косметолог и эксперт в системном омоложении, соединяющий медицинские знания о коже с современными, научно обоснованными бьюти-технологиями. Мой подход основан на глубоком понимании физиологии, процессов старения и индивидуальных особенностей каждого человека.
+                    Я — мастер-косметолог. Специализируюсь на комплексном уходе за кожей и anti-age и соединяю глубокие профессиональные знания о коже с современными бьюти-технологиями. Мой подход основан на глубоком понимании физиологии, процессов старения и индивидуальных особенностей каждого человека.
                   </p>
                   <p>
                     Много лет работая с клиентами, разными запросами и ситуациями, я убедилась:<br />
-                    <strong className="text-brand-gold">выглядеть молодо, здорово и ухоженно возможно в любом возрасте и с любым бюджетом.</strong><br />
+                    <strong className="text-brand-gold">выглядеть свежо и ухоженно возможно в любом возрасте и с любым бюджетом.</strong><br />
                     Секрет — не в чуде и не в идеальных условиях, а в грамотном, системном подходе и понимании того, как работает наш организм.
                   </p>
                   <p>
@@ -106,13 +106,43 @@ const About = () => {
                     В умелых руках он может быть максимально натуральным, деликатно подчёркивающим ваши черты и создающим эффект здоровой, ухоженной кожи каждый день.
                   </p>
                   <p>
-                    Процесс омоложения — это не взмах волшебной палочки.<br />
-                    Это продуманный комплексный путь, который даёт устойчивый результат и становится инвестицией в ваше здоровье и красоту на многие годы.
+                    Красивая кожа — это не взмах волшебной палочки.<br />
+                    Это продуманный комплексный путь и долгосрочная инвестиция в вашу красоту и хорошее самочувствие.
                   </p>
                   <p className="text-brand-gold font-semibold text-lg italic">
                     Я приглашаю вас в мир знаний, профессионального подхода и эстетики.<br />
                     Позвольте себе почувствовать перемены — и увидеть, как трансформируется ваша кожа, настроение и уверенность.<br />
                     Добро пожаловать в пространство, где ваша красота раскрывается естественно.
+                  </p>
+                </>
+) : (
+                <>
+                  <p>
+                    Я — майстер-косметолог. Спеціалізуюся на комплексному догляді за шкірою та anti-age і поєдную глибокі професійні знання про шкіру із сучасними б’юті-технологіями. Мій підхід ґрунтується на глибокому розумінні фізіології, вікових змін і індивідуальних особливостей кожної людини.
+                  </p>
+                  <p>
+                    Багато років працюючи з клієнтами, різними запитами та ситуаціями, я переконалася:<br />
+                    <strong className="text-brand-gold">виглядати свіжо та доглянуто можна в будь-якому віці та з будь-яким бюджетом.</strong><br />
+                    Секрет — не в диві й не в ідеальних умовах, а в грамотному, системному підході та розумінні того, як працює наш організм.
+                  </p>
+                  <p>
+                    Я твердо вірю, що природна краса закладена в кожному.<br />
+                    Моє завдання — м’яко її підкреслити, розкрити потенціал і зберегти гармонію.<br />
+                    Тому в моїй практиці немає стандартних програм «для всіх».<br />
+                    Я створюю індивідуальні протоколи з урахуванням стану шкіри, цілей, способу життя та побажань клієнта.
+                  </p>
+                  <p>
+                    Наприклад, перманентний макіяж — це не яскравий малюнок.<br />
+                    У вмілих руках він може бути максимально природним, делікатно підкреслювати ваші риси та щодня створювати ефект доглянутої шкіри.
+                  </p>
+                  <p>
+                    Гарна шкіра — це не помах чарівної палички.<br />
+                    Це продуманий комплексний шлях і довгострокова інвестиція у вашу красу та гарне самопочуття.
+                  </p>
+                  <p className="text-brand-gold font-semibold text-lg italic">
+                    Запрошую вас у світ знань, професійного підходу та естетики.<br />
+                    Дозвольте собі відчути зміни — і побачити, як змінюються ваша шкіра, настрій і впевненість.<br />
+                    Ласкаво просимо в простір, де ваша краса розкривається природно.
                   </p>
                 </>
               )}
@@ -217,7 +247,7 @@ const About = () => {
                   <Train className="w-6 h-6 md:w-8 md:h-8 text-brand-gold" />
                 </div>
                 <h3 className="text-lg md:text-xl font-heading font-semibold text-brand-espresso mb-2">
-                  {language === 'de' ? 'Anfahrt' : language === 'ru' ? 'Как добраться' : 'Как добраться'}
+                  {language === 'de' ? 'Anfahrt' : language === 'ru' ? 'Как добраться' : 'Як дістатися'}
                 </h3>
                 <p className="text-sm md:text-base text-brand-espresso/70 leading-relaxed">
                   {language === 'de' ? 'S-Bahn / U5: Ostbahnhof' : language === 'ru' ? 'S-Bahn / U5: Ostbahnhof' : 'S-Bahn / U5: Ostbahnhof'}<br />

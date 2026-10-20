@@ -100,7 +100,7 @@ const PermanentMakeup = () => {
             className="text-center mb-12"
           >
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-4 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
-              {language === 'de' ? 'Unsere Leistungen' : language === 'ru' ? 'Наши услуги' : 'Наши услуги'}
+              {language === 'de' ? 'Unsere Leistungen' : language === 'ru' ? 'Наши услуги' : 'Наші послуги'}
             </h2>
           </motion.div>
 
@@ -131,7 +131,7 @@ const PermanentMakeup = () => {
             className="glass rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12"
           >
             <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-brand-espresso mb-4 md:mb-6 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
-              {language === 'de' ? 'Was ist Permanent Make-up?' : language === 'ru' ? 'Что такое перманентный макияж?' : 'Что такое перманентный макияж?'}
+              {language === 'de' ? 'Was ist Permanent Make-up?' : language === 'ru' ? 'Что такое перманентный макияж?' : 'Що таке перманентний макіяж?'}
             </h3>
             <div className="space-y-3 md:space-y-4 text-sm md:text-base text-brand-coffee/80 leading-relaxed">
               <p>
@@ -153,9 +153,11 @@ const PermanentMakeup = () => {
                   : 'Процедура проводиться із застосуванням знеболюючого крему. Загоєння триває близько 7-10 днів. Через 4-6 тижнів проводиться безкоштовна корекція.'}
               </p>
               <p className="font-semibold text-brand-espresso">
-                {isGerman
+                {language === 'de'
                   ? 'Beratung vor der Behandlung ist Pflicht! Wir bewerten Ihren Hauttyp und besprechen Form, Farbe und Technik.'
-                  : 'Обязательная консультация перед процедурой! Мы оцениваем тип кожи, обсуждаем форму, цвет и технику нанесения.'}
+                  : language === 'ru'
+                  ? 'Обязательная консультация перед процедурой! Мы оцениваем тип кожи, обсуждаем форму, цвет и технику нанесения.'
+                  : 'Обов’язкова консультація перед процедурою! Ми оцінюємо тип шкіри, обговорюємо форму, колір і техніку нанесення.'}
               </p>
             </div>
           </motion.div>
@@ -172,12 +174,14 @@ const PermanentMakeup = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-white mb-4 md:mb-6 max-w-full px-2 break-words" style={{ hyphens: 'none', wordBreak: 'break-word', overflowWrap: 'anywhere', whiteSpace: 'normal', letterSpacing: '-0.01em', wordWrap: 'break-word' }}>
-              {language === 'de' ? 'Beratungstermin vereinbaren' : language === 'ru' ? 'Запишитесь на консультацию' : 'Запишитесь на консультацию'}
+              {language === 'de' ? 'Beratungstermin vereinbaren' : language === 'ru' ? 'Запишитесь на консультацию' : 'Запишіться на консультацію'}
             </h2>
             <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-              {isGerman
-                ? 'Die Meisterin zeigt ihr Portfolio, wählt Form und Farbton aus. Die Beratung ist kostenlos!'
-                : 'Мастер покажет портфолио работ, подберет форму и оттенок. Консультация бесплатная!'}
+              {language === 'de'
+                  ? 'Die Meisterin zeigt ihr Portfolio, wählt Form und Farbton aus. Die Beratung ist kostenlos!'
+                  : language === 'ru'
+                  ? 'Мастер покажет портфолио работ, подберет форму и оттенок. Консультация бесплатная!'
+                  : 'Майстриня покаже портфоліо робіт, підбере форму та відтінок. Консультація безкоштовна!'}
             </p>
             <Link to="/contact">
               <Button
