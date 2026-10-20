@@ -156,7 +156,7 @@ const translations = {
     // Laser subcategories
     'laser.title': 'Laser Haarentfernung',
     'laser.subtitle': 'Dauerhafte Ergebnisse',
-    'laser.triwave': 'Laser Haarentfernung auf Dreiwell enslaser',
+    'laser.triwave': 'Laser-Haarentfernung mit Dreiwellenlaser',
     'laser.triwave.desc': 'Alexandrit + Diode + Nd:YAG. Für alle Haut- und Haartypen',
     'laser.areas': 'Behandlungsbereiche',
     'laser.areas.desc': 'Gesicht, Achseln, Arme, Beine, Bikini, Rücken, Bauch',
